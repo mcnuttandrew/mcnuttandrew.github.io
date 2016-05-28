@@ -8,4 +8,9 @@ app.use(require('compression')());
 app.use(express.static('./app/static'));
 
 // Routes.
+app.set('view engine', 'jade');
 app.use(require('./routes')(app));
+
+app.get('*', function(req, res) {
+  res.render('./app/static');
+});

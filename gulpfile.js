@@ -1,10 +1,10 @@
-var gulp          = require('gulp');
-var gls           = require('gulp-live-server');
-var sass          = require('gulp-sass');
-var source        = require('vinyl-source-stream');
-var browserify    = require('browserify');
-var minifyify     = require('minifyify');
-var babelify      = require('babelify');
+var gulp = require('gulp');
+var gls = require('gulp-live-server');
+var sass = require('gulp-sass');
+var source = require('vinyl-source-stream');
+var browserify = require('browserify');
+var minifyify = require('minifyify');
+var babelify = require('babelify');
 var IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
 var paths = {
