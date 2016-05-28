@@ -13,10 +13,10 @@ var WorkPage = require('./components/work-page.jsx');
 ReactDOM.render((
   <Router history={ReactRouter.browserHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={FirstPageContent}> </IndexRoute>
-      <Route path=":about" component={FirstPageContent}> </Route>
-      <Route path=":research" component={ResearchPage}> </Route>
-      <Route path=":work" component={WorkPage}> </Route>
     </Route>
   </Router>
 ),  document.getElementById('app'))
+// <IndexRoute component={FirstPageContent}> </IndexRoute>
+// <Route path="/about" component={FirstPageContent}> </Route>
+// <Route path="/research" component={ResearchPage}> </Route>
+// <Route path="/work" component={WorkPage}> </Route>
