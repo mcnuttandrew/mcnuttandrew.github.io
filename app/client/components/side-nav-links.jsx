@@ -8,7 +8,7 @@ var SideNavLinks = React.createClass({
     return (
       <div className='side-nav-links'>
         <span className='side-nav-link'>
-          <Link className='link' to='#/aout'>ABOUT</Link>
+          <Link className='link' to='#/about'>ABOUT</Link>
         </span>
         <span className='side-nav-link'>
           <Link className='link' to='#/research'>RESEARCH</Link>

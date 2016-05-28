@@ -1,7 +1,5 @@
 var React = require('react');
-var FirstPageContent = require('./first-page-content.jsx');
-
-var FirstPageContent = require('./first-page-content.jsx');
+var AboutPage = require('./about-page.jsx');
 var ResearchPage = require('./research-page.jsx');
 var WorkPage = require('./work-page.jsx');
 var SideNavLinks = require('./side-nav-links.jsx');
@@ -11,26 +9,30 @@ module.exports = React.createClass({
   render() {
     // janky fake router
     var content;
+    var links;
     switch(this.props.location.hash) {
       case '#/work':
+        links = (<SideNavLinks location={this.props.location.hash} />);
         content = (<WorkPage />);
         break;
       case '#/research':
+        links = (<SideNavLinks location={this.props.location.hash} />);
         content = (<ResearchPage />);
         break;
       case '#/about':
-        content = (<FirstPageContent />);
+        links = (<SideNavLinks location={this.props.location.hash} />);
+        content = (<AboutPage />);
         break;
       case '':
-        content = (<FirstPageContent />);
+        content = (<AboutPage />);
         break;
       default:
-        content = (<FirstPageContent />);
+        content = (<AboutPage />);
         break;
     }
     return (
       <div className="app">
-        <SideNavLinks location={this.props.location.hash} />
+        {links}
         {content}
       </div>);
   }
