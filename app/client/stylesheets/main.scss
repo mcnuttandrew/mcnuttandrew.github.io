@@ -5,6 +5,32 @@ $text-color: #333;
   font-family: GillSans-Light;
 }
 
+.side-nav-links {
+  // font-family: GillSans-LightItalic;
+  font-size: 15px;
+  left: 0;
+  // left: calc(50% + 183px);
+  letter-spacing: 0;
+  line-height: 70px;
+  position: absolute;
+  // top: calc(50% - 46px);
+  top: 0;
+  // transform: rotate(90deg);
+  width: 452px;
+  z-index: 1000;
+
+  .side-nav-link {
+    margin-left: 5px;
+  }
+
+  .link {
+    text-decoration: none;
+    &:link {
+      color: $text-color;
+    }
+  }
+}
+
 .container {
   // border: 1px solid #979797;
   height: 452px;
@@ -72,7 +98,7 @@ $text-color: #333;
     .link {
       text-decoration: none;
       &:link {
-        color: #333;
+        color: $text-color;
       }
     }
   }
