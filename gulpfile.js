@@ -21,7 +21,7 @@ gulp.task('css', function() {
                   outputStyle: IS_PRODUCTION ? 'compressed' : 'nested'
                 }).on('error', sass.logError)
               )
-              .pipe(gulp.dest('dist/css/'));
+              .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('js', function() {
@@ -43,7 +43,7 @@ gulp.task('js', function() {
   bundler.bundle().on('error', function(err) {
     console.error('[browserify error]', err.message);
   }).pipe(source('bundle.js'))
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('serve', ['css', 'js'], function () {
