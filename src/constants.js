@@ -14,14 +14,17 @@ module.exports = {
   projects: [
     {
       title: 'Nonequivalant Lagrangian Mechanics',
+      link: '../assets/thesis.pdf',
       text: 'During my senior year at Reed I wrote my undergraduate thesis on an alternative representation of classical mechanics called Nonequivalent Lagrangian Mechanics. It was advised by Nelia Mann.'
     },
     {
       title: 'N-Hedron',
+      link: '../assets/nhedron.pdf',
       text: 'Throughout my undergraduate career I had a prevailing interest in the geometrically ambiguous shape, the N-Hedron. It is formed by taking an integer, N, number of points, placing them on the sphere and demanding that they be maximally far apart. This culminated in a independent project, in which I implemented three different algorithms for constructing these shapes. You can find out more about this project. One of the major aspects of this project was dealing with a large (for Mathematica) amount of data which reached up into the millions of data points.'
     },
     {
       title: 'Chaotic Circuit',
+      link: '../assets/Chaotic_circuit.pdf',
       text: 'In culminating effort of my junior year at Reed I built a third order Chaotic circuit as an independent project. This project was fine, but shows some of the best data visualization work I have done, particularlly the combination phase and signal metering small multiples diagram.'
     }
   ],

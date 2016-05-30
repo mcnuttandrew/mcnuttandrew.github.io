@@ -183,3 +183,5 @@
     .thing .thing-header a {
       float: right;
       margin-right: 10px; }
+    .thing .thing-header .title {
+      float: none; }

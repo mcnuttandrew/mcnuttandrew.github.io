@@ -11,7 +11,12 @@ var ResearchPage = React.createClass({
   },
 
   renderDescription: function renderDescription(thing) {
-    return (<ThingDescription title={thing.title} text={thing.text} />)
+    var props = {
+      title: thing.title,
+      text: thing.text,
+      link: thing.link
+    };
+    return (<ThingDescription {...props} />);
   },
 
   render: function render() {

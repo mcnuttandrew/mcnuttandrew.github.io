@@ -8,3 +8,4 @@ redesign.
 - Loop through the various project and remove move their project pages to github
 - disconnect from the old heroku server
 - add project assets
+- es6ify
