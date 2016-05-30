@@ -2,8 +2,8 @@ var React = require('react');
 var ThingDescription = require('./thing-description.jsx');
 var Data = require('./data');
 
-var WorkPage = React.createClass({
-  displayName : 'WorkPage',
+var ResearchPage = React.createClass({
+  displayName : 'ResearchPage',
   getInialState: function getInialState() {
     return {
       publicationShowing: true
@@ -44,4 +44,4 @@ var WorkPage = React.createClass({
 });
 
 
-module.exports = WorkPage;
+module.exports = ResearchPage;

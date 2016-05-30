@@ -52,7 +52,6 @@ gulp.task('serve', [ 'css', 'js' ], function () {
   gulp.watch(paths.js,  [ 'js'  ]);
 
   // Start the app server.
-  // var server = gls('app/server/index.js', { stdio : 'inherit' });
   var server = gls.static('app/static', 3000);
   server.start();
 

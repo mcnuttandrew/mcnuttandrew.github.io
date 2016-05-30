@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
+var Data = require('./data');
 
 var FirstPageContent = React.createClass({
   displayName : 'FirstPageContent',
@@ -15,7 +16,7 @@ var FirstPageContent = React.createClass({
             <div>MATHER</div>
           </div>
           <div className="name"> ANDREW MCNUTT</div>
-          <div className="boring-content">I am an applied mathematician currently working in the wild world of San Francisco based web development. I am a full stack developer, but I am more or less front-end/data-visualization leaning. My educational background is in physics, specifically in mechaincs, and traditional rails oriented web development. I feel greatly for the plight of the American desert.</div>
+          <div className="boring-content">{Data.about}</div>
           <div className="links">
             <div><Link className="link" to='#/work'>WORK</Link></div>
             <div><Link className="link" to='#/research'>RESEARCH</Link></div>
