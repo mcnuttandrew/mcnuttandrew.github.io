@@ -49,13 +49,13 @@ module.exports = {
     },
     {
       title: 'N-Body Simulator',
-      liveLink: 'http://www.mcnutt.in/assets/nbody/nbody.html',
+      liveLink: 'https://mcnuttandrew.github.io/n-body-simulator/',
       sourceLink: 'https://github.com/mcnuttandrew/N-Body-Simulator',
       text: 'A low N gravitional interaction simulator built in processing.'
     },
     {
       title: 'Asteroids',
-      liveLink: 'http://www.mcnutt.in/assets/asteroids/asteroids.html',
+      liveLink: 'https://mcnuttandrew.github.io/asteroids/',
       sourceLink: 'https://github.com/mcnuttandrew/Asteroids',
       text: 'A reimaging of the classic arcade game. Technologies included Javascipt, HTML5 Canvas, and jQuery'
     }

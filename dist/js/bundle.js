@@ -24433,8 +24433,8 @@ var FirstPageContent = React.createClass({
             'div',
             null,
             React.createElement(
-              Link,
-              { className: 'link', to: '/' },
+              'a',
+              { className: 'link', href: '../../assets/resume.pdf' },
               'CV'
             )
           ),
@@ -24442,8 +24442,8 @@ var FirstPageContent = React.createClass({
             'div',
             null,
             React.createElement(
-              Link,
-              { className: 'link', to: '/' },
+              'a',
+              { href: 'mailto:mcnutt.andrew@gmail.com' },
               'CONTACT'
             )
           )
@@ -24818,12 +24818,12 @@ module.exports = {
     text: 'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning. Technologies included Rails API, Backbone.js, and Nokogiri.'
   }, {
     title: 'N-Body Simulator',
-    liveLink: 'http://www.mcnutt.in/assets/nbody/nbody.html',
+    liveLink: 'https://mcnuttandrew.github.io/n-body-simulator/',
     sourceLink: 'https://github.com/mcnuttandrew/N-Body-Simulator',
     text: 'A low N gravitional interaction simulator built in processing.'
   }, {
     title: 'Asteroids',
-    liveLink: 'http://www.mcnutt.in/assets/asteroids/asteroids.html',
+    liveLink: 'https://mcnuttandrew.github.io/asteroids/',
     sourceLink: 'https://github.com/mcnuttandrew/Asteroids',
     text: 'A reimaging of the classic arcade game. Technologies included Javascipt, HTML5 Canvas, and jQuery'
   }

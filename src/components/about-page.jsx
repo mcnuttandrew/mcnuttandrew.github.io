@@ -20,8 +20,8 @@ var FirstPageContent = React.createClass({
           <div className="links">
             <div><Link className="link" to='#/work'>WORK</Link></div>
             <div><Link className="link" to='#/research'>RESEARCH</Link></div>
-            <div><Link className="link" to='/'>CV</Link></div>
-            <div><Link className="link" to='/'>CONTACT</Link></div>
+            <div><a className="link" href='../../assets/resume.pdf'>CV</a></div>
+            <div><a href='mailto:mcnutt.andrew@gmail.com'>CONTACT</a></div>
           </div>
         </div>
       </div>
