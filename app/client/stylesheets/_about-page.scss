@@ -62,12 +62,8 @@
     right: 0;
     text-align: right;
 
-    .link {
-      text-decoration: none;
-
-      &:link {
-        color: $text-color;
-      }
+    .link:link {
+      color: $text-color;
     }
   }
 }

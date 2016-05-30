@@ -7,6 +7,10 @@ $text-color: #555;
 .app {
   color: $text-color;
   font-family: GillSans-Light;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .side-nav-links {
@@ -24,7 +28,6 @@ $text-color: #555;
   }
 
   .link {
-    text-decoration: none;
 
     &:link {
       color: $text-color;
@@ -42,5 +45,14 @@ $text-color: #555;
     left: 40px;
     max-width: 545px;
     position: relative;
+  }
+
+  .thing-header {
+    width: 594px;
+
+    a {
+      float: right;
+      margin-right: 10px;
+    }
   }
 }

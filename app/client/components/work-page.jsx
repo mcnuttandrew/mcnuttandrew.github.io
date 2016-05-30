@@ -11,7 +11,17 @@ var WorkPage = React.createClass({
   },
 
   renderDescription: function renderDescription(thing) {
-    return (<ThingDescription title={thing.title} text={thing.text} />)
+    var props = {
+      title: thing.title,
+      text: thing.text
+    }
+    if (thing.liveLink) {
+      props.liveLink = thing.liveLink
+    }
+    if (thing.sourceLink) {
+      props.sourceLink = thing.sourceLink
+    }
+    return (<ThingDescription {...props}/>)
   },
 
   render: function render() {
@@ -27,9 +37,12 @@ var WorkPage = React.createClass({
         </div>
         <div className='skillz-wrapper'>
           <div className='section-title'>SKILLS</div>
-          <div className='section'>PERSONAL: information design, mechanics</div>
-          <div className='section'>WEB DEV: d3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails, python, flask, sketch </div>
-          <div className='section'>SCI-COM: mathematica, grid mathematica, numpy, pandas</div>
+          <div className='section'>
+            PERSONAL: information design, physics, <a href='http://mcnuttart.tumblr.com/'>arts</a>
+            <br/>
+            WEB DEV: d3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails, python, flask, sketch
+            SCI-COM: mathematica, grid mathematica, numpy, pandas
+          </div>
         </div>
       </div>
     );
