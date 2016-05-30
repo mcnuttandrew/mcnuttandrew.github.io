@@ -5,7 +5,6 @@ redesign.
 
 #TODOS
 - Make thing description naming less stupid
-- Loop through the various project and remove move their project pages to github
 - disconnect from the old heroku server
-- add project assets
-- es6ify
+- install six linter, deal with fall out
+- hook up state stuff for project

@@ -1,11 +1,10 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
-var Constants = require('../constants');
+import React from 'react';
+import {Link} from 'react-router';
+import Constants from '../constants';
 
-var FirstPageContent = React.createClass({
-  displayName : 'FirstPageContent',
-  render() {
+const FirstPageContent = React.createClass({
+  displayName: 'FirstPageContent',
+  render: function render() {
     return (
       <div className="app">
         <div className="container">
@@ -29,5 +28,4 @@ var FirstPageContent = React.createClass({
   }
 });
 
-
-module.exports = FirstPageContent;
+export default FirstPageContent;

@@ -1,8 +1,8 @@
-var React = require('react');
-var ThingDescription = require('./thing-description.jsx');
-var Constants = require('../constants');
+import React from 'react';
+import ThingDescription from './thing-description.jsx';
+import Constants from '../constants';
 
-var ResearchPage = React.createClass({
+export default React.createClass({
   displayName : 'ResearchPage',
   getInialState: function getInialState() {
     return {
@@ -47,6 +47,3 @@ var ResearchPage = React.createClass({
     );
   }
 });
-
-
-module.exports = ResearchPage;

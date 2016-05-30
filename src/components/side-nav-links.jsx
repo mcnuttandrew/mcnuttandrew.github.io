@@ -1,8 +1,7 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
+import React from 'react';
+import {Link} from 'react-router';
 
-var SideNavLinks = React.createClass({
+export default React.createClass({
   displayName : 'SideNavLinks',
   render() {
     return (
@@ -20,6 +19,3 @@ var SideNavLinks = React.createClass({
     );
   }
 });
-
-
-module.exports = SideNavLinks;

@@ -1,13 +1,11 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var ReactRouter = require('react-router');
-var Router = ReactRouter.Router;
-var Route = ReactRouter.Route;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {browserHistory, Router, Route} from 'react-router';
 
-var Root = require('./components/root.jsx');
+import Root from './components/root.jsx';
 
 ReactDOM.render((
-  <Router history={ReactRouter.browserHistory}>
+  <Router history={browserHistory}>
     <Route path="/" component={Root}></Route>
   </Router>
 ),  document.getElementById('app'))

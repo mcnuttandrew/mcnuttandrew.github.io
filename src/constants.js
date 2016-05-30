@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   about: 'I am  an applied mathematician currently working in the wild world of San Francisco based web development. I am a full stack developer, but I am more or less front-end/data-visualization leaning. My educational background is in physics, specifically in mechaincs, and traditional rails oriented web development. I feel greatly for the plight of the American desert.',
   publications: [
     {

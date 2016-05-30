@@ -1,8 +1,7 @@
-var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
+import React from 'react';
+import {Link} from 'react-router';
 
-var ThingDescription = React.createClass({
+export default React.createClass({
   displayName : 'ThingDescription',
   render: function render() {
     var liveLink = '';
@@ -31,6 +30,3 @@ var ThingDescription = React.createClass({
     );
   }
 });
-
-
-module.exports = ThingDescription;

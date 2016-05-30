@@ -1,10 +1,10 @@
-var React = require('react');
-var AboutPage = require('./about-page.jsx');
-var ResearchPage = require('./research-page.jsx');
-var WorkPage = require('./work-page.jsx');
-var SideNavLinks = require('./side-nav-links.jsx');
+import React from 'react';
+import AboutPage from './about-page.jsx';
+import ResearchPage from './research-page.jsx';
+import WorkPage from './work-page.jsx';
+import SideNavLinks from './side-nav-links.jsx';
 
-module.exports = React.createClass({
+export default React.createClass({
   displayName : 'App',
   render() {
     // janky fake router
