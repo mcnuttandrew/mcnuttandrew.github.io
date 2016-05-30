@@ -4,8 +4,7 @@ redesign.
 
 
 #TODOS
-- Destroy server
 - Make thing description naming less stupid
-- Finish the github process
 - Loop through the various project and remove move their project pages to github
-- Delete the old heroku server
+- disconnect from the old heroku server
+- add project assets

@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
-var Data = require('./data');
+var Constants = require('../constants');
 
 var FirstPageContent = React.createClass({
   displayName : 'FirstPageContent',
@@ -16,7 +16,7 @@ var FirstPageContent = React.createClass({
             <div>MATHER</div>
           </div>
           <div className="name"> ANDREW MCNUTT</div>
-          <div className="boring-content">{Data.about}</div>
+          <div className="boring-content">{Constants.about}</div>
           <div className="links">
             <div><Link className="link" to='#/work'>WORK</Link></div>
             <div><Link className="link" to='#/research'>RESEARCH</Link></div>

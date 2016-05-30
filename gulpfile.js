@@ -8,10 +8,10 @@ var babelify = require('babelify');
 var IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
 var paths = {
-  main_css : [ 'app/client/stylesheets/main.scss' ],
-  css      : [ 'app/client/stylesheets/**/*.scss' ],
-  main_js  : [ 'app/client/app.js' ],
-  js       : [ 'app/client/**/*.js*' ],
+  main_css: ['src/stylesheets/main.scss'],
+  css: ['src/stylesheets/**/*.scss'],
+  main_js: ['src/app.js'],
+  js: ['src/**/*.js*'],
 };
 
 gulp.task('css', function() {
@@ -21,7 +21,7 @@ gulp.task('css', function() {
                   outputStyle: IS_PRODUCTION ? 'compressed' : 'nested'
                 }).on('error', sass.logError)
               )
-              .pipe(gulp.dest('app/static/css/'));
+              .pipe(gulp.dest('dist/css/'));
 });
 
 gulp.task('js', function() {
@@ -43,25 +43,24 @@ gulp.task('js', function() {
   bundler.bundle().on('error', function(err) {
     console.error('[browserify error]', err.message);
   }).pipe(source('bundle.js'))
-    .pipe(gulp.dest('app/static/js'));
+    .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('serve', [ 'css', 'js' ], function () {
-  // Generic watch tasks for SASS and Browserify
-  gulp.watch(paths.css, [ 'css' ]);
-  gulp.watch(paths.js,  [ 'js'  ]);
+gulp.task('serve', ['css', 'js'], function () {
+  gulp.watch(paths.css, ['css']);
+  gulp.watch(paths.js,  ['js']);
 
   // Start the app server.
-  var server = gls.static('app/static', 3000);
+  var server = gls.static('./', 3000);
   server.start();
 
   // Reload server when backend files change.
-  gulp.watch([ 'app/server/**/*.js' ], function() {
+  gulp.watch(['src/server/**/*.js'], function() {
     server.start.bind(server)();
   });
 
   // Notify server when frontend files change.
-  gulp.watch([ 'app/static/**/*.{css,js,html}' ], function(file) {
+  gulp.watch(['dist/**/*.{css,js,html}'], function(file) {
     server.notify(file);
   });
 });

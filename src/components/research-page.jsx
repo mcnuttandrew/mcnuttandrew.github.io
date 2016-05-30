@@ -1,6 +1,6 @@
 var React = require('react');
 var ThingDescription = require('./thing-description.jsx');
-var Data = require('./data');
+var Constants = require('../constants');
 
 var ResearchPage = React.createClass({
   displayName : 'ResearchPage',
@@ -18,7 +18,7 @@ var ResearchPage = React.createClass({
     var showPubs = false;
     var pubClassName = showPubs ? 'selected' : '';
     var projClassName = showPubs ? '' : 'selected';
-    var content = Data[showPubs ? 'publications' : 'projects'].map(this.renderDescription);
+    var content = Constants[showPubs ? 'publications' : 'projects'].map(this.renderDescription);
     return (
       <div className="container research-page">
         <div className="page-title">

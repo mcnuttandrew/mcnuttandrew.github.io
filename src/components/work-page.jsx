@@ -1,6 +1,6 @@
 var React = require('react');
 var ThingDescription = require('./thing-description.jsx');
-var Data = require('./data');
+var Constants = require('../constants');
 
 var WorkPage = React.createClass({
   displayName : 'WorkPage',
@@ -25,7 +25,7 @@ var WorkPage = React.createClass({
   },
 
   render: function render() {
-    var content = Data.onlineWork.map(this.renderDescription);
+    var content = Constants.onlineWork.map(this.renderDescription);
     return (
       <div className="container work-page">
         <div className="page-title">
