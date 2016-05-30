@@ -1,20 +1,47 @@
 var React = require('react');
+var ThingDescription = require('./thing-description.jsx');
+var Data = require('./data');
 
-var FirstPageContent = React.createClass({
-  displayName : 'FirstPageContent',
-  render() {
+var WorkPage = React.createClass({
+  displayName : 'WorkPage',
+  getInialState: function getInialState() {
+    return {
+      publicationShowing: true
+    }
+  },
+
+  renderDescription: function renderDescription(thing) {
+    var props = {
+      title: thing.title,
+      text: thing.text
+    }
+    if (thing.liveLink) {
+      props.liveLink = thing.liveLink
+    }
+    if (thing.sourceLink) {
+      props.sourceLink = thing.sourceLink
+    }
+    return (<ThingDescription {...props}/>)
+  },
+
+  render: function render() {
+    var content = Data.onlineWork.map(this.renderDescription);
     return (
-      <div className="app">
-        <div className="container">
-          <div className="tagline">
-            <div>SF BASED DATA</div>
-            <div>VISUALIZATION</div>
-            <div className="special-line">PERSON & APPLIED</div>
-            <div>MATHER</div>
-          </div>
-          <div className="name">WORK</div>
-          <div className="boring-content">I am an applied mathematician currently working in the wild world of San Francisco based web development. I am a full stack developer, but I am more or less front-end/data-visualization leaning. My educational background is in physics, specifically in mechaincs, and traditional rails oriented web development. I feel greatly for the plight of the American desert.</div>
-          <div className="links">
+      <div className="container work-page">
+        <div className="page-title">
+          <div>WORK</div>
+        </div>
+        <div className='page-content'>
+          <div className='section-title'>ONLINE WORK</div>
+          {content}
+        </div>
+        <div className='skillz-wrapper'>
+          <div className='section-title'>SKILLS</div>
+          <div className='section'>
+            PERSONAL: information design, physics, <a href='http://mcnuttart.tumblr.com/'>arts</a>
+            <br/>
+            WEB DEV: d3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails, python, flask, sketch
+            SCI-COM: mathematica, grid mathematica, numpy, pandas
           </div>
         </div>
       </div>
@@ -23,4 +50,4 @@ var FirstPageContent = React.createClass({
 });
 
 
-module.exports = FirstPageContent;
+module.exports = WorkPage;

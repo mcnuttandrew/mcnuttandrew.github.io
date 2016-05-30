@@ -1,4 +1,5 @@
 module.exports = {
+  about: 'I am an applied mathematician currently working in the wild world of San Francisco based web development. I am a full stack developer, but I am more or less front-end/data-visualization leaning. My educational background is in physics, specifically in mechaincs, and traditional rails oriented web development. I feel greatly for the plight of the American desert.',
   publications: [
     {
       title: '',
@@ -23,5 +24,47 @@ module.exports = {
       title: 'Chaotic Circuit',
       text: 'In culminating effort of my junior year at Reed I built a third order Chaotic circuit as an independent project. This project was fine, but shows some of the best data visualization work I have done, particularlly the combination phase and signal metering small multiples diagram.'
     }
+  ],
+
+  onlineWork: [
+    {
+      title: 'Teacup',
+      liveLink: 'http://tea-cup.org/',
+      sourceLink: 'https://github.com/mcnuttandrew/Project-Teacup',
+      text: 'A microblogging platform for viewing the collective unconscious. Single page Backbone app based on RESTful practices. Features data visualizations including trending topics and user population. Seed data was generated using a variety of large scale data scrapes and data cleaning techniques. Technologies included a Rails API, Backbone.js, jQuery, Nokogiri, and D3.'
+    },
+    {
+      title: 'CDD: Vision',
+      liveLink: 'https://www.collaborativedrug.com/buzz/2015/05/02/cdd-vision-update-launching-vision-now/',
+      text: 'A data visualization platform for viewing high dimensional drug discovery data, built for and on top of the Collaborative Drug Discovery: Vault platform. I acted as the lead developer on this project, which involved guiding a four person team through the implementation of a vareity of javascript technologies. The stack included a backend built on Crossfilter and Immutable, a middleware/binding level built with jQuery and d3.js, and frontend constructed with a blend of HTML5 canvas and Open GL.'
+    },
+    {
+      title: 'Why Not Ipsum',
+      liveLink: 'http://why-not-ipsum.herokuapp.com/',
+      sourceLink: 'https://github.com/mcnuttandrew/Why-Not-Zoidberg',
+      text: 'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning. Technologies included Rails API, Backbone.js, and Nokogiri.'
+    },
+    {
+      title: 'N-Body Simulator',
+      liveLink: 'http://www.mcnutt.in/assets/nbody/nbody.html',
+      sourceLink: 'https://github.com/mcnuttandrew/N-Body-Simulator',
+      text: 'A low N gravitional interaction simulator built in processing.'
+    },
+    {
+      title: 'Asteroids',
+      liveLink: 'http://www.mcnutt.in/assets/asteroids/asteroids.html',
+      sourceLink: 'https://github.com/mcnuttandrew/Asteroids',
+      text: 'A reimaging of the classic arcade game. Technologies included Javascipt, HTML5 Canvas, and jQuery'
+    }
+    // {
+    //   title: 'Slim Record',
+    //   sourceLink: 'https://github.com/mcnuttandrew/Active-Record-Lite',
+    //   text: 'An Object Relational Mapper that rebuilds much of the functionality of active record. The point of the project was to get a better comprehension of the underlying mechanisms that we so often take for granted in Rails'
+    // },
+    // {
+    //   title: 'Railsito',
+    //   sourceLink: 'https://github.com/mcnuttandrew/railsito',
+    //   text: 'An Object Relational Mapper that rebuilds much of the functionality of active record. The point of the project was to get a better comprehension of the underlying mechanisms that we so often take for granted in Rails'
+    // }
   ]
 }
