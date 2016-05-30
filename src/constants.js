@@ -2,11 +2,11 @@ export default {
   about: 'I am  an applied mathematician currently working in the wild world of San Francisco based web development. I am a full stack developer, but I am more or less front-end/data-visualization leaning. My educational background is in physics, specifically in mechaincs, and traditional rails oriented web development. I feel greatly for the plight of the American desert.',
   publications: [
     {
-      title: '',
+      title: '1',
       text: 'Franklin, J., Guo, Y., McNutt, A., & Morgan, A. (2015). The Schrödinger–Newton system with self-field coupling. Classical and Quantum Gravity'
     },
     {
-      title: '',
+      title: '2',
       text: 'Clark, A. M., Dole, K., Coulon-Spektor, A., McNutt, A., Grass, G., Freundlich, J. S., ... & Ekins, S. (2015). Open Source Bayesian Models: I. Application to ADME/Tox and Drug Discovery Datasets. Journal of chemical information and modeling.'
     }
   ],

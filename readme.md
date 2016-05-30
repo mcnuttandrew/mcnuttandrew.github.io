@@ -7,4 +7,3 @@ redesign.
 - Make thing description naming less stupid
 - disconnect from the old heroku server
 - install six linter, deal with fall out
-- hook up state stuff for project

@@ -4,10 +4,9 @@ import Constants from '../constants';
 
 export default React.createClass({
   displayName : 'ResearchPage',
-  getInialState: function getInialState() {
-    return {
-      publicationShowing: true
-    }
+
+  getInitialState: function getInitialState() {
+    return {publicationShowing: true};
   },
 
   renderDescription: function renderDescription(thing) {
@@ -19,8 +18,12 @@ export default React.createClass({
     return (<ThingDescription {...props} />);
   },
 
+  toggleMenu: function toggleMenu(option) {
+    this.setState({publicationShowing: option})
+  },
+
   render: function render() {
-    var showPubs = false;
+    var showPubs = this.state.publicationShowing;
     var pubClassName = showPubs ? 'selected' : '';
     var projClassName = showPubs ? '' : 'selected';
     var content = Constants[showPubs ? 'publications' : 'projects'].map(this.renderDescription);
@@ -36,9 +39,13 @@ export default React.createClass({
           <div className='section'>PHENOMENA: VEHICLE TRAFFIC, GRAVITY, VIRTUAL & AUGMENTED REALITY</div>
         </div>
         <div className='subsection-selector'>
-          <span classNames={pubClassName}> PUBLICATIONS </span>
+          <span
+            className={pubClassName}
+            onClick={this.toggleMenu.bind(null, true)}>PUBLICATIONS </span>
           <span> / </span>
-          <span classNames={projClassName}> PROJECTS </span>
+          <span
+            className={projClassName}
+            onClick={this.toggleMenu.bind(null, false)}> PROJECTS </span>
         </div>
         <div className='page-content'>
           {content}
