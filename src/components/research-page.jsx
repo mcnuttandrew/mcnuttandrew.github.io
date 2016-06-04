@@ -35,7 +35,7 @@ export default React.createClass({
         </div>
         <div className='interests-wrapper'>
           <div className='section-title'>INTERESTS</div>
-          <div className='section'>FIELDS: MACHINE LEARNING, MECHACNICS, DATA VISUALIZATION</div>
+          <div className='section'>FIELDS: MACHINE LEARNING, MECHANICS, DATA VISUALIZATION</div>
           <div className='section'>PHENOMENA: VEHICLE TRAFFIC, GRAVITY, VIRTUAL & AUGMENTED REALITY</div>
         </div>
         <div className='subsection-selector'>

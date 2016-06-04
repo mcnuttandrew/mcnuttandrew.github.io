@@ -9,19 +9,31 @@ var IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
 var paths = {
   main_css: ['src/stylesheets/main.scss'],
+  mobile_css: ['src/mobile-stylesheets/mobile.scss'],
   css: ['src/stylesheets/**/*.scss'],
+  mobile_css: ['src/mobile-stylesheets/**/*.scss'],
   main_js: ['src/app.js'],
   js: ['src/**/*.js*'],
 };
 
 gulp.task('css', function() {
-  return gulp .src(paths.main_css)
-              .pipe(
-                sass({
-                  outputStyle: IS_PRODUCTION ? 'compressed' : 'nested'
-                }).on('error', sass.logError)
-              )
-              .pipe(gulp.dest('dist/'));
+  return gulp.src(paths.main_css)
+    .pipe(
+      sass({
+        outputStyle: IS_PRODUCTION ? 'compressed' : 'nested'
+      }).on('error', sass.logError)
+    )
+    .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('mobile-css', function() {
+  return gulp.src(paths.mobile_css)
+    .pipe(
+      sass({
+        outputStyle: IS_PRODUCTION ? 'compressed' : 'nested'
+      }).on('error', sass.logError)
+    )
+    .pipe(gulp.dest('dist/mobile'));
 });
 
 gulp.task('js', function() {
@@ -46,8 +58,9 @@ gulp.task('js', function() {
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('serve', ['css', 'js'], function () {
+gulp.task('serve', ['css', 'mobile-css', 'js'], function () {
   gulp.watch(paths.css, ['css']);
+  gulp.watch(paths.mobile_css, ['mobile-css']);
   gulp.watch(paths.js,  ['js']);
 
   // Start the app server.
@@ -65,4 +78,4 @@ gulp.task('serve', ['css', 'js'], function () {
   });
 });
 
-gulp.task('default', [ 'css', 'js' ]);
+gulp.task('default', [ 'css', 'js', 'mobile-css']);

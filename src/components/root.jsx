@@ -24,9 +24,11 @@ export default React.createClass({
         content = (<AboutPage />);
         break;
       case '':
+        links = (<SideNavLinks location={this.props.location.hash} />);
         content = (<AboutPage />);
         break;
       default:
+        links = (<SideNavLinks location={this.props.location.hash} />);
         content = (<AboutPage />);
         break;
     }
