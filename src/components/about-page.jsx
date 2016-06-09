@@ -6,7 +6,7 @@ const FirstPageContent = React.createClass({
   displayName: 'FirstPageContent',
   render: function render() {
     return (
-      <div className="app">
+      <div className="app about-page">
         <div className="container">
           <div className="tagline">
             <div>SF BASED DATA</div>

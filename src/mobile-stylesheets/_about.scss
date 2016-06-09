@@ -7,11 +7,11 @@
   .name {
     font-family: GillSans-Light;
     font-size: 75px;
-    left: 0;
+    left: -10px;
     letter-spacing: 0;
     line-height: 54px;
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -300px;
   }
 
   .boring-content {
@@ -20,7 +20,7 @@
     font-size: 14px;
     letter-spacing: 0;
     line-height: 19px;
-    position: absolute;
+    position: relative;
     width: 272px;
   }
 
@@ -29,8 +29,8 @@
     font-size: 40px;
     letter-spacing: 0;
     line-height: 46px;
-    position: absolute;
-    top: 109px;
+    position: relative;
+    top: 30px;
     width: 272px;
   }
 }

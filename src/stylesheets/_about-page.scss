@@ -13,7 +13,7 @@
     height: 230px;
     left: -116px;
     line-height: 57px;
-    position: relative;
+    position: absolute;
     transform: rotate(270deg);
     width: 450px;
 
@@ -32,10 +32,10 @@
     height: 200px;
     letter-spacing: 0;
     line-height: 100px;
-    position: relative;
+    position: absolute;
     right: 0;
     text-overflow: wrap;
-    top: -309px;
+    top: 0;
     white-space: normal;
     width: 634px;
   }
