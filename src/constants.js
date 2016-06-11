@@ -31,6 +31,12 @@ export default {
 
   onlineWork: [
     {
+      title: 'Personal Timeline',
+      liveLink: 'http://mcnuttandrew.github.io/personal-timeline/',
+      sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
+      text: 'A brief timeline of my life, a resume through a dark mirror if you will. Single page app built with React, React-Router, and D3.'
+    },
+    {
       title: 'Teacup',
       liveLink: 'http://tea-cup.org/',
       sourceLink: 'https://github.com/mcnuttandrew/Project-Teacup',
