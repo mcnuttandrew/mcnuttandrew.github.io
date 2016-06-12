@@ -4,7 +4,5 @@ redesign.
 
 
 #TODOS
-- Make thing description naming less stupid
-- disconnect from the old heroku server
 - install six linter, deal with fall out
 - make a mobile friendly version

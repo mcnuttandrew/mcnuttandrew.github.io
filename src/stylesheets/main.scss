@@ -35,19 +35,19 @@ $text-color: #555;
   }
 }
 
-.thing {
+.project {
   font-family: Palatino-Roman;
   font-size: 12px;
   letter-spacing: 0;
   line-height: 14px;
 
-  .thing-body {
+  .project-body {
     left: 40px;
     max-width: 545px;
     position: relative;
   }
 
-  .thing-header {
+  .project-header {
     width: 594px;
 
     a {

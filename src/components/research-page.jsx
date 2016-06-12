@@ -1,5 +1,5 @@
 import React from 'react';
-import ThingDescription from './thing-description.jsx';
+import ProjectDescription from './project-description.jsx';
 import Constants from '../constants';
 
 export default React.createClass({
@@ -9,13 +9,13 @@ export default React.createClass({
     return {publicationShowing: true};
   },
 
-  renderDescription: function renderDescription(thing) {
+  renderDescription: function renderDescription(project) {
     var props = {
-      title: thing.title,
-      text: thing.text,
-      link: thing.link
+      title: project.title,
+      text: project.text,
+      link: project.link
     };
-    return (<ThingDescription {...props} />);
+    return (<ProjectDescription {...props} />);
   },
 
   toggleMenu: function toggleMenu(option) {

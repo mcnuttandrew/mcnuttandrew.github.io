@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 
 export default React.createClass({
-  displayName : 'ThingDescription',
+  displayName : 'ProjectDescription',
   render: function render() {
     var liveLink = '';
     var sourceLink = '';
@@ -17,13 +17,13 @@ export default React.createClass({
       title = (<a href={this.props.link} className='title'>{this.props.title}</a>);
     }
     return (
-      <div className='thing'>
-        <div className='thing-header'>
+      <div className='project'>
+        <div className='project-header'>
           {title}
           {liveLink}
           {sourceLink}
         </div>
-        <div className='thing-body'>
+        <div className='project-body'>
           {this.props.text}
         </div>
       </div>

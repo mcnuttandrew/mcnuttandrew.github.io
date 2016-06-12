@@ -36,12 +36,7 @@ export default {
       sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
       text: 'A brief timeline of my life, a resume through a dark mirror if you will. Single page app built with React, React-Router, and D3.'
     },
-    {
-      title: 'Teacup',
-      liveLink: 'http://tea-cup.org/',
-      sourceLink: 'https://github.com/mcnuttandrew/Project-Teacup',
-      text: 'A microblogging platform for viewing the collective unconscious. Single page Backbone app based on RESTful practices. Features data visualizations including trending topics and user population. Seed data was generated using a variety of large scale data scrapes and data cleaning techniques. Technologies included a Rails API, Backbone.js, jQuery, Nokogiri, and D3.'
-    },
+
     {
       title: 'CDD: Vision',
       liveLink: 'https://www.collaborativedrug.com/buzz/2015/05/02/cdd-vision-update-launching-vision-now/',
@@ -64,6 +59,12 @@ export default {
       liveLink: 'https://mcnuttandrew.github.io/asteroids/',
       sourceLink: 'https://github.com/mcnuttandrew/Asteroids',
       text: 'A reimaging of the classic arcade game. Technologies included Javascipt, HTML5 Canvas, and jQuery'
+    },
+    {
+      title: 'Teacup',
+      liveLink: 'http://tea-cup.org/',
+      sourceLink: 'https://github.com/mcnuttandrew/Project-Teacup',
+      text: 'A microblogging platform for viewing the collective unconscious. Single page Backbone app based on RESTful practices. Features data visualizations including trending topics and user population. Seed data was generated using a variety of large scale data scrapes and data cleaning techniques. Technologies included a Rails API, Backbone.js, jQuery, Nokogiri, and D3.'
     }
     // {
     //   title: 'Slim Record',

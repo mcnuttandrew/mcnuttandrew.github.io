@@ -1,5 +1,5 @@
 import React from 'react';
-import ThingDescription from './thing-description.jsx';
+import ProjectDescription from './project-description.jsx';
 import Constants from '../constants';
 
 export default React.createClass({
@@ -10,18 +10,18 @@ export default React.createClass({
     }
   },
 
-  renderDescription: function renderDescription(thing) {
+  renderDescription: function renderDescription(project) {
     var props = {
-      title: thing.title,
-      text: thing.text
+      title: project.title,
+      text: project.text
     }
-    if (thing.liveLink) {
-      props.liveLink = thing.liveLink
+    if (project.liveLink) {
+      props.liveLink = project.liveLink
     }
-    if (thing.sourceLink) {
-      props.sourceLink = thing.sourceLink
+    if (project.sourceLink) {
+      props.sourceLink = project.sourceLink
     }
-    return (<ThingDescription {...props}/>)
+    return (<ProjectDescription {...props}/>)
   },
 
   render: function render() {
