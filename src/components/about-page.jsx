@@ -1,9 +1,20 @@
 import React from 'react';
+import ReactGA, {OutboundLink} from 'react-ga';
 import {Link} from 'react-router';
 import Constants from '../constants';
 
-const FirstPageContent = React.createClass({
-  displayName: 'FirstPageContent',
+const AboutPage = React.createClass({
+  displayName: 'AboutPage',
+
+  getTrack: function getTrack(tabName) {
+    return function logPageView() {
+      ReactGA.event({
+        category: 'User',
+        action: `Accessed the ${tabName} tab`
+      });
+    }
+  },
+
   render: function render() {
     return (
       <div className="app about-page">
@@ -17,9 +28,15 @@ const FirstPageContent = React.createClass({
           <div className="name"> ANDREW MCNUTT</div>
           <div className="boring-content">{Constants.about}</div>
           <div className="links">
-            <div><Link className="link" to='#/work'>WORK</Link></div>
-            <div><Link className="link" to='#/research'>RESEARCH</Link></div>
-            <div><a className="link" href='../../assets/resume.pdf'>CV</a></div>
+            <div><Link className="link" to='#/work' onClick={this.getTrack('Work')}>WORK</Link></div>
+            <div><Link className="link" to='#/research' onClick={this.getTrack('Research')}>RESEARCH</Link></div>
+            <div>
+              <OutboundLink
+                className="link"
+                to='../../assets/resume.pdf'
+                eventLabel={"Click resume link"}>
+                CV
+              </OutboundLink></div>
             <div><a href='mailto:mcnutt.andrew@gmail.com'>CONTACT</a></div>
           </div>
         </div>
@@ -28,4 +45,4 @@ const FirstPageContent = React.createClass({
   }
 });
 
-export default FirstPageContent;
+export default AboutPage;
