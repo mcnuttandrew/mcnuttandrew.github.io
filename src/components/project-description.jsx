@@ -1,16 +1,9 @@
 import React from 'react';
-import ReactGa from 'react-ga';
+import {OutboundLink} from 'react-ga';
 import {Link} from 'react-router';
 
 export default React.createClass({
   displayName : 'ProjectDescription',
-
-  track: function track(linkType) {
-    ReactGa.event({
-      category: 'User',
-      action: `User clicked ${linkType} link for ${this.props.title}`
-    });
-  },
 
   render: function render() {
     var liveLink = '';
@@ -18,16 +11,30 @@ export default React.createClass({
     var title = this.props.title;
     if (this.props.liveLink) {
       liveLink = (
-        <a href={this.props.liveLink} onClick={this.track.bind(null, 'live')}>live</a>
+        <OutboundLink
+          eventLabel={`Click live link for ${this.props.title}`}
+          to={this.props.liveLink}>
+          live
+        </OutboundLink>
       );
     }
     if (this.props.sourceLink) {
-        sourceLink = (<a href={this.props.sourceLink} onClick={this.track.bind(null, 'source')}>source</a>
+        sourceLink = (
+          <OutboundLink
+            eventLabel={`Click source link for ${this.props.title}`}
+            to={this.props.sourceLink}>
+            source
+          </OutboundLink>
       );
     }
     if (this.props.link) {
       title = (
-        <a href={this.props.link} className='title' onClick={this.track.bind(null, 'main')}>{this.props.title}</a>);
+        <OutboundLink
+          eventLabel={`Click live link for ${this.props.title}`}
+          to={this.props.link}
+          className='title'>
+          {this.props.title}
+        </OutboundLink>);
     }
     return (
       <div className='project'>
