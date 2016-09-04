@@ -1,11 +1,11 @@
 .container {
-  // border: 1px solid #979797;
+  border: 1px solid #979797;
   height: 452px;
   left: calc(50% - 400px);
   position: absolute;
   top: calc(50% - 225px);
-  transform: translateX(0);
-  transition: transform .3s;
+  transform: translateY(0);
+  transition: transform .6s;
   width: 793px;
 
   .tagline {
@@ -49,31 +49,31 @@
     height: 260px;
     left: 217px;
     letter-spacing: 1px;
-    line-height: 33px;
+    line-height: 20px;
     position: absolute;
     text-align: justify;
-    width: 385px;
+    width: 575px;
   }
 
   .links {
-    bottom: -22px;
+    bottom: 0;
     font-size: 36px;
     letter-spacing: 0;
-    line-height: 68px;
     position: absolute;
     right: 0;
     text-align: right;
 
     .link:link {
       color: $text-color;
+      padding: 0 10px;
     }
   }
 }
 
 .work .about-page {
-  transform: translateX(10000px);
+  transform: translateY(10000px);
 }
 
 .research .about-page {
-  transform: translateX(-10000px);
+  transform: translateY(-10000px);
 }

@@ -7,8 +7,6 @@ import SideNavLinks from './side-nav-links.jsx';
 export default React.createClass({
   displayName : 'App',
   render() {
-    // // janky fake router
-    // var content;
     let wrapperClass = 'app';
     switch(this.props.location.hash) {
       case '#/work':
@@ -27,8 +25,7 @@ export default React.createClass({
         wrapperClass += ' about';
         break;
     }
-    // const wrapperClass = `app ${this.props.location.hash.split('#')}`;
-    // console.log(wrapperClass)
+
     return (
       <div className={wrapperClass}>
         <SideNavLinks location={this.props.location.hash} />

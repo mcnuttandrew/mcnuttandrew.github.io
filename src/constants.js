@@ -1,5 +1,5 @@
 export default {
-  about: 'I am  an applied mathematician currently working in the wild world of San Francisco based web development. I am a full stack developer, but I am more or less front-end/data-visualization leaning. My educational background is in physics, specifically in mechaincs, and traditional rails oriented web development. I feel greatly for the plight of the American desert.',
+  about: 'I am  an applied mathematician currently working in the wild world of San Francisco based web development. I am a full stack developer, but I am more or less front-end/data-visualization leaning. My educational background is in physics, specifically in mechaincs, and traditional rails oriented web development. I feel greatly for the plight of the American desert. I am  an applied mathematician currently working in the wild world of San Francisco based web development. I am a full stack developer, but I am more or less front-end/data-visualization leaning. My educational background is in physics, specifically in mechaincs, and traditional rails oriented web development. I feel greatly for the plight of the American desert.',
   publications: [
     {
       title: '1',
@@ -35,12 +35,6 @@ export default {
       liveLink: 'http://mcnuttandrew.github.io/personal-timeline/',
       sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
       text: 'A brief timeline of my life, a resume through a dark mirror if you will. Single page app built with React, React-Router, and D3.'
-    },
-
-    {
-      title: 'CDD: Vision',
-      liveLink: 'https://www.collaborativedrug.com/buzz/2015/05/02/cdd-vision-update-launching-vision-now/',
-      text: 'A data visualization platform for viewing high dimensional drug discovery data, built for and on top of the Collaborative Drug Discovery: Vault platform. I acted as the lead developer on this project, which involved guiding a four person team through the implementation of a vareity of javascript technologies. The stack included a backend built on Crossfilter and Immutable, a middleware/binding level built with jQuery and d3.js, and frontend constructed with a blend of HTML5 canvas and Open GL.'
     },
     {
       title: 'Why Not Ipsum',

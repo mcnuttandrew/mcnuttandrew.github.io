@@ -1,10 +1,11 @@
 .container {
+  border: 1px solid #979797;
   height: 452px;
   left: calc(50% - 400px);
   position: absolute;
   top: calc(50% - 225px);
-  transform: translateX(0);
-  transition: transform .3s;
+  transform: translateY(0);
+  transition: transform .6s;
   width: 793px; }
   .container .tagline {
     bottom: 110px;
@@ -39,30 +40,30 @@
     height: 260px;
     left: 217px;
     letter-spacing: 1px;
-    line-height: 33px;
+    line-height: 20px;
     position: absolute;
     text-align: justify;
-    width: 385px; }
+    width: 575px; }
   .container .links {
-    bottom: -22px;
+    bottom: 0;
     font-size: 36px;
     letter-spacing: 0;
-    line-height: 68px;
     position: absolute;
     right: 0;
     text-align: right; }
     .container .links .link:link {
-      color: #555; }
+      color: #555;
+      padding: 0 10px; }
 
 .work .about-page {
-  transform: translateX(10000px); }
+  transform: translateY(10000px); }
 
 .research .about-page {
-  transform: translateX(-10000px); }
+  transform: translateY(-10000px); }
 
 .research-page {
-  transform: translateX(10000px);
-  transition: transform .3s; }
+  transform: translateY(10000px);
+  transition: transform .6s; }
   .research-page .page-title {
     font-size: 144px;
     height: 452px;
@@ -108,11 +109,11 @@
     top: 0; }
 
 .research .research-page {
-  transform: translateX(0); }
+  transform: translateY(0); }
 
 .work-page {
-  transform: translateX(20000px);
-  transition: transform .3s; }
+  transform: translateY(20000px);
+  transition: transform .6s; }
   .work-page .page-title {
     bottom: 20px;
     font-family: GillSans-Light;
@@ -149,7 +150,7 @@
     letter-spacing: 0;
     line-height: 19px; }
   .work-page .page-content {
-    bottom: 0;
+    bottom: 56px;
     left: 144px;
     position: absolute; }
     .work-page .page-content .section-title {
@@ -159,7 +160,10 @@
       transform: rotate(-90deg); }
 
 .work .work-page {
-  transform: translateX(0); }
+  transform: translateY(0); }
+
+body {
+  overflow: hidden; }
 
 .app {
   color: #555;
@@ -197,3 +201,6 @@
       margin-right: 10px; }
     .project .project-header .title {
       float: none; }
+
+.side-nav-links {
+  display: none; }

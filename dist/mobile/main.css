@@ -30,7 +30,7 @@
 
 .about-page {
   transform: translateX(10000px);
-  transition: transform .3s; }
+  transition: transform .6s; }
 
 .about .about-page {
   transform: translateX(0); }
@@ -39,7 +39,7 @@
   position: absolute;
   top: 8px;
   transform: translateX(10000px);
-  transition: transform .3s; }
+  transition: transform .6s; }
   .research-page .page-title {
     font-family: GillSans-Light;
     font-size: 75px;
@@ -84,8 +84,9 @@
 
 .work-page {
   position: absolute;
+  top: 10px;
   transform: translateX(-10000px);
-  transition: transform .3s; }
+  transition: transform .6s; }
   .work-page .page-title {
     font-family: GillSans-Light;
     font-size: 75px;
@@ -115,6 +116,9 @@
 
 .work .work-page {
   transform: translateX(0); }
+
+body {
+  overflow: auto; }
 
 .app {
   color: #555;
@@ -149,3 +153,8 @@
 .project-header a {
   padding-left: 5px;
   padding-right: 5px; }
+
+.side-nav-li {
+  padding: 0 10px; }
+  .side-nav-li.selected-li {
+    font-weight: 600; }

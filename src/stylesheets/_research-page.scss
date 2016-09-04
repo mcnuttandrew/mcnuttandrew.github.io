@@ -1,6 +1,6 @@
 .research-page {
-  transform: translateX(10000px);
-  transition: transform .3s;
+  transform: translateY(10000px);
+  transition: transform .6s;
 
   .page-title {
     font-size: 144px;
@@ -63,5 +63,5 @@
 }
 
 .research .research-page {
-  transform: translateX(0);
+  transform: translateY(0);
 }

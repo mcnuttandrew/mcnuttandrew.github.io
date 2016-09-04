@@ -1,6 +1,9 @@
 import React from 'react';
-import ProjectDescription from './project-description.jsx';
+import ReactGA, {OutboundLink} from 'react-ga';
+import {Link} from 'react-router';
+
 import Constants from '../constants';
+import ProjectDescription from './project-description.jsx';
 
 export default React.createClass({
   displayName : 'ResearchPage',
@@ -20,6 +23,15 @@ export default React.createClass({
 
   toggleMenu: function toggleMenu(option) {
     this.setState({publicationShowing: option})
+  },
+
+  getTrack: function getTrack(tabName) {
+    return function logPageView() {
+      ReactGA.event({
+        category: 'User',
+        action: `Accessed the ${tabName} tab`
+      });
+    }
   },
 
   render: function render() {
@@ -49,6 +61,18 @@ export default React.createClass({
         </div>
         <div className='page-content'>
           {content}
+        </div>
+        <div className="links">
+          <span><Link className="link" to='#/about' onClick={this.getTrack('About')}>ABOUT</Link></span>
+          <span><Link className="link" to='#/work' onClick={this.getTrack('Work')}>WORK</Link></span>
+          <span>
+            <OutboundLink
+              className="link"
+              to='../../assets/resume.pdf'
+              eventLabel={"Click resume link"}>
+              CV
+            </OutboundLink></span>
+          <span><a href='mailto:mcnutt.andrew@gmail.com'>CONTACT</a></span>
         </div>
       </div>
     );

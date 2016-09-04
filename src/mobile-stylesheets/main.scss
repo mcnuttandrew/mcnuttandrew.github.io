@@ -3,6 +3,10 @@ $text-color: #555;
 @import 'research';
 @import 'work-page';
 
+body {
+  overflow: auto;
+}
+
 .app {
   color: $text-color;
   text-decoration: none;
@@ -51,5 +55,13 @@ $text-color: #555;
   a {
     padding-left: 5px;
     padding-right: 5px;
+  }
+}
+
+.side-nav-li {
+  padding: 0 10px;
+
+  &.selected-li {
+    font-weight: 600;
   }
 }

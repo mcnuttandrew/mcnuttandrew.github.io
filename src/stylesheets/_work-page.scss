@@ -1,6 +1,6 @@
 .work-page {
-  transform: translateX(20000px);
-  transition: transform .3s;
+  transform: translateY(20000px);
+  transition: transform .6s;
 
   .page-title {
     bottom: 20px;
@@ -50,7 +50,7 @@
   }
 
   .page-content {
-    bottom: 0;
+    bottom: 56px;
     left: 144px;
     position: absolute;
 
@@ -64,5 +64,5 @@
 }
 
 .work .work-page {
-  transform: translateX(0);
+  transform: translateY(0);
 }

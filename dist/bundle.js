@@ -25151,7 +25151,7 @@ var AboutPage = _react2.default.createClass({
           _react2.default.createElement(
             'div',
             { className: 'special-line' },
-            'PERSON & APPLIED'
+            'EXPERT & APPLIED'
           ),
           _react2.default.createElement(
             'div',
@@ -25173,7 +25173,7 @@ var AboutPage = _react2.default.createClass({
           'div',
           { className: 'links' },
           _react2.default.createElement(
-            'div',
+            'span',
             null,
             _react2.default.createElement(
               _reactRouter.Link,
@@ -25182,7 +25182,7 @@ var AboutPage = _react2.default.createClass({
             )
           ),
           _react2.default.createElement(
-            'div',
+            'span',
             null,
             _react2.default.createElement(
               _reactRouter.Link,
@@ -25191,7 +25191,7 @@ var AboutPage = _react2.default.createClass({
             )
           ),
           _react2.default.createElement(
-            'div',
+            'span',
             null,
             _react2.default.createElement(
               _reactGa.OutboundLink,
@@ -25203,7 +25203,7 @@ var AboutPage = _react2.default.createClass({
             )
           ),
           _react2.default.createElement(
-            'div',
+            'span',
             null,
             _react2.default.createElement(
               'a',
@@ -25301,13 +25301,19 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _projectDescription = require('./project-description.jsx');
+var _reactGa = require('react-ga');
 
-var _projectDescription2 = _interopRequireDefault(_projectDescription);
+var _reactGa2 = _interopRequireDefault(_reactGa);
+
+var _reactRouter = require('react-router');
 
 var _constants = require('../constants');
 
 var _constants2 = _interopRequireDefault(_constants);
+
+var _projectDescription = require('./project-description.jsx');
+
+var _projectDescription2 = _interopRequireDefault(_projectDescription);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25329,6 +25335,15 @@ exports.default = _react2.default.createClass({
 
   toggleMenu: function toggleMenu(option) {
     this.setState({ publicationShowing: option });
+  },
+
+  getTrack: function getTrack(tabName) {
+    return function logPageView() {
+      _reactGa2.default.event({
+        category: 'User',
+        action: 'Accessed the ' + tabName + ' tab'
+      });
+    };
   },
 
   render: function render() {
@@ -25399,12 +25414,55 @@ exports.default = _react2.default.createClass({
         'div',
         { className: 'page-content' },
         content
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'links' },
+        _react2.default.createElement(
+          'span',
+          null,
+          _react2.default.createElement(
+            _reactRouter.Link,
+            { className: 'link', to: '#/about', onClick: this.getTrack('About') },
+            'ABOUT'
+          )
+        ),
+        _react2.default.createElement(
+          'span',
+          null,
+          _react2.default.createElement(
+            _reactRouter.Link,
+            { className: 'link', to: '#/work', onClick: this.getTrack('Work') },
+            'WORK'
+          )
+        ),
+        _react2.default.createElement(
+          'span',
+          null,
+          _react2.default.createElement(
+            _reactGa.OutboundLink,
+            {
+              className: 'link',
+              to: '../../assets/resume.pdf',
+              eventLabel: "Click resume link" },
+            'CV'
+          )
+        ),
+        _react2.default.createElement(
+          'span',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: 'mailto:mcnutt.andrew@gmail.com' },
+            'CONTACT'
+          )
+        )
       )
     );
   }
 });
 
-},{"../constants":237,"./project-description.jsx":232,"react":227}],234:[function(require,module,exports){
+},{"../constants":237,"./project-description.jsx":232,"react":227,"react-ga":54,"react-router":91}],234:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25436,8 +25494,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _react2.default.createClass({
   displayName: 'App',
   render: function render() {
-    // // janky fake router
-    // var content;
     var wrapperClass = 'app';
     switch (this.props.location.hash) {
       case '#/work':
@@ -25456,8 +25512,7 @@ exports.default = _react2.default.createClass({
         wrapperClass += ' about';
         break;
     }
-    // const wrapperClass = `app ${this.props.location.hash.split('#')}`;
-    // console.log(wrapperClass)
+
     return _react2.default.createElement(
       'div',
       { className: wrapperClass },
@@ -25501,12 +25556,25 @@ exports.default = _react2.default.createClass({
   },
 
   render: function render() {
+    var selected = 'about';
+    switch (this.props.location) {
+      case '#/work':
+        selected = 'work';
+        break;
+      case '#/research':
+        selected = 'research';
+        break;
+    }
+
+    var aboutLinkClass = 'side-nav-li ' + (selected === 'about' ? 'selected-li' : '');
+    var researchLinkClass = 'side-nav-li ' + (selected === 'research' ? 'selected-li' : '');
+    var workLinkClass = 'side-nav-li ' + (selected === 'work' ? 'selected-li' : '');
     return _react2.default.createElement(
       'div',
       { className: 'side-nav-links' },
       _react2.default.createElement(
         'span',
-        { className: 'side-nav-link' },
+        { className: aboutLinkClass },
         _react2.default.createElement(
           _reactRouter.Link,
           { className: 'link', to: '#/about', onClick: this.getTrack('About') },
@@ -25515,7 +25583,7 @@ exports.default = _react2.default.createClass({
       ),
       _react2.default.createElement(
         'span',
-        { className: 'side-nav-link' },
+        { className: researchLinkClass },
         _react2.default.createElement(
           _reactRouter.Link,
           { className: 'link', to: '#/research', onClick: this.getTrack('Research') },
@@ -25524,7 +25592,7 @@ exports.default = _react2.default.createClass({
       ),
       _react2.default.createElement(
         'span',
-        { className: 'side-nav-link' },
+        { className: workLinkClass },
         _react2.default.createElement(
           _reactRouter.Link,
           { className: 'link', to: '#/work', onClick: this.getTrack('Work') },
@@ -25545,6 +25613,12 @@ Object.defineProperty(exports, "__esModule", {
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactGa = require('react-ga');
+
+var _reactGa2 = _interopRequireDefault(_reactGa);
+
+var _reactRouter = require('react-router');
 
 var _projectDescription = require('./project-description.jsx');
 
@@ -25576,6 +25650,15 @@ exports.default = _react2.default.createClass({
       props.sourceLink = project.sourceLink;
     }
     return _react2.default.createElement(_projectDescription2.default, props);
+  },
+
+  getTrack: function getTrack(tabName) {
+    return function logPageView() {
+      _reactGa2.default.event({
+        category: 'User',
+        action: 'Accessed the ' + tabName + ' tab'
+      });
+    };
   },
 
   render: function render() {
@@ -25620,21 +25703,66 @@ exports.default = _react2.default.createClass({
             'arts'
           ),
           _react2.default.createElement('br', null),
-          'WEB DEV: d3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails, python, flask, sketch SCI-COM: mathematica, grid mathematica, numpy, pandas'
+          'WEB DEV: d3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails, python, flask, sketch',
+          _react2.default.createElement('br', null),
+          'SCI-COM: mathematica, grid mathematica, numpy, pandas'
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'links' },
+        _react2.default.createElement(
+          'span',
+          null,
+          _react2.default.createElement(
+            _reactRouter.Link,
+            { className: 'link', to: '#/about', onClick: this.getTrack('About') },
+            'ABOUT'
+          )
+        ),
+        _react2.default.createElement(
+          'span',
+          null,
+          _react2.default.createElement(
+            _reactRouter.Link,
+            { className: 'link', to: '#/research', onClick: this.getTrack('Work') },
+            'RESEARCH'
+          )
+        ),
+        _react2.default.createElement(
+          'span',
+          null,
+          _react2.default.createElement(
+            _reactGa.OutboundLink,
+            {
+              className: 'link',
+              to: '../../assets/resume.pdf',
+              eventLabel: "Click resume link" },
+            'CV'
+          )
+        ),
+        _react2.default.createElement(
+          'span',
+          null,
+          _react2.default.createElement(
+            'a',
+            { href: 'mailto:mcnutt.andrew@gmail.com' },
+            'CONTACT'
+          )
         )
       )
     );
   }
 });
 
-},{"../constants":237,"./project-description.jsx":232,"react":227}],237:[function(require,module,exports){
+},{"../constants":237,"./project-description.jsx":232,"react":227,"react-ga":54,"react-router":91}],237:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-  about: 'I am  an applied mathematician currently working in the wild world of San Francisco based web development. I am a full stack developer, but I am more or less front-end/data-visualization leaning. My educational background is in physics, specifically in mechaincs, and traditional rails oriented web development. I feel greatly for the plight of the American desert.',
+  about: 'I am  an applied mathematician currently working in the wild world of San Francisco based web development. I am a full stack developer, but I am more or less front-end/data-visualization leaning. My educational background is in physics, specifically in mechaincs, and traditional rails oriented web development. I feel greatly for the plight of the American desert. I am  an applied mathematician currently working in the wild world of San Francisco based web development. I am a full stack developer, but I am more or less front-end/data-visualization leaning. My educational background is in physics, specifically in mechaincs, and traditional rails oriented web development. I feel greatly for the plight of the American desert.',
   publications: [{
     title: '1',
     text: 'Franklin, J., Guo, Y., McNutt, A., & Morgan, A. (2015). The Schrödinger–Newton system with self-field coupling. Classical and Quantum Gravity'
@@ -25662,10 +25790,6 @@ exports.default = {
     liveLink: 'http://mcnuttandrew.github.io/personal-timeline/',
     sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
     text: 'A brief timeline of my life, a resume through a dark mirror if you will. Single page app built with React, React-Router, and D3.'
-  }, {
-    title: 'CDD: Vision',
-    liveLink: 'https://www.collaborativedrug.com/buzz/2015/05/02/cdd-vision-update-launching-vision-now/',
-    text: 'A data visualization platform for viewing high dimensional drug discovery data, built for and on top of the Collaborative Drug Discovery: Vault platform. I acted as the lead developer on this project, which involved guiding a four person team through the implementation of a vareity of javascript technologies. The stack included a backend built on Crossfilter and Immutable, a middleware/binding level built with jQuery and d3.js, and frontend constructed with a blend of HTML5 canvas and Open GL.'
   }, {
     title: 'Why Not Ipsum',
     liveLink: 'http://why-not-ipsum.herokuapp.com/',

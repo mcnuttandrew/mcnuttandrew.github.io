@@ -3,6 +3,9 @@ $text-color: #555;
 @import 'research-page';
 @import 'work-page';
 
+body {
+  overflow: hidden;
+}
 
 .app {
   color: $text-color;
@@ -59,4 +62,8 @@ $text-color: #555;
       float: none;
     }
   }
+}
+
+.side-nav-links {
+  display: none;
 }

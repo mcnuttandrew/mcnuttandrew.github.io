@@ -22,22 +22,22 @@ const AboutPage = React.createClass({
           <div className="tagline">
             <div>SF BASED DATA</div>
             <div>VISUALIZATION</div>
-            <div className="special-line">PERSON & APPLIED</div>
+            <div className="special-line">EXPERT & APPLIED</div>
             <div>MATHER</div>
           </div>
           <div className="name"> ANDREW MCNUTT</div>
           <div className="boring-content">{Constants.about}</div>
           <div className="links">
-            <div><Link className="link" to='#/work' onClick={this.getTrack('Work')}>WORK</Link></div>
-            <div><Link className="link" to='#/research' onClick={this.getTrack('Research')}>RESEARCH</Link></div>
-            <div>
+            <span><Link className="link" to='#/work' onClick={this.getTrack('Work')}>WORK</Link></span>
+            <span><Link className="link" to='#/research' onClick={this.getTrack('Research')}>RESEARCH</Link></span>
+            <span>
               <OutboundLink
                 className="link"
                 to='../../assets/resume.pdf'
                 eventLabel={"Click resume link"}>
                 CV
-              </OutboundLink></div>
-            <div><a href='mailto:mcnutt.andrew@gmail.com'>CONTACT</a></div>
+              </OutboundLink></span>
+            <span><a href='mailto:mcnutt.andrew@gmail.com'>CONTACT</a></span>
           </div>
         </div>
       </div>
