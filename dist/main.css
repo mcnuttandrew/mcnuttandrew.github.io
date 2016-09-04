@@ -5,7 +5,6 @@
   position: absolute;
   top: calc(50% - 225px);
   transform: translateY(0);
-  transition: transform .6s;
   width: 793px; }
   .container .tagline {
     bottom: 110px;
@@ -62,8 +61,7 @@
   transform: translateY(-10000px); }
 
 .research-page {
-  transform: translateY(10000px);
-  transition: transform .6s; }
+  transform: translateY(10000px); }
   .research-page .page-title {
     font-size: 144px;
     height: 452px;
@@ -112,8 +110,7 @@
   transform: translateY(0); }
 
 .work-page {
-  transform: translateY(20000px);
-  transition: transform .6s; }
+  transform: translateY(20000px); }
   .work-page .page-title {
     bottom: 20px;
     font-family: GillSans-Light;
