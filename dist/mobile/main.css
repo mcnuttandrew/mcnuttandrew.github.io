@@ -101,6 +101,8 @@
     font-size: 48px;
     line-height: 70px; }
   .work-page .page-content {
+    font-family: Palatino-Roman;
+    font-size: 12px;
     position: absolute;
     top: 520px; }
   .work-page .skillz-wrapper {
@@ -143,3 +145,7 @@
     font-size: 12px;
     letter-spacing: 0;
     line-height: 25px; }
+
+.project-header a {
+  padding-left: 5px;
+  padding-right: 5px; }
