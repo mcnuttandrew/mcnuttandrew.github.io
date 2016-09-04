@@ -25141,7 +25141,7 @@ var AboutPage = _react2.default.createClass({
           _react2.default.createElement(
             'div',
             null,
-            'SF BASED DATA'
+            'SF-BASED DATA'
           ),
           _react2.default.createElement(
             'div',
@@ -25762,8 +25762,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-  about: 'I am  an applied mathematician currently working in the wild world of San Francisco based web development. I am a full stack developer, but I am more or less front-end/data-visualization leaning. My educational background is in physics, specifically in mechaincs, and traditional rails oriented web development. I feel greatly for the plight of the American desert.',
-  // I am  an applied mathematician currently working in the wild world of San Francisco based web development. I am a full stack developer, but I am more or less front-end/data-visualization leaning. My educational background is in physics, specifically in mechaincs, and traditional rails oriented web development. I feel greatly for the plight of the American desert.',
+  about: 'I am an applied mathematician currently working in the wild world of San Francisco web development. My work in the past several years has primarily revolved around developing beautiful user interfaces that convey information honestly. In my current position at Uber I draw pictures with numbers and other semantic information. Prior to that I majored in physics, with a special empahsis on mechanics, which, in a bizzare twist, lead me into rails-oriented web development. Edward Tufte once made fun of me in a hotel in Seattle.',
   publications: [{
     title: '1',
     text: 'Franklin, J., Guo, Y., McNutt, A., & Morgan, A. (2015). The Schrödinger–Newton system with self-field coupling. Classical and Quantum Gravity'

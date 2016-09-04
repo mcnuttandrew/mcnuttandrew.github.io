@@ -20,7 +20,7 @@ const AboutPage = React.createClass({
       <div className="app about-page">
         <div className="container">
           <div className="tagline">
-            <div>SF BASED DATA</div>
+            <div>SF-BASED DATA</div>
             <div>VISUALIZATION</div>
             <div className="special-line">EXPERT & APPLIED</div>
             <div>MATHER</div>
