@@ -1,6 +1,7 @@
-
-
 .research-page {
+  transform: translateX(10000px);
+  transition: transform .3s;
+
   .page-title {
     font-size: 144px;
     height: 452px;
@@ -59,4 +60,8 @@
     position: relative;
     top: 0;
   }
+}
+
+.research .research-page {
+  transform: translateX(0);
 }

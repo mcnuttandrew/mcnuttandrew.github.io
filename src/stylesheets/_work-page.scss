@@ -1,4 +1,7 @@
 .work-page {
+  transform: translateX(20000px);
+  transition: transform .3s;
+
   .page-title {
     bottom: 20px;
     font-family: GillSans-Light;
@@ -58,4 +61,8 @@
       transform: rotate(-90deg);
     }
   }
+}
+
+.work .work-page {
+  transform: translateX(0);
 }

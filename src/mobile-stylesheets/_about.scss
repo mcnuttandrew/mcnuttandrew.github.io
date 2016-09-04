@@ -34,3 +34,12 @@
     width: 272px;
   }
 }
+
+.about-page {
+  transform: translateX(10000px);
+  transition: transform .3s;
+}
+
+.about .about-page {
+  transform: translateX(0);
+}

@@ -7,35 +7,34 @@ import SideNavLinks from './side-nav-links.jsx';
 export default React.createClass({
   displayName : 'App',
   render() {
-    // janky fake router
-    var content;
-    var links;
+    // // janky fake router
+    // var content;
+    let wrapperClass = 'app';
     switch(this.props.location.hash) {
       case '#/work':
-        links = (<SideNavLinks location={this.props.location.hash} />);
-        content = (<WorkPage />);
+        wrapperClass += ' work';
         break;
       case '#/research':
-        links = (<SideNavLinks location={this.props.location.hash} />);
-        content = (<ResearchPage />);
+        wrapperClass += ' research';
         break;
       case '#/about':
-        links = (<SideNavLinks location={this.props.location.hash} />);
-        content = (<AboutPage />);
+        wrapperClass += ' about';
         break;
       case '':
-        links = (<SideNavLinks location={this.props.location.hash} />);
-        content = (<AboutPage />);
+        wrapperClass += ' about';
         break;
       default:
-        links = (<SideNavLinks location={this.props.location.hash} />);
-        content = (<AboutPage />);
+        wrapperClass += ' about';
         break;
     }
+    // const wrapperClass = `app ${this.props.location.hash.split('#')}`;
+    // console.log(wrapperClass)
     return (
-      <div className="app">
-        {links}
-        {content}
+      <div className={wrapperClass}>
+        <SideNavLinks location={this.props.location.hash} />
+        <WorkPage />
+        <AboutPage />
+        <ResearchPage />
       </div>);
   }
 });

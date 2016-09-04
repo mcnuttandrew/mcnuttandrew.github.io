@@ -4,6 +4,8 @@
   left: calc(50% - 400px);
   position: absolute;
   top: calc(50% - 225px);
+  transform: translateX(0);
+  transition: transform .3s;
   width: 793px;
 
   .tagline {
@@ -66,4 +68,12 @@
       color: $text-color;
     }
   }
+}
+
+.work .about-page {
+  transform: translateX(10000px);
+}
+
+.research .about-page {
+  transform: translateX(-10000px);
 }

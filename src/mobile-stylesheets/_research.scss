@@ -1,6 +1,8 @@
 .research-page {
   position: absolute;
   top: 8px;
+  transform: translateX(10000px);
+  transition: transform .3s;
 
   .page-title {
     font-family: GillSans-Light;
@@ -56,4 +58,8 @@
     padding-right: 45px;
     text-align: justify;
   }
+}
+
+.research .research-page {
+  transform: translateX(0);
 }
