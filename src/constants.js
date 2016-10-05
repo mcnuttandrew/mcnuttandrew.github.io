@@ -3,6 +3,18 @@ export default {
   title: 'Andrew M. McNutt',
   subtitle: 'SF-Based Visualization Expert and Applied Mathematician',
   profpic: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/profpic.png',
+
+  skills: [{
+      title: 'PERSONAL',
+      content: 'information design, physics, arts'
+    }, {
+      title: 'WEB DEV',
+      content: 'd3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails, python, flask, sketch'
+    }, {
+      title: 'SCI-COM',
+      content: 'mathematica, grid mathematica, numpy, pandaz'
+    }
+  ],
   publications: [
     {
       title: '1',

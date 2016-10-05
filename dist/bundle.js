@@ -25120,17 +25120,16 @@ exports.default = _react2.default.createClass({
       { className: 'app-header' },
       _react2.default.createElement(
         'div',
-        null,
-        ' ',
-        _constants2.default.title,
-        ' '
+        { className: 'name-wrapper' },
+        _react2.default.createElement('div', { className: 'left-box' }),
+        _constants2.default.title
       ),
       _react2.default.createElement(
         'div',
         { className: 'right-links' },
         _react2.default.createElement(
           'a',
-          { href: 'github.com/mcnuttandrew' },
+          { href: 'http:www.github.com/mcnuttandrew' },
           'Github'
         ),
         _react2.default.createElement(
@@ -25153,26 +25152,35 @@ exports.default = _react2.default.createClass({
       { className: 'about-block section' },
       _react2.default.createElement(
         'div',
-        { className: 'main-img-wrapper' },
-        _react2.default.createElement('img', { className: 'main-img', src: _constants2.default.profpic })
+        { className: 'section-label' },
+        _react2.default.createElement('div', { className: 'main-heading' })
       ),
       _react2.default.createElement(
         'div',
-        { className: 'info-panel' },
+        { className: 'section-content' },
         _react2.default.createElement(
           'div',
-          { className: 'main-heading' },
-          _constants2.default.title
+          { className: 'main-img-wrapper' },
+          _react2.default.createElement('img', { className: 'main-img', src: _constants2.default.profpic })
         ),
         _react2.default.createElement(
           'div',
-          { className: 'sub-heading' },
-          _constants2.default.subtitle
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'body-content' },
-          _constants2.default.about
+          { className: 'info-panel' },
+          _react2.default.createElement(
+            'div',
+            { className: 'main-heading' },
+            _constants2.default.title
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'sub-heading' },
+            _constants2.default.subtitle
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'body-content' },
+            _constants2.default.about
+          )
         )
       )
     );
@@ -25220,59 +25228,95 @@ exports.default = _react2.default.createClass({
       { className: 'research-block section' },
       _react2.default.createElement(
         'div',
-        { className: 'main-heading' },
-        'Research'
+        { className: 'section-label' },
+        _react2.default.createElement(
+          'div',
+          { className: 'main-heading' },
+          'RESEARCH'
+        )
       ),
       _react2.default.createElement(
         'div',
-        { className: 'sub-heading' },
-        'Publications'
+        { className: 'section-content' },
+        _react2.default.createElement(
+          'div',
+          { className: 'sub-heading' },
+          'Publications'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'publications-wrapper' },
+          publications
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'sub-heading' },
+          'Past Projects'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'projects-wrapper' },
+          projects
+        )
+      )
+    );
+  },
+
+  renderSkill: function renderSkill(skill) {
+    return _react2.default.createElement(
+      'div',
+      { className: 'skill-content' },
+      _react2.default.createElement(
+        'div',
+        { className: 'skill-title' },
+        skill.title
       ),
       _react2.default.createElement(
         'div',
-        { className: 'publications-wrapper' },
-        publications
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'sub-heading' },
-        'Past Projects'
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'projects-wrapper' },
-        projects
+        { className: 'body-content' },
+        skill.content
       )
     );
   },
 
   renderWorkBlock: function renderWorkBlock() {
-    // <div className='publications-wrapper'>{publications}</div>
-    // <div className='online-work-wrapper'>{projects}</div>
-
     var projects = _constants2.default.onlineWork.map(this.renderProject);
+    var skills = _constants2.default.skills.map(this.renderSkill);
     return _react2.default.createElement(
       'div',
       { className: 'work-block section' },
       _react2.default.createElement(
         'div',
-        { className: 'main-heading' },
-        'Work'
+        { className: 'section-label' },
+        _react2.default.createElement(
+          'div',
+          { className: 'main-heading' },
+          'WORK'
+        )
       ),
       _react2.default.createElement(
         'div',
-        { className: 'sub-heading' },
-        'Skills'
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'sub-heading' },
-        'Online Work'
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'projects-wrapper' },
-        projects
+        { className: 'section-content' },
+        _react2.default.createElement(
+          'div',
+          { className: 'sub-heading' },
+          'Skills'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'skills-wrapper' },
+          skills
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'sub-heading' },
+          'Online Work'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'projects-wrapper' },
+          projects
+        )
       )
     );
   },
@@ -25300,7 +25344,12 @@ exports.default = _react2.default.createClass({
     return _react2.default.createElement(
       'div',
       { className: wrapperClass },
-      _react2.default.createElement('div', { className: 'left-border' }),
+      _react2.default.createElement(
+        'div',
+        { className: 'left-border' },
+        _react2.default.createElement('div', { className: 'left-gradient' }),
+        _react2.default.createElement('div', { className: 'left-pattern' })
+      ),
       _react2.default.createElement(
         'div',
         { className: 'main-content' },
@@ -25324,6 +25373,17 @@ exports.default = {
   title: 'Andrew M. McNutt',
   subtitle: 'SF-Based Visualization Expert and Applied Mathematician',
   profpic: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/profpic.png',
+
+  skills: [{
+    title: 'PERSONAL',
+    content: 'information design, physics, arts'
+  }, {
+    title: 'WEB DEV',
+    content: 'd3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails, python, flask, sketch'
+  }, {
+    title: 'SCI-COM',
+    content: 'mathematica, grid mathematica, numpy, pandaz'
+  }],
   publications: [{
     title: '1',
     link: '',
