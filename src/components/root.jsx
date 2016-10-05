@@ -1,12 +1,88 @@
 import React from 'react';
-import AboutPage from './about-page.jsx';
-import ResearchPage from './research-page.jsx';
-import WorkPage from './work-page.jsx';
-import SideNavLinks from './side-nav-links.jsx';
+import Constants from '../constants';
 
 export default React.createClass({
   displayName : 'App',
-  render() {
+
+  renderHeader: function renderHeader() {
+    // todo add alts to everything
+    return (
+      <div className="app-header">
+        <div> {Constants.title} </div>
+        <div className='right-links'>
+          <a href="github.com/mcnuttandrew">Github</a>
+          <a href="mailto:mcnutt.andrew@gmail.com">Contact</a>
+          <a href='../../assets/resume.pdf'>CV</a>
+        </div>
+      </div>
+    );
+  },
+
+  renderAboutBlock: function renderAboutBlock() {
+    return (
+      <div className="about-block section">
+        <div className="main-img-wrapper">
+          <img className="main-img" src={Constants.profpic}></img>
+        </div>
+        <div className="info-panel">
+          <div className="main-heading">{Constants.title}</div>
+          <div className="sub-heading">{Constants.subtitle}</div>
+          <div className="body-content">{Constants.about}</div>
+        </div>
+      </div>
+    );
+  },
+
+  renderPublication: function renderPublication(publication) {
+    return (
+      <a href={publication.link} className='body-content publication'>{publication.text}</a>
+    );
+  },
+
+  renderProject: function renderProject(project) {
+    return (
+      <div className="project-panel">
+        <div className="project-img-wrapper">
+          <img className="project-img" src={project.imgLink}></img>
+        </div>
+        <div className="project-info">
+          <a className="project-link" href={project.link}>{project.title}</a>
+          <div className="body-content">{project.text}</div>
+        </div>
+      </div>
+    );
+  },
+
+  renderResearchBlock: function renderResearchBlock() {
+    const publications = Constants.publications.map(this.renderPublication);
+    const projects = Constants.projects.map(this.renderProject);
+    return (
+      <div className="research-block section">
+        <div className="main-heading">Research</div>
+        <div className="sub-heading">Publications</div>
+        <div className='publications-wrapper'>{publications}</div>
+        <div className="sub-heading">Past Projects</div>
+        <div className='projects-wrapper'>{projects}</div>
+      </div>
+    );
+  },
+
+  renderWorkBlock: function renderWorkBlock() {
+    // <div className='publications-wrapper'>{publications}</div>
+    // <div className='online-work-wrapper'>{projects}</div>
+
+    const projects = Constants.onlineWork.map(this.renderProject);
+    return (
+      <div className="work-block section">
+        <div className="main-heading">Work</div>
+        <div className="sub-heading">Skills</div>
+        <div className="sub-heading">Online Work</div>
+        <div className='projects-wrapper'>{projects}</div>
+      </div>
+    );
+  },
+
+  render: function render() {
     let wrapperClass = 'app';
     switch(this.props.location.hash) {
       case '#/work':
@@ -28,10 +104,14 @@ export default React.createClass({
 
     return (
       <div className={wrapperClass}>
-        <SideNavLinks location={this.props.location.hash} />
-        <WorkPage />
-        <AboutPage />
-        <ResearchPage />
-      </div>);
+        <div className="left-border"></div>
+        <div className="main-content">
+          {this.renderHeader()}
+          {this.renderAboutBlock()}
+          {this.renderResearchBlock()}
+          {this.renderWorkBlock()}
+        </div>
+      </div>
+    );
   }
 });

@@ -25093,7 +25093,7 @@ _reactDom2.default.render(_react2.default.createElement(
   _react2.default.createElement(_reactRouter.Route, { path: '/', component: _root2.default })
 ), document.getElementById('app'));
 
-},{"./components/root.jsx":234,"react":227,"react-dom":52,"react-ga":54,"react-router":91}],231:[function(require,module,exports){
+},{"./components/root.jsx":231,"react":227,"react-dom":52,"react-ga":54,"react-router":91}],231:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25103,396 +25103,180 @@ Object.defineProperty(exports, "__esModule", {
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
-
-var _reactGa = require('react-ga');
-
-var _reactGa2 = _interopRequireDefault(_reactGa);
-
-var _reactRouter = require('react-router');
 
 var _constants = require('../constants');
 
 var _constants2 = _interopRequireDefault(_constants);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var AboutPage = _react2.default.createClass({
-  displayName: 'AboutPage',
-
-  getTrack: function getTrack(tabName) {
-    return function logPageView() {
-      _reactGa2.default.event({
-        category: 'User',
-        action: 'Accessed the ' + tabName + ' tab'
-      });
-    };
-  },
-
-  render: function render() {
-    return _react2.default.createElement(
-      'div',
-      { className: 'app about-page' },
-      _react2.default.createElement(
-        'div',
-        { className: 'container' },
-        _react2.default.createElement(
-          'div',
-          { className: 'tagline' },
-          _react2.default.createElement(
-            'div',
-            null,
-            'SF-BASED DATA'
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            'VISUALIZATION'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'special-line' },
-            'EXPERT & APPLIED'
-          ),
-          _react2.default.createElement(
-            'div',
-            null,
-            'MATHER'
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'name' },
-          ' ANDREW MCNUTT'
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'boring-content' },
-          _constants2.default.about
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'links' },
-          _react2.default.createElement(
-            'span',
-            null,
-            _react2.default.createElement(
-              _reactRouter.Link,
-              { className: 'link', to: '#/work', onClick: this.getTrack('Work') },
-              'WORK'
-            )
-          ),
-          _react2.default.createElement(
-            'span',
-            null,
-            _react2.default.createElement(
-              _reactRouter.Link,
-              { className: 'link', to: '#/research', onClick: this.getTrack('Research') },
-              'RESEARCH'
-            )
-          ),
-          _react2.default.createElement(
-            'span',
-            null,
-            _react2.default.createElement(
-              _reactGa.OutboundLink,
-              {
-                className: 'link',
-                to: '../../assets/resume.pdf',
-                eventLabel: "Click resume link" },
-              'CV'
-            )
-          ),
-          _react2.default.createElement(
-            'span',
-            null,
-            _react2.default.createElement(
-              'a',
-              { href: 'mailto:mcnutt.andrew@gmail.com' },
-              'CONTACT'
-            )
-          )
-        )
-      )
-    );
-  }
-});
-
-exports.default = AboutPage;
-
-},{"../constants":237,"react":227,"react-ga":54,"react-router":91}],232:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactGa = require('react-ga');
-
-var _reactRouter = require('react-router');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _react2.default.createClass({
-  displayName: 'ProjectDescription',
-
-  render: function render() {
-    var liveLink = '';
-    var sourceLink = '';
-    var title = this.props.title;
-    if (this.props.liveLink) {
-      liveLink = _react2.default.createElement(
-        _reactGa.OutboundLink,
-        {
-          eventLabel: 'Click live link for ' + this.props.title,
-          to: this.props.liveLink },
-        'live'
-      );
-    }
-    if (this.props.sourceLink) {
-      sourceLink = _react2.default.createElement(
-        _reactGa.OutboundLink,
-        {
-          eventLabel: 'Click source link for ' + this.props.title,
-          to: this.props.sourceLink },
-        'source'
-      );
-    }
-    if (this.props.link) {
-      title = _react2.default.createElement(
-        _reactGa.OutboundLink,
-        {
-          eventLabel: 'Click live link for ' + this.props.title,
-          to: this.props.link,
-          className: 'title' },
-        this.props.title
-      );
-    }
-    return _react2.default.createElement(
-      'div',
-      { className: 'project' },
-      _react2.default.createElement(
-        'div',
-        { className: 'project-header' },
-        title,
-        liveLink,
-        sourceLink
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'project-body' },
-        this.props.text
-      )
-    );
-  }
-});
-
-},{"react":227,"react-ga":54,"react-router":91}],233:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactGa = require('react-ga');
-
-var _reactGa2 = _interopRequireDefault(_reactGa);
-
-var _reactRouter = require('react-router');
-
-var _constants = require('../constants');
-
-var _constants2 = _interopRequireDefault(_constants);
-
-var _projectDescription = require('./project-description.jsx');
-
-var _projectDescription2 = _interopRequireDefault(_projectDescription);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _react2.default.createClass({
-  displayName: 'ResearchPage',
-
-  getInitialState: function getInitialState() {
-    return { publicationShowing: true };
-  },
-
-  renderDescription: function renderDescription(project) {
-    var props = {
-      title: project.title,
-      text: project.text,
-      link: project.link
-    };
-    return _react2.default.createElement(_projectDescription2.default, props);
-  },
-
-  toggleMenu: function toggleMenu(option) {
-    this.setState({ publicationShowing: option });
-  },
-
-  getTrack: function getTrack(tabName) {
-    return function logPageView() {
-      _reactGa2.default.event({
-        category: 'User',
-        action: 'Accessed the ' + tabName + ' tab'
-      });
-    };
-  },
-
-  render: function render() {
-    var showPubs = this.state.publicationShowing;
-    var pubClassName = showPubs ? 'selected' : '';
-    var projClassName = showPubs ? '' : 'selected';
-    var content = _constants2.default[showPubs ? 'publications' : 'projects'].map(this.renderDescription);
-    return _react2.default.createElement(
-      'div',
-      { className: 'container research-page' },
-      _react2.default.createElement(
-        'div',
-        { className: 'page-title' },
-        _react2.default.createElement(
-          'div',
-          { className: 'special-justify' },
-          'RESEA'
-        ),
-        _react2.default.createElement(
-          'div',
-          null,
-          'RCH'
-        )
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'interests-wrapper' },
-        _react2.default.createElement(
-          'div',
-          { className: 'section-title' },
-          'INTERESTS'
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'section' },
-          'FIELDS: MACHINE LEARNING, MECHANICS, DATA VISUALIZATION'
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'section' },
-          'PHENOMENA: VEHICLE TRAFFIC, GRAVITY, VIRTUAL & AUGMENTED REALITY'
-        )
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'subsection-selector' },
-        _react2.default.createElement(
-          'span',
-          {
-            className: pubClassName,
-            onClick: this.toggleMenu.bind(null, true) },
-          'PUBLICATIONS '
-        ),
-        _react2.default.createElement(
-          'span',
-          null,
-          ' / '
-        ),
-        _react2.default.createElement(
-          'span',
-          {
-            className: projClassName,
-            onClick: this.toggleMenu.bind(null, false) },
-          ' PROJECTS '
-        )
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'page-content' },
-        content
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'links' },
-        _react2.default.createElement(
-          'span',
-          null,
-          _react2.default.createElement(
-            _reactRouter.Link,
-            { className: 'link', to: '#/about', onClick: this.getTrack('About') },
-            'ABOUT'
-          )
-        ),
-        _react2.default.createElement(
-          'span',
-          null,
-          _react2.default.createElement(
-            _reactRouter.Link,
-            { className: 'link', to: '#/work', onClick: this.getTrack('Work') },
-            'WORK'
-          )
-        ),
-        _react2.default.createElement(
-          'span',
-          null,
-          _react2.default.createElement(
-            _reactGa.OutboundLink,
-            {
-              className: 'link',
-              to: '../../assets/resume.pdf',
-              eventLabel: "Click resume link" },
-            'CV'
-          )
-        ),
-        _react2.default.createElement(
-          'span',
-          null,
-          _react2.default.createElement(
-            'a',
-            { href: 'mailto:mcnutt.andrew@gmail.com' },
-            'CONTACT'
-          )
-        )
-      )
-    );
-  }
-});
-
-},{"../constants":237,"./project-description.jsx":232,"react":227,"react-ga":54,"react-router":91}],234:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _aboutPage = require('./about-page.jsx');
-
-var _aboutPage2 = _interopRequireDefault(_aboutPage);
-
-var _researchPage = require('./research-page.jsx');
-
-var _researchPage2 = _interopRequireDefault(_researchPage);
-
-var _workPage = require('./work-page.jsx');
-
-var _workPage2 = _interopRequireDefault(_workPage);
-
-var _sideNavLinks = require('./side-nav-links.jsx');
-
-var _sideNavLinks2 = _interopRequireDefault(_sideNavLinks);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _react2.default.createClass({
   displayName: 'App',
+
+  renderHeader: function renderHeader() {
+    // todo add alts to everything
+    return _react2.default.createElement(
+      'div',
+      { className: 'app-header' },
+      _react2.default.createElement(
+        'div',
+        null,
+        ' ',
+        _constants2.default.title,
+        ' '
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'right-links' },
+        _react2.default.createElement(
+          'a',
+          { href: 'github.com/mcnuttandrew' },
+          'Github'
+        ),
+        _react2.default.createElement(
+          'a',
+          { href: 'mailto:mcnutt.andrew@gmail.com' },
+          'Contact'
+        ),
+        _react2.default.createElement(
+          'a',
+          { href: '../../assets/resume.pdf' },
+          'CV'
+        )
+      )
+    );
+  },
+
+  renderAboutBlock: function renderAboutBlock() {
+    return _react2.default.createElement(
+      'div',
+      { className: 'about-block section' },
+      _react2.default.createElement(
+        'div',
+        { className: 'main-img-wrapper' },
+        _react2.default.createElement('img', { className: 'main-img', src: _constants2.default.profpic })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'info-panel' },
+        _react2.default.createElement(
+          'div',
+          { className: 'main-heading' },
+          _constants2.default.title
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'sub-heading' },
+          _constants2.default.subtitle
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'body-content' },
+          _constants2.default.about
+        )
+      )
+    );
+  },
+
+  renderPublication: function renderPublication(publication) {
+    return _react2.default.createElement(
+      'a',
+      { href: publication.link, className: 'body-content publication' },
+      publication.text
+    );
+  },
+
+  renderProject: function renderProject(project) {
+    return _react2.default.createElement(
+      'div',
+      { className: 'project-panel' },
+      _react2.default.createElement(
+        'div',
+        { className: 'project-img-wrapper' },
+        _react2.default.createElement('img', { className: 'project-img', src: project.imgLink })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'project-info' },
+        _react2.default.createElement(
+          'a',
+          { className: 'project-link', href: project.link },
+          project.title
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'body-content' },
+          project.text
+        )
+      )
+    );
+  },
+
+  renderResearchBlock: function renderResearchBlock() {
+    var publications = _constants2.default.publications.map(this.renderPublication);
+    var projects = _constants2.default.projects.map(this.renderProject);
+    return _react2.default.createElement(
+      'div',
+      { className: 'research-block section' },
+      _react2.default.createElement(
+        'div',
+        { className: 'main-heading' },
+        'Research'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'sub-heading' },
+        'Publications'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'publications-wrapper' },
+        publications
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'sub-heading' },
+        'Past Projects'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'projects-wrapper' },
+        projects
+      )
+    );
+  },
+
+  renderWorkBlock: function renderWorkBlock() {
+    // <div className='publications-wrapper'>{publications}</div>
+    // <div className='online-work-wrapper'>{projects}</div>
+
+    var projects = _constants2.default.onlineWork.map(this.renderProject);
+    return _react2.default.createElement(
+      'div',
+      { className: 'work-block section' },
+      _react2.default.createElement(
+        'div',
+        { className: 'main-heading' },
+        'Work'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'sub-heading' },
+        'Skills'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'sub-heading' },
+        'Online Work'
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'projects-wrapper' },
+        projects
+      )
+    );
+  },
+
   render: function render() {
     var wrapperClass = 'app';
     switch (this.props.location.hash) {
@@ -25516,246 +25300,20 @@ exports.default = _react2.default.createClass({
     return _react2.default.createElement(
       'div',
       { className: wrapperClass },
-      _react2.default.createElement(_sideNavLinks2.default, { location: this.props.location.hash }),
-      _react2.default.createElement(_workPage2.default, null),
-      _react2.default.createElement(_aboutPage2.default, null),
-      _react2.default.createElement(_researchPage2.default, null)
-    );
-  }
-});
-
-},{"./about-page.jsx":231,"./research-page.jsx":233,"./side-nav-links.jsx":235,"./work-page.jsx":236,"react":227}],235:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactGa = require('react-ga');
-
-var _reactGa2 = _interopRequireDefault(_reactGa);
-
-var _reactRouter = require('react-router');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _react2.default.createClass({
-  displayName: 'SideNavLinks',
-
-  getTrack: function getTrack(tabName) {
-    return function logPageView() {
-      _reactGa2.default.event({
-        category: 'User',
-        action: 'Accessed the ' + tabName + ' tab'
-      });
-    };
-  },
-
-  render: function render() {
-    var selected = 'about';
-    switch (this.props.location) {
-      case '#/work':
-        selected = 'work';
-        break;
-      case '#/research':
-        selected = 'research';
-        break;
-    }
-
-    var aboutLinkClass = 'side-nav-li ' + (selected === 'about' ? 'selected-li' : '');
-    var researchLinkClass = 'side-nav-li ' + (selected === 'research' ? 'selected-li' : '');
-    var workLinkClass = 'side-nav-li ' + (selected === 'work' ? 'selected-li' : '');
-    return _react2.default.createElement(
-      'div',
-      { className: 'side-nav-links' },
+      _react2.default.createElement('div', { className: 'left-border' }),
       _react2.default.createElement(
-        'span',
-        { className: aboutLinkClass },
-        _react2.default.createElement(
-          _reactRouter.Link,
-          { className: 'link', to: '#/about', onClick: this.getTrack('About') },
-          'ABOUT'
-        )
-      ),
-      _react2.default.createElement(
-        'span',
-        { className: researchLinkClass },
-        _react2.default.createElement(
-          _reactRouter.Link,
-          { className: 'link', to: '#/research', onClick: this.getTrack('Research') },
-          'RESEARCH'
-        )
-      ),
-      _react2.default.createElement(
-        'span',
-        { className: workLinkClass },
-        _react2.default.createElement(
-          _reactRouter.Link,
-          { className: 'link', to: '#/work', onClick: this.getTrack('Work') },
-          'WORK'
-        )
+        'div',
+        { className: 'main-content' },
+        this.renderHeader(),
+        this.renderAboutBlock(),
+        this.renderResearchBlock(),
+        this.renderWorkBlock()
       )
     );
   }
 });
 
-},{"react":227,"react-ga":54,"react-router":91}],236:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactGa = require('react-ga');
-
-var _reactGa2 = _interopRequireDefault(_reactGa);
-
-var _reactRouter = require('react-router');
-
-var _projectDescription = require('./project-description.jsx');
-
-var _projectDescription2 = _interopRequireDefault(_projectDescription);
-
-var _constants = require('../constants');
-
-var _constants2 = _interopRequireDefault(_constants);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _react2.default.createClass({
-  displayName: 'WorkPage',
-  getInialState: function getInialState() {
-    return {
-      publicationShowing: true
-    };
-  },
-
-  renderDescription: function renderDescription(project) {
-    var props = {
-      title: project.title,
-      text: project.text
-    };
-    if (project.liveLink) {
-      props.liveLink = project.liveLink;
-    }
-    if (project.sourceLink) {
-      props.sourceLink = project.sourceLink;
-    }
-    return _react2.default.createElement(_projectDescription2.default, props);
-  },
-
-  getTrack: function getTrack(tabName) {
-    return function logPageView() {
-      _reactGa2.default.event({
-        category: 'User',
-        action: 'Accessed the ' + tabName + ' tab'
-      });
-    };
-  },
-
-  render: function render() {
-    var content = _constants2.default.onlineWork.map(this.renderDescription);
-    return _react2.default.createElement(
-      'div',
-      { className: 'container work-page' },
-      _react2.default.createElement(
-        'div',
-        { className: 'page-title' },
-        _react2.default.createElement(
-          'div',
-          null,
-          'WORK'
-        )
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'page-content' },
-        _react2.default.createElement(
-          'div',
-          { className: 'section-title' },
-          'ONLINE WORK'
-        ),
-        content
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'skillz-wrapper' },
-        _react2.default.createElement(
-          'div',
-          { className: 'section-title' },
-          'SKILLS'
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'section' },
-          'PERSONAL: information design, physics, ',
-          _react2.default.createElement(
-            'a',
-            { href: 'http://mcnuttart.tumblr.com/' },
-            'arts'
-          ),
-          _react2.default.createElement('br', null),
-          'WEB DEV: d3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails, python, flask, sketch',
-          _react2.default.createElement('br', null),
-          'SCI-COM: mathematica, grid mathematica, numpy, pandas'
-        )
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'links' },
-        _react2.default.createElement(
-          'span',
-          null,
-          _react2.default.createElement(
-            _reactRouter.Link,
-            { className: 'link', to: '#/about', onClick: this.getTrack('About') },
-            'ABOUT'
-          )
-        ),
-        _react2.default.createElement(
-          'span',
-          null,
-          _react2.default.createElement(
-            _reactRouter.Link,
-            { className: 'link', to: '#/research', onClick: this.getTrack('Work') },
-            'RESEARCH'
-          )
-        ),
-        _react2.default.createElement(
-          'span',
-          null,
-          _react2.default.createElement(
-            _reactGa.OutboundLink,
-            {
-              className: 'link',
-              to: '../../assets/resume.pdf',
-              eventLabel: "Click resume link" },
-            'CV'
-          )
-        ),
-        _react2.default.createElement(
-          'span',
-          null,
-          _react2.default.createElement(
-            'a',
-            { href: 'mailto:mcnutt.andrew@gmail.com' },
-            'CONTACT'
-          )
-        )
-      )
-    );
-  }
-});
-
-},{"../constants":237,"./project-description.jsx":232,"react":227,"react-ga":54,"react-router":91}],237:[function(require,module,exports){
+},{"../constants":232,"react":227}],232:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25763,24 +25321,32 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = {
   about: 'I am an applied mathematician currently working in the wild world of San Francisco web development. My work in the past several years has primarily revolved around developing beautiful user interfaces that convey information honestly. In my current position at Uber I draw pictures with numbers and other semantic information. Prior to that I majored in physics, with a special empahsis on mechanics, which, in a bizzare twist, lead me into rails-oriented web development. Edward Tufte once made fun of me in a hotel in Seattle.',
+  title: 'Andrew M. McNutt',
+  subtitle: 'SF-Based Visualization Expert and Applied Mathematician',
+  profpic: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/profpic.png',
   publications: [{
     title: '1',
+    link: '',
     text: 'Franklin, J., Guo, Y., McNutt, A., & Morgan, A. (2015). The Schrödinger–Newton system with self-field coupling. Classical and Quantum Gravity'
   }, {
     title: '2',
+    link: '',
     text: 'Clark, A. M., Dole, K., Coulon-Spektor, A., McNutt, A., Grass, G., Freundlich, J. S., ... & Ekins, S. (2015). Open Source Bayesian Models: I. Application to ADME/Tox and Drug Discovery Datasets. Journal of chemical information and modeling.'
   }],
 
   projects: [{
     title: 'Nonequivalant Lagrangian Mechanics',
     link: '../assets/thesis.pdf',
+    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/thesis-image.png',
     text: 'During my senior year at Reed I wrote my undergraduate thesis on an alternative representation of classical mechanics called Nonequivalent Lagrangian Mechanics. It was advised by Nelia Mann.'
   }, {
     title: 'N-Hedron',
+    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/n-hydron.png',
     link: '../assets/nhedron.pdf',
     text: 'Throughout my undergraduate career I had a prevailing interest in the geometrically ambiguous shape, the N-Hedron. It is formed by taking an integer, N, number of points, placing them on the sphere and demanding that they be maximally far apart. This culminated in a independent project, in which I implemented three different algorithms for constructing these shapes. You can find out more about this project. One of the major aspects of this project was dealing with a large (for Mathematica) amount of data which reached up into the millions of data points.'
   }, {
     title: 'Chaotic Circuit',
+    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/chaotic-image.png',
     link: '../assets/Chaotic_circuit.pdf',
     text: 'In culminating effort of my junior year at Reed I built a third order Chaotic circuit as an independent project. This project was fine, but shows some of the best data visualization work I have done, particularlly the combination phase and signal metering small multiples diagram.'
   }],
@@ -25789,39 +25355,27 @@ exports.default = {
     title: 'Personal Timeline',
     liveLink: 'http://mcnuttandrew.github.io/personal-timeline/',
     sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
+    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/personal-time.png',
     text: 'A brief timeline of my life, a resume through a dark mirror if you will. Single page app built with React, React-Router, and D3.'
   }, {
     title: 'Why Not Ipsum',
     liveLink: 'http://why-not-ipsum.herokuapp.com/',
     sourceLink: 'https://github.com/mcnuttandrew/Why-Not-Zoidberg',
+    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/why-not-image.png',
     text: 'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning. Technologies included Rails API, Backbone.js, and Nokogiri.'
   }, {
     title: 'N-Body Simulator',
     liveLink: 'https://mcnuttandrew.github.io/n-body-simulator/',
     sourceLink: 'https://github.com/mcnuttandrew/N-Body-Simulator',
+    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/n-body-image.png',
     text: 'A low N gravitional interaction simulator built in processing.'
   }, {
     title: 'Asteroids',
+    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/asteroids-image.png',
     liveLink: 'https://mcnuttandrew.github.io/asteroids/',
     sourceLink: 'https://github.com/mcnuttandrew/Asteroids',
     text: 'A reimaging of the classic arcade game. Technologies included Javascipt, HTML5 Canvas, and jQuery'
-  }, {
-    title: 'Teacup',
-    liveLink: 'http://tea-cup.org/',
-    sourceLink: 'https://github.com/mcnuttandrew/Project-Teacup',
-    text: 'A microblogging platform for viewing the collective unconscious. Single page Backbone app based on RESTful practices. Features data visualizations including trending topics and user population. Seed data was generated using a variety of large scale data scrapes and data cleaning techniques. Technologies included a Rails API, Backbone.js, jQuery, Nokogiri, and D3.'
-  }
-  // {
-  //   title: 'Slim Record',
-  //   sourceLink: 'https://github.com/mcnuttandrew/Active-Record-Lite',
-  //   text: 'An Object Relational Mapper that rebuilds much of the functionality of active record. The point of the project was to get a better comprehension of the underlying mechanisms that we so often take for granted in Rails'
-  // },
-  // {
-  //   title: 'Railsito',
-  //   sourceLink: 'https://github.com/mcnuttandrew/railsito',
-  //   text: 'An Object Relational Mapper that rebuilds much of the functionality of active record. The point of the project was to get a better comprehension of the underlying mechanisms that we so often take for granted in Rails'
-  // }
-  ]
+  }]
 };
 
 },{}]},{},[230]);
