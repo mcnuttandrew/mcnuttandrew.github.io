@@ -18,12 +18,12 @@ export default {
   publications: [
     {
       title: '1',
-      link: '',
+      link: 'https://arxiv.org/abs/1501.07537',
       text: 'Franklin, J., Guo, Y., McNutt, A., & Morgan, A. (2015). The Schrödinger–Newton system with self-field coupling. Classical and Quantum Gravity'
     },
     {
       title: '2',
-      link: '',
+      link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143',
       text: 'Clark, A. M., Dole, K., Coulon-Spektor, A., McNutt, A., Grass, G., Freundlich, J. S., ... & Ekins, S. (2015). Open Source Bayesian Models: I. Application to ADME/Tox and Drug Discovery Datasets. Journal of chemical information and modeling.'
     }
   ],
@@ -52,21 +52,21 @@ export default {
   onlineWork: [
     {
       title: 'Personal Timeline',
-      liveLink: 'http://mcnuttandrew.github.io/personal-timeline/',
+      link: 'http://mcnuttandrew.github.io/personal-timeline/',
       sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
       imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/personal-time.png',
       text: 'A brief timeline of my life, a resume through a dark mirror if you will. Single page app built with React, React-Router, and D3.'
     },
     {
       title: 'Why Not Ipsum',
-      liveLink: 'http://why-not-ipsum.herokuapp.com/',
+      link: 'http://why-not-ipsum.herokuapp.com/',
       sourceLink: 'https://github.com/mcnuttandrew/Why-Not-Zoidberg',
       imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/why-not-image.png',
       text: 'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning. Technologies included Rails API, Backbone.js, and Nokogiri.'
     },
     {
       title: 'N-Body Simulator',
-      liveLink: 'https://mcnuttandrew.github.io/n-body-simulator/',
+      link: 'https://mcnuttandrew.github.io/n-body-simulator/',
       sourceLink: 'https://github.com/mcnuttandrew/N-Body-Simulator',
       imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/n-body-image.png',
       text: 'A low N gravitional interaction simulator built in processing.'
@@ -74,7 +74,7 @@ export default {
     {
       title: 'Asteroids',
       imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/asteroids-image.png',
-      liveLink: 'https://mcnuttandrew.github.io/asteroids/',
+      link: 'https://mcnuttandrew.github.io/asteroids/',
       sourceLink: 'https://github.com/mcnuttandrew/Asteroids',
       text: 'A reimaging of the classic arcade game. Technologies included Javascipt, HTML5 Canvas, and jQuery'
     },

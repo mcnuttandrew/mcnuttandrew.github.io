@@ -13,7 +13,7 @@ export default React.createClass({
           {Constants.title}
         </div>
         <div className='right-links'>
-          <a href="http:www.github.com/mcnuttandrew">Github</a>
+          <a href="https://github.com/mcnuttandrew">Github</a>
           <a href="mailto:mcnutt.andrew@gmail.com">Contact</a>
           <a href='../../assets/resume.pdf'>CV</a>
         </div>
