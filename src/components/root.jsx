@@ -1,8 +1,17 @@
 import React from 'react';
 import Constants from '../constants';
 
+import ReactGA from 'react-ga';
+
 export default React.createClass({
   displayName : 'App',
+
+  componentDidMount: function componentDidMount() {
+    ReactGA.event({
+      category: 'User',
+      action: 'Page was loaded'
+    });
+  },
 
   renderHeader: function renderHeader() {
     // todo add alts to everything
