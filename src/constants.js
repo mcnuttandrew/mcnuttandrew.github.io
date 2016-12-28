@@ -51,8 +51,15 @@ export default {
 
   onlineWork: [
     {
+      title: 'CSV Conversion',
+      link: 'http://www.mcnutt.in/csv-conversion/',
+      sourceLink: 'https://github.com/mcnuttandrew/csv-conversion',
+      imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/csv-conversion.png',
+      text: 'A handy client-side csv to json converter. I built this little app, because my favorite conversion site got knocked down and I wanted to improve the UI. Built with React/React-router/d3'
+    },
+    {
       title: 'Personal Timeline',
-      link: 'http://mcnuttandrew.github.io/personal-timeline/',
+      link: 'http://www.mcnutt.in/personal-timeline/',
       sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
       imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/personal-time.png',
       text: 'A brief timeline of my life, a resume through a dark mirror if you will. Single page app built with React, React-Router, and D3.'
