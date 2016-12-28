@@ -25197,10 +25197,14 @@ exports.default = _react2.default.createClass({
     );
   },
 
-  renderPublication: function renderPublication(publication) {
+  renderPublication: function renderPublication(publication, index) {
     return _react2.default.createElement(
       'a',
-      { href: publication.link, className: 'body-content publication' },
+      {
+        href: publication.link,
+        className: 'body-content publication',
+        key: 'publication-' + index
+      },
       publication.text
     );
   },
@@ -25208,7 +25212,10 @@ exports.default = _react2.default.createClass({
   renderProject: function renderProject(project) {
     return _react2.default.createElement(
       'div',
-      { className: 'project-panel' },
+      {
+        className: 'project-panel',
+        key: 'project-' + project.title
+      },
       _react2.default.createElement(
         'div',
         { className: 'project-img-wrapper' },
@@ -25276,7 +25283,10 @@ exports.default = _react2.default.createClass({
   renderSkill: function renderSkill(skill) {
     return _react2.default.createElement(
       'div',
-      { className: 'skill-content' },
+      {
+        className: 'skill-content',
+        key: 'skill-' + skill.title
+      },
       _react2.default.createElement(
         'div',
         { className: 'skill-title' },
@@ -25423,8 +25433,14 @@ exports.default = {
   }],
 
   onlineWork: [{
+    title: 'CSV Conversion',
+    link: 'http://www.mcnutt.in/csv-conversion/',
+    sourceLink: 'https://github.com/mcnuttandrew/csv-conversion',
+    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/csv-conversion.png',
+    text: 'A handy client-side csv to json converter. I built this little app, because my favorite conversion site got knocked down and I wanted to improve the UI. Built with React/React-router/d3'
+  }, {
     title: 'Personal Timeline',
-    link: 'http://mcnuttandrew.github.io/personal-timeline/',
+    link: 'http://www.mcnutt.in/personal-timeline/',
     sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
     imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/personal-time.png',
     text: 'A brief timeline of my life, a resume through a dark mirror if you will. Single page app built with React, React-Router, and D3.'

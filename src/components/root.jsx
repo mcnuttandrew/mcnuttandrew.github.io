@@ -50,15 +50,24 @@ export default React.createClass({
     );
   },
 
-  renderPublication: function renderPublication(publication) {
+  renderPublication: function renderPublication(publication, index) {
     return (
-      <a href={publication.link} className='body-content publication'>{publication.text}</a>
+      <a
+        href={publication.link}
+        className='body-content publication'
+        key={`publication-${index}`}
+        >
+        {publication.text}
+      </a>
     );
   },
 
   renderProject: function renderProject(project) {
     return (
-      <div className="project-panel">
+      <div
+        className="project-panel"
+        key={`project-${project.title}`}
+        >
         <div className="project-img-wrapper">
           <img className="project-img" src={project.imgLink}></img>
         </div>
@@ -90,7 +99,10 @@ export default React.createClass({
 
   renderSkill: function renderSkill(skill) {
     return (
-      <div className="skill-content">
+      <div
+        className="skill-content"
+        key={`skill-${skill.title}`}
+        >
         <div className="skill-title">{skill.title}</div>
         <div className="body-content">{skill.content}</div>
       </div>
