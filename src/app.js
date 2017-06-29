@@ -8,6 +8,6 @@ import Root from './components/root.jsx';
 ReactGA.initialize('UA-79506537-1');
 ReactDOM.render((
   <Router history={browserHistory}>
-    <Route path="/" component={Root}></Route>
+    <Route path="/" component={Root} />
   </Router>
-),  document.getElementById('app'))
+), document.getElementById('app'));

@@ -3,42 +3,40 @@ import Constants from '../constants';
 
 import ReactGA from 'react-ga';
 
-export default React.createClass({
-  displayName : 'App',
-
-  componentDidMount: function componentDidMount() {
+class RootApp extends React.Component {
+  componentDidMount() {
     ReactGA.event({
       category: 'User',
       action: 'Page was loaded'
     });
-  },
+  }
 
-  renderHeader: function renderHeader() {
+  renderHeader() {
     // todo add alts to everything
     return (
       <div className="app-header">
         <div className="name-wrapper">
-          <div className='left-box'></div>
+          <div className="left-box" />
           {Constants.title}
         </div>
-        <div className='right-links'>
+        <div className="right-links">
           <a href="https://github.com/mcnuttandrew">Github</a>
           <a href="mailto:mcnutt.andrew@gmail.com">Contact</a>
-          <a href='../../assets/resume.pdf'>CV</a>
+          <a href="../../assets/resume.pdf">CV</a>
         </div>
       </div>
     );
-  },
+  }
 
-  renderAboutBlock: function renderAboutBlock() {
+  renderAboutBlock() {
     return (
       <div className="about-block section">
         <div className="section-label">
-          <div className="main-heading"></div>
+          <div className="main-heading" />
         </div>
         <div className="section-content">
           <div className="main-img-wrapper">
-            <img className="main-img" src={Constants.profpic}></img>
+            <img className="main-img" src={Constants.profpic} />
           </div>
           <div className="info-panel">
             <div className="main-heading">{Constants.title}</div>
@@ -48,28 +46,28 @@ export default React.createClass({
         </div>
       </div>
     );
-  },
+  }
 
-  renderPublication: function renderPublication(publication, index) {
+  renderPublication(publication, index) {
     return (
       <a
         href={publication.link}
-        className='body-content publication'
+        className="body-content publication"
         key={`publication-${index}`}
         >
         {publication.text}
       </a>
     );
-  },
+  }
 
-  renderProject: function renderProject(project) {
+  renderProject(project) {
     return (
       <div
         className="project-panel"
         key={`project-${project.title}`}
         >
         <div className="project-img-wrapper">
-          <img className="project-img" src={project.imgLink}></img>
+          <img className="project-img" src={project.imgLink} />
         </div>
         <div className="project-info">
           <a className="project-link" href={project.link}>{project.title}</a>
@@ -77,9 +75,9 @@ export default React.createClass({
         </div>
       </div>
     );
-  },
+  }
 
-  renderResearchBlock: function renderResearchBlock() {
+  renderResearchBlock() {
     const publications = Constants.publications.map(this.renderPublication);
     const projects = Constants.projects.map(this.renderProject);
     return (
@@ -89,15 +87,15 @@ export default React.createClass({
         </div>
         <div className="section-content">
           <div className="sub-heading">Publications</div>
-          <div className='publications-wrapper'>{publications}</div>
+          <div className="publications-wrapper">{publications}</div>
           <div className="sub-heading">Past Projects</div>
-          <div className='projects-wrapper'>{projects}</div>
+          <div className="projects-wrapper">{projects}</div>
         </div>
       </div>
     );
-  },
+  }
 
-  renderSkill: function renderSkill(skill) {
+  renderSkill(skill) {
     return (
       <div
         className="skill-content"
@@ -106,10 +104,10 @@ export default React.createClass({
         <div className="skill-title">{skill.title}</div>
         <div className="body-content">{skill.content}</div>
       </div>
-    )
-  },
+    );
+  }
 
-  renderWorkBlock: function renderWorkBlock() {
+  renderWorkBlock() {
     const projects = Constants.onlineWork.map(this.renderProject);
     const skills = Constants.skills.map(this.renderSkill);
     return (
@@ -119,39 +117,39 @@ export default React.createClass({
         </div>
         <div className="section-content">
           <div className="sub-heading">Skills</div>
-          <div className='skills-wrapper'>{skills}</div>
+          <div className="skills-wrapper">{skills}</div>
           <div className="sub-heading">Online Work</div>
-          <div className='projects-wrapper'>{projects}</div>
+          <div className="projects-wrapper">{projects}</div>
         </div>
       </div>
     );
-  },
+  }
 
-  render: function render() {
+  render() {
     let wrapperClass = 'app';
-    switch(this.props.location.hash) {
-      case '#/work':
-        wrapperClass += ' work';
-        break;
-      case '#/research':
-        wrapperClass += ' research';
-        break;
-      case '#/about':
-        wrapperClass += ' about';
-        break;
-      case '':
-        wrapperClass += ' about';
-        break;
-      default:
-        wrapperClass += ' about';
-        break;
+    switch (this.props.location.hash) {
+    case '#/work':
+      wrapperClass += ' work';
+      break;
+    case '#/research':
+      wrapperClass += ' research';
+      break;
+    case '#/about':
+      wrapperClass += ' about';
+      break;
+    case '':
+      wrapperClass += ' about';
+      break;
+    default:
+      wrapperClass += ' about';
+      break;
     }
 
     return (
       <div className={wrapperClass}>
         <div className="left-border">
-          <div className="left-gradient"></div>
-          <div className="left-pattern"></div>
+          <div className="left-gradient" />
+          <div className="left-pattern" />
         </div>
         <div className="main-content">
           {this.renderHeader()}
@@ -162,4 +160,6 @@ export default React.createClass({
       </div>
     );
   }
-});
+}
+RootApp.displayName = 'App';
+export default RootApp;

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 export default {
   about: 'I am an applied mathematician currently working in the wild world of San Francisco web development. My work in the past several years has primarily revolved around developing beautiful user interfaces that convey information honestly. In my current position at Uber I draw pictures with numbers and other semantic information. Prior to that I majored in physics, with a special empahsis on mechanics, which, in a bizzare twist, lead me into rails-oriented web development. Edward Tufte once made fun of me in a hotel in Seattle.',
   title: 'Andrew M. McNutt',
@@ -5,15 +6,15 @@ export default {
   profpic: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/profpic.png',
 
   skills: [{
-      title: 'PERSONAL',
-      content: 'information design, physics, arts'
-    }, {
-      title: 'WEB DEV',
-      content: 'd3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails, python, flask, sketch'
-    }, {
-      title: 'SCI-COM',
-      content: 'mathematica, grid mathematica, numpy, pandaz'
-    }
+    title: 'PERSONAL',
+    content: 'information design, physics, arts'
+  }, {
+    title: 'WEB DEV',
+    content: 'd3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails, python, flask, sketch'
+  }, {
+    title: 'SCI-COM',
+    content: 'mathematica, grid mathematica, numpy, pandaz'
+  }
   ],
   publications: [
     {
@@ -51,6 +52,13 @@ export default {
 
   onlineWork: [
     {
+      title: 'Pantone: Color of the year',
+      link: 'http://www.mcnutt.in/color-of-the-year/',
+      sourceLink: 'https://github.com/mcnuttandrew/color-of-the-year',
+      imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/color-of-year.png',
+      text: 'A small exploration of the glory and wonder that is pantones color of the year. Built with React/React-router/react-vis'
+    },
+    {
       title: 'CSV Conversion',
       link: 'http://www.mcnutt.in/csv-conversion/',
       sourceLink: 'https://github.com/mcnuttandrew/csv-conversion',
@@ -84,7 +92,7 @@ export default {
       link: 'https://mcnuttandrew.github.io/asteroids/',
       sourceLink: 'https://github.com/mcnuttandrew/Asteroids',
       text: 'A reimaging of the classic arcade game. Technologies included Javascipt, HTML5 Canvas, and jQuery'
-    },
+    }
     // {
     //   title: 'Teacup',
     //   liveLink: 'http://tea-cup.org/',
@@ -102,4 +110,4 @@ export default {
     //   text: 'An Object Relational Mapper that rebuilds much of the functionality of active record. The point of the project was to get a better comprehension of the underlying mechanisms that we so often take for granted in Rails'
     // }
   ]
-}
+};
