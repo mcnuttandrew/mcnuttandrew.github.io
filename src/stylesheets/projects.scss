@@ -4,7 +4,9 @@
   margin-bottom: 25px;
 }
 
-.project-title {
+.project-title,
+.project-links a,
+.project-links span {
   color: $link-blue;
   font-family: Roboto-BoldItalic;
   font-size: 18px;
@@ -13,4 +15,8 @@
   &:visted {
     color: $link-blue;
   }
+}
+
+.project-links a {
+  font-size: 14px;
 }
