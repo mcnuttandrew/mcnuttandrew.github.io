@@ -1,0 +1,31 @@
+// scss-lint:disable SelectorFormat
+
+.rv-xy-plot__axis__tick__text {
+  fill: $text-black;
+  font-size: 7px;
+}
+
+.rv-xy-plot__series--label-text {
+  fill: $text-black;
+  font-family: Roboto-Bold;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.rv-xy-plot__axis__line,
+.rv-xy-plot__axis__tick__line {
+  stroke: $text-black;
+}
+
+.chart-label text {
+  font-size: 20px;
+  text-anchor: start;
+}
+
+.radar-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+  width: 100%;
+}

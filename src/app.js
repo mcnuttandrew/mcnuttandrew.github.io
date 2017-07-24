@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactGA from 'react-ga';
-import {browserHistory, Router, Route} from 'react-router';
 
-import Root from './components/root.jsx';
+import './stylesheets/main.scss';
+import Root from './components/root.js';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 ReactGA.initialize('UA-79506537-1');
+
 ReactDOM.render((
-  <Router history={browserHistory}>
-    <Route path="/" component={Root} />
+  <Router>
+    <Root />
   </Router>
 ), document.getElementById('app'));

@@ -1,0 +1,16 @@
+
+.project-block {
+  border-bottom: thin solid $image-background-black;
+  margin-bottom: 25px;
+}
+
+.project-title {
+  color: $link-blue;
+  font-family: Roboto-BoldItalic;
+  font-size: 18px;
+  text-decoration: none;
+
+  &:visted {
+    color: $link-blue;
+  }
+}
