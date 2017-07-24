@@ -249,4 +249,8 @@ body,
     flex-direction: column;
     min-height: 600px;
   }
+
+  html {
+    overflow-x: hidden;
+  }
 }
