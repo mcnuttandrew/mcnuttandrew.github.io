@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-export const ABOUT = 'I am an applied mathematician currently working in the wild world of San Francisco web development. My work in the past several years has primarily revolved around developing beautiful user interfaces that convey information honestly. In my current position at Uber I draw pictures with numbers and other semantic information. Prior to that I majored in physics, with a special empahsis on mechanics, which, in a bizzare twist, lead me into rails-oriented web development. Edward Tufte once made fun of me in a hotel in Seattle.';
+export const ABOUT = 'I am a incipient graduate student in Computer Science at the University of Chicago. In the very near past I worked as Data Visualization Engineer for a variety of companies in San Francisco, where I made visual analytic software. I got my formal education in physics from Reed College in Portland, and my informal education in web development from App Academy in San Francisco. I really like deserts, buffalo, and motorcycles. I care deeply about writing well tested software. Edward Tufte once made fun of me in a hotel in Seattle.';
 
 export const skills = [{
   title: 'PERSONAL',
@@ -43,6 +43,12 @@ export const PROJECTS = [
   //   link: '../assets/Chaotic_circuit.pdf',
   //   text: 'In culminating effort of my junior year at Reed I built a third order Chaotic circuit as an independent project. This shows some of the best data visualization work I had done at that point, particularlly the combination phase and signal metering small multiples diagram.'
   // },
+  {
+    title: 'On The Shape of American Cities I/II',
+    link: 'http://www.mcnutt.in/city-size/',
+    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/city-size.png',
+    text: 'A print graphic describing the shape of the 100 most populous American cities. Built with React/React-router/react-vis'
+  },
   {
     title: 'Pantone: Color of the year',
     link: 'http://www.mcnutt.in/color-of-the-year/',
