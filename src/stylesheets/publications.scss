@@ -1,15 +1,16 @@
 .publication-section-headline {
-  font-family: Roboto-BoldItalic;
+  font-family: Roboto-BoldItalic, sans-serif;
   font-size: 36px;
 }
 
 .publication-block {
+  font-family: Roboto-Light, sans-serif;
   margin-bottom: 30px;
 }
 
 .publication-title {
   color: $link-blue;
-  font-family: Roboto-Medium;
+  font-family: Roboto-Medium, sans-serif;
   font-size: 18px;
   text-decoration: none;
 

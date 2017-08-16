@@ -30,7 +30,7 @@ export const PUBLICATIONS = [
   },
   {
     link: '../assets/thesis.pdf',
-    title: 'Nonequivalant Lagrangian Mechanics',
+    title: 'Nonequivalent Lagrangian Mechanics',
     authors: 'Andrew McNutt (Advised by Nelia Mann)',
     journal: 'Undergraduate thesis. Reed College, 2014.'
   }
