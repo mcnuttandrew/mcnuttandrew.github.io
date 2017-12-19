@@ -1,6 +1,6 @@
 $title-blue: #a5c4be;
 $link-blue: #20476e;
-$background-tan: #dfd2b0;
+$background-tan: #fff;
 $image-background-black: #0c140c;
 $text-black: #0b140c;
 
@@ -101,7 +101,6 @@ body,
     margin-top: 30px;
     max-height: 200px;
     max-width: 260px;
-    opacity: .7;
   }
 }
 
@@ -155,7 +154,7 @@ body,
 
   &::after {
     content: '•';
-    padding: 0 2px;
+    padding: 0 15px;
   }
 
   &:visited {
@@ -173,7 +172,6 @@ body,
   display: flex;
   flex-direction: column;
   height: 100%;
-
   width: 100%;
 
   .link-menu {
@@ -187,11 +185,16 @@ body,
 @media screen and (min-width: 900px) {
   .right-panel {
     overflow: scroll;
+    overflow-x: hidden;
   }
 }
 
 // tablet adjustments
 @media screen and (max-width: 900px) and (min-width: 600px) {
+  .app {
+    overflow-x: hidden;
+  }
+
   .root-wrapper {
     flex-direction: column;
   }

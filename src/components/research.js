@@ -1,6 +1,21 @@
 import React from 'react';
 
-import {PUBLICATIONS} from '../constants';
+import {PUBLICATIONS, PRESENTATIONS} from '../constants';
+
+function makePubBloc(pub) {
+  const {title, link, authors, journal, date} = pub;
+  return (
+    <div className="publication-block" key={title}>
+      {link ?
+        <a href={link} className="publication-title">{title}</a> :
+        <div className="publication-title">{title}</div>
+      }
+      {authors && <div className="publication-authors">{authors}</div>}
+      {journal && <div className="publication-journal">{journal}</div>}
+      {date && <div className="publication-date">{date}</div>}
+    </div>
+  );
+}
 
 class ResearchPage extends React.Component {
   render() {
@@ -8,21 +23,13 @@ class ResearchPage extends React.Component {
     return (
       <div className="page research-page">
         <div className="publication-section-headline">PUBLICATIONS</div>
-        {PUBLICATIONS.map(pub => {
-          return (
-            <div className="publication-block" key={pub.title}>
-              <a
-                href={pub.link}
-                className="publication-title">{pub.title}</a>
-              <div className="publication-authors">{pub.authors}</div>
-              <div className="publication-journal">{pub.journal}</div>
-            </div>
-          );
-        })}
+        {PUBLICATIONS.map(makePubBloc)}
+        <div className="publication-section-headline">PRESENTATIONS</div>
+        {PRESENTATIONS.map(makePubBloc)}
         <div className="footer" />
       </div>
     );
   }
 }
-ResearchPage.displayName = 'App';
+ResearchPage.displayName = 'ResearchPage';
 export default ResearchPage;

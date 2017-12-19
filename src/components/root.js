@@ -10,7 +10,7 @@ import ResearchPage from './research';
 
 export const LINKS = [
   {title: 'github', href: 'https://github.com/mcnuttandrew/'},
-  {title: 'twitter', href: 'https://twitter.com/_mcnutt_'},
+  // {title: 'twitter', href: 'https://twitter.com/_mcnutt_'},
   {title: 'linkedin', href: 'https://www.linkedin.com/in/mcnuttandrew/'},
   {title: 'CV', href: '../assets/resume.pdf'}
 ];

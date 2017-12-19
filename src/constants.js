@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-export const ABOUT = 'I am a incipient graduate student in Computer Science at the University of Chicago. In the very near past I worked as Data Visualization Engineer for a variety of companies in San Francisco, where I made visual analytic software. I got my formal education in physics from Reed College in Portland, and my informal education in web development from App Academy in San Francisco. I really like deserts, buffalo, and motorcycles. I care deeply about writing well tested software. Edward Tufte once made fun of me in a hotel in Seattle.';
+export const ABOUT = 'I am a graduate student in Computer Science at the University of Chicago. In the very near past I worked as Data Visualization Engineer for a variety of companies in San Francisco, where I made visual analytic software. I got a formal education in physics from Reed College in Portland, and an informal education in web development from App Academy in San Francisco. I really like deserts, buffalo, and motorcycles. I care deeply about writing well tested software. Edward Tufte once made fun of me in a hotel in Seattle.';
 
 export const skills = [{
   title: 'PERSONAL',
@@ -33,6 +33,19 @@ export const PUBLICATIONS = [
     title: 'Nonequivalent Lagrangian Mechanics',
     authors: 'Andrew McNutt (Advised by Nelia Mann)',
     journal: 'Undergraduate thesis. Reed College, 2014.'
+  }
+];
+
+export const PRESENTATIONS = [
+  {
+    title: 'Nonequivalent Lagrangian Mechanics',
+    authors: 'A McNutt',
+    date: 'April 8, 2014'
+  },
+  {
+    title: 'The Schrodinger-Newton System with Self-field Coupling',
+    authors: 'V Gopalaswamy, A McNutt, A Morgan, C Proepper.',
+    date: 'September 18, 2013'
   }
 ];
 
