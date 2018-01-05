@@ -57,10 +57,16 @@ export const PROJECTS = [
   //   text: 'In culminating effort of my junior year at Reed I built a third order Chaotic circuit as an independent project. This shows some of the best data visualization work I had done at that point, particularlly the combination phase and signal metering small multiples diagram.'
   // },
   {
+    title: 'Constellations of Home - XMAS CARDS 2017',
+    link: 'http://www.mcnutt.in/home-graphs/',
+    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/home-graphs.png',
+    text: 'Over the 2017 holidays I spent some time meditating on memory, home, and graph theory, which led to my making these christmas cards. Built react-vis + sketch.'
+  },
+  {
     title: 'On The Shape of American Cities I/II',
     link: 'http://www.mcnutt.in/city-size/',
     imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/city-size.png',
-    text: 'A print graphic describing the shape of the 100 most populous American cities. Built with React/React-router/react-vis'
+    text: 'A print graphic describing the shape of the 100 most populous American cities. Built with react-vis + sketch.'
   },
   {
     title: 'Pantone: Color of the year',
