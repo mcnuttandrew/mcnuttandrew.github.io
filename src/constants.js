@@ -57,6 +57,12 @@ export const PROJECTS = [
   //   text: 'In culminating effort of my junior year at Reed I built a third order Chaotic circuit as an independent project. This shows some of the best data visualization work I had done at that point, particularlly the combination phase and signal metering small multiples diagram.'
   // },
   {
+    title: 'tap-react-browser',
+    link: 'http://www.mcnutt.in/home-graphs/',
+    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/tap-react-browser.png',
+    text: 'In the process of building a variety of javascipt libraries in the coarse of my graduate research, I found myself needing a testing tool that played a particular role in relation to the browser, so I made one! tap-react-browser is a light wrapper on tape that spits out react components. Built with react and tape.'
+  },
+  {
     title: 'Constellations of Home - XMAS CARDS 2017',
     link: 'http://www.mcnutt.in/home-graphs/',
     imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/home-graphs.png',
