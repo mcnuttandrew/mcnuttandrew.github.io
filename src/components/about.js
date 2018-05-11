@@ -43,7 +43,7 @@ class AboutPage extends React.Component {
               javascript: 9,
               ruby: 4,
               python: 6,
-              c: 1,
+              c: 4,
               java: 2
             }]}
             >
