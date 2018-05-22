@@ -31,7 +31,6 @@
   "dependencies": {
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-ga": "^2.2.0",
     "react-router-dom": "^4.1.2",
     "react-vis": "^1.6.7"
   },

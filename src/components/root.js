@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactGA from 'react-ga';
 
 import HamburgerMenu from './hamburger-menu';
 import LinkMenu from './link-menu';
@@ -27,13 +26,6 @@ function getRoute(location) {
 }
 
 class RootApp extends React.Component {
-  componentDidMount() {
-    ReactGA.event({
-      category: 'User',
-      action: 'Page was loaded'
-    });
-  }
-
   render() {
     const locationSplit = location.href.split('/');
     return (
