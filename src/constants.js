@@ -18,6 +18,12 @@ export const INTERESTS = 'I\'m passionite about info vis, physics, the nature of
 export const PUBLICATIONS = [
   {
     link: 'https://arxiv.org/abs/1501.07537',
+    title: 'Data Mining and Computational Modeling of High-Throughput Screening Datasets',
+    authors: 'Sean Ekins, Alex M Clark, Krishna Dole, Kellan Gregory, Andrew M Mcnutt, Anna Coulon Spektor, Charlie Weatherall, Nadia K Litterman, Barry A Bunin',
+    journal: 'Reporter Gene Assays, pp 197--221, 2018'
+  },
+  {
+    link: 'https://arxiv.org/abs/1501.07537',
     title: 'The Schrodinger-Newton System with Self-field Coupling',
     authors: 'Joel Franklin, Youdan Guo, Andrew McNutt, and Allison Morgan',
     journal: 'Classical Quantum Gravity, 35 065010, 2015.'
