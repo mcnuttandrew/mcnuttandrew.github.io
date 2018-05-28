@@ -17,7 +17,7 @@ export const INTERESTS = 'I\'m passionite about info vis, physics, the nature of
 
 export const PUBLICATIONS = [
   {
-    link: 'https://arxiv.org/abs/1501.07537',
+    link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14',
     title: 'Data Mining and Computational Modeling of High-Throughput Screening Datasets',
     authors: 'Sean Ekins, Alex M Clark, Krishna Dole, Kellan Gregory, Andrew M Mcnutt, Anna Coulon Spektor, Charlie Weatherall, Nadia K Litterman, Barry A Bunin',
     journal: 'Reporter Gene Assays, pp 197--221, 2018'
