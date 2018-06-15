@@ -1,9 +1,9 @@
 import React from 'react';
 
-import {PUBLICATIONS, PRESENTATIONS} from '../constants';
+import {PUBLICATIONS, PRESENTATIONS, BLOG_POSTS} from '../constants';
 
 function makePubBloc(pub) {
-  const {title, link, authors, journal, date} = pub;
+  const {title, link, authors, journal, date, subtitle} = pub;
   return (
     <div className="publication-block" key={title}>
       {link ?
@@ -12,6 +12,7 @@ function makePubBloc(pub) {
       }
       {authors && <div className="publication-authors">{authors}</div>}
       {journal && <div className="publication-journal">{journal}</div>}
+      {subtitle && <div className="publication-blogs">{subtitle}</div>}
       {date && <div className="publication-date">{date}</div>}
     </div>
   );
@@ -26,6 +27,8 @@ class ResearchPage extends React.Component {
         {PUBLICATIONS.map(makePubBloc)}
         <div className="publication-section-headline">PRESENTATIONS</div>
         {PRESENTATIONS.map(makePubBloc)}
+        <div className="publication-section-headline">BLOG POSTS</div>
+        {BLOG_POSTS.map(makePubBloc)}
         <div className="footer" />
       </div>
     );

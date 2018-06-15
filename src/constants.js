@@ -55,6 +55,15 @@ export const PRESENTATIONS = [
   }
 ];
 
+export const BLOG_POSTS = [
+  {
+    title: 'Advanced Visualization with react-vis',
+    subtitle: 'Using Voronois, single pass rendering, and canvas components for amazing user experiences',
+    date: 'May 21, 2018',
+    link: 'https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4'
+  }
+];
+
 export const PROJECTS = [
   // {
   //   title: 'Chaotic Circuit',
