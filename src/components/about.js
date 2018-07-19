@@ -36,8 +36,8 @@ class AboutPage extends React.Component {
               {name: 'javascript', domain: [0, 10]},
               {name: 'c', domain: [0, 10]},
               {name: 'ruby', domain: [0, 10]},
+              {name: 'java', domain: [0, 10]},
               {name: 'python', domain: [0, 10]},
-              {name: 'java', domain: [0, 10]}
             ]}
             data={[{
               javascript: 9,

@@ -29,10 +29,10 @@
     "webpack-dev-server": "^2.2.0-rc.0"
   },
   "dependencies": {
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-router-dom": "^4.1.2",
-    "react-vis": "^1.6.7"
+    "react-vis": "^1.10.4"
   },
   "scripts": {
     "start": "webpack-dev-server --progress --hot --port 3001 --open",
