@@ -3,7 +3,14 @@ import React from 'react';
 import {PUBLICATIONS, PRESENTATIONS, BLOG_POSTS} from '../constants';
 
 function makePubBloc(pub) {
-  const {title, link, authors, journal, date, subtitle} = pub;
+  const {
+    title,
+    link,
+    authors,
+    journal,
+    date,
+    subtitle
+  } = pub;
   return (
     <div className="publication-block" key={title}>
       {link ?
@@ -25,7 +32,7 @@ class ResearchPage extends React.Component {
       <div className="page research-page">
         <div className="publication-section-headline">PUBLICATIONS</div>
         {PUBLICATIONS.map(makePubBloc)}
-        <div className="publication-section-headline">PRESENTATIONS</div>
+        <div className="publication-section-headline">PRESENTATIONS & TALKS</div>
         {PRESENTATIONS.map(makePubBloc)}
         <div className="publication-section-headline">BLOG POSTS</div>
         {BLOG_POSTS.map(makePubBloc)}
