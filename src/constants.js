@@ -17,6 +17,12 @@ export const INTERESTS = 'I\'m passionite about info-vis, classical mechanics, d
 
 export const PUBLICATIONS = [
   {
+    link: 'https://c4pgv.dbvis.de/McNutt_Kindlmann_2018.pdf',
+    title: 'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
+    authors: 'Andrew McNutt, Gordon Kindlmann',
+    journal: 'VisGuides (IEEE Workshop). 2018'
+  },
+  {
     link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14',
     title: 'Data Mining and Computational Modeling of High-Throughput Screening Datasets',
     authors: 'Sean Ekins, Alex M Clark, Krishna Dole, Kellan Gregory, Andrew M Mcnutt, Anna Coulon Spektor, Charlie Weatherall, Nadia K Litterman, Barry A Bunin',
