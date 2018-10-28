@@ -17,7 +17,7 @@ export const INTERESTS = 'I\'m passionite about info-vis, classical mechanics, d
 
 export const PUBLICATIONS = [
   {
-    link: 'https://c4pgv.dbvis.de/McNutt_Kindlmann_2018.pdf',
+    link: '../assets/McNutt_Kindlmann_2018.pdf',
     title: 'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
     authors: 'Andrew McNutt, Gordon Kindlmann',
     journal: 'VisGuides (IEEE Workshop). 2018'
@@ -50,15 +50,22 @@ export const PUBLICATIONS = [
 
 export const PRESENTATIONS = [
   {
+    title: 'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
+    link: '../assets/vis-lint-talk.pdf',
+    journal: 'VisGuides 2018. October 22, 2018'
+  },
+  {
     title: 'Design Patterns For Data Visualization in React',
     link: 'http://tinyurl.com/reactvisdesignpatterns',
     journal: 'React Chicago. August 29, 2018'
   },
   {
+    link: '../assets/nlm-talk.pdf',
     title: 'Nonequivalent Lagrangian Mechanics',
     journal: 'Reed Physics Seminar. April 8, 2014'
   },
   {
+    link: '../assets/QGravPresentation.pdf',
     title: 'The Schrodinger-Newton System with Self-field Coupling',
     authors: 'Varchas Gopalaswamy, Andrew McNutt, Allie Morgan, Carl Proepper.',
     journal: 'Reed Physics Seminar. September 18, 2013'
