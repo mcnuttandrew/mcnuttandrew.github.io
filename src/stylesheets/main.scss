@@ -127,7 +127,8 @@ body,
   color: $title-blue;
   display: flex;
   flex-direction: column;
-  font-family: Roboto-Thin;
+  font-family: Roboto-thin, sans-serif;
+  font-weight: 300;
   height: auto;
   max-height: 100%;
   padding: 64px;
