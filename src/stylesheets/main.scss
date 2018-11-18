@@ -78,15 +78,14 @@ body,
   font-family: Roboto-Light, sans-serif;
   font-size: 14px;
   width: 100%;
+  padding-top: 14px;
 }
 
 .pic-wrapper {
   align-items: center;
   display: flex;
-  height: 100%;
   justify-content: center;
   min-height: 200px;
-  width: 100%;
 
   .profpic {
     background: url('https://s3-us-west-1.amazonaws.com/mcnutt-static-images/profpic.jpeg');
