@@ -89,6 +89,14 @@ export const PROJECTS = [
   //   text: 'In culminating effort of my junior year at Reed I built a third order Chaotic circuit as an independent project. This shows some of the best data visualization work I had done at that point, particularlly the combination phase and signal metering small multiples diagram.'
   // },
   {
+    title: 'Readability As A Service',
+    dates: 'November 2018',
+    link: 'https://github.com/mcnuttandrew/flesch-kincaid-as-a-service',
+    sourceLink: 'https://www.mcnutt.in/flesch-kincaid-as-a-service/',
+    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/readability.png',
+    text: 'Have you ever wanted specific numerical quantification on how readable your prose is? This micro app wraps the textstat package as a webservice so that you can easily check. Built with Flask and textstat.'
+  },
+  {
     title: 'tap-react-browser',
     dates: 'Feburary - April 2018',
     link: 'https://github.com/mcnuttandrew/tap-react-browser/',

@@ -17,16 +17,108 @@
   }
 }
 
-.project-links a {
-  font-size: 14px;
+.project-links {
+  align-items: center;
+  display: flex;
+
+  span {
+    padding: 0 5px;
+  }
+
+  a {
+    align-items: center;
+    display: flex;
+    font-size: 13px;
+  }
 }
+
 
 .project-dates {
   font-family: Roboto-Bold, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   opacity: .8;
 }
 
 .project-header-wrap {
   display: flex;
+}
+
+
+.github-icon {
+  border-bottom-color: $image-background-black;
+  border-left-color: $image-background-black;
+  border-right-color: $image-background-black;
+  border-top-color: $image-background-black;
+  color: $image-background-black;
+  column-rule-color: $image-background-black;
+  cursor: pointer;
+  fill: $image-background-black;
+  height: 13px;
+  line-height: 64px;
+  margin-right: 5px;
+  min-height: auto;
+  min-width: auto;
+  outline-color: $image-background-black;
+  perspective-origin: 8px 8px;
+  text-decoration: none solid $image-background-black;
+  text-decoration-color: $image-background-black;
+  -webkit-text-emphasis-color: $image-background-black;
+  -webkit-text-fill-color: $image-background-black;
+  -webkit-text-stroke-color: $image-background-black;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 16px;
+
+  g {
+    border-bottom-color: $image-background-black;
+    border-left-color: $image-background-black;
+    border-right-color: $image-background-black;
+    border-top-color: $image-background-black;
+    color: $image-background-black;
+    column-rule-color: $image-background-black;
+    cursor: pointer;
+    fill: $image-background-black;
+    height: auto;
+    line-height: 64px;
+    outline-color: $image-background-black;
+    overflow-x: visible;
+    overflow-y: visible;
+    perspective-origin: 0;
+    text-decoration: none solid $image-background-black;
+    text-decoration-color: $image-background-black;
+    -webkit-text-emphasis-color: $image-background-black;
+    -webkit-text-fill-color: $image-background-black;
+    -webkit-text-stroke-color: $image-background-black;
+    transform-origin: 0;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+  }
+
+  path {
+    border-bottom-color: $image-background-black;
+    border-left-color: $image-background-black;
+    border-right-color: $image-background-black;
+    border-top-color: $image-background-black;
+    color: $image-background-black;
+    column-rule-color: $image-background-black;
+    cursor: pointer;
+    fill: $image-background-black;
+    height: auto;
+    line-height: 64px;
+    outline-color: $image-background-black;
+    overflow-x: visible;
+    overflow-y: visible;
+    perspective-origin: 0;
+    text-decoration: none solid $image-background-black;
+    text-decoration-color: $image-background-black;
+    -webkit-text-emphasis-color: $image-background-black;
+    -webkit-text-fill-color: $image-background-black;
+    -webkit-text-stroke-color: $image-background-black;
+    transform-origin: 0;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+  }
 }
