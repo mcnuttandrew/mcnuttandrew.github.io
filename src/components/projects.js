@@ -17,15 +17,15 @@ const Projects = () => (
         <div className="project-block" key={index}>
           <a className="project-title" href={link}>{title}</a>
           {dates && <div className="project-dates">{dates}</div>}
-          <div className="text-block">{text}</div>
-          <a className="pic-wrapper" href={link}>
-            <img className="project-image" src={imgLink}/>
-          </a>
           <div className="project-links">
             {sourceLink && <a href={sourceLink}> SOURCE </a>}
             {link && sourceLink && <span>/</span>}
             {link && <a href={link}> LIVE </a>}
           </div>
+          <div className="text-block">{text}</div>
+          <a className="pic-wrapper" href={link}>
+            <img className="project-image" src={imgLink}/>
+          </a>
         </div>
       );
     })}
