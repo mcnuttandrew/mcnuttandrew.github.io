@@ -1,7 +1,13 @@
+.page.projects-page {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
 
 .project-block {
-  border-bottom: thin solid $image-background-black;
-  margin-bottom: 25px;
+  margin-bottom: 90px;
+  margin-right: 20px;
+  max-width: 260px;
 }
 
 .project-title,

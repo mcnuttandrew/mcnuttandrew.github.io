@@ -94,28 +94,30 @@ export const PROJECTS = [
     sourceLink: 'https://github.com/mcnuttandrew/flesch-kincaid-as-a-service',
     link: 'https://www.mcnutt.in/flesch-kincaid-as-a-service/',
     imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/readability.png',
-    text: 'Have you ever wanted specific numerical quantification on how readable your prose is? This micro app wraps the textstat package as a webservice so that you can easily check. Built with Flask and textstat.'
+    text: 'Have you ever wanted specific numerical quantification on how readable your prose is? This micro app wraps the textstat package as a webservice so that you can easily check.'
   },
   {
     title: 'tap-react-browser',
     dates: 'Feburary - April 2018',
-    link: 'https://github.com/mcnuttandrew/tap-react-browser/',
+    sourceLink: 'https://github.com/mcnuttandrew/tap-react-browser/',
     imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/tap-react-browser.png',
-    text: 'In the process of building a variety of javascipt libraries in the coarse of my graduate research, I found myself needing a testing tool that played a particular role in relation to the browser, so I made one! tap-react-browser is a light wrapper on tape that spits out react components. Built with react and tape.'
+    text: 'In the process of building a variety of javascipt libraries in the coarse of my graduate research, I found myself needing a testing tool that played a particular role in relation to the browser, so I made one! tap-react-browser is a light wrapper on tape that spits out react components.'
   },
   {
     title: 'Constellations of Home - XMAS CARDS 2017',
     dates: 'December 2017',
     link: 'http://www.mcnutt.in/home-graphs/',
+    sourceLink: 'https://github.com/mcnuttandrew/home-graphs',
     imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/home-graphs.png',
-    text: 'Over the 2017 holidays I spent some time meditating on memory, home, and graph theory, which led to my making these christmas cards. Built with react-vis + sketch + lots of holiday love.'
+    text: 'Over the 2017 holidays I spent some time meditating on memory, home, and graph theory, which led to my making these christmas cards.'
   },
   {
     title: 'On The Shape of American Cities I/II',
     dates: 'July 2017',
     link: 'http://www.mcnutt.in/city-size/',
+    sourceLink: 'https://github.com/mcnuttandrew/city-size',
     imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/city-size.png',
-    text: 'A print graphic describing the shape of the 100 most populous American cities. Built with react-vis + sketch.'
+    text: 'A print graphic describing the shape of the 100 most populous American cities.'
   },
   {
     title: 'Pantone: Color of the year',
@@ -123,10 +125,10 @@ export const PROJECTS = [
     link: 'http://www.mcnutt.in/color-of-the-year/',
     sourceLink: 'https://github.com/mcnuttandrew/color-of-the-year',
     imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/color-of-year.png',
-    text: 'A small exploration of the glory and wonder that is pantones color of the year. Built with React/React-router/react-vis'
+    text: 'A small exploration of the glory and wonder that is pantones color of the year.'
   },
   {
-    title: 'React-vis',
+    title: 'react-vis',
     dates: '2016 - ',
     link: 'http://uber.github.io/react-vis/#/',
     sourceLink: 'https://github.com/uber/react-vis',
@@ -139,7 +141,7 @@ export const PROJECTS = [
     link: 'http://www.mcnutt.in/csv-conversion/',
     sourceLink: 'https://github.com/mcnuttandrew/csv-conversion',
     imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/csv-conversion.png',
-    text: 'A handy client-side csv to json converter. I built this little app, because my favorite conversion site got knocked down and I wanted to improve the UI. Built with React/React-router/d3'
+    text: 'A handy client-side csv to json converter. I built this little app, because my favorite conversion site got knocked down and I wanted to improve the UI.'
   },
   {
     title: 'Personal Timeline',
@@ -147,7 +149,7 @@ export const PROJECTS = [
     link: 'http://www.mcnutt.in/personal-timeline/',
     sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
     imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/personal-time.png',
-    text: 'A brief timeline of my life, a resume through a dark mirror if you will. Single page app built with React, React-Router, and D3.'
+    text: 'A brief timeline of my life, a resume through a dark mirror if you will.'
   },
   {
     title: 'Why Not Ipsum',
@@ -155,7 +157,7 @@ export const PROJECTS = [
     link: 'http://why-not-ipsum.herokuapp.com/',
     sourceLink: 'https://github.com/mcnuttandrew/Why-Not-Zoidberg',
     imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/why-not-image.png',
-    text: 'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning. Technologies included Rails API, Backbone.js, and Nokogiri.'
+    text: 'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning.'
   },
   {
     title: 'N-Hedron',

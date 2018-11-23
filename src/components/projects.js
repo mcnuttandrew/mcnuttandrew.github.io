@@ -16,7 +16,10 @@ const Projects = () => (
       } = project;
       return (
         <div className="project-block" key={index}>
-          <a className="project-title" href={link}>{title}</a>
+          <a className="pic-wrapper" href={link || sourceLink}>
+            <img className="project-image" src={imgLink}/>
+          </a>
+          <a className="project-title" href={link || sourceLink}>{title}</a>
           {dates && <div className="project-dates">{dates}</div>}
           <div className="project-links">
             {sourceLink && <a href={sourceLink}>
@@ -26,9 +29,6 @@ const Projects = () => (
             {link && <a href={link}> LIVE </a>}
           </div>
           <div className="text-block">{text}</div>
-          <a className="pic-wrapper" href={link}>
-            <img className="project-image" src={imgLink}/>
-          </a>
         </div>
       );
     })}
