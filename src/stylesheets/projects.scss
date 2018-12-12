@@ -5,8 +5,7 @@
 }
 
 .project-block {
-  margin-bottom: 90px;
-  margin-right: 20px;
+  margin-right: 80px;
   max-width: 260px;
 }
 
@@ -127,4 +126,21 @@
     white-space: nowrap;
     width: auto;
   }
+}
+
+.projects-page {
+  flex-direction: row;
+}
+
+.project-page-subsection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
