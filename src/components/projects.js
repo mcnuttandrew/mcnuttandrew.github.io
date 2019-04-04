@@ -10,7 +10,7 @@ const SECTIONS = [
 ].map(({name, key}) => ({
   name,
   projects: PROJECTS.filter(({section}) => section === key)
-}))
+}));
 
 const projectCard = (project, index) => {
   const {
