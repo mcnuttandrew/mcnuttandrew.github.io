@@ -94,7 +94,7 @@ h3 {
   min-height: 200px;
 
   .profpic {
-    background: url('https://s3-us-west-1.amazonaws.com/mcnutt-static-images/profpic.jpeg');
+    background: url('../assets/self-pic.png');
     background-size: 150px 150px;
     height: 150px;
     margin-top: 30px;
@@ -127,7 +127,7 @@ h3 {
 
 // LEFT PANEL STYLING
 .left-panel {
-  background: url('https://s3-us-west-1.amazonaws.com/mcnutt-static-images/left-panel-background.jpg');
+  background: url('../assets/art-sub.png');
   background-color: $image-background-black;
   background-position-x: -700px;
   background-position-y: -300px;
