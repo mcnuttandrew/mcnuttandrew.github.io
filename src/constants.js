@@ -225,7 +225,7 @@ export const PRESENTATIONS = [
 
 export const BLOG_POSTS = [
   {
-    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/tarot-image.png',
+    imgLink: '../assets/tarot-image.png',
     title: 'A Brief Saga Concerning the Making of a Tarot Deck About the American Highway System',
     subtitle: 'A little essay about making',
     date: 'Personal Blog. December 10, 2018',
@@ -252,7 +252,7 @@ export const BLOG_POSTS = [
 export const PROJECTS = [
   // {
   //   title: 'Chaotic Circuit',
-  //   imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/chaotic-image.png',
+  //   imgLink: '../assets/chaotic-image.png',
   //   link: '../assets/Chaotic_circuit.pdf',
   //   text: `In culminating effort of my junior year at Reed I built a third order
   //   Chaotic circuit as an independent project. This shows some of the best data visualization
@@ -272,7 +272,7 @@ export const PROJECTS = [
     dates: 'November 2018',
     sourceLink: 'https://github.com/mcnuttandrew/flesch-kincaid-as-a-service',
     link: 'https://www.mcnutt.in/flesch-kincaid-as-a-service/',
-    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/readability.png',
+    imgLink: '../assets/readability.png',
     text: `Have you ever wanted specific numerical quantification on how readable
     your prose is? This micro app wraps the textstat package as a webservice so that you can easily check.`,
     section: 'tech'
@@ -281,7 +281,7 @@ export const PROJECTS = [
     title: 'tap-react-browser',
     dates: 'Feburary - April 2018',
     sourceLink: 'https://github.com/mcnuttandrew/tap-react-browser/',
-    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/tap-react-browser.png',
+    imgLink: '../assets/tap-react-browser.png',
     text: `In the process of building a variety of javascipt libraries in the course of
     my graduate research, I found myself needing a testing tool that played a particular
     role in relation to the browser, so I made one! tap-react-browser is a light
@@ -293,7 +293,7 @@ export const PROJECTS = [
     dates: 'December 2017',
     link: 'http://www.mcnutt.in/home-graphs/',
     sourceLink: 'https://github.com/mcnuttandrew/home-graphs',
-    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/home-graphs.png',
+    imgLink: '../assets/home-graphs.png',
     text: `Over the 2017 holidays I spent some time meditating on memory, home, and
     graph theory, which led to my making these christmas cards.`,
     section: 'visualization'
@@ -303,7 +303,7 @@ export const PROJECTS = [
     dates: 'July 2017',
     link: 'http://www.mcnutt.in/city-size/',
     sourceLink: 'https://github.com/mcnuttandrew/city-size',
-    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/city-size.png',
+    imgLink: '../assets/city-size.png',
     text: 'A print graphic describing the shape of the 100 most populous American cities.',
     section: 'visualization'
   },
@@ -312,7 +312,7 @@ export const PROJECTS = [
     dates: 'Updated yearly, starting 2016',
     link: 'http://www.mcnutt.in/color-of-the-year/',
     sourceLink: 'https://github.com/mcnuttandrew/color-of-the-year',
-    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/color-of-year.png',
+    imgLink: '../assets/color-of-year.png',
     text: 'A small exploration of the glory and wonder that is pantones color of the year.',
     section: 'visualization'
   },
@@ -321,7 +321,7 @@ export const PROJECTS = [
     dates: '2016 - ',
     link: 'http://uber.github.io/react-vis/#/',
     sourceLink: 'https://github.com/uber/react-vis',
-    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/react-vis-image.png',
+    imgLink: '../assets/react-vis-image.png',
     text: 'A charting library for the react ecosystem.',
     section: 'visualization'
   },
@@ -330,7 +330,7 @@ export const PROJECTS = [
     dates: 'December 2016',
     link: 'http://www.mcnutt.in/csv-conversion/',
     sourceLink: 'https://github.com/mcnuttandrew/csv-conversion',
-    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/csv-conversion.png',
+    imgLink: '../assets/csv-conversion.png',
     text: 'A handy client-side csv to json converter. I built this little app, because my favorite conversion site got knocked down and I wanted to improve the UI.',
     section: 'tech'
   },
@@ -339,7 +339,7 @@ export const PROJECTS = [
     dates: 'June 2016',
     link: 'http://www.mcnutt.in/personal-timeline/',
     sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
-    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/personal-time.png',
+    imgLink: '../assets/personal-time.png',
     text: 'A brief timeline of my life, a resume through a dark mirror if you will.',
     section: 'visualization'
   },
@@ -348,7 +348,7 @@ export const PROJECTS = [
     dates: 'June 2016',
     link: 'https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8',
     sourceLink: 'https://github.com/mcnuttandrew/tarot-deck',
-    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/tarot-image.png',
+    imgLink: '../assets/tarot-image.png',
     text: 'A tarot tech themed around the signage and spirit of the American highway system.',
     section: 'art'
   },
@@ -357,14 +357,14 @@ export const PROJECTS = [
     dates: 'September 2014',
     link: 'http://why-not-ipsum.herokuapp.com/',
     sourceLink: 'https://github.com/mcnuttandrew/Why-Not-Zoidberg',
-    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/why-not-image.png',
+    imgLink: '../assets/why-not-image.png',
     text: 'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning.',
     section: 'tech'
   },
   {
     title: 'N-Hedron',
     dates: 'September - December 2013',
-    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/n-hydron.png',
+    imgLink: '../assets/n-hydron.png',
     link: '../assets/nhedron.pdf',
     text: 'An independent college project regarding the effacy of various numerical algorithms for constructing the n-hedron.',
     // text: 'Throughout my undergraduate career I had a prevailing interest in the geometrically ambiguous shape, the N-Hedron. It is formed by taking an integer, N, number of points, placing them on the sphere and demanding that they be maximally far apart. This culminated in a independent project, in which I implemented three different algorithms for constructing these shapes. You can find out more about this project. One of the major aspects of this project was dealing with a large (for Mathematica) amount of data which reached up into the millions of data points.',
@@ -375,12 +375,12 @@ export const PROJECTS = [
   //   title: 'N-Body Simulator',
   //   link: 'https://mcnuttandrew.github.io/n-body-simulator/',
   //   sourceLink: 'https://github.com/mcnuttandrew/N-Body-Simulator',
-  //   imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/n-body-image.png',
+  //   imgLink: '../assets/n-body-image.png',
   //   text: 'A low N gravitional interaction simulator built in processing.'
   // },
   // {
   //   title: 'Asteroids',
-  //   imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/asteroids-image.png',
+  //   imgLink: '../assets/asteroids-image.png',
   //   link: 'https://mcnuttandrew.github.io/asteroids/',
   //   sourceLink: 'https://github.com/mcnuttandrew/Asteroids',
   //   text: 'A reimaging of the classic arcade game. Technologies included Javascipt, HTML5 Canvas, and jQuery'
