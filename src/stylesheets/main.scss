@@ -94,7 +94,7 @@ h3 {
   min-height: 200px;
 
   .profpic {
-    background: url('../assets/self-pic.png');
+    background: url('https://raw.githubusercontent.com/mcnuttandrew/mcnuttandrew.github.io/master/assets/self-pic.png');
     background-size: 150px 150px;
     height: 150px;
     margin-top: 30px;
@@ -127,7 +127,7 @@ h3 {
 
 // LEFT PANEL STYLING
 .left-panel {
-  background: url('../assets/art-sub.png');
+  background: url('https://raw.githubusercontent.com/mcnuttandrew/mcnuttandrew.github.io/master/assets/art-sub.png');
   background-color: $image-background-black;
   background-position-x: -700px;
   background-position-y: -300px;
@@ -139,10 +139,16 @@ h3 {
   font-weight: 300;
   height: auto;
   max-height: 100%;
-  padding: 64px;
   position: relative;
-  width: 320px;
+  width: 600px;
+
+  .left-panel-content {
+    background: rgba(black, 0.3);
+    margin: 64px 0;
+    padding: 0 64px;
+  }
 }
+
 
 .title {
   font-size: 72px;
@@ -238,6 +244,10 @@ h3 {
 
   .left-panel {
     margin-top: 50px;
+  }
+
+  .left-panel {
+    display: none;
   }
 
   .hamburger-menu {

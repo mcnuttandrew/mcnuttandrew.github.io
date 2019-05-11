@@ -36,14 +36,16 @@ class RootApp extends React.Component {
           <LinkMenu />
         </div>
         <div className="left-panel">
-          <div className="title">ANDREW MCNUTT</div>
-          <div className="subtitle">VISUALIZATION</div>
-          <div className="social-links">
-            {LINKS.map(link => (
-              <a className="social-link" key={link.title} href={link.href}>
-                {link.title}
-              </a>
-            ))}
+          <div className="left-panel-content">
+            <div className="title">ANDREW MCNUTT</div>
+            <div className="subtitle">VISUALIZATION</div>
+            <div className="social-links">
+              {LINKS.map(link => (
+                <a className="social-link" key={link.title} href={link.href}>
+                  {link.title}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
         <div className="right-panel">

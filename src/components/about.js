@@ -20,9 +20,12 @@ class AboutPage extends React.Component {
     return (
       <div className="page about-page">
         <div className="text-block">{ABOUT}</div>
-        <div className="pic-wrapper">
-          <div className="profpic" />
-        </div>
+        {
+
+          // <div className="pic-wrapper">
+          // <div className="profpic" />
+          // </div>
+        }
         <div className="text-block">{HISTORY}</div>
         <div className="radar-wrapper">
           <div className="flex-down">
