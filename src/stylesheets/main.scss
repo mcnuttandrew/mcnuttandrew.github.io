@@ -109,8 +109,11 @@ h3 {
   }
 }
 
-.about-page .pic-wrapper {
-  padding: 30px;
+.about-page {
+  max-width: 900px;
+  .pic-wrapper {
+    padding: 30px;
+  }
 }
 
 .page {
@@ -262,7 +265,6 @@ h3 {
 
   .radar-wrapper {
     flex-direction: column;
-    min-height: 600px;
   }
 
   html {

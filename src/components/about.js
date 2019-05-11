@@ -1,19 +1,19 @@
 import React from 'react';
 import {RadarChart, LabelSeries} from 'react-vis';
 
-import {ABOUT, TECHNOLOGIES, INTERESTS} from '../constants';
+import {ABOUT, HISTORY, INTERESTS} from '../constants';
 
 class AboutPage extends React.Component {
   render() {
     const radarProperties = {
       startingAngle: 0,
-      height: 300,
+      height: 320,
       width: 300,
       margin: {
-        bottom: 60,
-        left: 60,
-        top: 60,
-        right: 60
+        top: 30,
+        bottom: 5,
+        left: 30,
+        right: 30
       },
       tickFormat: () => ''
     };
@@ -23,63 +23,44 @@ class AboutPage extends React.Component {
         <div className="pic-wrapper">
           <div className="profpic" />
         </div>
-        <div className="text-block">{TECHNOLOGIES}</div>
+        <div className="text-block">{HISTORY}</div>
         <div className="radar-wrapper">
-          <RadarChart
-            {...radarProperties}
-            style={{polygons: {
-              fill: '#20476E',
-              stroke: '#20476E',
-              fillOpacity: 0.4
-            }}}
-            domains={[
-              {name: 'javascript', domain: [0, 10]},
-              {name: 'c', domain: [0, 10]},
-              {name: 'ruby', domain: [0, 10]},
-              {name: 'java', domain: [0, 10]},
-              {name: 'python', domain: [0, 10]},
-            ]}
-            data={[{
-              javascript: 9,
-              ruby: 4,
-              python: 6,
-              c: 4,
-              java: 2
-            }]}
-            >
-            <LabelSeries
-              className="chart-label"
-              data={[
-                {x: 0.35, y: 1, label: 'LANGUAGES'},
-                {x: 0.35, y: 0.8, label: 'I KNOW'}
-              ]} />
-          </RadarChart>
-          <RadarChart
-            {...radarProperties}
-            startingAngle={Math.PI}
-            style={{polygons: {
-              fill: '#417783',
-              stroke: '#417783',
-              fillOpacity: 0.4
-            }}}
-            domains={[
-              {name: 'infovis', domain: [0, 10]},
-              {name: 'art & design', domain: [0, 10]},
-              {name: 'web dev', domain: [0, 10]}
-            ]}
-            data={[{
-              infovis: 9,
-              'art & design': 3,
-              'web dev': 9
-            }]}
-            >
-            <LabelSeries
-              className="chart-label"
-              data={[
-                {x: -1.3, y: -0.7, label: 'GENERAL'},
-                {x: -1.3, y: -0.9, label: 'proficiencies'}
-              ]} />
-          </RadarChart>
+          <div className="flex-down">
+
+            <RadarChart
+              {...radarProperties}
+              style={{polygons: {
+                fill: '#20476E',
+                stroke: '#20476E',
+                fillOpacity: 0.4
+              }}}
+              domains={
+                ['js', 'c', 'ruby', 'java', 'python', 'haskell']
+                  .map(name => ({name, domain: [0, 10]}))
+              }
+              data={[{js: 9, ruby: 4, python: 6, c: 4, java: 2, haskell: 4}]}
+              />
+            <h3>LANGUGAGES</h3>
+          </div>
+          <div className="flex-down" >
+            <RadarChart
+              {...radarProperties}
+              startingAngle={2 * Math.PI / 4}
+              style={{polygons: {
+                fill: '#417783',
+                stroke: '#417783',
+                fillOpacity: 0.4
+              }}}
+              domains={['infovis', 'art & design', 'web dev']
+                  .map(name => ({name, domain: [0, 10].slice()}))}
+              data={[{
+                infovis: 9,
+                'art & design': 3,
+                'web dev': 9
+              }]}
+              />
+            <h3>GENERAL SKILLS</h3>
+          </div>
         </div>
         <div className="text-block">{INTERESTS}</div>
         <div className="footer" />

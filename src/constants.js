@@ -1,5 +1,24 @@
 /* eslint-disable max-len */
-export const ABOUT = 'I am a PhD student in Computer Science at the University of Chicago. In the very near past I worked as a Data Visualization Engineer for a variety of companies in San Francisco, where I made visual analytic software. I got a formal education in physics from Reed College in Portland, and an informal education in web development from App Academy in San Francisco. I really like deserts, buffalo, and motorcycles. Edward Tufte once made fun of me in a hotel in Seattle.';
+export const ABOUT = `
+  I am a PhD student in Computer Science at the University of Chicago. My work focuses
+  automated guidance systems, unusual or xenographical data visualizations,
+  and web applications as a medium for novel experiences. I'm advised by Gordon Kindlmann.
+  `;
+
+export const HISTORY = `
+  In the very near past I worked as a Data Visualization Engineer for a variety of
+  companies in San Francisco, where I made visual analytic software.
+  I got a formal education in physics from Reed College in Portland, and an informal
+  education in web development from App Academy in San Francisco. I really like deserts,
+  buffalo, and motorcycles. Edward Tufte once made fun of me in a hotel in Seattle.
+  `;
+export const INTERESTS = `
+  I\'m familiar with a wide variety of technologies, including (but not limited to):
+  d3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails,
+  python, flask, sketch, mathematica, grid mathematica, numpy, pandaz, git.
+  (Above are some glib radar charts about skills I possess)
+  I\'m passionite about info-vis, classical mechanics, databases, WebGL, testing,
+  and pretty much anything javascript.`;
 
 export const skills = [{
   title: 'PERSONAL',
@@ -11,9 +30,6 @@ export const skills = [{
   title: 'SCI-COM',
   content: 'mathematica, grid mathematica, numpy, pandaz'
 }];
-
-export const TECHNOLOGIES = 'I\'m familiar with a wide variety of technologies, including (but not limited to): d3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails, python, flask, sketch, mathematica, grid mathematica, numpy, pandaz, git. Here is a glib set of radar charts about skills I possess:';
-export const INTERESTS = 'I\'m passionite about info-vis, classical mechanics, databases, WebGL, testing, and pretty much anything javascript.';
 
 export const PUBLICATIONS = [
   {
