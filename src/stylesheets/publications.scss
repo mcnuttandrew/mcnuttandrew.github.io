@@ -4,9 +4,71 @@
 }
 
 .publication-block {
+  display: flex;
+  flex-direction: column;
   font-family: Roboto-Light, sans-serif;
   margin-bottom: 30px;
+
+  .publication-content-container {
+    display: flex;
+  }
+
+  .research-img-wrapper {
+
+    .research-image {
+      cursor: pointer;
+      height: 100px;
+      max-height: 100px;
+      max-width: 100px;
+    }
+  }
+
+  .publication-abstract {
+    font-size: 12px;
+  }
 }
+.publication-content {
+  margin-left: 10px;
+  max-width: 500px;
+}
+
+.publication-links {
+  align-items: center;
+  display: flex;
+
+  span {
+    padding: 0 5px;
+  }
+
+  a {
+    align-items: center;
+    display: flex;
+    font-size: 13px;
+    color: $link-blue;
+    font-family: Roboto-BoldItalic, sans-serif;
+    // margin-right: 5px;
+    text-decoration: none;
+
+    &:visted {
+      color: $link-blue;
+    }
+
+    &::after {
+      content: '•';
+      padding: 0 3px;
+    }
+
+    &:last-child::after {
+      content: '';
+    }
+  }
+
+  .abstract-link {
+    cursor: pointer;
+  }
+
+}
+
 
 .publication-title {
   color: $link-blue;

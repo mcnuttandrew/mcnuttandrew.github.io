@@ -278,4 +278,9 @@ h3 {
   .publication-section-headline {
     font-size: 24px;
   }
+
+  .publication-content,
+  .publication-content-container {
+    flex-direction: column;
+  }
 }

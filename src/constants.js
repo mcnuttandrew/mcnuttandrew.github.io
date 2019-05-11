@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 export const ABOUT = `
-  I am a PhD student in Computer Science at the University of Chicago. My work focuses
+  I am a PhD student in Computer Science at the University of Chicago. My work focuses on
+  information visualization generally. More specifically I'm interested in
   automated guidance systems, unusual or xenographical data visualizations,
   and web applications as a medium for novel experiences. I'm advised by Gordon Kindlmann.
   `;
@@ -32,35 +33,169 @@ export const skills = [{
 }];
 
 export const PUBLICATIONS = [
+  // {
+  //   link: '../assets/forum-explorer-paper.pdf',
+  //   imgLink: '../assets/forested-tree-view-example.jpg',
+  //   title: 'Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations',
+  //   authors: 'Andrew McNutt, Gordon Kindlmann',
+  //   journal: 'EuroVis. June 2019',
+  //   links: [
+  //     {name: 'paper', link: '../assets/forum-explorer-paper.pdf'},
+  //     {name: 'poster', link: '../assets/forum-explorer-poster.pdf'},
+  //     {name: 'live', link: 'https://www.mcnutt.in/forum-explorer/'},
+  //     {name: 'code', link: 'https://github.com/mcnuttandrew/forum-explorer'},
+  //     {name: 'osf', link: 'https://osf.io/nrhqw/'}
+  //   ],
+  //   abstract: `
+  //   Large threaded conversations, such as those found on YCombinator’s HackerNews,
+  //   are typically presented in a way that shows individual comments clearly,
+  //   but can obscure larger trends or patterns within the conversational corpus.
+  //   Previous research has addressed this problem through graphical-overviews and NLP-generated summaries.
+  //   These efforts have generally assumed a particular (and modest) data size,
+  //   which limits their utility for large or deeply-nested conversations, and often
+  //   require non-trivial offline processing time, which makes them impractical for day-to-day usage.
+  //   We describe here Forum Explorer, a Chrome extension that combines and expands upon
+  //   prior art through a collection of techniques that enable this type of
+  //   representation to handle wider ranges of data in real time. Materials for this project are available at https://osf.io/nrhqw/.
+  //   `
+  // },
   {
     link: '../assets/McNutt_Kindlmann_2018.pdf',
+    imgLink: '../assets/lint-pic.jpg',
     title: 'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
     authors: 'Andrew McNutt, Gordon Kindlmann',
-    journal: 'VisGuides (IEEE Workshop). 2018'
+    journal: 'VisGuides (IEEEVIS Workshop). Octobr 2018',
+    links: [
+      {name: 'paper', link: '../assets/McNutt_Kindlmann_2018.pdf'},
+      {name: 'code', link: 'https://github.com/mcnuttandrew/vislint_mpl'},
+      {name: 'talk', link: '../assets/vis-lint-talk.pdf'}
+    ],
+    abstract: `
+    Constructing effective charts and graphs in a scientific setting is a
+    nuanced task that requires a thorough understanding of visualization
+    design; a knowledge that may not be available to all practicing scientists.
+    Previous attempts to address this problem have pushed chart
+    creators to pore over large collections of guidelines and heuristics,
+    or to relegate their entire workflow to end-to-end tools that provide
+    automated recommendations. In this paper we bring together these
+    two strains of ideas by introducing the use of lint as a mechanism for
+    guiding chart creators towards effective visualizations in a manner
+    that can be configured to taste and task without forcing users to abandon their usual workflows.
+    The programmatic evaluation model of
+    visualization linting (or vis lint) offers a compelling framework for
+    the automation of visualization guidelines, as it offers unambiguous
+    feedback during the chart creation process, and can execute analyses derived from machine vision and natural language processing.
+    We demonstrate the feasibility of this system through the production of vislint_mpl,
+    a prototype visualization linting system, that
+    evaluates charts created in matplotlib.
+    `
   },
   {
     link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14',
+    imgLink: '../assets/cdd-pic.jpg',
     title: 'Data Mining and Computational Modeling of High-Throughput Screening Datasets',
-    authors: 'Sean Ekins, Alex M Clark, Krishna Dole, Kellan Gregory, Andrew M Mcnutt, Anna Coulon Spektor, Charlie Weatherall, Nadia K Litterman, Barry A Bunin',
-    journal: 'Reporter Gene Assays. 2018'
+    authors: `Sean Ekins, Alex M Clark, Krishna Dole, Kellan Gregory, Andrew Mcnutt,
+    Anna Coulon Spektor, Charlie Weatherall, Nadia K Litterman, Barry A Bunin`,
+    journal: 'Reporter Gene Assays. 2018',
+    links: [
+      {name: 'paper', link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14'}
+    ],
+    abstract: `
+    We are now seeing the benefit of investments made over the last decade in
+    high-throughput screening (HTS) that is resulting in large structure activity
+    datasets entering public and open databases such as ChEMBL and PubChem.
+    The growth of academic HTS screening centers and the increasing move to academia
+    for early stage drug discovery suggests a great need for the informatics tools and
+    methods to mine such data and learn from it. Collaborative Drug Discovery, Inc. (CDD)
+    has developed a number of tools for storing, mining, securely and selectively sharing,
+    as well as learning from such HTS data. We present a new web based data mining and
+    visualization module directly within the CDD Vault platform for high-throughput
+    drug discovery data that makes use of a novel technology stack following modern
+    reactive design principles. We also describe CDD Models within the CDD Vault platform
+    that enables researchers to share models, share predictions from models, and create models
+    from distributed, heterogeneous data. Our system is built on top of the Collaborative
+    Drug Discovery Vault Activity and Registration data repository ecosystem which allows
+    users to manipulate and visualize thousands of molecules in real time. This can be
+    performed in any browser on any platform. In this chapter we present examples of its
+    use with public datasets in CDD Vault. Such approaches can complement other cheminformatics
+    tools, whether open source or commercial, in providing approaches for data mining and modeling of HTS data.
+    `
   },
   {
     link: 'https://arxiv.org/abs/1501.07537',
+    imgLink: '../assets/qgrav-pic.jpg',
     title: 'The Schrodinger-Newton System with Self-field Coupling',
     authors: 'Joel Franklin, Youdan Guo, Andrew McNutt, and Allison Morgan',
-    journal: 'Classical and Quantum Gravity. 2015'
+    journal: 'Classical and Quantum Gravity. 2015',
+    links: [
+      {name: 'paper', link: 'https://arxiv.org/abs/1501.07537'},
+      {name: 'talk', link: '../assets/QGravPresentation.pdf'}
+    ],
+    abstract: `
+    We study the Schrodinger-Newton system of equations with the addition of gravitational
+    field energy sourcing - such additional nonlinearity is to be expected from a theory
+    of gravity (like general relativity), and its appearance in this simplified scalar
+    setting (one of Einstein's precursors to general relativity) leads to significant
+    changes in the spectrum of the self-gravitating theory. Using an iterative technique,
+    we compare the mass dependence of the ground state energies of both Schrodinger-Newton
+    and the new, self-sourced system and find that they are dramatically different.
+    The Bohr method approach from old quantization provides a qualitative description of
+    the difference, which comes from the additional nonlinearity introduced in the self-sourced
+    case. In addition to comparison of ground state energies, we calculate the transition
+    energy between the ground state and first excited state to compare emission frequencies
+    between Schrodinger-Newton and the self-coupled scalar case.
+    `
   },
   {
     link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143',
+    imgLink: '../assets/cdd-models-pic.jpg',
     title: 'Open source Bayesian models. 1. Application to ADME/Tox and drug discovery datasets.',
-    authors: 'Alex M. Clark, Krishna Dole, Anna Coulon-Spektor, Andrew McNutt, George Grass, Joel S. Freundlich, Robert C. Reynolds, and Sean Ekins',
-    journal: 'Journal of chemical information and modeling. 2015'
+    authors: `Alex M. Clark, Krishna Dole, Anna Coulon-Spektor, Andrew McNutt,
+    George Grass, Joel S. Freundlich, Robert C. Reynolds, and Sean Ekins`,
+    journal: 'Journal of chemical information and modeling. 2015',
+    links: [
+      {name: 'paper', link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143'}
+    ],
+    abstract: `
+    On the order of hundreds of absorption, distribution, metabolism, excretion,
+    and toxicity (ADME/Tox) models have been described in the literature in the
+    past decade which are more often than not inaccessible to anyone but their authors.
+    Public accessibility is also an issue with computational models for bioactivity,
+    and the ability to share such models still remains a major challenge limiting drug
+    discovery. We describe the creation of a reference implementation of a Bayesian
+    model-building software module, which we have released as an open source component
+    that is now included in the Chemistry Development Kit (CDK) project, as well as
+    implemented in the CDD Vault and in several mobile apps. We use this implementation
+    to build an array of Bayesian models for ADME/Tox, in vitro and in vivo bioactivity,
+    and other physicochemical properties. We show that these models possess cross-validation
+    receiver operator curve values comparable to those generated previously in prior
+    publications using alternative tools. We have now described how the implementation
+    of Bayesian models with FCFP6 descriptors generated in the CDD Vault enables the
+    rapid production of robust machine learning models from public data or the user’s
+    own datasets. The current study sets the stage for generating models in proprietary
+    software (such as CDD) and exporting these models in a format that could be run in
+    open source software using CDK components. This work also demonstrates that we can
+    enable biocomputation across distributed private or public datasets to enhance drug discovery.`
   },
   {
     link: '../assets/thesis.pdf',
+    imgLink: '../assets/thesis-pic.jpg',
     title: 'Nonequivalent Lagrangian Mechanics',
     authors: 'Andrew McNutt (Advised by Nelia Mann)',
-    journal: 'Undergraduate thesis. Reed College. 2014.'
+    journal: 'Undergraduate thesis. Reed College. June 2014.',
+    links: [
+      {name: 'thesis', link: '../assets/thesis.pdf'},
+      {name: 'talk', link: './assets/nlm-talk.pdf'}
+    ],
+    abstract: `
+    In this thesis we study a modern formalism known as Nonequivalent Lagrangian
+    Mechanics, that is constructed on top of the traditional Lagrangian theory of mechanics.
+    By making use of the non-uniqueness of the Lagrangian representation of dynamical
+    systems, we are able to generate conservation laws in a way that is novel and, in
+    many cases much faster than the traditional Noetherian analysis. In every case that
+    we examine, these invariants turn out to be Noetherian invariants in disguise. We
+    apply this theory to a wide variety of systems including predator-prey dynamics and
+    damped driven harmonic motion.`
   }
 ];
 
@@ -90,16 +225,27 @@ export const PRESENTATIONS = [
 
 export const BLOG_POSTS = [
   {
+    imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/tarot-image.png',
     title: 'A Brief Saga Concerning the Making of a Tarot Deck About the American Highway System',
     subtitle: 'A little essay about making',
     date: 'Personal Blog. December 10, 2018',
-    link: 'https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8'
+    link: 'https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8',
+    links: [
+      {name: 'blog post', link: 'https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8'},
+      {name: 'github', link: 'https://github.com/mcnuttandrew/tarot-deck'}
+    ]
   },
   {
+    imgLink: '../assets/advanced-react-vis-pic.png',
     title: 'Advanced Visualization with react-vis',
     subtitle: 'Using Voronois, single pass rendering, and canvas components for amazing user experiences',
     date: 'Towards Data Science. May 21, 2018',
-    link: 'https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4'
+    link: 'https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4',
+    links: [
+      {name: 'blog post', link: 'https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4'},
+      {name: 'talk', link: 'http://tinyurl.com/reactvisdesignpatterns'},
+      {name: 'code', link: 'https://github.com/mcnuttandrew/advanced-react-vis-tutorial'}
+    ]
   }
 ];
 
@@ -108,15 +254,27 @@ export const PROJECTS = [
   //   title: 'Chaotic Circuit',
   //   imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/chaotic-image.png',
   //   link: '../assets/Chaotic_circuit.pdf',
-  //   text: 'In culminating effort of my junior year at Reed I built a third order Chaotic circuit as an independent project. This shows some of the best data visualization work I had done at that point, particularlly the combination phase and signal metering small multiples diagram.'
+  //   text: `In culminating effort of my junior year at Reed I built a third order
+  //   Chaotic circuit as an independent project. This shows some of the best data visualization
+  //   work I had done at that point, particularlly the combination phase and signal metering small multiples diagram.`
   // },
+  {
+    title: 'Forum Explorer',
+    dates: 'April 2019',
+    sourceLink: 'https://github.com/mcnuttandrew/forum-explorer',
+    link: 'https://www.mcnutt.in/forum-explorer/',
+    imgLink: '../assets/forum-ex-pic.png',
+    text: 'A chrome extension and website that allows users to explore threaded conversations using trees.',
+    section: 'visualization'
+  },
   {
     title: 'Readability As A Service',
     dates: 'November 2018',
     sourceLink: 'https://github.com/mcnuttandrew/flesch-kincaid-as-a-service',
     link: 'https://www.mcnutt.in/flesch-kincaid-as-a-service/',
     imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/readability.png',
-    text: 'Have you ever wanted specific numerical quantification on how readable your prose is? This micro app wraps the textstat package as a webservice so that you can easily check.',
+    text: `Have you ever wanted specific numerical quantification on how readable
+    your prose is? This micro app wraps the textstat package as a webservice so that you can easily check.`,
     section: 'tech'
   },
   {
@@ -124,7 +282,10 @@ export const PROJECTS = [
     dates: 'Feburary - April 2018',
     sourceLink: 'https://github.com/mcnuttandrew/tap-react-browser/',
     imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/tap-react-browser.png',
-    text: 'In the process of building a variety of javascipt libraries in the coarse of my graduate research, I found myself needing a testing tool that played a particular role in relation to the browser, so I made one! tap-react-browser is a light wrapper on tape that spits out react components.',
+    text: `In the process of building a variety of javascipt libraries in the course of
+    my graduate research, I found myself needing a testing tool that played a particular
+    role in relation to the browser, so I made one! tap-react-browser is a light
+    wrapper on tape that spits out react components.`,
     section: 'tech'
   },
   {
@@ -133,7 +294,8 @@ export const PROJECTS = [
     link: 'http://www.mcnutt.in/home-graphs/',
     sourceLink: 'https://github.com/mcnuttandrew/home-graphs',
     imgLink: 'https://s3-us-west-1.amazonaws.com/mcnutt-static-images/home-graphs.png',
-    text: 'Over the 2017 holidays I spent some time meditating on memory, home, and graph theory, which led to my making these christmas cards.',
+    text: `Over the 2017 holidays I spent some time meditating on memory, home, and
+    graph theory, which led to my making these christmas cards.`,
     section: 'visualization'
   },
   {
