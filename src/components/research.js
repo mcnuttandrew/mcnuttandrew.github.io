@@ -44,7 +44,7 @@ class Publication extends React.Component {
               {links.map(d => <a href={d.link} key={d.link}>{d.name}</a>)}
               {abstract && <a
                 onClick={() => this.setState({showAbstract: !showAbstract})}
-                className="abstract-link">{`abstract-link (${showAbstract ? '-' : '+'})`}</a>}
+                className="abstract-link">{`abstract (${showAbstract ? '-' : '+'})`}</a>}
             </div>}
           </div>
         </div>

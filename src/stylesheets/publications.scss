@@ -4,9 +4,10 @@
 }
 
 .publication-block {
-  display: flex;
+  // display: flex;
   flex-direction: column;
   font-family: Roboto-Light, sans-serif;
+  height: 100%;
   margin-bottom: 30px;
 
   .publication-content-container {
@@ -14,7 +15,8 @@
   }
 
   .research-img-wrapper {
-
+    display: inline-block;
+    height: 100%;
     .research-image {
       cursor: pointer;
       height: 100px;
@@ -28,6 +30,7 @@
   }
 }
 .publication-content {
+  height: 100%;
   margin-left: 10px;
   max-width: 500px;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {RadarChart, LabelSeries} from 'react-vis';
+import {RadarChart} from 'react-vis';
 
 import {ABOUT, HISTORY, INTERESTS} from '../constants';
 
@@ -11,7 +11,7 @@ class AboutPage extends React.Component {
       width: 300,
       margin: {
         top: 30,
-        bottom: 5,
+        bottom: 20,
         left: 30,
         right: 30
       },
@@ -28,7 +28,7 @@ class AboutPage extends React.Component {
         }
         <div className="text-block">{HISTORY}</div>
         <div className="radar-wrapper">
-          <div className="flex-down">
+          <div className="radar-container">
 
             <RadarChart
               {...radarProperties}
@@ -45,7 +45,7 @@ class AboutPage extends React.Component {
               />
             <h3>LANGUGAGES</h3>
           </div>
-          <div className="flex-down" >
+          <div className="radar-container" >
             <RadarChart
               {...radarProperties}
               startingAngle={2 * Math.PI / 4}
