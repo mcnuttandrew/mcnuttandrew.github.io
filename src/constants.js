@@ -1,9 +1,10 @@
 /* eslint-disable max-len */
 export const ABOUT = `
   I am a PhD student in Computer Science at the University of Chicago. My work focuses on
-  information visualization generally. More specifically I'm interested in
+  information visualization in general and on
   automated guidance systems, unusual or xenographical data visualizations,
-  and web applications as a medium for novel experiences. I'm advised by Gordon Kindlmann.
+  and web applications as a visualization medium.
+  I'm advised by Gordon Kindlmann.
   `;
 
 export const HISTORY = `
@@ -18,8 +19,8 @@ export const INTERESTS = `
   d3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails,
   python, flask, sketch, mathematica, grid mathematica, numpy, pandaz, git.
   (Above are some glib radar charts about skills I possess)
-  I\'m passionite about info-vis, classical mechanics, databases, WebGL, testing,
-  and pretty much anything javascript.`;
+  I\'m excited about info-vis, databases, applied category theory, dashboards, testing,
+  and pretty much anything in the wild world of javascript.`;
 
 export const skills = [{
   title: 'PERSONAL',
@@ -38,7 +39,7 @@ export const PUBLICATIONS = [
   //   imgLink: '../assets/forested-tree-view-example.jpg',
   //   title: 'Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations',
   //   authors: 'Andrew McNutt, Gordon Kindlmann',
-  //   journal: 'EuroVis. June 2019',
+  //   journal: 'EuroVis - Extended Abstract. June 2019',
   //   links: [
   //     {name: 'paper', link: '../assets/forum-explorer-paper.pdf'},
   //     {name: 'poster', link: '../assets/forum-explorer-poster.pdf'},
@@ -94,7 +95,7 @@ export const PUBLICATIONS = [
     link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14',
     imgLink: '../assets/cdd-pic.jpg',
     title: 'Data Mining and Computational Modeling of High-Throughput Screening Datasets',
-    authors: `Sean Ekins, Alex M Clark, Krishna Dole, Kellan Gregory, Andrew Mcnutt,
+    authors: `Sean Ekins, Alex M Clark, Krishna Dole, Kellan Gregory, Andrew McNutt,
     Anna Coulon Spektor, Charlie Weatherall, Nadia K Litterman, Barry A Bunin`,
     journal: 'Reporter Gene Assays. 2018',
     links: [
