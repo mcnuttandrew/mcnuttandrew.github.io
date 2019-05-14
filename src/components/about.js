@@ -43,7 +43,7 @@ class AboutPage extends React.Component {
               }
               data={[{js: 9, ruby: 4, python: 6, c: 4, java: 2, haskell: 4}]}
               />
-            <h3>LANGUGAGES</h3>
+            <h3>LANGUAGES</h3>
           </div>
           <div className="radar-container" >
             <RadarChart
