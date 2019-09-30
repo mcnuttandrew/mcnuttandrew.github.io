@@ -480,17 +480,40 @@ export const PROJECTS = [
 
 export const NEWS = [
   {
+    date: "September 2019",
+    content:
+      "Two of my vis projects (ForumExplorer and Cycles in Rain) were Long-Listed at the Kantar Information is Beautiful Awards."
+  },
+  {
     date: "June 2019",
     content: "Started an internship with Tableau Research in Seattle"
   },
-  { date: "June 2019", content: "Successfully defended my masters thesis" },
+  {
+    date: "June 2019",
+    content: "🎉🎉🎉 Successfully defended my masters thesis 🎉🎉🎉"
+  },
   {
     date: "May 2019",
-    content: "I won the UChicago Department of Computer Science TA Prize."
+    content:
+      "Presented our poster on ForumExplorer at EuroVis 2019 in Porto, Portugal."
+  },
+  {
+    date: "May 2019",
+    content:
+      "I was awarded the UChicago Department of Computer Science TA Prize for my work TAing Spring 2018 - Winter 2019."
   },
   {
     date: "May 2019",
     content:
       "My piece 'On The Road To The Lake: Debugging in Tryptic' won second prize in the print media category of the UChicago Art+Science expo."
+  },
+  {
+    date: "October 2018",
+    content:
+      "Presented our paper on linting charts created in matplotlib at VisGuides, a IEEEVIS 2018 workshop. "
+  },
+  {
+    date: "September 2018",
+    content: "Started my second year of grad school!"
   }
 ];

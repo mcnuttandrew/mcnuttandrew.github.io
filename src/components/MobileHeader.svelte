@@ -12,6 +12,8 @@
   let open = false;
   function toggleHeader() {
     open = !open;
+    console.log($rotation)
+    rotation.set(!$rotation ? 90 : 0);
   }
 </script>
 
@@ -20,6 +22,8 @@
     font-weight: bold;
   }
   .header {
+    background: white;
+    box-shadow: 0 2px 4px 0 #0c140c;
     display: none;
   }
   @media screen and (max-width: 600px) {
@@ -29,15 +33,25 @@
   }
   .bar {
     cursor: pointer;
-    height: 50px;
     padding: 0 10px;
     width: auto;
     z-index: 10;
   }
   .align {
+    height: 50px;
     justify-content: space-between;
     align-items: center;
   }
+
+  a {
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  .margin-bottom {
+    margin-bottom: 10px;
+  }
+
 </style>
 
 <div class="flex-down bar header">
@@ -47,6 +61,7 @@
     <h3>Andrew McNutt</h3>
     <div>
       <svg
+        transform="rotate({$rotation})"
         width="25px"
         height="21px">
         <rect x="0" y="0" width="25" height="3"></rect>
@@ -56,7 +71,7 @@
     </div>
   </div>
   {#if open}
-    <div class="flex header">
+    <div class="flex-down margin-bottom">
       {#each [
         'about',
         'projects',

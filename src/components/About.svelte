@@ -11,7 +11,9 @@
     margin-top: 10px;
     width: 100%;
   }
-
+  .news-item {
+    margin-bottom: 10px;
+  }
   .news-item-date {
     font-style: italic;
   }
@@ -29,7 +31,7 @@
   <h1> NEWS</h1>
   <div class="about-section">
     {#each NEWS as {date, content}}
-      <div>
+      <div class="news-item">
         <span class="news-item-date">{date}:</span>
         <span>{content}</span>
       </div>

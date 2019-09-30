@@ -1,11 +1,13 @@
 <script>
+  import { slide } from 'svelte/transition';
+
   export let publication;
   let abstractOpen = false;
   function toggleAbstract(e) {
     e.preventDefault();
     abstractOpen = !abstractOpen;
   }
-  const keys = ['subtitle', 'date', 'authors', 'journal']
+  const keys = ['subtitle', 'date', 'authors', 'journal'];
 </script>
 
 <style>
@@ -25,6 +27,8 @@
   }
   .publink {
     align-items: center;
+    color: rgb(0, 100, 200);
+    cursor: pointer;
     display: flex;
     font-size: 13px;
     text-decoration: none;
@@ -33,7 +37,7 @@
     content: '•';
     padding: 0 3px;
   }
-  .publink:last-of-type::after {
+  div.publink::after {
     content: '';
   }
 
@@ -67,7 +71,9 @@
 <div class="flex-down publication">
   <div class="content-container">
     <div class="img-container">
-      <img src="{publication.imgLink}" />
+      <img
+        alt="image drawn from {publication.title}"
+        src="{publication.imgLink}" />
     </div>
     <div class="flex-down">
       <a href="{publication.link}">{publication.title}</a>
@@ -83,17 +89,16 @@
           <a class="publink" href={link}>{name}</a>
         {/each}
         {#if publication.abstract}
-          <a
+          <div
             class="publink"
-            href=""
-            on:click={toggleAbstract}>abstract ({abstractOpen ? '-' : '+'})</a>
+            on:click={toggleAbstract}>abstract ({abstractOpen ? '-' : '+'})</div>
         {/if}
       </div>
 
     </div>
   </div>
   {#if abstractOpen}
-  <div class="abstract">
+  <div class="abstract" transition:slide>
     {publication.abstract}
   </div>
   {/if}
