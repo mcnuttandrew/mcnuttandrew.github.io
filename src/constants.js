@@ -23,34 +23,34 @@ export const INTERESTS = `
 
 export const skills = [
   {
-    title: "PERSONAL",
-    content: "information design, physics, arts"
+    title: 'PERSONAL',
+    content: 'information design, physics, arts'
   },
   {
-    title: "WEB DEV",
+    title: 'WEB DEV',
     content:
-      "d3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails, python, flask, sketch"
+      'd3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails, python, flask, sketch'
   },
   {
-    title: "SCI-COM",
-    content: "mathematica, grid mathematica, numpy, pandaz"
+    title: 'SCI-COM',
+    content: 'mathematica, grid mathematica, numpy, pandaz'
   }
 ];
 
 export const PUBLICATIONS = [
   {
-    link: "assets/forum-explorer-paper.pdf",
-    imgLink: "assets/forested-tree-view-example.jpg",
+    link: 'assets/forum-explorer-paper.pdf',
+    imgLink: 'assets/forested-tree-view-example.jpg',
     title:
-      "Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations",
-    authors: "Andrew McNutt, Gordon Kindlmann",
-    journal: "EuroVis - Extended Abstract. June 2019",
+      'Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations',
+    authors: 'Andrew McNutt, Gordon Kindlmann',
+    journal: 'EuroVis - Extended Abstract. June 2019',
     links: [
-      { name: "paper", link: "assets/forum-explorer-paper.pdf" },
-      { name: "poster", link: "assets/forum-explorer-poster.pdf" },
-      { name: "live", link: "https://www.mcnutt.in/forum-explorer/" },
-      { name: "code", link: "https://github.com/mcnuttandrew/forum-explorer" },
-      { name: "osf", link: "https://osf.io/nrhqw/" }
+      {name: 'paper', link: 'assets/forum-explorer-paper.pdf'},
+      {name: 'poster', link: 'assets/forum-explorer-poster.pdf'},
+      {name: 'live', link: 'https://www.mcnutt.in/forum-explorer/'},
+      {name: 'code', link: 'https://github.com/mcnuttandrew/forum-explorer'},
+      {name: 'osf', link: 'https://osf.io/nrhqw/'}
     ],
     abstract: `
     Large threaded conversations, such as those found on YCombinator’s HackerNews,
@@ -73,16 +73,16 @@ export const PUBLICATIONS = [
     }`
   },
   {
-    link: "assets/McNutt_Kindlmann_2018.pdf",
-    imgLink: "assets/lint-pic.jpg",
+    link: 'assets/McNutt_Kindlmann_2018.pdf',
+    imgLink: 'assets/lint-pic.jpg',
     title:
-      "Linting for Visualization: Towards a Practical Automated Visualization Guidance System",
-    authors: "Andrew McNutt, Gordon Kindlmann",
-    journal: "VisGuides (IEEEVIS Workshop). Octobr 2018",
+      'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
+    authors: 'Andrew McNutt, Gordon Kindlmann',
+    journal: 'VisGuides (IEEEVIS Workshop). Octobr 2018',
     links: [
-      { name: "paper", link: "assets/McNutt_Kindlmann_2018.pdf" },
-      { name: "code", link: "https://github.com/mcnuttandrew/vislint_mpl" },
-      { name: "talk", link: "assets/vis-lint-talk.pdf" }
+      {name: 'paper', link: 'assets/McNutt_Kindlmann_2018.pdf'},
+      {name: 'code', link: 'https://github.com/mcnuttandrew/vislint_mpl'},
+      {name: 'talk', link: 'assets/vis-lint-talk.pdf'}
     ],
     abstract: `
     Constructing effective charts and graphs in a scientific setting is a
@@ -113,17 +113,17 @@ export const PUBLICATIONS = [
     `
   },
   {
-    link: "https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14",
-    imgLink: "assets/cdd-pic.jpg",
+    link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14',
+    imgLink: 'assets/cdd-pic.jpg',
     title:
-      "Data Mining and Computational Modeling of High-Throughput Screening Datasets",
+      'Data Mining and Computational Modeling of High-Throughput Screening Datasets',
     authors: `Sean Ekins, Alex M Clark, Krishna Dole, Kellan Gregory, Andrew McNutt,
     Anna Coulon Spektor, Charlie Weatherall, Nadia K Litterman, Barry A Bunin`,
-    journal: "Reporter Gene Assays. 2018",
+    journal: 'Reporter Gene Assays. 2018',
     links: [
       {
-        name: "paper",
-        link: "https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14"
+        name: 'paper',
+        link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14'
       }
     ],
     abstract: `
@@ -148,14 +148,14 @@ export const PUBLICATIONS = [
     `
   },
   {
-    link: "https://arxiv.org/abs/1501.07537",
-    imgLink: "assets/qgrav-pic.jpg",
-    title: "The Schrodinger-Newton System with Self-field Coupling",
-    authors: "Joel Franklin, Youdan Guo, Andrew McNutt, and Allison Morgan",
-    journal: "Classical and Quantum Gravity. 2015",
+    link: 'https://arxiv.org/abs/1501.07537',
+    imgLink: 'assets/qgrav-pic.jpg',
+    title: 'The Schrodinger-Newton System with Self-field Coupling',
+    authors: 'Joel Franklin, Youdan Guo, Andrew McNutt, and Allison Morgan',
+    journal: 'Classical and Quantum Gravity. 2015',
     links: [
-      { name: "paper", link: "https://arxiv.org/abs/1501.07537" },
-      { name: "talk", link: "assets/QGravPresentation.pdf" }
+      {name: 'paper', link: 'https://arxiv.org/abs/1501.07537'},
+      {name: 'talk', link: 'assets/QGravPresentation.pdf'}
     ],
     abstract: `
     We study the Schrodinger-Newton system of equations with the addition of gravitational
@@ -173,17 +173,17 @@ export const PUBLICATIONS = [
     `
   },
   {
-    link: "http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143",
-    imgLink: "assets/cdd-models-pic.jpg",
+    link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143',
+    imgLink: 'assets/cdd-models-pic.jpg',
     title:
-      "Open source Bayesian models. 1. Application to ADME/Tox and drug discovery datasets.",
+      'Open source Bayesian models. 1. Application to ADME/Tox and drug discovery datasets.',
     authors: `Alex M. Clark, Krishna Dole, Anna Coulon-Spektor, Andrew McNutt,
     George Grass, Joel S. Freundlich, Robert C. Reynolds, and Sean Ekins`,
-    journal: "Journal of chemical information and modeling. 2015",
+    journal: 'Journal of chemical information and modeling. 2015',
     links: [
       {
-        name: "paper",
-        link: "http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143"
+        name: 'paper',
+        link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143'
       }
     ],
     abstract: `
@@ -208,14 +208,14 @@ export const PUBLICATIONS = [
     enable biocomputation across distributed private or public datasets to enhance drug discovery.`
   },
   {
-    link: "assets/thesis.pdf",
-    imgLink: "assets/thesis-pic.jpg",
-    title: "Nonequivalent Lagrangian Mechanics",
-    authors: "Andrew McNutt (Advised by Nelia Mann)",
-    journal: "Undergraduate thesis. Reed College. June 2014.",
+    link: 'assets/thesis.pdf',
+    imgLink: 'assets/thesis-pic.jpg',
+    title: 'Nonequivalent Lagrangian Mechanics',
+    authors: 'Andrew McNutt (Advised by Nelia Mann)',
+    journal: 'Undergraduate thesis. Reed College. June 2014.',
     links: [
-      { name: "thesis", link: "assets/thesis.pdf" },
-      { name: "talk", link: "./assets/nlm-talk.pdf" }
+      {name: 'thesis', link: 'assets/thesis.pdf'},
+      {name: 'talk', link: './assets/nlm-talk.pdf'}
     ],
     abstract: `
     In this thesis we study a modern formalism known as Nonequivalent Lagrangian
@@ -232,64 +232,64 @@ export const PUBLICATIONS = [
 export const PRESENTATIONS = [
   {
     title:
-      "Linting for Visualization: Towards a Practical Automated Visualization Guidance System",
-    link: "assets/vis-lint-talk.pdf",
-    journal: "VisGuides 2018. October 22, 2018"
+      'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
+    link: 'assets/vis-lint-talk.pdf',
+    journal: 'VisGuides 2018. October 22, 2018'
   },
   {
-    title: "Design Patterns For Data Visualization in React",
-    link: "http://tinyurl.com/reactvisdesignpatterns",
-    journal: "React Chicago. August 29, 2018"
+    title: 'Design Patterns For Data Visualization in React',
+    link: 'http://tinyurl.com/reactvisdesignpatterns',
+    journal: 'React Chicago. August 29, 2018'
   },
   {
-    link: "assets/nlm-talk.pdf",
-    title: "Nonequivalent Lagrangian Mechanics",
-    journal: "Reed Physics Seminar. April 8, 2014"
+    link: 'assets/nlm-talk.pdf',
+    title: 'Nonequivalent Lagrangian Mechanics',
+    journal: 'Reed Physics Seminar. April 8, 2014'
   },
   {
-    link: "assets/QGravPresentation.pdf",
-    title: "The Schrodinger-Newton System with Self-field Coupling",
-    authors: "Varchas Gopalaswamy, Andrew McNutt, Allie Morgan, Carl Proepper.",
-    journal: "Reed Physics Seminar. September 18, 2013"
+    link: 'assets/QGravPresentation.pdf',
+    title: 'The Schrodinger-Newton System with Self-field Coupling',
+    authors: 'Varchas Gopalaswamy, Andrew McNutt, Allie Morgan, Carl Proepper.',
+    journal: 'Reed Physics Seminar. September 18, 2013'
   }
 ];
 
 export const BLOG_POSTS = [
   {
-    imgLink: "assets/tarot-image.png",
+    imgLink: 'assets/tarot-image.png',
     title:
-      "A Brief Saga Concerning the Making of a Tarot Deck About the American Highway System",
-    subtitle: "A little essay about making",
-    date: "Personal Blog. December 10, 2018",
+      'A Brief Saga Concerning the Making of a Tarot Deck About the American Highway System',
+    subtitle: 'A little essay about making',
+    date: 'Personal Blog. December 10, 2018',
     link:
-      "https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8",
+      'https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8',
     links: [
       {
-        name: "blog post",
+        name: 'blog post',
         link:
-          "https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8"
+          'https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8'
       },
-      { name: "github", link: "https://github.com/mcnuttandrew/tarot-deck" }
+      {name: 'github', link: 'https://github.com/mcnuttandrew/tarot-deck'}
     ]
   },
   {
-    imgLink: "assets/advanced-react-vis-pic.png",
-    title: "Advanced Visualization with react-vis",
+    imgLink: 'assets/advanced-react-vis-pic.png',
+    title: 'Advanced Visualization with react-vis',
     subtitle:
-      "Using Voronois, single pass rendering, and canvas components for amazing user experiences",
-    date: "Towards Data Science. May 21, 2018",
+      'Using Voronois, single pass rendering, and canvas components for amazing user experiences',
+    date: 'Towards Data Science. May 21, 2018',
     link:
-      "https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4",
+      'https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4',
     links: [
       {
-        name: "blog post",
+        name: 'blog post',
         link:
-          "https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4"
+          'https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4'
       },
-      { name: "talk", link: "http://tinyurl.com/reactvisdesignpatterns" },
+      {name: 'talk', link: 'http://tinyurl.com/reactvisdesignpatterns'},
       {
-        name: "code",
-        link: "https://github.com/mcnuttandrew/advanced-react-vis-tutorial"
+        name: 'code',
+        link: 'https://github.com/mcnuttandrew/advanced-react-vis-tutorial'
       }
     ]
   }
@@ -306,144 +306,144 @@ export const PROJECTS = [
   // },
   //
   {
-    title: "Cycles & Rain / Seasons In Size",
-    dates: "July 2019",
-    sourceLink: "https://github.com/mcnuttandrew/cycles-rain-seasons-in-size/",
-    link: "https://www.mcnutt.in/cycles-rain-seasons-in-size/",
-    imgLink: "assets/cycles-in-rain.png",
+    title: 'Cycles & Rain / Seasons In Size',
+    dates: 'July 2019',
+    sourceLink: 'https://github.com/mcnuttandrew/cycles-rain-seasons-in-size/',
+    link: 'https://www.mcnutt.in/cycles-rain-seasons-in-size/',
+    imgLink: 'assets/cycles-in-rain.png',
     text:
-      "A little infographic about bicycle ridership in Seattle featuring table cartograms.",
-    section: "visualization"
+      'A little infographic about bicycle ridership in Seattle featuring table cartograms.',
+    section: 'visualization'
   },
   {
-    title: "CSSQL",
-    dates: "May 2019",
-    sourceLink: "https://github.com/mcnuttandrew/cssql",
-    link: "https://www.npmjs.com/package/node-cssql",
-    imgLink: "assets/cssql-logo.png",
+    title: 'CSSQL',
+    dates: 'May 2019',
+    sourceLink: 'https://github.com/mcnuttandrew/cssql',
+    link: 'https://www.npmjs.com/package/node-cssql',
+    imgLink: 'assets/cssql-logo.png',
     text:
-      "A new answer to this css-in-js question: css in sql. A sql-ddl to css transpiler written in haskell, available on npm.",
-    section: "tech"
+      'A new answer to this css-in-js question: css in sql. A sql-ddl to css transpiler written in haskell, available on npm.',
+    section: 'tech'
   },
   {
-    title: "Forum Explorer",
-    dates: "April 2019",
-    sourceLink: "https://github.com/mcnuttandrew/forum-explorer",
-    link: "https://www.mcnutt.in/forum-explorer/",
-    imgLink: "assets/forum-ex-pic.png",
+    title: 'Forum Explorer',
+    dates: 'April 2019',
+    sourceLink: 'https://github.com/mcnuttandrew/forum-explorer',
+    link: 'https://www.mcnutt.in/forum-explorer/',
+    imgLink: 'assets/forum-ex-pic.png',
     text:
-      "A chrome extension and website that allows users to explore threaded conversations using trees.",
-    section: "visualization"
+      'A chrome extension and website that allows users to explore threaded conversations using trees.',
+    section: 'visualization'
   },
   {
-    title: "Readability As A Service",
-    dates: "November 2018",
-    sourceLink: "https://github.com/mcnuttandrew/flesch-kincaid-as-a-service",
-    link: "https://www.mcnutt.in/flesch-kincaid-as-a-service/",
-    imgLink: "assets/readability.png",
+    title: 'Readability As A Service',
+    dates: 'November 2018',
+    sourceLink: 'https://github.com/mcnuttandrew/flesch-kincaid-as-a-service',
+    link: 'https://www.mcnutt.in/flesch-kincaid-as-a-service/',
+    imgLink: 'assets/readability.png',
     text: `Have you ever wanted specific numerical quantification on how readable
     your prose is? This micro app wraps the textstat package as a webservice so that you can easily check.`,
-    section: "tech"
+    section: 'tech'
   },
   {
-    title: "tap-react-browser",
-    dates: "Feburary - April 2018",
-    sourceLink: "https://github.com/mcnuttandrew/tap-react-browser/",
-    imgLink: "assets/tap-react-browser.png",
+    title: 'tap-react-browser',
+    dates: 'Feburary - April 2018',
+    sourceLink: 'https://github.com/mcnuttandrew/tap-react-browser/',
+    imgLink: 'assets/tap-react-browser.png',
     text: `In the process of building a variety of javascipt libraries in the course of
     my graduate research, I found myself needing a testing tool that played a particular
     role in relation to the browser, so I made one! tap-react-browser is a light
     wrapper on tape that spits out react components.`,
-    section: "tech"
+    section: 'tech'
   },
   {
-    title: "Constellations of Home - XMAS CARDS 2017",
-    dates: "December 2017",
-    link: "http://www.mcnutt.in/home-graphs/",
-    sourceLink: "https://github.com/mcnuttandrew/home-graphs",
-    imgLink: "assets/home-graphs.png",
+    title: 'Constellations of Home - XMAS CARDS 2017',
+    dates: 'December 2017',
+    link: 'http://www.mcnutt.in/home-graphs/',
+    sourceLink: 'https://github.com/mcnuttandrew/home-graphs',
+    imgLink: 'assets/home-graphs.png',
     text: `Over the 2017 holidays I spent some time meditating on memory, home, and
     graph theory, which led to my making these christmas cards.`,
-    section: "visualization"
+    section: 'visualization'
   },
   {
-    title: "On The Shape of American Cities I/II",
-    dates: "July 2017",
-    link: "http://www.mcnutt.in/city-size/",
-    sourceLink: "https://github.com/mcnuttandrew/city-size",
-    imgLink: "assets/city-size.png",
+    title: 'On The Shape of American Cities I/II',
+    dates: 'July 2017',
+    link: 'http://www.mcnutt.in/city-size/',
+    sourceLink: 'https://github.com/mcnuttandrew/city-size',
+    imgLink: 'assets/city-size.png',
     text:
-      "A print graphic describing the shape of the 100 most populous American cities.",
-    section: "visualization"
+      'A print graphic describing the shape of the 100 most populous American cities.',
+    section: 'visualization'
   },
   {
-    title: "Pantone: Color of the year",
-    dates: "Updated yearly, starting 2016",
-    link: "http://www.mcnutt.in/color-of-the-year/",
-    sourceLink: "https://github.com/mcnuttandrew/color-of-the-year",
-    imgLink: "assets/color-of-year.png",
+    title: 'Pantone: Color of the year',
+    dates: 'Updated yearly, starting 2016',
+    link: 'http://www.mcnutt.in/color-of-the-year/',
+    sourceLink: 'https://github.com/mcnuttandrew/color-of-the-year',
+    imgLink: 'assets/color-of-year.png',
     text:
-      "A small exploration of the glory and wonder that is pantones color of the year.",
-    section: "visualization"
+      'A small exploration of the glory and wonder that is pantones color of the year.',
+    section: 'visualization'
   },
   {
-    title: "react-vis",
-    dates: "2016 - ",
-    link: "http://uber.github.io/react-vis/#/",
-    sourceLink: "https://github.com/uber/react-vis",
-    imgLink: "assets/react-vis-image.png",
-    text: "A charting library for the react ecosystem.",
-    section: "visualization"
+    title: 'react-vis',
+    dates: '2016 - ',
+    link: 'http://uber.github.io/react-vis/#/',
+    sourceLink: 'https://github.com/uber/react-vis',
+    imgLink: 'assets/react-vis-image.png',
+    text: 'A charting library for the react ecosystem.',
+    section: 'visualization'
   },
   {
-    title: "CSV Conversion",
-    dates: "December 2016",
-    link: "http://www.mcnutt.in/csv-conversion/",
-    sourceLink: "https://github.com/mcnuttandrew/csv-conversion",
-    imgLink: "assets/csv-conversion.png",
+    title: 'CSV Conversion',
+    dates: 'December 2016',
+    link: 'http://www.mcnutt.in/csv-conversion/',
+    sourceLink: 'https://github.com/mcnuttandrew/csv-conversion',
+    imgLink: 'assets/csv-conversion.png',
     text:
-      "A handy client-side csv to json converter. I built this little app, because my favorite conversion site got knocked down and I wanted to improve the UI.",
-    section: "tech"
+      'A handy client-side csv to json converter. I built this little app, because my favorite conversion site got knocked down and I wanted to improve the UI.',
+    section: 'tech'
   },
   {
-    title: "Personal Timeline",
-    dates: "June 2016",
-    link: "http://www.mcnutt.in/personal-timeline/",
-    sourceLink: "https://github.com/mcnuttandrew/personal-timeline",
-    imgLink: "assets/personal-time.png",
+    title: 'Personal Timeline',
+    dates: 'June 2016',
+    link: 'http://www.mcnutt.in/personal-timeline/',
+    sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
+    imgLink: 'assets/personal-time.png',
     text:
-      "A brief timeline of my life, a resume through a dark mirror if you will.",
-    section: "visualization"
+      'A brief timeline of my life, a resume through a dark mirror if you will.',
+    section: 'visualization'
   },
   {
-    title: "Unnamed Tarot Deck",
-    dates: "Dec 2015 - June 2016",
+    title: 'Unnamed Tarot Deck',
+    dates: 'Dec 2015 - June 2016',
     link:
-      "https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8",
-    sourceLink: "https://github.com/mcnuttandrew/tarot-deck",
-    imgLink: "assets/tarot-image.png",
+      'https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8',
+    sourceLink: 'https://github.com/mcnuttandrew/tarot-deck',
+    imgLink: 'assets/tarot-image.png',
     text:
-      "A tarot tech themed around the signage and spirit of the American highway system.",
-    section: "art"
+      'A tarot tech themed around the signage and spirit of the American highway system.',
+    section: 'art'
   },
   {
-    title: "Why Not Ipsum",
-    dates: "September 2014",
-    link: "http://why-not-ipsum.herokuapp.com/",
-    sourceLink: "https://github.com/mcnuttandrew/Why-Not-Zoidberg",
-    imgLink: "assets/why-not-image.png",
+    title: 'Why Not Ipsum',
+    dates: 'September 2014',
+    link: 'http://why-not-ipsum.herokuapp.com/',
+    sourceLink: 'https://github.com/mcnuttandrew/Why-Not-Zoidberg',
+    imgLink: 'assets/why-not-image.png',
     text:
-      "A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning.",
-    section: "tech"
+      'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning.',
+    section: 'tech'
   },
   {
-    title: "N-Hedron",
-    dates: "September - December 2013",
-    imgLink: "assets/n-hydron.png",
-    link: "assets/nhedron.pdf",
+    title: 'N-Hedron',
+    dates: 'September - December 2013',
+    imgLink: 'assets/n-hydron.png',
+    link: 'assets/nhedron.pdf',
     text:
-      "An independent college project regarding the effacy of various numerical algorithms for constructing the n-hedron.",
-    section: "tech"
+      'An independent college project regarding the effacy of various numerical algorithms for constructing the n-hedron.',
+    section: 'tech'
   }
 
   // {
@@ -480,40 +480,40 @@ export const PROJECTS = [
 
 export const NEWS = [
   {
-    date: "September 2019",
+    date: 'September 2019',
     content:
-      "Two of my vis projects (ForumExplorer and Cycles in Rain) were Long-Listed at the Kantar Information is Beautiful Awards."
+      'Two of my vis projects (ForumExplorer and Cycles in Rain) were Long-Listed at the Kantar Information is Beautiful Awards.'
   },
   {
-    date: "June 2019",
-    content: "Started an internship with Tableau Research in Seattle"
+    date: 'June 2019',
+    content: 'Started an internship with Tableau Research in Seattle'
   },
   {
-    date: "June 2019",
-    content: "🎉🎉🎉 Successfully defended my masters thesis 🎉🎉🎉"
+    date: 'June 2019',
+    content: '🎉🎉🎉 Successfully defended my masters thesis 🎉🎉🎉'
   },
   {
-    date: "May 2019",
+    date: 'May 2019',
     content:
-      "Presented our poster on ForumExplorer at EuroVis 2019 in Porto, Portugal."
+      'Presented our poster on ForumExplorer at EuroVis 2019 in Porto, Portugal.'
   },
   {
-    date: "May 2019",
+    date: 'May 2019',
     content:
-      "I was awarded the UChicago Department of Computer Science TA Prize for my work TAing Spring 2018 - Winter 2019."
+      'I was awarded the UChicago Department of Computer Science TA Prize for my work TAing Spring 2018 - Winter 2019.'
   },
   {
-    date: "May 2019",
+    date: 'May 2019',
     content:
       "My piece 'On The Road To The Lake: Debugging in Tryptic' won second prize in the print media category of the UChicago Art+Science expo."
   },
   {
-    date: "October 2018",
+    date: 'October 2018',
     content:
-      "Presented our paper on linting charts created in matplotlib at VisGuides, a IEEEVIS 2018 workshop. "
+      'Presented our paper on linting charts created in matplotlib at VisGuides, a IEEEVIS 2018 workshop. '
   },
   {
-    date: "September 2018",
-    content: "Started my second year of grad school!"
+    date: 'September 2018',
+    content: 'Started my second year of grad school!'
   }
 ];

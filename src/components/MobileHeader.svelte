@@ -12,7 +12,6 @@
   let open = false;
   function toggleHeader() {
     open = !open;
-    console.log($rotation)
     rotation.set(!$rotation ? 90 : 0);
   }
 </script>
