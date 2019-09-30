@@ -1,0 +1,76 @@
+<script>
+  import {classnames} from '../utils.js';
+  import {tweened} from 'svelte/motion';
+  import {cubicOut} from 'svelte/easing';
+
+  const rotation = tweened(0, {
+    duration: 400,
+    easing: cubicOut
+  });
+
+  export let currentSection;
+  let open = false;
+  function toggleHeader() {
+    open = !open;
+  }
+</script>
+
+<style>
+  .selected {
+    font-weight: bold;
+  }
+  .header {
+    display: none;
+  }
+  @media screen and (max-width: 600px) {
+    .header {
+      display: flex;
+    }
+  }
+  .bar {
+    cursor: pointer;
+    height: 50px;
+    padding: 0 10px;
+    width: auto;
+    z-index: 10;
+  }
+  .align {
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
+
+<div class="flex-down bar header">
+  <div
+    on:click={toggleHeader}
+    class="flex align">
+    <h3>Andrew McNutt</h3>
+    <div>
+      <svg
+        width="25px"
+        height="21px">
+        <rect x="0" y="0" width="25" height="3"></rect>
+        <rect x="0" y="7" width="25" height="3"></rect>
+        <rect x="0" y="14" width="25" height="3"></rect>
+      </svg>
+    </div>
+  </div>
+  {#if open}
+    <div class="flex header">
+      {#each [
+        'about',
+        'projects',
+        'research'
+      ] as section (section)}
+        <a
+          href="/#/{section}"
+          class={classnames({
+            selected: currentSection === section,
+            padding: true
+          })}>
+          {section.toUpperCase()}
+        </a>
+      {/each}
+    </div>
+  {/if}
+</div>
