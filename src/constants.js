@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 export const ABOUT = `
-  My name is Andrew McNutt, and I am a PhD student in Computer Science at the University of Chicago. My work focuses on information visualization in general and on automated guidance systems, unusual or xenographical data visualizations, and web applications as a visualization medium. I'm advised by Gordon Kindlmann.
+  My name is Andrew McNutt, and I am a PhD student in Computer Science at the University of Chicago. My work focuses on information visualization in general. More specifically I'm interested in automated guidance systems (like linters), unusual or xenographical data visualizations, and web applications as a visualization medium. I'm advised by Gordon Kindlmann.
   `;
 
 export const HISTORY = `
