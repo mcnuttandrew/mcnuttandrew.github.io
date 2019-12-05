@@ -38,6 +38,20 @@ export const skills = [
 ];
 
 export const PUBLICATIONS = [
+  // {
+  //   imgLink: 'assets/agathas-thing.png',
+  //   title:
+  //     'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
+  //   authors: 'Agatha Kim, Andrew McNutt, S. Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
+  //   journal: 'MindBytes. November 2019',
+  //   links: [
+  //     {name: 'poster', link: 'https://mindbytes.uchicago.edu/posters/2019/10252019165647_posterkim102519.pdf'},
+  //     {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'}
+  //   ],
+  //   abstract: `
+  //   When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as â€œnational scienceâ€? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.
+  //   `,
+  // },
   {
     link: 'assets/forum-explorer-paper.pdf',
     imgLink: 'assets/forested-tree-view-example.jpg',
@@ -230,28 +244,38 @@ export const PUBLICATIONS = [
 ];
 
 export const PRESENTATIONS = [
+  // {
+  //   title:
+  //     'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
+  //   link: 'assets/vis-lint-talk.pdf',
+  //   journal: 'VisGuides 2018. October 22, 2018'
+  // },
   {
-    title:
-      'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
-    link: 'assets/vis-lint-talk.pdf',
-    journal: 'VisGuides 2018. October 22, 2018'
-  },
-  {
+    imgLink: 'assets/design-patterns-pic.png',
     title: 'Design Patterns For Data Visualization in React',
     link: 'http://tinyurl.com/reactvisdesignpatterns',
-    journal: 'React Chicago. August 29, 2018'
+    journal: 'React Chicago. August 29, 2018',
+    subtitle: 'An overview of four useful patterns for developing visualizations in react.',
+    links: [
+      {
+        name: 'slides',
+        link:
+          'http://tinyurl.com/reactvisdesignpatterns'
+      },
+    ]
   },
-  {
-    link: 'assets/nlm-talk.pdf',
-    title: 'Nonequivalent Lagrangian Mechanics',
-    journal: 'Reed Physics Seminar. April 8, 2014'
-  },
-  {
-    link: 'assets/QGravPresentation.pdf',
-    title: 'The Schrodinger-Newton System with Self-field Coupling',
-    authors: 'Varchas Gopalaswamy, Andrew McNutt, Allie Morgan, Carl Proepper.',
-    journal: 'Reed Physics Seminar. September 18, 2013'
-  }
+  // {
+  //   link: 'assets/nlm-talk.pdf',
+  //   title: 'Nonequivalent Lagrangian Mechanics',
+  //   journal: 'Reed Physics Seminar. April 8, 2014'
+  // },
+  // {
+    // link: 'assets/QGravPresentation.pdf',
+    // links: [],
+    // title: 'The Schrodinger-Newton System with Self-field Coupling',
+    // authors: 'Varchas Gopalaswamy, Andrew McNutt, Allie Morgan, Carl Proepper.',
+    // journal: 'Reed Physics Seminar. September 18, 2013'
+  // }
 ];
 
 export const BLOG_POSTS = [
@@ -286,7 +310,7 @@ export const BLOG_POSTS = [
         link:
           'https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4'
       },
-      {name: 'talk', link: 'http://tinyurl.com/reactvisdesignpatterns'},
+      // {name: 'talk', link: 'http://tinyurl.com/reactvisdesignpatterns'},
       {
         name: 'code',
         link: 'https://github.com/mcnuttandrew/advanced-react-vis-tutorial'
@@ -479,6 +503,21 @@ export const PROJECTS = [
 ];
 
 export const NEWS = [
+  {
+    date: 'December 2019',
+    content:
+      'Received my Masters of Computer Science!!'
+  },
+  // {
+  //   date: 'November 2019',
+  //   content:
+  //     'Our poster on using graph visualizations to compare 19th century scentific writing was shown at both MindBytes (where it won best poster!) and the 2019 Chicago Colloquium on Digital Humanities.'
+  // },
+  {
+    date: 'October 2019',
+    content:
+      'Had a great time at IEEEVIS 2019 in Vancouver, BC! Helped contribute to the Open Access Vis (http://oavis.org/) efforts for the conference.'
+  },
   {
     date: 'September 2019',
     content:
