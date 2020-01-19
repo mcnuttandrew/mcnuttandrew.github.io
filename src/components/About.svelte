@@ -20,15 +20,15 @@
 </style>
 
 <div>
-  <h1> INTRODUCTION </h1>
+  <h1>INTRODUCTION</h1>
   <div class="about-section">
     <div>{ABOUT} {HISTORY} {INTERESTS}</div>
     <img
-    alt="picture of me in canyonlands utah"
-    class="self-pic"
-    src="assets/desert-pic.jpg"/>
+      alt="picture of me in canyonlands utah"
+      class="self-pic"
+      src="assets/desert-pic.jpg" />
   </div>
-  <h1> NEWS</h1>
+  <h1>NEWS</h1>
   <div class="about-section">
     {#each NEWS as {date, content}}
       <div class="news-item">

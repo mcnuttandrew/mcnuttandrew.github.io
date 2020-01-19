@@ -28,11 +28,7 @@
 
 <div class="flex-down bar align header">
   <div class="flex">
-    {#each [
-      'about',
-      'projects',
-      'research'
-    ] as section (section)}
+    {#each ['about', 'projects', 'research', 'teaching'] as section (section)}
       <a
         href="/#/{section}"
         class={classnames({

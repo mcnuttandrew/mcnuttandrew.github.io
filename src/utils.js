@@ -4,11 +4,11 @@ export function classnames(classObject) {
     .join(' ');
 }
 
-const routes = {research: true, projects: true, about: true};
+const routes = new Set(['research', 'projects', 'about', 'teaching']);
 export function getRoute() {
   const locationSplit = location.href.split('/');
   const naiveLocation = locationSplit[locationSplit.length - 1].toLowerCase();
-  return routes[naiveLocation] ? naiveLocation : 'about';
+  return routes.has(naiveLocation) ? naiveLocation : 'about';
 }
 
 export function groupBy(data, key) {

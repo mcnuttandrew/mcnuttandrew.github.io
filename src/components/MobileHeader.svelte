@@ -50,32 +50,22 @@
   .margin-bottom {
     margin-bottom: 10px;
   }
-
 </style>
 
 <div class="flex-down bar header">
-  <div
-    on:click={toggleHeader}
-    class="flex align">
+  <div on:click={toggleHeader} class="flex align">
     <h3>Andrew McNutt</h3>
     <div>
-      <svg
-        transform="rotate({$rotation})"
-        width="25px"
-        height="21px">
-        <rect x="0" y="0" width="25" height="3"></rect>
-        <rect x="0" y="7" width="25" height="3"></rect>
-        <rect x="0" y="14" width="25" height="3"></rect>
+      <svg transform="rotate({$rotation})" width="25px" height="21px">
+        <rect x="0" y="0" width="25" height="3" />
+        <rect x="0" y="7" width="25" height="3" />
+        <rect x="0" y="14" width="25" height="3" />
       </svg>
     </div>
   </div>
   {#if open}
     <div class="flex-down margin-bottom">
-      {#each [
-        'about',
-        'projects',
-        'research'
-      ] as section (section)}
+      {#each ['about', 'projects', 'research', 'teaching'] as section (section)}
         <a
           href="/#/{section}"
           class={classnames({

@@ -532,17 +532,33 @@ export const PROJECTS = [
   // }
 ];
 
+
+export const TEACHING = [
+  {title: 'CAPP 30239 - Data Visualization For Public Policy', date: 'Winter 2020', role: 'Instructor', location: 'UChicago', link: 'https://capp-30239-winter-2020.netlify.com/'},
+  {title: 'Visualization Research Reading Group', date: 'February 2019-Present', role: 'Other', location: 'UChicago', fancyTitle: 'Director', link: 'https://uchicago-vis-pl-lab.github.io/vis-reading-group/'},
+  {title: 'CMSC 23900 - Data Visualization', date: 'Spring 2019', role: 'Teaching Assitant', location: 'UChicago', link: 'http://people.cs.uchicago.edu/~glk/class/datavis/'},
+  {title: 'CAPP 30239 - Data Visualization For Public Policy', date: 'Winter 2019', role: 'Teaching Assitant', location: 'UChicago', link: 'https://twitter.com/AlexCEngler/status/1101245224733605891?s=20'},
+  {title: 'CAPP 30121 - Computer Science with Applications 1', date: 'Fall 2018', role: 'Teaching Assitant', location: 'UChicago', link: 'https://classes.cs.uchicago.edu/archive/2018/fall/30121-1/'},
+  {title: 'CMSC 23900 - Data Visualization', date: 'Spring 2018', role: 'Teaching Assitant', location: 'UChicago', link: 'http://people.cs.uchicago.edu/~glk/class/datavis18/'},
+  {title: 'CMSC 15100 - Introduction to Computer Science 1', date: 'Winter 2018', role: 'Teaching Assitant', location: 'UChicago', link: 'https://www.classes.cs.uchicago.edu/archive/2018/winter/15100-1/syllabus.html'},
+  {title: 'CMSC 12100 - Computer Science with Applications 1.', date: 'Fall 2017', role: 'Teaching Assitant', location: 'UChicago', link: 'https://www.classes.cs.uchicago.edu/archive/2017/fall/12100-1/'},
+  {title: 'Uberversity Speaker', date: '2016-2017', role: 'Instructor', fancyTitle: 'Lecturer', location: 'Uber'},
+  {title: 'Visualization Eng-ucation', date: '2015-2017', role: 'Instructor', fancyTitle: 'Lecturer', location: 'Uber'},
+  {title: 'Physics 101 - General Physics I', date: '2012', role: 'Teaching Assitant', location: 'Reed College'},
+  {title: 'F.L. Griffin Mathfest', date: '2014', role: 'Teaching Assitant', location: 'Reed College'},   
+]
+
 export const NEWS = [
   {
     date: 'December 2019',
     content:
       'Received my Masters of Computer Science!!'
   },
-  // {
-  //   date: 'November 2019',
-  //   content:
-  //     'Our poster on using graph visualizations to compare 19th century scentific writing was shown at both MindBytes (where it won best poster!) and the 2019 Chicago Colloquium on Digital Humanities.'
-  // },
+  {
+    date: 'November 2019',
+    content:
+      'Our poster on using graph visualizations to compare 19th century scentific writing was shown at both MindBytes (where it won best poster!) and the 2019 Chicago Colloquium on Digital Humanities.'
+  },
   {
     date: 'October 2019',
     content:

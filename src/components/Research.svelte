@@ -14,21 +14,21 @@
   <h1>PUBLICATIONS</h1>
   <div class="research-section">
     {#each PUBLICATIONS as publication}
-      <Publication publication={publication}/>
+      <Publication {publication} />
     {/each}
   </div>
 
   <h1>BLOG POSTS</h1>
   <div class="research-section">
     {#each BLOG_POSTS as publication}
-      <Publication publication={publication}/>
+      <Publication {publication} />
     {/each}
   </div>
 
   <h1>Talks</h1>
   <div class="research-section">
     {#each PRESENTATIONS as publication}
-      <Publication publication={publication}/>
+      <Publication {publication} />
     {/each}
   </div>
 </div>

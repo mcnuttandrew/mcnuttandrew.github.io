@@ -1,5 +1,5 @@
 <script>
-  import { slide } from 'svelte/transition';
+  import {slide} from 'svelte/transition';
 
   export let publication;
   let abstractOpen = false;
@@ -73,10 +73,10 @@
     <div class="img-container">
       <img
         alt="image drawn from {publication.title}"
-        src="{publication.imgLink}" />
+        src={publication.imgLink} />
     </div>
     <div class="flex-down">
-      <a href="{publication.link}">{publication.title}</a>
+      <a href={publication.link}>{publication.title}</a>
 
       {#each keys as key}
         {#if publication[key]}
@@ -89,17 +89,15 @@
           <a class="publink" href={link}>{name}</a>
         {/each}
         {#if publication.abstract}
-          <div
-            class="publink"
-            on:click={toggleAbstract}>abstract ({abstractOpen ? '-' : '+'})</div>
+          <div class="publink" on:click={toggleAbstract}>
+            abstract ({abstractOpen ? '-' : '+'})
+          </div>
         {/if}
       </div>
 
     </div>
   </div>
   {#if abstractOpen}
-  <div class="abstract" transition:slide>
-    {publication.abstract}
-  </div>
+    <div class="abstract" transition:slide>{publication.abstract}</div>
   {/if}
 </div>
