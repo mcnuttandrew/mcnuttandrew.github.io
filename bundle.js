@@ -1,2 +1,4000 @@
-var app=function(){"use strict";function t(){}const e=t=>t;function n(t,e){for(const n in e)t[n]=e[n];return t}function i(t){return t()}function a(){return Object.create(null)}function o(t){t.forEach(i)}function r(t){return"function"==typeof t}function s(t,e){return t!=t?e==e:t!==e||t&&"object"==typeof t||"function"==typeof t}function c(t){return null==t?"":t}const l="undefined"!=typeof window;let u=l?()=>window.performance.now():()=>Date.now(),d=l?t=>requestAnimationFrame(t):t;const h=new Set;let p,m=!1;function f(){h.forEach(t=>{t[0](u())||(h.delete(t),t[1]())}),(m=h.size>0)&&d(f)}function g(t){let e;return m||(m=!0,d(f)),{promise:new Promise(n=>{h.add(e=[t,n])}),abort(){h.delete(e)}}}function b(t,e){t.appendChild(e)}function v(t,e,n){t.insertBefore(e,n||null)}function y(t){t.parentNode.removeChild(t)}function w(t,e){for(let n=0;n<t.length;n+=1)t[n]&&t[n].d(e)}function k(t){return document.createElement(t)}function $(t){return document.createElementNS("http://www.w3.org/2000/svg",t)}function x(t){return document.createTextNode(t)}function S(){return x(" ")}function C(t,e,n,i){return t.addEventListener(e,n,i),()=>t.removeEventListener(e,n,i)}function A(t,e,n){null==n?t.removeAttribute(e):t.setAttribute(e,n)}function T(t,e){e=""+e,t.data!==e&&(t.data=e)}let j,L=0,z={};function M(t,e,n,i,a,o,r,s=0){const c=16.666/i;let l="{\n";for(let t=0;t<=1;t+=c){const i=e+(n-e)*o(t);l+=100*t+`%{${r(i,1-i)}}\n`}const u=l+`100% {${r(n,1-n)}}\n}`,d=`__svelte_${function(t){let e=5381,n=t.length;for(;n--;)e=(e<<5)-e^t.charCodeAt(n);return e>>>0}(u)}_${s}`;if(!z[d]){if(!p){const t=k("style");document.head.appendChild(t),p=t.sheet}z[d]=!0,p.insertRule(`@keyframes ${d} ${u}`,p.cssRules.length)}const h=t.style.animation||"";return t.style.animation=`${h?`${h}, `:""}${d} ${i}ms linear ${a}ms 1 both`,L+=1,d}function I(t,e){t.style.animation=(t.style.animation||"").split(", ").filter(e?t=>t.indexOf(e)<0:t=>-1===t.indexOf("__svelte")).join(", "),e&&!--L&&d(()=>{if(L)return;let t=p.cssRules.length;for(;t--;)p.deleteRule(t);z={}})}function D(t){j=t}const E=[],O=[],N=[],P=[],V=Promise.resolve();let _,W=!1;function U(t){N.push(t)}function q(){const t=new Set;do{for(;E.length;){const t=E.shift();D(t),R(t.$$)}for(;O.length;)O.pop()();for(let e=0;e<N.length;e+=1){const n=N[e];t.has(n)||(n(),t.add(n))}N.length=0}while(E.length);for(;P.length;)P.pop()();W=!1}function R(t){t.fragment&&(t.update(t.dirty),o(t.before_update),t.fragment.p(t.dirty,t.ctx),t.dirty=null,t.after_update.forEach(U))}function B(t,e,n){t.dispatchEvent(function(t,e){const n=document.createEvent("CustomEvent");return n.initCustomEvent(t,!1,!1,e),n}(`${e?"intro":"outro"}${n}`))}const F=new Set;let G;function H(){G={r:0,c:[],p:G}}function K(){G.r||o(G.c),G=G.p}function J(t,e){t&&t.i&&(F.delete(t),t.i(e))}function Y(t,e,n,i){if(t&&t.o){if(F.has(t))return;F.add(t),G.c.push(()=>{F.delete(t),i&&(n&&t.d(1),i())}),t.o(e)}}const Q={duration:0};function Z(n,i,a,s){let c=i(n,a),l=s?0:1,d=null,h=null,p=null;function m(){p&&I(n,p)}function f(t,e){const n=t.b-l;return e*=Math.abs(n),{a:l,b:t.b,d:n,duration:e,start:t.start,end:t.start+e,group:t.group}}function b(i){const{delay:a=0,duration:r=300,easing:s=e,tick:b=t,css:v}=c||Q,y={start:u()+a,b:i};i||(y.group=G,G.r+=1),d?h=y:(v&&(m(),p=M(n,l,i,r,a,s,v)),i&&b(0,1),d=f(y,r),U(()=>B(n,i,"start")),g(t=>{if(h&&t>h.start&&(d=f(h,r),h=null,B(n,d.b,"start"),v&&(m(),p=M(n,l,d.b,d.duration,0,s,c.css))),d)if(t>=d.end)b(l=d.b,1-l),B(n,d.b,"end"),h||(d.b?m():--d.group.r||o(d.group.c)),d=null;else if(t>=d.start){const e=t-d.start;l=d.a+d.d*s(e/d.duration),b(l,1-l)}return!(!d&&!h)}))}return{run(t){r(c)?(_||(_=Promise.resolve()).then(()=>{_=null}),_).then(()=>{c=c(),b(t)}):b(t)},end(){m(),d=h=null}}}const X="undefined"!=typeof window?window:global;function tt(t,e){t.d(1),e.delete(t.key)}function et(t,e,n,i,a,o,r,s,c,l,u,d){let h=t.length,p=o.length,m=h;const f={};for(;m--;)f[t[m].key]=m;const g=[],b=new Map,v=new Map;for(m=p;m--;){const t=d(a,o,m),s=n(t);let c=r.get(s);c?i&&c.p(e,t):(c=l(s,t)).c(),b.set(s,g[m]=c),s in f&&v.set(s,Math.abs(m-f[s]))}const y=new Set,w=new Set;function k(t){J(t,1),t.m(s,u),r.set(t.key,t),u=t.first,p--}for(;h&&p;){const e=g[p-1],n=t[h-1],i=e.key,a=n.key;e===n?(u=e.first,h--,p--):b.has(a)?!r.has(i)||y.has(i)?k(e):w.has(a)?h--:v.get(i)>v.get(a)?(w.add(i),k(e)):(y.add(a),h--):(c(n,r),h--)}for(;h--;){const e=t[h];b.has(e.key)||c(e,r)}for(;p;)k(g[p-1]);return g}function nt(t,e,n){const{fragment:a,on_mount:s,on_destroy:c,after_update:l}=t.$$;a.m(e,n),U(()=>{const e=s.map(i).filter(r);c?c.push(...e):o(e),t.$$.on_mount=[]}),l.forEach(U)}function it(t,e){t.$$.fragment&&(o(t.$$.on_destroy),t.$$.fragment.d(e),t.$$.on_destroy=t.$$.fragment=null,t.$$.ctx={})}function at(t,e){t.$$.dirty||(E.push(t),W||(W=!0,V.then(q)),t.$$.dirty=a()),t.$$.dirty[e]=!0}function ot(e,n,i,r,s,c){const l=j;D(e);const u=n.props||{},d=e.$$={fragment:null,ctx:null,props:c,update:t,not_equal:s,bound:a(),on_mount:[],on_destroy:[],before_update:[],after_update:[],context:new Map(l?l.$$.context:[]),callbacks:a(),dirty:null};let h=!1;var p;d.ctx=i?i(e,u,(t,n,i=n)=>(d.ctx&&s(d.ctx[t],d.ctx[t]=i)&&(d.bound[t]&&d.bound[t](i),h&&at(e,t)),n)):u,d.update(),h=!0,o(d.before_update),d.fragment=r(d.ctx),n.target&&(n.hydrate?d.fragment.l((p=n.target,Array.from(p.childNodes))):d.fragment.c(),n.intro&&J(e.$$.fragment),nt(e,n.target,n.anchor),q()),D(l)}class rt{$destroy(){it(this,1),this.$destroy=t}$on(t,e){const n=this.$$.callbacks[t]||(this.$$.callbacks[t]=[]);return n.push(e),()=>{const t=n.indexOf(e);-1!==t&&n.splice(t,1)}}$set(){}}function st(t){return Object.keys(t).filter(e=>t[e]).join(" ")}const ct=new Set(["research","projects","about","teaching"]);function lt(){const t=location.href.split("/"),e=t[t.length-1].toLowerCase();return ct.has(e)?e:"about"}function ut(t,e){return t.reduce((t,n)=>(t[n[e]]=(t[n[e]]||[]).concat(n),t),{})}function dt(t,e,n){const i=Object.create(t);return i.section=e[n],i}function ht(t,e){var n,i,a,o,r=e.section.toUpperCase()+"";return{key:t,first:null,c(){n=k("a"),i=x(r),a=S(),A(n,"href","/#/"+e.section),A(n,"class",o=c(st({selected:e.currentSection===e.section,padding:!0}))+" svelte-6z6hfq"),this.first=n},m(t,e){v(t,n,e),b(n,i),b(n,a)},p(t,e){t.currentSection&&o!==(o=c(st({selected:e.currentSection===e.section,padding:!0}))+" svelte-6z6hfq")&&A(n,"class",o)},d(t){t&&y(n)}}}function pt(e){var n,i,a=[],o=new Map;let r=["about","projects","research","teaching"];const s=t=>t.section;for(let t=0;t<r.length;t+=1){let n=dt(e,r,t),i=s(n);o.set(i,a[t]=ht(i,n))}return{c(){n=k("div"),i=k("div");for(let t=0;t<4;t+=1)a[t].c();A(i,"class","flex"),A(n,"class","flex-down bar align header svelte-6z6hfq")},m(t,e){v(t,n,e),b(n,i);for(let t=0;t<4;t+=1)a[t].m(i,null)},p(t,e){a=et(a,t,s,1,e,["about","projects","research","teaching"],o,i,tt,ht,null,dt)},i:t,o:t,d(t){t&&y(n);for(let t=0;t<4;t+=1)a[t].d()}}}function mt(t,e,n){let{currentSection:i}=e;return t.$set=(t=>{"currentSection"in t&&n("currentSection",i=t.currentSection)}),{currentSection:i}}class ft extends rt{constructor(t){super(),ot(this,t,mt,pt,s,["currentSection"])}}const gt=[];function bt(t){const e=t-1;return e*e*e+1}function vt(t){return"[object Date]"===Object.prototype.toString.call(t)}function yt(t,e){if(t===e||t!=t)return()=>t;const n=typeof t;if(n!==typeof e||Array.isArray(t)!==Array.isArray(e))throw new Error("Cannot interpolate values of different type");if(Array.isArray(t)){const n=e.map((e,n)=>yt(t[n],e));return t=>n.map(e=>e(t))}if("object"===n){if(!t||!e)throw new Error("Object cannot be null");if(vt(t)&&vt(e)){t=t.getTime();const n=(e=e.getTime())-t;return e=>new Date(t+e*n)}const n=Object.keys(e),i={};return n.forEach(n=>{i[n]=yt(t[n],e[n])}),t=>{const e={};return n.forEach(n=>{e[n]=i[n](t)}),e}}if("number"===n){const n=e-t;return e=>t+e*n}throw new Error(`Cannot interpolate ${n} values`)}function wt(i,a={}){const o=function(e,n=t){let i;const a=[];function o(t){if(s(e,t)&&(e=t,i)){const t=!gt.length;for(let t=0;t<a.length;t+=1){const n=a[t];n[1](),gt.push(n,e)}if(t){for(let t=0;t<gt.length;t+=2)gt[t][0](gt[t+1]);gt.length=0}}}return{set:o,update:function(t){o(t(e))},subscribe:function(r,s=t){const c=[r,s];return a.push(c),1===a.length&&(i=n(o)||t),r(e),()=>{const t=a.indexOf(c);-1!==t&&a.splice(t,1),0===a.length&&(i(),i=null)}}}}(i);let r,c=i;function l(t,s){c=t;let l=r,d=!1,{delay:h=0,duration:p=400,easing:m=e,interpolate:f=yt}=n(n({},a),s);const b=u()+h;let v;return(r=g(e=>{if(e<b)return!0;d||(v=f(i,t),"function"==typeof p&&(p=p(i,t)),d=!0),l&&(l.abort(),l=null);const n=e-b;return n>p?(o.set(i=t),!1):(o.set(i=v(m(n/p))),!0)})).promise}return{set:l,update:(t,e)=>l(t(c,i),e),subscribe:o.subscribe}}function kt(t,e,n){const i=Object.create(t);return i.section=e[n],i}function $t(t){var e,n=[],i=new Map;let a=["about","projects","research","teaching"];const o=t=>t.section;for(let e=0;e<a.length;e+=1){let r=kt(t,a,e),s=o(r);i.set(s,n[e]=xt(s,r))}return{c(){e=k("div");for(let t=0;t<4;t+=1)n[t].c();A(e,"class","flex-down margin-bottom svelte-hz9bf5")},m(t,i){v(t,e,i);for(let t=0;t<4;t+=1)n[t].m(e,null)},p(t,a){n=et(n,t,o,1,a,["about","projects","research","teaching"],i,e,tt,xt,null,kt)},d(t){t&&y(e);for(let t=0;t<4;t+=1)n[t].d()}}}function xt(t,e){var n,i,a,o,r=e.section.toUpperCase()+"";return{key:t,first:null,c(){n=k("a"),i=x(r),a=S(),A(n,"href","/#/"+e.section),A(n,"class",o=c(st({selected:e.currentSection===e.section,padding:!0}))+" svelte-hz9bf5"),this.first=n},m(t,e){v(t,n,e),b(n,i),b(n,a)},p(t,e){t.currentSection&&o!==(o=c(st({selected:e.currentSection===e.section,padding:!0}))+" svelte-hz9bf5")&&A(n,"class",o)},d(t){t&&y(n)}}}function St(e){var n,i,a,o,r,s,c,l,u,d,h,p,m=e.open&&$t(e);return{c(){n=k("div"),i=k("div"),(a=k("h3")).textContent="Andrew McNutt",o=S(),r=k("div"),s=$("svg"),c=$("rect"),l=$("rect"),u=$("rect"),h=S(),m&&m.c(),A(c,"x","0"),A(c,"y","0"),A(c,"width","25"),A(c,"height","3"),A(l,"x","0"),A(l,"y","7"),A(l,"width","25"),A(l,"height","3"),A(u,"x","0"),A(u,"y","14"),A(u,"width","25"),A(u,"height","3"),A(s,"transform",d="rotate("+e.$rotation+")"),A(s,"width","25px"),A(s,"height","21px"),A(i,"class","flex align svelte-hz9bf5"),A(n,"class","flex-down bar header svelte-hz9bf5"),p=C(i,"click",e.toggleHeader)},m(t,e){v(t,n,e),b(n,i),b(i,a),b(i,o),b(i,r),b(r,s),b(s,c),b(s,l),b(s,u),b(n,h),m&&m.m(n,null)},p(t,e){t.$rotation&&d!==(d="rotate("+e.$rotation+")")&&A(s,"transform",d),e.open?m?m.p(t,e):((m=$t(e)).c(),m.m(n,null)):m&&(m.d(1),m=null)},i:t,o:t,d(t){t&&y(n),m&&m.d(),p()}}}function Ct(t,e,n){let i;const a=wt(0,{duration:400,easing:bt});var o,r;o=a,r=(t=>{n("$rotation",i=t)}),t.$$.on_destroy.push(function(t,e){const n=t.subscribe(e);return n.unsubscribe?()=>n.unsubscribe():n}(o,r));let{currentSection:s}=e,c=!1;return t.$set=(t=>{"currentSection"in t&&n("currentSection",s=t.currentSection)}),{rotation:a,currentSection:s,open:c,toggleHeader:function(){n("open",c=!c),a.set(i?0:90)},$rotation:i}}class At extends rt{constructor(t){super(),ot(this,t,Ct,St,s,["currentSection"])}}const Tt="\n  My name is Andrew McNutt, and I am a PhD student in Computer Science at the University of Chicago. My work focuses on information visualization in general. More specifically I'm interested in automated guidance systems (like linters), unusual or xenographical data visualizations, and web applications as a visualization medium. I'm advised by Gordon Kindlmann.\n  ",jt="\n  In the very near past I worked as a Data Visualization Engineer for a variety of\n  companies in San Francisco, where I made visual analytic software.\n  I got a formal education in physics from Reed College in Portland, and an informal\n  education in web development from App Academy in San Francisco. I really like deserts,\n  buffalo, and motorcycles.\n  ",Lt="\n    I'm excited about info-vis, databases, applied category theory, dashboards, testing,\n    and pretty much anything in the wild world of javascript.",zt=[{link:"https://arxiv.org/pdf/2001.02316.pdf",imgLink:"assets/surfacing-visualization-mirages.png",title:"Surfacing Visualization Mirages",authors:"Andrew McNutt, Gordon Kindlmann, Michael Correll",journal:"CHI 2020 - To Appear",links:[{name:"preprint",link:"https://arxiv.org/pdf/2001.02316.pdf"},{name:"live",link:"https://metamorphic-linting.netlify.com/"},{name:"code",link:"https://github.com/tableau/Visualization-Linting"},{name:"osf",link:"https://osf.io/je3x9"}],abstract:"\n    Dirty data and deceptive design practices can undermine, invert, or invalidate the purported messages of charts and graphs.\n    These failures can arise silently: a conclusion derived from\n    a particular visualization may look plausible unless the analyst looks closer and discovers an issue with the backing\n    data, visual specification, or their own assumptions. We term\n    such silent but significant failures visualization mirages. We\n    describe a conceptual model of mirages and show how they\n    can be generated at every stage of the visual analytics process.\n    We adapt a methodology from software testing, metamorphic\n    testing, as a way of automatically surfacing potential mirages\n    at the visual encoding stage of analysis through modifications\n    to the underlying data and chart specification. We show that\n    metamorphic testing can reliably identify mirages across a\n    variety of chart types with relatively little prior knowledge of\n    the data or the domain.\n    ",bibTex:"TODO"},{link:"assets/forum-explorer-paper.pdf",imgLink:"assets/forested-tree-view-example.jpg",title:"Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations",authors:"Andrew McNutt, Gordon Kindlmann",journal:"EuroVis - Extended Abstract. June 2019",links:[{name:"paper",link:"assets/forum-explorer-paper.pdf"},{name:"poster",link:"assets/forum-explorer-poster.pdf"},{name:"live",link:"https://www.mcnutt.in/forum-explorer/"},{name:"code",link:"https://github.com/mcnuttandrew/forum-explorer"},{name:"osf",link:"https://osf.io/nrhqw/"}],abstract:"\n    Large threaded conversations, such as those found on YCombinator’s HackerNews,\n    are typically presented in a way that shows individual comments clearly,\n    but can obscure larger trends or patterns within the conversational corpus.\n    Previous research has addressed this problem through graphical-overviews and NLP-generated summaries.\n    These efforts have generally assumed a particular (and modest) data size,\n    which limits their utility for large or deeply-nested conversations, and often\n    require non-trivial offline processing time, which makes them impractical for day-to-day usage.\n    We describe here Forum Explorer, a Chrome extension that combines and expands upon\n    prior art through a collection of techniques that enable this type of\n    representation to handle wider ranges of data in real time. Materials for this project are available at https://osf.io/nrhqw/.\n    ",bibTex:"\n    @inproceedings{McNuttKindlmannForumExplorerPoster,\n      title={Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations},\n      author={McNutt, Andrew and Kindlmann, Gordon},\n      booktitle={Poster Abstracts of the EG/VGTC Conference on Visualization (EuroVis)},\n      year={2019}\n    }"},{link:"assets/McNutt_Kindlmann_2018.pdf",imgLink:"assets/lint-pic.jpg",title:"Linting for Visualization: Towards a Practical Automated Visualization Guidance System",authors:"Andrew McNutt, Gordon Kindlmann",journal:"VisGuides (IEEEVIS Workshop). Octobr 2018",links:[{name:"paper",link:"assets/McNutt_Kindlmann_2018.pdf"},{name:"code",link:"https://github.com/mcnuttandrew/vislint_mpl"},{name:"talk",link:"assets/vis-lint-talk.pdf"}],abstract:"\n    Constructing effective charts and graphs in a scientific setting is a\n    nuanced task that requires a thorough understanding of visualization\n    design; a knowledge that may not be available to all practicing scientists.\n    Previous attempts to address this problem have pushed chart\n    creators to pore over large collections of guidelines and heuristics,\n    or to relegate their entire workflow to end-to-end tools that provide\n    automated recommendations. In this paper we bring together these\n    two strains of ideas by introducing the use of lint as a mechanism for\n    guiding chart creators towards effective visualizations in a manner\n    that can be configured to taste and task without forcing users to abandon their usual workflows.\n    The programmatic evaluation model of\n    visualization linting (or vis lint) offers a compelling framework for\n    the automation of visualization guidelines, as it offers unambiguous\n    feedback during the chart creation process, and can execute analyses derived from machine vision and natural language processing.\n    We demonstrate the feasibility of this system through the production of vislint_mpl,\n    a prototype visualization linting system, that\n    evaluates charts created in matplotlib.\n    ",bibTex:"\n    @misc{mcnuttKindlmannLinting,\n      Author = {McNutt, Andrew and Kindlmann, Gordon},\n      Howpublished = {IEEE VIS Workshop: href{https://c4pgv.dbvis.de/}{VisGuides: 2nd Workshop on the Creation, Curation, Critique and Conditioning of Principles and Guidelines in Visualization}},\n      Month = oct,\n      Title = {Linting for Visualization: Towards a Practical Automated Visualization Guidance System},\n      Year = {2018}}\n    "},{link:"https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14",imgLink:"assets/cdd-pic.jpg",title:"Data Mining and Computational Modeling of High-Throughput Screening Datasets",authors:"Sean Ekins, Alex M Clark, Krishna Dole, Kellan Gregory, Andrew McNutt,\n    Anna Coulon Spektor, Charlie Weatherall, Nadia K Litterman, Barry A Bunin",journal:"Reporter Gene Assays. 2018",links:[{name:"paper",link:"https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14"}],abstract:"\n    We are now seeing the benefit of investments made over the last decade in\n    high-throughput screening (HTS) that is resulting in large structure activity\n    datasets entering public and open databases such as ChEMBL and PubChem.\n    The growth of academic HTS screening centers and the increasing move to academia\n    for early stage drug discovery suggests a great need for the informatics tools and\n    methods to mine such data and learn from it. Collaborative Drug Discovery, Inc. (CDD)\n    has developed a number of tools for storing, mining, securely and selectively sharing,\n    as well as learning from such HTS data. We present a new web based data mining and\n    visualization module directly within the CDD Vault platform for high-throughput\n    drug discovery data that makes use of a novel technology stack following modern\n    reactive design principles. We also describe CDD Models within the CDD Vault platform\n    that enables researchers to share models, share predictions from models, and create models\n    from distributed, heterogeneous data. Our system is built on top of the Collaborative\n    Drug Discovery Vault Activity and Registration data repository ecosystem which allows\n    users to manipulate and visualize thousands of molecules in real time. This can be\n    performed in any browser on any platform. In this chapter we present examples of its\n    use with public datasets in CDD Vault. Such approaches can complement other cheminformatics\n    tools, whether open source or commercial, in providing approaches for data mining and modeling of HTS data.\n    "},{link:"https://arxiv.org/abs/1501.07537",imgLink:"assets/qgrav-pic.jpg",title:"The Schrodinger-Newton System with Self-field Coupling",authors:"Joel Franklin, Youdan Guo, Andrew McNutt, and Allison Morgan",journal:"Classical and Quantum Gravity. 2015",links:[{name:"paper",link:"https://arxiv.org/abs/1501.07537"},{name:"talk",link:"assets/QGravPresentation.pdf"}],abstract:"\n    We study the Schrodinger-Newton system of equations with the addition of gravitational\n    field energy sourcing - such additional nonlinearity is to be expected from a theory\n    of gravity (like general relativity), and its appearance in this simplified scalar\n    setting (one of Einstein's precursors to general relativity) leads to significant\n    changes in the spectrum of the self-gravitating theory. Using an iterative technique,\n    we compare the mass dependence of the ground state energies of both Schrodinger-Newton\n    and the new, self-sourced system and find that they are dramatically different.\n    The Bohr method approach from old quantization provides a qualitative description of\n    the difference, which comes from the additional nonlinearity introduced in the self-sourced\n    case. In addition to comparison of ground state energies, we calculate the transition\n    energy between the ground state and first excited state to compare emission frequencies\n    between Schrodinger-Newton and the self-coupled scalar case.\n    "},{link:"http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143",imgLink:"assets/cdd-models-pic.jpg",title:"Open source Bayesian models. 1. Application to ADME/Tox and drug discovery datasets.",authors:"Alex M. Clark, Krishna Dole, Anna Coulon-Spektor, Andrew McNutt,\n    George Grass, Joel S. Freundlich, Robert C. Reynolds, and Sean Ekins",journal:"Journal of chemical information and modeling. 2015",links:[{name:"paper",link:"http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143"}],abstract:"\n    On the order of hundreds of absorption, distribution, metabolism, excretion,\n    and toxicity (ADME/Tox) models have been described in the literature in the\n    past decade which are more often than not inaccessible to anyone but their authors.\n    Public accessibility is also an issue with computational models for bioactivity,\n    and the ability to share such models still remains a major challenge limiting drug\n    discovery. We describe the creation of a reference implementation of a Bayesian\n    model-building software module, which we have released as an open source component\n    that is now included in the Chemistry Development Kit (CDK) project, as well as\n    implemented in the CDD Vault and in several mobile apps. We use this implementation\n    to build an array of Bayesian models for ADME/Tox, in vitro and in vivo bioactivity,\n    and other physicochemical properties. We show that these models possess cross-validation\n    receiver operator curve values comparable to those generated previously in prior\n    publications using alternative tools. We have now described how the implementation\n    of Bayesian models with FCFP6 descriptors generated in the CDD Vault enables the\n    rapid production of robust machine learning models from public data or the user’s\n    own datasets. The current study sets the stage for generating models in proprietary\n    software (such as CDD) and exporting these models in a format that could be run in\n    open source software using CDK components. This work also demonstrates that we can\n    enable biocomputation across distributed private or public datasets to enhance drug discovery."},{link:"assets/thesis.pdf",imgLink:"assets/thesis-pic.jpg",title:"Nonequivalent Lagrangian Mechanics",authors:"Andrew McNutt (Advised by Nelia Mann)",journal:"Undergraduate thesis. Reed College. June 2014.",links:[{name:"thesis",link:"assets/thesis.pdf"},{name:"talk",link:"./assets/nlm-talk.pdf"}],abstract:"\n    In this thesis we study a modern formalism known as Nonequivalent Lagrangian\n    Mechanics, that is constructed on top of the traditional Lagrangian theory of mechanics.\n    By making use of the non-uniqueness of the Lagrangian representation of dynamical\n    systems, we are able to generate conservation laws in a way that is novel and, in\n    many cases much faster than the traditional Noetherian analysis. In every case that\n    we examine, these invariants turn out to be Noetherian invariants in disguise. We\n    apply this theory to a wide variety of systems including predator-prey dynamics and\n    damped driven harmonic motion."}],Mt=[{imgLink:"assets/design-patterns-pic.png",title:"Design Patterns For Data Visualization in React",link:"http://tinyurl.com/reactvisdesignpatterns",journal:"React Chicago. August 29, 2018",subtitle:"An overview of four useful patterns for developing visualizations in react.",links:[{name:"slides",link:"http://tinyurl.com/reactvisdesignpatterns"}]}],It=[{imgLink:"assets/tarot-image.png",title:"A Brief Saga Concerning the Making of a Tarot Deck About the American Highway System",subtitle:"A little essay about making",date:"Personal Blog. December 10, 2018",link:"https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8",links:[{name:"blog post",link:"https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8"},{name:"github",link:"https://github.com/mcnuttandrew/tarot-deck"}]},{imgLink:"assets/advanced-react-vis-pic.png",title:"Advanced Visualization with react-vis",subtitle:"Using Voronois, single pass rendering, and canvas components for amazing user experiences",date:"Towards Data Science. May 21, 2018",link:"https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4",links:[{name:"blog post",link:"https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4"},{name:"code",link:"https://github.com/mcnuttandrew/advanced-react-vis-tutorial"}]}],Dt=[{title:"Cycles & Rain / Seasons In Size",dates:"July 2019",sourceLink:"https://github.com/mcnuttandrew/cycles-rain-seasons-in-size/",link:"https://www.mcnutt.in/cycles-rain-seasons-in-size/",imgLink:"assets/cycles-in-rain.png",text:"A little infographic about bicycle ridership in Seattle featuring table cartograms.",section:"visualization"},{title:"CSSQL",dates:"May 2019",sourceLink:"https://github.com/mcnuttandrew/cssql",link:"https://www.npmjs.com/package/node-cssql",imgLink:"assets/cssql-logo.png",text:"A new answer to this css-in-js question: css in sql. A sql-ddl to css transpiler written in haskell, available on npm.",section:"tech"},{title:"Forum Explorer",dates:"April 2019",sourceLink:"https://github.com/mcnuttandrew/forum-explorer",link:"https://www.mcnutt.in/forum-explorer/",imgLink:"assets/forum-ex-pic.png",text:"A chrome extension and website that allows users to explore threaded conversations using trees.",section:"visualization"},{title:"Readability As A Service",dates:"November 2018",sourceLink:"https://github.com/mcnuttandrew/flesch-kincaid-as-a-service",link:"https://www.mcnutt.in/flesch-kincaid-as-a-service/",imgLink:"assets/readability.png",text:"Have you ever wanted specific numerical quantification on how readable\n    your prose is? This micro app wraps the textstat package as a webservice so that you can easily check.",section:"tech"},{title:"tap-react-browser",dates:"Feburary - April 2018",sourceLink:"https://github.com/mcnuttandrew/tap-react-browser/",imgLink:"assets/tap-react-browser.png",text:"In the process of building a variety of javascipt libraries in the course of\n    my graduate research, I found myself needing a testing tool that played a particular\n    role in relation to the browser, so I made one! tap-react-browser is a light\n    wrapper on tape that spits out react components.",section:"tech"},{title:"Constellations of Home - XMAS CARDS 2017",dates:"December 2017",link:"http://www.mcnutt.in/home-graphs/",sourceLink:"https://github.com/mcnuttandrew/home-graphs",imgLink:"assets/home-graphs.png",text:"Over the 2017 holidays I spent some time meditating on memory, home, and\n    graph theory, which led to my making these christmas cards.",section:"visualization"},{title:"On The Shape of American Cities I/II",dates:"July 2017",link:"http://www.mcnutt.in/city-size/",sourceLink:"https://github.com/mcnuttandrew/city-size",imgLink:"assets/city-size.png",text:"A print graphic describing the shape of the 100 most populous American cities.",section:"visualization"},{title:"Pantone: Color of the year",dates:"Updated yearly, starting 2016",link:"http://www.mcnutt.in/color-of-the-year/",sourceLink:"https://github.com/mcnuttandrew/color-of-the-year",imgLink:"assets/color-of-year.png",text:"A small exploration of the glory and wonder that is pantones color of the year.",section:"visualization"},{title:"react-vis",dates:"2016 - ",link:"http://uber.github.io/react-vis/#/",sourceLink:"https://github.com/uber/react-vis",imgLink:"assets/react-vis-image.png",text:"A charting library for the react ecosystem.",section:"visualization"},{title:"CSV Conversion",dates:"December 2016",link:"http://www.mcnutt.in/csv-conversion/",sourceLink:"https://github.com/mcnuttandrew/csv-conversion",imgLink:"assets/csv-conversion.png",text:"A handy client-side csv to json converter. I built this little app, because my favorite conversion site got knocked down and I wanted to improve the UI.",section:"tech"},{title:"Personal Timeline",dates:"June 2016",link:"http://www.mcnutt.in/personal-timeline/",sourceLink:"https://github.com/mcnuttandrew/personal-timeline",imgLink:"assets/personal-time.png",text:"A brief timeline of my life, a resume through a dark mirror if you will.",section:"visualization"},{title:"Unnamed Tarot Deck",dates:"Dec 2015 - June 2016",link:"https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8",sourceLink:"https://github.com/mcnuttandrew/tarot-deck",imgLink:"assets/tarot-image.png",text:"A tarot tech themed around the signage and spirit of the American highway system.",section:"art"},{title:"Why Not Ipsum",dates:"September 2014",link:"http://why-not-ipsum.herokuapp.com/",sourceLink:"https://github.com/mcnuttandrew/Why-Not-Zoidberg",imgLink:"assets/why-not-image.png",text:"A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning.",section:"tech"},{title:"N-Hedron",dates:"September - December 2013",imgLink:"assets/n-hydron.png",link:"assets/nhedron.pdf",text:"An independent college project regarding the effacy of various numerical algorithms for constructing the n-hedron.",section:"tech"}],Et=[{title:"CAPP 30239 - Data Visualization For Public Policy",date:"Winter 2020",role:"Instructor",location:"UChicago",link:"https://capp-30239-winter-2020.netlify.com/"},{title:"Visualization Research Reading Group",date:"February 2019-Present",role:"Other",location:"UChicago",fancyTitle:"Director",link:"https://uchicago-vis-pl-lab.github.io/vis-reading-group/"},{title:"CMSC 23900 - Data Visualization",date:"Spring 2019",role:"Teaching Assitant",location:"UChicago",link:"http://people.cs.uchicago.edu/~glk/class/datavis/"},{title:"CAPP 30239 - Data Visualization For Public Policy",date:"Winter 2019",role:"Teaching Assitant",location:"UChicago",link:"https://twitter.com/AlexCEngler/status/1101245224733605891?s=20"},{title:"CAPP 30121 - Computer Science with Applications 1",date:"Fall 2018",role:"Teaching Assitant",location:"UChicago",link:"https://classes.cs.uchicago.edu/archive/2018/fall/30121-1/"},{title:"CMSC 23900 - Data Visualization",date:"Spring 2018",role:"Teaching Assitant",location:"UChicago",link:"http://people.cs.uchicago.edu/~glk/class/datavis18/"},{title:"CMSC 15100 - Introduction to Computer Science 1",date:"Winter 2018",role:"Teaching Assitant",location:"UChicago",link:"https://www.classes.cs.uchicago.edu/archive/2018/winter/15100-1/syllabus.html"},{title:"CMSC 12100 - Computer Science with Applications 1.",date:"Fall 2017",role:"Teaching Assitant",location:"UChicago",link:"https://www.classes.cs.uchicago.edu/archive/2017/fall/12100-1/"},{title:"Uberversity Speaker",date:"2016-2017",role:"Instructor",fancyTitle:"Lecturer",location:"Uber"},{title:"Visualization Eng-ucation",date:"2015-2017",role:"Instructor",fancyTitle:"Lecturer",location:"Uber"},{title:"Physics 101 - General Physics I",date:"2012",role:"Teaching Assitant",location:"Reed College"},{title:"F.L. Griffin Mathfest",date:"2014",role:"Teaching Assitant",location:"Reed College"}],Ot=[{date:"December 2019",content:"Received my Masters of Computer Science!!"},{date:"November 2019",content:"Our poster on using graph visualizations to compare 19th century scentific writing was shown at both MindBytes (where it won best poster!) and the 2019 Chicago Colloquium on Digital Humanities."},{date:"October 2019",content:"Had a great time at IEEEVIS 2019 in Vancouver, BC! Helped contribute to the Open Access Vis (http://oavis.org/) efforts for the conference."},{date:"September 2019",content:"Two of my vis projects (ForumExplorer and Cycles in Rain) were Long-Listed at the Kantar Information is Beautiful Awards."},{date:"June 2019",content:"Started an internship with Tableau Research in Seattle"},{date:"June 2019",content:"🎉🎉🎉 Successfully defended my masters thesis 🎉🎉🎉"},{date:"May 2019",content:"Presented our poster on ForumExplorer at EuroVis 2019 in Porto, Portugal."},{date:"May 2019",content:"I was awarded the UChicago Department of Computer Science TA Prize for my work TAing Spring 2018 - Winter 2019."},{date:"May 2019",content:"My piece 'On The Road To The Lake: Debugging in Tryptic' won second prize in the print media category of the UChicago Art+Science expo."},{date:"October 2018",content:"Presented our paper on linting charts created in matplotlib at VisGuides, a IEEEVIS 2018 workshop. "},{date:"September 2018",content:"Started my second year of grad school!"}];function Nt(t,e,n){const i=Object.create(t);return i.date=e[n].date,i.content=e[n].content,i}function Pt(e){var n,i,a,o,r,s,c,l,u=e.date+"",d=e.content+"";return{c(){n=k("div"),i=k("span"),a=x(u),o=x(":"),r=S(),s=k("span"),c=x(d),l=S(),A(i,"class","news-item-date svelte-13inknk"),A(n,"class","news-item svelte-13inknk")},m(t,e){v(t,n,e),b(n,i),b(i,a),b(i,o),b(n,r),b(n,s),b(s,c),b(n,l)},p:t,d(t){t&&y(n)}}}function Vt(e){var n,i,a,o,r,s,c,l,u,d,h,p,m,f,g,$;let C=Ot,T=[];for(let t=0;t<C.length;t+=1)T[t]=Pt(Nt(e,C,t));return{c(){n=k("div"),(i=k("h1")).textContent="INTRODUCTION",a=S(),o=k("div"),r=k("div"),s=x(Tt),c=S(),l=x(jt),u=S(),d=x(Lt),h=S(),p=k("img"),m=S(),(f=k("h1")).textContent="NEWS",g=S(),$=k("div");for(let t=0;t<T.length;t+=1)T[t].c();A(p,"alt","picture of me in canyonlands utah"),A(p,"class","self-pic svelte-13inknk"),A(p,"src","assets/desert-pic.jpg"),A(o,"class","about-section svelte-13inknk"),A($,"class","about-section svelte-13inknk")},m(t,e){v(t,n,e),b(n,i),b(n,a),b(n,o),b(o,r),b(r,s),b(r,c),b(r,l),b(r,u),b(r,d),b(o,h),b(o,p),b(n,m),b(n,f),b(n,g),b(n,$);for(let t=0;t<T.length;t+=1)T[t].m($,null)},p(t,e){if(t.NEWS){let n;for(C=Ot,n=0;n<C.length;n+=1){const i=Nt(e,C,n);T[n]?T[n].p(t,i):(T[n]=Pt(i),T[n].c(),T[n].m($,null))}for(;n<T.length;n+=1)T[n].d(1);T.length=C.length}},i:t,o:t,d(t){t&&y(n),w(T,t)}}}class _t extends rt{constructor(t){super(),ot(this,t,null,Vt,s,[])}}const{Object:Wt}=X;function Ut(t,e,n){const i=Wt.create(t);return i.project=e[n],i}function qt(t,e,n){const i=Wt.create(t);return i.sectionName=e[n].sectionName,i.rows=e[n].rows,i}function Rt(e,n){var i,a,o,r,s,c,l,u,d,h,p,m,f,g,w,C,T=n.project.title+"",j=n.project.dates+"",L=n.project.text+"",z=n.project.sourceLink&&function(e){var n,i,a,o;return{c(){n=k("a"),i=$("svg"),a=$("g"),A(o=$("path"),"d","m20 0c-11 0-20 9-20 20 0 8.8 5.7 16.3 13.7 19 1 0.2\n                      1.3-0.5 1.3-1 0-0.5 0-2 0-3.7-5.5\n                      1.2-6.7-2.4-6.7-2.4-0.9-2.3-2.2-2.9-2.2-2.9-1.9-1.2\n                      0.1-1.2 0.1-1.2 2 0.1 3.1 2.1 3.1 2.1 1.7 3 4.6 2.1 5.8\n                      1.6 0.2-1.3 0.7-2.2 1.3-2.7-4.5-0.5-9.2-2.2-9.2-9.8 0-2.2\n                      0.8-4 2.1-5.4-0.2-0.5-0.9-2.6 0.2-5.3 0 0 1.7-0.5 5.5 2\n                      1.6-0.4 3.3-0.6 5-0.6 1.7 0 3.4 0.2 5 0.7 3.8-2.6 5.5-2.1\n                      5.5-2.1 1.1 2.8 0.4 4.8 0.2 5.3 1.3 1.4 2.1 3.2 2.1 5.4 0\n                      7.6-4.7 9.3-9.2 9.8 0.7 0.6 1.4 1.9 1.4 3.7 0 2.7 0 4.9 0\n                      5.5 0 0.6 0.3 1.2 1.3 1 8-2.7 13.7-10.2 13.7-19\n                      0-11-9-20-20-20z"),A(i,"class","github-icon"),A(i,"fill","black"),A(i,"preserveAspectRatio","xMidYMid meet"),A(i,"height","1em"),A(i,"width","1em"),A(i,"viewBox","0 0 40 40"),A(n,"href",e.project.sourceLink)},m(t,e){v(t,n,e),b(n,i),b(i,a),b(a,o)},p:t,d(t){t&&y(n)}}}(n),M=n.project.link&&function(e){var n,i;return{c(){n=k("a"),i=x("Live"),A(n,"href",e.project.link)},m(t,e){v(t,n,e),b(n,i)},p:t,d(t){t&&y(n)}}}(n);return{key:e,first:null,c(){i=k("div"),a=k("a"),o=k("div"),r=k("img"),s=S(),c=k("h3"),l=x(T),u=S(),d=k("h5"),h=x(j),p=S(),m=k("div"),z&&z.c(),f=S(),M&&M.c(),g=S(),w=k("p"),C=x(L),A(r,"src",n.project.imgLink),A(r,"alt","image for "+n.project.title),A(r,"class","svelte-m2lfav"),A(o,"class","img-container svelte-m2lfav"),A(a,"href",n.project.link),A(w,"class","svelte-m2lfav"),A(i,"class","project-block svelte-m2lfav"),this.first=i},m(t,e){v(t,i,e),b(i,a),b(a,o),b(o,r),b(i,s),b(i,c),b(c,l),b(i,u),b(i,d),b(d,h),b(i,p),b(i,m),z&&z.m(m,null),b(m,f),M&&M.m(m,null),b(i,g),b(i,w),b(w,C)},p(t,e){e.project.sourceLink&&z.p(t,e),e.project.link&&M.p(t,e)},d(t){t&&y(i),z&&z.d(),M&&M.d()}}}function Bt(t,e){var n,i,a,o,r,s=e.sectionName.toUpperCase()+"",c=[],l=new Map;let u=e.rows;const d=t=>t.project.title;for(let t=0;t<u.length;t+=1){let n=Ut(e,u,t),i=d(n);l.set(i,c[t]=Rt(i,n))}return{key:t,first:null,c(){n=k("h1"),i=x(s),a=S(),o=k("div");for(let t=0;t<c.length;t+=1)c[t].c();r=S(),A(o,"class","flex-with-wrap svelte-m2lfav"),this.first=n},m(t,e){v(t,n,e),b(n,i),v(t,a,e),v(t,o,e);for(let t=0;t<c.length;t+=1)c[t].m(o,null);b(o,r)},p(t,e){const n=e.rows;c=et(c,t,d,1,e,n,l,o,tt,Rt,r,Ut)},d(t){t&&(y(n),y(a),y(o));for(let t=0;t<c.length;t+=1)c[t].d()}}}function Ft(e){var n,i=[],a=new Map;let o=e.sections;const r=t=>t.sectionName;for(let t=0;t<o.length;t+=1){let n=qt(e,o,t),s=r(n);a.set(s,i[t]=Bt(s,n))}return{c(){n=k("div");for(let t=0;t<i.length;t+=1)i[t].c();A(n,"class","")},m(t,e){v(t,n,e);for(let t=0;t<i.length;t+=1)i[t].m(n,null)},p(t,e){const o=e.sections;i=et(i,t,r,1,e,o,a,n,tt,Bt,null,qt)},i:t,o:t,d(t){t&&y(n);for(let t=0;t<i.length;t+=1)i[t].d()}}}function Gt(t){return{sections:Object.entries(ut(Dt,"section")).map(([t,e])=>({sectionName:t,rows:e}))}}class Ht extends rt{constructor(t){super(),ot(this,t,Gt,Ft,s,[])}}function Kt(t,{delay:e=0,duration:n=400,easing:i=bt}){const a=getComputedStyle(t),o=+a.opacity,r=parseFloat(a.height),s=parseFloat(a.paddingTop),c=parseFloat(a.paddingBottom),l=parseFloat(a.marginTop),u=parseFloat(a.marginBottom),d=parseFloat(a.borderTopWidth),h=parseFloat(a.borderBottomWidth);return{delay:e,duration:n,easing:i,css:t=>"overflow: hidden;"+`opacity: ${Math.min(20*t,1)*o};`+`height: ${t*r}px;`+`padding-top: ${t*s}px;`+`padding-bottom: ${t*c}px;`+`margin-top: ${t*l}px;`+`margin-bottom: ${t*u}px;`+`border-top-width: ${t*d}px;`+`border-bottom-width: ${t*h}px;`}}function Jt(t,e,n){const i=Object.create(t);return i.name=e[n].name,i.link=e[n].link,i}function Yt(t,e,n){const i=Object.create(t);return i.key=e[n],i}function Qt(t){var e,n,i=t.publication[t.key]+"";return{c(){e=k("span"),n=x(i)},m(t,i){v(t,e,i),b(e,n)},p(t,e){t.publication&&i!==(i=e.publication[e.key]+"")&&T(n,i)},d(t){t&&y(e)}}}function Zt(t){var e,n=t.publication[t.key]&&Qt(t);return{c(){n&&n.c(),e=x("")},m(t,i){n&&n.m(t,i),v(t,e,i)},p(t,i){i.publication[i.key]?n?n.p(t,i):((n=Qt(i)).c(),n.m(e.parentNode,e)):n&&(n.d(1),n=null)},d(t){n&&n.d(t),t&&y(e)}}}function Xt(t){var e,n,i,a=t.name+"";return{c(){e=k("a"),n=x(a),A(e,"class","publink svelte-1ngptbi"),A(e,"href",i=t.link)},m(t,i){v(t,e,i),b(e,n)},p(t,o){t.publication&&a!==(a=o.name+"")&&T(n,a),t.publication&&i!==(i=o.link)&&A(e,"href",i)},d(t){t&&y(e)}}}function te(t){var e,n,i,a,o,r=t.abstractOpen?"-":"+";return{c(){e=k("div"),n=x("abstract ("),i=x(r),a=x(")"),A(e,"class","publink svelte-1ngptbi"),o=C(e,"click",t.toggleAbstract)},m(t,o){v(t,e,o),b(e,n),b(e,i),b(e,a)},p(t,e){t.abstractOpen&&r!==(r=e.abstractOpen?"-":"+")&&T(i,r)},d(t){t&&y(e),o()}}}function ee(t){var e,n,i,a,o=t.publication.abstract+"";return{c(){e=k("div"),n=x(o),A(e,"class","abstract svelte-1ngptbi")},m(t,i){v(t,e,i),b(e,n),a=!0},p(t,e){a&&!t.publication||o===(o=e.publication.abstract+"")||T(n,o)},i(t){a||(U(()=>{i||(i=Z(e,Kt,{},!0)),i.run(1)}),a=!0)},o(t){i||(i=Z(e,Kt,{},!1)),i.run(0),a=!1},d(t){t&&(y(e),i&&i.end())}}}function ne(t){var e,n,i,a,o,r,s,c,l,u,d,h,p,m,f,g,$,C=t.publication.title+"";let j=t.keys,L=[];for(let e=0;e<j.length;e+=1)L[e]=Zt(Yt(t,j,e));let z=t.publication.links,M=[];for(let e=0;e<z.length;e+=1)M[e]=Xt(Jt(t,z,e));var I=t.publication.abstract&&te(t),D=t.abstractOpen&&ee(t);return{c(){e=k("div"),n=k("div"),i=k("div"),a=k("img"),s=S(),c=k("div"),l=k("a"),u=x(C),h=S();for(let t=0;t<L.length;t+=1)L[t].c();p=S(),m=k("div");for(let t=0;t<M.length;t+=1)M[t].c();f=S(),I&&I.c(),g=S(),D&&D.c(),A(a,"alt",o="image drawn from "+t.publication.title),A(a,"src",r=t.publication.imgLink),A(a,"class","svelte-1ngptbi"),A(i,"class","img-container svelte-1ngptbi"),A(l,"href",d=t.publication.link),A(m,"class","flex svelte-1ngptbi"),A(c,"class","flex-down svelte-1ngptbi"),A(n,"class","content-container svelte-1ngptbi"),A(e,"class","flex-down publication svelte-1ngptbi")},m(t,o){v(t,e,o),b(e,n),b(n,i),b(i,a),b(n,s),b(n,c),b(c,l),b(l,u),b(c,h);for(let t=0;t<L.length;t+=1)L[t].m(c,null);b(c,p),b(c,m);for(let t=0;t<M.length;t+=1)M[t].m(m,null);b(m,f),I&&I.m(m,null),b(e,g),D&&D.m(e,null),$=!0},p(t,n){if($&&!t.publication||o===(o="image drawn from "+n.publication.title)||A(a,"alt",o),$&&!t.publication||r===(r=n.publication.imgLink)||A(a,"src",r),$&&!t.publication||C===(C=n.publication.title+"")||T(u,C),$&&!t.publication||d===(d=n.publication.link)||A(l,"href",d),t.publication||t.keys){let e;for(j=n.keys,e=0;e<j.length;e+=1){const i=Yt(n,j,e);L[e]?L[e].p(t,i):(L[e]=Zt(i),L[e].c(),L[e].m(c,p))}for(;e<L.length;e+=1)L[e].d(1);L.length=j.length}if(t.publication){let e;for(z=n.publication.links,e=0;e<z.length;e+=1){const i=Jt(n,z,e);M[e]?M[e].p(t,i):(M[e]=Xt(i),M[e].c(),M[e].m(m,f))}for(;e<M.length;e+=1)M[e].d(1);M.length=z.length}n.publication.abstract?I?I.p(t,n):((I=te(n)).c(),I.m(m,null)):I&&(I.d(1),I=null),n.abstractOpen?D?(D.p(t,n),J(D,1)):((D=ee(n)).c(),J(D,1),D.m(e,null)):D&&(H(),Y(D,1,1,()=>{D=null}),K())},i(t){$||(J(D),$=!0)},o(t){Y(D),$=!1},d(t){t&&y(e),w(L,t),w(M,t),I&&I.d(),D&&D.d()}}}function ie(t,e,n){let{publication:i}=e,a=!1;return t.$set=(t=>{"publication"in t&&n("publication",i=t.publication)}),{publication:i,abstractOpen:a,toggleAbstract:function(t){t.preventDefault(),n("abstractOpen",a=!a)},keys:["subtitle","date","authors","journal"]}}class ae extends rt{constructor(t){super(),ot(this,t,ie,ne,s,["publication"])}}function oe(t,e,n){const i=Object.create(t);return i.publication=e[n],i}function re(t,e,n){const i=Object.create(t);return i.publication=e[n],i}function se(t,e,n){const i=Object.create(t);return i.publication=e[n],i}function ce(e){var n,i=new ae({props:{publication:e.publication}});return{c(){i.$$.fragment.c()},m(t,e){nt(i,t,e),n=!0},p:t,i(t){n||(J(i.$$.fragment,t),n=!0)},o(t){Y(i.$$.fragment,t),n=!1},d(t){it(i,t)}}}function le(e){var n,i=new ae({props:{publication:e.publication}});return{c(){i.$$.fragment.c()},m(t,e){nt(i,t,e),n=!0},p:t,i(t){n||(J(i.$$.fragment,t),n=!0)},o(t){Y(i.$$.fragment,t),n=!1},d(t){it(i,t)}}}function ue(e){var n,i=new ae({props:{publication:e.publication}});return{c(){i.$$.fragment.c()},m(t,e){nt(i,t,e),n=!0},p:t,i(t){n||(J(i.$$.fragment,t),n=!0)},o(t){Y(i.$$.fragment,t),n=!1},d(t){it(i,t)}}}function de(t){var e,n,i,a,o,r,s,c,l,u,d,h,p;let m=zt,f=[];for(let e=0;e<m.length;e+=1)f[e]=ce(se(t,m,e));const g=t=>Y(f[t],1,1,()=>{f[t]=null});let $=It,x=[];for(let e=0;e<$.length;e+=1)x[e]=le(re(t,$,e));const C=t=>Y(x[t],1,1,()=>{x[t]=null});let T=Mt,j=[];for(let e=0;e<T.length;e+=1)j[e]=ue(oe(t,T,e));const L=t=>Y(j[t],1,1,()=>{j[t]=null});return{c(){e=k("div"),(n=k("h1")).textContent="PUBLICATIONS",i=S(),a=k("div");for(let t=0;t<f.length;t+=1)f[t].c();o=S(),(r=k("h1")).textContent="BLOG POSTS",s=S(),c=k("div");for(let t=0;t<x.length;t+=1)x[t].c();l=S(),(u=k("h1")).textContent="Talks",d=S(),h=k("div");for(let t=0;t<j.length;t+=1)j[t].c();A(a,"class","research-section svelte-1w0h618"),A(c,"class","research-section svelte-1w0h618"),A(h,"class","research-section svelte-1w0h618")},m(t,m){v(t,e,m),b(e,n),b(e,i),b(e,a);for(let t=0;t<f.length;t+=1)f[t].m(a,null);b(e,o),b(e,r),b(e,s),b(e,c);for(let t=0;t<x.length;t+=1)x[t].m(c,null);b(e,l),b(e,u),b(e,d),b(e,h);for(let t=0;t<j.length;t+=1)j[t].m(h,null);p=!0},p(t,e){if(t.PUBLICATIONS){let n;for(m=zt,n=0;n<m.length;n+=1){const i=se(e,m,n);f[n]?(f[n].p(t,i),J(f[n],1)):(f[n]=ce(i),f[n].c(),J(f[n],1),f[n].m(a,null))}for(H(),n=m.length;n<f.length;n+=1)g(n);K()}if(t.BLOG_POSTS){let n;for($=It,n=0;n<$.length;n+=1){const i=re(e,$,n);x[n]?(x[n].p(t,i),J(x[n],1)):(x[n]=le(i),x[n].c(),J(x[n],1),x[n].m(c,null))}for(H(),n=$.length;n<x.length;n+=1)C(n);K()}if(t.PRESENTATIONS){let n;for(T=Mt,n=0;n<T.length;n+=1){const i=oe(e,T,n);j[n]?(j[n].p(t,i),J(j[n],1)):(j[n]=ue(i),j[n].c(),J(j[n],1),j[n].m(h,null))}for(H(),n=T.length;n<j.length;n+=1)L(n);K()}},i(t){if(!p){for(let t=0;t<m.length;t+=1)J(f[t]);for(let t=0;t<$.length;t+=1)J(x[t]);for(let t=0;t<T.length;t+=1)J(j[t]);p=!0}},o(t){f=f.filter(Boolean);for(let t=0;t<f.length;t+=1)Y(f[t]);x=x.filter(Boolean);for(let t=0;t<x.length;t+=1)Y(x[t]);j=j.filter(Boolean);for(let t=0;t<j.length;t+=1)Y(j[t]);p=!1},d(t){t&&y(e),w(f,t),w(x,t),w(j,t)}}}class he extends rt{constructor(t){super(),ot(this,t,null,de,s,[])}}function pe(t,e,n){const i=Object.create(t);return i.position=e[n],i}function me(t,e,n){const i=Object.create(t);return i.key=e[n],i}function fe(e){var n,i,a,o,r,s,c,l,u,d=`${e.position.fancyTitle||e.position.role}`+"",h=e.position.date+"",p=e.position.link&&function(e){var n,i,a=e.position.title+"";return{c(){n=k("a"),i=x(a),A(n,"href",e.position.link)},m(t,e){v(t,n,e),b(n,i)},p:t,d(t){t&&y(n)}}}(e),m=!e.position.link&&function(e){var n,i,a=e.position.title+"";return{c(){n=k("div"),i=x(a)},m(t,e){v(t,n,e),b(n,i)},p:t,d(t){t&&y(n)}}}(e);return{c(){n=k("div"),p&&p.c(),i=S(),m&&m.c(),a=S(),o=k("div"),r=k("i"),s=x(d),c=S(),l=k("span"),u=x(h),A(l,"class","margin-left svelte-15b5xf0"),A(o,"class","flex"),A(n,"class","margin-bottom svelte-15b5xf0")},m(t,e){v(t,n,e),p&&p.m(n,null),b(n,i),m&&m.m(n,null),b(n,a),b(n,o),b(o,r),b(r,s),b(o,c),b(o,l),b(l,u)},p(t,e){e.position.link&&p.p(t,e),e.position.link||m.p(t,e)},d(t){t&&y(n),p&&p.d(),m&&m.d()}}}function ge(t){var e,n,i,a,o,r=t.key.toUpperCase()+"";let s=t.groups[t.key],c=[];for(let e=0;e<s.length;e+=1)c[e]=fe(pe(t,s,e));return{c(){e=k("div"),n=k("h3"),i=x(r),a=S();for(let t=0;t<c.length;t+=1)c[t].c();o=S(),A(e,"class","margin-large-bottom svelte-15b5xf0")},m(t,r){v(t,e,r),b(e,n),b(n,i),b(e,a);for(let t=0;t<c.length;t+=1)c[t].m(e,null);b(e,o)},p(t,n){if(t.groups){let i;for(s=n.groups[n.key],i=0;i<s.length;i+=1){const a=pe(n,s,i);c[i]?c[i].p(t,a):(c[i]=fe(a),c[i].c(),c[i].m(e,o))}for(;i<c.length;i+=1)c[i].d(1);c.length=s.length}},d(t){t&&y(e),w(c,t)}}}function be(e){var n;let i=Object.keys(e.groups),a=[];for(let t=0;t<i.length;t+=1)a[t]=ge(me(e,i,t));return{c(){n=k("div");for(let t=0;t<a.length;t+=1)a[t].c()},m(t,e){v(t,n,e);for(let t=0;t<a.length;t+=1)a[t].m(n,null)},p(t,e){if(t.groups){let o;for(i=Object.keys(e.groups),o=0;o<i.length;o+=1){const r=me(e,i,o);a[o]?a[o].p(t,r):(a[o]=ge(r),a[o].c(),a[o].m(n,null))}for(;o<a.length;o+=1)a[o].d(1);a.length=i.length}},i:t,o:t,d(t){t&&y(n),w(a,t)}}}function ve(t){const e=ut(Et,"role");return console.log(e),{groups:e}}class ye extends rt{constructor(t){super(),ot(this,t,ve,be,s,[])}}function we(t){var e,n=new _t({});return{c(){n.$$.fragment.c()},m(t,i){nt(n,t,i),e=!0},i(t){e||(J(n.$$.fragment,t),e=!0)},o(t){Y(n.$$.fragment,t),e=!1},d(t){it(n,t)}}}function ke(t){var e,n=new ye({});return{c(){n.$$.fragment.c()},m(t,i){nt(n,t,i),e=!0},i(t){e||(J(n.$$.fragment,t),e=!0)},o(t){Y(n.$$.fragment,t),e=!1},d(t){it(n,t)}}}function $e(t){var e,n=new Ht({});return{c(){n.$$.fragment.c()},m(t,i){nt(n,t,i),e=!0},i(t){e||(J(n.$$.fragment,t),e=!0)},o(t){Y(n.$$.fragment,t),e=!1},d(t){it(n,t)}}}function xe(t){var e,n=new he({});return{c(){n.$$.fragment.c()},m(t,i){nt(n,t,i),e=!0},i(t){e||(J(n.$$.fragment,t),e=!0)},o(t){Y(n.$$.fragment,t),e=!1},d(t){it(n,t)}}}function Se(t){var e,n,i,a,o,r,s,c,l,u,d,h=new At({props:{currentSection:t.currentSection}}),p=new ft({props:{currentSection:t.currentSection}}),m=[xe,$e,ke,we],f=[];function g(t,e){return"research"===e.currentSection?0:"projects"===e.currentSection?1:"teaching"===e.currentSection?2:3}return l=g(0,t),u=f[l]=m[l](t),{c(){e=k("div"),(n=k("div")).innerHTML='<div class="info-container svelte-eyk0im"><h1 class="svelte-eyk0im">ANDREW</h1> <h1 class="svelte-eyk0im">MCNUTT</h1> <h3 class="svelte-eyk0im">VISUALIZATION</h3> <div><a href="https://github.com/mcnuttandrew" class="svelte-eyk0im">GITHUB</a> <a href="https://twitter.com/_mcnutt_" class="svelte-eyk0im">TWITTER</a> <a href="https://www.mcnutt.in/assets/resume.pdf" class="svelte-eyk0im">CV</a></div></div>',i=S(),a=k("div"),h.$$.fragment.c(),o=S(),r=k("div"),p.$$.fragment.c(),s=S(),c=k("div"),u.c(),A(n,"class","left-panel flex-down svelte-eyk0im"),A(c,"class","content-wrapper svelte-eyk0im"),A(r,"class","right-panel svelte-eyk0im"),A(a,"class","flex-down full-width svelte-eyk0im"),A(e,"class","flex full-height svelte-eyk0im")},m(t,u){v(t,e,u),b(e,n),b(e,i),b(e,a),nt(h,a,null),b(a,o),b(a,r),nt(p,r,null),b(r,s),b(r,c),f[l].m(c,null),d=!0},p(t,e){var n={};t.currentSection&&(n.currentSection=e.currentSection),h.$set(n);var i={};t.currentSection&&(i.currentSection=e.currentSection),p.$set(i);var a=l;(l=g(0,e))!==a&&(H(),Y(f[a],1,1,()=>{f[a]=null}),K(),(u=f[l])||(u=f[l]=m[l](e)).c(),J(u,1),u.m(c,null))},i(t){d||(J(h.$$.fragment,t),J(p.$$.fragment,t),J(u),d=!0)},o(t){Y(h.$$.fragment,t),Y(p.$$.fragment,t),Y(u),d=!1},d(t){t&&y(e),it(h),it(p),f[l].d()}}}function Ce(t,e,n){let i=lt();return window.onhashchange=(()=>{n("currentSection",i=lt()),console.log(i)}),{currentSection:i}}return new class extends rt{constructor(t){super(),ot(this,t,Ce,Se,s,[])}}({target:document.body})}();
+
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.head.appendChild(r) })(document);
+var app = (function () {
+    'use strict';
+
+    function noop() { }
+    const identity = x => x;
+    function assign(tar, src) {
+        // @ts-ignore
+        for (const k in src)
+            tar[k] = src[k];
+        return tar;
+    }
+    function add_location(element, file, line, column, char) {
+        element.__svelte_meta = {
+            loc: { file, line, column, char }
+        };
+    }
+    function run(fn) {
+        return fn();
+    }
+    function blank_object() {
+        return Object.create(null);
+    }
+    function run_all(fns) {
+        fns.forEach(run);
+    }
+    function is_function(thing) {
+        return typeof thing === 'function';
+    }
+    function safe_not_equal(a, b) {
+        return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
+    }
+    function validate_store(store, name) {
+        if (!store || typeof store.subscribe !== 'function') {
+            throw new Error(`'${name}' is not a store with a 'subscribe' method`);
+        }
+    }
+    function subscribe(store, callback) {
+        const unsub = store.subscribe(callback);
+        return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+    }
+    function component_subscribe(component, store, callback) {
+        component.$$.on_destroy.push(subscribe(store, callback));
+    }
+    function null_to_empty(value) {
+        return value == null ? '' : value;
+    }
+
+    const is_client = typeof window !== 'undefined';
+    let now = is_client
+        ? () => window.performance.now()
+        : () => Date.now();
+    let raf = is_client ? cb => requestAnimationFrame(cb) : noop;
+
+    const tasks = new Set();
+    let running = false;
+    function run_tasks() {
+        tasks.forEach(task => {
+            if (!task[0](now())) {
+                tasks.delete(task);
+                task[1]();
+            }
+        });
+        running = tasks.size > 0;
+        if (running)
+            raf(run_tasks);
+    }
+    function loop(fn) {
+        let task;
+        if (!running) {
+            running = true;
+            raf(run_tasks);
+        }
+        return {
+            promise: new Promise(fulfil => {
+                tasks.add(task = [fn, fulfil]);
+            }),
+            abort() {
+                tasks.delete(task);
+            }
+        };
+    }
+
+    function append(target, node) {
+        target.appendChild(node);
+    }
+    function insert(target, node, anchor) {
+        target.insertBefore(node, anchor || null);
+    }
+    function detach(node) {
+        node.parentNode.removeChild(node);
+    }
+    function destroy_each(iterations, detaching) {
+        for (let i = 0; i < iterations.length; i += 1) {
+            if (iterations[i])
+                iterations[i].d(detaching);
+        }
+    }
+    function element(name) {
+        return document.createElement(name);
+    }
+    function svg_element(name) {
+        return document.createElementNS('http://www.w3.org/2000/svg', name);
+    }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
+    }
+    function empty() {
+        return text('');
+    }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
+    function attr(node, attribute, value) {
+        if (value == null)
+            node.removeAttribute(attribute);
+        else
+            node.setAttribute(attribute, value);
+    }
+    function children(element) {
+        return Array.from(element.childNodes);
+    }
+    function custom_event(type, detail) {
+        const e = document.createEvent('CustomEvent');
+        e.initCustomEvent(type, false, false, detail);
+        return e;
+    }
+
+    let stylesheet;
+    let active = 0;
+    let current_rules = {};
+    // https://github.com/darkskyapp/string-hash/blob/master/index.js
+    function hash(str) {
+        let hash = 5381;
+        let i = str.length;
+        while (i--)
+            hash = ((hash << 5) - hash) ^ str.charCodeAt(i);
+        return hash >>> 0;
+    }
+    function create_rule(node, a, b, duration, delay, ease, fn, uid = 0) {
+        const step = 16.666 / duration;
+        let keyframes = '{\n';
+        for (let p = 0; p <= 1; p += step) {
+            const t = a + (b - a) * ease(p);
+            keyframes += p * 100 + `%{${fn(t, 1 - t)}}\n`;
+        }
+        const rule = keyframes + `100% {${fn(b, 1 - b)}}\n}`;
+        const name = `__svelte_${hash(rule)}_${uid}`;
+        if (!current_rules[name]) {
+            if (!stylesheet) {
+                const style = element('style');
+                document.head.appendChild(style);
+                stylesheet = style.sheet;
+            }
+            current_rules[name] = true;
+            stylesheet.insertRule(`@keyframes ${name} ${rule}`, stylesheet.cssRules.length);
+        }
+        const animation = node.style.animation || '';
+        node.style.animation = `${animation ? `${animation}, ` : ``}${name} ${duration}ms linear ${delay}ms 1 both`;
+        active += 1;
+        return name;
+    }
+    function delete_rule(node, name) {
+        node.style.animation = (node.style.animation || '')
+            .split(', ')
+            .filter(name
+            ? anim => anim.indexOf(name) < 0 // remove specific animation
+            : anim => anim.indexOf('__svelte') === -1 // remove all Svelte animations
+        )
+            .join(', ');
+        if (name && !--active)
+            clear_rules();
+    }
+    function clear_rules() {
+        raf(() => {
+            if (active)
+                return;
+            let i = stylesheet.cssRules.length;
+            while (i--)
+                stylesheet.deleteRule(i);
+            current_rules = {};
+        });
+    }
+
+    let current_component;
+    function set_current_component(component) {
+        current_component = component;
+    }
+
+    const dirty_components = [];
+    const binding_callbacks = [];
+    const render_callbacks = [];
+    const flush_callbacks = [];
+    const resolved_promise = Promise.resolve();
+    let update_scheduled = false;
+    function schedule_update() {
+        if (!update_scheduled) {
+            update_scheduled = true;
+            resolved_promise.then(flush);
+        }
+    }
+    function add_render_callback(fn) {
+        render_callbacks.push(fn);
+    }
+    function flush() {
+        const seen_callbacks = new Set();
+        do {
+            // first, call beforeUpdate functions
+            // and update components
+            while (dirty_components.length) {
+                const component = dirty_components.shift();
+                set_current_component(component);
+                update(component.$$);
+            }
+            while (binding_callbacks.length)
+                binding_callbacks.pop()();
+            // then, once components are updated, call
+            // afterUpdate functions. This may cause
+            // subsequent updates...
+            for (let i = 0; i < render_callbacks.length; i += 1) {
+                const callback = render_callbacks[i];
+                if (!seen_callbacks.has(callback)) {
+                    callback();
+                    // ...so guard against infinite loops
+                    seen_callbacks.add(callback);
+                }
+            }
+            render_callbacks.length = 0;
+        } while (dirty_components.length);
+        while (flush_callbacks.length) {
+            flush_callbacks.pop()();
+        }
+        update_scheduled = false;
+    }
+    function update($$) {
+        if ($$.fragment) {
+            $$.update($$.dirty);
+            run_all($$.before_update);
+            $$.fragment.p($$.dirty, $$.ctx);
+            $$.dirty = null;
+            $$.after_update.forEach(add_render_callback);
+        }
+    }
+
+    let promise;
+    function wait() {
+        if (!promise) {
+            promise = Promise.resolve();
+            promise.then(() => {
+                promise = null;
+            });
+        }
+        return promise;
+    }
+    function dispatch(node, direction, kind) {
+        node.dispatchEvent(custom_event(`${direction ? 'intro' : 'outro'}${kind}`));
+    }
+    const outroing = new Set();
+    let outros;
+    function group_outros() {
+        outros = {
+            r: 0,
+            c: [],
+            p: outros // parent group
+        };
+    }
+    function check_outros() {
+        if (!outros.r) {
+            run_all(outros.c);
+        }
+        outros = outros.p;
+    }
+    function transition_in(block, local) {
+        if (block && block.i) {
+            outroing.delete(block);
+            block.i(local);
+        }
+    }
+    function transition_out(block, local, detach, callback) {
+        if (block && block.o) {
+            if (outroing.has(block))
+                return;
+            outroing.add(block);
+            outros.c.push(() => {
+                outroing.delete(block);
+                if (callback) {
+                    if (detach)
+                        block.d(1);
+                    callback();
+                }
+            });
+            block.o(local);
+        }
+    }
+    const null_transition = { duration: 0 };
+    function create_bidirectional_transition(node, fn, params, intro) {
+        let config = fn(node, params);
+        let t = intro ? 0 : 1;
+        let running_program = null;
+        let pending_program = null;
+        let animation_name = null;
+        function clear_animation() {
+            if (animation_name)
+                delete_rule(node, animation_name);
+        }
+        function init(program, duration) {
+            const d = program.b - t;
+            duration *= Math.abs(d);
+            return {
+                a: t,
+                b: program.b,
+                d,
+                duration,
+                start: program.start,
+                end: program.start + duration,
+                group: program.group
+            };
+        }
+        function go(b) {
+            const { delay = 0, duration = 300, easing = identity, tick = noop, css } = config || null_transition;
+            const program = {
+                start: now() + delay,
+                b
+            };
+            if (!b) {
+                // @ts-ignore todo: improve typings
+                program.group = outros;
+                outros.r += 1;
+            }
+            if (running_program) {
+                pending_program = program;
+            }
+            else {
+                // if this is an intro, and there's a delay, we need to do
+                // an initial tick and/or apply CSS animation immediately
+                if (css) {
+                    clear_animation();
+                    animation_name = create_rule(node, t, b, duration, delay, easing, css);
+                }
+                if (b)
+                    tick(0, 1);
+                running_program = init(program, duration);
+                add_render_callback(() => dispatch(node, b, 'start'));
+                loop(now => {
+                    if (pending_program && now > pending_program.start) {
+                        running_program = init(pending_program, duration);
+                        pending_program = null;
+                        dispatch(node, running_program.b, 'start');
+                        if (css) {
+                            clear_animation();
+                            animation_name = create_rule(node, t, running_program.b, running_program.duration, 0, easing, config.css);
+                        }
+                    }
+                    if (running_program) {
+                        if (now >= running_program.end) {
+                            tick(t = running_program.b, 1 - t);
+                            dispatch(node, running_program.b, 'end');
+                            if (!pending_program) {
+                                // we're done
+                                if (running_program.b) {
+                                    // intro — we can tidy up immediately
+                                    clear_animation();
+                                }
+                                else {
+                                    // outro — needs to be coordinated
+                                    if (!--running_program.group.r)
+                                        run_all(running_program.group.c);
+                                }
+                            }
+                            running_program = null;
+                        }
+                        else if (now >= running_program.start) {
+                            const p = now - running_program.start;
+                            t = running_program.a + running_program.d * easing(p / running_program.duration);
+                            tick(t, 1 - t);
+                        }
+                    }
+                    return !!(running_program || pending_program);
+                });
+            }
+        }
+        return {
+            run(b) {
+                if (is_function(config)) {
+                    wait().then(() => {
+                        // @ts-ignore
+                        config = config();
+                        go(b);
+                    });
+                }
+                else {
+                    go(b);
+                }
+            },
+            end() {
+                clear_animation();
+                running_program = pending_program = null;
+            }
+        };
+    }
+
+    const globals = (typeof window !== 'undefined' ? window : global);
+
+    function destroy_block(block, lookup) {
+        block.d(1);
+        lookup.delete(block.key);
+    }
+    function update_keyed_each(old_blocks, changed, get_key, dynamic, ctx, list, lookup, node, destroy, create_each_block, next, get_context) {
+        let o = old_blocks.length;
+        let n = list.length;
+        let i = o;
+        const old_indexes = {};
+        while (i--)
+            old_indexes[old_blocks[i].key] = i;
+        const new_blocks = [];
+        const new_lookup = new Map();
+        const deltas = new Map();
+        i = n;
+        while (i--) {
+            const child_ctx = get_context(ctx, list, i);
+            const key = get_key(child_ctx);
+            let block = lookup.get(key);
+            if (!block) {
+                block = create_each_block(key, child_ctx);
+                block.c();
+            }
+            else if (dynamic) {
+                block.p(changed, child_ctx);
+            }
+            new_lookup.set(key, new_blocks[i] = block);
+            if (key in old_indexes)
+                deltas.set(key, Math.abs(i - old_indexes[key]));
+        }
+        const will_move = new Set();
+        const did_move = new Set();
+        function insert(block) {
+            transition_in(block, 1);
+            block.m(node, next);
+            lookup.set(block.key, block);
+            next = block.first;
+            n--;
+        }
+        while (o && n) {
+            const new_block = new_blocks[n - 1];
+            const old_block = old_blocks[o - 1];
+            const new_key = new_block.key;
+            const old_key = old_block.key;
+            if (new_block === old_block) {
+                // do nothing
+                next = new_block.first;
+                o--;
+                n--;
+            }
+            else if (!new_lookup.has(old_key)) {
+                // remove old block
+                destroy(old_block, lookup);
+                o--;
+            }
+            else if (!lookup.has(new_key) || will_move.has(new_key)) {
+                insert(new_block);
+            }
+            else if (did_move.has(old_key)) {
+                o--;
+            }
+            else if (deltas.get(new_key) > deltas.get(old_key)) {
+                did_move.add(new_key);
+                insert(new_block);
+            }
+            else {
+                will_move.add(old_key);
+                o--;
+            }
+        }
+        while (o--) {
+            const old_block = old_blocks[o];
+            if (!new_lookup.has(old_block.key))
+                destroy(old_block, lookup);
+        }
+        while (n)
+            insert(new_blocks[n - 1]);
+        return new_blocks;
+    }
+    function mount_component(component, target, anchor) {
+        const { fragment, on_mount, on_destroy, after_update } = component.$$;
+        fragment.m(target, anchor);
+        // onMount happens before the initial afterUpdate
+        add_render_callback(() => {
+            const new_on_destroy = on_mount.map(run).filter(is_function);
+            if (on_destroy) {
+                on_destroy.push(...new_on_destroy);
+            }
+            else {
+                // Edge case - component was destroyed immediately,
+                // most likely as a result of a binding initialising
+                run_all(new_on_destroy);
+            }
+            component.$$.on_mount = [];
+        });
+        after_update.forEach(add_render_callback);
+    }
+    function destroy_component(component, detaching) {
+        if (component.$$.fragment) {
+            run_all(component.$$.on_destroy);
+            component.$$.fragment.d(detaching);
+            // TODO null out other refs, including component.$$ (but need to
+            // preserve final state?)
+            component.$$.on_destroy = component.$$.fragment = null;
+            component.$$.ctx = {};
+        }
+    }
+    function make_dirty(component, key) {
+        if (!component.$$.dirty) {
+            dirty_components.push(component);
+            schedule_update();
+            component.$$.dirty = blank_object();
+        }
+        component.$$.dirty[key] = true;
+    }
+    function init(component, options, instance, create_fragment, not_equal, prop_names) {
+        const parent_component = current_component;
+        set_current_component(component);
+        const props = options.props || {};
+        const $$ = component.$$ = {
+            fragment: null,
+            ctx: null,
+            // state
+            props: prop_names,
+            update: noop,
+            not_equal,
+            bound: blank_object(),
+            // lifecycle
+            on_mount: [],
+            on_destroy: [],
+            before_update: [],
+            after_update: [],
+            context: new Map(parent_component ? parent_component.$$.context : []),
+            // everything else
+            callbacks: blank_object(),
+            dirty: null
+        };
+        let ready = false;
+        $$.ctx = instance
+            ? instance(component, props, (key, ret, value = ret) => {
+                if ($$.ctx && not_equal($$.ctx[key], $$.ctx[key] = value)) {
+                    if ($$.bound[key])
+                        $$.bound[key](value);
+                    if (ready)
+                        make_dirty(component, key);
+                }
+                return ret;
+            })
+            : props;
+        $$.update();
+        ready = true;
+        run_all($$.before_update);
+        $$.fragment = create_fragment($$.ctx);
+        if (options.target) {
+            if (options.hydrate) {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment.l(children(options.target));
+            }
+            else {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment.c();
+            }
+            if (options.intro)
+                transition_in(component.$$.fragment);
+            mount_component(component, options.target, options.anchor);
+            flush();
+        }
+        set_current_component(parent_component);
+    }
+    class SvelteComponent {
+        $destroy() {
+            destroy_component(this, 1);
+            this.$destroy = noop;
+        }
+        $on(type, callback) {
+            const callbacks = (this.$$.callbacks[type] || (this.$$.callbacks[type] = []));
+            callbacks.push(callback);
+            return () => {
+                const index = callbacks.indexOf(callback);
+                if (index !== -1)
+                    callbacks.splice(index, 1);
+            };
+        }
+        $set() {
+            // overridden by instance, if it has props
+        }
+    }
+
+    function dispatch_dev(type, detail) {
+        document.dispatchEvent(custom_event(type, detail));
+    }
+    function append_dev(target, node) {
+        dispatch_dev("SvelteDOMInsert", { target, node });
+        append(target, node);
+    }
+    function insert_dev(target, node, anchor) {
+        dispatch_dev("SvelteDOMInsert", { target, node, anchor });
+        insert(target, node, anchor);
+    }
+    function detach_dev(node) {
+        dispatch_dev("SvelteDOMRemove", { node });
+        detach(node);
+    }
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation) {
+        const modifiers = options === true ? ["capture"] : options ? Array.from(Object.keys(options)) : [];
+        if (has_prevent_default)
+            modifiers.push('preventDefault');
+        if (has_stop_propagation)
+            modifiers.push('stopPropagation');
+        dispatch_dev("SvelteDOMAddEventListener", { node, event, handler, modifiers });
+        const dispose = listen(node, event, handler, options);
+        return () => {
+            dispatch_dev("SvelteDOMRemoveEventListener", { node, event, handler, modifiers });
+            dispose();
+        };
+    }
+    function attr_dev(node, attribute, value) {
+        attr(node, attribute, value);
+        if (value == null)
+            dispatch_dev("SvelteDOMRemoveAttribute", { node, attribute });
+        else
+            dispatch_dev("SvelteDOMSetAttribute", { node, attribute, value });
+    }
+    function set_data_dev(text, data) {
+        data = '' + data;
+        if (text.data === data)
+            return;
+        dispatch_dev("SvelteDOMSetData", { node: text, data });
+        text.data = data;
+    }
+    class SvelteComponentDev extends SvelteComponent {
+        constructor(options) {
+            if (!options || (!options.target && !options.$$inline)) {
+                throw new Error(`'target' is a required option`);
+            }
+            super();
+        }
+        $destroy() {
+            super.$destroy();
+            this.$destroy = () => {
+                console.warn(`Component was already destroyed`); // eslint-disable-line no-console
+            };
+        }
+    }
+
+    function classnames(classObject) {
+      return Object.keys(classObject)
+        .filter(name => classObject[name])
+        .join(' ');
+    }
+
+    const routes = new Set(['research', 'projects', 'about', 'teaching']);
+    function getRoute() {
+      const locationSplit = location.href.split('/');
+      const naiveLocation = locationSplit[locationSplit.length - 1].toLowerCase();
+      return routes.has(naiveLocation) ? naiveLocation : 'about';
+    }
+
+    function groupBy(data, key) {
+      return data.reduce((acc, row) => {
+        acc[row[key]] = (acc[row[key]] || []).concat(row);
+        return acc;
+      }, {});
+    }
+
+    /* src/components/Header.svelte generated by Svelte v3.12.1 */
+
+    const file = "src/components/Header.svelte";
+
+    function get_each_context(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.section = list[i];
+    	return child_ctx;
+    }
+
+    // (31:4) {#each ['about', 'projects', 'research', 'teaching'] as section (section)}
+    function create_each_block(key_1, ctx) {
+    	var a, t0_value = ctx.section.toUpperCase() + "", t0, t1, a_class_value;
+
+    	const block = {
+    		key: key_1,
+
+    		first: null,
+
+    		c: function create() {
+    			a = element("a");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			attr_dev(a, "href", "/#/" + ctx.section);
+    			attr_dev(a, "class", a_class_value = "" + null_to_empty(classnames({
+              selected: ctx.currentSection === ctx.section,
+              padding: true
+            })) + " svelte-6z6hfq");
+    			add_location(a, file, 31, 6, 531);
+    			this.first = a;
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, a, anchor);
+    			append_dev(a, t0);
+    			append_dev(a, t1);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.currentSection) && a_class_value !== (a_class_value = "" + null_to_empty(classnames({
+              selected: ctx.currentSection === ctx.section,
+              padding: true
+            })) + " svelte-6z6hfq")) {
+    				attr_dev(a, "class", a_class_value);
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(a);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block.name, type: "each", source: "(31:4) {#each ['about', 'projects', 'research', 'teaching'] as section (section)}", ctx });
+    	return block;
+    }
+
+    function create_fragment(ctx) {
+    	var div1, div0, each_blocks = [], each_1_lookup = new Map();
+
+    	let each_value = ['about', 'projects', 'research', 'teaching'];
+
+    	const get_key = ctx => ctx.section;
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		let child_ctx = get_each_context(ctx, each_value, i);
+    		let key = get_key(child_ctx);
+    		each_1_lookup.set(key, each_blocks[i] = create_each_block(key, child_ctx));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div1 = element("div");
+    			div0 = element("div");
+
+    			for (let i = 0; i < 4; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div0, "class", "flex");
+    			add_location(div0, file, 29, 2, 427);
+    			attr_dev(div1, "class", "flex-down bar align header svelte-6z6hfq");
+    			add_location(div1, file, 28, 0, 384);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+
+    			for (let i = 0; i < 4; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
+    		},
+
+    		p: function update(changed, ctx) {
+    			const each_value = ['about', 'projects', 'research', 'teaching'];
+    			each_blocks = update_keyed_each(each_blocks, changed, get_key, 1, ctx, each_value, each_1_lookup, div0, destroy_block, create_each_block, null, get_each_context);
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div1);
+    			}
+
+    			for (let i = 0; i < 4; i += 1) {
+    				each_blocks[i].d();
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance($$self, $$props, $$invalidate) {
+    	let { currentSection } = $$props;
+
+    	const writable_props = ['currentSection'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Header> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('currentSection' in $$props) $$invalidate('currentSection', currentSection = $$props.currentSection);
+    	};
+
+    	$$self.$capture_state = () => {
+    		return { currentSection };
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('currentSection' in $$props) $$invalidate('currentSection', currentSection = $$props.currentSection);
+    	};
+
+    	return { currentSection };
+    }
+
+    class Header extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance, create_fragment, safe_not_equal, ["currentSection"]);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Header", options, id: create_fragment.name });
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.currentSection === undefined && !('currentSection' in props)) {
+    			console.warn("<Header> was created without expected prop 'currentSection'");
+    		}
+    	}
+
+    	get currentSection() {
+    		throw new Error("<Header>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set currentSection(value) {
+    		throw new Error("<Header>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    const subscriber_queue = [];
+    /**
+     * Create a `Writable` store that allows both updating and reading by subscription.
+     * @param {*=}value initial value
+     * @param {StartStopNotifier=}start start and stop notifications for subscriptions
+     */
+    function writable(value, start = noop) {
+        let stop;
+        const subscribers = [];
+        function set(new_value) {
+            if (safe_not_equal(value, new_value)) {
+                value = new_value;
+                if (stop) { // store is ready
+                    const run_queue = !subscriber_queue.length;
+                    for (let i = 0; i < subscribers.length; i += 1) {
+                        const s = subscribers[i];
+                        s[1]();
+                        subscriber_queue.push(s, value);
+                    }
+                    if (run_queue) {
+                        for (let i = 0; i < subscriber_queue.length; i += 2) {
+                            subscriber_queue[i][0](subscriber_queue[i + 1]);
+                        }
+                        subscriber_queue.length = 0;
+                    }
+                }
+            }
+        }
+        function update(fn) {
+            set(fn(value));
+        }
+        function subscribe(run, invalidate = noop) {
+            const subscriber = [run, invalidate];
+            subscribers.push(subscriber);
+            if (subscribers.length === 1) {
+                stop = start(set) || noop;
+            }
+            run(value);
+            return () => {
+                const index = subscribers.indexOf(subscriber);
+                if (index !== -1) {
+                    subscribers.splice(index, 1);
+                }
+                if (subscribers.length === 0) {
+                    stop();
+                    stop = null;
+                }
+            };
+        }
+        return { set, update, subscribe };
+    }
+
+    function cubicOut(t) {
+        const f = t - 1.0;
+        return f * f * f + 1.0;
+    }
+
+    function is_date(obj) {
+        return Object.prototype.toString.call(obj) === '[object Date]';
+    }
+
+    function get_interpolator(a, b) {
+        if (a === b || a !== a)
+            return () => a;
+        const type = typeof a;
+        if (type !== typeof b || Array.isArray(a) !== Array.isArray(b)) {
+            throw new Error('Cannot interpolate values of different type');
+        }
+        if (Array.isArray(a)) {
+            const arr = b.map((bi, i) => {
+                return get_interpolator(a[i], bi);
+            });
+            return t => arr.map(fn => fn(t));
+        }
+        if (type === 'object') {
+            if (!a || !b)
+                throw new Error('Object cannot be null');
+            if (is_date(a) && is_date(b)) {
+                a = a.getTime();
+                b = b.getTime();
+                const delta = b - a;
+                return t => new Date(a + t * delta);
+            }
+            const keys = Object.keys(b);
+            const interpolators = {};
+            keys.forEach(key => {
+                interpolators[key] = get_interpolator(a[key], b[key]);
+            });
+            return t => {
+                const result = {};
+                keys.forEach(key => {
+                    result[key] = interpolators[key](t);
+                });
+                return result;
+            };
+        }
+        if (type === 'number') {
+            const delta = b - a;
+            return t => a + t * delta;
+        }
+        throw new Error(`Cannot interpolate ${type} values`);
+    }
+    function tweened(value, defaults = {}) {
+        const store = writable(value);
+        let task;
+        let target_value = value;
+        function set(new_value, opts) {
+            target_value = new_value;
+            let previous_task = task;
+            let started = false;
+            let { delay = 0, duration = 400, easing = identity, interpolate = get_interpolator } = assign(assign({}, defaults), opts);
+            const start = now() + delay;
+            let fn;
+            task = loop(now => {
+                if (now < start)
+                    return true;
+                if (!started) {
+                    fn = interpolate(value, new_value);
+                    if (typeof duration === 'function')
+                        duration = duration(value, new_value);
+                    started = true;
+                }
+                if (previous_task) {
+                    previous_task.abort();
+                    previous_task = null;
+                }
+                const elapsed = now - start;
+                if (elapsed > duration) {
+                    store.set(value = new_value);
+                    return false;
+                }
+                // @ts-ignore
+                store.set(value = fn(easing(elapsed / duration)));
+                return true;
+            });
+            return task.promise;
+        }
+        return {
+            set,
+            update: (fn, opts) => set(fn(target_value, value), opts),
+            subscribe: store.subscribe
+        };
+    }
+
+    /* src/components/MobileHeader.svelte generated by Svelte v3.12.1 */
+
+    const file$1 = "src/components/MobileHeader.svelte";
+
+    function get_each_context$1(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.section = list[i];
+    	return child_ctx;
+    }
+
+    // (66:2) {#if open}
+    function create_if_block(ctx) {
+    	var div, each_blocks = [], each_1_lookup = new Map();
+
+    	let each_value = ['about', 'projects', 'research', 'teaching'];
+
+    	const get_key = ctx => ctx.section;
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		let child_ctx = get_each_context$1(ctx, each_value, i);
+    		let key = get_key(child_ctx);
+    		each_1_lookup.set(key, each_blocks[i] = create_each_block$1(key, child_ctx));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+
+    			for (let i = 0; i < 4; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div, "class", "flex-down margin-bottom svelte-hz9bf5");
+    			add_location(div, file$1, 66, 4, 1292);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+
+    			for (let i = 0; i < 4; i += 1) {
+    				each_blocks[i].m(div, null);
+    			}
+    		},
+
+    		p: function update(changed, ctx) {
+    			const each_value = ['about', 'projects', 'research', 'teaching'];
+    			each_blocks = update_keyed_each(each_blocks, changed, get_key, 1, ctx, each_value, each_1_lookup, div, destroy_block, create_each_block$1, null, get_each_context$1);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div);
+    			}
+
+    			for (let i = 0; i < 4; i += 1) {
+    				each_blocks[i].d();
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block.name, type: "if", source: "(66:2) {#if open}", ctx });
+    	return block;
+    }
+
+    // (68:6) {#each ['about', 'projects', 'research', 'teaching'] as section (section)}
+    function create_each_block$1(key_1, ctx) {
+    	var a, t0_value = ctx.section.toUpperCase() + "", t0, t1, a_class_value;
+
+    	const block = {
+    		key: key_1,
+
+    		first: null,
+
+    		c: function create() {
+    			a = element("a");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			attr_dev(a, "href", "/#/" + ctx.section);
+    			attr_dev(a, "class", a_class_value = "" + null_to_empty(classnames({
+                selected: ctx.currentSection === ctx.section,
+                padding: true
+              })) + " svelte-hz9bf5");
+    			add_location(a, file$1, 68, 8, 1419);
+    			this.first = a;
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, a, anchor);
+    			append_dev(a, t0);
+    			append_dev(a, t1);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.currentSection) && a_class_value !== (a_class_value = "" + null_to_empty(classnames({
+                selected: ctx.currentSection === ctx.section,
+                padding: true
+              })) + " svelte-hz9bf5")) {
+    				attr_dev(a, "class", a_class_value);
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(a);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$1.name, type: "each", source: "(68:6) {#each ['about', 'projects', 'research', 'teaching'] as section (section)}", ctx });
+    	return block;
+    }
+
+    function create_fragment$1(ctx) {
+    	var div2, div1, h3, t1, div0, svg, rect0, rect1, rect2, svg_transform_value, t2, dispose;
+
+    	var if_block = (ctx.open) && create_if_block(ctx);
+
+    	const block = {
+    		c: function create() {
+    			div2 = element("div");
+    			div1 = element("div");
+    			h3 = element("h3");
+    			h3.textContent = "Andrew McNutt";
+    			t1 = space();
+    			div0 = element("div");
+    			svg = svg_element("svg");
+    			rect0 = svg_element("rect");
+    			rect1 = svg_element("rect");
+    			rect2 = svg_element("rect");
+    			t2 = space();
+    			if (if_block) if_block.c();
+    			add_location(h3, file$1, 56, 4, 984);
+    			attr_dev(rect0, "x", "0");
+    			attr_dev(rect0, "y", "0");
+    			attr_dev(rect0, "width", "25");
+    			attr_dev(rect0, "height", "3");
+    			add_location(rect0, file$1, 59, 8, 1096);
+    			attr_dev(rect1, "x", "0");
+    			attr_dev(rect1, "y", "7");
+    			attr_dev(rect1, "width", "25");
+    			attr_dev(rect1, "height", "3");
+    			add_location(rect1, file$1, 60, 8, 1147);
+    			attr_dev(rect2, "x", "0");
+    			attr_dev(rect2, "y", "14");
+    			attr_dev(rect2, "width", "25");
+    			attr_dev(rect2, "height", "3");
+    			add_location(rect2, file$1, 61, 8, 1198);
+    			attr_dev(svg, "transform", svg_transform_value = "rotate(" + ctx.$rotation + ")");
+    			attr_dev(svg, "width", "25px");
+    			attr_dev(svg, "height", "21px");
+    			add_location(svg, file$1, 58, 6, 1023);
+    			add_location(div0, file$1, 57, 4, 1011);
+    			attr_dev(div1, "class", "flex align svelte-hz9bf5");
+    			add_location(div1, file$1, 55, 2, 931);
+    			attr_dev(div2, "class", "flex-down bar header svelte-hz9bf5");
+    			add_location(div2, file$1, 54, 0, 894);
+    			dispose = listen_dev(div1, "click", ctx.toggleHeader);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div1);
+    			append_dev(div1, h3);
+    			append_dev(div1, t1);
+    			append_dev(div1, div0);
+    			append_dev(div0, svg);
+    			append_dev(svg, rect0);
+    			append_dev(svg, rect1);
+    			append_dev(svg, rect2);
+    			append_dev(div2, t2);
+    			if (if_block) if_block.m(div2, null);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.$rotation) && svg_transform_value !== (svg_transform_value = "rotate(" + ctx.$rotation + ")")) {
+    				attr_dev(svg, "transform", svg_transform_value);
+    			}
+
+    			if (ctx.open) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    				} else {
+    					if_block = create_if_block(ctx);
+    					if_block.c();
+    					if_block.m(div2, null);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div2);
+    			}
+
+    			if (if_block) if_block.d();
+    			dispose();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$1.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$1($$self, $$props, $$invalidate) {
+    	let $rotation;
+
+    	
+
+      const rotation = tweened(0, {
+        duration: 400,
+        easing: cubicOut
+      }); validate_store(rotation, 'rotation'); component_subscribe($$self, rotation, $$value => { $rotation = $$value; $$invalidate('$rotation', $rotation); });
+
+      let { currentSection } = $$props;
+      let open = false;
+      function toggleHeader() {
+        $$invalidate('open', open = !open);
+        rotation.set(!$rotation ? 90 : 0);
+      }
+
+    	const writable_props = ['currentSection'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<MobileHeader> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('currentSection' in $$props) $$invalidate('currentSection', currentSection = $$props.currentSection);
+    	};
+
+    	$$self.$capture_state = () => {
+    		return { currentSection, open, $rotation };
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('currentSection' in $$props) $$invalidate('currentSection', currentSection = $$props.currentSection);
+    		if ('open' in $$props) $$invalidate('open', open = $$props.open);
+    		if ('$rotation' in $$props) rotation.set($rotation);
+    	};
+
+    	return {
+    		rotation,
+    		currentSection,
+    		open,
+    		toggleHeader,
+    		$rotation
+    	};
+    }
+
+    class MobileHeader extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, ["currentSection"]);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "MobileHeader", options, id: create_fragment$1.name });
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.currentSection === undefined && !('currentSection' in props)) {
+    			console.warn("<MobileHeader> was created without expected prop 'currentSection'");
+    		}
+    	}
+
+    	get currentSection() {
+    		throw new Error("<MobileHeader>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set currentSection(value) {
+    		throw new Error("<MobileHeader>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* eslint-disable max-len */
+    const ABOUT = `
+  My name is Andrew McNutt, and I am a PhD student in Computer Science at the University of Chicago. My work focuses on information visualization in general. More specifically I'm interested in automated guidance systems (like linters), unusual or xenographical data visualizations, and web applications as a visualization medium. I'm advised by Gordon Kindlmann.
+  `;
+
+    const HISTORY = `
+  In the very near past I worked as a Data Visualization Engineer for a variety of
+  companies in San Francisco, where I made visual analytic software.
+  I got a formal education in physics from Reed College in Portland, and an informal
+  education in web development from App Academy in San Francisco. I really like deserts,
+  buffalo, and motorcycles.
+  `;
+    // export const INTERESTS = `
+    //   I\'m familiar with a wide variety of technologies, including (but not limited to):
+    //   d3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails,
+    //   python, flask, sketch, mathematica, grid mathematica, numpy, pandaz, git.
+    //   (Above are some glib radar charts about skills I possess)
+    //   I\'m excited about info-vis, databases, applied category theory, dashboards, testing,
+    //   and pretty much anything in the wild world of javascript.`;
+    const INTERESTS = `
+    I\'m excited about info-vis, databases, applied category theory, dashboards, testing,
+    and pretty much anything in the wild world of javascript.`;
+
+    const PUBLICATIONS = [
+             {
+               link: 'https://arxiv.org/pdf/2001.02316.pdf',
+               imgLink: 'assets/surfacing-visualization-mirages.png',
+               title: 'Surfacing Visualization Mirages',
+               authors: 'Andrew McNutt, Gordon Kindlmann, Michael Correll',
+               journal: 'CHI 2020 - To Appear',
+               links: [
+                 {name: 'preprint', link: 'https://arxiv.org/pdf/2001.02316.pdf'},
+                 {name: 'live', link: 'https://metamorphic-linting.netlify.com/'},
+                 {
+                   name: 'code',
+                   link: 'https://github.com/tableau/Visualization-Linting'
+                 },
+                 {name: 'osf', link: 'https://osf.io/je3x9'}
+               ],
+               abstract: `
+    Dirty data and deceptive design practices can undermine, invert, or invalidate the purported messages of charts and graphs.
+    These failures can arise silently: a conclusion derived from
+    a particular visualization may look plausible unless the analyst looks closer and discovers an issue with the backing
+    data, visual specification, or their own assumptions. We term
+    such silent but significant failures visualization mirages. We
+    describe a conceptual model of mirages and show how they
+    can be generated at every stage of the visual analytics process.
+    We adapt a methodology from software testing, metamorphic
+    testing, as a way of automatically surfacing potential mirages
+    at the visual encoding stage of analysis through modifications
+    to the underlying data and chart specification. We show that
+    metamorphic testing can reliably identify mirages across a
+    variety of chart types with relatively little prior knowledge of
+    the data or the domain.
+    `,
+               bibTex: `TODO`
+             },
+             {
+               link:
+                 'https://research.tableau.com/sites/default/files/altchi-tarot-cameraready.pdf',
+               imgLink: 'assets/vis-tarot.png',
+               title: 'Divining Insights: Visual Analytics Through Cartomancy',
+               authors: 'Andrew McNutt, Anamaria Crisan, Michael Correll',
+               journal: 'alt.CHI 2020 - To Appear',
+               links: [
+                 {
+                   name: 'preprint',
+                   link:
+                     'https://research.tableau.com/sites/default/files/altchi-tarot-cameraready.pdf'
+                 },
+                 {name: 'live', link: 'https://vis-tarot.netlify.com/'},
+                 {
+                   name: 'code',
+                   link: 'https://github.com/mcorrell/vis-tarot'
+                 }
+               ],
+               abstract: `
+    Our interactions with data, visual analytics included, are increasingly shaped by automated or algorithmic systems. An
+open question is how to give analysts the tools to interpret
+these “automatic insights” while also inculcating critical engagement with algorithmic analysis. We present a system,
+Sortilège, that uses the metaphor of a Tarot card reading to
+provide an overview of automatically detected patterns in
+data in a way that is meant to encourage critique, reflection,
+and healthy skepticism.
+    `,
+               bibTex: `TODO`
+             },
+             // {
+             //   imgLink: 'assets/agathas-thing.png',
+             //   title:
+             //     'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
+             //   authors: 'Agatha Kim, Andrew McNutt, S. Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
+             //   journal: 'MindBytes. November 2019',
+             //   links: [
+             //     {name: 'poster', link: 'https://mindbytes.uchicago.edu/posters/2019/10252019165647_posterkim102519.pdf'},
+             //     {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'}
+             //   ],
+             //   abstract: `
+             //   When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as â€œnational scienceâ€? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.
+             //   `,
+             // },
+             {
+               link: 'assets/forum-explorer-paper.pdf',
+               imgLink: 'assets/forested-tree-view-example.jpg',
+               title:
+                 'Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations',
+               authors: 'Andrew McNutt, Gordon Kindlmann',
+               journal: 'EuroVis - Extended Abstract. June 2019',
+               links: [
+                 {name: 'paper', link: 'assets/forum-explorer-paper.pdf'},
+                 {name: 'poster', link: 'assets/forum-explorer-poster.pdf'},
+                 {name: 'live', link: 'https://www.mcnutt.in/forum-explorer/'},
+                 {
+                   name: 'code',
+                   link: 'https://github.com/mcnuttandrew/forum-explorer'
+                 },
+                 {name: 'osf', link: 'https://osf.io/nrhqw/'}
+               ],
+               abstract: `
+    Large threaded conversations, such as those found on YCombinator’s HackerNews,
+    are typically presented in a way that shows individual comments clearly,
+    but can obscure larger trends or patterns within the conversational corpus.
+    Previous research has addressed this problem through graphical-overviews and NLP-generated summaries.
+    These efforts have generally assumed a particular (and modest) data size,
+    which limits their utility for large or deeply-nested conversations, and often
+    require non-trivial offline processing time, which makes them impractical for day-to-day usage.
+    We describe here Forum Explorer, a Chrome extension that combines and expands upon
+    prior art through a collection of techniques that enable this type of
+    representation to handle wider ranges of data in real time. Materials for this project are available at https://osf.io/nrhqw/.
+    `,
+               bibTex: `
+    @inproceedings{McNuttKindlmannForumExplorerPoster,
+      title={Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations},
+      author={McNutt, Andrew and Kindlmann, Gordon},
+      booktitle={Poster Abstracts of the EG/VGTC Conference on Visualization (EuroVis)},
+      year={2019}
+    }`
+             },
+             {
+               link: 'assets/McNutt_Kindlmann_2018.pdf',
+               imgLink: 'assets/lint-pic.jpg',
+               title:
+                 'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
+               authors: 'Andrew McNutt, Gordon Kindlmann',
+               journal: 'VisGuides (IEEEVIS Workshop). Octobr 2018',
+               links: [
+                 {name: 'paper', link: 'assets/McNutt_Kindlmann_2018.pdf'},
+                 {
+                   name: 'code',
+                   link: 'https://github.com/mcnuttandrew/vislint_mpl'
+                 },
+                 {name: 'talk', link: 'assets/vis-lint-talk.pdf'}
+               ],
+               abstract: `
+    Constructing effective charts and graphs in a scientific setting is a
+    nuanced task that requires a thorough understanding of visualization
+    design; a knowledge that may not be available to all practicing scientists.
+    Previous attempts to address this problem have pushed chart
+    creators to pore over large collections of guidelines and heuristics,
+    or to relegate their entire workflow to end-to-end tools that provide
+    automated recommendations. In this paper we bring together these
+    two strains of ideas by introducing the use of lint as a mechanism for
+    guiding chart creators towards effective visualizations in a manner
+    that can be configured to taste and task without forcing users to abandon their usual workflows.
+    The programmatic evaluation model of
+    visualization linting (or vis lint) offers a compelling framework for
+    the automation of visualization guidelines, as it offers unambiguous
+    feedback during the chart creation process, and can execute analyses derived from machine vision and natural language processing.
+    We demonstrate the feasibility of this system through the production of vislint_mpl,
+    a prototype visualization linting system, that
+    evaluates charts created in matplotlib.
+    `,
+               bibTex: `
+    @misc{mcnuttKindlmannLinting,
+      Author = {McNutt, Andrew and Kindlmann, Gordon},
+      Howpublished = {IEEE VIS Workshop: \href{https://c4pgv.dbvis.de/}{VisGuides: 2nd Workshop on the Creation, Curation, Critique and Conditioning of Principles and Guidelines in Visualization}},
+      Month = oct,
+      Title = {Linting for Visualization: Towards a Practical Automated Visualization Guidance System},
+      Year = {2018}}
+    `
+             },
+             {
+               link:
+                 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14',
+               imgLink: 'assets/cdd-pic.jpg',
+               title:
+                 'Data Mining and Computational Modeling of High-Throughput Screening Datasets',
+               authors: `Sean Ekins, Alex M Clark, Krishna Dole, Kellan Gregory, Andrew McNutt,
+    Anna Coulon Spektor, Charlie Weatherall, Nadia K Litterman, Barry A Bunin`,
+               journal: 'Reporter Gene Assays. 2018',
+               links: [
+                 {
+                   name: 'paper',
+                   link:
+                     'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14'
+                 }
+               ],
+               abstract: `
+    We are now seeing the benefit of investments made over the last decade in
+    high-throughput screening (HTS) that is resulting in large structure activity
+    datasets entering public and open databases such as ChEMBL and PubChem.
+    The growth of academic HTS screening centers and the increasing move to academia
+    for early stage drug discovery suggests a great need for the informatics tools and
+    methods to mine such data and learn from it. Collaborative Drug Discovery, Inc. (CDD)
+    has developed a number of tools for storing, mining, securely and selectively sharing,
+    as well as learning from such HTS data. We present a new web based data mining and
+    visualization module directly within the CDD Vault platform for high-throughput
+    drug discovery data that makes use of a novel technology stack following modern
+    reactive design principles. We also describe CDD Models within the CDD Vault platform
+    that enables researchers to share models, share predictions from models, and create models
+    from distributed, heterogeneous data. Our system is built on top of the Collaborative
+    Drug Discovery Vault Activity and Registration data repository ecosystem which allows
+    users to manipulate and visualize thousands of molecules in real time. This can be
+    performed in any browser on any platform. In this chapter we present examples of its
+    use with public datasets in CDD Vault. Such approaches can complement other cheminformatics
+    tools, whether open source or commercial, in providing approaches for data mining and modeling of HTS data.
+    `
+             },
+             {
+               link: 'https://arxiv.org/abs/1501.07537',
+               imgLink: 'assets/qgrav-pic.jpg',
+               title: 'The Schrodinger-Newton System with Self-field Coupling',
+               authors:
+                 'Joel Franklin, Youdan Guo, Andrew McNutt, and Allison Morgan',
+               journal: 'Classical and Quantum Gravity. 2015',
+               links: [
+                 {name: 'paper', link: 'https://arxiv.org/abs/1501.07537'},
+                 {name: 'talk', link: 'assets/QGravPresentation.pdf'}
+               ],
+               abstract: `
+    We study the Schrodinger-Newton system of equations with the addition of gravitational
+    field energy sourcing - such additional nonlinearity is to be expected from a theory
+    of gravity (like general relativity), and its appearance in this simplified scalar
+    setting (one of Einstein's precursors to general relativity) leads to significant
+    changes in the spectrum of the self-gravitating theory. Using an iterative technique,
+    we compare the mass dependence of the ground state energies of both Schrodinger-Newton
+    and the new, self-sourced system and find that they are dramatically different.
+    The Bohr method approach from old quantization provides a qualitative description of
+    the difference, which comes from the additional nonlinearity introduced in the self-sourced
+    case. In addition to comparison of ground state energies, we calculate the transition
+    energy between the ground state and first excited state to compare emission frequencies
+    between Schrodinger-Newton and the self-coupled scalar case.
+    `
+             },
+             {
+               link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143',
+               imgLink: 'assets/cdd-models-pic.jpg',
+               title:
+                 'Open source Bayesian models. 1. Application to ADME/Tox and drug discovery datasets.',
+               authors: `Alex M. Clark, Krishna Dole, Anna Coulon-Spektor, Andrew McNutt,
+    George Grass, Joel S. Freundlich, Robert C. Reynolds, and Sean Ekins`,
+               journal: 'Journal of chemical information and modeling. 2015',
+               links: [
+                 {
+                   name: 'paper',
+                   link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143'
+                 }
+               ],
+               abstract: `
+    On the order of hundreds of absorption, distribution, metabolism, excretion,
+    and toxicity (ADME/Tox) models have been described in the literature in the
+    past decade which are more often than not inaccessible to anyone but their authors.
+    Public accessibility is also an issue with computational models for bioactivity,
+    and the ability to share such models still remains a major challenge limiting drug
+    discovery. We describe the creation of a reference implementation of a Bayesian
+    model-building software module, which we have released as an open source component
+    that is now included in the Chemistry Development Kit (CDK) project, as well as
+    implemented in the CDD Vault and in several mobile apps. We use this implementation
+    to build an array of Bayesian models for ADME/Tox, in vitro and in vivo bioactivity,
+    and other physicochemical properties. We show that these models possess cross-validation
+    receiver operator curve values comparable to those generated previously in prior
+    publications using alternative tools. We have now described how the implementation
+    of Bayesian models with FCFP6 descriptors generated in the CDD Vault enables the
+    rapid production of robust machine learning models from public data or the user’s
+    own datasets. The current study sets the stage for generating models in proprietary
+    software (such as CDD) and exporting these models in a format that could be run in
+    open source software using CDK components. This work also demonstrates that we can
+    enable biocomputation across distributed private or public datasets to enhance drug discovery.`
+             },
+             {
+               link: 'assets/thesis.pdf',
+               imgLink: 'assets/thesis-pic.jpg',
+               title: 'Nonequivalent Lagrangian Mechanics',
+               authors: 'Andrew McNutt (Advised by Nelia Mann)',
+               journal: 'Undergraduate thesis. Reed College. June 2014.',
+               links: [
+                 {name: 'thesis', link: 'assets/thesis.pdf'},
+                 {name: 'talk', link: './assets/nlm-talk.pdf'}
+               ],
+               abstract: `
+    In this thesis we study a modern formalism known as Nonequivalent Lagrangian
+    Mechanics, that is constructed on top of the traditional Lagrangian theory of mechanics.
+    By making use of the non-uniqueness of the Lagrangian representation of dynamical
+    systems, we are able to generate conservation laws in a way that is novel and, in
+    many cases much faster than the traditional Noetherian analysis. In every case that
+    we examine, these invariants turn out to be Noetherian invariants in disguise. We
+    apply this theory to a wide variety of systems including predator-prey dynamics and
+    damped driven harmonic motion.`
+             }
+           ];
+
+    const PRESENTATIONS = [
+      // {
+      //   title:
+      //     'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
+      //   link: 'assets/vis-lint-talk.pdf',
+      //   journal: 'VisGuides 2018. October 22, 2018'
+      // },
+      {
+        imgLink: 'assets/design-patterns-pic.png',
+        title: 'Design Patterns For Data Visualization in React',
+        link: 'http://tinyurl.com/reactvisdesignpatterns',
+        journal: 'React Chicago. August 29, 2018',
+        subtitle: 'An overview of four useful patterns for developing visualizations in react.',
+        links: [
+          {
+            name: 'slides',
+            link:
+              'http://tinyurl.com/reactvisdesignpatterns'
+          },
+        ]
+      },
+      // {
+      //   link: 'assets/nlm-talk.pdf',
+      //   title: 'Nonequivalent Lagrangian Mechanics',
+      //   journal: 'Reed Physics Seminar. April 8, 2014'
+      // },
+      // {
+        // link: 'assets/QGravPresentation.pdf',
+        // links: [],
+        // title: 'The Schrodinger-Newton System with Self-field Coupling',
+        // authors: 'Varchas Gopalaswamy, Andrew McNutt, Allie Morgan, Carl Proepper.',
+        // journal: 'Reed Physics Seminar. September 18, 2013'
+      // }
+    ];
+
+    const BLOG_POSTS = [
+      {
+        imgLink: 'assets/tarot-image.png',
+        title:
+          'A Brief Saga Concerning the Making of a Tarot Deck About the American Highway System',
+        subtitle: 'A little essay about making',
+        date: 'Personal Blog. December 10, 2018',
+        link:
+          'https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8',
+        links: [
+          {
+            name: 'blog post',
+            link:
+              'https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8'
+          },
+          {name: 'github', link: 'https://github.com/mcnuttandrew/tarot-deck'}
+        ]
+      },
+      {
+        imgLink: 'assets/advanced-react-vis-pic.png',
+        title: 'Advanced Visualization with react-vis',
+        subtitle:
+          'Using Voronois, single pass rendering, and canvas components for amazing user experiences',
+        date: 'Towards Data Science. May 21, 2018',
+        link:
+          'https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4',
+        links: [
+          {
+            name: 'blog post',
+            link:
+              'https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4'
+          },
+          // {name: 'talk', link: 'http://tinyurl.com/reactvisdesignpatterns'},
+          {
+            name: 'code',
+            link: 'https://github.com/mcnuttandrew/advanced-react-vis-tutorial'
+          }
+        ]
+      }
+    ];
+
+    const PROJECTS = [
+      // {
+      //   title: 'Chaotic Circuit',
+      //   imgLink: 'assets/chaotic-image.png',
+      //   link: 'assets/Chaotic_circuit.pdf',
+      //   text: `In culminating effort of my junior year at Reed I built a third order
+      //   Chaotic circuit as an independent project. This shows some of the best data visualization
+      //   work I had done at that point, particularlly the combination phase and signal metering small multiples diagram.`
+      // },
+      //
+      {
+        title: 'Cycles & Rain / Seasons In Size',
+        dates: 'July 2019',
+        sourceLink: 'https://github.com/mcnuttandrew/cycles-rain-seasons-in-size/',
+        link: 'https://www.mcnutt.in/cycles-rain-seasons-in-size/',
+        imgLink: 'assets/cycles-in-rain.png',
+        text:
+          'A little infographic about bicycle ridership in Seattle featuring table cartograms.',
+        section: 'visualization'
+      },
+      {
+        title: 'CSSQL',
+        dates: 'May 2019',
+        sourceLink: 'https://github.com/mcnuttandrew/cssql',
+        link: 'https://www.npmjs.com/package/node-cssql',
+        imgLink: 'assets/cssql-logo.png',
+        text:
+          'A new answer to this css-in-js question: css in sql. A sql-ddl to css transpiler written in haskell, available on npm.',
+        section: 'tech'
+      },
+      {
+        title: 'Forum Explorer',
+        dates: 'April 2019',
+        sourceLink: 'https://github.com/mcnuttandrew/forum-explorer',
+        link: 'https://www.mcnutt.in/forum-explorer/',
+        imgLink: 'assets/forum-ex-pic.png',
+        text:
+          'A chrome extension and website that allows users to explore threaded conversations using trees.',
+        section: 'visualization'
+      },
+      {
+        title: 'Readability As A Service',
+        dates: 'November 2018',
+        sourceLink: 'https://github.com/mcnuttandrew/flesch-kincaid-as-a-service',
+        link: 'https://www.mcnutt.in/flesch-kincaid-as-a-service/',
+        imgLink: 'assets/readability.png',
+        text: `Have you ever wanted specific numerical quantification on how readable
+    your prose is? This micro app wraps the textstat package as a webservice so that you can easily check.`,
+        section: 'tech'
+      },
+      {
+        title: 'tap-react-browser',
+        dates: 'Feburary - April 2018',
+        sourceLink: 'https://github.com/mcnuttandrew/tap-react-browser/',
+        imgLink: 'assets/tap-react-browser.png',
+        text: `In the process of building a variety of javascipt libraries in the course of
+    my graduate research, I found myself needing a testing tool that played a particular
+    role in relation to the browser, so I made one! tap-react-browser is a light
+    wrapper on tape that spits out react components.`,
+        section: 'tech'
+      },
+      {
+        title: 'Constellations of Home - XMAS CARDS 2017',
+        dates: 'December 2017',
+        link: 'http://www.mcnutt.in/home-graphs/',
+        sourceLink: 'https://github.com/mcnuttandrew/home-graphs',
+        imgLink: 'assets/home-graphs.png',
+        text: `Over the 2017 holidays I spent some time meditating on memory, home, and
+    graph theory, which led to my making these christmas cards.`,
+        section: 'visualization'
+      },
+      {
+        title: 'On The Shape of American Cities I/II',
+        dates: 'July 2017',
+        link: 'http://www.mcnutt.in/city-size/',
+        sourceLink: 'https://github.com/mcnuttandrew/city-size',
+        imgLink: 'assets/city-size.png',
+        text:
+          'A print graphic describing the shape of the 100 most populous American cities.',
+        section: 'visualization'
+      },
+      {
+        title: 'Pantone: Color of the year',
+        dates: 'Updated yearly, starting 2016',
+        link: 'http://www.mcnutt.in/color-of-the-year/',
+        sourceLink: 'https://github.com/mcnuttandrew/color-of-the-year',
+        imgLink: 'assets/color-of-year.png',
+        text:
+          'A small exploration of the glory and wonder that is pantones color of the year.',
+        section: 'visualization'
+      },
+      {
+        title: 'react-vis',
+        dates: '2016 - ',
+        link: 'http://uber.github.io/react-vis/#/',
+        sourceLink: 'https://github.com/uber/react-vis',
+        imgLink: 'assets/react-vis-image.png',
+        text: 'A charting library for the react ecosystem.',
+        section: 'visualization'
+      },
+      {
+        title: 'CSV Conversion',
+        dates: 'December 2016',
+        link: 'http://www.mcnutt.in/csv-conversion/',
+        sourceLink: 'https://github.com/mcnuttandrew/csv-conversion',
+        imgLink: 'assets/csv-conversion.png',
+        text:
+          'A handy client-side csv to json converter. I built this little app, because my favorite conversion site got knocked down and I wanted to improve the UI.',
+        section: 'tech'
+      },
+      {
+        title: 'Personal Timeline',
+        dates: 'June 2016',
+        link: 'http://www.mcnutt.in/personal-timeline/',
+        sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
+        imgLink: 'assets/personal-time.png',
+        text:
+          'A brief timeline of my life, a resume through a dark mirror if you will.',
+        section: 'visualization'
+      },
+      {
+        title: 'Unnamed Tarot Deck',
+        dates: 'Dec 2015 - June 2016',
+        link:
+          'https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8',
+        sourceLink: 'https://github.com/mcnuttandrew/tarot-deck',
+        imgLink: 'assets/tarot-image.png',
+        text:
+          'A tarot tech themed around the signage and spirit of the American highway system.',
+        section: 'art'
+      },
+      {
+        title: 'Why Not Ipsum',
+        dates: 'September 2014',
+        link: 'http://why-not-ipsum.herokuapp.com/',
+        sourceLink: 'https://github.com/mcnuttandrew/Why-Not-Zoidberg',
+        imgLink: 'assets/why-not-image.png',
+        text:
+          'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning.',
+        section: 'tech'
+      },
+      {
+        title: 'N-Hedron',
+        dates: 'September - December 2013',
+        imgLink: 'assets/n-hydron.png',
+        link: 'assets/nhedron.pdf',
+        text:
+          'An independent college project regarding the effacy of various numerical algorithms for constructing the n-hedron.',
+        section: 'tech'
+      }
+
+      // {
+      //   title: 'N-Body Simulator',
+      //   link: 'https://mcnuttandrew.github.io/n-body-simulator/',
+      //   sourceLink: 'https://github.com/mcnuttandrew/N-Body-Simulator',
+      //   imgLink: 'assets/n-body-image.png',
+      //   text: 'A low N gravitional interaction simulator built in processing.'
+      // },
+      // {
+      //   title: 'Asteroids',
+      //   imgLink: 'assets/asteroids-image.png',
+      //   link: 'https://mcnuttandrew.github.io/asteroids/',
+      //   sourceLink: 'https://github.com/mcnuttandrew/Asteroids',
+      //   text: 'A reimaging of the classic arcade game. Technologies included Javascipt, HTML5 Canvas, and jQuery'
+      // }
+      // {
+      //   title: 'Teacup',
+      //   liveLink: 'http://tea-cup.org/',
+      //   sourceLink: 'https://github.com/mcnuttandrew/Project-Teacup',
+      //   text: 'A microblogging platform for viewing the collective unconscious. Single page Backbone app based on RESTful practices. Features data visualizations including trending topics and user population. Seed data was generated using a variety of large scale data scrapes and data cleaning techniques. Technologies included a Rails API, Backbone.js, jQuery, Nokogiri, and D3.'
+      // }
+      // {
+      //   title: 'Slim Record',
+      //   sourceLink: 'https://github.com/mcnuttandrew/Active-Record-Lite',
+      //   text: 'An Object Relational Mapper that rebuilds much of the functionality of active record. The point of the project was to get a better comprehension of the underlying mechanisms that we so often take for granted in Rails'
+      // },
+      // {
+      //   title: 'Railsito',
+      //   sourceLink: 'https://github.com/mcnuttandrew/railsito',
+      //   text: 'An Object Relational Mapper that rebuilds much of the functionality of active record. The point of the project was to get a better comprehension of the underlying mechanisms that we so often take for granted in Rails'
+      // }
+    ];
+
+
+    const TEACHING = [
+      {title: 'CAPP 30239 - Data Visualization For Public Policy', date: 'Winter 2020', role: 'Instructor', location: 'UChicago', link: 'https://capp-30239-winter-2020.netlify.com/'},
+      {title: 'Visualization Research Reading Group', date: 'February 2019-Present', role: 'Other', location: 'UChicago', fancyTitle: 'Director', link: 'https://uchicago-vis-pl-lab.github.io/vis-reading-group/'},
+      {title: 'CMSC 23900 - Data Visualization', date: 'Spring 2019', role: 'Teaching Assitant', location: 'UChicago', link: 'http://people.cs.uchicago.edu/~glk/class/datavis/'},
+      {title: 'CAPP 30239 - Data Visualization For Public Policy', date: 'Winter 2019', role: 'Teaching Assitant', location: 'UChicago', link: 'https://twitter.com/AlexCEngler/status/1101245224733605891?s=20'},
+      {title: 'CAPP 30121 - Computer Science with Applications 1', date: 'Fall 2018', role: 'Teaching Assitant', location: 'UChicago', link: 'https://classes.cs.uchicago.edu/archive/2018/fall/30121-1/'},
+      {title: 'CMSC 23900 - Data Visualization', date: 'Spring 2018', role: 'Teaching Assitant', location: 'UChicago', link: 'http://people.cs.uchicago.edu/~glk/class/datavis18/'},
+      {title: 'CMSC 15100 - Introduction to Computer Science 1', date: 'Winter 2018', role: 'Teaching Assitant', location: 'UChicago', link: 'https://www.classes.cs.uchicago.edu/archive/2018/winter/15100-1/syllabus.html'},
+      {title: 'CMSC 12100 - Computer Science with Applications 1.', date: 'Fall 2017', role: 'Teaching Assitant', location: 'UChicago', link: 'https://www.classes.cs.uchicago.edu/archive/2017/fall/12100-1/'},
+      {title: 'Uberversity Speaker', date: '2016-2017', role: 'Instructor', fancyTitle: 'Lecturer', location: 'Uber'},
+      {title: 'Visualization Eng-ucation', date: '2015-2017', role: 'Instructor', fancyTitle: 'Lecturer', location: 'Uber'},
+      {title: 'Physics 101 - General Physics I', date: '2012', role: 'Teaching Assitant', location: 'Reed College'},
+      {title: 'F.L. Griffin Mathfest', date: '2014', role: 'Teaching Assitant', location: 'Reed College'},   
+    ];
+
+    const NEWS = [
+      {
+        date: 'December 2019',
+        content:
+          'Received my Masters of Computer Science!!'
+      },
+      {
+        date: 'November 2019',
+        content:
+          'Our poster on using graph visualizations to compare 19th century scentific writing was shown at both MindBytes (where it won best poster!) and the 2019 Chicago Colloquium on Digital Humanities.'
+      },
+      {
+        date: 'October 2019',
+        content:
+          'Had a great time at IEEEVIS 2019 in Vancouver, BC! Helped contribute to the Open Access Vis (http://oavis.org/) efforts for the conference.'
+      },
+      {
+        date: 'September 2019',
+        content:
+          'Two of my vis projects (ForumExplorer and Cycles in Rain) were Long-Listed at the Kantar Information is Beautiful Awards.'
+      },
+      {
+        date: 'June 2019',
+        content: 'Started an internship with Tableau Research in Seattle'
+      },
+      {
+        date: 'June 2019',
+        content: '🎉🎉🎉 Successfully defended my masters thesis 🎉🎉🎉'
+      },
+      {
+        date: 'May 2019',
+        content:
+          'Presented our poster on ForumExplorer at EuroVis 2019 in Porto, Portugal.'
+      },
+      {
+        date: 'May 2019',
+        content:
+          'I was awarded the UChicago Department of Computer Science TA Prize for my work TAing Spring 2018 - Winter 2019.'
+      },
+      {
+        date: 'May 2019',
+        content:
+          "My piece 'On The Road To The Lake: Debugging in Tryptic' won second prize in the print media category of the UChicago Art+Science expo."
+      },
+      {
+        date: 'October 2018',
+        content:
+          'Presented our paper on linting charts created in matplotlib at VisGuides, a IEEEVIS 2018 workshop. '
+      },
+      {
+        date: 'September 2018',
+        content: 'Started my second year of grad school!'
+      }
+    ];
+
+    /* src/components/About.svelte generated by Svelte v3.12.1 */
+
+    const file$2 = "src/components/About.svelte";
+
+    function get_each_context$2(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.date = list[i].date;
+    	child_ctx.content = list[i].content;
+    	return child_ctx;
+    }
+
+    // (33:4) {#each NEWS as {date, content}}
+    function create_each_block$2(ctx) {
+    	var div, span0, t0_value = ctx.date + "", t0, t1, t2, span1, t3_value = ctx.content + "", t3, t4;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			span0 = element("span");
+    			t0 = text(t0_value);
+    			t1 = text(":");
+    			t2 = space();
+    			span1 = element("span");
+    			t3 = text(t3_value);
+    			t4 = space();
+    			attr_dev(span0, "class", "news-item-date svelte-13inknk");
+    			add_location(span0, file$2, 34, 8, 649);
+    			add_location(span1, file$2, 35, 8, 701);
+    			attr_dev(div, "class", "news-item svelte-13inknk");
+    			add_location(div, file$2, 33, 6, 617);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, span0);
+    			append_dev(span0, t0);
+    			append_dev(span0, t1);
+    			append_dev(div, t2);
+    			append_dev(div, span1);
+    			append_dev(span1, t3);
+    			append_dev(div, t4);
+    		},
+
+    		p: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$2.name, type: "each", source: "(33:4) {#each NEWS as {date, content}}", ctx });
+    	return block;
+    }
+
+    function create_fragment$2(ctx) {
+    	var div3, h10, t1, div1, div0, t2, t3, t4, t5, t6, t7, img, t8, h11, t10, div2;
+
+    	let each_value = NEWS;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div3 = element("div");
+    			h10 = element("h1");
+    			h10.textContent = "INTRODUCTION";
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			t2 = text(ABOUT);
+    			t3 = space();
+    			t4 = text(HISTORY);
+    			t5 = space();
+    			t6 = text(INTERESTS);
+    			t7 = space();
+    			img = element("img");
+    			t8 = space();
+    			h11 = element("h1");
+    			h11.textContent = "NEWS";
+    			t10 = space();
+    			div2 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			add_location(h10, file$2, 22, 2, 308);
+    			add_location(div0, file$2, 24, 4, 364);
+    			attr_dev(img, "alt", "picture of me in canyonlands utah");
+    			attr_dev(img, "class", "self-pic svelte-13inknk");
+    			attr_dev(img, "src", "assets/desert-pic.jpg");
+    			add_location(img, file$2, 25, 4, 409);
+    			attr_dev(div1, "class", "about-section svelte-13inknk");
+    			add_location(div1, file$2, 23, 2, 332);
+    			add_location(h11, file$2, 30, 2, 531);
+    			attr_dev(div2, "class", "about-section svelte-13inknk");
+    			add_location(div2, file$2, 31, 2, 547);
+    			add_location(div3, file$2, 21, 0, 300);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, h10);
+    			append_dev(div3, t1);
+    			append_dev(div3, div1);
+    			append_dev(div1, div0);
+    			append_dev(div0, t2);
+    			append_dev(div0, t3);
+    			append_dev(div0, t4);
+    			append_dev(div0, t5);
+    			append_dev(div0, t6);
+    			append_dev(div1, t7);
+    			append_dev(div1, img);
+    			append_dev(div3, t8);
+    			append_dev(div3, h11);
+    			append_dev(div3, t10);
+    			append_dev(div3, div2);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div2, null);
+    			}
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.NEWS) {
+    				each_value = NEWS;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$2(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block$2(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div2, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div3);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$2.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    class About extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, null, create_fragment$2, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "About", options, id: create_fragment$2.name });
+    	}
+    }
+
+    /* src/components/Projects.svelte generated by Svelte v3.12.1 */
+    const { Object: Object_1 } = globals;
+
+    const file$3 = "src/components/Projects.svelte";
+
+    function get_each_context_1(ctx, list, i) {
+    	const child_ctx = Object_1.create(ctx);
+    	child_ctx.project = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context$3(ctx, list, i) {
+    	const child_ctx = Object_1.create(ctx);
+    	child_ctx.sectionName = list[i].sectionName;
+    	child_ctx.rows = list[i].rows;
+    	return child_ctx;
+    }
+
+    // (56:12) {#if project.sourceLink}
+    function create_if_block_1(ctx) {
+    	var a, svg, g, path;
+
+    	const block = {
+    		c: function create() {
+    			a = element("a");
+    			svg = svg_element("svg");
+    			g = svg_element("g");
+    			path = svg_element("path");
+    			attr_dev(path, "d", "m20 0c-11 0-20 9-20 20 0 8.8 5.7 16.3 13.7 19 1 0.2\n                      1.3-0.5 1.3-1 0-0.5 0-2 0-3.7-5.5\n                      1.2-6.7-2.4-6.7-2.4-0.9-2.3-2.2-2.9-2.2-2.9-1.9-1.2\n                      0.1-1.2 0.1-1.2 2 0.1 3.1 2.1 3.1 2.1 1.7 3 4.6 2.1 5.8\n                      1.6 0.2-1.3 0.7-2.2 1.3-2.7-4.5-0.5-9.2-2.2-9.2-9.8 0-2.2\n                      0.8-4 2.1-5.4-0.2-0.5-0.9-2.6 0.2-5.3 0 0 1.7-0.5 5.5 2\n                      1.6-0.4 3.3-0.6 5-0.6 1.7 0 3.4 0.2 5 0.7 3.8-2.6 5.5-2.1\n                      5.5-2.1 1.1 2.8 0.4 4.8 0.2 5.3 1.3 1.4 2.1 3.2 2.1 5.4 0\n                      7.6-4.7 9.3-9.2 9.8 0.7 0.6 1.4 1.9 1.4 3.7 0 2.7 0 4.9 0\n                      5.5 0 0.6 0.3 1.2 1.3 1 8-2.7 13.7-10.2 13.7-19\n                      0-11-9-20-20-20z");
+    			add_location(path, file$3, 65, 20, 1563);
+    			add_location(g, file$3, 64, 18, 1539);
+    			attr_dev(svg, "class", "github-icon");
+    			attr_dev(svg, "fill", "black");
+    			attr_dev(svg, "preserveAspectRatio", "xMidYMid meet");
+    			attr_dev(svg, "height", "1em");
+    			attr_dev(svg, "width", "1em");
+    			attr_dev(svg, "viewBox", "0 0 40 40");
+    			add_location(svg, file$3, 57, 16, 1293);
+    			attr_dev(a, "href", ctx.project.sourceLink);
+    			add_location(a, file$3, 56, 14, 1247);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, a, anchor);
+    			append_dev(a, svg);
+    			append_dev(svg, g);
+    			append_dev(g, path);
+    		},
+
+    		p: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(a);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1.name, type: "if", source: "(56:12) {#if project.sourceLink}", ctx });
+    	return block;
+    }
+
+    // (82:12) {#if project.link}
+    function create_if_block$1(ctx) {
+    	var a, t;
+
+    	const block = {
+    		c: function create() {
+    			a = element("a");
+    			t = text("Live");
+    			attr_dev(a, "href", ctx.project.link);
+    			add_location(a, file$3, 82, 14, 2493);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, a, anchor);
+    			append_dev(a, t);
+    		},
+
+    		p: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(a);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$1.name, type: "if", source: "(82:12) {#if project.link}", ctx });
+    	return block;
+    }
+
+    // (46:6) {#each rows as project (project.title)}
+    function create_each_block_1(key_1, ctx) {
+    	var div2, a, div0, img, t0, h3, t1_value = ctx.project.title + "", t1, t2, h5, t3_value = ctx.project.dates + "", t3, t4, div1, t5, t6, p, t7_value = ctx.project.text + "", t7;
+
+    	var if_block0 = (ctx.project.sourceLink) && create_if_block_1(ctx);
+
+    	var if_block1 = (ctx.project.link) && create_if_block$1(ctx);
+
+    	const block = {
+    		key: key_1,
+
+    		first: null,
+
+    		c: function create() {
+    			div2 = element("div");
+    			a = element("a");
+    			div0 = element("div");
+    			img = element("img");
+    			t0 = space();
+    			h3 = element("h3");
+    			t1 = text(t1_value);
+    			t2 = space();
+    			h5 = element("h5");
+    			t3 = text(t3_value);
+    			t4 = space();
+    			div1 = element("div");
+    			if (if_block0) if_block0.c();
+    			t5 = space();
+    			if (if_block1) if_block1.c();
+    			t6 = space();
+    			p = element("p");
+    			t7 = text(t7_value);
+    			attr_dev(img, "src", ctx.project.imgLink);
+    			attr_dev(img, "alt", "image for " + ctx.project.title);
+    			attr_dev(img, "class", "svelte-m2lfav");
+    			add_location(img, file$3, 49, 14, 1014);
+    			attr_dev(div0, "class", "img-container svelte-m2lfav");
+    			add_location(div0, file$3, 48, 12, 972);
+    			attr_dev(a, "href", ctx.project.link);
+    			add_location(a, file$3, 47, 10, 936);
+    			add_location(h3, file$3, 52, 10, 1120);
+    			add_location(h5, file$3, 53, 10, 1155);
+    			add_location(div1, file$3, 54, 10, 1190);
+    			attr_dev(p, "class", "svelte-m2lfav");
+    			add_location(p, file$3, 85, 10, 2570);
+    			attr_dev(div2, "class", "project-block svelte-m2lfav");
+    			add_location(div2, file$3, 46, 8, 898);
+    			this.first = div2;
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, a);
+    			append_dev(a, div0);
+    			append_dev(div0, img);
+    			append_dev(div2, t0);
+    			append_dev(div2, h3);
+    			append_dev(h3, t1);
+    			append_dev(div2, t2);
+    			append_dev(div2, h5);
+    			append_dev(h5, t3);
+    			append_dev(div2, t4);
+    			append_dev(div2, div1);
+    			if (if_block0) if_block0.m(div1, null);
+    			append_dev(div1, t5);
+    			if (if_block1) if_block1.m(div1, null);
+    			append_dev(div2, t6);
+    			append_dev(div2, p);
+    			append_dev(p, t7);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.project.sourceLink) if_block0.p(changed, ctx);
+
+    			if (ctx.project.link) if_block1.p(changed, ctx);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div2);
+    			}
+
+    			if (if_block0) if_block0.d();
+    			if (if_block1) if_block1.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_1.name, type: "each", source: "(46:6) {#each rows as project (project.title)}", ctx });
+    	return block;
+    }
+
+    // (43:2) {#each sections as {sectionName, rows}
+    function create_each_block$3(key_1, ctx) {
+    	var h1, t0_value = ctx.sectionName.toUpperCase() + "", t0, t1, div, each_blocks = [], each_1_lookup = new Map(), t2;
+
+    	let each_value_1 = ctx.rows;
+
+    	const get_key = ctx => ctx.project.title;
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		let child_ctx = get_each_context_1(ctx, each_value_1, i);
+    		let key = get_key(child_ctx);
+    		each_1_lookup.set(key, each_blocks[i] = create_each_block_1(key, child_ctx));
+    	}
+
+    	const block = {
+    		key: key_1,
+
+    		first: null,
+
+    		c: function create() {
+    			h1 = element("h1");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			div = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t2 = space();
+    			add_location(h1, file$3, 43, 4, 774);
+    			attr_dev(div, "class", "flex-with-wrap svelte-m2lfav");
+    			add_location(div, file$3, 44, 4, 815);
+    			this.first = h1;
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, h1, anchor);
+    			append_dev(h1, t0);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, div, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div, null);
+    			}
+
+    			append_dev(div, t2);
+    		},
+
+    		p: function update(changed, ctx) {
+    			const each_value_1 = ctx.rows;
+    			each_blocks = update_keyed_each(each_blocks, changed, get_key, 1, ctx, each_value_1, each_1_lookup, div, destroy_block, create_each_block_1, t2, get_each_context_1);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(h1);
+    				detach_dev(t1);
+    				detach_dev(div);
+    			}
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].d();
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$3.name, type: "each", source: "(43:2) {#each sections as {sectionName, rows}", ctx });
+    	return block;
+    }
+
+    function create_fragment$3(ctx) {
+    	var div, each_blocks = [], each_1_lookup = new Map();
+
+    	let each_value = ctx.sections;
+
+    	const get_key = ctx => ctx.sectionName;
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		let child_ctx = get_each_context$3(ctx, each_value, i);
+    		let key = get_key(child_ctx);
+    		each_1_lookup.set(key, each_blocks[i] = create_each_block$3(key, child_ctx));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			attr_dev(div, "class", "");
+    			add_location(div, file$3, 41, 0, 699);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div, null);
+    			}
+    		},
+
+    		p: function update(changed, ctx) {
+    			const each_value = ctx.sections;
+    			each_blocks = update_keyed_each(each_blocks, changed, get_key, 1, ctx, each_value, each_1_lookup, div, destroy_block, create_each_block$3, null, get_each_context$3);
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div);
+    			}
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].d();
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$3.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$2($$self) {
+    	
+      const sections = Object.entries(groupBy(PROJECTS, 'section')).map(
+        ([sectionName, rows]) => ({sectionName, rows})
+      );
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {};
+
+    	return { sections };
+    }
+
+    class Projects extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$2, create_fragment$3, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Projects", options, id: create_fragment$3.name });
+    	}
+    }
+
+    function slide(node, { delay = 0, duration = 400, easing = cubicOut }) {
+        const style = getComputedStyle(node);
+        const opacity = +style.opacity;
+        const height = parseFloat(style.height);
+        const padding_top = parseFloat(style.paddingTop);
+        const padding_bottom = parseFloat(style.paddingBottom);
+        const margin_top = parseFloat(style.marginTop);
+        const margin_bottom = parseFloat(style.marginBottom);
+        const border_top_width = parseFloat(style.borderTopWidth);
+        const border_bottom_width = parseFloat(style.borderBottomWidth);
+        return {
+            delay,
+            duration,
+            easing,
+            css: t => `overflow: hidden;` +
+                `opacity: ${Math.min(t * 20, 1) * opacity};` +
+                `height: ${t * height}px;` +
+                `padding-top: ${t * padding_top}px;` +
+                `padding-bottom: ${t * padding_bottom}px;` +
+                `margin-top: ${t * margin_top}px;` +
+                `margin-bottom: ${t * margin_bottom}px;` +
+                `border-top-width: ${t * border_top_width}px;` +
+                `border-bottom-width: ${t * border_bottom_width}px;`
+        };
+    }
+
+    /* src/components/Publication.svelte generated by Svelte v3.12.1 */
+
+    const file$4 = "src/components/Publication.svelte";
+
+    function get_each_context$4(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.name = list[i].name;
+    	child_ctx.link = list[i].link;
+    	return child_ctx;
+    }
+
+    function get_each_context_1$1(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.key = list[i];
+    	return child_ctx;
+    }
+
+    // (82:8) {#if publication[key]}
+    function create_if_block_2(ctx) {
+    	var span, t_value = ctx.publication[ctx.key] + "", t;
+
+    	const block = {
+    		c: function create() {
+    			span = element("span");
+    			t = text(t_value);
+    			add_location(span, file$4, 82, 10, 1536);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, span, anchor);
+    			append_dev(span, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.publication) && t_value !== (t_value = ctx.publication[ctx.key] + "")) {
+    				set_data_dev(t, t_value);
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(span);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_2.name, type: "if", source: "(82:8) {#if publication[key]}", ctx });
+    	return block;
+    }
+
+    // (81:6) {#each keys as key}
+    function create_each_block_1$1(ctx) {
+    	var if_block_anchor;
+
+    	var if_block = (ctx.publication[ctx.key]) && create_if_block_2(ctx);
+
+    	const block = {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.publication[ctx.key]) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    				} else {
+    					if_block = create_if_block_2(ctx);
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach_dev(if_block_anchor);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_1$1.name, type: "each", source: "(81:6) {#each keys as key}", ctx });
+    	return block;
+    }
+
+    // (88:8) {#each publication.links as {name, link}}
+    function create_each_block$4(ctx) {
+    	var a, t_value = ctx.name + "", t, a_href_value;
+
+    	const block = {
+    		c: function create() {
+    			a = element("a");
+    			t = text(t_value);
+    			attr_dev(a, "class", "publink svelte-1ngptbi");
+    			attr_dev(a, "href", a_href_value = ctx.link);
+    			add_location(a, file$4, 88, 10, 1682);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, a, anchor);
+    			append_dev(a, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.publication) && t_value !== (t_value = ctx.name + "")) {
+    				set_data_dev(t, t_value);
+    			}
+
+    			if ((changed.publication) && a_href_value !== (a_href_value = ctx.link)) {
+    				attr_dev(a, "href", a_href_value);
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(a);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$4.name, type: "each", source: "(88:8) {#each publication.links as {name, link}}", ctx });
+    	return block;
+    }
+
+    // (91:8) {#if publication.abstract}
+    function create_if_block_1$1(ctx) {
+    	var div, t0, t1_value = ctx.abstractOpen ? '-' : '+' + "", t1, t2, dispose;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			t0 = text("abstract (");
+    			t1 = text(t1_value);
+    			t2 = text(")");
+    			attr_dev(div, "class", "publink svelte-1ngptbi");
+    			add_location(div, file$4, 91, 10, 1785);
+    			dispose = listen_dev(div, "click", ctx.toggleAbstract);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, t0);
+    			append_dev(div, t1);
+    			append_dev(div, t2);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.abstractOpen) && t1_value !== (t1_value = ctx.abstractOpen ? '-' : '+' + "")) {
+    				set_data_dev(t1, t1_value);
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div);
+    			}
+
+    			dispose();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1$1.name, type: "if", source: "(91:8) {#if publication.abstract}", ctx });
+    	return block;
+    }
+
+    // (100:2) {#if abstractOpen}
+    function create_if_block$2(ctx) {
+    	var div, t_value = ctx.publication.abstract + "", t, div_transition, current;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			t = text(t_value);
+    			attr_dev(div, "class", "abstract svelte-1ngptbi");
+    			add_location(div, file$4, 100, 4, 1973);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, t);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((!current || changed.publication) && t_value !== (t_value = ctx.publication.abstract + "")) {
+    				set_data_dev(t, t_value);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			add_render_callback(() => {
+    				if (!div_transition) div_transition = create_bidirectional_transition(div, slide, {}, true);
+    				div_transition.run(1);
+    			});
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (!div_transition) div_transition = create_bidirectional_transition(div, slide, {}, false);
+    			div_transition.run(0);
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div);
+    				if (div_transition) div_transition.end();
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$2.name, type: "if", source: "(100:2) {#if abstractOpen}", ctx });
+    	return block;
+    }
+
+    function create_fragment$4(ctx) {
+    	var div4, div3, div0, img, img_alt_value, img_src_value, t0, div2, a, t1_value = ctx.publication.title + "", t1, a_href_value, t2, t3, div1, t4, t5, current;
+
+    	let each_value_1 = ctx.keys;
+
+    	let each_blocks_1 = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
+    	}
+
+    	let each_value = ctx.publication.links;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$4(get_each_context$4(ctx, each_value, i));
+    	}
+
+    	var if_block0 = (ctx.publication.abstract) && create_if_block_1$1(ctx);
+
+    	var if_block1 = (ctx.abstractOpen) && create_if_block$2(ctx);
+
+    	const block = {
+    		c: function create() {
+    			div4 = element("div");
+    			div3 = element("div");
+    			div0 = element("div");
+    			img = element("img");
+    			t0 = space();
+    			div2 = element("div");
+    			a = element("a");
+    			t1 = text(t1_value);
+    			t2 = space();
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t3 = space();
+    			div1 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t4 = space();
+    			if (if_block0) if_block0.c();
+    			t5 = space();
+    			if (if_block1) if_block1.c();
+    			attr_dev(img, "alt", img_alt_value = "image drawn from " + ctx.publication.title);
+    			attr_dev(img, "src", img_src_value = ctx.publication.imgLink);
+    			attr_dev(img, "class", "svelte-1ngptbi");
+    			add_location(img, file$4, 73, 6, 1279);
+    			attr_dev(div0, "class", "img-container svelte-1ngptbi");
+    			add_location(div0, file$4, 72, 4, 1245);
+    			attr_dev(a, "href", a_href_value = ctx.publication.link);
+    			add_location(a, file$4, 78, 6, 1417);
+    			attr_dev(div1, "class", "flex svelte-1ngptbi");
+    			add_location(div1, file$4, 86, 6, 1603);
+    			attr_dev(div2, "class", "flex-down svelte-1ngptbi");
+    			add_location(div2, file$4, 77, 4, 1387);
+    			attr_dev(div3, "class", "content-container svelte-1ngptbi");
+    			add_location(div3, file$4, 71, 2, 1209);
+    			attr_dev(div4, "class", "flex-down publication svelte-1ngptbi");
+    			add_location(div4, file$4, 70, 0, 1171);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, div3);
+    			append_dev(div3, div0);
+    			append_dev(div0, img);
+    			append_dev(div3, t0);
+    			append_dev(div3, div2);
+    			append_dev(div2, a);
+    			append_dev(a, t1);
+    			append_dev(div2, t2);
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(div2, null);
+    			}
+
+    			append_dev(div2, t3);
+    			append_dev(div2, div1);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div1, null);
+    			}
+
+    			append_dev(div1, t4);
+    			if (if_block0) if_block0.m(div1, null);
+    			append_dev(div4, t5);
+    			if (if_block1) if_block1.m(div4, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((!current || changed.publication) && img_alt_value !== (img_alt_value = "image drawn from " + ctx.publication.title)) {
+    				attr_dev(img, "alt", img_alt_value);
+    			}
+
+    			if ((!current || changed.publication) && img_src_value !== (img_src_value = ctx.publication.imgLink)) {
+    				attr_dev(img, "src", img_src_value);
+    			}
+
+    			if ((!current || changed.publication) && t1_value !== (t1_value = ctx.publication.title + "")) {
+    				set_data_dev(t1, t1_value);
+    			}
+
+    			if ((!current || changed.publication) && a_href_value !== (a_href_value = ctx.publication.link)) {
+    				attr_dev(a, "href", a_href_value);
+    			}
+
+    			if (changed.publication || changed.keys) {
+    				each_value_1 = ctx.keys;
+
+    				let i;
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$1(ctx, each_value_1, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks_1[i] = create_each_block_1$1(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(div2, t3);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+    				each_blocks_1.length = each_value_1.length;
+    			}
+
+    			if (changed.publication) {
+    				each_value = ctx.publication.links;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$4(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block$4(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div1, t4);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value.length;
+    			}
+
+    			if (ctx.publication.abstract) {
+    				if (if_block0) {
+    					if_block0.p(changed, ctx);
+    				} else {
+    					if_block0 = create_if_block_1$1(ctx);
+    					if_block0.c();
+    					if_block0.m(div1, null);
+    				}
+    			} else if (if_block0) {
+    				if_block0.d(1);
+    				if_block0 = null;
+    			}
+
+    			if (ctx.abstractOpen) {
+    				if (if_block1) {
+    					if_block1.p(changed, ctx);
+    					transition_in(if_block1, 1);
+    				} else {
+    					if_block1 = create_if_block$2(ctx);
+    					if_block1.c();
+    					transition_in(if_block1, 1);
+    					if_block1.m(div4, null);
+    				}
+    			} else if (if_block1) {
+    				group_outros();
+    				transition_out(if_block1, 1, 1, () => {
+    					if_block1 = null;
+    				});
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(if_block1);
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(if_block1);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div4);
+    			}
+
+    			destroy_each(each_blocks_1, detaching);
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (if_block0) if_block0.d();
+    			if (if_block1) if_block1.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$4.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$3($$self, $$props, $$invalidate) {
+    	let { publication } = $$props;
+      let abstractOpen = false;
+      function toggleAbstract(e) {
+        e.preventDefault();
+        $$invalidate('abstractOpen', abstractOpen = !abstractOpen);
+      }
+      const keys = ['subtitle', 'date', 'authors', 'journal'];
+
+    	const writable_props = ['publication'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Publication> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('publication' in $$props) $$invalidate('publication', publication = $$props.publication);
+    	};
+
+    	$$self.$capture_state = () => {
+    		return { publication, abstractOpen };
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('publication' in $$props) $$invalidate('publication', publication = $$props.publication);
+    		if ('abstractOpen' in $$props) $$invalidate('abstractOpen', abstractOpen = $$props.abstractOpen);
+    	};
+
+    	return {
+    		publication,
+    		abstractOpen,
+    		toggleAbstract,
+    		keys
+    	};
+    }
+
+    class Publication extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$3, create_fragment$4, safe_not_equal, ["publication"]);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Publication", options, id: create_fragment$4.name });
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.publication === undefined && !('publication' in props)) {
+    			console.warn("<Publication> was created without expected prop 'publication'");
+    		}
+    	}
+
+    	get publication() {
+    		throw new Error("<Publication>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set publication(value) {
+    		throw new Error("<Publication>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src/components/Research.svelte generated by Svelte v3.12.1 */
+
+    const file$5 = "src/components/Research.svelte";
+
+    function get_each_context$5(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.publication = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_1$2(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.publication = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_2(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.publication = list[i];
+    	return child_ctx;
+    }
+
+    // (16:4) {#each PUBLICATIONS as publication}
+    function create_each_block_2(ctx) {
+    	var current;
+
+    	var publication = new Publication({
+    		props: { publication: ctx.publication },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			publication.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(publication, target, anchor);
+    			current = true;
+    		},
+
+    		p: noop,
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(publication.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(publication.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(publication, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_2.name, type: "each", source: "(16:4) {#each PUBLICATIONS as publication}", ctx });
+    	return block;
+    }
+
+    // (23:4) {#each BLOG_POSTS as publication}
+    function create_each_block_1$2(ctx) {
+    	var current;
+
+    	var publication = new Publication({
+    		props: { publication: ctx.publication },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			publication.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(publication, target, anchor);
+    			current = true;
+    		},
+
+    		p: noop,
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(publication.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(publication.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(publication, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_1$2.name, type: "each", source: "(23:4) {#each BLOG_POSTS as publication}", ctx });
+    	return block;
+    }
+
+    // (30:4) {#each PRESENTATIONS as publication}
+    function create_each_block$5(ctx) {
+    	var current;
+
+    	var publication = new Publication({
+    		props: { publication: ctx.publication },
+    		$$inline: true
+    	});
+
+    	const block = {
+    		c: function create() {
+    			publication.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(publication, target, anchor);
+    			current = true;
+    		},
+
+    		p: noop,
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(publication.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(publication.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(publication, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$5.name, type: "each", source: "(30:4) {#each PRESENTATIONS as publication}", ctx });
+    	return block;
+    }
+
+    function create_fragment$5(ctx) {
+    	var div3, h10, t1, div0, t2, h11, t4, div1, t5, h12, t7, div2, current;
+
+    	let each_value_2 = PUBLICATIONS;
+
+    	let each_blocks_2 = [];
+
+    	for (let i = 0; i < each_value_2.length; i += 1) {
+    		each_blocks_2[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
+    	}
+
+    	const out = i => transition_out(each_blocks_2[i], 1, 1, () => {
+    		each_blocks_2[i] = null;
+    	});
+
+    	let each_value_1 = BLOG_POSTS;
+
+    	let each_blocks_1 = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1$2(get_each_context_1$2(ctx, each_value_1, i));
+    	}
+
+    	const out_1 = i => transition_out(each_blocks_1[i], 1, 1, () => {
+    		each_blocks_1[i] = null;
+    	});
+
+    	let each_value = PRESENTATIONS;
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$5(get_each_context$5(ctx, each_value, i));
+    	}
+
+    	const out_2 = i => transition_out(each_blocks[i], 1, 1, () => {
+    		each_blocks[i] = null;
+    	});
+
+    	const block = {
+    		c: function create() {
+    			div3 = element("div");
+    			h10 = element("h1");
+    			h10.textContent = "PUBLICATIONS";
+    			t1 = space();
+    			div0 = element("div");
+
+    			for (let i = 0; i < each_blocks_2.length; i += 1) {
+    				each_blocks_2[i].c();
+    			}
+
+    			t2 = space();
+    			h11 = element("h1");
+    			h11.textContent = "BLOG POSTS";
+    			t4 = space();
+    			div1 = element("div");
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t5 = space();
+    			h12 = element("h1");
+    			h12.textContent = "Talks";
+    			t7 = space();
+    			div2 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			add_location(h10, file$5, 13, 2, 247);
+    			attr_dev(div0, "class", "research-section svelte-1w0h618");
+    			add_location(div0, file$5, 14, 2, 271);
+    			add_location(h11, file$5, 20, 2, 402);
+    			attr_dev(div1, "class", "research-section svelte-1w0h618");
+    			add_location(div1, file$5, 21, 2, 424);
+    			add_location(h12, file$5, 27, 2, 553);
+    			attr_dev(div2, "class", "research-section svelte-1w0h618");
+    			add_location(div2, file$5, 28, 2, 570);
+    			add_location(div3, file$5, 12, 0, 239);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, h10);
+    			append_dev(div3, t1);
+    			append_dev(div3, div0);
+
+    			for (let i = 0; i < each_blocks_2.length; i += 1) {
+    				each_blocks_2[i].m(div0, null);
+    			}
+
+    			append_dev(div3, t2);
+    			append_dev(div3, h11);
+    			append_dev(div3, t4);
+    			append_dev(div3, div1);
+
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(div1, null);
+    			}
+
+    			append_dev(div3, t5);
+    			append_dev(div3, h12);
+    			append_dev(div3, t7);
+    			append_dev(div3, div2);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div2, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.PUBLICATIONS) {
+    				each_value_2 = PUBLICATIONS;
+
+    				let i;
+    				for (i = 0; i < each_value_2.length; i += 1) {
+    					const child_ctx = get_each_context_2(ctx, each_value_2, i);
+
+    					if (each_blocks_2[i]) {
+    						each_blocks_2[i].p(changed, child_ctx);
+    						transition_in(each_blocks_2[i], 1);
+    					} else {
+    						each_blocks_2[i] = create_each_block_2(child_ctx);
+    						each_blocks_2[i].c();
+    						transition_in(each_blocks_2[i], 1);
+    						each_blocks_2[i].m(div0, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value_2.length; i < each_blocks_2.length; i += 1) {
+    					out(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (changed.BLOG_POSTS) {
+    				each_value_1 = BLOG_POSTS;
+
+    				let i;
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$2(ctx, each_value_1, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(changed, child_ctx);
+    						transition_in(each_blocks_1[i], 1);
+    					} else {
+    						each_blocks_1[i] = create_each_block_1$2(child_ctx);
+    						each_blocks_1[i].c();
+    						transition_in(each_blocks_1[i], 1);
+    						each_blocks_1[i].m(div1, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value_1.length; i < each_blocks_1.length; i += 1) {
+    					out_1(i);
+    				}
+    				check_outros();
+    			}
+
+    			if (changed.PRESENTATIONS) {
+    				each_value = PRESENTATIONS;
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$5(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						transition_in(each_blocks[i], 1);
+    					} else {
+    						each_blocks[i] = create_each_block$5(child_ctx);
+    						each_blocks[i].c();
+    						transition_in(each_blocks[i], 1);
+    						each_blocks[i].m(div2, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (i = each_value.length; i < each_blocks.length; i += 1) {
+    					out_2(i);
+    				}
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			for (let i = 0; i < each_value_2.length; i += 1) {
+    				transition_in(each_blocks_2[i]);
+    			}
+
+    			for (let i = 0; i < each_value_1.length; i += 1) {
+    				transition_in(each_blocks_1[i]);
+    			}
+
+    			for (let i = 0; i < each_value.length; i += 1) {
+    				transition_in(each_blocks[i]);
+    			}
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			each_blocks_2 = each_blocks_2.filter(Boolean);
+    			for (let i = 0; i < each_blocks_2.length; i += 1) {
+    				transition_out(each_blocks_2[i]);
+    			}
+
+    			each_blocks_1 = each_blocks_1.filter(Boolean);
+    			for (let i = 0; i < each_blocks_1.length; i += 1) {
+    				transition_out(each_blocks_1[i]);
+    			}
+
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				transition_out(each_blocks[i]);
+    			}
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div3);
+    			}
+
+    			destroy_each(each_blocks_2, detaching);
+
+    			destroy_each(each_blocks_1, detaching);
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$5.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    class Research extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, null, create_fragment$5, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Research", options, id: create_fragment$5.name });
+    	}
+    }
+
+    /* src/components/Teaching.svelte generated by Svelte v3.12.1 */
+
+    const file$6 = "src/components/Teaching.svelte";
+
+    function get_each_context_1$3(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.position = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context$6(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.key = list[i];
+    	return child_ctx;
+    }
+
+    // (27:10) {#if position.link}
+    function create_if_block_1$2(ctx) {
+    	var a, t_value = ctx.position.title + "", t;
+
+    	const block = {
+    		c: function create() {
+    			a = element("a");
+    			t = text(t_value);
+    			attr_dev(a, "href", ctx.position.link);
+    			add_location(a, file$6, 27, 12, 559);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, a, anchor);
+    			append_dev(a, t);
+    		},
+
+    		p: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(a);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1$2.name, type: "if", source: "(27:10) {#if position.link}", ctx });
+    	return block;
+    }
+
+    // (30:10) {#if !position.link}
+    function create_if_block$3(ctx) {
+    	var div, t_value = ctx.position.title + "", t;
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			t = text(t_value);
+    			add_location(div, file$6, 30, 12, 663);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, t);
+    		},
+
+    		p: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div);
+    			}
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$3.name, type: "if", source: "(30:10) {#if !position.link}", ctx });
+    	return block;
+    }
+
+    // (25:6) {#each groups[key] as position}
+    function create_each_block_1$3(ctx) {
+    	var div1, t0, t1, div0, i, t2_value = `${ctx.position.fancyTitle || ctx.position.role}` + "", t2, t3, span, t4_value = ctx.position.date + "", t4;
+
+    	var if_block0 = (ctx.position.link) && create_if_block_1$2(ctx);
+
+    	var if_block1 = (!ctx.position.link) && create_if_block$3(ctx);
+
+    	const block = {
+    		c: function create() {
+    			div1 = element("div");
+    			if (if_block0) if_block0.c();
+    			t0 = space();
+    			if (if_block1) if_block1.c();
+    			t1 = space();
+    			div0 = element("div");
+    			i = element("i");
+    			t2 = text(t2_value);
+    			t3 = space();
+    			span = element("span");
+    			t4 = text(t4_value);
+    			add_location(i, file$6, 34, 12, 749);
+    			attr_dev(span, "class", "margin-left svelte-15b5xf0");
+    			add_location(span, file$6, 35, 12, 812);
+    			attr_dev(div0, "class", "flex");
+    			add_location(div0, file$6, 33, 10, 718);
+    			attr_dev(div1, "class", "margin-bottom svelte-15b5xf0");
+    			add_location(div1, file$6, 25, 8, 489);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div1, anchor);
+    			if (if_block0) if_block0.m(div1, null);
+    			append_dev(div1, t0);
+    			if (if_block1) if_block1.m(div1, null);
+    			append_dev(div1, t1);
+    			append_dev(div1, div0);
+    			append_dev(div0, i);
+    			append_dev(i, t2);
+    			append_dev(div0, t3);
+    			append_dev(div0, span);
+    			append_dev(span, t4);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.position.link) if_block0.p(changed, ctx);
+
+    			if (!ctx.position.link) if_block1.p(changed, ctx);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div1);
+    			}
+
+    			if (if_block0) if_block0.d();
+    			if (if_block1) if_block1.d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block_1$3.name, type: "each", source: "(25:6) {#each groups[key] as position}", ctx });
+    	return block;
+    }
+
+    // (22:2) {#each Object.keys(groups) as key}
+    function create_each_block$6(ctx) {
+    	var div, h3, t0_value = ctx.key.toUpperCase() + "", t0, t1, t2;
+
+    	let each_value_1 = ctx.groups[ctx.key];
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1$3(get_each_context_1$3(ctx, each_value_1, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			h3 = element("h3");
+    			t0 = text(t0_value);
+    			t1 = space();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t2 = space();
+    			add_location(h3, file$6, 23, 6, 414);
+    			attr_dev(div, "class", "margin-large-bottom svelte-15b5xf0");
+    			add_location(div, file$6, 22, 4, 374);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			append_dev(div, h3);
+    			append_dev(h3, t0);
+    			append_dev(div, t1);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div, null);
+    			}
+
+    			append_dev(div, t2);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.groups) {
+    				each_value_1 = ctx.groups[ctx.key];
+
+    				let i;
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$3(ctx, each_value_1, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block_1$3(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div, t2);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value_1.length;
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_each_block$6.name, type: "each", source: "(22:2) {#each Object.keys(groups) as key}", ctx });
+    	return block;
+    }
+
+    function create_fragment$6(ctx) {
+    	var div;
+
+    	let each_value = Object.keys(ctx.groups);
+
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$6(get_each_context$6(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			add_location(div, file$6, 20, 0, 327);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div, null);
+    			}
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.groups) {
+    				each_value = Object.keys(ctx.groups);
+
+    				let i;
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$6(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block$6(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$6.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$4($$self) {
+    	
+      const groups = groupBy(TEACHING, 'role');
+      console.log(groups);
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {};
+
+    	return { groups };
+    }
+
+    class Teaching extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$4, create_fragment$6, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "Teaching", options, id: create_fragment$6.name });
+    	}
+    }
+
+    /* src/App.svelte generated by Svelte v3.12.1 */
+
+    const file$7 = "src/App.svelte";
+
+    // (115:8) {:else}
+    function create_else_block(ctx) {
+    	var current;
+
+    	var about = new About({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			about.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(about, target, anchor);
+    			current = true;
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(about.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(about.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(about, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_else_block.name, type: "else", source: "(115:8) {:else}", ctx });
+    	return block;
+    }
+
+    // (113:48) 
+    function create_if_block_2$1(ctx) {
+    	var current;
+
+    	var teaching = new Teaching({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			teaching.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(teaching, target, anchor);
+    			current = true;
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(teaching.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(teaching.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(teaching, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_2$1.name, type: "if", source: "(113:48) ", ctx });
+    	return block;
+    }
+
+    // (111:48) 
+    function create_if_block_1$3(ctx) {
+    	var current;
+
+    	var projects = new Projects({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			projects.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(projects, target, anchor);
+    			current = true;
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(projects.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(projects.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(projects, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block_1$3.name, type: "if", source: "(111:48) ", ctx });
+    	return block;
+    }
+
+    // (109:8) {#if currentSection === 'research'}
+    function create_if_block$4(ctx) {
+    	var current;
+
+    	var research = new Research({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			research.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(research, target, anchor);
+    			current = true;
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(research.$$.fragment, local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(research.$$.fragment, local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			destroy_component(research, detaching);
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_if_block$4.name, type: "if", source: "(109:8) {#if currentSection === 'research'}", ctx });
+    	return block;
+    }
+
+    function create_fragment$7(ctx) {
+    	var div6, div2, div1, h10, t1, h11, t3, h3, t5, div0, a0, t7, a1, t9, a2, t11, div5, t12, div4, t13, div3, current_block_type_index, if_block, current;
+
+    	var mobileheader = new MobileHeader({
+    		props: { currentSection: ctx.currentSection },
+    		$$inline: true
+    	});
+
+    	var header = new Header({
+    		props: { currentSection: ctx.currentSection },
+    		$$inline: true
+    	});
+
+    	var if_block_creators = [
+    		create_if_block$4,
+    		create_if_block_1$3,
+    		create_if_block_2$1,
+    		create_else_block
+    	];
+
+    	var if_blocks = [];
+
+    	function select_block_type(changed, ctx) {
+    		if (ctx.currentSection === 'research') return 0;
+    		if (ctx.currentSection === 'projects') return 1;
+    		if (ctx.currentSection === 'teaching') return 2;
+    		return 3;
+    	}
+
+    	current_block_type_index = select_block_type(null, ctx);
+    	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+
+    	const block = {
+    		c: function create() {
+    			div6 = element("div");
+    			div2 = element("div");
+    			div1 = element("div");
+    			h10 = element("h1");
+    			h10.textContent = "ANDREW";
+    			t1 = space();
+    			h11 = element("h1");
+    			h11.textContent = "MCNUTT";
+    			t3 = space();
+    			h3 = element("h3");
+    			h3.textContent = "VISUALIZATION";
+    			t5 = space();
+    			div0 = element("div");
+    			a0 = element("a");
+    			a0.textContent = "GITHUB";
+    			t7 = space();
+    			a1 = element("a");
+    			a1.textContent = "TWITTER";
+    			t9 = space();
+    			a2 = element("a");
+    			a2.textContent = "CV";
+    			t11 = space();
+    			div5 = element("div");
+    			mobileheader.$$.fragment.c();
+    			t12 = space();
+    			div4 = element("div");
+    			header.$$.fragment.c();
+    			t13 = space();
+    			div3 = element("div");
+    			if_block.c();
+    			attr_dev(h10, "class", "svelte-eyk0im");
+    			add_location(h10, file$7, 93, 6, 1904);
+    			attr_dev(h11, "class", "svelte-eyk0im");
+    			add_location(h11, file$7, 94, 6, 1926);
+    			attr_dev(h3, "class", "svelte-eyk0im");
+    			add_location(h3, file$7, 95, 6, 1948);
+    			attr_dev(a0, "href", "https://github.com/mcnuttandrew");
+    			attr_dev(a0, "class", "svelte-eyk0im");
+    			add_location(a0, file$7, 97, 8, 1991);
+    			attr_dev(a1, "href", "https://twitter.com/_mcnutt_");
+    			attr_dev(a1, "class", "svelte-eyk0im");
+    			add_location(a1, file$7, 98, 8, 2052);
+    			attr_dev(a2, "href", "https://www.mcnutt.in/assets/resume.pdf");
+    			attr_dev(a2, "class", "svelte-eyk0im");
+    			add_location(a2, file$7, 99, 8, 2111);
+    			add_location(div0, file$7, 96, 6, 1977);
+    			attr_dev(div1, "class", "info-container svelte-eyk0im");
+    			add_location(div1, file$7, 92, 4, 1869);
+    			attr_dev(div2, "class", "left-panel flex-down svelte-eyk0im");
+    			add_location(div2, file$7, 91, 2, 1830);
+    			attr_dev(div3, "class", "content-wrapper svelte-eyk0im");
+    			add_location(div3, file$7, 107, 6, 2346);
+    			attr_dev(div4, "class", "right-panel svelte-eyk0im");
+    			add_location(div4, file$7, 105, 4, 2280);
+    			attr_dev(div5, "class", "flex-down full-width svelte-eyk0im");
+    			add_location(div5, file$7, 103, 2, 2203);
+    			attr_dev(div6, "class", "flex full-height svelte-eyk0im");
+    			add_location(div6, file$7, 90, 0, 1797);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div6, anchor);
+    			append_dev(div6, div2);
+    			append_dev(div2, div1);
+    			append_dev(div1, h10);
+    			append_dev(div1, t1);
+    			append_dev(div1, h11);
+    			append_dev(div1, t3);
+    			append_dev(div1, h3);
+    			append_dev(div1, t5);
+    			append_dev(div1, div0);
+    			append_dev(div0, a0);
+    			append_dev(div0, t7);
+    			append_dev(div0, a1);
+    			append_dev(div0, t9);
+    			append_dev(div0, a2);
+    			append_dev(div6, t11);
+    			append_dev(div6, div5);
+    			mount_component(mobileheader, div5, null);
+    			append_dev(div5, t12);
+    			append_dev(div5, div4);
+    			mount_component(header, div4, null);
+    			append_dev(div4, t13);
+    			append_dev(div4, div3);
+    			if_blocks[current_block_type_index].m(div3, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var mobileheader_changes = {};
+    			if (changed.currentSection) mobileheader_changes.currentSection = ctx.currentSection;
+    			mobileheader.$set(mobileheader_changes);
+
+    			var header_changes = {};
+    			if (changed.currentSection) header_changes.currentSection = ctx.currentSection;
+    			header.$set(header_changes);
+
+    			var previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type(changed, ctx);
+    			if (current_block_type_index !== previous_block_index) {
+    				group_outros();
+    				transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    					if_blocks[previous_block_index] = null;
+    				});
+    				check_outros();
+
+    				if_block = if_blocks[current_block_type_index];
+    				if (!if_block) {
+    					if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    					if_block.c();
+    				}
+    				transition_in(if_block, 1);
+    				if_block.m(div3, null);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(mobileheader.$$.fragment, local);
+
+    			transition_in(header.$$.fragment, local);
+
+    			transition_in(if_block);
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			transition_out(mobileheader.$$.fragment, local);
+    			transition_out(header.$$.fragment, local);
+    			transition_out(if_block);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach_dev(div6);
+    			}
+
+    			destroy_component(mobileheader);
+
+    			destroy_component(header);
+
+    			if_blocks[current_block_type_index].d();
+    		}
+    	};
+    	dispatch_dev("SvelteRegisterBlock", { block, id: create_fragment$7.name, type: "component", source: "", ctx });
+    	return block;
+    }
+
+    function instance$5($$self, $$props, $$invalidate) {
+    	
+      let currentSection = getRoute();
+      window.onhashchange = () => {
+        $$invalidate('currentSection', currentSection = getRoute());
+        console.log(currentSection);
+      };
+
+    	$$self.$capture_state = () => {
+    		return {};
+    	};
+
+    	$$self.$inject_state = $$props => {
+    		if ('currentSection' in $$props) $$invalidate('currentSection', currentSection = $$props.currentSection);
+    	};
+
+    	return { currentSection };
+    }
+
+    class App extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$5, create_fragment$7, safe_not_equal, []);
+    		dispatch_dev("SvelteRegisterComponent", { component: this, tagName: "App", options, id: create_fragment$7.name });
+    	}
+    }
+
+    const app = new App({target: document.body});
+
+    return app;
+
+}());
 //# sourceMappingURL=bundle.js.map
