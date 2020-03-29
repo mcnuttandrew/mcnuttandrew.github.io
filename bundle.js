@@ -1279,22 +1279,22 @@ var app = (function () {
     and pretty much anything in the wild world of javascript.`;
 
     const PUBLICATIONS = [
-             {
-               link: 'https://arxiv.org/pdf/2001.02316.pdf',
-               imgLink: 'assets/surfacing-visualization-mirages.png',
-               title: 'Surfacing Visualization Mirages',
-               authors: 'Andrew McNutt, Gordon Kindlmann, Michael Correll',
-               journal: 'CHI 2020 - To Appear',
-               links: [
-                 {name: 'preprint', link: 'https://arxiv.org/pdf/2001.02316.pdf'},
-                 {name: 'live', link: 'https://metamorphic-linting.netlify.com/'},
-                 {
-                   name: 'code',
-                   link: 'https://github.com/tableau/Visualization-Linting'
-                 },
-                 {name: 'osf', link: 'https://osf.io/je3x9'}
-               ],
-               abstract: `
+      {
+        link: 'https://arxiv.org/pdf/2001.02316.pdf',
+        imgLink: 'assets/surfacing-visualization-mirages.png',
+        title: 'Surfacing Visualization Mirages',
+        authors: 'Andrew McNutt, Gordon Kindlmann, Michael Correll',
+        journal: 'CHI 2020 - To Appear',
+        links: [
+          {name: 'preprint', link: 'https://arxiv.org/pdf/2001.02316.pdf'},
+          {name: 'live', link: 'https://metamorphic-linting.netlify.com/'},
+          {
+            name: 'code',
+            link: 'https://github.com/tableau/Visualization-Linting'
+          },
+          {name: 'osf', link: 'https://osf.io/je3x9'}
+        ],
+        abstract: `
     Dirty data and deceptive design practices can undermine, invert, or invalidate the purported messages of charts and graphs.
     These failures can arise silently: a conclusion derived from
     a particular visualization may look plausible unless the analyst looks closer and discovers an issue with the backing
@@ -1310,28 +1310,26 @@ var app = (function () {
     variety of chart types with relatively little prior knowledge of
     the data or the domain.
     `,
-               bibTex: `TODO`
-             },
-             {
-               link:
-                 'https://research.tableau.com/sites/default/files/altchi-tarot-cameraready.pdf',
-               imgLink: 'assets/vis-tarot.png',
-               title: 'Divining Insights: Visual Analytics Through Cartomancy',
-               authors: 'Andrew McNutt, Anamaria Crisan, Michael Correll',
-               journal: 'alt.CHI 2020 - To Appear',
-               links: [
-                 {
-                   name: 'preprint',
-                   link:
-                     'https://research.tableau.com/sites/default/files/altchi-tarot-cameraready.pdf'
-                 },
-                 {name: 'live', link: 'https://vis-tarot.netlify.com/'},
-                 {
-                   name: 'code',
-                   link: 'https://github.com/mcorrell/vis-tarot'
-                 }
-               ],
-               abstract: `
+        bibTex: `TODO`
+      },
+      {
+        link: 'assets/altchi-tarot-cameraready.pdf',
+        imgLink: 'assets/vis-tarot.png',
+        title: 'Divining Insights: Visual Analytics Through Cartomancy',
+        authors: 'Andrew McNutt, Anamaria Crisan, Michael Correll',
+        journal: 'alt.CHI 2020 - To Appear',
+        links: [
+          {
+            name: 'preprint',
+            link: 'assets/altchi-tarot-cameraready.pdf'
+          },
+          {name: 'live', link: 'https://vis-tarot.netlify.com/'},
+          {
+            name: 'code',
+            link: 'https://github.com/mcorrell/vis-tarot'
+          }
+        ],
+        abstract: `
     Our interactions with data, visual analytics included, are increasingly shaped by automated or algorithmic systems. An
 open question is how to give analysts the tools to interpret
 these “automatic insights” while also inculcating critical engagement with algorithmic analysis. We present a system,
@@ -1340,40 +1338,40 @@ provide an overview of automatically detected patterns in
 data in a way that is meant to encourage critique, reflection,
 and healthy skepticism.
     `,
-               bibTex: `TODO`
-             },
-             // {
-             //   imgLink: 'assets/agathas-thing.png',
-             //   title:
-             //     'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
-             //   authors: 'Agatha Kim, Andrew McNutt, S. Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
-             //   journal: 'MindBytes. November 2019',
-             //   links: [
-             //     {name: 'poster', link: 'https://mindbytes.uchicago.edu/posters/2019/10252019165647_posterkim102519.pdf'},
-             //     {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'}
-             //   ],
-             //   abstract: `
-             //   When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as â€œnational scienceâ€? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.
-             //   `,
-             // },
-             {
-               link: 'assets/forum-explorer-paper.pdf',
-               imgLink: 'assets/forested-tree-view-example.jpg',
-               title:
-                 'Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations',
-               authors: 'Andrew McNutt, Gordon Kindlmann',
-               journal: 'EuroVis - Extended Abstract. June 2019',
-               links: [
-                 {name: 'paper', link: 'assets/forum-explorer-paper.pdf'},
-                 {name: 'poster', link: 'assets/forum-explorer-poster.pdf'},
-                 {name: 'live', link: 'https://www.mcnutt.in/forum-explorer/'},
-                 {
-                   name: 'code',
-                   link: 'https://github.com/mcnuttandrew/forum-explorer'
-                 },
-                 {name: 'osf', link: 'https://osf.io/nrhqw/'}
-               ],
-               abstract: `
+        bibTex: `TODO`
+      },
+      // {
+      //   imgLink: 'assets/agathas-thing.png',
+      //   title:
+      //     'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
+      //   authors: 'Agatha Kim, Andrew McNutt, S. Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
+      //   journal: 'MindBytes. November 2019',
+      //   links: [
+      //     {name: 'poster', link: 'https://mindbytes.uchicago.edu/posters/2019/10252019165647_posterkim102519.pdf'},
+      //     {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'}
+      //   ],
+      //   abstract: `
+      //   When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as â€œnational scienceâ€? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.
+      //   `,
+      // },
+      {
+        link: 'assets/forum-explorer-paper.pdf',
+        imgLink: 'assets/forested-tree-view-example.jpg',
+        title:
+          'Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations',
+        authors: 'Andrew McNutt, Gordon Kindlmann',
+        journal: 'EuroVis - Extended Abstract. June 2019',
+        links: [
+          {name: 'paper', link: 'assets/forum-explorer-paper.pdf'},
+          {name: 'poster', link: 'assets/forum-explorer-poster.pdf'},
+          {name: 'live', link: 'https://www.mcnutt.in/forum-explorer/'},
+          {
+            name: 'code',
+            link: 'https://github.com/mcnuttandrew/forum-explorer'
+          },
+          {name: 'osf', link: 'https://osf.io/nrhqw/'}
+        ],
+        abstract: `
     Large threaded conversations, such as those found on YCombinator’s HackerNews,
     are typically presented in a way that shows individual comments clearly,
     but can obscure larger trends or patterns within the conversational corpus.
@@ -1385,30 +1383,30 @@ and healthy skepticism.
     prior art through a collection of techniques that enable this type of
     representation to handle wider ranges of data in real time. Materials for this project are available at https://osf.io/nrhqw/.
     `,
-               bibTex: `
+        bibTex: `
     @inproceedings{McNuttKindlmannForumExplorerPoster,
       title={Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations},
       author={McNutt, Andrew and Kindlmann, Gordon},
       booktitle={Poster Abstracts of the EG/VGTC Conference on Visualization (EuroVis)},
       year={2019}
     }`
-             },
-             {
-               link: 'assets/McNutt_Kindlmann_2018.pdf',
-               imgLink: 'assets/lint-pic.jpg',
-               title:
-                 'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
-               authors: 'Andrew McNutt, Gordon Kindlmann',
-               journal: 'VisGuides (IEEEVIS Workshop). Octobr 2018',
-               links: [
-                 {name: 'paper', link: 'assets/McNutt_Kindlmann_2018.pdf'},
-                 {
-                   name: 'code',
-                   link: 'https://github.com/mcnuttandrew/vislint_mpl'
-                 },
-                 {name: 'talk', link: 'assets/vis-lint-talk.pdf'}
-               ],
-               abstract: `
+      },
+      {
+        link: 'assets/McNutt_Kindlmann_2018.pdf',
+        imgLink: 'assets/lint-pic.jpg',
+        title:
+          'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
+        authors: 'Andrew McNutt, Gordon Kindlmann',
+        journal: 'VisGuides (IEEEVIS Workshop). Octobr 2018',
+        links: [
+          {name: 'paper', link: 'assets/McNutt_Kindlmann_2018.pdf'},
+          {
+            name: 'code',
+            link: 'https://github.com/mcnuttandrew/vislint_mpl'
+          },
+          {name: 'talk', link: 'assets/vis-lint-talk.pdf'}
+        ],
+        abstract: `
     Constructing effective charts and graphs in a scientific setting is a
     nuanced task that requires a thorough understanding of visualization
     design; a knowledge that may not be available to all practicing scientists.
@@ -1427,7 +1425,7 @@ and healthy skepticism.
     a prototype visualization linting system, that
     evaluates charts created in matplotlib.
     `,
-               bibTex: `
+        bibTex: `
     @misc{mcnuttKindlmannLinting,
       Author = {McNutt, Andrew and Kindlmann, Gordon},
       Howpublished = {IEEE VIS Workshop: \href{https://c4pgv.dbvis.de/}{VisGuides: 2nd Workshop on the Creation, Curation, Critique and Conditioning of Principles and Guidelines in Visualization}},
@@ -1435,24 +1433,22 @@ and healthy skepticism.
       Title = {Linting for Visualization: Towards a Practical Automated Visualization Guidance System},
       Year = {2018}}
     `
-             },
-             {
-               link:
-                 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14',
-               imgLink: 'assets/cdd-pic.jpg',
-               title:
-                 'Data Mining and Computational Modeling of High-Throughput Screening Datasets',
-               authors: `Sean Ekins, Alex M Clark, Krishna Dole, Kellan Gregory, Andrew McNutt,
+      },
+      {
+        link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14',
+        imgLink: 'assets/cdd-pic.jpg',
+        title:
+          'Data Mining and Computational Modeling of High-Throughput Screening Datasets',
+        authors: `Sean Ekins, Alex M Clark, Krishna Dole, Kellan Gregory, Andrew McNutt,
     Anna Coulon Spektor, Charlie Weatherall, Nadia K Litterman, Barry A Bunin`,
-               journal: 'Reporter Gene Assays. 2018',
-               links: [
-                 {
-                   name: 'paper',
-                   link:
-                     'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14'
-                 }
-               ],
-               abstract: `
+        journal: 'Reporter Gene Assays. 2018',
+        links: [
+          {
+            name: 'paper',
+            link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14'
+          }
+        ],
+        abstract: `
     We are now seeing the benefit of investments made over the last decade in
     high-throughput screening (HTS) that is resulting in large structure activity
     datasets entering public and open databases such as ChEMBL and PubChem.
@@ -1472,19 +1468,18 @@ and healthy skepticism.
     use with public datasets in CDD Vault. Such approaches can complement other cheminformatics
     tools, whether open source or commercial, in providing approaches for data mining and modeling of HTS data.
     `
-             },
-             {
-               link: 'https://arxiv.org/abs/1501.07537',
-               imgLink: 'assets/qgrav-pic.jpg',
-               title: 'The Schrodinger-Newton System with Self-field Coupling',
-               authors:
-                 'Joel Franklin, Youdan Guo, Andrew McNutt, and Allison Morgan',
-               journal: 'Classical and Quantum Gravity. 2015',
-               links: [
-                 {name: 'paper', link: 'https://arxiv.org/abs/1501.07537'},
-                 {name: 'talk', link: 'assets/QGravPresentation.pdf'}
-               ],
-               abstract: `
+      },
+      {
+        link: 'https://arxiv.org/abs/1501.07537',
+        imgLink: 'assets/qgrav-pic.jpg',
+        title: 'The Schrodinger-Newton System with Self-field Coupling',
+        authors: 'Joel Franklin, Youdan Guo, Andrew McNutt, and Allison Morgan',
+        journal: 'Classical and Quantum Gravity. 2015',
+        links: [
+          {name: 'paper', link: 'https://arxiv.org/abs/1501.07537'},
+          {name: 'talk', link: 'assets/QGravPresentation.pdf'}
+        ],
+        abstract: `
     We study the Schrodinger-Newton system of equations with the addition of gravitational
     field energy sourcing - such additional nonlinearity is to be expected from a theory
     of gravity (like general relativity), and its appearance in this simplified scalar
@@ -1498,22 +1493,22 @@ and healthy skepticism.
     energy between the ground state and first excited state to compare emission frequencies
     between Schrodinger-Newton and the self-coupled scalar case.
     `
-             },
-             {
-               link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143',
-               imgLink: 'assets/cdd-models-pic.jpg',
-               title:
-                 'Open source Bayesian models. 1. Application to ADME/Tox and drug discovery datasets.',
-               authors: `Alex M. Clark, Krishna Dole, Anna Coulon-Spektor, Andrew McNutt,
+      },
+      {
+        link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143',
+        imgLink: 'assets/cdd-models-pic.jpg',
+        title:
+          'Open source Bayesian models. 1. Application to ADME/Tox and drug discovery datasets.',
+        authors: `Alex M. Clark, Krishna Dole, Anna Coulon-Spektor, Andrew McNutt,
     George Grass, Joel S. Freundlich, Robert C. Reynolds, and Sean Ekins`,
-               journal: 'Journal of chemical information and modeling. 2015',
-               links: [
-                 {
-                   name: 'paper',
-                   link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143'
-                 }
-               ],
-               abstract: `
+        journal: 'Journal of chemical information and modeling. 2015',
+        links: [
+          {
+            name: 'paper',
+            link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143'
+          }
+        ],
+        abstract: `
     On the order of hundreds of absorption, distribution, metabolism, excretion,
     and toxicity (ADME/Tox) models have been described in the literature in the
     past decade which are more often than not inaccessible to anyone but their authors.
@@ -1533,18 +1528,18 @@ and healthy skepticism.
     software (such as CDD) and exporting these models in a format that could be run in
     open source software using CDK components. This work also demonstrates that we can
     enable biocomputation across distributed private or public datasets to enhance drug discovery.`
-             },
-             {
-               link: 'assets/thesis.pdf',
-               imgLink: 'assets/thesis-pic.jpg',
-               title: 'Nonequivalent Lagrangian Mechanics',
-               authors: 'Andrew McNutt (Advised by Nelia Mann)',
-               journal: 'Undergraduate thesis. Reed College. June 2014.',
-               links: [
-                 {name: 'thesis', link: 'assets/thesis.pdf'},
-                 {name: 'talk', link: './assets/nlm-talk.pdf'}
-               ],
-               abstract: `
+      },
+      {
+        link: 'assets/thesis.pdf',
+        imgLink: 'assets/thesis-pic.jpg',
+        title: 'Nonequivalent Lagrangian Mechanics',
+        authors: 'Andrew McNutt (Advised by Nelia Mann)',
+        journal: 'Undergraduate thesis. Reed College. June 2014.',
+        links: [
+          {name: 'thesis', link: 'assets/thesis.pdf'},
+          {name: 'talk', link: './assets/nlm-talk.pdf'}
+        ],
+        abstract: `
     In this thesis we study a modern formalism known as Nonequivalent Lagrangian
     Mechanics, that is constructed on top of the traditional Lagrangian theory of mechanics.
     By making use of the non-uniqueness of the Lagrangian representation of dynamical
@@ -1553,8 +1548,8 @@ and healthy skepticism.
     we examine, these invariants turn out to be Noetherian invariants in disguise. We
     apply this theory to a wide variety of systems including predator-prey dynamics and
     damped driven harmonic motion.`
-             }
-           ];
+      }
+    ];
 
     const PRESENTATIONS = [
       // {
@@ -1568,26 +1563,26 @@ and healthy skepticism.
         title: 'Design Patterns For Data Visualization in React',
         link: 'http://tinyurl.com/reactvisdesignpatterns',
         journal: 'React Chicago. August 29, 2018',
-        subtitle: 'An overview of four useful patterns for developing visualizations in react.',
+        subtitle:
+          'An overview of four useful patterns for developing visualizations in react.',
         links: [
           {
             name: 'slides',
-            link:
-              'http://tinyurl.com/reactvisdesignpatterns'
-          },
+            link: 'http://tinyurl.com/reactvisdesignpatterns'
+          }
         ]
-      },
+      }
       // {
       //   link: 'assets/nlm-talk.pdf',
       //   title: 'Nonequivalent Lagrangian Mechanics',
       //   journal: 'Reed Physics Seminar. April 8, 2014'
       // },
       // {
-        // link: 'assets/QGravPresentation.pdf',
-        // links: [],
-        // title: 'The Schrodinger-Newton System with Self-field Coupling',
-        // authors: 'Varchas Gopalaswamy, Andrew McNutt, Allie Morgan, Carl Proepper.',
-        // journal: 'Reed Physics Seminar. September 18, 2013'
+      // link: 'assets/QGravPresentation.pdf',
+      // links: [],
+      // title: 'The Schrodinger-Newton System with Self-field Coupling',
+      // authors: 'Varchas Gopalaswamy, Andrew McNutt, Allie Morgan, Carl Proepper.',
+      // journal: 'Reed Physics Seminar. September 18, 2013'
       // }
     ];
 
@@ -1815,27 +1810,97 @@ and healthy skepticism.
       // }
     ];
 
-
     const TEACHING = [
-      {title: 'CAPP 30239 - Data Visualization For Public Policy', date: 'Winter 2020', role: 'Instructor', location: 'UChicago', link: 'https://capp-30239-winter-2020.netlify.com/'},
-      {title: 'Visualization Research Reading Group', date: 'February 2019-Present', role: 'Other', location: 'UChicago', fancyTitle: 'Director', link: 'https://uchicago-vis-pl-lab.github.io/vis-reading-group/'},
-      {title: 'CMSC 23900 - Data Visualization', date: 'Spring 2019', role: 'Teaching Assitant', location: 'UChicago', link: 'http://people.cs.uchicago.edu/~glk/class/datavis/'},
-      {title: 'CAPP 30239 - Data Visualization For Public Policy', date: 'Winter 2019', role: 'Teaching Assitant', location: 'UChicago', link: 'https://twitter.com/AlexCEngler/status/1101245224733605891?s=20'},
-      {title: 'CAPP 30121 - Computer Science with Applications 1', date: 'Fall 2018', role: 'Teaching Assitant', location: 'UChicago', link: 'https://classes.cs.uchicago.edu/archive/2018/fall/30121-1/'},
-      {title: 'CMSC 23900 - Data Visualization', date: 'Spring 2018', role: 'Teaching Assitant', location: 'UChicago', link: 'http://people.cs.uchicago.edu/~glk/class/datavis18/'},
-      {title: 'CMSC 15100 - Introduction to Computer Science 1', date: 'Winter 2018', role: 'Teaching Assitant', location: 'UChicago', link: 'https://www.classes.cs.uchicago.edu/archive/2018/winter/15100-1/syllabus.html'},
-      {title: 'CMSC 12100 - Computer Science with Applications 1.', date: 'Fall 2017', role: 'Teaching Assitant', location: 'UChicago', link: 'https://www.classes.cs.uchicago.edu/archive/2017/fall/12100-1/'},
-      {title: 'Uberversity Speaker', date: '2016-2017', role: 'Instructor', fancyTitle: 'Lecturer', location: 'Uber'},
-      {title: 'Visualization Eng-ucation', date: '2015-2017', role: 'Instructor', fancyTitle: 'Lecturer', location: 'Uber'},
-      {title: 'Physics 101 - General Physics I', date: '2012', role: 'Teaching Assitant', location: 'Reed College'},
-      {title: 'F.L. Griffin Mathfest', date: '2014', role: 'Teaching Assitant', location: 'Reed College'},   
+      {
+        title: 'CAPP 30239 - Data Visualization For Public Policy',
+        date: 'Winter 2020',
+        role: 'Instructor',
+        location: 'UChicago',
+        link: 'https://capp-30239-winter-2020.netlify.com/'
+      },
+      {
+        title: 'Visualization Research Reading Group',
+        date: 'February 2019-Present',
+        role: 'Other',
+        location: 'UChicago',
+        fancyTitle: 'Director',
+        link: 'https://uchicago-vis-pl-lab.github.io/vis-reading-group/'
+      },
+      {
+        title: 'CMSC 23900 - Data Visualization',
+        date: 'Spring 2019',
+        role: 'Teaching Assitant',
+        location: 'UChicago',
+        link: 'http://people.cs.uchicago.edu/~glk/class/datavis/'
+      },
+      {
+        title: 'CAPP 30239 - Data Visualization For Public Policy',
+        date: 'Winter 2019',
+        role: 'Teaching Assitant',
+        location: 'UChicago',
+        link: 'https://twitter.com/AlexCEngler/status/1101245224733605891?s=20'
+      },
+      {
+        title: 'CAPP 30121 - Computer Science with Applications 1',
+        date: 'Fall 2018',
+        role: 'Teaching Assitant',
+        location: 'UChicago',
+        link: 'https://classes.cs.uchicago.edu/archive/2018/fall/30121-1/'
+      },
+      {
+        title: 'CMSC 23900 - Data Visualization',
+        date: 'Spring 2018',
+        role: 'Teaching Assitant',
+        location: 'UChicago',
+        link: 'http://people.cs.uchicago.edu/~glk/class/datavis18/'
+      },
+      {
+        title: 'CMSC 15100 - Introduction to Computer Science 1',
+        date: 'Winter 2018',
+        role: 'Teaching Assitant',
+        location: 'UChicago',
+        link:
+          'https://www.classes.cs.uchicago.edu/archive/2018/winter/15100-1/syllabus.html'
+      },
+      {
+        title: 'CMSC 12100 - Computer Science with Applications 1.',
+        date: 'Fall 2017',
+        role: 'Teaching Assitant',
+        location: 'UChicago',
+        link: 'https://www.classes.cs.uchicago.edu/archive/2017/fall/12100-1/'
+      },
+      {
+        title: 'Uberversity Speaker',
+        date: '2016-2017',
+        role: 'Instructor',
+        fancyTitle: 'Lecturer',
+        location: 'Uber'
+      },
+      {
+        title: 'Visualization Eng-ucation',
+        date: '2015-2017',
+        role: 'Instructor',
+        fancyTitle: 'Lecturer',
+        location: 'Uber'
+      },
+      {
+        title: 'Physics 101 - General Physics I',
+        date: '2012',
+        role: 'Teaching Assitant',
+        location: 'Reed College'
+      },
+      {
+        title: 'F.L. Griffin Mathfest',
+        date: '2014',
+        role: 'Teaching Assitant',
+        location: 'Reed College'
+      }
     ];
 
     const NEWS = [
       {
         date: 'December 2019',
-        content:
-          'Received my Masters of Computer Science!!'
+        content: 'Received my Masters of Computer Science!!'
       },
       {
         date: 'November 2019',
