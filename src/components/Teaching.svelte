@@ -2,7 +2,6 @@
   import {TEACHING} from '../constants';
   import {groupBy} from '../utils';
   const groups = groupBy(TEACHING, 'role');
-  console.log(groups);
 </script>
 
 <style>

@@ -10,7 +10,6 @@
   let currentSection = getRoute();
   window.onhashchange = () => {
     currentSection = getRoute();
-    console.log(currentSection);
   };
 </script>
 

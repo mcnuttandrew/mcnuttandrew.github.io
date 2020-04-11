@@ -1,14 +1,10 @@
 /* eslint-disable max-len */
 export const ABOUT = `
-  My name is Andrew McNutt, and I am a PhD student in Computer Science at the University of Chicago. My work focuses on information visualization in general. More specifically I'm interested in automated guidance systems (like linters), unusual or xenographical data visualizations, and web applications as a visualization medium. I'm advised by Gordon Kindlmann.
+  My name is Andrew McNutt, and I am a PhD student in Computer Science at the University of Chicago. My work focuses on information visualization in general, and on automated guidance systems (like linters), unusual or xenographical data visualizations, and web applications as a visualization medium specifically.
   `;
 
 export const HISTORY = `
-  In the very near past I worked as a Data Visualization Engineer for a variety of
-  companies in San Francisco, where I made visual analytic software.
-  I got a formal education in physics from Reed College in Portland, and an informal
-  education in web development from App Academy in San Francisco. I really like deserts,
-  buffalo, and motorcycles.
+  In the very near past I worked as a Data Visualization Engineer for a variety of companies in San Francisco, where I made visual analytic software. I got a formal education in physics from Reed College in Portland, and an informal education in web development from App Academy. I really like deserts, buffalo, and motorcycles.
   `;
 // export const INTERESTS = `
 //   I\'m familiar with a wide variety of technologies, including (but not limited to):
@@ -18,7 +14,7 @@ export const HISTORY = `
 //   I\'m excited about info-vis, databases, applied category theory, dashboards, testing,
 //   and pretty much anything in the wild world of javascript.`;
 export const INTERESTS = `
-    I\'m excited about info-vis, databases, applied category theory, dashboards, testing,
+    I\'m excited about InfoVis, applied category theory, dashboards, testing,
     and pretty much anything in the wild world of javascript.`;
 
 export const skills = [
@@ -397,6 +393,16 @@ export const PROJECTS = [
   // },
   //
   {
+    title: 'Sortilège',
+    dates: 'January 2020',
+    sourceLink: 'https://github.com/vis-tarot/vis-tarot',
+    link: 'https://vis-tarot.github.io/vis-tarot/',
+    imgLink: 'assets/vis-tarot-back.png',
+    text:
+      'A tarot based visual analytics system. It guides users analytics process via the divine hands of fate.',
+    section: 'visualization'
+  },
+  {
     title: 'Cycles & Rain / Seasons In Size',
     dates: 'July 2019',
     sourceLink: 'https://github.com/mcnuttandrew/cycles-rain-seasons-in-size/',
@@ -587,6 +593,13 @@ export const TEACHING = [
   },
   {
     title: 'CMSC 23900 - Data Visualization',
+    date: 'Spring 2020',
+    role: 'Teaching Assitant',
+    location: 'UChicago',
+    link: 'http://people.cs.uchicago.edu/~glk/class/datavis/'
+  },
+  {
+    title: 'CMSC 23900 - Data Visualization',
     date: 'Spring 2019',
     role: 'Teaching Assitant',
     location: 'UChicago',
@@ -657,6 +670,21 @@ export const TEACHING = [
 ];
 
 export const NEWS = [
+  {
+    date: 'March 2020',
+    content:
+      'Our paper "Surfacing Visualization Mirages" won a best paper honorable mention at CHI2020!!'
+  },
+  {
+    date: 'Feburary 2020',
+    content:
+      'Our paper on using tarot for visual analytics "Divining Insights: Visual Analytics Through Cartomancy" was accepted to alt.chi 2020'
+  },
+  {
+    date: 'January 2020',
+    content:
+      'Started teaching my first class as the instructor of record! ("Data Visualization for Public Policy")'
+  },
   {
     date: 'December 2019',
     content: 'Received my Masters of Computer Science!!'
