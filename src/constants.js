@@ -39,7 +39,7 @@ export const PUBLICATIONS = [
     imgLink: 'assets/surfacing-visualization-mirages.png',
     title: 'Surfacing Visualization Mirages',
     authors: 'Andrew McNutt, Gordon Kindlmann, Michael Correll',
-    journal: 'CHI 2020 - To Appear',
+    journal: 'CHI 2020 - 🏆 Honorable Mention for Best Paper 🏆. April 2020',
     links: [
       {name: 'preprint', link: 'https://arxiv.org/pdf/2001.02316.pdf'},
       {name: 'live', link: 'https://metamorphic-linting.netlify.com/'},
@@ -72,7 +72,7 @@ export const PUBLICATIONS = [
     imgLink: 'assets/vis-tarot.png',
     title: 'Divining Insights: Visual Analytics Through Cartomancy',
     authors: 'Andrew McNutt, Anamaria Crisan, Michael Correll',
-    journal: 'alt.CHI 2020 - To Appear',
+    journal: 'alt.CHI 2020. April 2020',
     links: [
       {
         name: 'preprint',
@@ -229,7 +229,7 @@ and healthy skepticism.
     imgLink: 'assets/qgrav-pic.jpg',
     title: 'The Schrodinger-Newton System with Self-field Coupling',
     authors: 'Joel Franklin, Youdan Guo, Andrew McNutt, and Allison Morgan',
-    journal: 'Classical and Quantum Gravity. 2015',
+    journal: 'Journal of Classical and Quantum Gravity. 2015',
     links: [
       {name: 'paper', link: 'https://arxiv.org/abs/1501.07537'},
       {name: 'talk', link: 'assets/QGravPresentation.pdf'}
@@ -256,7 +256,7 @@ and healthy skepticism.
       'Open source Bayesian models. 1. Application to ADME/Tox and drug discovery datasets.',
     authors: `Alex M. Clark, Krishna Dole, Anna Coulon-Spektor, Andrew McNutt,
     George Grass, Joel S. Freundlich, Robert C. Reynolds, and Sean Ekins`,
-    journal: 'Journal of chemical information and modeling. 2015',
+    journal: 'Journal of Chemical Information and Modeling. 2015',
     links: [
       {
         name: 'paper',
@@ -673,7 +673,7 @@ export const NEWS = [
   {
     date: 'March 2020',
     content:
-      'Our paper "Surfacing Visualization Mirages" won a best paper honorable mention at CHI2020!!'
+      'Our paper "Surfacing Visualization Mirages" won a April 2020 🏆best paper honorable mention🏆 at CHI2020!!'
   },
   {
     date: 'Feburary 2020',
