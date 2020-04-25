@@ -673,7 +673,7 @@ export const NEWS = [
   {
     date: 'March 2020',
     content:
-      'Our paper "Surfacing Visualization Mirages" won a April 2020 🏆best paper honorable mention🏆 at CHI2020!!'
+      'Our paper "Surfacing Visualization Mirages" won a 🏆best paper honorable mention🏆 at CHI2020!!'
   },
   {
     date: 'Feburary 2020',
