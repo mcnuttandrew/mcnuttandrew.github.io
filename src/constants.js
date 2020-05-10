@@ -594,42 +594,42 @@ export const TEACHING = [
   {
     title: 'CMSC 23900 - Data Visualization',
     date: 'Spring 2020',
-    role: 'Teaching Assitant',
+    role: 'Teaching Assistant',
     location: 'UChicago',
     link: 'http://people.cs.uchicago.edu/~glk/class/datavis/'
   },
   {
     title: 'CMSC 23900 - Data Visualization',
     date: 'Spring 2019',
-    role: 'Teaching Assitant',
+    role: 'Teaching Assistant',
     location: 'UChicago',
     link: 'http://people.cs.uchicago.edu/~glk/class/datavis/'
   },
   {
     title: 'CAPP 30239 - Data Visualization For Public Policy',
     date: 'Winter 2019',
-    role: 'Teaching Assitant',
+    role: 'Teaching Assistant',
     location: 'UChicago',
     link: 'https://twitter.com/AlexCEngler/status/1101245224733605891?s=20'
   },
   {
     title: 'CAPP 30121 - Computer Science with Applications 1',
     date: 'Fall 2018',
-    role: 'Teaching Assitant',
+    role: 'Teaching Assistant',
     location: 'UChicago',
     link: 'https://classes.cs.uchicago.edu/archive/2018/fall/30121-1/'
   },
   {
     title: 'CMSC 23900 - Data Visualization',
     date: 'Spring 2018',
-    role: 'Teaching Assitant',
+    role: 'Teaching Assistant',
     location: 'UChicago',
     link: 'http://people.cs.uchicago.edu/~glk/class/datavis18/'
   },
   {
     title: 'CMSC 15100 - Introduction to Computer Science 1',
     date: 'Winter 2018',
-    role: 'Teaching Assitant',
+    role: 'Teaching Assistant',
     location: 'UChicago',
     link:
       'https://www.classes.cs.uchicago.edu/archive/2018/winter/15100-1/syllabus.html'
@@ -637,7 +637,7 @@ export const TEACHING = [
   {
     title: 'CMSC 12100 - Computer Science with Applications 1.',
     date: 'Fall 2017',
-    role: 'Teaching Assitant',
+    role: 'Teaching Assistant',
     location: 'UChicago',
     link: 'https://www.classes.cs.uchicago.edu/archive/2017/fall/12100-1/'
   },
@@ -658,13 +658,13 @@ export const TEACHING = [
   {
     title: 'Physics 101 - General Physics I',
     date: '2012',
-    role: 'Teaching Assitant',
+    role: 'Teaching Assistant',
     location: 'Reed College'
   },
   {
     title: 'F.L. Griffin Mathfest',
     date: '2014',
-    role: 'Teaching Assitant',
+    role: 'Teaching Assistant',
     location: 'Reed College'
   }
 ];
