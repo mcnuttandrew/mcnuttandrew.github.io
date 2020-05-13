@@ -36,6 +36,7 @@ export const skills = [
 export const PUBLICATIONS = [
   {
     link: 'https://arxiv.org/pdf/2001.02316.pdf',
+    urlTitle: 'mirage',
     imgLink: 'assets/surfacing-visualization-mirages.png',
     title: 'Surfacing Visualization Mirages',
     authors: 'Andrew McNutt, Gordon Kindlmann, Michael Correll',
@@ -70,6 +71,7 @@ export const PUBLICATIONS = [
   {
     link: 'assets/altchi-tarot-cameraready.pdf',
     imgLink: 'assets/vis-tarot.png',
+    urlTitle: 'tarot',
     title: 'Divining Insights: Visual Analytics Through Cartomancy',
     authors: 'Andrew McNutt, Anamaria Crisan, Michael Correll',
     journal: 'alt.CHI 2020. April 2020',
@@ -115,6 +117,7 @@ and healthy skepticism.
     title:
       'Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations',
     authors: 'Andrew McNutt, Gordon Kindlmann',
+    urlTitle: 'forum-explorer-eurovis',
     journal: 'EuroVis - Extended Abstract. June 2019',
     links: [
       {name: 'paper', link: 'assets/forum-explorer-paper.pdf'},
@@ -149,6 +152,7 @@ and healthy skepticism.
   {
     link: 'assets/McNutt_Kindlmann_2018.pdf',
     imgLink: 'assets/lint-pic.jpg',
+    urlTitle: 'linting-visguides',
     title:
       'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
     authors: 'Andrew McNutt, Gordon Kindlmann',
@@ -192,6 +196,7 @@ and healthy skepticism.
   {
     link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14',
     imgLink: 'assets/cdd-pic.jpg',
+    urlTitle: 'reporter-assays',
     title:
       'Data Mining and Computational Modeling of High-Throughput Screening Datasets',
     authors: `Sean Ekins, Alex M Clark, Krishna Dole, Kellan Gregory, Andrew McNutt,
@@ -229,6 +234,7 @@ and healthy skepticism.
     imgLink: 'assets/qgrav-pic.jpg',
     title: 'The Schrodinger-Newton System with Self-field Coupling',
     authors: 'Joel Franklin, Youdan Guo, Andrew McNutt, and Allison Morgan',
+    urlTitle: 'qgrav',
     journal: 'Journal of Classical and Quantum Gravity. 2015',
     links: [
       {name: 'paper', link: 'https://arxiv.org/abs/1501.07537'},
@@ -254,6 +260,7 @@ and healthy skepticism.
     imgLink: 'assets/cdd-models-pic.jpg',
     title:
       'Open source Bayesian models. 1. Application to ADME/Tox and drug discovery datasets.',
+    urlTitle: 'bayes-models',
     authors: `Alex M. Clark, Krishna Dole, Anna Coulon-Spektor, Andrew McNutt,
     George Grass, Joel S. Freundlich, Robert C. Reynolds, and Sean Ekins`,
     journal: 'Journal of Chemical Information and Modeling. 2015',
@@ -288,6 +295,7 @@ and healthy skepticism.
     link: 'assets/thesis.pdf',
     imgLink: 'assets/thesis-pic.jpg',
     title: 'Nonequivalent Lagrangian Mechanics',
+    urlTitle: 'nonequiv',
     authors: 'Andrew McNutt (Advised by Nelia Mann)',
     journal: 'Undergraduate thesis. Reed College. June 2014.',
     links: [

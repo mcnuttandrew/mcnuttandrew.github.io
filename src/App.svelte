@@ -6,6 +6,7 @@
   import Projects from './components/Projects.svelte';
   import Research from './components/Research.svelte';
   import Teaching from './components/Teaching.svelte';
+  import ShowPage from './components/ShowPage.svelte';
   import {getRoute} from './utils';
   let currentSection = getRoute();
   window.onhashchange = () => {
@@ -107,6 +108,8 @@
       <div class="content-wrapper">
         {#if currentSection === 'research'}
           <Research />
+        {:else if currentSection === 'show-page'}
+          <ShowPage />
         {:else if currentSection === 'projects'}
           <Projects />
         {:else if currentSection === 'teaching'}
