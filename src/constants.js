@@ -401,16 +401,6 @@ export const PROJECTS = [
   // },
   //
   {
-    title: 'Data is Plural Search',
-    dates: 'May 2020',
-    sourceLink: 'https://github.com/mcnuttandrew/data-is-plural-search',
-    link: 'https://data-is-plural-search.netlify.app/',
-    imgLink: 'assets/data-is-plural.png',
-    text:
-      'A simple web view for the data is plural news letter by Singer-Vine.',
-    section: 'tech'
-  },
-  {
     title: 'Sortilège',
     dates: 'January 2020',
     sourceLink: 'https://github.com/vis-tarot/vis-tarot',
@@ -420,6 +410,17 @@ export const PROJECTS = [
       'A tarot based visual analytics system. It guides users analytics process via the divine hands of fate.',
     section: 'visualization'
   },
+  {
+    title: 'Data is Plural Search',
+    dates: 'May 2020',
+    sourceLink: 'https://github.com/mcnuttandrew/data-is-plural-search',
+    link: 'https://data-is-plural-search.netlify.app/',
+    imgLink: 'assets/data-is-plural.png',
+    text:
+      'A simple web view for the data is plural news letter by Singer-Vine.',
+    section: 'tech'
+  },
+
   {
     title: 'Cycles & Rain / Seasons In Size',
     dates: 'July 2019',
