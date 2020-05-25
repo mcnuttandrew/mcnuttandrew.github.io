@@ -612,16 +612,15 @@ export const TEACHING = [
   {
     title: 'CMSC 23900 - Data Visualization',
     date: 'Spring 2020',
-    role: 'Teaching Assistant',
-    location: 'UChicago',
-    link: 'http://people.cs.uchicago.edu/~glk/class/datavis/'
+    role: 'Instructor',
+    location: 'UChicago'
   },
   {
     title: 'CMSC 23900 - Data Visualization',
     date: 'Spring 2019',
     role: 'Teaching Assistant',
     location: 'UChicago',
-    link: 'http://people.cs.uchicago.edu/~glk/class/datavis/'
+    link: 'http://people.cs.uchicago.edu/~glk/class/datavis19/'
   },
   {
     title: 'CAPP 30239 - Data Visualization For Public Policy',
