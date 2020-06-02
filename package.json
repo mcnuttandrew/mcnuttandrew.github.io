@@ -7,6 +7,7 @@
     "eslint": "^6.5.0",
     "eslint-plugin-babel": "^4.0.0",
     "eslint-plugin-svelte3": "^2.7.3",
+    "esm": "^3.2.25",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "prettier-plugin-svelte": "^0.7.0",
@@ -19,14 +20,13 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "hoopoe": "^1.0.1",
     "sirv-cli": "^0.4.4"
   },
   "scripts": {
-    "build": "rollup -c",
-    "autobuild": "rollup -c -w",
-    "dev": "run-p start:dev autobuild",
-    "start": "sirv --single",
-    "start:dev": "sirv --single --dev",
+    "build-no-script-version": "node -r esm scripts/generate-index-page.js",
+    "build": "npm run build-no-script-version && rollup -c",
+    "start": "run-p start:dev autobuild",
     "lint": "eslint src"
   }
 }

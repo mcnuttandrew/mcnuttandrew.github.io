@@ -37,7 +37,7 @@ export const PUBLICATIONS = [
   {
     link: 'https://arxiv.org/pdf/2001.02316.pdf',
     urlTitle: 'mirage',
-    imgLink: 'assets/surfacing-visualization-mirages.png',
+    imgLink: 'converted-images/surfacing-visualization-mirages.png',
     title: 'Surfacing Visualization Mirages',
     authors: 'Andrew McNutt, Gordon Kindlmann, Michael Correll',
     journal: 'CHI 2020 - 🏆 Honorable Mention for Best Paper 🏆. April 2020',
@@ -70,7 +70,7 @@ export const PUBLICATIONS = [
   },
   {
     link: 'assets/altchi-tarot-cameraready.pdf',
-    imgLink: 'assets/vis-tarot.png',
+    imgLink: 'converted-images/vis-tarot.png',
     urlTitle: 'tarot',
     title: 'Divining Insights: Visual Analytics Through Cartomancy',
     authors: 'Andrew McNutt, Anamaria Crisan, Michael Correll',
@@ -98,7 +98,7 @@ and healthy skepticism.
     bibTex: `TODO`
   },
   // {
-  //   imgLink: 'assets/agathas-thing.png',
+  //   imgLink: 'converted-images/agathas-thing.png',
   //   title:
   //     'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
   //   authors: 'Agatha Kim, Andrew McNutt, S. Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
@@ -113,7 +113,7 @@ and healthy skepticism.
   // },
   {
     link: 'assets/forum-explorer-paper.pdf',
-    imgLink: 'assets/forested-tree-view-example.jpg',
+    imgLink: 'converted-images/forested-tree-view-example.jpg',
     title:
       'Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations',
     authors: 'Andrew McNutt, Gordon Kindlmann',
@@ -151,7 +151,7 @@ and healthy skepticism.
   },
   {
     link: 'assets/McNutt_Kindlmann_2018.pdf',
-    imgLink: 'assets/lint-pic.jpg',
+    imgLink: 'converted-images/lint-pic.jpg',
     urlTitle: 'linting-visguides',
     title:
       'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
@@ -195,7 +195,7 @@ and healthy skepticism.
   },
   {
     link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14',
-    imgLink: 'assets/cdd-pic.jpg',
+    imgLink: 'converted-images/cdd-pic.jpg',
     urlTitle: 'reporter-assays',
     title:
       'Data Mining and Computational Modeling of High-Throughput Screening Datasets',
@@ -231,7 +231,7 @@ and healthy skepticism.
   },
   {
     link: 'https://arxiv.org/abs/1501.07537',
-    imgLink: 'assets/qgrav-pic.jpg',
+    imgLink: 'converted-images/qgrav-pic.jpg',
     title: 'The Schrodinger-Newton System with Self-field Coupling',
     authors: 'Joel Franklin, Youdan Guo, Andrew McNutt, and Allison Morgan',
     urlTitle: 'qgrav',
@@ -257,7 +257,7 @@ and healthy skepticism.
   },
   {
     link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143',
-    imgLink: 'assets/cdd-models-pic.jpg',
+    imgLink: 'converted-images/cdd-models-pic.jpg',
     title:
       'Open source Bayesian models. 1. Application to ADME/Tox and drug discovery datasets.',
     urlTitle: 'bayes-models',
@@ -293,7 +293,7 @@ and healthy skepticism.
   },
   {
     link: 'assets/thesis.pdf',
-    imgLink: 'assets/thesis-pic.jpg',
+    imgLink: 'converted-images/thesis-pic.jpg',
     title: 'Nonequivalent Lagrangian Mechanics',
     urlTitle: 'nonequiv',
     authors: 'Andrew McNutt (Advised by Nelia Mann)',
@@ -322,7 +322,7 @@ export const PRESENTATIONS = [
   //   journal: 'VisGuides 2018. October 22, 2018'
   // },
   {
-    imgLink: 'assets/design-patterns-pic.png',
+    imgLink: 'converted-images/design-patterns-pic.png',
     title: 'Design Patterns For Data Visualization in React',
     link: 'http://tinyurl.com/reactvisdesignpatterns',
     journal: 'React Chicago. August 29, 2018',
@@ -351,7 +351,7 @@ export const PRESENTATIONS = [
 
 export const BLOG_POSTS = [
   {
-    imgLink: 'assets/tarot-image.png',
+    imgLink: 'converted-images/tarot-image.png',
     title:
       'A Brief Saga Concerning the Making of a Tarot Deck About the American Highway System',
     subtitle: 'A little essay about making',
@@ -368,7 +368,7 @@ export const BLOG_POSTS = [
     ]
   },
   {
-    imgLink: 'assets/advanced-react-vis-pic.png',
+    imgLink: 'converted-images/advanced-react-vis-pic.png',
     title: 'Advanced Visualization with react-vis',
     subtitle:
       'Using Voronois, single pass rendering, and canvas components for amazing user experiences',
@@ -393,7 +393,7 @@ export const BLOG_POSTS = [
 export const PROJECTS = [
   // {
   //   title: 'Chaotic Circuit',
-  //   imgLink: 'assets/chaotic-image.png',
+  //   imgLink: 'converted-images/chaotic-image.png',
   //   link: 'assets/Chaotic_circuit.pdf',
   //   text: `In culminating effort of my junior year at Reed I built a third order
   //   Chaotic circuit as an independent project. This shows some of the best data visualization
@@ -405,7 +405,7 @@ export const PROJECTS = [
     dates: 'January 2020',
     sourceLink: 'https://github.com/vis-tarot/vis-tarot',
     link: 'https://vis-tarot.github.io/vis-tarot/',
-    imgLink: 'assets/vis-tarot-back.png',
+    imgLink: 'converted-images/vis-tarot-back.png',
     text:
       'A tarot based visual analytics system. It guides users analytics process via the divine hands of fate.',
     section: 'visualization'
@@ -415,7 +415,7 @@ export const PROJECTS = [
     dates: 'May 2020',
     sourceLink: 'https://github.com/mcnuttandrew/data-is-plural-search',
     link: 'https://data-is-plural-search.netlify.app/',
-    imgLink: 'assets/data-is-plural.png',
+    imgLink: 'converted-images/data-is-plural.png',
     text:
       'A simple web view for the data is plural news letter by Singer-Vine.',
     section: 'tech'
@@ -426,7 +426,7 @@ export const PROJECTS = [
     dates: 'July 2019',
     sourceLink: 'https://github.com/mcnuttandrew/cycles-rain-seasons-in-size/',
     link: 'https://www.mcnutt.in/cycles-rain-seasons-in-size/',
-    imgLink: 'assets/cycles-in-rain.png',
+    imgLink: 'converted-images/cycles-in-rain.png',
     text:
       'A little infographic about bicycle ridership in Seattle featuring table cartograms.',
     section: 'visualization'
@@ -436,7 +436,7 @@ export const PROJECTS = [
     dates: 'May 2019',
     sourceLink: 'https://github.com/mcnuttandrew/cssql',
     link: 'https://www.npmjs.com/package/node-cssql',
-    imgLink: 'assets/cssql-logo.png',
+    imgLink: 'converted-images/cssql-logo.png',
     text:
       'A new answer to this css-in-js question: css in sql. A sql-ddl to css transpiler written in haskell, available on npm.',
     section: 'tech'
@@ -446,7 +446,7 @@ export const PROJECTS = [
     dates: 'April 2019',
     sourceLink: 'https://github.com/mcnuttandrew/forum-explorer',
     link: 'https://www.mcnutt.in/forum-explorer/',
-    imgLink: 'assets/forum-ex-pic.png',
+    imgLink: 'converted-images/forum-ex-pic.png',
     text:
       'A chrome extension and website that allows users to explore threaded conversations using trees.',
     section: 'visualization'
@@ -456,7 +456,7 @@ export const PROJECTS = [
     dates: 'November 2018',
     sourceLink: 'https://github.com/mcnuttandrew/flesch-kincaid-as-a-service',
     link: 'https://www.mcnutt.in/flesch-kincaid-as-a-service/',
-    imgLink: 'assets/readability.png',
+    imgLink: 'converted-images/readability.png',
     text: `Have you ever wanted specific numerical quantification on how readable
     your prose is? This micro app wraps the textstat package as a webservice so that you can easily check.`,
     section: 'tech'
@@ -465,7 +465,7 @@ export const PROJECTS = [
     title: 'tap-react-browser',
     dates: 'Feburary - April 2018',
     sourceLink: 'https://github.com/mcnuttandrew/tap-react-browser/',
-    imgLink: 'assets/tap-react-browser.png',
+    imgLink: 'converted-images/tap-react-browser.png',
     text: `In the process of building a variety of javascipt libraries in the course of
     my graduate research, I found myself needing a testing tool that played a particular
     role in relation to the browser, so I made one! tap-react-browser is a light
@@ -477,7 +477,7 @@ export const PROJECTS = [
     dates: 'December 2017',
     link: 'http://www.mcnutt.in/home-graphs/',
     sourceLink: 'https://github.com/mcnuttandrew/home-graphs',
-    imgLink: 'assets/home-graphs.png',
+    imgLink: 'converted-images/home-graphs.png',
     text: `Over the 2017 holidays I spent some time meditating on memory, home, and
     graph theory, which led to my making these christmas cards.`,
     section: 'visualization'
@@ -487,7 +487,7 @@ export const PROJECTS = [
     dates: 'July 2017',
     link: 'http://www.mcnutt.in/city-size/',
     sourceLink: 'https://github.com/mcnuttandrew/city-size',
-    imgLink: 'assets/city-size.png',
+    imgLink: 'converted-images/city-size.png',
     text:
       'A print graphic describing the shape of the 100 most populous American cities.',
     section: 'visualization'
@@ -497,7 +497,7 @@ export const PROJECTS = [
     dates: 'Updated yearly, starting 2016',
     link: 'http://www.mcnutt.in/color-of-the-year/',
     sourceLink: 'https://github.com/mcnuttandrew/color-of-the-year',
-    imgLink: 'assets/color-of-year.png',
+    imgLink: 'converted-images/color-of-year.png',
     text:
       'A small exploration of the glory and wonder that is pantones color of the year.',
     section: 'visualization'
@@ -507,7 +507,7 @@ export const PROJECTS = [
     dates: '2016 - ',
     link: 'http://uber.github.io/react-vis/#/',
     sourceLink: 'https://github.com/uber/react-vis',
-    imgLink: 'assets/react-vis-image.png',
+    imgLink: 'converted-images/react-vis-image.png',
     text: 'A charting library for the react ecosystem.',
     section: 'visualization'
   },
@@ -516,7 +516,7 @@ export const PROJECTS = [
     dates: 'December 2016',
     link: 'http://www.mcnutt.in/csv-conversion/',
     sourceLink: 'https://github.com/mcnuttandrew/csv-conversion',
-    imgLink: 'assets/csv-conversion.png',
+    imgLink: 'converted-images/csv-conversion.png',
     text:
       'A handy client-side csv to json converter. I built this little app, because my favorite conversion site got knocked down and I wanted to improve the UI.',
     section: 'tech'
@@ -526,7 +526,7 @@ export const PROJECTS = [
     dates: 'June 2016',
     link: 'http://www.mcnutt.in/personal-timeline/',
     sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
-    imgLink: 'assets/personal-time.png',
+    imgLink: 'converted-images/personal-time.png',
     text:
       'A brief timeline of my life, a resume through a dark mirror if you will.',
     section: 'visualization'
@@ -537,7 +537,7 @@ export const PROJECTS = [
     link:
       'https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8',
     sourceLink: 'https://github.com/mcnuttandrew/tarot-deck',
-    imgLink: 'assets/tarot-image.png',
+    imgLink: 'converted-images/tarot-image.png',
     text:
       'A tarot tech themed around the signage and spirit of the American highway system.',
     section: 'art'
@@ -547,7 +547,7 @@ export const PROJECTS = [
     dates: 'September 2014',
     link: 'http://why-not-ipsum.herokuapp.com/',
     sourceLink: 'https://github.com/mcnuttandrew/Why-Not-Zoidberg',
-    imgLink: 'assets/why-not-image.png',
+    imgLink: 'converted-images/why-not-image.png',
     text:
       'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning.',
     section: 'tech'
@@ -555,8 +555,8 @@ export const PROJECTS = [
   {
     title: 'N-Hedron',
     dates: 'September - December 2013',
-    imgLink: 'assets/n-hydron.png',
-    link: 'assets/nhedron.pdf',
+    imgLink: 'converted-images/n-hydron.png',
+    link: 'converted-images/nhedron.pdf',
     text:
       'An independent college project regarding the effacy of various numerical algorithms for constructing the n-hedron.',
     section: 'tech'
@@ -566,12 +566,12 @@ export const PROJECTS = [
   //   title: 'N-Body Simulator',
   //   link: 'https://mcnuttandrew.github.io/n-body-simulator/',
   //   sourceLink: 'https://github.com/mcnuttandrew/N-Body-Simulator',
-  //   imgLink: 'assets/n-body-image.png',
+  //   imgLink: 'converted-images/n-body-image.png',
   //   text: 'A low N gravitional interaction simulator built in processing.'
   // },
   // {
   //   title: 'Asteroids',
-  //   imgLink: 'assets/asteroids-image.png',
+  //   imgLink: 'converted-images/asteroids-image.png',
   //   link: 'https://mcnuttandrew.github.io/asteroids/',
   //   sourceLink: 'https://github.com/mcnuttandrew/Asteroids',
   //   text: 'A reimaging of the classic arcade game. Technologies included Javascipt, HTML5 Canvas, and jQuery'

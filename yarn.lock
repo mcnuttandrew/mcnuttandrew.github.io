@@ -648,6 +648,11 @@ eslint@^6.5.0:
     text-table "^0.2.0"
     v8-compile-cache "^2.0.3"
 
+esm@^3.2.25:
+  version "3.2.25"
+  resolved "https://registry.yarnpkg.com/esm/-/esm-3.2.25.tgz#342c18c29d56157688ba5ce31f8431fbb795cc10"
+  integrity sha512-U1suiZ2oDVWv4zPO56S0NcR5QriEahGtdN2OR6FiOG4WJvcjBVFB0qI4+eKoWFH483PKGuLuu6V8Z4T5g63UVA==
+
 espree@^6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/espree/-/espree-6.1.1.tgz#7f80e5f7257fc47db450022d723e356daeb1e5de"
@@ -950,6 +955,11 @@ has@^1.0.1, has@^1.0.3:
   integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
   dependencies:
     function-bind "^1.1.1"
+
+hoopoe@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/hoopoe/-/hoopoe-1.0.1.tgz#7019cbd9a5edceb2d7448d3d627996b8235a6d30"
+  integrity sha512-3IdeezHIrW1Sqb23tyWSOEGMwGmMszSx7RkSpx9BiCH5lwyylF0Y2M8FDORLukUlXx4kiIQuTLkagVhinfX6OQ==
 
 hosted-git-info@^2.1.4:
   version "2.8.4"
