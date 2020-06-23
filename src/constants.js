@@ -48,7 +48,9 @@ export const PUBLICATIONS = [
         name: 'code',
         link: 'https://github.com/tableau/Visualization-Linting'
       },
-      {name: 'osf', link: 'https://osf.io/je3x9'}
+      {name: 'osf', link: 'https://osf.io/je3x9'},
+      {name: 'slides', link: './assets/mirage-talk.pdf'},
+      {name: 'talk', link: 'https://www.youtube.com/watch?v=arHbVFbq-mQ'}
     ],
     abstract: `
     Dirty data and deceptive design practices can undermine, invert, or invalidate the purported messages of charts and graphs.
@@ -84,7 +86,9 @@ export const PUBLICATIONS = [
       {
         name: 'code',
         link: 'https://github.com/mcorrell/vis-tarot'
-      }
+      },
+      {name: 'slides', link: './assets/tarot-talk.pdf'},
+      {name: 'talk', link: 'https://www.youtube.com/watch?v=fRA42BjyG_Q'}
     ],
     abstract: `
     Our interactions with data, visual analytics included, are increasingly shaped by automated or algorithmic systems. An
@@ -163,7 +167,7 @@ and healthy skepticism.
         name: 'code',
         link: 'https://github.com/mcnuttandrew/vislint_mpl'
       },
-      {name: 'talk', link: 'assets/vis-lint-talk.pdf'}
+      {name: 'talk', link: 'talks/vis-lint-talk.pdf'}
     ],
     abstract: `
     Constructing effective charts and graphs in a scientific setting is a
@@ -385,7 +389,7 @@ export const BLOG_POSTS = [
       {
         name: 'code',
         link: 'https://github.com/mcnuttandrew/advanced-react-vis-tutorial'
-      }
+      }, 
     ]
   }
 ];
