@@ -37,7 +37,7 @@
     content: '•';
     padding: 0 3px;
   }
-  div.publink::after {
+  .publink:last-child::after {
     content: '';
   }
 

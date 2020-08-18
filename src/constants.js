@@ -35,6 +35,33 @@ export const skills = [
 
 export const PUBLICATIONS = [
   {
+    link: '',
+    urlTitle: 'table-cartogram',
+    imgLink: 'converted-images/tc-preview.jpg',
+    title: 'A Minimally Constrained Optimization Algorithm for Table Cartograms',
+    authors: 'Andrew McNutt, Gordon Kindlmann',
+    journal: 'VIS 2020 - InfoVIS Poster Track ',
+    links: [
+      {
+        name: "about",
+        link: "#/research/table-cartogram"
+      },
+      {
+        name: 'code',
+        link: 'https://github.com/mcnuttandrew/table-cartogram'
+      },
+            {
+        name: 'poster',
+        link: './assets/table-cartogram-poster.pdf'
+      },
+      
+    ],
+    abstract: `
+    Table cartograms are a recent type of data visualization that encodes numerical tabular data as a grid of quadrilaterals whose area areb rought into correspondence with the input data. The overall effect is similar to that of a heat map that has been ‘area-ed‘ rather than shaded. There exist several algorithms for creating these structures—variously utilizing techniques such as computational geometry and numerical optimization —yet each of them impose aesthetically-motivated conditions that impede fine tuning or manipulation of the visual aesthetic of the output. In this work we contribute an optimization algorithm for creating table cartograms that is able to compute a variety of table cartograms layouts for a single dataset. We make our web-ready implementation available as table-cartogram.ts
+    `,
+    bibTex: `TODO`
+  },
+  {
     link: 'https://arxiv.org/pdf/2001.02316.pdf',
     urlTitle: 'mirage',
     imgLink: 'converted-images/surfacing-visualization-mirages.jpg',
@@ -42,6 +69,10 @@ export const PUBLICATIONS = [
     authors: 'Andrew McNutt, Gordon Kindlmann, Michael Correll',
     journal: 'CHI 2020 - 🏆 Honorable Mention for Best Paper 🏆. April 2020',
     links: [
+            {
+        name: "about",
+        link: "#/research/mirage"
+      },
       {name: 'preprint', link: 'https://arxiv.org/pdf/2001.02316.pdf'},
       {name: 'live', link: 'https://metamorphic-linting.netlify.com/'},
       {
@@ -78,6 +109,10 @@ export const PUBLICATIONS = [
     authors: 'Andrew McNutt, Anamaria Crisan, Michael Correll',
     journal: 'alt.CHI 2020. April 2020',
     links: [
+                  {
+        name: "about",
+        link: "#/research/tarot"
+      },
       {
         name: 'preprint',
         link: 'assets/altchi-tarot-cameraready.pdf'
@@ -115,6 +150,7 @@ and healthy skepticism.
   //   When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as â€œnational scienceâ€? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.
   //   `,
   // },
+  // link to award: https://rcc.uchicago.edu/about-rcc/news-features/mind-bytes-2019-tipping-point-computational-and-ai-research
   {
     link: 'assets/forum-explorer-paper.pdf',
     imgLink: 'converted-images/forested-tree-view-example.jpg',

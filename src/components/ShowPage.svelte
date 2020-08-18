@@ -33,6 +33,9 @@
     content: '•';
     padding: 0 3px;
   }
+  .publink:last-child::after {
+    content: '';
+  }
   div.publink::after {
     content: '';
   }
