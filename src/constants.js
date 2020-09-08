@@ -36,6 +36,37 @@ export const skills = [
 export const PUBLICATIONS = [
   {
     link: '',
+    urlTitle: 'nearby',
+    imgLink: 'converted-images/nearby-preview.jpg',
+    title: 'Supporting Expert Close Analysis of Historical Scientific Writings: A Case Study for Near-by Reading',
+    authors: 'Andrew McNutt, Agatha Kim, Sergio Elahi, Kazutaka Takahashi',
+    journal: '2020 IEEE 5th Workshop on Visualization for the Digital Humanities (VIS4DH)',
+    links: [
+      {
+        name: "preprint",
+        link: 'https://arxiv.org/pdf/2009.02384.pdf'
+      },
+      {
+        name: "about",
+        link: "#/research/nearby"
+      },
+      {
+        name: 'code',
+        link: 'https://github.com/mcnuttandrew/sci-text-compare'
+      },
+            {
+        name: 'live',
+        link: 'https://goetheanddecandolle.rcc.uchicago.edu/'
+      },
+      
+    ],
+    abstract: `
+    Distant reading methodologies make use of computational processes to aid in the analysis of large text corpora which might not be pliable to traditional methods of scholarly analysis due to their volume. While these methods have been applied effectively to a variety of types of texts and contexts, they can leave unaddressed the needs of scholars in the humanities disciplines like history, who often engage in close reading of sources. Complementing the close analysis of texts with some of the tools of distant reading, such as visualization, can resolve some of the issues. We focus on a particular category of this intersection—which we refer to as near-by reading—wherein an expert engages in a computer-mediated analysis of a text with which they are familiar. We provide an example of this approach by developing a visual analysis application for the near-by reading of 19th-century scientific writings by J. W. von Goethe and A. P. de Candolle. We show that even the most formal and public texts, such as scientific treatises, can reveal unexpressed personal biases and philosophies that the authors themselves might not have recognized.
+    `,
+    bibTex: `TODO`
+  },
+  {
+    link: '',
     urlTitle: 'table-cartogram',
     imgLink: 'converted-images/tc-preview.jpg',
     title: 'A Minimally Constrained Optimization Algorithm for Table Cartograms',
@@ -136,20 +167,21 @@ and healthy skepticism.
     `,
     bibTex: `TODO`
   },
-  // {
-  //   imgLink: 'converted-images/agathas-thing.jpg',
-  //   title:
-  //     'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
-  //   authors: 'Agatha Kim, Andrew McNutt, S. Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
-  //   journal: 'MindBytes. November 2019',
-  //   links: [
-  //     {name: 'poster', link: 'https://mindbytes.uchicago.edu/posters/2019/10252019165647_posterkim102519.pdf'},
-  //     {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'}
-  //   ],
-  //   abstract: `
-  //   When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as â€œnational scienceâ€? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.
-  //   `,
-  // },
+  {
+    imgLink: 'converted-images/agathas-thing.jpg',
+    title:
+      'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
+    authors: 'Agatha Kim, Andrew McNutt, S. Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
+    journal: 'MindBytes. November 2019',
+    links: [
+      {name: 'poster', link: 'https://mindbytes.uchicago.edu/posters/2019/10252019165647_posterkim102519.pdf'},
+      {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'},
+      {name: 'award', link: 'https://rcc.uchicago.edu/about-rcc/news-features/mind-bytes-2019-tipping-point-computational-and-ai-research'}
+    ],
+    abstract: `
+    When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as â€œnational scienceâ€? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.
+    `,
+  },
   // link to award: https://rcc.uchicago.edu/about-rcc/news-features/mind-bytes-2019-tipping-point-computational-and-ai-research
   {
     link: 'assets/forum-explorer-paper.pdf',
@@ -728,6 +760,16 @@ export const TEACHING = [
 ];
 
 export const NEWS = [
+  {
+    date: 'September 2020',
+    content:
+      'Our paper on mixing close and distant reading for 19th century scientific writing was accepted to VIS4DH20.'
+  },
+  {
+    date: 'August 2020',
+    content:
+      'Our extended abstract on a web-based algorithm for producing table cartograms got accepted to IEEEVIS20'
+  },
   {
     date: 'March 2020',
     content:
