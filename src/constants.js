@@ -54,7 +54,7 @@ export const PUBLICATIONS = [
         name: 'code',
         link: 'https://github.com/mcnuttandrew/sci-text-compare'
       },
-            {
+      {
         name: 'live',
         link: 'https://goetheanddecandolle.rcc.uchicago.edu/'
       },
@@ -78,12 +78,20 @@ export const PUBLICATIONS = [
         link: "#/research/table-cartogram"
       },
       {
+        name: 'preprint',
+        link: 'https://osf.io/kem6j/'
+      },
+      {
         name: 'code',
         link: 'https://github.com/mcnuttandrew/table-cartogram'
       },
             {
         name: 'poster',
         link: './assets/table-cartogram-poster.pdf'
+      },
+      {
+        name: 'live',
+        link: 'https://www.mcnutt.in/table-cartogram/'
       },
       
     ],
