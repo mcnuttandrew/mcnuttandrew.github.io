@@ -46,7 +46,7 @@ export const PUBLICATIONS = [
     imgLink: 'converted-images/nearby-preview.jpg',
     title: 'Supporting Expert Close Analysis of Historical Scientific Writings: A Case Study for Near-by Reading',
     authors: 'Andrew McNutt, Agatha Kim, Sergio Elahi, Kazutaka Takahashi',
-    journal: '2020 IEEE 5th Workshop on Visualization for the Digital Humanities (VIS4DH)',
+    journal: '2020 IEEE 5th Workshop on Visualization for the Digital Humanities (VIS4DH). October 2020',
     links: [
       {
         name: "preprint",
@@ -77,7 +77,7 @@ export const PUBLICATIONS = [
     imgLink: 'converted-images/tc-preview.jpg',
     title: 'A Minimally Constrained Optimization Algorithm for Table Cartograms',
     authors: 'Andrew McNutt, Gordon Kindlmann',
-    journal: 'VIS 2020 - InfoVIS Poster Track ',
+    journal: 'VIS 2020 - InfoVIS Poster Track - 🏆 Honorable Mention for Best Poster Research 🏆. October 2020',
     links: [
       {
         name: "about",
@@ -112,7 +112,7 @@ export const PUBLICATIONS = [
     imgLink: 'converted-images/surfacing-visualization-mirages.jpg',
     title: 'Surfacing Visualization Mirages',
     authors: 'Andrew McNutt, Gordon Kindlmann, Michael Correll',
-    journal: 'CHI 2020 - 🏆 Honorable Mention for Best Paper 🏆. April 2020',
+    journal: 'Proceedings of the 2020 ACM annual conference on Human Factors in Computing Systems - 🏆 Honorable Mention for Best Paper 🏆. April 2020',
     links: [
             {
         name: "about",
@@ -152,7 +152,7 @@ export const PUBLICATIONS = [
     urlTitle: 'tarot',
     title: 'Divining Insights: Visual Analytics Through Cartomancy',
     authors: 'Andrew McNutt, Anamaria Crisan, Michael Correll',
-    journal: 'alt.CHI 2020. April 2020',
+    journal: 'Proceedings of alt.CHI. April 2020',
     links: [
                   {
         name: "about",
@@ -186,7 +186,7 @@ and healthy skepticism.
     title:
       'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
     authors: 'Agatha Kim, Andrew McNutt, S. Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
-    journal: 'MindBytes. November 2019',
+    journal: 'MindBytes Research Symposium. November 2019',
     links: [
       {name: 'poster', link: 'https://mindbytes.uchicago.edu/posters/2019/10252019165647_posterkim102519.pdf'},
       {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'},
@@ -204,7 +204,7 @@ and healthy skepticism.
       'Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations',
     authors: 'Andrew McNutt, Gordon Kindlmann',
     urlTitle: 'forum-explorer-eurovis',
-    journal: 'EuroVis - Extended Abstract. June 2019',
+    journal: 'Proceedings of the Eurographics Conference on Visualization "EuroVis" - Posters. June 2019',
     links: [
       {name: 'paper', link: 'assets/forum-explorer-paper.pdf'},
       {name: 'poster', link: 'assets/forum-explorer-poster.pdf'},
@@ -242,7 +242,7 @@ and healthy skepticism.
     title:
       'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
     authors: 'Andrew McNutt, Gordon Kindlmann',
-    journal: 'VisGuides (IEEEVIS Workshop). Octobr 2018',
+    journal: '2nd IEEE VIS Workshop on Creation, Curation, Critique and Conditioning of Principles and Guidelines in Visualization ("VisGuides"). October 2018',
     links: [
       {name: 'paper', link: 'assets/McNutt_Kindlmann_2018.pdf'},
       {
@@ -590,7 +590,7 @@ export const PROJECTS = [
   },
   {
     title: 'react-vis',
-    dates: '2016 - ',
+    dates: '2016 - 2019',
     link: 'http://uber.github.io/react-vis/#/',
     sourceLink: 'https://github.com/uber/react-vis',
     imgLink: 'converted-images/react-vis-image.jpg',
@@ -774,16 +774,21 @@ export const TEACHING = [
 ];
 
 export const NEWS = [
+    {
+    date: 'October 2020',
+    content:
+      'Presented our paper on nearby reading at VIS4DH (@IEEEVIS 2020) and our poster  "A Minimally Constrained Optimization Algorithm for Table Cartograms" won a 🏆honorable mention🏆 in the InfoVis track.'
+  },
   {
     date: 'September 2020',
     content:
-      'Our paper on mixing close and distant reading for 19th century scientific writing was accepted to VIS4DH20.'
+      'Our paper "Supporting Expert Close Analysis of Historical Scientific Writings: A Case Study for Near-by Reading" on mixing close and distant reading for 19th century scientific writing was accepted to VIS4DH20.'
   },
-  {
-    date: 'August 2020',
-    content:
-      'Our extended abstract on a web-based algorithm for producing table cartograms got accepted to IEEEVIS20'
-  },
+  // {
+  //   date: 'August 2020',
+  //   content:
+  //     'Our abstract on a web-based algorithm for producing table cartograms got accepted to IEEEVIS20'
+  // },
   {
     date: 'March 2020',
     content:
@@ -846,8 +851,8 @@ export const NEWS = [
     content:
       'Presented our paper on linting charts created in matplotlib at VisGuides, a IEEEVIS 2018 workshop. '
   },
-  {
-    date: 'September 2018',
-    content: 'Started my second year of grad school!'
-  }
+  // {
+  //   date: 'September 2018',
+  //   content: 'Started my second year of grad school!'
+  // }
 ];
