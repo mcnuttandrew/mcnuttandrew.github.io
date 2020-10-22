@@ -186,10 +186,10 @@ and healthy skepticism.
     title:
       'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
     authors: 'Agatha Kim, Andrew McNutt, S. Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
-    journal: 'MindBytes Research Symposium. November 2019',
+    journal: 'MindBytes Research Symposium. 🏆 Best Poster in Visualization 🏆. November 2019',
     links: [
-      {name: 'poster', link: 'https://mindbytes.uchicago.edu/posters/2019/10252019165647_posterkim102519.pdf'},
-      {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'},
+      {name: 'poster', link: 'assets/posterkim102519.pdf'},
+      // {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'},
       {name: 'award', link: 'https://rcc.uchicago.edu/about-rcc/news-features/mind-bytes-2019-tipping-point-computational-and-ai-research'}
     ],
     abstract: `
