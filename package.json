@@ -3,32 +3,34 @@
   "license": "ISC",
   "version": "1.0.0",
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.5.0",
-    "eslint-plugin-babel": "^4.0.0",
-    "eslint-plugin-svelte3": "^2.7.3",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "@tsconfig/svelte": "^1.0.0",
     "esm": "^3.2.25",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.1.1",
-    "prettier-plugin-svelte": "^1.2.1",
-    "rollup": "^1.12.0",
-    "rollup-plugin-commonjs": "^10.0.0",
-    "rollup-plugin-livereload": "^1.0.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-svelte": "^5.0.3",
-    "rollup-plugin-terser": "^4.0.4",
-    "svelte": "^3.0.0"
+    "prettier": "^2.2.1",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-string": "^3.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0",
+    "svelte-check": "^1.0.0",
+    "svelte-preprocess": "^4.0.0",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.3"
   },
   "dependencies": {
+    "@icons-pack/svelte-simple-icons": "^1.10.1",
     "hoopoe": "^1.0.1",
+    "marked": "^1.2.7",
     "sirv-cli": "^0.4.4"
   },
   "scripts": {
     "build-no-script-version": "node -r esm scripts/generate-index-page.js",
-    "build": "npm run build-no-script-version && rollup -c",
-    "autobuild": "rollup -c -w",
-    "start": "run-p start:dev autobuild",
-    "lint": "eslint src",
-    "start:dev": "sirv --single --dev"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public"
   }
 }

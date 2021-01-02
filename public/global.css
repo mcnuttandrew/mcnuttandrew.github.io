@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   position: relative;
   width: 100%;
   height: 100%;
@@ -11,18 +10,16 @@ body {
   color: #333;
   margin: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
+h1, h2, h3, h4, h5, p {
   margin: 0;
   padding: 0;
+}
+
+h2 {
+  font-style: italic;
 }
 
 a {
@@ -42,10 +39,7 @@ label {
   display: block;
 }
 
-input,
-button,
-select,
-textarea {
+input, button, select, textarea {
   font-family: inherit;
   font-size: inherit;
   padding: 0.4em;

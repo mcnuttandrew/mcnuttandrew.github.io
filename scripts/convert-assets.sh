@@ -1,7 +1,7 @@
-rm -rf converted-images
-mkdir converted-images
-cd assets/
+rm -rf public/converted-images
+mkdir public/converted-images
+cd public/assets/
 for i in *.png *.jpg; do
     prefix="${i%.*}"
-    convert -strip -interlace Plane -quality 80 $i ../converted-images/$prefix.jpg
+    convert -flatten -strip -interlace  Plane -quality 80 $i ../converted-images/$prefix.jpg
 done

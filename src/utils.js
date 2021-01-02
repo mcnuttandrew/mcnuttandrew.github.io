@@ -2,20 +2,19 @@ import {PUBLICATIONS} from './constants';
 
 export function classnames(classObject) {
   return Object.keys(classObject)
-    .filter(name => classObject[name])
+    .filter((name) => classObject[name])
     .join(' ');
 }
 
-const routes = new Set(['research', 'projects', 'about', 'teaching']);
+const routes = new Set(['cv', 'publications', 'projects', 'about', 'teaching']);
 export function getRoute() {
   const locationSplit = location.href.split('/');
   const naiveLocation = locationSplit[locationSplit.length - 1].toLowerCase();
   if (
-    location.href.includes('research') && 
-    naiveLocation !== 'research' && 
-    PUBLICATIONS.map(d => d.urlTitle).includes(naiveLocation)
+    location.href.includes('research') &&
+    naiveLocation !== 'research' &&
+    PUBLICATIONS.map((d) => d.urlTitle).includes(naiveLocation)
   ) {
-    
     return 'show-page';
   }
 

@@ -5,7 +5,7 @@
 
   const rotation = tweened(0, {
     duration: 400,
-    easing: cubicOut
+    easing: cubicOut,
   });
 
   export let currentSection;
@@ -14,6 +14,11 @@
     open = !open;
     rotation.set(!$rotation ? 90 : 0);
   }
+  const externalLinks = [
+    {link: 'https://twitter.com/_mcnutt_', name: 'twitter'},
+    {link: 'https://scholar.google.com/citations?user=BFOrUoQAAAAJ', name: 'scholar'},
+    {link: 'https://github.com/mcnuttandrew', name: 'github'},
+  ];
 </script>
 
 <style>
@@ -56,6 +61,7 @@
   <div on:click={toggleHeader} class="flex align">
     <h3>Andrew McNutt</h3>
     <div>
+      <!-- hamburger menu -->
       <svg transform="rotate({$rotation})" width="25px" height="21px">
         <rect x="0" y="0" width="25" height="3" />
         <rect x="0" y="7" width="25" height="3" />
@@ -65,14 +71,17 @@
   </div>
   {#if open}
     <div class="flex-down margin-bottom">
-      {#each ['about', 'projects', 'research', 'teaching'] as section (section)}
-        <a
-          href="/#/{section}"
-          class={classnames({
-            selected: currentSection === section,
-            padding: true
-          })}>
+      {#each ['about', 'publications', 'projects', 'cv'] as section (section)}
+        <a href="/#/{section}" class={classnames({selected: currentSection === section, padding: true})}>
           {section.toUpperCase()}
+        </a>
+      {/each}
+      {#each externalLinks as x}
+        <a
+          href={x.link}
+          class={classnames({selected: currentSection === x.name, padding: true, externalLink: true})}>
+          {x.name.toUpperCase()}
+          <img src="icons/{x.name}.svg" alt="link to {x.name} account" />
         </a>
       {/each}
     </div>

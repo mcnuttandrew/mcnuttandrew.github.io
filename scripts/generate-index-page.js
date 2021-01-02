@@ -32,9 +32,9 @@ const noScriptContents = `
     <title>Andrew McNutt</title>
 
     <link rel="stylesheet" href="/global.css" />
-    <link rel="stylesheet" href="/bundle.css" />
+    <link rel="stylesheet" href="/build/bundle.css" />
 
-    <script defer src="/bundle.js"></script>
+    <script defer src="/build/bundle.js"></script>
   </head>
 
   <body>
@@ -44,4 +44,4 @@ const noScriptContents = `
 `;
 
 
-writeFile('./index.html', noScriptContents);
+writeFile('./public/index.html', noScriptContents);

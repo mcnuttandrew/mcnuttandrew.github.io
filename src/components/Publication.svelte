@@ -1,13 +1,24 @@
 <script>
   import {slide} from 'svelte/transition';
+  import {flip} from 'svelte/animate';
 
+  import {COLLABORATOR_LINKS} from '../constants';
+  import marked from 'marked';
+
+  export let noImg = false;
   export let publication;
   let abstractOpen = false;
   function toggleAbstract(e) {
     e.preventDefault();
     abstractOpen = !abstractOpen;
   }
-  const keys = ['subtitle', 'date', 'authors', 'journal'];
+  const keys = ['subtitle', 'journal', 'date'];
+  function addLinks(authors) {
+    return Object.entries(COLLABORATOR_LINKS).reduce((str, [key, link]) => {
+      return str.replace(key, `[${key}](${link})`);
+    }, authors.replace('Andrew McNutt', '__Andrew McNutt__'));
+    return done;
+  }
 </script>
 
 <style>
@@ -52,10 +63,11 @@
     height: 100px;
     margin-right: 5px;
     width: 100px;
+    min-width: 100px;
   }
   .publication {
     max-width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .content-container {
@@ -70,31 +82,28 @@
 
 <div class="flex-down publication">
   <div class="content-container">
-    <div class="img-container">
-      <img
-        alt="image drawn from {publication.title}"
-        src={publication.imgLink} />
-    </div>
+    {#if !noImg}
+      <div class="img-container">
+        <img alt="image drawn from {publication.title}" src={publication.imgLink} />
+      </div>
+    {/if}
     <div class="flex-down">
       <a href={publication.link}>{publication.title}</a>
-
-      {#each keys as key}
-        {#if publication[key]}
-          <span>{publication[key]}</span>
-        {/if}
-      {/each}
+      {#if publication.authors}
+        <span>{@html marked(addLinks(publication.authors))}</span>
+      {/if}
+      <span>
+        {#each keys as key}
+          {#if publication[key]}<span>{publication[key]} </span>{/if}
+        {/each}
+      </span>
 
       <div class="flex">
-        {#each publication.links as {name, link}}
-          <a class="publink" href={link}>{name}</a>
-        {/each}
+        {#each publication.links as {name, link}}<a class="publink" href={link}>{name}</a>{/each}
         {#if publication.abstract}
-          <div class="publink" on:click={toggleAbstract}>
-            abstract ({abstractOpen ? '-' : '+'})
-          </div>
+          <div class="publink" on:click={toggleAbstract}>abstract ({abstractOpen ? '-' : '+'})</div>
         {/if}
       </div>
-
     </div>
   </div>
   {#if abstractOpen}
