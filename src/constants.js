@@ -63,7 +63,12 @@ export const PUBLICATIONS = [
     authors: 'Andrew McNutt, Ravi Chugh',
     journal: 'Proceedings of the 2021 ACM annual conference on Human Factors in Computing Systems',
     date: 'May 2021',
-    links: [],
+    links: [
+      {
+        name: 'about',
+        link: '#/research/ivy',
+      },
+    ],
     abstract: ``,
     bibTex: `TODO`,
     type: 'conference / journal article',
