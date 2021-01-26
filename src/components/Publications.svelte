@@ -7,11 +7,11 @@
   let currentSort = 'type';
   const sorts = ['type', 'year', 'name'];
   const typeOrder = [
-    'conference / journal article',
-    'extended abstract / workshop paper',
-    'poster',
-    'book chapter',
-    'thesis',
+    'conference / journal articles',
+    'extended abstract / workshop papers',
+    'posters',
+    'book chapters',
+    'theses',
   ];
   const yearOrder = [2021, 2014, 2017, 2018, 2019, 2020, 2021];
 

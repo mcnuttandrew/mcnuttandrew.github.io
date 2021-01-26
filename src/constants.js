@@ -68,10 +68,20 @@ export const PUBLICATIONS = [
         name: 'about',
         link: '#/research/ivy',
       },
+      {
+        name: 'preprint',
+        link: 'https://arxiv.org/pdf/2101.07902.pdf',
+      },
+      {
+        name: 'osf',
+        link: 'https://osf.io/cture/',
+      },
     ],
-    abstract: ``,
+    abstract: `Interfaces for creating visualizations typically embrace one of several common forms. Textual specification enables fine-grained control, shelf building facilitates rapid exploration, while chart choosing promotes immediacy and simplicity. Ideally these approaches could be unified to integrate the user- and usage-dependent benefits found in each modality, yet these forms remain distinct.
+
+We propose parameterized declarative templates, a simple abstraction mechanism over JSON-based visualization grammars, as a foundation for multimodal visualization editors. We demonstrate how templates can facilitate organization and reuse by factoring the more than 160 charts that constitute Vega-Lite's example gallery into approximately 40 templates. We exemplify the pliability of abstracting over charting grammars by implementing---as a template---the functionality of the shelf builder Polestar (a simulacra of Tableau) and a set of templates that emulate the Google Sheets chart chooser. We show how templates support multimodal visualization editing by implementing a prototype and evaluating it through an approachability study.`,
     bibTex: `TODO`,
-    type: 'conference / journal article',
+    type: 'conference / journal articles',
   },
   {
     link: '',
@@ -104,7 +114,7 @@ export const PUBLICATIONS = [
     Distant reading methodologies make use of computational processes to aid in the analysis of large text corpora which might not be pliable to traditional methods of scholarly analysis due to their volume. While these methods have been applied effectively to a variety of types of texts and contexts, they can leave unaddressed the needs of scholars in the humanities disciplines like history, who often engage in close reading of sources. Complementing the close analysis of texts with some of the tools of distant reading, such as visualization, can resolve some of the issues. We focus on a particular category of this intersection—which we refer to as near-by reading—wherein an expert engages in a computer-mediated analysis of a text with which they are familiar. We provide an example of this approach by developing a visual analysis application for the near-by reading of 19th-century scientific writings by J. W. von Goethe and A. P. de Candolle. We show that even the most formal and public texts, such as scientific treatises, can reveal unexpressed personal biases and philosophies that the authors themselves might not have recognized.
     `,
     bibTex: `TODO`,
-    type: 'extended abstract / workshop paper',
+    type: 'extended abstract / workshop papers',
   },
   {
     link: '',
@@ -140,7 +150,7 @@ export const PUBLICATIONS = [
     Table cartograms are a recent type of data visualization that encodes numerical tabular data as a grid of quadrilaterals whose area areb rought into correspondence with the input data. The overall effect is similar to that of a heat map that has been ‘area-ed‘ rather than shaded. There exist several algorithms for creating these structures—variously utilizing techniques such as computational geometry and numerical optimization —yet each of them impose aesthetically-motivated conditions that impede fine tuning or manipulation of the visual aesthetic of the output. In this work we contribute an optimization algorithm for creating table cartograms that is able to compute a variety of table cartograms layouts for a single dataset. We make our web-ready implementation available as table-cartogram.ts
     `,
     bibTex: `TODO`,
-    type: 'poster',
+    type: 'posters',
   },
   {
     link: 'https://arxiv.org/pdf/2001.02316.pdf',
@@ -183,7 +193,7 @@ export const PUBLICATIONS = [
     the data or the domain.
     `,
     bibTex: `TODO`,
-    type: 'conference / journal article',
+    type: 'conference / journal articles',
   },
   {
     link: 'assets/altchi-tarot-cameraready.pdf',
@@ -220,7 +230,7 @@ data in a way that is meant to encourage critique, reflection,
 and healthy skepticism.
     `,
     bibTex: `TODO`,
-    type: 'extended abstract / workshop paper',
+    type: 'extended abstract / workshop papers',
   },
   {
     imgLink: 'converted-images/agathas-thing.jpg',
@@ -240,7 +250,7 @@ and healthy skepticism.
     abstract: `
     When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as â€œnational scienceâ€? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.
     `,
-    type: 'poster',
+    type: 'posters',
   },
   // link to award: https://rcc.uchicago.edu/about-rcc/news-features/mind-bytes-2019-tipping-point-computational-and-ai-research
   {
@@ -281,7 +291,7 @@ and healthy skepticism.
       booktitle={Poster Abstracts of the EG/VGTC Conference on Visualization (EuroVis)},
       year={2019}
     }`,
-    type: 'poster',
+    type: 'posters',
   },
   {
     link: 'assets/McNutt_Kindlmann_2018.pdf',
@@ -327,7 +337,7 @@ and healthy skepticism.
       Title = {Linting for Visualization: Towards a Practical Automated Visualization Guidance System},
       Year = {2018}}
     `,
-    type: 'extended abstract / workshop paper',
+    type: 'extended abstract / workshop papers',
   },
   {
     link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14',
@@ -364,7 +374,7 @@ and healthy skepticism.
     use with public datasets in CDD Vault. Such approaches can complement other cheminformatics
     tools, whether open source or commercial, in providing approaches for data mining and modeling of HTS data.
     `,
-    type: 'book chapter',
+    type: 'book chapters',
   },
   {
     link: 'https://arxiv.org/abs/1501.07537',
@@ -392,7 +402,7 @@ and healthy skepticism.
     energy between the ground state and first excited state to compare emission frequencies
     between Schrodinger-Newton and the self-coupled scalar case.
     `,
-    type: 'conference / journal article',
+    type: 'conference / journal articles',
   },
   {
     link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143',
@@ -429,7 +439,7 @@ and healthy skepticism.
     software (such as CDD) and exporting these models in a format that could be run in
     open source software using CDK components. This work also demonstrates that we can
     enable biocomputation across distributed private or public datasets to enhance drug discovery.`,
-    type: 'conference / journal article',
+    type: 'conference / journal articles',
   },
   {
     link: 'assets/thesis.pdf',
@@ -452,7 +462,7 @@ and healthy skepticism.
     we examine, these invariants turn out to be Noetherian invariants in disguise. We
     apply this theory to a wide variety of systems including predator-prey dynamics and
     damped driven harmonic motion.`,
-    type: 'thesis',
+    type: 'theses',
   },
 ];
 
@@ -825,6 +835,11 @@ export const TEACHING = [
 
 export const NEWS = [
   {
+    date: 'January 2021',
+    content:
+      'Our paper ["Integrated Visualization Editing via Parameterized Declarative Templates"](http://localhost:5000/#/research/ivy) was accepted to CHI 2021.',
+  },
+  {
     date: 'October 2020',
     content:
       '["A Minimally Constrained Optimization Algorithm for Table Cartograms"](https://osf.io/kem6j/) won a 🏆honorable mention🏆 in the IEEEVIS InfoVis poster track.',
@@ -837,7 +852,7 @@ export const NEWS = [
   {
     date: 'March 2020',
     content:
-      'Our paper "Surfacing Visualization Mirages" won a 🏆best paper honorable mention🏆 at CHI2020!!',
+      'Our paper ["Surfacing Visualization Mirages"](http://localhost:5000/#/research/mirage) won a 🏆best paper honorable mention🏆 at CHI2020!!',
   },
   {
     date: 'Feburary 2020',
