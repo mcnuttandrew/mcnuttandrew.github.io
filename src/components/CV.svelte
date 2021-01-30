@@ -11,7 +11,8 @@
 </style>
 
 <h1>Andrew McNutt</h1>
-PhD Student at Univeristy of Chicago in Computer Science
+<div>PhD Student at Univeristy of Chicago in Computer Science</div>
+<div>For a pdf version of my CV <a href="./assets/cv.pdf">click here</a></div>
 
 <section class="section">
   <h2>Education</h2>
