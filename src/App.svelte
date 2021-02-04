@@ -30,35 +30,17 @@
   }
 
   .header {
-    align-items: center;
-    /* background: url(https://raw.githubusercontent.com/mcnuttandrew/mcnuttandrew.github.io/master/assets/art-sub.png); */
-    /* background-color: #0c140c; */
-    /* background-position-y: -300px;
-    background-size: 1200px 1200px; */
-    display: flex;
-    flex-direction: row;
     font-weight: 300;
-    height: auto;
-    justify-content: center;
-    /* max-height: fit-content; */
-    position: relative;
-    /* width: 350px; */
+    text-align: center;
   }
-  .header h1,
-  .header h3,
-  .header a,
-  .header a:visited {
+  .header h1 {
     color: black;
   }
 
   .main-container {
-    /* padding: 0 60px; */
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    overflow-x: hidden;
-    overflow: scroll;
     width: auto;
   }
 
@@ -70,23 +52,14 @@
   }
 
   .content-wrapper {
-    justify-content: center;
+    /* justify-content: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; */
     margin-top: 10px;
     max-width: 700px;
     width: 700px;
   }
 
-  .info-container {
-    align-items: center;
-    /* background: rgba(0, 0, 0, 0.2); */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 50px;
-    width: 100%;
-  }
   @media screen and (max-width: 600px) {
     .header {
       display: none !important;
@@ -104,15 +77,8 @@
 </style>
 
 <div class="flex-down full-height">
-  <div class="header flex-down">
-    <div class="info-container">
-      <h1>ANDREW MCNUTT</h1>
-      <!-- <div>
-        <a href="https://github.com/mcnuttandrew">GITHUB</a>
-        <a href="https://twitter.com/_mcnutt_">TWITTER</a>
-        <a href="https://www.mcnutt.in/assets/resume.pdf">CV</a>
-      </div> -->
-    </div>
+  <div class="header">
+    <h1>ANDREW MCNUTT</h1>
   </div>
   <div class="flex-down full-width">
     <MobileHeader {currentSection} />

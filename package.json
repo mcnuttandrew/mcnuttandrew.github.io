@@ -30,7 +30,7 @@
   "scripts": {
     "build-no-script-version": "node -r esm scripts/generate-index-page.js",
     "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv "
+    "start": "rollup -c -w",
+    "bad-serv": "sirv "
   }
 }

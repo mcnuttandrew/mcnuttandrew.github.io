@@ -29,7 +29,7 @@
   }
 </style>
 
-<div class="flex-down bar align header">
+<div class="bar align header">
   <div class="flex">
     {#each ['about', 'publications', 'projects', 'cv'] as section (section)}
       <a href="/#/{section}" class={classnames({selected: currentSection === section, padding: true})}>
