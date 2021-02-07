@@ -2,24 +2,20 @@ const {writeFile} = require('hoopoe');
 const constants = require('../src/constants');
 
 const content = [
-    '<h1>Andrew McNutt</h1>',
-    '<h3>PhD Student in Visualization</h3>',
-    `<p>${constants.ABOUT}</p>`,
-    '<h3>News</h3>',
-    '<ul>',
-    constants.NEWS.map(({date, content}) => `<li>${date}: ${content}</li>`).join('\n'),
-    '</ul>',
-    '<h3>Publications</h3>',
-    '<ul>',
-    constants.PUBLICATIONS.map(({
-        link,
-    title,
-    authors,
-    journal,
-    }) => `<li><a href=${link}>${title}</a>: ${authors}, ${journal}</li>`).join('\n'),
-    '</ul>',
-    "<p>For more information please see the javascript enabled version of this site.</p>"
-
+  '<h1>Andrew McNutt</h1>',
+  '<h3>PhD Student in Visualization</h3>',
+  `<p>${constants.ABOUT}</p>`,
+  '<h3>News</h3>',
+  '<ul>',
+  constants.NEWS.map(({date, content}) => `<li>${date}: ${content}</li>`).join('\n'),
+  '</ul>',
+  '<h3>Publications</h3>',
+  '<ul>',
+  constants.PUBLICATIONS.map(
+    ({link, title, authors, journal}) => `<li><a href=${link}>${title}</a>: ${authors}, ${journal}</li>`,
+  ).join('\n'),
+  '</ul>',
+  '<p>For more information please see the javascript enabled version of this site.</p>',
 ].join('\n');
 
 const noScriptContents = `
@@ -35,6 +31,7 @@ const noScriptContents = `
     <link rel="stylesheet" href="/build/bundle.css" />
 
     <script defer src="/build/bundle.js"></script>
+    <script async defer data-website-id="24ce20a6-4718-49ce-86e9-a0321146c163" src="http://tan-lytics.herokuapp.com/umami.js"></script>
   </head>
 
   <body>
@@ -43,5 +40,4 @@ const noScriptContents = `
 </html>
 `;
 
-
-writeFile('./public/index.html', noScriptContents);
+writeFile('./index.html', noScriptContents);
