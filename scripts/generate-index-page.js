@@ -31,7 +31,7 @@ const noScriptContents = `
     <link rel="stylesheet" href="/build/bundle.css" />
 
     <script defer src="/build/bundle.js"></script>
-    <script async defer data-website-id="24ce20a6-4718-49ce-86e9-a0321146c163" src="http://tan-lytics.herokuapp.com/umami.js"></script>
+    <script async defer data-website-id="24ce20a6-4718-49ce-86e9-a0321146c163" src="https://tan-lytics.herokuapp.com/umami.js"></script>
   </head>
 
   <body>
