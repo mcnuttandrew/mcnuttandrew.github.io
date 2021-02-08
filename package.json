@@ -24,7 +24,7 @@
   "dependencies": {
     "@icons-pack/svelte-simple-icons": "^1.10.1",
     "hoopoe": "^1.0.1",
-    "marked": "^1.2.7",
+    "marked": "^2.0.0",
     "sirv-cli": "^0.4.4"
   },
   "scripts": {
