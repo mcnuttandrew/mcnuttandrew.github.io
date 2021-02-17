@@ -166,6 +166,11 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
         name: 'about',
         link: '#/research/mirage',
       },
+      {
+        name: 'blog post',
+        link:
+          'https://medium.com/multiple-views-visualization-research-explained/surfacing-visualization-mirages-8d39e547e38c',
+      },
       {name: 'preprint', link: 'https://arxiv.org/pdf/2001.02316.pdf'},
       {name: 'live', link: 'https://metamorphic-linting.netlify.com/'},
       {
@@ -837,7 +842,7 @@ export const NEWS = [
   {
     date: 'January 2021',
     content:
-      'Our paper ["Integrated Visualization Editing via Parameterized Declarative Templates"](http://localhost:5000/#/research/ivy) was accepted to CHI 2021.',
+      'Our paper ["Integrated Visualization Editing via Parameterized Declarative Templates"](https://www.mcnutt.in/#/research/ivy) was accepted to CHI 2021.',
   },
   {
     date: 'October 2020',
@@ -852,7 +857,7 @@ export const NEWS = [
   {
     date: 'March 2020',
     content:
-      'Our paper ["Surfacing Visualization Mirages"](http://localhost:5000/#/research/mirage) won a 🏆best paper honorable mention🏆 at CHI2020!!',
+      'Our paper ["Surfacing Visualization Mirages"](https://www.mcnutt.in/#/research/mirage) won a 🏆best paper honorable mention🏆 at CHI2020!!',
   },
   {
     date: 'Feburary 2020',
