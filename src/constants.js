@@ -563,6 +563,15 @@ export const PROJECTS = [
     section: 'visualization',
   },
   {
+    title: 'How to read an academic paper zine',
+    dates: 'February 2021',
+    link: 'http://www.mcnutt.in/paper-zine/',
+    imgLink: 'http://www.mcnutt.in/paper-zine/cover.png',
+    text: 'A non-definitive guide to paper reading.',
+    section: 'art',
+  },
+
+  {
     title: 'Data is Plural Search',
     dates: 'May 2020',
     sourceLink: 'https://github.com/mcnuttandrew/data-is-plural-search',
