@@ -3,34 +3,27 @@
   "license": "ISC",
   "version": "1.0.0",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^16.0.0",
-    "@rollup/plugin-node-resolve": "^10.0.0",
-    "@rollup/plugin-typescript": "^6.0.0",
-    "@tsconfig/svelte": "^1.0.0",
     "esm": "^3.2.25",
+    "hoopoe": "^1.0.1",
     "prettier": "^2.2.1",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-string": "^3.0.0",
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
-    "svelte": "^3.0.0",
-    "svelte-check": "^1.0.0",
-    "svelte-preprocess": "^4.0.0",
-    "tslib": "^2.0.0",
-    "typescript": "^3.9.3"
+    "svelte": "^3.0.0"
   },
   "dependencies": {
-    "@icons-pack/svelte-simple-icons": "^1.10.1",
-    "hoopoe": "^1.0.1",
     "marked": "^1.2.7",
-    "sirv-cli": "^0.4.4"
+    "sirv-cli": "^1.0.0"
   },
   "scripts": {
     "build-no-script-version": "node -r esm scripts/generate-index-page.js",
     "build": "rollup -c",
-    "start": "rollup -c -w",
-    "bad-serv": "sirv "
+    "dev": "rollup -c -w",
+    "start": "sirv ./"
   }
 }

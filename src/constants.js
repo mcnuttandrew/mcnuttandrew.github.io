@@ -1,27 +1,4 @@
 /* eslint-disable max-len */
-// export const ABOUT = `  My name is Andrew McNutt, and I am a PhD student in Computer Science at the University of Chicago. My work focuses on information visualization in general, and on automated guidance systems (like linters), unusual or xenographical data visualizations, and web applications as a visualization medium specifically.
-// `;
-// export const ABOUT = `
-// My name is Andrew McNutt, and I am a PhD student in Computer Science at the University of Chicago. My work is concerned with visualization theory and therein opportunities for the mechanistic operationalization of those ideas, as well as the design of user interfaces for complex knowledge-based tasks, such as visual analytics and creative coding, in a manner that opportunistically leverages ideas from programming languages and software engineering.
-// `;
-
-export const ABOUT = `
-I am a PhD student in Computer Science at the University of Chicago. My work falls in the intersection of the Data Visualization and HCI fields. I'm especially interested in theories of visualization (opportunities for the operationalization of those ideas), as well as the design of user interfaces for knowledge-based tasks (such as visual analytics or creative coding) and ways to leverage ideas from programming languages and software engineering in those designs.  
-`;
-
-export const HISTORY = `
-In the near past I worked as a Data Visualization Engineer for a variety of companies in San Francisco, where I made visual analytics software. The software I produced while in this role is still widely used across the world. I got a formal education in physics from Reed College in Portland, and an informal education in web development from App Academy. I really like deserts, buffalo, and motorcycles.
-`;
-// export const INTERESTS = `
-//   I\'m familiar with a wide variety of technologies, including (but not limited to):
-//   d3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails,
-//   python, flask, sketch, mathematica, grid mathematica, numpy, pandaz, git.
-//   (Above are some glib radar charts about skills I possess)
-//   I\'m excited about info-vis, databases, applied category theory, dashboards, testing,
-//   and pretty much anything in the wild world of javascript.`;
-export const INTERESTS = `
-    I\'m excited about InfoVis, applied category theory, dashboards, testing,
-    and pretty much anything in the wild world of javascript.`;
 
 export const skills = [
   {
