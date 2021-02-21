@@ -356,7 +356,7 @@ and healthy skepticism.
     use with public datasets in CDD Vault. Such approaches can complement other cheminformatics
     tools, whether open source or commercial, in providing approaches for data mining and modeling of HTS data.
     `,
-    type: 'book chapters',
+    type: 'theses / book chapters',
   },
   {
     link: 'https://arxiv.org/abs/1501.07537',
@@ -444,7 +444,7 @@ and healthy skepticism.
     we examine, these invariants turn out to be Noetherian invariants in disguise. We
     apply this theory to a wide variety of systems including predator-prey dynamics and
     damped driven harmonic motion.`,
-    type: 'theses',
+    type: 'theses / book chapters',
   },
 ];
 
@@ -540,9 +540,10 @@ export const PROJECTS = [
     section: 'visualization',
   },
   {
-    title: 'How to read an academic paper zine',
+    title: '"How to read an academic paper" zine',
     dates: 'February 2021',
     link: 'http://www.mcnutt.in/paper-zine/',
+    sourceLink: 'https://github.com/mcnuttandrew/paper-zine',
     imgLink: 'http://www.mcnutt.in/paper-zine/cover.png',
     text: 'A non-definitive guide to paper reading.',
     section: 'art',

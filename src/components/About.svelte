@@ -50,10 +50,7 @@
     <div class="description">
       {@html marked(ABOUT)}
     </div>
-    <img
-      alt="picture of me in canyonlands utah"
-      class="self-pic"
-      src="assets/desert-pic.jpg" />
+    <img alt="me in canyonlands utah" class="self-pic" src="assets/desert-pic.jpg" />
   </div>
   <h2>NEWS</h2>
   <div class="about-section">

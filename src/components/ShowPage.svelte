@@ -2,7 +2,7 @@
   import {PUBLICATIONS} from '../constants';
   import {getShowPage} from '../utils';
   const pubName = getShowPage();
-  const publication = PUBLICATIONS.find(d => d.urlTitle === pubName);
+  const publication = PUBLICATIONS.find((d) => d.urlTitle === pubName);
   const keys = ['subtitle', 'date', 'authors', 'journal'];
 </script>
 
@@ -34,9 +34,6 @@
     padding: 0 3px;
   }
   .publink:last-child::after {
-    content: '';
-  }
-  div.publink::after {
     content: '';
   }
 
@@ -80,18 +77,13 @@
     <a href={publication.link} class="title">{publication.title}</a>
 
     {#each keys as key}
-      {#if publication[key]}
-        <span>{publication[key]}</span>
-      {/if}
+      {#if publication[key]}<span>{publication[key]}</span>{/if}
     {/each}
-
   </div>
   <div class="section-subtitle">Materials</div>
   <div class="materials">
     <div class="flex">
-      {#each publication.links as {name, link}}
-        <a class="publink" href={link}>{name}</a>
-      {/each}
+      {#each publication.links as {name, link}}<a class="publink" href={link}>{name}</a>{/each}
     </div>
   </div>
   <div class="section-subtitle">Abstract</div>

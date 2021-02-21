@@ -70,8 +70,8 @@
     }
 
     .content-wrapper {
-      width: unset;
-      max-width: unset;
+      width: 100%;
+      max-width: 100%;
     }
   }
 </style>

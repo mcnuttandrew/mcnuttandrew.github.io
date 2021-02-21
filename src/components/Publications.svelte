@@ -10,10 +10,9 @@
     'conference / journal articles',
     'extended abstract / workshop papers',
     'posters',
-    'book chapters',
-    'theses',
+    'theses / book chapters',
   ];
-  const yearOrder = [2021, 2014, 2017, 2018, 2019, 2020, 2021];
+  const yearOrder = [2014, 2017, 2018, 2019, 2020, 2021];
 
   function sortPublications(currentSort) {
     if (currentSort === 'type' || currentSort === 'year') {

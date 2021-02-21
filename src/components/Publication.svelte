@@ -36,6 +36,9 @@
     display: flex;
     flex-direction: column;
   }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
   .publink {
     align-items: center;
     color: rgb(0, 100, 200);
@@ -98,7 +101,7 @@
         {/each}
       </span>
 
-      <div class="flex">
+      <div class="flex flex-wrap">
         {#each publication.links as {name, link}}<a class="publink" href={link}>{name}</a>{/each}
         {#if publication.abstract}
           <div class="publink" on:click={toggleAbstract}>abstract ({abstractOpen ? '-' : '+'})</div>
