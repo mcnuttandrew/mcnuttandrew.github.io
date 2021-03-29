@@ -1,4 +1,4 @@
-import {PUBLICATIONS} from './constants';
+import {PUBLICATIONS, COLLABORATOR_LINKS} from './constants';
 
 export function classnames(classObject) {
   return Object.keys(classObject)
@@ -32,4 +32,10 @@ export function groupBy(data, key) {
     acc[row[key]] = (acc[row[key]] || []).concat(row);
     return acc;
   }, {});
+}
+
+export function addLinks(authors) {
+  return Object.entries(COLLABORATOR_LINKS).reduce((str, [key, link]) => {
+    return str.replace(key, `[${key}](${link})`);
+  }, authors.replace('Andrew McNutt', '__Andrew McNutt__'));
 }

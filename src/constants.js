@@ -35,7 +35,7 @@ export const PUBLICATIONS = [
   {
     link: '',
     urlTitle: 'ivy',
-    imgLink: 'converted-images/ivy-logo.jpg',
+    imgLink: 'converted-images/ivy.jpg',
     title: 'Integrated Visualization Editing via Parameterized Declarative Templates',
     authors: 'Andrew McNutt, Ravi Chugh',
     journal: 'Proceedings of the 2021 ACM annual conference on Human Factors in Computing Systems',
@@ -46,6 +46,10 @@ export const PUBLICATIONS = [
         link: '#/research/ivy',
       },
       {
+        name: 'live',
+        link: 'https://github.com/mcnuttandrew/ivy',
+      },
+      {
         name: 'preprint',
         link: 'https://arxiv.org/pdf/2101.07902.pdf',
       },
@@ -54,8 +58,10 @@ export const PUBLICATIONS = [
         link: 'https://osf.io/cture/',
       },
     ],
-    abstract: `Interfaces for creating visualizations typically embrace one of several common forms. Textual specification enables fine-grained control, shelf building facilitates rapid exploration, while chart choosing promotes immediacy and simplicity. Ideally these approaches could be unified to integrate the user- and usage-dependent benefits found in each modality, yet these forms remain distinct.
+    abstract: `
+Interfaces for creating visualizations typically embrace one of several common forms. Textual specification enables fine-grained control, shelf building facilitates rapid exploration, while chart choosing promotes immediacy and simplicity. Ideally these approaches could be unified to integrate the user- and usage-dependent benefits found in each modality, yet these forms remain distinct.
 
+<br />
 We propose parameterized declarative templates, a simple abstraction mechanism over JSON-based visualization grammars, as a foundation for multimodal visualization editors. We demonstrate how templates can facilitate organization and reuse by factoring the more than 160 charts that constitute Vega-Lite's example gallery into approximately 40 templates. We exemplify the pliability of abstracting over charting grammars by implementing---as a template---the functionality of the shelf builder Polestar (a simulacra of Tableau) and a set of templates that emulate the Google Sheets chart chooser. We show how templates support multimodal visualization editing by implementing a prototype and evaluating it through an approachability study.`,
     bibTex: `TODO`,
     type: 'conference / journal articles',
@@ -529,6 +535,15 @@ export const PROJECTS = [
   //   work I had done at that point, particularlly the combination phase and signal metering small multiples diagram.`
   // },
   //
+  {
+    title: 'Ivy',
+    dates: 'November 2019 - August 2020',
+    sourceLink: 'https://github.com/mcnuttandrew/ivy',
+    link: 'http://ivy-vis.netlify.app/',
+    imgLink: 'converted-images/ivy.jpg',
+    text: 'A meta-level approach to visual analytics.',
+    section: 'visualization',
+  },
   {
     title: 'Sortilège',
     dates: 'January 2020',
