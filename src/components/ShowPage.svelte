@@ -1,10 +1,35 @@
 <script>
   import {PUBLICATIONS} from '../constants';
-  import {getShowPage} from '../utils';
+  import {getShowPage, addLinks} from '../utils';
   const pubName = getShowPage();
   const publication = PUBLICATIONS.find((d) => d.urlTitle === pubName);
-  const keys = ['subtitle', 'date', 'authors', 'journal'];
+  const keys = ['subtitle', 'date', 'journal'];
+  import marked from 'marked';
 </script>
+
+<div class="flex-down publication">
+  <div class="img-container">
+    <img alt="image drawn from {publication.title}" src={publication.imgLink} />
+  </div>
+  <div class="flex-down">
+    <a href={publication.link} class="title">{publication.title}</a>
+
+    {#each keys as key}
+      {#if publication[key]}<span>{publication[key]}</span>{/if}
+    {/each}
+    {#if publication.authors}
+      <span>{@html marked(addLinks(publication.authors))}</span>
+    {/if}
+  </div>
+  <div class="section-subtitle">Materials</div>
+  <div class="materials">
+    <div class="flex">
+      {#each publication.links as {name, link}}<a class="publink" href={link}>{name}</a>{/each}
+    </div>
+  </div>
+  <div class="section-subtitle">Abstract</div>
+  <div class="abstract">{@html marked(publication.abstract)}</div>
+</div>
 
 <style>
   img {
@@ -68,24 +93,3 @@
     font-size: 30px;
   }
 </style>
-
-<div class="flex-down publication">
-  <div class="img-container">
-    <img alt="image drawn from {publication.title}" src={publication.imgLink} />
-  </div>
-  <div class="flex-down">
-    <a href={publication.link} class="title">{publication.title}</a>
-
-    {#each keys as key}
-      {#if publication[key]}<span>{publication[key]}</span>{/if}
-    {/each}
-  </div>
-  <div class="section-subtitle">Materials</div>
-  <div class="materials">
-    <div class="flex">
-      {#each publication.links as {name, link}}<a class="publink" href={link}>{name}</a>{/each}
-    </div>
-  </div>
-  <div class="section-subtitle">Abstract</div>
-  <div class="abstract">{publication.abstract}</div>
-</div>
