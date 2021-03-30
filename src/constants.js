@@ -34,6 +34,21 @@ export const COLLABORATOR_LINKS = {
 export const PUBLICATIONS = [
   {
     link: '',
+    urlTitle: 'tacos',
+    imgLink: 'converted-images/tacos.jpg',
+    title: 'What are Table Cartograms Good for Anyway? An Algebraic Analysis',
+    authors: 'Andrew McNutt',
+    journal:
+      "Computer Graphics Forum (Proceedings of the Eurographics/IEEE-VGTC Conference on Visualization 'EuroVis')",
+    date: 'June 2021',
+    type: 'Journal',
+    links: [],
+    abstract: `Unfamiliar or esoteric visual forms arise in many areas of visualization. While such forms can be intriguing, it can be unclear how to make effective use of them without long periods of practice or costly user studies. In this work we analyze the table cartogram—a graphic which visualizes tabular data by bringing the areas of a grid of quadrilaterals into correspondence with the input data, like a heat map that has been *area-ed* rather than colored. Despite having existed for several years, little is known about its appropriate usage. We mend this gap by using Algebraic Visualization Design to show that they are best suited to relatively small tables with ordinal axes for some comparison and outlier identification tasks. In doing so we demonstrate a discount theory-based analysis that can be used to cheaply determine best practices for unknown visualizations.
+    `,
+    type: 'conference / journal articles',
+  },
+  {
+    link: '',
     urlTitle: 'ivy',
     imgLink: 'converted-images/ivy.jpg',
     title: 'Integrated Visualization Editing via Parameterized Declarative Templates',
@@ -62,7 +77,7 @@ export const PUBLICATIONS = [
 Interfaces for creating visualizations typically embrace one of several common forms. Textual specification enables fine-grained control, shelf building facilitates rapid exploration, while chart choosing promotes immediacy and simplicity. Ideally these approaches could be unified to integrate the user- and usage-dependent benefits found in each modality, yet these forms remain distinct.
 
 <br />
-We propose parameterized declarative templates, a simple abstraction mechanism over JSON-based visualization grammars, as a foundation for multimodal visualization editors. We demonstrate how templates can facilitate organization and reuse by factoring the more than 160 charts that constitute Vega-Lite's example gallery into approximately 40 templates. We exemplify the pliability of abstracting over charting grammars by implementing---as a template---the functionality of the shelf builder Polestar (a simulacra of Tableau) and a set of templates that emulate the Google Sheets chart chooser. We show how templates support multimodal visualization editing by implementing a prototype and evaluating it through an approachability study.`,
+We propose parameterized declarative templates, a simple abstraction mechanism over JSON-based visualization grammars, as a foundation for multimodal visualization editors. We demonstrate how templates can facilitate organization and reuse by factoring the more than 160 charts that constitute Vega-Lite's example gallery into approximately 40 templates. We exemplify the pliability of abstracting over charting grammars by implementing—as a template—the functionality of the shelf builder Polestar (a simulacra of Tableau) and a set of templates that emulate the Google Sheets chart chooser. We show how templates support multimodal visualization editing by implementing a prototype and evaluating it through an approachability study.`,
     bibTex: `TODO`,
     type: 'conference / journal articles',
   },
@@ -545,6 +560,15 @@ export const PROJECTS = [
     section: 'visualization',
   },
   {
+    title: 'table-cartogram.ts',
+    dates: 'September 2020',
+    sourceLink: 'https://github.com/mcnuttandrew/table-cartogram',
+    link: 'https://www.mcnutt.in/table-cartogram/',
+    imgLink: 'converted-images/taco-ts.jpg',
+    text: 'A library for constructing table cartograms in the browser.',
+    section: 'visualization',
+  },
+  {
     title: 'Sortilège',
     dates: 'January 2020',
     sourceLink: 'https://github.com/vis-tarot/vis-tarot',
@@ -842,9 +866,14 @@ export const TEACHING = [
 
 export const NEWS = [
   {
+    date: 'March 2021',
+    content:
+      'My paper "What are Table Cartograms Good for Anyway? An Algebraic Analysis" was accepted to EuroVIS 2021! 🌮🌮🌮🌮',
+  },
+  {
     date: 'January 2021',
     content:
-      'Our paper ["Integrated Visualization Editing via Parameterized Declarative Templates"](https://www.mcnutt.in/#/research/ivy) was accepted to CHI 2021.',
+      'Our paper 🌱["Integrated Visualization Editing via Parameterized Declarative Templates"](https://www.mcnutt.in/#/research/ivy) was accepted to CHI 2021.',
   },
   {
     date: 'October 2020',

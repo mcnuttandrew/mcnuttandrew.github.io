@@ -27,7 +27,7 @@
       {/if}
       <span>
         {#each keys as key}
-          {#if publication[key]}<span>{publication[key]} </span>{/if}
+          {#if publication[key]}<span>{publication[key]}. </span>{/if}
         {/each}
       </span>
 
