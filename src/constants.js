@@ -176,7 +176,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
         link: 'https://github.com/tableau/Visualization-Linting',
       },
       {name: 'osf', link: 'https://osf.io/je3x9'},
-      {name: 'slides', link: './assets/mirage-talk.pdf'},
+      {name: 'slides', link: './talks/mirage-talk.pdf'},
       {name: 'talk', link: 'https://www.youtube.com/watch?v=arHbVFbq-mQ'},
     ],
     abstract: `
@@ -220,7 +220,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
         name: 'code',
         link: 'https://github.com/mcorrell/vis-tarot',
       },
-      {name: 'slides', link: './assets/tarot-talk.pdf'},
+      {name: 'slides', link: './talks/tarot-talk.pdf'},
       {name: 'talk', link: 'https://www.youtube.com/watch?v=fRA42BjyG_Q'},
     ],
     abstract: `
@@ -311,7 +311,7 @@ and healthy skepticism.
         name: 'code',
         link: 'https://github.com/mcnuttandrew/vislint_mpl',
       },
-      {name: 'talk', link: 'talks/vis-lint-talk.pdf'},
+      {name: 'slides', link: 'talks/vis-lint-talk.pdf'},
     ],
     abstract: `
     Constructing effective charts and graphs in a scientific setting is a
@@ -389,7 +389,7 @@ and healthy skepticism.
     date: '2015',
     links: [
       {name: 'paper', link: 'https://arxiv.org/abs/1501.07537'},
-      {name: 'talk', link: 'assets/QGravPresentation.pdf'},
+      {name: 'slides', link: 'assets/QGravPresentation.pdf'},
     ],
     abstract: `
     We study the Schrodinger-Newton system of equations with the addition of gravitational
@@ -454,7 +454,7 @@ and healthy skepticism.
     date: 'June 2014',
     links: [
       {name: 'thesis', link: 'assets/thesis.pdf'},
-      {name: 'talk', link: './assets/nlm-talk.pdf'},
+      {name: 'slides', link: './assets/nlm-talk.pdf'},
     ],
     abstract: `
     In this thesis we study a modern formalism known as Nonequivalent Lagrangian
@@ -723,15 +723,15 @@ export const PROJECTS = [
       'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning.',
     section: 'tech',
   },
-  {
-    title: 'N-Hedron',
-    dates: 'September - December 2013',
-    imgLink: 'converted-images/n-hydron.jpg',
-    link: 'converted-images/nhedron.pdf',
-    text:
-      'An independent college project regarding the effacy of various numerical algorithms for constructing the n-hedron.',
-    section: 'tech',
-  },
+  // {
+  //   title: 'N-Hedron',
+  //   dates: 'September - December 2013',
+  //   imgLink: 'converted-images/n-hydron.jpg',
+  //   link: 'converted-images/nhedron.pdf',
+  //   text:
+  //     'An independent college project regarding the effacy of various numerical algorithms for constructing the n-hedron.',
+  //   section: 'tech',
+  // },
 
   // {
   //   title: 'N-Body Simulator',
@@ -741,27 +741,10 @@ export const PROJECTS = [
   //   text: 'A low N gravitional interaction simulator built in processing.'
   // },
   // {
-  //   title: 'Asteroids',
-  //   imgLink: 'converted-images/asteroids-image.jpg',
-  //   link: 'https://mcnuttandrew.github.io/asteroids/',
-  //   sourceLink: 'https://github.com/mcnuttandrew/Asteroids',
-  //   text: 'A reimaging of the classic arcade game. Technologies included Javascipt, HTML5 Canvas, and jQuery'
-  // }
-  // {
   //   title: 'Teacup',
   //   liveLink: 'http://tea-cup.org/',
   //   sourceLink: 'https://github.com/mcnuttandrew/Project-Teacup',
   //   text: 'A microblogging platform for viewing the collective unconscious. Single page Backbone app based on RESTful practices. Features data visualizations including trending topics and user population. Seed data was generated using a variety of large scale data scrapes and data cleaning techniques. Technologies included a Rails API, Backbone.js, jQuery, Nokogiri, and D3.'
-  // }
-  // {
-  //   title: 'Slim Record',
-  //   sourceLink: 'https://github.com/mcnuttandrew/Active-Record-Lite',
-  //   text: 'An Object Relational Mapper that rebuilds much of the functionality of active record. The point of the project was to get a better comprehension of the underlying mechanisms that we so often take for granted in Rails'
-  // },
-  // {
-  //   title: 'Railsito',
-  //   sourceLink: 'https://github.com/mcnuttandrew/railsito',
-  //   text: 'An Object Relational Mapper that rebuilds much of the functionality of active record. The point of the project was to get a better comprehension of the underlying mechanisms that we so often take for granted in Rails'
   // }
 ];
 
