@@ -481,7 +481,7 @@ export const PRESENTATIONS = [
     title: 'Design Patterns For Data Visualization in React',
     link: 'http://tinyurl.com/reactvisdesignpatterns',
     journal: 'React Chicago. August 29, 2018',
-    subtitle: 'An overview of four useful patterns for developing visualizations in react.',
+    subtitle: 'An overview of four useful patterns for developing visualizations in react',
     links: [
       {
         name: 'slides',
@@ -755,6 +755,13 @@ export const TEACHING = [
     role: 'Instructor',
     location: 'UChicago',
     link: 'https://capp-30239-winter-2021.netlify.com/',
+  },
+  {
+    title: 'CMSC 11111 - Creative Coding',
+    date: 'Winter 2021',
+    role: 'Teaching Assistant',
+    location: 'UChicago',
+    link: 'https://www.classes.cs.uchicago.edu/archive/2021/spring/11111-1/',
   },
   {
     title: 'CAPP 30239 - Data Visualization For Public Policy',
