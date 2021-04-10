@@ -557,7 +557,7 @@ export const PROJECTS = [
     link: 'http://ivy-vis.netlify.app/',
     imgLink: 'converted-images/ivy.jpg',
     text: 'A meta-level approach to visual analytics.',
-    section: 'visualization',
+    tags: ['visualization', 'tech'],
   },
   {
     title: 'table-cartogram.ts',
@@ -566,7 +566,7 @@ export const PROJECTS = [
     link: 'https://www.mcnutt.in/table-cartogram/',
     imgLink: 'converted-images/taco-ts.jpg',
     text: 'A library for constructing table cartograms in the browser.',
-    section: 'visualization',
+    tags: ['visualization', 'tech'],
   },
   {
     title: 'Sortilège',
@@ -576,7 +576,7 @@ export const PROJECTS = [
     imgLink: 'converted-images/vis-tarot-back.jpg',
     text:
       'A tarot based visual analytics system. It guides users analytics process via the divine hands of fate.',
-    section: 'visualization',
+    tags: ['visualization'],
   },
   {
     title: '"How to read an academic paper" zine',
@@ -585,7 +585,7 @@ export const PROJECTS = [
     sourceLink: 'https://github.com/mcnuttandrew/paper-zine',
     imgLink: 'http://www.mcnutt.in/paper-zine/cover.png',
     text: 'A non-definitive guide to paper reading.',
-    section: 'art',
+    tags: ['art'],
   },
 
   {
@@ -595,7 +595,7 @@ export const PROJECTS = [
     link: 'https://data-is-plural-search.netlify.app/',
     imgLink: 'converted-images/data-is-plural.jpg',
     text: 'A simple web view for the data is plural news letter by Singer-Vine.',
-    section: 'tech',
+    tags: ['tech'],
   },
 
   {
@@ -605,7 +605,7 @@ export const PROJECTS = [
     link: 'https://www.mcnutt.in/cycles-rain-seasons-in-size/',
     imgLink: 'converted-images/cycles-in-rain.jpg',
     text: 'A little infographic about bicycle ridership in Seattle featuring table cartograms.',
-    section: 'visualization',
+    tags: ['visualization', 'art'],
   },
   {
     title: 'CSSQL',
@@ -615,7 +615,7 @@ export const PROJECTS = [
     imgLink: 'converted-images/cssql-logo.jpg',
     text:
       'A new answer to this css-in-js question: css in sql. A sql-ddl to css transpiler written in haskell, available on npm.',
-    section: 'tech',
+    tags: ['tech'],
   },
   {
     title: 'Forum Explorer',
@@ -624,7 +624,7 @@ export const PROJECTS = [
     link: 'https://www.mcnutt.in/forum-explorer/',
     imgLink: 'converted-images/forum-ex-pic.jpg',
     text: 'A chrome extension and website that allows users to explore threaded conversations using trees.',
-    section: 'visualization',
+    tags: ['visualization', 'tech'],
   },
   {
     title: 'Readability As A Service',
@@ -634,7 +634,7 @@ export const PROJECTS = [
     imgLink: 'converted-images/readability.jpg',
     text: `Have you ever wanted specific numerical quantification on how readable
     your prose is? This micro app wraps the textstat package as a webservice so that you can easily check.`,
-    section: 'tech',
+    tags: ['tech'],
   },
   {
     title: 'tap-react-browser',
@@ -645,7 +645,7 @@ export const PROJECTS = [
     my graduate research, I found myself needing a testing tool that played a particular
     role in relation to the browser, so I made one! tap-react-browser is a light
     wrapper on tape that spits out react components.`,
-    section: 'tech',
+    tags: ['tech'],
   },
   {
     title: 'Constellations of Home - XMAS CARDS 2017',
@@ -655,7 +655,7 @@ export const PROJECTS = [
     imgLink: 'converted-images/home-graphs.jpg',
     text: `Over the 2017 holidays I spent some time meditating on memory, home, and
     graph theory, which led to my making these christmas cards.`,
-    section: 'visualization',
+    tags: ['visualization', 'art'],
   },
   {
     title: 'On The Shape of American Cities I/II',
@@ -664,7 +664,7 @@ export const PROJECTS = [
     sourceLink: 'https://github.com/mcnuttandrew/city-size',
     imgLink: 'converted-images/city-size.jpg',
     text: 'A print graphic describing the shape of the 100 most populous American cities.',
-    section: 'visualization',
+    tags: ['visualization', 'art'],
   },
   {
     title: 'Pantone: Color of the year',
@@ -673,7 +673,7 @@ export const PROJECTS = [
     sourceLink: 'https://github.com/mcnuttandrew/color-of-the-year',
     imgLink: 'converted-images/color-of-year.jpg',
     text: 'A small exploration of the glory and wonder that is pantones color of the year.',
-    section: 'visualization',
+    tags: ['visualization'],
   },
   {
     title: 'react-vis',
@@ -682,7 +682,7 @@ export const PROJECTS = [
     sourceLink: 'https://github.com/uber/react-vis',
     imgLink: 'converted-images/react-vis-image.jpg',
     text: 'A charting library for the react ecosystem.',
-    section: 'visualization',
+    tags: ['visualization', 'tech'],
   },
   {
     title: 'CSV Conversion',
@@ -692,7 +692,7 @@ export const PROJECTS = [
     imgLink: 'converted-images/csv-conversion.jpg',
     text:
       'A handy client-side csv to json converter. I built this little app, because my favorite conversion site got knocked down and I wanted to improve the UI.',
-    section: 'tech',
+    tags: ['tech'],
   },
   {
     title: 'Personal Timeline',
@@ -701,7 +701,7 @@ export const PROJECTS = [
     sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
     imgLink: 'converted-images/personal-time.jpg',
     text: 'A brief timeline of my life, a resume through a dark mirror if you will.',
-    section: 'visualization',
+    tags: ['visualization'],
   },
   {
     title: 'Unnamed Tarot Deck',
@@ -711,7 +711,7 @@ export const PROJECTS = [
     sourceLink: 'https://github.com/mcnuttandrew/tarot-deck',
     imgLink: 'converted-images/tarot-image.jpg',
     text: 'A tarot tech themed around the signage and spirit of the American highway system.',
-    section: 'art',
+    tags: ['art'],
   },
   {
     title: 'Why Not Ipsum',
@@ -721,7 +721,7 @@ export const PROJECTS = [
     imgLink: 'converted-images/why-not-image.jpg',
     text:
       'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning.',
-    section: 'tech',
+    tags: ['tech'],
   },
   // {
   //   title: 'N-Hedron',
@@ -730,7 +730,7 @@ export const PROJECTS = [
   //   link: 'converted-images/nhedron.pdf',
   //   text:
   //     'An independent college project regarding the effacy of various numerical algorithms for constructing the n-hedron.',
-  //   section: 'tech',
+  //   tags: ['tech'],
   // },
 
   // {
