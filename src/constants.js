@@ -42,7 +42,10 @@ export const PUBLICATIONS = [
       "Computer Graphics Forum (Proceedings of the Eurographics/IEEE-VGTC Conference on Visualization 'EuroVis')",
     date: 'June 2021',
     type: 'Journal',
-    links: [],
+    links: [
+      {name: 'about', link: '#/research/tacos'},
+      {name: 'preprint', link: 'https://arxiv.org/pdf/2104.04042.pdf'},
+    ],
     abstract: `Unfamiliar or esoteric visual forms arise in many areas of visualization. While such forms can be intriguing, it can be unclear how to make effective use of them without long periods of practice or costly user studies. In this work we analyze the table cartogram—a graphic which visualizes tabular data by bringing the areas of a grid of quadrilaterals into correspondence with the input data, like a heat map that has been *area-ed* rather than colored. Despite having existed for several years, little is known about its appropriate usage. We mend this gap by using Algebraic Visualization Design to show that they are best suited to relatively small tables with ordinal axes for some comparison and outlier identification tasks. In doing so we demonstrate a discount theory-based analysis that can be used to cheaply determine best practices for unknown visualizations.
     `,
     type: 'conference / journal articles',
@@ -56,22 +59,10 @@ export const PUBLICATIONS = [
     journal: 'Proceedings of the 2021 ACM annual conference on Human Factors in Computing Systems',
     date: 'May 2021',
     links: [
-      {
-        name: 'about',
-        link: '#/research/ivy',
-      },
-      {
-        name: 'live',
-        link: 'https://github.com/mcnuttandrew/ivy',
-      },
-      {
-        name: 'preprint',
-        link: 'https://arxiv.org/pdf/2101.07902.pdf',
-      },
-      {
-        name: 'osf',
-        link: 'https://osf.io/cture/',
-      },
+      {name: 'about', link: '#/research/ivy'},
+      {name: 'live', link: 'https://github.com/mcnuttandrew/ivy'},
+      {name: 'preprint', link: 'https://arxiv.org/pdf/2101.07902.pdf'},
+      {name: 'osf', link: 'https://osf.io/cture/'},
     ],
     abstract: `
 Interfaces for creating visualizations typically embrace one of several common forms. Textual specification enables fine-grained control, shelf building facilitates rapid exploration, while chart choosing promotes immediacy and simplicity. Ideally these approaches could be unified to integrate the user- and usage-dependent benefits found in each modality, yet these forms remain distinct.
@@ -91,22 +82,10 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     journal: '2020 IEEE 5th Workshop on Visualization for the Digital Humanities (VIS4DH)',
     date: 'October 2020',
     links: [
-      {
-        name: 'about',
-        link: '#/research/nearby',
-      },
-      {
-        name: 'preprint',
-        link: 'https://arxiv.org/pdf/2009.02384.pdf',
-      },
-      {
-        name: 'code',
-        link: 'https://github.com/mcnuttandrew/sci-text-compare',
-      },
-      {
-        name: 'live',
-        link: 'https://goetheanddecandolle.rcc.uchicago.edu/',
-      },
+      {name: 'about', link: '#/research/nearby'},
+      {name: 'preprint', link: 'https://arxiv.org/pdf/2009.02384.pdf'},
+      {name: 'code', link: 'https://github.com/mcnuttandrew/sci-text-compare'},
+      {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'},
     ],
     abstract: `
     Distant reading methodologies make use of computational processes to aid in the analysis of large text corpora which might not be pliable to traditional methods of scholarly analysis due to their volume. While these methods have been applied effectively to a variety of types of texts and contexts, they can leave unaddressed the needs of scholars in the humanities disciplines like history, who often engage in close reading of sources. Complementing the close analysis of texts with some of the tools of distant reading, such as visualization, can resolve some of the issues. We focus on a particular category of this intersection—which we refer to as near-by reading—wherein an expert engages in a computer-mediated analysis of a text with which they are familiar. We provide an example of this approach by developing a visual analysis application for the near-by reading of 19th-century scientific writings by J. W. von Goethe and A. P. de Candolle. We show that even the most formal and public texts, such as scientific treatises, can reveal unexpressed personal biases and philosophies that the authors themselves might not have recognized.
@@ -123,26 +102,11 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     journal: 'VIS 2020 - InfoVIS Poster Track - 🏆 Honorable Mention for Best Poster Research 🏆',
     date: 'October 2020',
     links: [
-      {
-        name: 'about',
-        link: '#/research/table-cartogram',
-      },
-      {
-        name: 'preprint',
-        link: 'https://osf.io/kem6j/',
-      },
-      {
-        name: 'code',
-        link: 'https://github.com/mcnuttandrew/table-cartogram',
-      },
-      {
-        name: 'poster',
-        link: './assets/table-cartogram-poster.pdf',
-      },
-      {
-        name: 'live',
-        link: 'https://www.mcnutt.in/table-cartogram/',
-      },
+      {name: 'about', link: '#/research/table-cartogram'},
+      {name: 'preprint', link: 'https://osf.io/kem6j/'},
+      {name: 'code', link: 'https://github.com/mcnuttandrew/table-cartogram'},
+      {name: 'poster', link: './assets/table-cartogram-poster.pdf'},
+      {name: 'live', link: 'https://www.mcnutt.in/table-cartogram/'},
     ],
     abstract: `
     Table cartograms are a recent type of data visualization that encodes numerical tabular data as a grid of quadrilaterals whose area areb rought into correspondence with the input data. The overall effect is similar to that of a heat map that has been ‘area-ed‘ rather than shaded. There exist several algorithms for creating these structures—variously utilizing techniques such as computational geometry and numerical optimization —yet each of them impose aesthetically-motivated conditions that impede fine tuning or manipulation of the visual aesthetic of the output. In this work we contribute an optimization algorithm for creating table cartograms that is able to compute a variety of table cartograms layouts for a single dataset. We make our web-ready implementation available as table-cartogram.ts
@@ -160,10 +124,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       'Proceedings of the 2020 ACM annual conference on Human Factors in Computing Systems - 🏆 Honorable Mention for Best Paper 🏆',
     date: 'April 2020',
     links: [
-      {
-        name: 'about',
-        link: '#/research/mirage',
-      },
+      {name: 'about', link: '#/research/mirage'},
       {
         name: 'blog post',
         link:
@@ -171,10 +132,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       },
       {name: 'preprint', link: 'https://arxiv.org/pdf/2001.02316.pdf'},
       {name: 'live', link: 'https://metamorphic-linting.netlify.com/'},
-      {
-        name: 'code',
-        link: 'https://github.com/tableau/Visualization-Linting',
-      },
+      {name: 'code', link: 'https://github.com/tableau/Visualization-Linting'},
       {name: 'osf', link: 'https://osf.io/je3x9'},
       {name: 'slides', link: './talks/mirage-talk.pdf'},
       {name: 'talk', link: 'https://www.youtube.com/watch?v=arHbVFbq-mQ'},
@@ -207,19 +165,10 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     journal: 'Proceedings of alt.CHI',
     date: 'April 2020',
     links: [
-      {
-        name: 'about',
-        link: '#/research/tarot',
-      },
-      {
-        name: 'preprint',
-        link: 'assets/altchi-tarot-cameraready.pdf',
-      },
+      {name: 'about', link: '#/research/tarot'},
+      {name: 'preprint', link: 'assets/altchi-tarot-cameraready.pdf'},
       {name: 'live', link: 'https://vis-tarot.netlify.com/'},
-      {
-        name: 'code',
-        link: 'https://github.com/mcorrell/vis-tarot',
-      },
+      {name: 'code', link: 'https://github.com/mcorrell/vis-tarot'},
       {name: 'slides', link: './talks/tarot-talk.pdf'},
       {name: 'talk', link: 'https://www.youtube.com/watch?v=fRA42BjyG_Q'},
     ],
@@ -269,10 +218,7 @@ and healthy skepticism.
       {name: 'paper', link: 'assets/forum-explorer-paper.pdf'},
       {name: 'poster', link: 'assets/forum-explorer-poster.pdf'},
       {name: 'live', link: 'https://www.mcnutt.in/forum-explorer/'},
-      {
-        name: 'code',
-        link: 'https://github.com/mcnuttandrew/forum-explorer',
-      },
+      {name: 'code', link: 'https://github.com/mcnuttandrew/forum-explorer'},
       {name: 'osf', link: 'https://osf.io/nrhqw/'},
     ],
     abstract: `
@@ -307,10 +253,7 @@ and healthy skepticism.
     date: 'October 2018',
     links: [
       {name: 'paper', link: 'assets/McNutt_Kindlmann_2018.pdf'},
-      {
-        name: 'code',
-        link: 'https://github.com/mcnuttandrew/vislint_mpl',
-      },
+      {name: 'code', link: 'https://github.com/mcnuttandrew/vislint_mpl'},
       {name: 'slides', link: 'talks/vis-lint-talk.pdf'},
     ],
     abstract: `
@@ -351,12 +294,7 @@ and healthy skepticism.
     Anna Coulon Spektor, Charlie Weatherall, Nadia K Litterman, Barry A Bunin`,
     journal: 'Reporter Gene Assays',
     date: '2018',
-    links: [
-      {
-        name: 'paper',
-        link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14',
-      },
-    ],
+    links: [{name: 'paper', link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14'}],
     abstract: `
     We are now seeing the benefit of investments made over the last decade in
     high-throughput screening (HTS) that is resulting in large structure activity
@@ -416,12 +354,7 @@ and healthy skepticism.
     George Grass, Joel S. Freundlich, Robert C. Reynolds, and Sean Ekins`,
     journal: 'Journal of Chemical Information and Modeling',
     date: '2015',
-    links: [
-      {
-        name: 'paper',
-        link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143',
-      },
-    ],
+    links: [{name: 'paper', link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143'}],
     abstract: `
     On the order of hundreds of absorption, distribution, metabolism, excretion,
     and toxicity (ADME/Tox) models have been described in the literature in the
@@ -482,12 +415,7 @@ export const PRESENTATIONS = [
     link: 'http://tinyurl.com/reactvisdesignpatterns',
     journal: 'React Chicago. August 29, 2018',
     subtitle: 'An overview of four useful patterns for developing visualizations in react',
-    links: [
-      {
-        name: 'slides',
-        link: 'http://tinyurl.com/reactvisdesignpatterns',
-      },
-    ],
+    links: [{name: 'slides', link: 'http://tinyurl.com/reactvisdesignpatterns'}],
   },
   // {
   //   link: 'assets/nlm-talk.pdf',
@@ -532,10 +460,7 @@ export const BLOG_POSTS = [
         link: 'https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4',
       },
       // {name: 'talk', link: 'http://tinyurl.com/reactvisdesignpatterns'},
-      {
-        name: 'code',
-        link: 'https://github.com/mcnuttandrew/advanced-react-vis-tutorial',
-      },
+      {name: 'code', link: 'https://github.com/mcnuttandrew/advanced-react-vis-tutorial'},
     ],
   },
 ];
@@ -858,7 +783,7 @@ export const NEWS = [
   {
     date: 'March 2021',
     content:
-      'My paper "What are Table Cartograms Good for Anyway? An Algebraic Analysis" was accepted to EuroVIS 2021! 🌮🌮🌮🌮',
+      'My paper ["What are Table Cartograms Good for Anyway? An Algebraic Analysis"](https://www.mcnutt.in/#/research/tacos) was accepted to EuroVIS 2021! 🌮🌮🌮🌮',
   },
   {
     date: 'January 2021',
