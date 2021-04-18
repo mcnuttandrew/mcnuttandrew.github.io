@@ -88,7 +88,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'},
     ],
     abstract: `
-    Distant reading methodologies make use of computational processes to aid in the analysis of large text corpora which might not be pliable to traditional methods of scholarly analysis due to their volume. While these methods have been applied effectively to a variety of types of texts and contexts, they can leave unaddressed the needs of scholars in the humanities disciplines like history, who often engage in close reading of sources. Complementing the close analysis of texts with some of the tools of distant reading, such as visualization, can resolve some of the issues. We focus on a particular category of this intersection—which we refer to as near-by reading—wherein an expert engages in a computer-mediated analysis of a text with which they are familiar. We provide an example of this approach by developing a visual analysis application for the near-by reading of 19th-century scientific writings by J. W. von Goethe and A. P. de Candolle. We show that even the most formal and public texts, such as scientific treatises, can reveal unexpressed personal biases and philosophies that the authors themselves might not have recognized.
+Distant reading methodologies make use of computational processes to aid in the analysis of large text corpora which might not be pliable to traditional methods of scholarly analysis due to their volume. While these methods have been applied effectively to a variety of types of texts and contexts, they can leave unaddressed the needs of scholars in the humanities disciplines like history, who often engage in close reading of sources. Complementing the close analysis of texts with some of the tools of distant reading, such as visualization, can resolve some of the issues. We focus on a particular category of this intersection—which we refer to as near-by reading—wherein an expert engages in a computer-mediated analysis of a text with which they are familiar. We provide an example of this approach by developing a visual analysis application for the near-by reading of 19th-century scientific writings by J. W. von Goethe and A. P. de Candolle. We show that even the most formal and public texts, such as scientific treatises, can reveal unexpressed personal biases and philosophies that the authors themselves might not have recognized.
     `,
     bibTex: `TODO`,
     type: 'extended abstract / workshop papers',
@@ -109,7 +109,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       {name: 'live', link: 'https://www.mcnutt.in/table-cartogram/'},
     ],
     abstract: `
-    Table cartograms are a recent type of data visualization that encodes numerical tabular data as a grid of quadrilaterals whose area areb rought into correspondence with the input data. The overall effect is similar to that of a heat map that has been ‘area-ed‘ rather than shaded. There exist several algorithms for creating these structures—variously utilizing techniques such as computational geometry and numerical optimization —yet each of them impose aesthetically-motivated conditions that impede fine tuning or manipulation of the visual aesthetic of the output. In this work we contribute an optimization algorithm for creating table cartograms that is able to compute a variety of table cartograms layouts for a single dataset. We make our web-ready implementation available as table-cartogram.ts
+Table cartograms are a recent type of data visualization that encodes numerical tabular data as a grid of quadrilaterals whose area areb rought into correspondence with the input data. The overall effect is similar to that of a heat map that has been ‘area-ed‘ rather than shaded. There exist several algorithms for creating these structures—variously utilizing techniques such as computational geometry and numerical optimization —yet each of them impose aesthetically-motivated conditions that impede fine tuning or manipulation of the visual aesthetic of the output. In this work we contribute an optimization algorithm for creating table cartograms that is able to compute a variety of table cartograms layouts for a single dataset. We make our web-ready implementation available as table-cartogram.ts
     `,
     bibTex: `TODO`,
     type: 'posters',
@@ -138,20 +138,20 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       {name: 'talk', link: 'https://www.youtube.com/watch?v=arHbVFbq-mQ'},
     ],
     abstract: `
-    Dirty data and deceptive design practices can undermine, invert, or invalidate the purported messages of charts and graphs.
-    These failures can arise silently: a conclusion derived from
-    a particular visualization may look plausible unless the analyst looks closer and discovers an issue with the backing
-    data, visual specification, or their own assumptions. We term
-    such silent but significant failures visualization mirages. We
-    describe a conceptual model of mirages and show how they
-    can be generated at every stage of the visual analytics process.
-    We adapt a methodology from software testing, metamorphic
-    testing, as a way of automatically surfacing potential mirages
-    at the visual encoding stage of analysis through modifications
-    to the underlying data and chart specification. We show that
-    metamorphic testing can reliably identify mirages across a
-    variety of chart types with relatively little prior knowledge of
-    the data or the domain.
+Dirty data and deceptive design practices can undermine, invert, or invalidate the purported messages of charts and graphs.
+These failures can arise silently: a conclusion derived from
+a particular visualization may look plausible unless the analyst looks closer and discovers an issue with the backing
+data, visual specification, or their own assumptions. We term
+such silent but significant failures visualization mirages. We
+describe a conceptual model of mirages and show how they
+can be generated at every stage of the visual analytics process.
+We adapt a methodology from software testing, metamorphic
+testing, as a way of automatically surfacing potential mirages
+at the visual encoding stage of analysis through modifications
+to the underlying data and chart specification. We show that
+metamorphic testing can reliably identify mirages across a
+variety of chart types with relatively little prior knowledge of
+the data or the domain.
     `,
     bibTex: `TODO`,
     type: 'conference / journal articles',
@@ -173,7 +173,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       {name: 'talk', link: 'https://www.youtube.com/watch?v=fRA42BjyG_Q'},
     ],
     abstract: `
-    Our interactions with data, visual analytics included, are increasingly shaped by automated or algorithmic systems. An
+Our interactions with data, visual analytics included, are increasingly shaped by automated or algorithmic systems. An
 open question is how to give analysts the tools to interpret
 these “automatic insights” while also inculcating critical engagement with algorithmic analysis. We present a system,
 Sortilège, that uses the metaphor of a Tarot card reading to
@@ -222,16 +222,16 @@ and healthy skepticism.
       {name: 'osf', link: 'https://osf.io/nrhqw/'},
     ],
     abstract: `
-    Large threaded conversations, such as those found on YCombinator’s HackerNews,
-    are typically presented in a way that shows individual comments clearly,
-    but can obscure larger trends or patterns within the conversational corpus.
-    Previous research has addressed this problem through graphical-overviews and NLP-generated summaries.
-    These efforts have generally assumed a particular (and modest) data size,
-    which limits their utility for large or deeply-nested conversations, and often
-    require non-trivial offline processing time, which makes them impractical for day-to-day usage.
-    We describe here Forum Explorer, a Chrome extension that combines and expands upon
-    prior art through a collection of techniques that enable this type of
-    representation to handle wider ranges of data in real time. Materials for this project are available at https://osf.io/nrhqw/.
+Large threaded conversations, such as those found on YCombinator’s HackerNews,
+are typically presented in a way that shows individual comments clearly,
+but can obscure larger trends or patterns within the conversational corpus.
+Previous research has addressed this problem through graphical-overviews and NLP-generated summaries.
+These efforts have generally assumed a particular (and modest) data size,
+which limits their utility for large or deeply-nested conversations, and often
+require non-trivial offline processing time, which makes them impractical for day-to-day usage.
+We describe here Forum Explorer, a Chrome extension that combines and expands upon
+prior art through a collection of techniques that enable this type of
+representation to handle wider ranges of data in real time. Materials for this project are available at https://osf.io/nrhqw/.
     `,
     bibTex: `
     @inproceedings{McNuttKindlmannForumExplorerPoster,
