@@ -39,7 +39,7 @@ export const PUBLICATIONS = [
     title: 'What are Table Cartograms Good for Anyway? An Algebraic Analysis',
     authors: 'Andrew McNutt',
     journal:
-      "Computer Graphics Forum (Proceedings of the Eurographics/IEEE-VGTC Conference on Visualization 'EuroVis')",
+      "Computer Graphics Forum (Proceedings of the Eurographics/IEEE-VGTC Conference on Visualization 'EuroVis') - 🏆 Honorable Mention for Best Paper 🏆",
     date: 'June 2021',
     type: 'Journal',
     links: [
@@ -780,6 +780,11 @@ export const TEACHING = [
 ];
 
 export const NEWS = [
+  {
+    date: 'June 2021',
+    content:
+      'My paper on [table cartograms and algebraic visualization](https://www.mcnutt.in/#/research/tacos) won an 🏆honorable mention🏆 for best paper at EuroVis!',
+  },
   {
     date: 'March 2021',
     content:
