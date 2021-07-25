@@ -29,9 +29,29 @@ export const COLLABORATOR_LINKS = {
   'Ravi Chugh': 'http://people.cs.uchicago.edu/~rchugh/',
   'Sean Ekins': 'https://scholar.google.com/citations?user=6NNfXAMAAAAJ&hl=en',
   'Varchas Gopalaswamy': 'https://scholar.google.com/citations?user=PxH1Z7kAAAAJ&hl=en',
+  'Will Brackenbury': 'https://wbrackenbury.github.io/',
+  'Blase Ur': 'https://www.blaseur.com/',
+  'Aaron Elmore': 'http://people.cs.uchicago.edu/~aelmore/',
+  'Kyle Chard': 'https://kylechard.com/',
 };
 
 export const PUBLICATIONS = [
+  {
+    link: '',
+    urlTitle: 'kondoCloud',
+    imgLink: 'converted-images/kondo.jpg',
+    title:
+      'KondoCloud: Improving Information Management in Cloud Storage via Recommendations Based on File Similarity',
+    authors: 'Will Brackenbury, Andrew McNutt, Kyle Chard, Aaron Elmore, Blase Ur',
+    journal: 'ACMUIST',
+    date: 'October 2021',
+    type: 'Conference',
+    links: [],
+    abstract: 'coming soon',
+    bibTex: `TODO`,
+    type: 'conference / journal articles',
+    subtype: 'conference',
+  },
   {
     link: '',
     urlTitle: 'tacos',
@@ -49,6 +69,7 @@ export const PUBLICATIONS = [
     abstract: `Unfamiliar or esoteric visual forms arise in many areas of visualization. While such forms can be intriguing, it can be unclear how to make effective use of them without long periods of practice or costly user studies. In this work we analyze the table cartogram—a graphic which visualizes tabular data by bringing the areas of a grid of quadrilaterals into correspondence with the input data, like a heat map that has been *area-ed* rather than colored. Despite having existed for several years, little is known about its appropriate usage. We mend this gap by using Algebraic Visualization Design to show that they are best suited to relatively small tables with ordinal axes for some comparison and outlier identification tasks. In doing so we demonstrate a discount theory-based analysis that can be used to cheaply determine best practices for unknown visualizations.
     `,
     type: 'conference / journal articles',
+    subtype: 'journal',
   },
   {
     link: '',
@@ -71,6 +92,7 @@ Interfaces for creating visualizations typically embrace one of several common f
 We propose parameterized declarative templates, a simple abstraction mechanism over JSON-based visualization grammars, as a foundation for multimodal visualization editors. We demonstrate how templates can facilitate organization and reuse by factoring the more than 160 charts that constitute Vega-Lite's example gallery into approximately 40 templates. We exemplify the pliability of abstracting over charting grammars by implementing—as a template—the functionality of the shelf builder Polestar (a simulacra of Tableau) and a set of templates that emulate the Google Sheets chart chooser. We show how templates support multimodal visualization editing by implementing a prototype and evaluating it through an approachability study.`,
     bibTex: `TODO`,
     type: 'conference / journal articles',
+    subtype: 'conference',
   },
   {
     link: '',
@@ -87,11 +109,11 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       {name: 'code', link: 'https://github.com/mcnuttandrew/sci-text-compare'},
       {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'},
     ],
-    abstract: `
-Distant reading methodologies make use of computational processes to aid in the analysis of large text corpora which might not be pliable to traditional methods of scholarly analysis due to their volume. While these methods have been applied effectively to a variety of types of texts and contexts, they can leave unaddressed the needs of scholars in the humanities disciplines like history, who often engage in close reading of sources. Complementing the close analysis of texts with some of the tools of distant reading, such as visualization, can resolve some of the issues. We focus on a particular category of this intersection—which we refer to as near-by reading—wherein an expert engages in a computer-mediated analysis of a text with which they are familiar. We provide an example of this approach by developing a visual analysis application for the near-by reading of 19th-century scientific writings by J. W. von Goethe and A. P. de Candolle. We show that even the most formal and public texts, such as scientific treatises, can reveal unexpressed personal biases and philosophies that the authors themselves might not have recognized.
-    `,
+    abstract:
+      'Distant reading methodologies make use of computational processes to aid in the analysis of large text corpora which might not be pliable to traditional methods of scholarly analysis due to their volume. While these methods have been applied effectively to a variety of types of texts and contexts, they can leave unaddressed the needs of scholars in the humanities disciplines like history, who often engage in close reading of sources. Complementing the close analysis of texts with some of the tools of distant reading, such as visualization, can resolve some of the issues. We focus on a particular category of this intersection—which we refer to as near-by reading—wherein an expert engages in a computer-mediated analysis of a text with which they are familiar. We provide an example of this approach by developing a visual analysis application for the near-by reading of 19th-century scientific writings by J. W. von Goethe and A. P. de Candolle. We show that even the most formal and public texts, such as scientific treatises, can reveal unexpressed personal biases and philosophies that the authors themselves might not have recognized.',
     bibTex: `TODO`,
     type: 'extended abstract / workshop papers',
+    subtype: 'workshop',
   },
   {
     link: '',
@@ -108,11 +130,11 @@ Distant reading methodologies make use of computational processes to aid in the 
       {name: 'poster', link: './assets/table-cartogram-poster.pdf'},
       {name: 'live', link: 'https://www.mcnutt.in/table-cartogram/'},
     ],
-    abstract: `
-Table cartograms are a recent type of data visualization that encodes numerical tabular data as a grid of quadrilaterals whose area areb rought into correspondence with the input data. The overall effect is similar to that of a heat map that has been ‘area-ed‘ rather than shaded. There exist several algorithms for creating these structures—variously utilizing techniques such as computational geometry and numerical optimization —yet each of them impose aesthetically-motivated conditions that impede fine tuning or manipulation of the visual aesthetic of the output. In this work we contribute an optimization algorithm for creating table cartograms that is able to compute a variety of table cartograms layouts for a single dataset. We make our web-ready implementation available as table-cartogram.ts
-    `,
+    abstract:
+      'Table cartograms are a recent type of data visualization that encodes numerical tabular data as a grid of quadrilaterals whose area areb rought into correspondence with the input data. The overall effect is similar to that of a heat map that has been ‘area-ed‘ rather than shaded. There exist several algorithms for creating these structures—variously utilizing techniques such as computational geometry and numerical optimization —yet each of them impose aesthetically-motivated conditions that impede fine tuning or manipulation of the visual aesthetic of the output. In this work we contribute an optimization algorithm for creating table cartograms that is able to compute a variety of table cartograms layouts for a single dataset. We make our web-ready implementation available as table-cartogram.ts',
     bibTex: `TODO`,
     type: 'posters',
+    subtype: 'poster',
   },
   {
     link: 'https://arxiv.org/pdf/2001.02316.pdf',
@@ -137,24 +159,11 @@ Table cartograms are a recent type of data visualization that encodes numerical 
       {name: 'slides', link: './talks/mirage-talk.pdf'},
       {name: 'talk', link: 'https://www.youtube.com/watch?v=arHbVFbq-mQ'},
     ],
-    abstract: `
-Dirty data and deceptive design practices can undermine, invert, or invalidate the purported messages of charts and graphs.
-These failures can arise silently: a conclusion derived from
-a particular visualization may look plausible unless the analyst looks closer and discovers an issue with the backing
-data, visual specification, or their own assumptions. We term
-such silent but significant failures visualization mirages. We
-describe a conceptual model of mirages and show how they
-can be generated at every stage of the visual analytics process.
-We adapt a methodology from software testing, metamorphic
-testing, as a way of automatically surfacing potential mirages
-at the visual encoding stage of analysis through modifications
-to the underlying data and chart specification. We show that
-metamorphic testing can reliably identify mirages across a
-variety of chart types with relatively little prior knowledge of
-the data or the domain.
-    `,
+    abstract:
+      'Dirty data and deceptive design practices can undermine, invert, or invalidate the purported messages of charts and graphs. These failures can arise silently: a conclusion derived from a particular visualization may look plausible unless the analyst looks closer and discovers an issue with the backing data, visual specification, or their own assumptions. We term such silent but significant failures visualization mirages. We describe a conceptual model of mirages and show how they can be generated at every stage of the visual analytics process. We adapt a methodology from software testing, metamorphic testing, as a way of automatically surfacing potential mirages at the visual encoding stage of analysis through modifications to the underlying data and chart specification. We show that metamorphic testing can reliably identify mirages across a variety of chart types with relatively little prior knowledge of the data or the domain.',
     bibTex: `TODO`,
     type: 'conference / journal articles',
+    subtype: 'conference',
   },
   {
     link: 'assets/altchi-tarot-cameraready.pdf',
@@ -172,17 +181,11 @@ the data or the domain.
       {name: 'slides', link: './talks/tarot-talk.pdf'},
       {name: 'talk', link: 'https://www.youtube.com/watch?v=fRA42BjyG_Q'},
     ],
-    abstract: `
-Our interactions with data, visual analytics included, are increasingly shaped by automated or algorithmic systems. An
-open question is how to give analysts the tools to interpret
-these “automatic insights” while also inculcating critical engagement with algorithmic analysis. We present a system,
-Sortilège, that uses the metaphor of a Tarot card reading to
-provide an overview of automatically detected patterns in
-data in a way that is meant to encourage critique, reflection,
-and healthy skepticism.
-    `,
+    abstract:
+      'Our interactions with data, visual analytics included, are increasingly shaped by automated or algorithmic systems. An open question is how to give analysts the tools to interpret these “automatic insights” while also inculcating critical engagement with algorithmic analysis. We present a system, Sortilège, that uses the metaphor of a Tarot card reading to provide an overview of automatically detected patterns in data in a way that is meant to encourage critique, reflection, and healthy skepticism.',
     bibTex: `TODO`,
     type: 'extended abstract / workshop papers',
+    subtype: 'ex. abs.',
   },
   {
     imgLink: 'converted-images/agathas-thing.jpg',
@@ -199,10 +202,10 @@ and healthy skepticism.
           'https://rcc.uchicago.edu/about-rcc/news-features/mind-bytes-2019-tipping-point-computational-and-ai-research',
       },
     ],
-    abstract: `
-    When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as â€œnational scienceâ€? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.
-    `,
+    abstract:
+      "When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as â€œnational scienceâ€? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.",
     type: 'posters',
+    subtype: 'poster',
   },
   // link to award: https://rcc.uchicago.edu/about-rcc/news-features/mind-bytes-2019-tipping-point-computational-and-ai-research
   {
@@ -221,18 +224,8 @@ and healthy skepticism.
       {name: 'code', link: 'https://github.com/mcnuttandrew/forum-explorer'},
       {name: 'osf', link: 'https://osf.io/nrhqw/'},
     ],
-    abstract: `
-Large threaded conversations, such as those found on YCombinator’s HackerNews,
-are typically presented in a way that shows individual comments clearly,
-but can obscure larger trends or patterns within the conversational corpus.
-Previous research has addressed this problem through graphical-overviews and NLP-generated summaries.
-These efforts have generally assumed a particular (and modest) data size,
-which limits their utility for large or deeply-nested conversations, and often
-require non-trivial offline processing time, which makes them impractical for day-to-day usage.
-We describe here Forum Explorer, a Chrome extension that combines and expands upon
-prior art through a collection of techniques that enable this type of
-representation to handle wider ranges of data in real time. Materials for this project are available at https://osf.io/nrhqw/.
-    `,
+    abstract:
+      'Large threaded conversations, such as those found on YCombinator’s HackerNews, are typically presented in a way that shows individual comments clearly, but can obscure larger trends or patterns within the conversational corpus. Previous research has addressed this problem through graphical-overviews and NLP-generated summaries. These efforts have generally assumed a particular (and modest) data size, which limits their utility for large or deeply-nested conversations, and often require non-trivial offline processing time, which makes them impractical for day-to-day usage. We describe here Forum Explorer, a Chrome extension that combines and expands upon prior art through a collection of techniques that enable this type of representation to handle wider ranges of data in real time. Materials for this project are available at https://osf.io/nrhqw/.',
     bibTex: `
     @inproceedings{McNuttKindlmannForumExplorerPoster,
       title={Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations},
@@ -241,6 +234,7 @@ representation to handle wider ranges of data in real time. Materials for this p
       year={2019}
     }`,
     type: 'posters',
+    subtype: 'poster',
   },
   {
     link: 'assets/McNutt_Kindlmann_2018.pdf',
@@ -256,25 +250,8 @@ representation to handle wider ranges of data in real time. Materials for this p
       {name: 'code', link: 'https://github.com/mcnuttandrew/vislint_mpl'},
       {name: 'slides', link: 'talks/vis-lint-talk.pdf'},
     ],
-    abstract: `
-    Constructing effective charts and graphs in a scientific setting is a
-    nuanced task that requires a thorough understanding of visualization
-    design; a knowledge that may not be available to all practicing scientists.
-    Previous attempts to address this problem have pushed chart
-    creators to pore over large collections of guidelines and heuristics,
-    or to relegate their entire workflow to end-to-end tools that provide
-    automated recommendations. In this paper we bring together these
-    two strains of ideas by introducing the use of lint as a mechanism for
-    guiding chart creators towards effective visualizations in a manner
-    that can be configured to taste and task without forcing users to abandon their usual workflows.
-    The programmatic evaluation model of
-    visualization linting (or vis lint) offers a compelling framework for
-    the automation of visualization guidelines, as it offers unambiguous
-    feedback during the chart creation process, and can execute analyses derived from machine vision and natural language processing.
-    We demonstrate the feasibility of this system through the production of vislint_mpl,
-    a prototype visualization linting system, that
-    evaluates charts created in matplotlib.
-    `,
+    abstract:
+      ' Constructing effective charts and graphs in a scientific setting is a nuanced task that requires a thorough understanding of visualization design; a knowledge that may not be available to all practicing scientists. Previous attempts to address this problem have pushed chart creators to pore over large collections of guidelines and heuristics, or to relegate their entire workflow to end-to-end tools that provide automated recommendations. In this paper we bring together these two strains of ideas by introducing the use of lint as a mechanism for guiding chart creators towards effective visualizations in a manner that can be configured to taste and task without forcing users to abandon their usual workflows. The programmatic evaluation model of visualization linting (or vis lint) offers a compelling framework for the automation of visualization guidelines, as it offers unambiguous feedback during the chart creation process, and can execute analyses derived from machine vision and natural language processing. We demonstrate the feasibility of this system through the production of vislint_mpl, a prototype visualization linting system, that evaluates charts created in matplotlib.',
     bibTex: `
     @misc{mcnuttKindlmannLinting,
       Author = {McNutt, Andrew and Kindlmann, Gordon},
@@ -284,6 +261,7 @@ representation to handle wider ranges of data in real time. Materials for this p
       Year = {2018}}
     `,
     type: 'extended abstract / workshop papers',
+    subtype: 'workshop',
   },
   {
     link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14',
@@ -295,27 +273,10 @@ representation to handle wider ranges of data in real time. Materials for this p
     journal: 'Reporter Gene Assays',
     date: '2018',
     links: [{name: 'paper', link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14'}],
-    abstract: `
-    We are now seeing the benefit of investments made over the last decade in
-    high-throughput screening (HTS) that is resulting in large structure activity
-    datasets entering public and open databases such as ChEMBL and PubChem.
-    The growth of academic HTS screening centers and the increasing move to academia
-    for early stage drug discovery suggests a great need for the informatics tools and
-    methods to mine such data and learn from it. Collaborative Drug Discovery, Inc. (CDD)
-    has developed a number of tools for storing, mining, securely and selectively sharing,
-    as well as learning from such HTS data. We present a new web based data mining and
-    visualization module directly within the CDD Vault platform for high-throughput
-    drug discovery data that makes use of a novel technology stack following modern
-    reactive design principles. We also describe CDD Models within the CDD Vault platform
-    that enables researchers to share models, share predictions from models, and create models
-    from distributed, heterogeneous data. Our system is built on top of the Collaborative
-    Drug Discovery Vault Activity and Registration data repository ecosystem which allows
-    users to manipulate and visualize thousands of molecules in real time. This can be
-    performed in any browser on any platform. In this chapter we present examples of its
-    use with public datasets in CDD Vault. Such approaches can complement other cheminformatics
-    tools, whether open source or commercial, in providing approaches for data mining and modeling of HTS data.
-    `,
+    abstract:
+      'We are now seeing the benefit of investments made over the last decade in high-throughput screening (HTS) that is resulting in large structure activity datasets entering public and open databases such as ChEMBL and PubChem. The growth of academic HTS screening centers and the increasing move to academia for early stage drug discovery suggests a great need for the informatics tools and methods to mine such data and learn from it. Collaborative Drug Discovery, Inc. (CDD) has developed a number of tools for storing, mining, securely and selectively sharing, as well as learning from such HTS data. We present a new web based data mining and visualization module directly within the CDD Vault platform for high-throughput drug discovery data that makes use of a novel technology stack following modern reactive design principles. We also describe CDD Models within the CDD Vault platform that enables researchers to share models, share predictions from models, and create models from distributed, heterogeneous data. Our system is built on top of the Collaborative Drug Discovery Vault Activity and Registration data repository ecosystem which allows users to manipulate and visualize thousands of molecules in real time. This can be performed in any browser on any platform. In this chapter we present examples of its use with public datasets in CDD Vault. Such approaches can complement other cheminformatics tools, whether open source or commercial, in providing approaches for data mining and modeling of HTS data.',
     type: 'theses / book chapters',
+    subtype: 'chapter',
   },
   {
     link: 'https://arxiv.org/abs/1501.07537',
@@ -329,21 +290,10 @@ representation to handle wider ranges of data in real time. Materials for this p
       {name: 'paper', link: 'https://arxiv.org/abs/1501.07537'},
       {name: 'slides', link: 'assets/QGravPresentation.pdf'},
     ],
-    abstract: `
-    We study the Schrodinger-Newton system of equations with the addition of gravitational
-    field energy sourcing - such additional nonlinearity is to be expected from a theory
-    of gravity (like general relativity), and its appearance in this simplified scalar
-    setting (one of Einstein's precursors to general relativity) leads to significant
-    changes in the spectrum of the self-gravitating theory. Using an iterative technique,
-    we compare the mass dependence of the ground state energies of both Schrodinger-Newton
-    and the new, self-sourced system and find that they are dramatically different.
-    The Bohr method approach from old quantization provides a qualitative description of
-    the difference, which comes from the additional nonlinearity introduced in the self-sourced
-    case. In addition to comparison of ground state energies, we calculate the transition
-    energy between the ground state and first excited state to compare emission frequencies
-    between Schrodinger-Newton and the self-coupled scalar case.
-    `,
+    abstract:
+      "We study the Schrodinger-Newton system of equations with the addition of gravitational field energy sourcing - such additional nonlinearity is to be expected from a theory of gravity (like general relativity), and its appearance in this simplified scalar setting (one of Einstein's precursors to general relativity) leads to significant changes in the spectrum of the self-gravitating theory. Using an iterative technique, we compare the mass dependence of the ground state energies of both Schrodinger-Newton and the new, self-sourced system and find that they are dramatically different. The Bohr method approach from old quantization provides a qualitative description of the difference, which comes from the additional nonlinearity introduced in the self-sourced case. In addition to comparison of ground state energies, we calculate the transition energy between the ground state and first excited state to compare emission frequencies between Schrodinger-Newton and the self-coupled scalar case.",
     type: 'conference / journal articles',
+    subtype: 'journal',
   },
   {
     link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143',
@@ -355,27 +305,10 @@ representation to handle wider ranges of data in real time. Materials for this p
     journal: 'Journal of Chemical Information and Modeling',
     date: '2015',
     links: [{name: 'paper', link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143'}],
-    abstract: `
-    On the order of hundreds of absorption, distribution, metabolism, excretion,
-    and toxicity (ADME/Tox) models have been described in the literature in the
-    past decade which are more often than not inaccessible to anyone but their authors.
-    Public accessibility is also an issue with computational models for bioactivity,
-    and the ability to share such models still remains a major challenge limiting drug
-    discovery. We describe the creation of a reference implementation of a Bayesian
-    model-building software module, which we have released as an open source component
-    that is now included in the Chemistry Development Kit (CDK) project, as well as
-    implemented in the CDD Vault and in several mobile apps. We use this implementation
-    to build an array of Bayesian models for ADME/Tox, in vitro and in vivo bioactivity,
-    and other physicochemical properties. We show that these models possess cross-validation
-    receiver operator curve values comparable to those generated previously in prior
-    publications using alternative tools. We have now described how the implementation
-    of Bayesian models with FCFP6 descriptors generated in the CDD Vault enables the
-    rapid production of robust machine learning models from public data or the user’s
-    own datasets. The current study sets the stage for generating models in proprietary
-    software (such as CDD) and exporting these models in a format that could be run in
-    open source software using CDK components. This work also demonstrates that we can
-    enable biocomputation across distributed private or public datasets to enhance drug discovery.`,
+    abstract:
+      'On the order of hundreds of absorption, distribution, metabolism, excretion, and toxicity (ADME/Tox) models have been described in the literature in the past decade which are more often than not inaccessible to anyone but their authors. Public accessibility is also an issue with computational models for bioactivity, and the ability to share such models still remains a major challenge limiting drug discovery. We describe the creation of a reference implementation of a Bayesian model-building software module, which we have released as an open source component that is now included in the Chemistry Development Kit (CDK) project, as well as implemented in the CDD Vault and in several mobile apps. We use this implementation to build an array of Bayesian models for ADME/Tox, in vitro and in vivo bioactivity, and other physicochemical properties. We show that these models possess cross-validation receiver operator curve values comparable to those generated previously in prior publications using alternative tools. We have now described how the implementation of Bayesian models with FCFP6 descriptors generated in the CDD Vault enables the rapid production of robust machine learning models from public data or the user’s own datasets. The current study sets the stage for generating models in proprietary software (such as CDD) and exporting these models in a format that could be run in open source software using CDK components. This work also demonstrates that we can enable biocomputation across distributed private or public datasets to enhance drug discovery.',
     type: 'conference / journal articles',
+    subtype: 'journal',
   },
   {
     link: 'assets/thesis.pdf',
@@ -399,6 +332,7 @@ representation to handle wider ranges of data in real time. Materials for this p
     apply this theory to a wide variety of systems including predator-prey dynamics and
     damped driven harmonic motion.`,
     type: 'theses / book chapters',
+    subtype: 'thesis',
   },
 ];
 

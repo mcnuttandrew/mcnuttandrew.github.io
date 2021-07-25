@@ -8,12 +8,42 @@
   import Teaching from './components/Teaching.svelte';
   import ShowPage from './components/ShowPage.svelte';
   import CV from './components/CV.svelte';
+  import Zines from './components/Zines.svelte';
   import {getRoute} from './utils';
   let currentSection = getRoute();
   window.onhashchange = () => {
     currentSection = getRoute();
   };
 </script>
+
+<div class="flex-down full-height">
+  <div class="header">
+    <h1>ANDREW MCNUTT</h1>
+  </div>
+  <div class="flex-down full-width">
+    <MobileHeader {currentSection} />
+    <div class="main-container">
+      <Header {currentSection} />
+      <div class="content-wrapper">
+        {#if currentSection === 'publications'}
+          <Publications />
+        {:else if currentSection === 'show-page'}
+          <ShowPage />
+        {:else if currentSection === 'cv'}
+          <CV />
+        {:else if currentSection === 'projects'}
+          <Projects />
+        {:else if currentSection === 'teaching'}
+          <Teaching />
+        {:else if currentSection === 'zines'}
+          <Zines />
+        {:else}
+          <About />
+        {/if}
+      </div>
+    </div>
+  </div>
+</div>
 
 <style>
   h1 {
@@ -75,30 +105,3 @@
     }
   }
 </style>
-
-<div class="flex-down full-height">
-  <div class="header">
-    <h1>ANDREW MCNUTT</h1>
-  </div>
-  <div class="flex-down full-width">
-    <MobileHeader {currentSection} />
-    <div class="main-container">
-      <Header {currentSection} />
-      <div class="content-wrapper">
-        {#if currentSection === 'publications'}
-          <Publications />
-        {:else if currentSection === 'show-page'}
-          <ShowPage />
-        {:else if currentSection === 'cv'}
-          <CV />
-        {:else if currentSection === 'projects'}
-          <Projects />
-        {:else if currentSection === 'teaching'}
-          <Teaching />
-        {:else}
-          <About />
-        {/if}
-      </div>
-    </div>
-  </div>
-</div>
