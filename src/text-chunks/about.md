@@ -10,4 +10,5 @@ I got a formal education in physics from Reed College in Portland, and an inform
 I am a fan of deserts, buffalo, and bicycles.
 
 <br />
-Contact me at mcnutt @ uchicago .edu or on twitter, where I'm [@_mcnutt_](https://twitter.com/_mcnutt_/)
+<br />
+I'm always happy to chat about all/any of these topics! Drop me a line by email (mcnutt AT uchicago DOT edu) or on twitter (<a href="https://twitter.com/_mcnutt_/">@_mcnutt_</a>).
