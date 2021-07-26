@@ -8,7 +8,6 @@
   import Teaching from './components/Teaching.svelte';
   import ShowPage from './components/ShowPage.svelte';
   import CV from './components/CV.svelte';
-  import Zines from './components/Zines.svelte';
   import {getRoute} from './utils';
   let currentSection = getRoute();
   window.onhashchange = () => {
