@@ -16,8 +16,11 @@
 <div class="flex-down publication">
   <div class="content-container">
     {#if !noImg}
-      <div class="img-container">
-        <img alt="image drawn from {publication.title}" src={publication.imgLink} />
+      <div class="pub-img-holder">
+        <div class="pub-img-label">{publication.subtype}</div>
+        <div class="img-container">
+          <img alt="image drawn from {publication.title}" src={publication.imgLink} />
+        </div>
       </div>
     {/if}
     <div class="flex-down">
@@ -98,6 +101,19 @@
 
   .content-container {
     display: flex;
+  }
+
+  .pub-img-holder {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px;
+    height: 100%;
+  }
+  .pub-img-label {
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-style: italic;
   }
   @media screen and (max-width: 600px) {
     .content-container {
