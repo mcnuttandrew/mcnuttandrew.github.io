@@ -1,10 +1,29 @@
 <script>
-  // import {ABOUT, HISTORY, INTERESTS, NEWS} from '../constants';
   import {NEWS} from '../constants';
   import ABOUT from '../text-chunks/about.md';
-  // const ABOUT = require('../text-chunks/about.md');
   import marked from 'marked';
 </script>
+
+<div>
+  <div class="about-section">
+    <div class="description">
+      {@html marked(ABOUT)}
+    </div>
+    <img alt="me in canyonlands utah" class="self-pic" src="assets/desert-pic.jpg" />
+  </div>
+  <h2>NEWS</h2>
+  <div class="about-section">
+    {#each NEWS.slice(0, 10) as {date, content}}
+      <div class="news-item">
+        <div class="news-item-date">{date}</div>
+        <div class="news-item-content">
+          {@html marked(content)}
+        </div>
+      </div>
+    {/each}
+    <a href="/#/news">Older News</a>
+  </div>
+</div>
 
 <style>
   .about-section {
@@ -23,11 +42,12 @@
     /* border: thin solid red; */
     font-style: italic;
     font-weight: 500;
-    width: 80px;
-    min-width: 80px;
-    max-width: 80px;
-    margin-right: 5px;
-    /* white-space: normal; */
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    margin-right: 8px;
+    word-spacing: 9999999px;
+    text-align: right;
   }
 
   .description {
@@ -44,23 +64,3 @@
     }
   }
 </style>
-
-<div>
-  <div class="about-section">
-    <div class="description">
-      {@html marked(ABOUT)}
-    </div>
-    <img alt="me in canyonlands utah" class="self-pic" src="assets/desert-pic.jpg" />
-  </div>
-  <h2>NEWS</h2>
-  <div class="about-section">
-    {#each NEWS as {date, content}}
-      <div class="news-item">
-        <div class="news-item-date">{date}:</div>
-        <div class="news-item-content">
-          {@html marked(content)}
-        </div>
-      </div>
-    {/each}
-  </div>
-</div>

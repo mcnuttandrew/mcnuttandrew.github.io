@@ -6,7 +6,7 @@ export function classnames(classObject) {
     .join(' ');
 }
 
-const routes = new Set(['cv', 'publications', 'projects', 'about', 'teaching', 'zines']);
+const routes = new Set(['cv', 'publications', 'projects', 'about', 'teaching', 'zines', 'news']);
 export function getRoute() {
   const locationSplit = location.href.split('/');
   const naiveLocation = locationSplit[locationSplit.length - 1].toLowerCase();

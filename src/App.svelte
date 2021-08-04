@@ -8,6 +8,7 @@
   import Teaching from './components/Teaching.svelte';
   import ShowPage from './components/ShowPage.svelte';
   import CV from './components/CV.svelte';
+  import News from './components/News.svelte';
   import {getRoute} from './utils';
   let currentSection = getRoute();
   window.onhashchange = () => {
@@ -34,8 +35,8 @@
           <Projects />
         {:else if currentSection === 'teaching'}
           <Teaching />
-        {:else if currentSection === 'zines'}
-          <Zines />
+        {:else if currentSection === 'news'}
+          <News />
         {:else}
           <About />
         {/if}
