@@ -30,7 +30,7 @@
       {/if}
       <span>
         {#each keys as key}
-          {#if publication[key]}<span>{publication[key]}. </span>{/if}
+          {#if publication[key]}<span>{@html marked(publication[key])}</span>{/if}
         {/each}
       </span>
 
@@ -96,7 +96,6 @@
   }
   .publication {
     max-width: 100%;
-    margin-bottom: 20px;
   }
 
   .content-container {

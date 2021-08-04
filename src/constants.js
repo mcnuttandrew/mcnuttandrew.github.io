@@ -45,12 +45,27 @@ export const PUBLICATIONS = [
     authors: 'Will Brackenbury, Andrew McNutt, Kyle Chard, Aaron Elmore, Blase Ur',
     journal: 'ACMUIST',
     date: 'October 2021',
-    type: 'Conference',
     links: [],
-    abstract: 'coming soon',
+    abstract:
+      "Users face many challenges in keeping their personal file collections organized. While current file-management interfaces help users retrieve files in disorganized repositories, they do not aid in organization. Pertinent files can be difficult to find, and files that should have been deleted may remain. To help, we designed KondoCloud, a file-browser interface for personal cloud storage. KondoCloud makes machine learning-based recommendations of files users may want to retrieve, move, or delete. These recommendations leverage the intuition that similar files should be managed similarly.<br/><br/>We developed and evaluated KondoCloud through two complementary online user studies. In our Observation Study, we logged the actions of 69 participants who spent 30 minutes manually organizing their own Google Drive repositories. We identified high-level organizational strategies, including moving related files to newly created sub-folders and extensively deleting files. To train the classifiers that underpin KondoCloud's recommendations, we had participants label whether pairs of files were similar and whether they should be managed similarly. In addition, we extracted ten metadata and content features from all files in participants' repositories. Our logistic regression classifiers all achieved F1 scores of 0.72 or higher. In our Evaluation Study, 62 participants used KondoCloud either with or without recommendations. Roughly half of participants accepted a non-trivial fraction of recommendations, and some participants accepted nearly all of them. Participants who were shown the recommendations were more likely to delete related files located in different directories. They also generally felt the recommendations improved efficiency. Participants who were not shown recommendations nonetheless manually performed about a third of the actions that would have been recommended.",
     bibTex: `TODO`,
     type: 'conference / journal articles',
     subtype: 'conference',
+  },
+  {
+    link: 'https://www.mcnutt.in/zine-potential',
+    urlTitle: '',
+    imgLink: 'converted-images/zine-potential.jpg',
+    title: 'On The Potential of Zines as a Medium for Visualization',
+    authors: 'Andrew McNutt',
+    journal: 'IEEE VIS Short Papers',
+    date: 'October 2021',
+    links: [{name: 'about', link: 'https://www.mcnutt.in/zine-potential'}],
+    abstract:
+      'Zines are a form of small-circulation self-produced publication often akin to a magazine. This free-form medium has a long history and has been used as means for personal or intimate expression, as a way for marginalized people to describe issues that are important to them, and as a venue for graphical experimentation. It would seem then that zines would make an ideal vehicle for the recent interest in applying feminist or humanist ideas to visualization. Yet, there has been little work combining visualization and zines. In this paper we explore the potential of this intersection by analyzing examples of zines that use data graphics and by describing the pedagogical value that they can have in a visualization classroom. In doing so, we argue that there are plentiful opportunities for visualization research and practice in this rich intersectional-medium.',
+    bibTex: `TODO`,
+    type: 'conference / journal articles',
+    subtype: 'short conf.',
   },
   {
     link: '',
@@ -58,13 +73,13 @@ export const PUBLICATIONS = [
     imgLink: 'converted-images/tacos.jpg',
     title: 'What are Table Cartograms Good for Anyway? An Algebraic Analysis',
     authors: 'Andrew McNutt',
-    journal:
-      "Computer Graphics Forum (Proceedings of the Eurographics/IEEE-VGTC Conference on Visualization 'EuroVis') - 🏆 Honorable Mention for Best Paper 🏆",
+    journal: 'EuroVis21 🏆 Honorable Mention for Best Paper 🏆 (Juried Selection, 1 awarded)',
     date: 'June 2021',
     type: 'Journal',
     links: [
       {name: 'about', link: '#/research/tacos'},
       {name: 'preprint', link: 'https://arxiv.org/pdf/2104.04042.pdf'},
+      {name: 'talk', link: 'https://www.youtube.com/watch?v=ozBn5bLsGQw&t=2594s'},
     ],
     abstract: `Unfamiliar or esoteric visual forms arise in many areas of visualization. While such forms can be intriguing, it can be unclear how to make effective use of them without long periods of practice or costly user studies. In this work we analyze the table cartogram—a graphic which visualizes tabular data by bringing the areas of a grid of quadrilaterals into correspondence with the input data, like a heat map that has been *area-ed* rather than colored. Despite having existed for several years, little is known about its appropriate usage. We mend this gap by using Algebraic Visualization Design to show that they are best suited to relatively small tables with ordinal axes for some comparison and outlier identification tasks. In doing so we demonstrate a discount theory-based analysis that can be used to cheaply determine best practices for unknown visualizations.
     `,
@@ -84,6 +99,7 @@ export const PUBLICATIONS = [
       {name: 'live', link: 'https://github.com/mcnuttandrew/ivy'},
       {name: 'preprint', link: 'https://arxiv.org/pdf/2101.07902.pdf'},
       {name: 'osf', link: 'https://osf.io/cture/'},
+      {name: 'talk', link: '      https://www.youtube.com/watch?v=FzIdVnSi9Po'},
     ],
     abstract: `
 Interfaces for creating visualizations typically embrace one of several common forms. Textual specification enables fine-grained control, shelf building facilitates rapid exploration, while chart choosing promotes immediacy and simplicity. Ideally these approaches could be unified to integrate the user- and usage-dependent benefits found in each modality, yet these forms remain distinct.
@@ -121,7 +137,8 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     imgLink: 'converted-images/tc-preview.jpg',
     title: 'A Minimally Constrained Optimization Algorithm for Table Cartograms',
     authors: 'Andrew McNutt, Gordon Kindlmann',
-    journal: 'VIS 2020 - InfoVIS Poster Track - 🏆 Honorable Mention for Best Poster Research 🏆',
+    journal:
+      'VIS 2020 - InfoVIS Poster Track 🏆 Honorable Mention for Best Poster Research 🏆 (Juried Selection, 2 awarded)',
     date: 'October 2020',
     links: [
       {name: 'about', link: '#/research/table-cartogram'},
@@ -143,7 +160,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     title: 'Surfacing Visualization Mirages',
     authors: 'Andrew McNutt, Gordon Kindlmann, Michael Correll',
     journal:
-      'Proceedings of the 2020 ACM annual conference on Human Factors in Computing Systems - 🏆 Honorable Mention for Best Paper 🏆',
+      'Proceedings of the 2020 ACM annual conference on Human Factors in Computing Systems <br/> 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)',
     date: 'April 2020',
     links: [
       {name: 'about', link: '#/research/mirage'},
@@ -191,7 +208,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     imgLink: 'converted-images/agathas-thing.jpg',
     title: 'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
     authors: 'Agatha Kim, Andrew McNutt, Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
-    journal: 'MindBytes Research Symposium. 🏆 Best Poster in Visualization 🏆',
+    journal: 'MindBytes Research Symposium. <br/> 🏆 Best Poster in Visualization 🏆',
     date: 'November 2019',
     links: [
       {name: 'poster', link: 'assets/posterkim102519.pdf'},
@@ -715,9 +732,19 @@ export const TEACHING = [
 
 export const NEWS = [
   {
+    date: 'August 2021',
+    content:
+      'My paper ["On The Potential of Zines as Medium for Visualization"](https://www.mcnutt.in/zine-potential) was accepted to the VIS21 short papers track! (The paper includes a zine about the paper)',
+  },
+  {
+    date: 'July 2021',
+    content:
+      'Our paper on KondoCloud, a system that asks users if files in their cloud-based drives spark joy, was accepted to UIST21!',
+  },
+  {
     date: 'June 2021',
     content:
-      'My paper on [table cartograms and algebraic visualization](https://www.mcnutt.in/#/research/tacos) won an 🏆honorable mention🏆 for best paper at EuroVis!',
+      'My paper on [table cartograms and algebraic visualization](https://www.mcnutt.in/#/research/tacos) won the honorable mention🏆 for best paper at EuroVis!',
   },
   {
     date: 'March 2021',
@@ -732,27 +759,27 @@ export const NEWS = [
   {
     date: 'October 2020',
     content:
-      '["A Minimally Constrained Optimization Algorithm for Table Cartograms"](https://osf.io/kem6j/) won a 🏆honorable mention🏆 in the IEEEVIS InfoVis poster track.',
+      '["A Minimally Constrained Optimization Algorithm for Table Cartograms"](https://osf.io/kem6j/) won an honorable mention🏆 in the IEEEVIS InfoVis poster track.',
   },
   {
-    date: 'Sept 2020',
+    date: 'September 2020',
     content:
       'Our paper ["Supporting Expert Close Analysis of Historical Scientific Writings: A Case Study for Near-by Reading"](https://arxiv.org/pdf/2009.02384.pdf) on mixing close and distant reading for 19th century scientific writing was accepted to [VIS4DH20](http://www.vis4dh.org/).',
   },
   {
     date: 'March 2020',
     content:
-      'Our paper ["Surfacing Visualization Mirages"](https://www.mcnutt.in/#/research/mirage) won a 🏆best paper honorable mention🏆 at CHI2020!!',
+      'Our paper ["Surfacing Visualization Mirages"](https://www.mcnutt.in/#/research/mirage) won a best paper honorable mention🏆 at CHI2020!!',
   },
   {
     date: 'Feburary 2020',
     content:
-      'Our paper on using tarot for visual analytics "Divining Insights: Visual Analytics Through Cartomancy" was accepted to alt.chi 2020',
+      'Our paper on using tarot for visual analytics ["Divining Insights: Visual Analytics Through Cartomancy"](http://localhost:5000/#/research/tarot) was accepted to alt.chi 2020',
   },
   {
     date: 'January 2020',
     content:
-      'Started teaching my first class as the instructor of record! ("Data Visualization for Public Policy")',
+      'Started teaching my first class as the instructor of record! (["Data Visualization for Public Policy"](https://capp-30239-winter-2020.netlify.app/))',
   },
   {
     date: 'December 2019',
@@ -769,7 +796,7 @@ export const NEWS = [
       'Had a great time at IEEEVIS 2019 in Vancouver, BC! Helped contribute to the [Open Access Vis](http://oavis.org/) efforts for the conference.',
   },
   {
-    date: 'Sept 2019',
+    date: 'September 2019',
     content:
       'Two of my vis projects (ForumExplorer and Cycles in Rain) were Long-Listed at the Kantar Information is Beautiful Awards.',
   },
