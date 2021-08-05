@@ -2,7 +2,7 @@ I'm a PhD student in Computer Science at the University of Chicago. My work fall
 
 <br/>
 
-I'm interested in theories of visualization (and finding opportunities for the operationalization of those ideas), as well as the design of user interfaces for knowledge-based tasks (such as visual analytics and creative coding) with an eye towards leveraging tools from programming languages and software engineering in those designs.  
+I'm interested in theories of visualization (and finding opportunities for the operationalization of those ideas), as well as the design of user interfaces for knowledge-based tasks (such as visual analytics and creative coding) with an eye towards leveraging tools from programming languages and software engineering in those designs.  I'm advised by [Ravi Chugh](http://people.cs.uchicago.edu/~rchugh/).
 
 <br/>
 In the near past I worked as a data visualization engineer for a variety of companies in San Francisco. 
