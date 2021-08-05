@@ -737,6 +737,11 @@ export const NEWS = [
   {
     date: 'August 2021',
     content:
+      'Thanks to [RAMPVIS](https://sites.google.com/view/rampvis/events?authuser=0) for hosting me! I had a great time talking with them about all things algebraic analysis. [Check out the slides](https://drive.google.com/file/d/1o9-7cBnQXfO8VTMS9V7MZ_5odwYVUkYw/view?usp=sharing)',
+  },
+  {
+    date: 'August 2021',
+    content:
       'My paper ["On The Potential of Zines as Medium for Visualization"](https://www.mcnutt.in/zine-potential) was accepted to the VIS21 short papers track! (The paper includes a zine about the paper)',
   },
   {
