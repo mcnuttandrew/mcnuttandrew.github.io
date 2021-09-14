@@ -38,6 +38,21 @@ export const COLLABORATOR_LINKS = {
 export const PUBLICATIONS = [
   {
     link: '',
+    urlTitle: 'vis-4-villainy',
+    imgLink: 'converted-images/kondo.jpg',
+    title: 'Visualization for Villainy',
+    authors: 'Andrew McNutt, Lilian Huang, Kathryn Koenig',
+    journal: 'alt.vis',
+    date: 'October 2021',
+    links: [{name: 'preprint', link: 'https://arxiv.org/abs/2109.06007'}],
+    abstract:
+      'Visualization has long been seen as a dependable and trustworthy tool for carrying out analysis and communication tasks -- a view reinforced by the growing interest in applying it to socially positive ends. However, despite the benign light in which visualization is usually perceived, it carries the potential to do harm to people, places, concepts, and things. In this paper, we capitalize on this negative potential to serve an underrepresented (but technologically engaged) group: villains. To achieve these ends, we introduce a design space for this type of graphical violence, which allows us to unify prior work on deceptive visualization with novel data-driven dastardly deeds, such as emotional spear phishing and unsafe data physicalization. By charting this vile charting landscape, we open new doors to collaboration with terrifying domain experts, and hopefully, make the world just a bit worse.',
+    bibTex: `TODO`,
+    type: 'extended abstract / workshop papers',
+    subtype: 'workshop',
+  },
+  {
+    link: '',
     urlTitle: 'kondoCloud',
     imgLink: 'converted-images/kondo.jpg',
     title:
@@ -637,7 +652,7 @@ export const TEACHING = [
   },
   {
     title: 'CMSC 11111 - Creative Coding',
-    date: 'Winter 2021',
+    date: 'Spring 2021',
     role: 'Teaching Assistant',
     location: 'UChicago',
     link: 'https://www.classes.cs.uchicago.edu/archive/2021/spring/11111-1/',
@@ -734,6 +749,11 @@ export const TEACHING = [
 ];
 
 export const NEWS = [
+  {
+    date: 'October 2021',
+    content:
+      'Excited that [our paper](https://arxiv.org/abs/2109.06007) describing the design space of visualization applications for villains was accepted to [alt.vis 21](https://altvis.github.io/).',
+  },
   {
     date: 'August 2021',
     content:
