@@ -70,3 +70,7 @@ button:active {
 button:focus {
   border-color: #666;
 }
+
+.cv-pubs .publication {
+  margin-bottom: 20px;
+}

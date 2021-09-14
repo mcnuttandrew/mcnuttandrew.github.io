@@ -4,12 +4,6 @@
   import Publication from './Publication.svelte';
 </script>
 
-<style>
-  .section {
-    margin-top: 50px;
-  }
-</style>
-
 <h1>Andrew McNutt</h1>
 <div>PhD Student at Univeristy of Chicago in Computer Science</div>
 <div>For a pdf version of my CV <a href="./assets/cv.pdf">click here</a></div>
@@ -38,7 +32,7 @@
   <div>Undergraduate Researcher at Reed College, 2013</div>
 </section>
 
-<section class="section">
+<section class="section cv-pubs">
   <h2>Publications</h2>
   <div class="research-section">
     {#each PUBLICATIONS as publication}
@@ -73,3 +67,9 @@
   <h2>Teaching</h2>
   <Teaching />
 </section>
+
+<style>
+  .section {
+    margin-top: 50px;
+  }
+</style>
