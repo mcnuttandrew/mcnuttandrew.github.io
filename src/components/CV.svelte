@@ -20,16 +20,24 @@
   <br />
   <h3>Reed College</h3>
   <div>BA, Physics, 2010 - 2014</div>
-  <div>Advised by <a href="http://people.cs.uchicago.edu/~rchugh/">Nelia Mann</a></div>
+  <div>
+    Advised by <a href="https://www.union.edu/physics-and-astronomy/faculty-staff/nelia-mann">Nelia Mann</a>
+  </div>
 </section>
 
 <section class="section">
   <h2>Professional Experience</h2>
-  <div>Research Intern at Tableau Research, 2019</div>
-  <div>Graduate Researcher at University of Chicago, 2017 -</div>
-  <div>Data Visualization Engineer at Uber, 2015 - 2017</div>
-  <div>Scientific Visualization Developer at Collaborative Drug Discovery, 2014 - 2015</div>
-  <div>Undergraduate Researcher at Reed College, 2013</div>
+  <div>Research Intern at <a href="https://research.tableau.com/">Tableau Research</a>, 2019</div>
+  <div>
+    Graduate Researcher at <a href="https://computerscience.uchicago.edu/">University of Chicago</a>, 2017 -
+  </div>
+  <div>Data Visualization Engineer at <a href="https://vis.gl/">Uber</a>, 2015 - 2017</div>
+  <div>
+    Scientific Visualization Developer at <a href="https://www.collaborativedrug.com/"
+      >Collaborative Drug Discovery</a
+    >, 2014 - 2015
+  </div>
+  <div>Undergraduate Researcher at <a href="https://www.reed.edu/physics/">Reed College, 2013</a></div>
 </section>
 
 <section class="section cv-pubs">
@@ -41,14 +49,14 @@
   </div>
 </section>
 
-<section class="section">
+<!-- <section class="section">
   <h2>BLOG POSTS</h2>
   <div class="research-section">
     {#each BLOG_POSTS as publication}
       <Publication {publication} noImg={true} />
     {/each}
   </div>
-</section>
+</section> -->
 
 <section class="section">
   <h2>Talks</h2>
