@@ -39,7 +39,7 @@ export const PUBLICATIONS = [
   {
     link: '',
     urlTitle: 'vis-4-villainy',
-    imgLink: 'converted-images/kondo.jpg',
+    imgLink: 'converted-images/villainy.jpg',
     title: 'Visualization for Villainy',
     authors: 'Andrew McNutt, Lilian Huang, Kathryn Koenig',
     journal: 'alt.vis',
@@ -52,7 +52,7 @@ export const PUBLICATIONS = [
     subtype: 'workshop',
   },
   {
-    link: '',
+    link: 'https://dl.acm.org/doi/10.1145/3472749.3474736',
     urlTitle: 'kondoCloud',
     imgLink: 'converted-images/kondo.jpg',
     title:
@@ -60,7 +60,7 @@ export const PUBLICATIONS = [
     authors: 'Will Brackenbury, Andrew McNutt, Kyle Chard, Aaron Elmore, Blase Ur',
     journal: 'ACMUIST',
     date: 'October 2021',
-    links: [],
+    links: [{name: 'preprint', link: 'https://dl.acm.org/doi/10.1145/3472749.3474736'}],
     abstract:
       "Users face many challenges in keeping their personal file collections organized. While current file-management interfaces help users retrieve files in disorganized repositories, they do not aid in organization. Pertinent files can be difficult to find, and files that should have been deleted may remain. To help, we designed KondoCloud, a file-browser interface for personal cloud storage. KondoCloud makes machine learning-based recommendations of files users may want to retrieve, move, or delete. These recommendations leverage the intuition that similar files should be managed similarly.<br/><br/>We developed and evaluated KondoCloud through two complementary online user studies. In our Observation Study, we logged the actions of 69 participants who spent 30 minutes manually organizing their own Google Drive repositories. We identified high-level organizational strategies, including moving related files to newly created sub-folders and extensively deleting files. To train the classifiers that underpin KondoCloud's recommendations, we had participants label whether pairs of files were similar and whether they should be managed similarly. In addition, we extracted ten metadata and content features from all files in participants' repositories. Our logistic regression classifiers all achieved F1 scores of 0.72 or higher. In our Evaluation Study, 62 participants used KondoCloud either with or without recommendations. Roughly half of participants accepted a non-trivial fraction of recommendations, and some participants accepted nearly all of them. Participants who were shown the recommendations were more likely to delete related files located in different directories. They also generally felt the recommendations improved efficiency. Participants who were not shown recommendations nonetheless manually performed about a third of the actions that would have been recommended.",
     bibTex: `TODO`,
