@@ -767,7 +767,7 @@ export const NEWS = [
   {
     date: 'July 2021',
     content:
-      'Our paper on KondoCloud, a system that asks users if files in their cloud-based drives spark joy, was accepted to UIST21!',
+      'Our paper on [KondoCloud](https://dl.acm.org/doi/10.1145/3472749.3474736), a system that asks users if files in their cloud-based drives spark joy, was accepted to UIST21!',
   },
   {
     date: 'June 2021',
