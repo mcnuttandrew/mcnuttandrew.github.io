@@ -39,7 +39,7 @@
         <a
           href="/#/{section}"
           class={classnames({selected: currentSection === section, padding: true})}
-          on:click={wrapEvent(() => {}, {type: 'nav-click', value: 'section', context: 'mobile'})}
+          on:click={wrapEvent(() => {}, {type: 'nav-click', value: section, context: 'mobile'})}
         >
           {section.toUpperCase()}
         </a>
