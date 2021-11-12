@@ -8,7 +8,7 @@
     {#each ['about', 'publications', 'projects', 'cv'] as section (section)}
       <a
         href="/#/{section}"
-        on:click={wrapEvent(() => {}, {type: 'nav-click', value: 'section', context: 'desktop'})}
+        on:click={wrapEvent(() => {}, {type: 'nav-click', value: section, context: 'desktop'})}
         class={classnames({selected: currentSection === section, padding: true})}
       >
         {section.toUpperCase()}
