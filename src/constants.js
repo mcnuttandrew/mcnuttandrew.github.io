@@ -70,6 +70,7 @@ export const PUBLICATIONS = [
   {
     link: 'https://www.mcnutt.in/zine-potential',
     urlTitle: '',
+    shortTitle: 'zine-potential',
     imgLink: 'converted-images/zine-potential.jpg',
     title: 'On The Potential of Zines as a Medium for Visualization',
     authors: 'Andrew McNutt',
@@ -224,6 +225,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
   },
   {
     imgLink: 'converted-images/agathas-thing.jpg',
+    urlTitle: 'goethe-poster',
     title: 'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
     authors: 'Agatha Kim, Andrew McNutt, Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
     journal: 'MindBytes Research Symposium. <br/> 🏆 Best Poster in Visualization 🏆',
