@@ -39,3 +39,19 @@ export function addLinks(authors) {
     return str.replace(key, `[${key}](${link})`);
   }, authors.replace('Andrew McNutt', '__Andrew McNutt__'));
 }
+
+/**
+ *
+ * @param {*} wrapped
+ * @param {*} eventConfig - {type: string; context: string; value: string}
+ * @returns
+ */
+export function wrapEvent(wrapped, eventConfig) {
+  const eventName = eventConfig.context
+    ? `${eventConfig.type}|${eventConfig.context}|${eventConfig.value}`
+    : `${eventConfig.type}|${eventConfig.value}`;
+  return function (e) {
+    umami(eventName);
+    wrapped(e);
+  };
+}

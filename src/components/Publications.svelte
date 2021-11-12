@@ -1,5 +1,5 @@
 <script>
-  import {PUBLICATIONS, BLOG_POSTS, PRESENTATIONS} from '../constants';
+  import {PUBLICATIONS} from '../constants';
 
   import Publication from './Publication.svelte';
   import {classnames} from '../utils';

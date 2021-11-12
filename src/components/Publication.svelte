@@ -1,6 +1,6 @@
 <script>
   import {slide} from 'svelte/transition';
-  import {addLinks} from '../utils';
+  import {addLinks, wrapEvent} from '../utils';
   import marked from 'marked';
 
   export let noImg = false;
@@ -19,12 +19,21 @@
       <div class="pub-img-holder">
         <div class="pub-img-label">{publication.subtype}</div>
         <div class="img-container">
-          <img alt="image drawn from {publication.title}" src={publication.imgLink} />
+          <a
+            href={publication.link}
+            on:click={wrapEvent(() => {}, {type: 'paper-link', value: 'img', context: publication.urlTitle})}
+          >
+            <img alt="image drawn from {publication.title}" src={publication.imgLink} />
+          </a>
         </div>
       </div>
     {/if}
     <div class="flex-down">
-      <a href={publication.link}>{publication.title}</a>
+      <a
+        href={publication.link}
+        on:click={wrapEvent(() => {}, {type: 'paper-link', value: 'default', context: publication.urlTitle})}
+        >{publication.title}</a
+      >
       {#if publication.authors}
         <span>{@html marked(addLinks(publication.authors))}</span>
       {/if}
@@ -35,9 +44,23 @@
       </span>
 
       <div class="flex flex-wrap">
-        {#each publication.links as {name, link}}<a class="publink" href={link}>{name}</a>{/each}
+        {#each publication.links as {name, link}}<a
+            class="publink"
+            href={link}
+            on:click={wrapEvent(() => {}, {type: 'paper-link', value: name, context: publication.urlTitle})}
+            >{name}</a
+          >{/each}
         {#if publication.abstract}
-          <div class="publink" on:click={toggleAbstract}>abstract ({abstractOpen ? '-' : '+'})</div>
+          <div
+            class="publink"
+            on:click={wrapEvent(toggleAbstract, {
+              type: 'abstract-toggle',
+              value: abstractOpen ? 'close' : 'open',
+              context: publication.urlTitle.length ? publication.urlTitle : publication.shortTitle,
+            })}
+          >
+            abstract ({abstractOpen ? '-' : '+'})
+          </div>
         {/if}
       </div>
     </div>
