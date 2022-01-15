@@ -4,7 +4,7 @@
   const pubName = getShowPage();
   const publication = PUBLICATIONS.find((d) => d.urlTitle === pubName);
   const keys = ['subtitle', 'date', 'journal'];
-  import marked from 'marked';
+  import {marked} from 'marked';
 </script>
 
 <div class="flex-down publication">
@@ -24,7 +24,7 @@
   <div class="section-subtitle">Materials</div>
   <div class="materials">
     <div class="flex">
-      {#each publication.links as {name, link}}<a class="publink" href={link}>{name}</a>{/each}
+      {#each publication.links as { name, link }}<a class="publink" href={link}>{name}</a>{/each}
     </div>
   </div>
   <div class="section-subtitle">Abstract</div>

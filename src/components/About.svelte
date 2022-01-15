@@ -1,7 +1,7 @@
 <script>
   import {NEWS} from '../constants';
   import ABOUT from '../text-chunks/about.md';
-  import marked from 'marked';
+  import {marked} from 'marked';
 </script>
 
 <div>
@@ -13,7 +13,7 @@
   </div>
   <h2>NEWS</h2>
   <div class="about-section">
-    {#each NEWS.slice(0, 10) as {date, content}}
+    {#each NEWS.slice(0, 10) as { date, content }}
       <div class="news-item">
         <div class="news-item-date">{date}</div>
         <div class="news-item-content">
