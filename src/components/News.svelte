@@ -1,6 +1,6 @@
 <script>
   import {NEWS} from '../constants';
-  import marked from 'marked';
+  import {marked} from 'marked';
   const groupedByYear = Object.entries(
     NEWS.reduce((acc, row) => {
       const [_, year] = row.date.split(' ');
@@ -13,7 +13,7 @@
 <h1>NEWS</h1>
 {#each groupedByYear as [year, items]}
   <h3>{year}</h3>
-  {#each items as {date, content}}
+  {#each items as { date, content }}
     <div class="news-item">
       <div class="news-item-date">{date}</div>
       <div class="news-item-content">

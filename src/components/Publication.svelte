@@ -1,7 +1,7 @@
 <script>
   import {slide} from 'svelte/transition';
   import {addLinks, wrapEvent} from '../utils';
-  import marked from 'marked';
+  import {marked} from 'marked';
 
   export let noImg = false;
   export let publication;
@@ -44,7 +44,7 @@
       </span>
 
       <div class="flex flex-wrap">
-        {#each publication.links as {name, link}}<a
+        {#each publication.links as { name, link }}<a
             class="publink"
             href={link}
             on:click={wrapEvent(() => {}, {type: 'paper-link', value: name, context: publication.urlTitle})}

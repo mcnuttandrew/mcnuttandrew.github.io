@@ -17,7 +17,9 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "marked": "^2.0.0",
+    "glob-parent": "^6.0.2",
+    "marked": "^4.0.10",
+    "path-parse": "^1.0.7",
     "sirv-cli": "^1.0.0"
   },
   "scripts": {
