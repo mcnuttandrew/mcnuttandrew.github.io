@@ -50,10 +50,10 @@ export function wrapEvent(wrapped, eventConfig) {
   const eventName = eventConfig.context
     ? `${eventConfig.type}|${eventConfig.context}|${eventConfig.value}`
     : `${eventConfig.type}|${eventConfig.value}`;
-  return function (e) {
-    if (umami) {
+  return function (event) {
+    try {
       umami(eventName);
-    }
-    wrapped(e);
+    } catch (e) {}
+    wrapped(event);
   };
 }
