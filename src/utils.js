@@ -51,7 +51,9 @@ export function wrapEvent(wrapped, eventConfig) {
     ? `${eventConfig.type}|${eventConfig.context}|${eventConfig.value}`
     : `${eventConfig.type}|${eventConfig.value}`;
   return function (e) {
-    umami(eventName);
+    if (umami) {
+      umami(eventName);
+    }
     wrapped(e);
   };
 }
