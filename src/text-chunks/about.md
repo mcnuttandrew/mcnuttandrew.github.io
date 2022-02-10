@@ -1,4 +1,4 @@
-I'm a PhD student in Computer Science at the University of Chicago. My work falls in the intersection of Data Visualization and HCI. 
+I'm a PhD candidate in Computer Science at the University of Chicago. My work falls in the intersection of Data Visualization and HCI. 
 
 <br/>
 
