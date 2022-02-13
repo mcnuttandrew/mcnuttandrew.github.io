@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import {classnames, wrapEvent} from '../utils.js';
   import {tweened} from 'svelte/motion';
   import {cubicOut} from 'svelte/easing';

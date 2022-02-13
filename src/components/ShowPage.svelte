@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import {PUBLICATIONS} from '../constants';
   import {getShowPage, addLinks} from '../utils';
   const pubName = getShowPage();

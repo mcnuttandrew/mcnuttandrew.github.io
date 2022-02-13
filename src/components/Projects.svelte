@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import {PROJECTS} from '../constants';
   let selectedProjects = PROJECTS;
   const tagCounts = PROJECTS.reduce((acc, {tags}) => {

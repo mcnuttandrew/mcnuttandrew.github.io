@@ -5,6 +5,8 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
+    "@rollup/plugin-typescript": "^8.0.0",
+    "@tsconfig/svelte": "^3.0.0",
     "esm": "^3.2.25",
     "hoopoe": "^1.0.1",
     "prettier": "^2.2.1",
@@ -14,7 +16,9 @@
     "rollup-plugin-string": "^3.0.0",
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
-    "svelte": "^3.0.0"
+    "svelte": "^3.0.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5"
   },
   "dependencies": {
     "glob-parent": "^6.0.2",
@@ -26,6 +30,7 @@
     "build-no-script-version": "node -r esm scripts/generate-index-page.js",
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv ./"
+    "start": "sirv ./",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
   }
 }

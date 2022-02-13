@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import {slide} from 'svelte/transition';
   import {addLinks, wrapEvent} from '../utils';
   import {marked} from 'marked';

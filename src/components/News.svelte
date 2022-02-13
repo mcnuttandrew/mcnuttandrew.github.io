@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import {NEWS} from '../constants';
   import {marked} from 'marked';
   const groupedByYear = Object.entries(

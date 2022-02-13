@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Teaching from './Teaching.svelte';
   import {BLOG_POSTS, PRESENTATIONS, PUBLICATIONS} from '../constants';
   import Publication from './Publication.svelte';
