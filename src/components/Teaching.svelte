@@ -1,21 +1,8 @@
-<script>
+<script lang="ts">
   import {TEACHING} from '../constants';
   import {groupBy} from '../utils';
   const groups = groupBy(TEACHING, 'role');
 </script>
-
-<style>
-  .margin-left {
-    margin-left: 5px;
-  }
-
-  .margin-bottom {
-    margin-bottom: 5px;
-  }
-  .margin-large-bottom {
-    margin-bottom: 20px;
-  }
-</style>
 
 <div>
   {#each Object.keys(groups) as key}
@@ -34,9 +21,21 @@
             <i>{`${position.fancyTitle || position.role}`}</i>
             <span class="margin-left">{position.date}</span>
           </div>
-
         </div>
       {/each}
     </div>
   {/each}
 </div>
+
+<style>
+  .margin-left {
+    margin-left: 5px;
+  }
+
+  .margin-bottom {
+    margin-bottom: 5px;
+  }
+  .margin-large-bottom {
+    margin-bottom: 20px;
+  }
+</style>

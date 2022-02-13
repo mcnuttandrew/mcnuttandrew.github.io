@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import {NEWS} from '../constants';
   import ABOUT from '../text-chunks/about.md';
   import {marked} from 'marked';

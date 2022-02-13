@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import {PUBLICATIONS} from '../constants';
 
   import Publication from './Publication.svelte';

@@ -1,21 +1,5 @@
 /* eslint-disable max-len */
 
-export const skills = [
-  {
-    title: 'PERSONAL',
-    content: 'information design, physics, arts',
-  },
-  {
-    title: 'WEB DEV',
-    content:
-      'd3, react, flux/redux, node, backbone, processing, jquery, ruby, ruby on rails, python, flask, sketch',
-  },
-  {
-    title: 'SCI-COM',
-    content: 'mathematica, grid mathematica, numpy, pandaz',
-  },
-];
-
 export const COLLABORATOR_LINKS = {
   'Agatha Kim': 'https://history.uchicago.edu/directory/agatha-kim',
   'Alex M. Clark': 'https://scholar.google.com/citations?user=4Gv4PboAAAAJ&hl=en',
@@ -35,7 +19,38 @@ export const COLLABORATOR_LINKS = {
   'Kyle Chard': 'https://kylechard.com/',
 };
 
-export const PUBLICATIONS = [
+type PubType =
+  | 'extended abstract / workshop papers'
+  | 'theses / book chapters'
+  | 'conference / journal articles'
+  | 'posters';
+type PubSubtype =
+  | 'workshop'
+  | 'chapter'
+  | 'thesis'
+  | 'conference'
+  | 'journal'
+  | 'short conf.'
+  | 'poster'
+  | 'ex. abs.';
+export interface Publication {
+  link?: string;
+  urlTitle: string;
+  imgLink: string;
+  title: string;
+  subtitle?: string;
+  shortTitle?: string;
+  authors: string;
+  journal: string;
+  date: string;
+  links: {name: string, link: string}[];
+  abstract: string;
+  bibTex: string;
+  type: PubType;
+  subtype: PubSubtype;
+}
+
+export const PUBLICATIONS: Publication[] = [
   {
     link: '',
     urlTitle: 'vis-4-villainy',
@@ -94,7 +109,6 @@ export const PUBLICATIONS = [
     authors: 'Andrew McNutt',
     journal: 'EuroVis21 🏆 Honorable Mention for Best Paper 🏆 (Juried Selection, 1 awarded)',
     date: 'June 2021',
-    type: 'Journal',
     links: [
       {name: 'about', link: '#/research/tacos'},
       {name: 'preprint', link: 'https://arxiv.org/pdf/2104.04042.pdf'},
@@ -104,6 +118,7 @@ export const PUBLICATIONS = [
     `,
     type: 'conference / journal articles',
     subtype: 'journal',
+    bibTex: 'todo',
   },
   {
     link: '',
@@ -243,6 +258,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       "When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as â€œnational scienceâ€? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.",
     type: 'posters',
     subtype: 'poster',
+    bibTex: 'todo',
   },
   // link to award: https://rcc.uchicago.edu/about-rcc/news-features/mind-bytes-2019-tipping-point-computational-and-ai-research
   {
@@ -314,6 +330,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       'We are now seeing the benefit of investments made over the last decade in high-throughput screening (HTS) that is resulting in large structure activity datasets entering public and open databases such as ChEMBL and PubChem. The growth of academic HTS screening centers and the increasing move to academia for early stage drug discovery suggests a great need for the informatics tools and methods to mine such data and learn from it. Collaborative Drug Discovery, Inc. (CDD) has developed a number of tools for storing, mining, securely and selectively sharing, as well as learning from such HTS data. We present a new web based data mining and visualization module directly within the CDD Vault platform for high-throughput drug discovery data that makes use of a novel technology stack following modern reactive design principles. We also describe CDD Models within the CDD Vault platform that enables researchers to share models, share predictions from models, and create models from distributed, heterogeneous data. Our system is built on top of the Collaborative Drug Discovery Vault Activity and Registration data repository ecosystem which allows users to manipulate and visualize thousands of molecules in real time. This can be performed in any browser on any platform. In this chapter we present examples of its use with public datasets in CDD Vault. Such approaches can complement other cheminformatics tools, whether open source or commercial, in providing approaches for data mining and modeling of HTS data.',
     type: 'theses / book chapters',
     subtype: 'chapter',
+    bibTex: 'todo',
   },
   {
     link: 'https://arxiv.org/abs/1501.07537',
@@ -331,6 +348,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       "We study the Schrodinger-Newton system of equations with the addition of gravitational field energy sourcing - such additional nonlinearity is to be expected from a theory of gravity (like general relativity), and its appearance in this simplified scalar setting (one of Einstein's precursors to general relativity) leads to significant changes in the spectrum of the self-gravitating theory. Using an iterative technique, we compare the mass dependence of the ground state energies of both Schrodinger-Newton and the new, self-sourced system and find that they are dramatically different. The Bohr method approach from old quantization provides a qualitative description of the difference, which comes from the additional nonlinearity introduced in the self-sourced case. In addition to comparison of ground state energies, we calculate the transition energy between the ground state and first excited state to compare emission frequencies between Schrodinger-Newton and the self-coupled scalar case.",
     type: 'conference / journal articles',
     subtype: 'journal',
+    bibTex: 'todo',
   },
   {
     link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143',
@@ -346,6 +364,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       'On the order of hundreds of absorption, distribution, metabolism, excretion, and toxicity (ADME/Tox) models have been described in the literature in the past decade which are more often than not inaccessible to anyone but their authors. Public accessibility is also an issue with computational models for bioactivity, and the ability to share such models still remains a major challenge limiting drug discovery. We describe the creation of a reference implementation of a Bayesian model-building software module, which we have released as an open source component that is now included in the Chemistry Development Kit (CDK) project, as well as implemented in the CDD Vault and in several mobile apps. We use this implementation to build an array of Bayesian models for ADME/Tox, in vitro and in vivo bioactivity, and other physicochemical properties. We show that these models possess cross-validation receiver operator curve values comparable to those generated previously in prior publications using alternative tools. We have now described how the implementation of Bayesian models with FCFP6 descriptors generated in the CDD Vault enables the rapid production of robust machine learning models from public data or the user’s own datasets. The current study sets the stage for generating models in proprietary software (such as CDD) and exporting these models in a format that could be run in open source software using CDK components. This work also demonstrates that we can enable biocomputation across distributed private or public datasets to enhance drug discovery.',
     type: 'conference / journal articles',
     subtype: 'journal',
+    bibTex: 'todo',
   },
   {
     link: 'assets/thesis.pdf',
@@ -370,6 +389,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     damped driven harmonic motion.`,
     type: 'theses / book chapters',
     subtype: 'thesis',
+    bibTex: 'todo',
   },
 ];
 
@@ -436,7 +456,17 @@ export const BLOG_POSTS = [
   },
 ];
 
-export const PROJECTS = [
+interface Project {
+  title: string;
+  dates: string;
+  sourceLink: string;
+  link: string;
+  imgLink: string;
+  text: string;
+  tags: ('visualization' | 'tech' | 'art')[];
+}
+
+export const PROJECTS: Project[] = [
   // {
   //   title: 'Chaotic Circuit',
   //   imgLink: 'converted-images/chaotic-image.jpg',
@@ -535,6 +565,7 @@ export const PROJECTS = [
   {
     title: 'tap-react-browser',
     dates: 'Feburary - April 2018',
+    link: 'https://github.com/mcnuttandrew/tap-react-browser/',
     sourceLink: 'https://github.com/mcnuttandrew/tap-react-browser/',
     imgLink: 'converted-images/tap-react-browser.jpg',
     text: `In the process of building a variety of javascipt libraries in the course of

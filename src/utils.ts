@@ -52,7 +52,10 @@ export function wrapEvent(wrapped, eventConfig) {
     : `${eventConfig.type}|${eventConfig.value}`;
   return function (event) {
     try {
-      umami(eventName);
+      if (!location.href.includes('localhost')) {
+        // @ts-ignore
+        umami(eventName);
+      }
     } catch (e) {}
     wrapped(event);
   };

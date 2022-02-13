@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   export let currentSection;
   import {classnames, wrapEvent} from '../utils.js';
 </script>
