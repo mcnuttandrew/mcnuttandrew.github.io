@@ -835,7 +835,7 @@ export const NEWS = [
   {
     date: 'Feburary 2020',
     content:
-      'Our paper on using tarot for visual analytics ["Divining Insights: Visual Analytics Through Cartomancy"](http://localhost:5000/#/research/tarot) was accepted to alt.chi 2020',
+      'Our paper on using tarot for visual analytics ["Divining Insights: Visual Analytics Through Cartomancy"](https://www.mcnutt.in/#/research/tarot) was accepted to alt.chi 2020',
   },
   {
     date: 'January 2020',
