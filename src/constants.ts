@@ -782,6 +782,16 @@ export const TEACHING = [
 ];
 
 export const NEWS = [
+    {
+    date: 'April 2022',
+    content:
+      'Our paper (Explaining Why) on interfaces for providing annotator rationales was accepted to NAACL 2022!',
+  },
+  {
+    date: 'February 2022',
+    content:
+      'Delighted to now be a PhD Candidate!',
+  },
   {
     date: 'October 2021',
     content:
