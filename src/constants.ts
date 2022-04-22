@@ -59,7 +59,7 @@ export const PUBLICATIONS: Publication[] = [
     authors: 'Andrew McNutt, Lilian Huang, Kathryn Koenig',
     journal: 'alt.vis',
     date: 'October 2021',
-    links: [{name: 'preprint', link: 'https://arxiv.org/abs/2109.06007'}],
+    links: [{name: 'paper', link: 'https://arxiv.org/abs/2109.06007'}],
     abstract:
       'Visualization has long been seen as a dependable and trustworthy tool for carrying out analysis and communication tasks -- a view reinforced by the growing interest in applying it to socially positive ends. However, despite the benign light in which visualization is usually perceived, it carries the potential to do harm to people, places, concepts, and things. In this paper, we capitalize on this negative potential to serve an underrepresented (but technologically engaged) group: villains. To achieve these ends, we introduce a design space for this type of graphical violence, which allows us to unify prior work on deceptive visualization with novel data-driven dastardly deeds, such as emotional spear phishing and unsafe data physicalization. By charting this vile charting landscape, we open new doors to collaboration with terrifying domain experts, and hopefully, make the world just a bit worse.',
     bibTex: `TODO`,
@@ -75,7 +75,7 @@ export const PUBLICATIONS: Publication[] = [
     authors: 'Will Brackenbury, Andrew McNutt, Kyle Chard, Aaron Elmore, Blase Ur',
     journal: 'ACMUIST',
     date: 'October 2021',
-    links: [{name: 'preprint', link: 'https://dl.acm.org/doi/10.1145/3472749.3474736'}],
+    links: [{name: 'paper', link: 'https://dl.acm.org/doi/10.1145/3472749.3474736'}],
     abstract:
       "Users face many challenges in keeping their personal file collections organized. While current file-management interfaces help users retrieve files in disorganized repositories, they do not aid in organization. Pertinent files can be difficult to find, and files that should have been deleted may remain. To help, we designed KondoCloud, a file-browser interface for personal cloud storage. KondoCloud makes machine learning-based recommendations of files users may want to retrieve, move, or delete. These recommendations leverage the intuition that similar files should be managed similarly.<br/><br/>We developed and evaluated KondoCloud through two complementary online user studies. In our Observation Study, we logged the actions of 69 participants who spent 30 minutes manually organizing their own Google Drive repositories. We identified high-level organizational strategies, including moving related files to newly created sub-folders and extensively deleting files. To train the classifiers that underpin KondoCloud's recommendations, we had participants label whether pairs of files were similar and whether they should be managed similarly. In addition, we extracted ten metadata and content features from all files in participants' repositories. Our logistic regression classifiers all achieved F1 scores of 0.72 or higher. In our Evaluation Study, 62 participants used KondoCloud either with or without recommendations. Roughly half of participants accepted a non-trivial fraction of recommendations, and some participants accepted nearly all of them. Participants who were shown the recommendations were more likely to delete related files located in different directories. They also generally felt the recommendations improved efficiency. Participants who were not shown recommendations nonetheless manually performed about a third of the actions that would have been recommended.",
     bibTex: `TODO`,
@@ -93,7 +93,8 @@ export const PUBLICATIONS: Publication[] = [
     date: 'October 2021',
     links: [
       {name: 'about', link: 'https://www.mcnutt.in/zine-potential'},
-      {name: 'preprint', link: 'https://arxiv.org/abs/2108.02177'},
+      {name: 'paper', link: 'https://arxiv.org/abs/2108.02177'},
+      {name: 'talk', link: 'https://youtu.be/khhlIrowR_g'},
     ],
     abstract:
       'Zines are a form of small-circulation self-produced publication often akin to a magazine. This free-form medium has a long history and has been used as means for personal or intimate expression, as a way for marginalized people to describe issues that are important to them, and as a venue for graphical experimentation. It would seem then that zines would make an ideal vehicle for the recent interest in applying feminist or humanist ideas to visualization. Yet, there has been little work combining visualization and zines. In this paper we explore the potential of this intersection by analyzing examples of zines that use data graphics and by describing the pedagogical value that they can have in a visualization classroom. In doing so, we argue that there are plentiful opportunities for visualization research and practice in this rich intersectional-medium.',
@@ -102,7 +103,7 @@ export const PUBLICATIONS: Publication[] = [
     subtype: 'short conf.',
   },
   {
-    link: '',
+    link: 'https://arxiv.org/pdf/2104.04042.pdf',
     urlTitle: 'tacos',
     imgLink: 'converted-images/tacos.jpg',
     title: 'What are Table Cartograms Good for Anyway? An Algebraic Analysis',
@@ -111,7 +112,7 @@ export const PUBLICATIONS: Publication[] = [
     date: 'June 2021',
     links: [
       {name: 'about', link: '#/research/tacos'},
-      {name: 'preprint', link: 'https://arxiv.org/pdf/2104.04042.pdf'},
+      {name: 'paper', link: 'https://arxiv.org/pdf/2104.04042.pdf'},
       {name: 'talk', link: 'https://www.youtube.com/watch?v=ozBn5bLsGQw&t=2594s'},
     ],
     abstract: `Unfamiliar or esoteric visual forms arise in many areas of visualization. While such forms can be intriguing, it can be unclear how to make effective use of them without long periods of practice or costly user studies. In this work we analyze the table cartogram—a graphic which visualizes tabular data by bringing the areas of a grid of quadrilaterals into correspondence with the input data, like a heat map that has been *area-ed* rather than colored. Despite having existed for several years, little is known about its appropriate usage. We mend this gap by using Algebraic Visualization Design to show that they are best suited to relatively small tables with ordinal axes for some comparison and outlier identification tasks. In doing so we demonstrate a discount theory-based analysis that can be used to cheaply determine best practices for unknown visualizations.
@@ -131,7 +132,7 @@ export const PUBLICATIONS: Publication[] = [
     links: [
       {name: 'about', link: '#/research/ivy'},
       {name: 'live', link: 'https://github.com/mcnuttandrew/ivy'},
-      {name: 'preprint', link: 'https://arxiv.org/pdf/2101.07902.pdf'},
+      {name: 'paper', link: 'https://arxiv.org/pdf/2101.07902.pdf'},
       {name: 'osf', link: 'https://osf.io/cture/'},
       {name: 'talk', link: '      https://www.youtube.com/watch?v=FzIdVnSi9Po'},
     ],
@@ -155,7 +156,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     date: 'October 2020',
     links: [
       {name: 'about', link: '#/research/nearby'},
-      {name: 'preprint', link: 'https://arxiv.org/pdf/2009.02384.pdf'},
+      {name: 'paper', link: 'https://arxiv.org/pdf/2009.02384.pdf'},
       {name: 'code', link: 'https://github.com/mcnuttandrew/sci-text-compare'},
       {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'},
     ],
@@ -176,7 +177,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     date: 'October 2020',
     links: [
       {name: 'about', link: '#/research/table-cartogram'},
-      {name: 'preprint', link: 'https://osf.io/kem6j/'},
+      {name: 'paper', link: 'https://osf.io/kem6j/'},
       {name: 'code', link: 'https://github.com/mcnuttandrew/table-cartogram'},
       {name: 'poster', link: './assets/table-cartogram-poster.pdf'},
       {name: 'live', link: 'https://www.mcnutt.in/table-cartogram/'},
@@ -203,7 +204,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
         link:
           'https://medium.com/multiple-views-visualization-research-explained/surfacing-visualization-mirages-8d39e547e38c',
       },
-      {name: 'preprint', link: 'https://arxiv.org/pdf/2001.02316.pdf'},
+      {name: 'paper', link: 'https://arxiv.org/pdf/2001.02316.pdf'},
       {name: 'live', link: 'https://metamorphic-linting.netlify.com/'},
       {name: 'code', link: 'https://github.com/tableau/Visualization-Linting'},
       {name: 'osf', link: 'https://osf.io/je3x9'},
@@ -217,7 +218,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     subtype: 'conference',
   },
   {
-    link: 'assets/altchi-tarot-cameraready.pdf',
+    link: 'https://research.tableau.com/paper/divining-insights-visual-analytics-through-cartomancy',
     imgLink: 'converted-images/vis-tarot.jpg',
     urlTitle: 'tarot',
     title: 'Divining Insights: Visual Analytics Through Cartomancy',
@@ -226,7 +227,10 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     date: 'April 2020',
     links: [
       {name: 'about', link: '#/research/tarot'},
-      {name: 'preprint', link: 'assets/altchi-tarot-cameraready.pdf'},
+      {
+        name: 'paper',
+        link: 'https://research.tableau.com/paper/divining-insights-visual-analytics-through-cartomancy',
+      },
       {name: 'live', link: 'https://vis-tarot.netlify.com/'},
       {name: 'code', link: 'https://github.com/mcorrell/vis-tarot'},
       {name: 'slides', link: './talks/tarot-talk.pdf'},
@@ -271,7 +275,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     journal: 'Proceedings of the Eurographics Conference on Visualization "EuroVis" - Posters',
     date: 'June 2019',
     links: [
-      {name: 'paper', link: 'assets/forum-explorer-paper.pdf'},
+      {name: 'paper', link: 'https://diglib.eg.org/xmlui/bitstream/handle/10.2312/eurp20191144/053-055.pdf'},
       {name: 'poster', link: 'assets/forum-explorer-poster.pdf'},
       {name: 'live', link: 'https://www.mcnutt.in/forum-explorer/'},
       {name: 'code', link: 'https://github.com/mcnuttandrew/forum-explorer'},
@@ -467,15 +471,6 @@ interface Project {
 }
 
 export const PROJECTS: Project[] = [
-  // {
-  //   title: 'Chaotic Circuit',
-  //   imgLink: 'converted-images/chaotic-image.jpg',
-  //   link: 'assets/Chaotic_circuit.pdf',
-  //   text: `In culminating effort of my junior year at Reed I built a third order
-  //   Chaotic circuit as an independent project. This shows some of the best data visualization
-  //   work I had done at that point, particularlly the combination phase and signal metering small multiples diagram.`
-  // },
-  //
   {
     title: 'Ivy',
     dates: 'November 2019 - August 2020',
@@ -651,23 +646,6 @@ export const PROJECTS: Project[] = [
     tags: ['tech'],
   },
   // {
-  //   title: 'N-Hedron',
-  //   dates: 'September - December 2013',
-  //   imgLink: 'converted-images/n-hydron.jpg',
-  //   link: 'converted-images/nhedron.pdf',
-  //   text:
-  //     'An independent college project regarding the effacy of various numerical algorithms for constructing the n-hedron.',
-  //   tags: ['tech'],
-  // },
-
-  // {
-  //   title: 'N-Body Simulator',
-  //   link: 'https://mcnuttandrew.github.io/n-body-simulator/',
-  //   sourceLink: 'https://github.com/mcnuttandrew/N-Body-Simulator',
-  //   imgLink: 'converted-images/n-body-image.jpg',
-  //   text: 'A low N gravitional interaction simulator built in processing.'
-  // },
-  // {
   //   title: 'Teacup',
   //   liveLink: 'http://tea-cup.org/',
   //   sourceLink: 'https://github.com/mcnuttandrew/Project-Teacup',
@@ -682,6 +660,13 @@ export const TEACHING = [
     role: 'Instructor',
     location: 'UChicago',
     link: 'https://capp-30239-winter-2021.netlify.com/',
+  },
+  {
+    title: 'CMSC 11111 - Creative Coding',
+    date: 'Winter 2022',
+    role: 'Teaching Assistant',
+    location: 'UChicago',
+    link: 'https://www.classes.cs.uchicago.edu/archive/2022/winter/11111-1/',
   },
   {
     title: 'CMSC 11111 - Creative Coding',
