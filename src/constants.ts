@@ -53,6 +53,23 @@ export interface Publication {
 export const PUBLICATIONS: Publication[] = [
   {
     link: '',
+    urlTitle: 'explaining-why',
+    imgLink: 'converted-images/explaining-why.jpg',
+    title:
+      'Explaining Why: How Instructions and User Interfaces Impact Annotator Rationales When Labeling Text Data',
+    authors:
+      'Jamar L. Sullivan, Will Brackenbury, Andrew McNutt, Kevin Bryson, Kwam Byll, Yuxin Chen, Michael Littman, Chenhao Tan, Blase Ur',
+    journal: 'NAACL',
+    date: 'July 2022',
+    links: [],
+    abstract:
+      'In the context of data labeling, NLP researchers are increasingly interested in having humans select _rationales_, a subset of input tokens relevant to the chosen label. We conducted a 332-participant online user study to understand how humans select rationales, especially how different instructions and user interface affordances impact the rationales chosen. Participants labeled ten movie reviews as positive or negative, selecting words and phrases supporting their label as rationales. We varied the instructions given, the rationale-selection task, and the user interface. Participants often selected about 12% of input tokens as rationales, but selected fewer if unable to drag over multiple tokens at once. Whereas participants were near unanimous in their data labels, they were far less consistent in their rationales. The user interface affordances and task greatly impacted the types of rationales chosen. We also observed large variance across participants.',
+    bibTex: `TODO`,
+    type: 'conference / journal articles',
+    subtype: 'conference',
+  },
+  {
+    link: '',
     urlTitle: 'vis-4-villainy',
     imgLink: 'converted-images/villainy.jpg',
     title: 'Visualization for Villainy',
@@ -767,15 +784,14 @@ export const TEACHING = [
 ];
 
 export const NEWS = [
-    {
+  {
     date: 'April 2022',
     content:
       'Our paper (Explaining Why) on interfaces for providing annotator rationales was accepted to NAACL 2022!',
   },
   {
     date: 'February 2022',
-    content:
-      'Delighted to now be a PhD Candidate!',
+    content: 'Delighted to now be a PhD Candidate!',
   },
   {
     date: 'October 2021',
