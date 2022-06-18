@@ -20,7 +20,7 @@
   <MobileHeader {currentSection} />
   <div class="h-full flex-col items-center justify-center hidden md:flex min-w-fit w-64 static">
     <img
-      src="assets/headshot.jpg"
+      src="converted-images/headshot.jpg"
       alt="headshot of andrew mcnutt"
       class="w-52 max-w-full h-auto rounded-full"
     />
