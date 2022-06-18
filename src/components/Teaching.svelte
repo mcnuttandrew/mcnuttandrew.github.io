@@ -4,14 +4,14 @@
   const groups = groupBy(TEACHING, 'role');
 </script>
 
-<div>
+<div class="leading-tight">
   {#each Object.keys(groups) as key}
-    <div class="margin-large-bottom">
-      <h3>{key.toUpperCase()}</h3>
+    <div class="mb-5">
+      <h3 class="font-bold">{key.toUpperCase()}</h3>
       {#each groups[key] as position}
-        <div class="margin-bottom">
+        <div class="mb-1">
           {#if position.link}
-            <a href={position.link}>{position.title}</a>
+            <a class="text-cyan-800" href={position.link}>{position.title}</a>
           {/if}
           {#if !position.link}
             <div>{position.title}</div>
@@ -19,23 +19,10 @@
 
           <div class="flex">
             <i>{`${position.fancyTitle || position.role}`}</i>
-            <span class="margin-left">{position.date}</span>
+            <span class="ml-1">{position.date}</span>
           </div>
         </div>
       {/each}
     </div>
   {/each}
 </div>
-
-<style>
-  .margin-left {
-    margin-left: 5px;
-  }
-
-  .margin-bottom {
-    margin-bottom: 5px;
-  }
-  .margin-large-bottom {
-    margin-bottom: 20px;
-  }
-</style>

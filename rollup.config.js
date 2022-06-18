@@ -6,6 +6,7 @@ import typescript from '@rollup/plugin-typescript';
 import {terser} from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
 import {string} from 'rollup-plugin-string';
+import sveltePreprocess from 'svelte-preprocess';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -21,12 +22,12 @@ function serve() {
       if (server) return;
       server = require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
         stdio: ['ignore', 'inherit', 'inherit'],
-        shell: true,
+        shell: true
       });
 
       process.on('SIGTERM', toExit);
       process.on('exit', toExit);
-    },
+    }
   };
 }
 
@@ -36,21 +37,27 @@ export default {
     sourcemap: true,
     format: 'iife',
     name: 'app',
-    file: 'build/bundle.js',
+    file: 'build/bundle.js'
   },
   plugins: [
     svelte({
+      preprocess: sveltePreprocess({
+        sourceMap: !production,
+        postcss: {
+          plugins: [require('tailwindcss')(), require('autoprefixer')()]
+        }
+      }),
       compilerOptions: {
         // enable run-time checks when not in production
-        dev: !production,
-      },
+        dev: !production
+      }
     }),
     string({
       // Required to be specified
       include: '**/*.md',
 
       // Undefined by default
-      exclude: ['**/index.md'],
+      exclude: ['**/index.md']
     }),
     // we'll extract any component CSS out into
     // a separate file - better for performance
@@ -63,13 +70,13 @@ export default {
     // https://github.com/rollup/plugins/tree/master/packages/commonjs
     resolve({
       browser: true,
-      dedupe: ['svelte'],
+      dedupe: ['svelte']
     }),
     commonjs(),
     typescript({
       sourceMap: !production,
       inlineSources: !production,
-      rootDir: './src',
+      rootDir: './src'
     }),
 
     // In dev mode, call `npm run start` once
@@ -82,12 +89,12 @@ export default {
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
-    production && terser(),
+    production && terser()
   ],
   watch: {
     chokidar: {
-      usePolling: true,
+      usePolling: true
     },
-    clearScreen: false,
-  },
+    clearScreen: false
+  }
 };

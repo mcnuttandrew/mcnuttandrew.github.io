@@ -1,63 +1,70 @@
 <script lang="ts">
   import {slide} from 'svelte/transition';
-  import {addLinks, wrapEvent} from '../utils';
+  import {addLinks} from '../utils';
   import {marked} from 'marked';
+  import type {Publication} from '../constants';
 
-  export let noImg = false;
-  export let publication;
+  export let asTile = false;
+  export let compact = false;
+  export let publication: Publication;
   let abstractOpen = false;
   function toggleAbstract(e) {
     e.preventDefault();
     abstractOpen = !abstractOpen;
   }
   const keys = ['subtitle', 'journal', 'date'];
+  const preppedKeys = keys.map((x) => publication[x]).filter((x) => x);
+  const moreInfo = [publication.authors, publication.date].filter((x) => x).join('. ');
+  const mdRepresentation = `**${publication.title}**. _${publication.journal}_. ${moreInfo}`;
 </script>
 
-<div class="flex-down publication">
-  <div class="content-container">
-    {#if !noImg}
-      <div class="pub-img-holder">
-        <div class="pub-img-label">{publication.subtype}</div>
-        <div class="img-container">
-          <a
-            href={publication.link}
-            on:click={wrapEvent(() => {}, {type: 'paper-link', value: 'img', context: publication.urlTitle})}
-          >
-            <img alt="image drawn from {publication.title}" src={publication.imgLink} />
+<div class="flex-col" class:mb-5={compact}>
+  <div class="flex flex-col md:flex-row" class:leading-tight={compact}>
+    <!-- the regular image -->
+    {#if !compact && !asTile}
+      <div class="flex flex-col-reverse p-2 h-full">
+        <div class="rounded-xl uppercase font-bold italic">{publication.subtype}</div>
+        <div class="items-start flex justify-center h-24 mr-1 w-24 min-w-24">
+          <a href={publication.link}>
+            <img
+              alt="image drawn from {publication.title}"
+              src={publication.imgLink}
+              class="cursor-pointer h-24"
+            />
           </a>
         </div>
       </div>
     {/if}
-    <div class="flex-down">
-      <a
-        href={publication.link}
-        on:click={wrapEvent(() => {}, {type: 'paper-link', value: 'default', context: publication.urlTitle})}
-        >{publication.title}</a
-      >
-      {#if publication.authors}
-        <span>{@html marked(addLinks(publication.authors))}</span>
+    <!-- the tile mode -->
+    <div class="flex flex-col w-48  mr-8 mb-8" class:hidden={!asTile}>
+      <img alt="image drawn from {publication.title}" src={publication.imgLink} class="cursor-pointer w-48" />
+      <a href={publication.link} class="text-cyan-800 font-bold">{publication.title}</a>
+    </div>
+    <!-- the normal content -->
+    <div class="flex-col w-full" class:hidden={asTile}>
+      {#if !compact}
+        <div class="info-container">
+          <a href={publication.link} class="text-cyan-800 font-bold">{publication.title}</a>
+          {#if publication.authors}
+            <span>{@html marked(addLinks(publication.authors))}</span>
+          {/if}
+          <span>
+            {#each preppedKeys as key}
+              <span>{@html marked(key)}</span>
+            {/each}
+          </span>
+        </div>
+      {:else}
+        <div>{@html marked(mdRepresentation)}</div>
       {/if}
-      <span>
-        {#each keys as key}
-          {#if publication[key]}<span>{@html marked(publication[key])}</span>{/if}
-        {/each}
-      </span>
 
       <div class="flex flex-wrap">
-        {#each publication.links as { name, link }}<a
-            class="publink"
-            href={link}
-            on:click={wrapEvent(() => {}, {type: 'paper-link', value: name, context: publication.urlTitle})}
-            >{name}</a
+        {#each publication.links as { name, link }}<a class="publink text-cyan-800" href={link}>{name}</a
           >{/each}
         {#if publication.abstract}
           <div
-            class="publink"
-            on:click={wrapEvent(toggleAbstract, {
-              type: 'abstract-toggle',
-              value: abstractOpen ? 'close' : 'open',
-              context: publication.urlTitle.length ? publication.urlTitle : publication.shortTitle,
-            })}
+            class="publink items-center text-cyan-800 cursor-pointer flex text-sm no-underline"
+            on:click={toggleAbstract}
           >
             abstract ({abstractOpen ? '-' : '+'})
           </div>
@@ -66,80 +73,17 @@
     </div>
   </div>
   {#if abstractOpen}
-    <div class="abstract" transition:slide>{@html marked(publication.abstract)}</div>
+    <div class="text-xs" transition:slide>{@html marked(publication.abstract)}</div>
   {/if}
+  <div class="rounded-xl uppercase font-bold italic " />
 </div>
 
 <style>
-  img {
-    cursor: pointer;
-    height: 100px;
-    max-height: 100px;
-    max-width: 100px;
-  }
-  .flex {
-    display: flex;
-  }
-
-  .flex-down {
-    display: flex;
-    flex-direction: column;
-  }
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
-  .publink {
-    align-items: center;
-    color: rgb(0, 100, 200);
-    cursor: pointer;
-    display: flex;
-    font-size: 13px;
-    text-decoration: none;
-  }
   .publink::after {
     content: '•';
     padding: 0 3px;
   }
   .publink:last-child::after {
     content: '';
-  }
-
-  .abstract {
-    font-size: 12px;
-  }
-
-  .img-container {
-    align-items: flex-start;
-    display: flex;
-    justify-content: center;
-    height: 100px;
-    margin-right: 5px;
-    width: 100px;
-    min-width: 100px;
-  }
-  .publication {
-    max-width: 100%;
-  }
-
-  .content-container {
-    display: flex;
-  }
-
-  .pub-img-holder {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 10px;
-    height: 100%;
-  }
-  .pub-img-label {
-    border-radius: 10px;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-style: italic;
-  }
-  @media screen and (max-width: 600px) {
-    .content-container {
-      flex-direction: column;
-    }
   }
 </style>

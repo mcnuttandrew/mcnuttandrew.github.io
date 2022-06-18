@@ -16,92 +16,58 @@
   };
 </script>
 
-<div class="flex-down full-height">
-  <div class="header">
-    <h1>ANDREW MCNUTT</h1>
+<div class="h-full w-full md:justify-center flex flex-col md:flex-row leading-tight">
+  <MobileHeader {currentSection} />
+  <div class="h-full flex-col items-center justify-center hidden md:flex min-w-fit w-64 static">
+    <img
+      src="assets/headshot.jpg"
+      alt="headshot of andrew mcnutt"
+      class="w-52 max-w-full h-auto rounded-full"
+    />
+    <h1 class="text-xl font-bold">Andrew McNutt</h1>
+    <h3 class="text-xl">PhD Candidate</h3>
+    <h3 class="text-xl">Visualization / HCI</h3>
+    <h3 class="text-xl">UChicago CS</h3>
+    <div class="flex align space-between">
+      <a class="mr-2" href="https://twitter.com/_mcnutt_"
+        ><img src="icons/twitter.svg" alt="link to twitter account" /></a
+      >
+      <a class="mr-2" href="https://github.com/mcnuttandrew"
+        ><img src="icons/github.svg" alt="link to github account" /></a
+      >
+      <a href="https://scholar.google.com/citations?user=BFOrUoQAAAAJ"
+        ><img src="icons/scholar.svg" alt="link to scholar page" /></a
+      >
+    </div>
   </div>
-  <div class="flex-down full-width">
-    <MobileHeader {currentSection} />
-    <div class="main-container">
-      <Header {currentSection} />
-      <div class="content-wrapper">
-        {#if currentSection === 'publications'}
-          <Publications />
-        {:else if currentSection === 'show-page'}
-          <ShowPage />
-        {:else if currentSection === 'cv'}
-          <CV />
-        {:else if currentSection === 'projects'}
-          <Projects />
-        {:else if currentSection === 'teaching'}
-          <Teaching />
-        {:else if currentSection === 'news'}
-          <News />
-        {:else}
-          <About />
-        {/if}
-      </div>
+  <div class="px-4 md:w-1/2">
+    <Header {currentSection} />
+    <div class="content-wrapper">
+      {#if currentSection === 'publications'}
+        <Publications />
+      {:else if currentSection === 'show-page'}
+        <ShowPage />
+      {:else if currentSection === 'cv'}
+        <CV />
+      {:else if currentSection === 'projects'}
+        <Projects />
+      {:else if currentSection === 'teaching'}
+        <Teaching />
+      {:else if currentSection === 'news'}
+        <News />
+      {:else}
+        <About />
+      {/if}
     </div>
   </div>
 </div>
 
-<style>
-  h1 {
-    color: purple;
-  }
+<style lang="postcss" global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 
-  :global(.flex) {
-    display: flex;
-  }
-
-  :global(.flex-down) {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .header {
-    font-weight: 300;
-    text-align: center;
-  }
-  .header h1 {
-    color: black;
-  }
-
-  .main-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: auto;
-  }
-
-  .full-height {
-    height: 100%;
-  }
-  .full-width {
-    width: 100%;
-  }
-
-  .content-wrapper {
-    /* justify-content: center;
-    display: flex;
-    flex-direction: column; */
-    margin-top: 10px;
-    max-width: 700px;
-    width: 700px;
-  }
-
-  @media screen and (max-width: 600px) {
-    .header {
-      display: none !important;
-    }
-
-    .main-container {
-      padding: 0 20px;
-    }
-
-    .content-wrapper {
-      width: 100%;
-      max-width: 100%;
-    }
-  }
+  /* .w-xxxxxl {
+    width: 54rem;
+  } */
 </style>
