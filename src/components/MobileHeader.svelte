@@ -1,11 +1,10 @@
 <script lang="ts">
-  import {classnames, wrapEvent} from '../utils.js';
   import {tweened} from 'svelte/motion';
   import {cubicOut} from 'svelte/easing';
 
   const rotation = tweened(0, {
     duration: 400,
-    easing: cubicOut,
+    easing: cubicOut
   });
 
   export let currentSection;
@@ -17,13 +16,13 @@
   const externalLinks = [
     {link: 'https://twitter.com/_mcnutt_', name: 'twitter'},
     {link: 'https://scholar.google.com/citations?user=BFOrUoQAAAAJ', name: 'scholar'},
-    {link: 'https://github.com/mcnuttandrew', name: 'github'},
+    {link: 'https://github.com/mcnuttandrew', name: 'github'}
   ];
 </script>
 
-<div class="flex-down bar header">
-  <div on:click={toggleHeader} class="flex align">
-    <h3>Andrew McNutt</h3>
+<div class="flex-col cursor-pointer px-3 z-10 flex md:hidden bg-white shadow-md">
+  <div on:click={toggleHeader} class="flex h-16 justify-between w-full items-center">
+    <h1 class="text-3xl">Andrew McNutt</h1>
     <div>
       <!-- hamburger menu -->
       <svg transform="rotate({$rotation})" width="25px" height="21px">
@@ -34,12 +33,13 @@
     </div>
   </div>
   {#if open}
-    <div class="flex-down margin-bottom">
+    <div class="flex-col flex mb-3">
       {#each ['about', 'publications', 'projects', 'cv'] as section (section)}
         <a
           href="/#/{section}"
-          class={classnames({selected: currentSection === section, padding: true})}
-          on:click={wrapEvent(() => {}, {type: 'nav-click', value: section, context: 'mobile'})}
+          class:font-bold={currentSection === section}
+          class="padding text-3xl no-underline"
+          on:click={toggleHeader}
         >
           {section.toUpperCase()}
         </a>
@@ -47,48 +47,13 @@
       {#each externalLinks as x}
         <a
           href={x.link}
-          class={classnames({selected: currentSection === x.name, padding: true, externalLink: true})}
+          class:font-bold={currentSection === x.name}
+          class="padding externalLink text-3xl no-underline flex"
         >
           {x.name.toUpperCase()}
-          <img src="icons/{x.name}.svg" alt="link to {x.name} account" />
+          <img src="icons/{x.name}.svg" alt="link to {x.name} account" class="ml-2" />
         </a>
       {/each}
     </div>
   {/if}
 </div>
-
-<style>
-  .selected {
-    font-weight: bold;
-  }
-  .header {
-    background: white;
-    box-shadow: 0 2px 4px 0 #0c140c;
-    display: none;
-  }
-  @media screen and (max-width: 600px) {
-    .header {
-      display: flex;
-    }
-  }
-  .bar {
-    cursor: pointer;
-    padding: 0 10px;
-    width: auto;
-    z-index: 10;
-  }
-  .align {
-    height: 50px;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  a {
-    font-size: 30px;
-    text-decoration: none;
-  }
-
-  .margin-bottom {
-    margin-bottom: 10px;
-  }
-</style>

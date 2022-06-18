@@ -1,9 +1,9 @@
 {
   "singleQuote": true,
-  "trailingComma": "all",
+  "trailingComma": "none",
   "bracketSpacing": false,
   "jsxBracketSameLine": false,
   "semi": true,
-  "parser": "babel",
+  "parser": "typescript",
   "printWidth": 110
 }

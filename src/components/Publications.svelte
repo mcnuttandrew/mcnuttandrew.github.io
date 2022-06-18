@@ -1,16 +1,15 @@
 <script lang="ts">
   import {PUBLICATIONS} from '../constants';
-
   import Publication from './Publication.svelte';
-  import {classnames} from '../utils';
 
-  let currentSort = 'type';
-  const sorts = ['type', 'year', 'name'];
+  type sort = 'type' | 'year' | 'name' | 'tile';
+  let currentSort: sort = 'type';
+  const sorts: sort[] = ['type', 'year', 'name'];
   const typeOrder = [
     'conference / journal articles',
     'extended abstract / workshop papers',
     'posters',
-    'theses / book chapters',
+    'theses / book chapters'
   ];
 
   function toYear(date) {
@@ -21,61 +20,69 @@
     return new Date(date).getFullYear();
   }
 
-  function sortPublications(currentSort) {
+  export function sortPublications(currentSort: sort) {
     if (currentSort === 'type' || currentSort === 'year') {
       const yearOrder = Array.from(
-        PUBLICATIONS.reduce((acc, x) => acc.add(toYear(x.date)), new Set()),
-      ).sort();
+        PUBLICATIONS.reduce((acc, x) => acc.add(toYear(x.date)), new Set())
+      ) as string[];
       return PUBLICATIONS.map((x) => ({...x, year: toYear(x.date)})).reduce(
         (acc, row) => {
           acc[row[currentSort]].push(row);
           return acc;
         },
-        (currentSort === 'type' ? typeOrder : yearOrder).reduce((acc, key) => ({...acc, [key]: []}), {}),
+        (currentSort === 'type' ? typeOrder : yearOrder).reduce(
+          (acc, key: string) => ({...acc, [key]: []}),
+          {} as Record<string, any>
+        )
       );
+    }
+    if (currentSort === 'tile') {
+      return {'': PUBLICATIONS.sort((a, b) => a.title.localeCompare(b.title))};
     }
     return {publications: PUBLICATIONS.sort((a, b) => a.title.localeCompare(b.title))};
   }
-  $: sortedPublications = sortPublications(currentSort);
+
+  $: sortedPublications = Object.entries(sortPublications(currentSort));
+  $: if (currentSort === 'year') {
+    sortedPublications = sortedPublications.sort((a, b) => Number(b[0]) - Number(a[0]));
+  }
 </script>
 
 <div>
-  <h3>Sort by</h3>
-  {#each sorts as sort}
+  <div class="flex w-full justify-between">
     <button
-      class={classnames({'sort-button': true, 'selected-button': sort === currentSort})}
+      class:font-bold={currentSort === 'tile'}
+      class="text-lg p-2 border-none text-cyan-800"
       on:click={() => {
-        currentSort = sort;
-      }}>{sort}</button
+        currentSort = 'tile';
+      }}>As tiles</button
     >
-  {/each}
-</div>
-
-<div class="research-section">
-  {#each Object.entries(sortedPublications) as pubs}
-    <h2>{pubs[0].toUpperCase()}</h2>
-
-    {#each pubs[1] as publication}
-      <br />
-      <Publication {publication} />
+    {#each sorts as sort}
+      <button
+        class:font-bold={sort === currentSort}
+        class="text-lg p-2 border-none text-cyan-800"
+        on:click={() => {
+          currentSort = sort;
+        }}>Sort by {sort}</button
+      >
     {/each}
-  {/each}
+  </div>
 </div>
 
-<style>
-  .research-section {
-    margin-bottom: 60px;
-    max-width: fit-content;
-  }
-  .research-section h2 {
-    margin-top: 30px;
-  }
-  .sort-button {
-    background: none;
-    border: none;
-    text-decoration: underline;
-  }
-  .selected-button {
-    font-weight: 900;
-  }
-</style>
+<div class="mb-16 max-w-fit">
+  {#each sortedPublications as pubs}
+    <h2 class="mt-8 text-2xl font-bold">{pubs[0].toUpperCase()}</h2>
+
+    <div
+      class="flex"
+      class:flex-col={currentSort !== 'tile'}
+      class:flex-wrap={currentSort === 'tile'}
+      class:justify-between={currentSort === 'tile'}
+    >
+      {#each pubs[1] as publication}
+        <br />
+        <Publication {publication} asTile={currentSort === 'tile'} />
+      {/each}
+    </div>
+  {/each}
+</div>
