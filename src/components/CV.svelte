@@ -1,6 +1,6 @@
 <script lang="ts">
   import Teaching from './Teaching.svelte';
-  import {PRESENTATIONS, PUBLICATIONS} from '../constants';
+  import {PRESENTATIONS, PUBLICATIONS, AWARDS} from '../constants';
   import Publication from './Publication.svelte';
 </script>
 
@@ -74,6 +74,22 @@
   </div>
 </section>
 
+<section class="section">
+  <h2 class="font-bold text-xl underline">Awards</h2>
+  <div class="research-section">
+    {#each AWARDS as award}
+      <div>
+        <span class="font-bold">{award.awardName}. </span><span>{award.society}. </span><span
+          >{award.date}</span
+        >
+        <!-- {#if award.detail}
+          <span>{award.detail}</span>
+        {/if} -->
+      </div>
+    {/each}
+  </div>
+</section>
+
 <!-- <section class="section">
   <h2>BLOG POSTS</h2>
   <div class="research-section">
@@ -84,10 +100,21 @@
 </section> -->
 
 <section class="section">
-  <h2 class="font-bold text-xl underline">Talks</h2>
+  <h2 class="font-bold text-xl underline">Invited Talks</h2>
   <div class="research-section">
-    {#each PRESENTATIONS as publication}
-      <Publication {publication} compact={true} />
+    {#each PRESENTATIONS as talk}
+      <div class="flex flex-col mb-2">
+        <span class="font-bold">{talk.title}</span>
+        {#each talk.details as detail}
+          <span>{detail}</span>
+        {/each}
+        <div class="flex">
+          {#each talk.links || [] as link}
+            <a class="mr-2" href={link.link}>{link.name}</a>
+          {/each}
+        </div>
+      </div>
+      <!-- <Publication {publication} compact={true} /> -->
     {/each}
   </div>
 </section>
