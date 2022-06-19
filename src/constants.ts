@@ -425,7 +425,72 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
   }
 ];
 
-export const PRESENTATIONS = [
+export const PRESENTATIONS: {title: string; details: string[]; links?: {name: string; link: string}[]}[] = [
+  {
+    title: 'On The Potential of Zines as a Medium for Visualization',
+    details: ['IEEEVIS, October 27, 2021, New Orleans, Louisiana. (Virtual)'],
+    links: []
+  },
+
+  {
+    title: 'Visualization for Villainy',
+    details: ['alt.vis, October 24, 2021, New Orleans, Louisiana. (Virtual)'],
+    links: []
+  },
+
+  {
+    title: 'How do we know what a visualization is good for? Algebraic Approaches',
+    details: ['RAMPVIS, August 5, 2021, Oxford, England. (Virtual)'],
+    links: []
+  },
+
+  {
+    title: 'What are Table Cartograms Good for Anyway? An Algebraic Analysis',
+    details: [
+      'EuroVis, June 15, 2021, Zurich, Switzerland. (Virtual)',
+      'City University London, May 18, 2021, London, England. (Virtual)'
+    ],
+    links: []
+  },
+
+  {
+    title: 'Integrated Visualization Editing via Parameterized Declarative Templates',
+    details: ['SIGCHI, May 12-13, 2021, Yokohama, Japan (Virtual)'],
+    links: []
+  },
+
+  {
+    title:
+      'Supporting Expert Close Analysis of Historical Scientific Writings: A Case Study for Near-by Reading',
+    details: ['VIS4DH, October 25, 2020, Salt Lake City, Utah (Virtual)'],
+    links: []
+  },
+
+  {
+    title: 'Surfacing Visualization Mirages',
+    details: ['CHIcago Symposium, May 26, 2020, Chicago, IL (Virtual)'],
+    links: []
+  },
+
+  {
+    title: 'Divining Insights: Visual Analytics Through Cartomancy',
+    details: ['CHIcago Symposium, May 26, 2020, Chicago, IL (Virtual)'],
+    links: []
+  },
+
+  {
+    title: 'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
+    details: ['VIS Guides, October 22, 2018, Berlin, Germany.'],
+    links: []
+  },
+
+  {
+    title:
+      'Design and Analysis of Table Cartograms: Simultaneous-Multipurpose Tabular Area-Encoding Displays',
+    details: ['University of Chicago, June 12, 2019, Chicago, Illinois.'],
+    links: []
+  },
+
   // {
   //   title:
   //     'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
@@ -433,11 +498,11 @@ export const PRESENTATIONS = [
   //   journal: 'VisGuides 2018. October 22, 2018'
   // },
   {
-    imgLink: 'converted-images/design-patterns-pic.jpg',
+    // imgLink: 'converted-images/design-patterns-pic.jpg',
     title: 'Design Patterns For Data Visualization in React',
-    link: 'http://tinyurl.com/reactvisdesignpatterns',
-    journal: 'React Chicago. August 29, 2018',
-    subtitle: 'An overview of four useful patterns for developing visualizations in react',
+    // link: 'http://tinyurl.com/reactvisdesignpatterns',
+    details: ['React Chicago. August 29, 2018'],
+    // subtitle: 'An overview of four useful patterns for developing visualizations in react',
     links: [{name: 'slides', link: 'http://tinyurl.com/reactvisdesignpatterns'}]
   }
   // {
@@ -483,6 +548,84 @@ export const BLOG_POSTS = [
       // {name: 'talk', link: 'http://tinyurl.com/reactvisdesignpatterns'},
       {name: 'code', link: 'https://github.com/mcnuttandrew/advanced-react-vis-tutorial'}
     ]
+  }
+];
+
+export const AWARDS: {society: string; date: string; awardName: string; detail?: string}[] = [
+  {
+    society: 'ACM SIGCHI',
+    date: '2022',
+    awardName: 'Special Recognition for Outstanding Review x2'
+  },
+  {
+    society: 'ACM UIST',
+    date: '2021',
+    awardName: 'Special Recognition for Outstanding Review'
+  },
+  {
+    society: 'UChicago Grad',
+    date: 'October 2021',
+    awardName: 'Graduate Council Research Fund'
+  },
+  {
+    society: 'Eurographics Working Group on Data Visualization',
+    date: '2021',
+    awardName: 'Honorable Mention for Best Paper',
+    detail: '(single juried selection) for What are Table Cartograms Good for Anyway? An Algebraic Analysis'
+  },
+  {
+    society: 'ACM SIGCHI',
+    date: '2021',
+    awardName: 'Special Recognition for Outstanding Review'
+  },
+  {
+    society: 'IEEE VIS',
+    date: 'October 2020',
+    awardName: 'InfoVis Honorable Mention Poster Research',
+    detail: 'for A Minimally Constrained Optimization Algorithm for Table Cartograms'
+  },
+  {
+    society: 'ACM SIGCHI',
+    date: 'March 2020',
+    awardName: 'Best Paper Honorable Mention',
+    detail: '(Top 5\\%) for Surfacing Visualization Mirages'
+  },
+  {
+    society: 'MindBytes Research Symposium',
+    date: 'October 2019',
+    awardName: 'Best Poster in Visualization'
+  },
+  {
+    society: 'UChicago Grad',
+    date: 'October 2019',
+    awardName: 'Graduate Council Travel Fund'
+  },
+  {
+    society: 'Information is Beautiful Awards',
+    date: 'September 2019',
+    awardName: 'Long List for Visual Analytics and Unusual Categories',
+    detail: "for 'FeX': Forum Explorer and Cycles Rain Seasons in Size"
+  },
+  {
+    society: 'University of Chicago, Department of Computer Science',
+    date: 'June 2019',
+    awardName: 'Teaching Assistant Prize'
+  },
+  {
+    society: 'UChicago Physical Sciences Division ',
+    date: 'May 2018, May 2019',
+    awardName: 'Divisional Teaching Award Nominee'
+  },
+  {
+    society: 'UChicago Art and Science Expo',
+    date: 'May 2019',
+    awardName: '2nd Place for Best in Show'
+  },
+  {
+    society: 'Reed College',
+    date: 'May 2014',
+    awardName: 'Commendation of Academic Excellence',
+    detail: 'Merit given to students exhibiting exemplary scholarship'
   }
 ];
 
