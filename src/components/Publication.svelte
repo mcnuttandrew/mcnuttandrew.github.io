@@ -14,7 +14,7 @@
   }
   const keys = ['subtitle', 'journal', 'date'];
   const preppedKeys = keys.map((x) => publication[x]).filter((x) => x);
-  const moreInfo = [publication.authors, publication.date].filter((x) => x).join('. ');
+  const moreInfo = [addLinks(publication.authors), publication.date].filter((x) => x).join('. ');
   const mdRepresentation = `**${publication.title}**. _${publication.journal}_. ${moreInfo}`;
 </script>
 
