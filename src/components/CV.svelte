@@ -1,6 +1,6 @@
 <script lang="ts">
   import Teaching from './Teaching.svelte';
-  import {PRESENTATIONS, PUBLICATIONS, AWARDS} from '../constants';
+  import {PRESENTATIONS, PUBLICATIONS, AWARDS, REVEIWING, SERVICE} from '../constants';
   import Publication from './Publication.svelte';
 </script>
 
@@ -8,7 +8,7 @@
 <div class="leading-tight">
   <div>PhD Student at Univeristy of Chicago in Computer Science</div>
   <div>For a pdf version of my CV <a href="./assets/cv.pdf" class="text-cyan-800">click here</a></div>
-  <div>CV updated June 2022</div>
+  <div>CV updated July 2022</div>
 </div>
 
 <section class="section leading-tight">
@@ -40,7 +40,11 @@
 
 <section class="section leading-tight">
   <h2 class="font-bold text-xl underline">Professional Experience</h2>
-  <div>Research Intern at Microsoft Research, 2022</div>
+  <div>
+    Research Intern at <a href="https://www.microsoft.com/en-us/research/group/vida/" class="text-cyan-800"
+      >Microsoft Research</a
+    >, 2022
+  </div>
   <div>
     Research Intern at <a href="https://research.tableau.com/" class="text-cyan-800">Tableau Research</a>,
     2019
@@ -119,9 +123,33 @@
   </div>
 </section>
 
-<!-- <section class="section">
-  <h2>Awards</h2>
-</section> -->
+<section class="section">
+  <h2 class="font-bold text-xl underline">Service</h2>
+  <div class="research-section">
+    {#each SERVICE as service}
+      <div class="flex">
+        {#if service.link}
+          <a class="flex" href={service.link}>
+            <span class="font-bold">{service.organization}</span>
+            <span>. {service.role}. {service.date}</span>
+          </a>
+        {:else}
+          <span class="font-bold">{service.organization}</span>
+          <span>. {service.role}. {service.date}</span>
+        {/if}
+      </div>
+    {/each}
+    <div class="flex flex-col">
+      <span class="font-bold">Reviewing</span>
+      <div class="flex flex-col">
+        {#each REVEIWING as review}
+          <span>{review}</span>
+        {/each}
+      </div>
+      <span>⭐ - Special Recognition for Outstanding Review</span>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <h2 class="font-bold text-xl underline">Teaching</h2>
