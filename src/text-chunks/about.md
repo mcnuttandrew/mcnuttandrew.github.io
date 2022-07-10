@@ -11,4 +11,4 @@ I am a fan of deserts, zines, buffalo, and bicycles.
 
 <br />
 <br />
-I'm always happy to chat about all/any of these topics! Drop me a line by email (mcnutt AT uchicago DOT edu) or on twitter (<a href="https://twitter.com/_mcnutt_/">@_mcnutt_</a>).
+I'm on the academic job market (starting fall '22) looking for assistant professor and post doc roles in North America. If any of these (research) topics are of interest, please drop me a line by email (mcnutt AT uchicago DOT edu) or on twitter (<a href="https://twitter.com/_mcnutt_/">@_mcnutt_</a>).

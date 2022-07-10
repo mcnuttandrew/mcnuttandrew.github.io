@@ -455,7 +455,10 @@ export const PRESENTATIONS: {title: string; details: string[]; links?: {name: st
 
   {
     title: 'Integrated Visualization Editing via Parameterized Declarative Templates',
-    details: ['SIGCHI, May 12-13, 2021, Yokohama, Japan (Virtual)'],
+    details: [
+      'SIGCHI, May 12-13, 2021, Yokohama, Japan (Virtual)',
+      'CHIcago Symposium, May 5, 2021, Chicago, Illinois (Virtual)'
+    ],
     links: []
   },
 
@@ -480,14 +483,14 @@ export const PRESENTATIONS: {title: string; details: string[]; links?: {name: st
 
   {
     title: 'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
-    details: ['VIS Guides, October 22, 2018, Berlin, Germany.'],
+    details: ['VIS Guides, October 22, 2018, Berlin, Germany'],
     links: []
   },
 
   {
     title:
       'Design and Analysis of Table Cartograms: Simultaneous-Multipurpose Tabular Area-Encoding Displays',
-    details: ['University of Chicago, June 12, 2019, Chicago, Illinois.'],
+    details: ['University of Chicago, June 12, 2019, Chicago, Illinois'],
     links: []
   },
 
@@ -846,14 +849,14 @@ export const TEACHING = [
     location: 'UChicago',
     link: 'https://capp-30239-winter-2020.netlify.com/'
   },
-  {
-    title: 'Visualization Research Reading Group',
-    date: 'February 2019-Present',
-    role: 'Other',
-    location: 'UChicago',
-    fancyTitle: 'Director',
-    link: 'https://uchicago-vis-pl-lab.github.io/vis-reading-group/'
-  },
+  // {
+  //   title: 'Visualization Research Reading Group',
+  //   date: 'February 2019-Present',
+  //   role: 'Other',
+  //   location: 'UChicago',
+  //   fancyTitle: 'Director',
+  //   link: 'https://uchicago-vis-pl-lab.github.io/vis-reading-group/'
+  // },
   {
     title: 'CMSC 23900 - Data Visualization',
     date: 'Spring 2020',
@@ -896,7 +899,7 @@ export const TEACHING = [
     link: 'https://www.classes.cs.uchicago.edu/archive/2018/winter/15100-1/syllabus.html'
   },
   {
-    title: 'CMSC 12100 - Computer Science with Applications 1.',
+    title: 'CMSC 12100 - Computer Science with Applications 1',
     date: 'Fall 2017',
     role: 'Teaching Assistant',
     location: 'UChicago',
@@ -931,6 +934,10 @@ export const TEACHING = [
 ];
 
 export const NEWS = [
+  {
+    date: 'May 2022',
+    content: 'Started a (remote) internship at Microsoft Research with Chenglong Wang and Rob DeLine.'
+  },
   {
     date: 'April 2022',
     content:
@@ -1052,4 +1059,56 @@ export const NEWS = [
   //   date: 'September 2018',
   //   content: 'Started my second year of grad school!'
   // }
+];
+
+export const SERVICE: {organization: string; date: string; role: string; link?: string}[] = [
+  {
+    organization: 'alt.vis',
+    date: '2022',
+    role: 'Organizing Committee'
+  },
+  {
+    organization: 'EuroVis',
+    date: '2021',
+    role: 'Student Volunteer'
+  },
+  {
+    organization: 'Chicago Public Schools CSEd Week',
+    date: '2020',
+    role: 'Speaker'
+  },
+  {
+    organization: 'Open Access VIS  / EuroVIS',
+    date: '2019',
+    role: 'Contributor / Organizer'
+  },
+  {
+    organization: 'South Side Civic',
+    date: '2019',
+    role: 'Scopathon Facilitator'
+  },
+  {
+    organization: 'UChicago Visualization Research Reading Group',
+    date: 'February 2019-Match 2021',
+    role: 'Organizer',
+    link: 'https://uchicago-vis-pl-lab.github.io/vis-reading-group/'
+  },
+  {
+    organization: 'UChicago CS Graduate Student Ministry',
+    date: '2018',
+    role: 'Facilitator of CS Grad Weekly Coffee Break'
+  },
+
+  {
+    organization: 'F.L. Griffin Mathfest',
+    date: 'Spring 2014',
+    role: 'Teaching Assistant'
+  }
+];
+
+export const REVEIWING: string[] = [
+  "VIS - Full Papers ('20, '21, '22), Short Papers ('20, '21), alt.vis ('21)",
+  "CHI - Full Papers (⭐ '21, ⭐⭐'22), alt.chi ('20), Late-Breaking Work ('22)",
+  'UIST - Full Papers (⭐ `21)',
+  'TVCG - Journal (`22)'
 ];
