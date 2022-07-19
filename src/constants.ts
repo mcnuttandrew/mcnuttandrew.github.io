@@ -66,6 +66,24 @@ export interface Publication {
 export const PUBLICATIONS: Publication[] = [
   {
     link: '',
+    urlTitle: 'no-grammar',
+    imgLink: 'converted-images/no-grammar.jpg',
+    title: 'No Grammar to Rule Them All: A Survey of JSON-Style DSLs for Visualization',
+    authors: 'Andrew McNutt',
+    journal: 'IEEE VIS',
+    date: 'October 2022',
+    links: [
+      {name: 'paper', link: 'https://arxiv.org/pdf/2207.07998.pdf'},
+      {name: 'live', link: 'https://vis-json-dsls.netlify.app/'}
+    ],
+    abstract:
+      'There has been substantial growth in the use of JSON-based grammars, as well as other standard data serialization languages, to create visualizations. Each of these grammars serves a purpose: some focus on particular computational tasks (such as animation), some are concerned with certain chart types (such as maps), and some target specific data domains (such as ML). Despite the prominence of this interface form, there has been little detailed analysis of the characteristics of these languages.  In this study, we survey and analyze the design and implementation of 57 JSON-style DSLs for visualization. We analyze these languages supported by a collected corpus of examples for each DSL (consisting of 4395 instances) across a variety of axes organized into concerns related to domain, conceptual model, language relationships, affordances, and general practicalities. We identify tensions throughout these areas, such as between formal and colloquial specifications, among types of users, and within the composition of languages. Through this work, we seek to support language implementers by elucidating the choices, opportunities, and tradeoffs in visualization DSL design.',
+    bibTex: `TODO`,
+    type: 'conference / journal articles',
+    subtype: 'journal'
+  },
+  {
+    link: '',
     urlTitle: 'explaining-why',
     imgLink: 'converted-images/explaining-why.jpg',
     title:
@@ -138,7 +156,7 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: 'converted-images/tacos.jpg',
     title: 'What are Table Cartograms Good for Anyway? An Algebraic Analysis',
     authors: 'Andrew McNutt',
-    journal: 'EuroVis21 🏆 Honorable Mention for Best Paper 🏆 (Juried Selection, 1 awarded)',
+    journal: 'EuroVis 🏆 Honorable Mention for Best Paper 🏆 (Juried Selection, 1 awarded)',
     date: 'June 2021',
     links: [
       {name: 'about', link: '#/research/tacos'},
@@ -157,7 +175,8 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: 'converted-images/ivy.jpg',
     title: 'Integrated Visualization Editing via Parameterized Declarative Templates',
     authors: 'Andrew McNutt, Ravi Chugh',
-    journal: 'Proceedings of the 2021 ACM annual conference on Human Factors in Computing Systems',
+    // journal: 'Proceedings of the 2021 ACM annual conference on Human Factors in Computing Systems',
+    journal: 'ACM CHI',
     date: 'May 2021',
     links: [
       {name: 'about', link: '#/research/ivy'},
@@ -224,8 +243,9 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     imgLink: 'converted-images/surfacing-visualization-mirages.jpg',
     title: 'Surfacing Visualization Mirages',
     authors: 'Andrew McNutt, Gordon Kindlmann, Michael Correll',
-    journal:
-      'Proceedings of the 2020 ACM annual conference on Human Factors in Computing Systems <br/> 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)',
+    // journal:
+    //   'Proceedings of the 2020 ACM annual conference on Human Factors in Computing Systems <br/> 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)',
+    journal: 'ACM CHI <br/> 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)',
     date: 'April 2020',
     links: [
       {name: 'about', link: '#/research/mirage'},
@@ -252,7 +272,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     urlTitle: 'tarot',
     title: 'Divining Insights: Visual Analytics Through Cartomancy',
     authors: 'Andrew McNutt, Anamaria Crisan, Michael Correll',
-    journal: 'Proceedings of alt.CHI',
+    journal: 'alt.CHI',
     date: 'April 2020',
     links: [
       {name: 'about', link: '#/research/tarot'},
@@ -287,7 +307,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       }
     ],
     abstract:
-      "When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as â€œnational scienceâ€? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.",
+      "When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as 'national science'? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.",
     type: 'posters',
     subtype: 'poster',
     bibTex: 'todo'
@@ -300,7 +320,8 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       'Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations',
     authors: 'Andrew McNutt, Gordon Kindlmann',
     urlTitle: 'forum-explorer-eurovis',
-    journal: 'Proceedings of the Eurographics Conference on Visualization "EuroVis" - Posters',
+    // journal: 'Proceedings of the Eurographics Conference on Visualization "EuroVis" - Posters',
+    journal: 'EuroVis - Posters',
     date: 'June 2019',
     links: [
       {name: 'paper', link: 'https://diglib.eg.org/xmlui/bitstream/handle/10.2312/eurp20191144/053-055.pdf'},
@@ -410,15 +431,8 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       {name: 'thesis', link: 'assets/thesis.pdf'},
       {name: 'slides', link: './assets/nlm-talk.pdf'}
     ],
-    abstract: `
-    In this thesis we study a modern formalism known as Nonequivalent Lagrangian
-    Mechanics, that is constructed on top of the traditional Lagrangian theory of mechanics.
-    By making use of the non-uniqueness of the Lagrangian representation of dynamical
-    systems, we are able to generate conservation laws in a way that is novel and, in
-    many cases much faster than the traditional Noetherian analysis. In every case that
-    we examine, these invariants turn out to be Noetherian invariants in disguise. We
-    apply this theory to a wide variety of systems including predator-prey dynamics and
-    damped driven harmonic motion.`,
+    abstract:
+      'In this thesis we study a modern formalism known as Nonequivalent Lagrangian Mechanics, that is constructed on top of the traditional Lagrangian theory of mechanics. By making use of the non-uniqueness of the Lagrangian representation of dynamical systems, we are able to generate conservation laws in a way that is novel and, in many cases much faster than the traditional Noetherian analysis. In every case that we examine, these invariants turn out to be Noetherian invariants in disguise. We apply this theory to a wide variety of systems including predator-prey dynamics and damped driven harmonic motion.',
     type: 'theses / book chapters',
     subtype: 'thesis',
     bibTex: 'todo'
@@ -935,6 +949,11 @@ export const TEACHING = [
 
 export const NEWS = [
   {
+    date: 'July 2022',
+    content:
+      '[My paper](https://arxiv.org/pdf/2207.07998.pdf) exploring the terrain of JSON-style DSLs for visualization was accepted to VIS22.'
+  },
+  {
     date: 'May 2022',
     content: 'Started a (remote) internship at Microsoft Research with Chenglong Wang and Rob DeLine.'
   },
@@ -942,6 +961,11 @@ export const NEWS = [
     date: 'April 2022',
     content:
       'Our paper ([Explaining Why](https://www.blaseur.com/papers/rationales-naacl22.pdf)) on interfaces for providing annotator rationales was accepted to NAACL 2022!'
+  },
+  {
+    date: 'March 2022',
+    content:
+      'Quite excited to be serving on the organizing committe for [alt.vis](https://altvis.github.io/) this year!'
   },
   {
     date: 'February 2022',
