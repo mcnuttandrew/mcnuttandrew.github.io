@@ -65,7 +65,7 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
-    link: '',
+    link: 'https://arxiv.org/pdf/2207.07998.pdf',
     urlTitle: 'no-grammar',
     imgLink: 'converted-images/no-grammar.jpg',
     title: 'No Grammar to Rule Them All: A Survey of JSON-Style DSLs for Visualization',
@@ -83,7 +83,7 @@ export const PUBLICATIONS: Publication[] = [
     subtype: 'journal'
   },
   {
-    link: '',
+    link: 'https://www.blaseur.com/papers/rationales-naacl22.pdf',
     urlTitle: 'explaining-why',
     imgLink: 'converted-images/explaining-why.jpg',
     title:
@@ -97,10 +97,16 @@ export const PUBLICATIONS: Publication[] = [
       'In the context of data labeling, NLP researchers are increasingly interested in having humans select _rationales_, a subset of input tokens relevant to the chosen label. We conducted a 332-participant online user study to understand how humans select rationales, especially how different instructions and user interface affordances impact the rationales chosen. Participants labeled ten movie reviews as positive or negative, selecting words and phrases supporting their label as rationales. We varied the instructions given, the rationale-selection task, and the user interface. Participants often selected about 12% of input tokens as rationales, but selected fewer if unable to drag over multiple tokens at once. Whereas participants were near unanimous in their data labels, they were far less consistent in their rationales. The user interface affordances and task greatly impacted the types of rationales chosen. We also observed large variance across participants.',
     bibTex: `TODO`,
     type: 'conference / journal articles',
+    // badges: [
+    //   {
+    //     url: 'https://naacl2022-reproducibility-track.github.io/results/',
+    //     img: './converted-images/naacl-code-bage.jpg'
+    //   }
+    // ],
     subtype: 'conference'
   },
   {
-    link: '',
+    link: 'https://arxiv.org/abs/2109.06007',
     urlTitle: 'vis-4-villainy',
     imgLink: 'converted-images/villainy.jpg',
     title: 'Visualization for Villainy',
@@ -170,7 +176,7 @@ export const PUBLICATIONS: Publication[] = [
     bibTex: 'todo'
   },
   {
-    link: '',
+    link: 'https://arxiv.org/pdf/2101.07902.pdf',
     urlTitle: 'ivy',
     imgLink: 'converted-images/ivy.jpg',
     title: 'Integrated Visualization Editing via Parameterized Declarative Templates',
@@ -195,7 +201,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     subtype: 'conference'
   },
   {
-    link: '',
+    link: 'https://arxiv.org/pdf/2009.02384.pdf',
     urlTitle: 'nearby',
     imgLink: 'converted-images/nearby-preview.jpg',
     title:
@@ -216,7 +222,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     subtype: 'workshop'
   },
   {
-    link: '',
+    link: 'https://www.mcnutt.in/table-cartogram/',
     urlTitle: 'table-cartogram',
     imgLink: 'converted-images/tc-preview.jpg',
     title: 'A Minimally Constrained Optimization Algorithm for Table Cartograms',
