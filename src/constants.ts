@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
 export const COLLABORATOR_LINKS = {
-  'Agatha Kim': 'https://history.uchicago.edu/directory/agatha-kim',
+  'Agatha Seo-Hyun Kim': 'https://history.uchicago.edu/directory/agatha-kim',
   'Alex M. Clark': 'https://scholar.google.com/citations?user=4Gv4PboAAAAJ&hl=en',
   'Allison Morgan': 'https://allisonmorgan.github.io/',
   'Anamaria Crisan': 'https://amcrisan.github.io/',
@@ -78,6 +78,21 @@ export const PUBLICATIONS: Publication[] = [
     ],
     abstract:
       'There has been substantial growth in the use of JSON-based grammars, as well as other standard data serialization languages, to create visualizations. Each of these grammars serves a purpose: some focus on particular computational tasks (such as animation), some are concerned with certain chart types (such as maps), and some target specific data domains (such as ML). Despite the prominence of this interface form, there has been little detailed analysis of the characteristics of these languages.  In this study, we survey and analyze the design and implementation of 57 JSON-style DSLs for visualization. We analyze these languages supported by a collected corpus of examples for each DSL (consisting of 4395 instances) across a variety of axes organized into concerns related to domain, conceptual model, language relationships, affordances, and general practicalities. We identify tensions throughout these areas, such as between formal and colloquial specifications, among types of users, and within the composition of languages. Through this work, we seek to support language implementers by elucidating the choices, opportunities, and tradeoffs in visualization DSL design.',
+    bibTex: `TODO`,
+    type: 'conference / journal articles',
+    subtype: 'journal'
+  },
+  {
+    link: 'https://link.springer.com/article/10.1007/s12064-022-00376-8',
+    urlTitle: 'goethe-candolle',
+    imgLink: 'converted-images/goethe-candolle.jpg',
+    title: 'Goethe and Candolle: National forms of scientific writing?',
+    authors: 'Agatha Seo-Hyun Kim, Andrew McNutt ',
+    journal: 'Theory in Biosciences',
+    date: 'August 2022',
+    links: [{name: 'paper', link: 'https://link.springer.com/article/10.1007/s12064-022-00376-8'}],
+    abstract:
+      'What role does nationality—or the image of a nation—play in how one thinks and receives scientific ideas? This paper investigates the commonly held ideas about “German science” and “French science” in early nineteenth-century France. During the politically turbulent time, the seemingly independent scientific community found itself in a difficult position: first, between the cosmopolitan ideals of scientific community and the invasive political reality, and second, between the popularized image of national differences and the actual comparisons of international scientific ideas. The tension between multiple sets of fictions and realities underscores the fragility of the concept of nationality as a scientific measure. A case study comparing morphological ideas, receptions in France, and the actual scientific texts of J. W. von Goethe and A. P. de Candolle further illustrates this fragility. Goethe and Candolle make an ideal comparative case because they were received in very different lights despite their similar concept of the plant type. Our sentence-classification and visualization methods are applied to their scientific texts, to compare the actual compositions and forms of the texts that purportedly represented German and French sciences. This paper concludes that there was a gap between what French readers assumed they read and what they really read, when it came to foreign scientific texts. The differences between Goethe’s and Candolle’s texts transcended the perceived national differences between German Romanticism and French Classicism.',
     bibTex: `TODO`,
     type: 'conference / journal articles',
     subtype: 'journal'
@@ -206,7 +221,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     imgLink: 'converted-images/nearby-preview.jpg',
     title:
       'Supporting Expert Close Analysis of Historical Scientific Writings: A Case Study for Near-by Reading',
-    authors: 'Andrew McNutt, Agatha Kim, Sergio Elahi, Kazutaka Takahashi',
+    authors: 'Andrew McNutt, Agatha Seo-Hyun Kim, Sergio Elahi, Kazutaka Takahashi',
     journal: '2020 IEEE 5th Workshop on Visualization for the Digital Humanities (VIS4DH)',
     date: 'October 2020',
     links: [
@@ -301,7 +316,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     imgLink: 'converted-images/agathas-thing.jpg',
     urlTitle: 'goethe-poster',
     title: 'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
-    authors: 'Agatha Kim, Andrew McNutt, Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
+    authors: 'Agatha Seo-Hyun Kim, Andrew McNutt, Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
     journal: 'MindBytes Research Symposium. <br/> 🏆 Best Poster in Visualization 🏆',
     date: 'November 2019',
     links: [
@@ -957,6 +972,11 @@ export const NEWS = [
   {
     date: 'July 2022',
     content:
+      '[Our paper](https://link.springer.com/article/10.1007/s12064-022-00376-8) on the role of nationalism in 🔬science🔬 in 19th century France was (at long last) published Theory in Biosciences!!'
+  },
+  {
+    date: 'July 2022',
+    content:
       '[My paper](https://arxiv.org/pdf/2207.07998.pdf) exploring the terrain of JSON-style DSLs for visualization was accepted to VIS22.'
   },
   {
@@ -1095,7 +1115,14 @@ export const SERVICE: {organization: string; date: string; role: string; link?: 
   {
     organization: 'alt.vis',
     date: '2022',
-    role: 'Organizing Committee'
+    role: 'Organizing Committee',
+    link: 'https://altvis.github.io/'
+  },
+  {
+    organization: 'VisGuides',
+    date: '2022',
+    role: 'Program Committee',
+    link: 'https://visguides-workshop.github.io/'
   },
   {
     organization: 'EuroVis',
@@ -1110,7 +1137,8 @@ export const SERVICE: {organization: string; date: string; role: string; link?: 
   {
     organization: 'Open Access VIS  / EuroVIS',
     date: '2019',
-    role: 'Contributor / Organizer'
+    role: 'Contributor / Organizer',
+    link: 'http://oavis.org/'
   },
   {
     organization: 'South Side Civic',
@@ -1137,7 +1165,7 @@ export const SERVICE: {organization: string; date: string; role: string; link?: 
 ];
 
 export const REVEIWING: string[] = [
-  "VIS - Full Papers ('20, '21, '22), Short Papers ('20, '21), alt.vis ('21)",
+  "VIS - Full Papers ('20, '21, '22), Short Papers ('20, '21), alt.vis ('21, '22), VisGuides ('22)",
   "CHI - Full Papers (⭐ '21, ⭐⭐'22), alt.chi ('20), Late-Breaking Work ('22)",
   'UIST - Full Papers (⭐ `21)',
   'TVCG - Journal (`22)'
