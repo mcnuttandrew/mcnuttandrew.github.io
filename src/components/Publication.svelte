@@ -15,7 +15,10 @@
   const keys = ['subtitle', 'journal', 'date'];
   const preppedKeys = keys.map((x) => publication[x]).filter((x) => x);
   const moreInfo = [addLinks(publication.authors), publication.date].filter((x) => x).join('. ');
-  const mdRepresentation = `**${publication.title}**. _${publication.journal}_. ${moreInfo}`;
+  const knownPunc = new Set(['.', '?', '!']);
+  const punc = knownPunc.has(publication.title[publication.title.length - 1]) ? '' : '.';
+  console.log();
+  const mdRepresentation = `**${publication.title}**${punc} _${publication.journal}_. ${moreInfo}`;
 </script>
 
 <div class="flex-col" class:mb-5={compact}>
