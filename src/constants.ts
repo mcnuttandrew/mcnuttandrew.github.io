@@ -460,6 +460,9 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
   }
 ];
 
+const selectedPubs = new Set(['no-grammar', 'tacos', 'ivy', 'mirage']);
+export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((x) => selectedPubs.has(x.urlTitle));
+
 export const PRESENTATIONS: {title: string; details: string[]; links?: {name: string; link: string}[]}[] = [
   {
     title: 'On The Potential of Zines as a Medium for Visualization',
