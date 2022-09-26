@@ -8,7 +8,7 @@
 <div class="leading-tight">
   <div>PhD Student at Univeristy of Chicago in Computer Science</div>
   <div>For a pdf version of my CV <a href="./assets/cv.pdf" class="text-cyan-800">click here</a></div>
-  <div>CV updated July 2022</div>
+  <div>CV updated September 2022</div>
 </div>
 
 <section class="section leading-tight">

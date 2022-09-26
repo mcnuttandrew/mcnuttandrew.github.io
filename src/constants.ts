@@ -30,6 +30,11 @@ export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((x) => selectedPubs.has
 
 export const PRESENTATIONS: {title: string; details: string[]; links?: {name: string; link: string}[]}[] = [
   {
+    title: 'No Grammar to Rule Them All: A Survey of JSON-Style DSLs for Visualization',
+    details: ['IEEEVIS, October 19, 2022, Oklahoma City, Oklahoma.'],
+    links: []
+  },
+  {
     title: 'On The Potential of Zines as a Medium for Visualization',
     details: ['IEEEVIS, October 27, 2021, New Orleans, Louisiana. (Virtual)'],
     links: []
