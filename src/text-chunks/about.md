@@ -7,7 +7,7 @@ I'm interested in theories of visualization (and finding opportunities for the o
 <br/>
 In the near past I worked as a data visualization engineer for a variety of companies in San Francisco. 
 Before that I majored in physics at Reed College in Portland. 
-I am a fan of deserts, zines, buffalo, and bicycles.
+I am a fan of deserts, <a href="https://www.mcnutt.in/#/zines">zines</a>, buffalo, and bicycles.
 
 <br />
 <br />
