@@ -1,9 +1,11 @@
 import {PROJECTS as projectsImport} from './data/projects';
 import {NEWS as newsImport} from './data/news';
 import {PUBLICATIONS as pubsImport} from './data/publications';
+import zineImport from './data/zines';
 export const NEWS = newsImport;
 export const PROJECTS = projectsImport;
 export const PUBLICATIONS = pubsImport;
+export const ZINES = zineImport;
 /* eslint-disable max-len */
 
 export const COLLABORATOR_LINKS = {
