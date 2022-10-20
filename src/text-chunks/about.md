@@ -11,4 +11,4 @@ I am a fan of deserts, <a href="https://www.mcnutt.in/#/zines">zines</a>, buffal
 
 <br />
 <br />
-I'm currently on the academic job market looking for assistant professor and post doc roles in North America. Feel free drop me a line by email (mcnutt AT uchicago DOT edu) or on twitter (<a href="https://twitter.com/_mcnutt_/">@_mcnutt_</a>).
+I'm currently on the academic job market looking for assistant professor roles in North America. Feel free drop me a line by email (mcnutt AT uchicago DOT edu) or on twitter (<a href="https://twitter.com/_mcnutt_/">@_mcnutt_</a>).
