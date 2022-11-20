@@ -30,9 +30,6 @@
     <h3 class="text-xl">Visualization / HCI</h3>
     <h3 class="text-xl">UChicago CS</h3>
     <div class="flex align space-between">
-      <a class="mr-2" href="https://twitter.com/_mcnutt_"
-        ><img src="icons/twitter.svg" alt="link to twitter account" /></a
-      >
       <a class="mr-2" href="https://github.com/mcnuttandrew"
         ><img src="icons/github.svg" alt="link to github account" /></a
       >
