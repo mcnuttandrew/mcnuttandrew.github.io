@@ -14,7 +14,6 @@
     rotation.set(!$rotation ? 90 : 0);
   }
   const externalLinks = [
-    {link: 'https://twitter.com/_mcnutt_', name: 'twitter'},
     {link: 'https://scholar.google.com/citations?user=BFOrUoQAAAAJ', name: 'scholar'},
     {link: 'https://github.com/mcnuttandrew', name: 'github'}
   ];
