@@ -12,10 +12,10 @@ const content = [
   '<h3>Publications</h3>',
   '<ul>',
   constants.PUBLICATIONS.map(
-    ({link, title, authors, journal}) => `<li><a href=${link}>${title}</a>: ${authors}, ${journal}</li>`,
+    ({link, title, authors, journal}) => `<li><a href=${link}>${title}</a>: ${authors}, ${journal}</li>`
   ).join('\n'),
   '</ul>',
-  '<p>For more information please see the javascript enabled version of this site.</p>',
+  '<p>For more information please see the javascript enabled version of this site.</p>'
 ].join('\n');
 
 const noScriptContents = `
@@ -31,7 +31,6 @@ const noScriptContents = `
     <link rel="stylesheet" href="/build/bundle.css" />
 
     <script defer src="/build/bundle.js"></script>
-    <script async defer data-website-id="24ce20a6-4718-49ce-86e9-a0321146c163" src="https://tan-lytics.herokuapp.com/umami.js"></script>
   </head>
 
   <body>
