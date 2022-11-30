@@ -153,7 +153,7 @@ export const PUBLICATIONS: Publication[] = [
       'Zines are a form of small-circulation self-produced publication often akin to a magazine. This free-form medium has a long history and has been used as means for personal or intimate expression, as a way for marginalized people to describe issues that are important to them, and as a venue for graphical experimentation. It would seem then that zines would make an ideal vehicle for the recent interest in applying feminist or humanist ideas to visualization. Yet, there has been little work combining visualization and zines. In this paper we explore the potential of this intersection by analyzing examples of zines that use data graphics and by describing the pedagogical value that they can have in a visualization classroom. In doing so, we argue that there are plentiful opportunities for visualization research and practice in this rich intersectional-medium.',
     bibTex: `TODO`,
     type: 'conference / journal articles',
-    subtype: 'short conf.'
+    subtype: 'conference'
   },
   {
     link: 'https://arxiv.org/pdf/2104.04042.pdf',
