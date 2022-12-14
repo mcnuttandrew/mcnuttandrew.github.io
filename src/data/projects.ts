@@ -15,7 +15,7 @@ export const PROJECTS: Project[] = [
     sourceLink: 'https://github.com/mcnuttandrew/ivy',
     link: 'http://ivy-vis.netlify.app/',
     imgLink: 'converted-images/ivy.jpg',
-    text: 'A meta-level approach to visual analytics.',
+    text: "A meta-level approach to visual analytics. Information is Beautiful Awards '22 Long List.",
     tags: ['visualization', 'tech']
   },
   {
@@ -52,7 +52,7 @@ export const PROJECTS: Project[] = [
     sourceLink: 'https://github.com/mcnuttandrew/cycles-rain-seasons-in-size/',
     link: 'https://www.mcnutt.in/cycles-rain-seasons-in-size/',
     imgLink: 'converted-images/cycles-in-rain.jpg',
-    text: 'A little infographic about bicycle ridership in Seattle featuring table cartograms.',
+    text: "A little infographic about bicycle ridership in Seattle featuring table cartograms. Information is Beautiful Awards '19 Long List.",
     tags: ['visualization', 'art']
   },
   {
@@ -70,19 +70,19 @@ export const PROJECTS: Project[] = [
     sourceLink: 'https://github.com/mcnuttandrew/forum-explorer',
     link: 'https://www.mcnutt.in/forum-explorer/',
     imgLink: 'converted-images/forum-ex-pic.jpg',
-    text: 'A chrome extension and website that allows users to explore threaded conversations using trees.',
+    text: "A chrome extension and website that allows users to explore threaded conversations using trees.  Information is Beautiful Awards '19 Long List.",
     tags: ['visualization', 'tech']
   },
-  {
-    title: 'Readability As A Service',
-    dates: 'November 2018',
-    sourceLink: 'https://github.com/mcnuttandrew/flesch-kincaid-as-a-service',
-    link: 'https://www.mcnutt.in/flesch-kincaid-as-a-service/',
-    imgLink: 'converted-images/readability.jpg',
-    text: `Have you ever wanted specific numerical quantification on how readable
-    your prose is? This micro app wraps the textstat package as a webservice so that you can easily check.`,
-    tags: ['tech']
-  },
+  // {
+  //   title: 'Readability As A Service',
+  //   dates: 'November 2018',
+  //   sourceLink: 'https://github.com/mcnuttandrew/flesch-kincaid-as-a-service',
+  //   link: 'https://www.mcnutt.in/flesch-kincaid-as-a-service/',
+  //   imgLink: 'converted-images/readability.jpg',
+  //   text: `Have you ever wanted specific numerical quantification on how readable
+  //   your prose is? This micro app wraps the textstat package as a webservice so that you can easily check.`,
+  //   tags: ['tech']
+  // },
   {
     title: 'tap-react-browser',
     dates: 'Feburary - April 2018',
@@ -116,7 +116,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'Pantone: Color of the year',
-    dates: 'Updated yearly, starting 2016',
+    dates: 'Updated yearly, starting 2016-2020',
     link: 'http://www.mcnutt.in/color-of-the-year/',
     sourceLink: 'https://github.com/mcnuttandrew/color-of-the-year',
     imgLink: 'converted-images/color-of-year.jpg',
@@ -158,16 +158,16 @@ export const PROJECTS: Project[] = [
     imgLink: 'converted-images/tarot-image.jpg',
     text: 'A tarot tech themed around the signage and spirit of the American highway system.',
     tags: ['art']
-  },
-  {
-    title: 'Why Not Ipsum',
-    dates: 'September 2014',
-    link: 'http://why-not-ipsum.herokuapp.com/',
-    sourceLink: 'https://github.com/mcnuttandrew/Why-Not-Zoidberg',
-    imgLink: 'converted-images/why-not-image.jpg',
-    text: 'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning.',
-    tags: ['tech']
   }
+  // {
+  //   title: 'Why Not Ipsum',
+  //   dates: 'September 2014',
+  //   link: 'http://why-not-ipsum.herokuapp.com/',
+  //   sourceLink: 'https://github.com/mcnuttandrew/Why-Not-Zoidberg',
+  //   imgLink: 'converted-images/why-not-image.jpg',
+  //   text: 'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning.',
+  //   tags: ['tech']
+  // }
   // {
   //   title: 'Teacup',
   //   liveLink: 'http://tea-cup.org/',

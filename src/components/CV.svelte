@@ -1,21 +1,22 @@
 <script lang="ts">
   import Teaching from './Teaching.svelte';
-  import {PRESENTATIONS, PUBLICATIONS, AWARDS, REVEIWING, SERVICE} from '../constants';
+  import {PRESENTATIONS, PUBLICATIONS, AWARDS, REVIEWING, SERVICE} from '../constants';
   import Publication from './Publication.svelte';
+  import {marked} from 'marked';
 </script>
 
 <h1 class="text-2xl font-bold">Andrew McNutt</h1>
 <div class="leading-tight">
   <div>PhD Student at Univeristy of Chicago in Computer Science</div>
   <div>For a pdf version of my CV <a href="./assets/cv.pdf" class="text-cyan-800">click here</a></div>
-  <div>CV updated September 2022</div>
+  <div>CV updated December 2022</div>
 </div>
 
 <section class="section leading-tight">
   <h2 class="font-bold text-xl underline">Education</h2>
   <h3 class="font-bold">University of Chicago</h3>
   <div>PhD, Computer Science, 2017 - Present</div>
-  <div>Thesis: In Progress</div>
+  <div>Thesis: Understanding and Enhancing JSON-based DSL Interfaces for Visualization [In Progress]</div>
   <div>Advised by <a href="http://people.cs.uchicago.edu/~rchugh/" class="text-cyan-800">Ravi Chugh</a></div>
   <br />
   <h3 class="font-bold">University of Chicago</h3>
@@ -110,7 +111,7 @@
       <div class="flex flex-col mb-2">
         <span class="font-bold">{talk.title}</span>
         {#each talk.details as detail}
-          <span>{detail}</span>
+          <span>{@html marked(detail)}</span>
         {/each}
         <div class="flex">
           {#each talk.links || [] as link}
@@ -142,7 +143,7 @@
     <div class="flex flex-col">
       <span class="font-bold">Reviewing</span>
       <div class="flex flex-col">
-        {#each REVEIWING as review}
+        {#each REVIEWING as review}
           <span>{review}</span>
         {/each}
       </div>
