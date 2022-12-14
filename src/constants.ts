@@ -32,8 +32,19 @@ export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((x) => selectedPubs.has
 
 export const PRESENTATIONS: {title: string; details: string[]; links?: {name: string; link: string}[]}[] = [
   {
+    title: 'Understanding and Enhancing JSON-based DSL Interfaces for Visualization',
+    details: [
+      'Shandong University, November 15, 2022, Qingdao, China. (Virtual)',
+      'IEEE VIS Doctoral Colloquium, October 15, 2022, Oklahoma City, Oklahoma. '
+    ],
+    links: []
+  },
+  {
     title: 'No Grammar to Rule Them All: A Survey of JSON-Style DSLs for Visualization',
-    details: ['IEEEVIS, October 19, 2022, Oklahoma City, Oklahoma.'],
+    details: [
+      'IEEEVIS, October 19, 2022, Oklahoma City, Oklahoma.',
+      ' Microsoft Research, July 14, 2022, Redmond, Washington. (Virtual)'
+    ],
     links: []
   },
   {
@@ -50,8 +61,15 @@ export const PRESENTATIONS: {title: string; details: string[]; links?: {name: st
 
   {
     title: 'How do we know what a visualization is good for? Algebraic Approaches',
-    details: ['RAMPVIS, August 5, 2021, Oxford, England. (Virtual)'],
-    links: []
+    details: [
+      '[RAMPVIS](https://sites.google.com/view/rampvis/events?authuser=0), August 5, 2021, Oxford, England. (Virtual)'
+    ],
+    links: [
+      {
+        name: 'slides',
+        link: '(https://drive.google.com/file/d/1o9-7cBnQXfO8VTMS9V7MZ_5odwYVUkYw/view?usp=sharing'
+      }
+    ]
   },
 
   {
@@ -263,11 +281,31 @@ export const TEACHING = [
     link: 'https://www.classes.cs.uchicago.edu/archive/2022/winter/11111-1/'
   },
   {
+    title: 'Art with Science: Creative Coding',
+    date: 'Summer 2021',
+    role: 'Teaching Assistant',
+    location: 'Collegiate Scholars Program (Highschool students)',
+    link: 'https://www.classes.cs.uchicago.edu/archive/2021/summer/creative-coding/csp/'
+  },
+  {
+    title: 'Introduction to Creative Coding',
+    date: 'Summer 2021',
+    role: 'Teaching Assistant',
+    location: 'UChicago (Highschool students)',
+    link: 'https://www.classes.cs.uchicago.edu/archive/2021/summer/creative-coding/immersion/'
+  },
+  {
     title: 'CMSC 11111 - Creative Coding',
     date: 'Spring 2021',
     role: 'Teaching Assistant',
     location: 'UChicago',
     link: 'https://www.classes.cs.uchicago.edu/archive/2021/spring/11111-1/'
+  },
+  {
+    title: 'CMSC 23900 - Data Visualization',
+    date: 'Spring 2020',
+    role: 'Instructor',
+    location: 'UChicago'
   },
   {
     title: 'CAPP 30239 - Data Visualization For Public Policy',
@@ -284,12 +322,7 @@ export const TEACHING = [
   //   fancyTitle: 'Director',
   //   link: 'https://uchicago-vis-pl-lab.github.io/vis-reading-group/'
   // },
-  {
-    title: 'CMSC 23900 - Data Visualization',
-    date: 'Spring 2020',
-    role: 'Instructor',
-    location: 'UChicago'
-  },
+
   {
     title: 'CMSC 23900 - Data Visualization',
     date: 'Spring 2019',
@@ -413,9 +446,10 @@ export const SERVICE: {organization: string; date: string; role: string; link?: 
   }
 ];
 
-export const REVEIWING: string[] = [
+export const REVIEWING: string[] = [
   "VIS - Full Papers ('20, '21, '22), Short Papers ('20, '21), alt.vis ('21, '22), VisGuides ('22)",
-  "CHI - Full Papers (⭐ '21, ⭐⭐'22), alt.chi ('20), Late-Breaking Work ('22)",
+  "EuroVis - Full Papers ('23)",
+  "CHI - Full Papers (⭐ '21, ⭐⭐'22, ⭐⭐'23), alt.chi ('20), Late-Breaking Work ('22)",
   'UIST - Full Papers (⭐ `21)',
   'TVCG - Journal (`22)'
 ];

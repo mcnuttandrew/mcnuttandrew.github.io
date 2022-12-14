@@ -25,7 +25,8 @@ type linkType =
   | 'blog post'
   | 'award'
   | 'thesis'
-  | 'replicability badge';
+  | 'replicability badge'
+  | 'press';
 export interface Publication {
   link?: string;
   urlTitle: string;
@@ -55,9 +56,14 @@ export const PUBLICATIONS: Publication[] = [
     links: [
       {name: 'paper', link: 'https://arxiv.org/pdf/2207.07998.pdf'},
       {name: 'live', link: 'https://vis-json-dsls.netlify.app/'},
+      {name: 'talk', link: 'https://youtu.be/GMy2QCE-y7o?t=3783'},
       {
         name: 'replicability badge',
         link: 'http://www.replicabilitystamp.org/#https-github-com-mcnuttandrew-no-grammar-supplement'
+      },
+      {
+        name: 'press',
+        link: 'https://mcorrell.medium.com/visualization-in-the-wild-a-trip-report-from-vis-2022-c42311b95f28'
       }
     ],
     abstract:
@@ -96,6 +102,10 @@ export const PUBLICATIONS: Publication[] = [
       {
         name: 'replicability badge',
         link: 'https://naacl2022-reproducibility-track.github.io/results/'
+      },
+      {
+        name: 'code',
+        link: 'https://github.com/UChicagoSUPERgroup/rationales-naacl22'
       }
     ],
     abstract:
@@ -112,7 +122,10 @@ export const PUBLICATIONS: Publication[] = [
     authors: 'Andrew McNutt, Lilian Huang, Kathryn Koenig',
     journal: 'alt.vis',
     date: 'October 2021',
-    links: [{name: 'paper', link: 'https://arxiv.org/abs/2109.06007'}],
+    links: [
+      {name: 'paper', link: 'https://arxiv.org/abs/2109.06007'},
+      {name: 'talk', link: 'https://youtu.be/jFbsYto_2ys?t=1471'}
+    ],
     abstract:
       'Visualization has long been seen as a dependable and trustworthy tool for carrying out analysis and communication tasks -- a view reinforced by the growing interest in applying it to socially positive ends. However, despite the benign light in which visualization is usually perceived, it carries the potential to do harm to people, places, concepts, and things. In this paper, we capitalize on this negative potential to serve an underrepresented (but technologically engaged) group: villains. To achieve these ends, we introduce a design space for this type of graphical violence, which allows us to unify prior work on deceptive visualization with novel data-driven dastardly deeds, such as emotional spear phishing and unsafe data physicalization. By charting this vile charting landscape, we open new doors to collaboration with terrifying domain experts, and hopefully, make the world just a bit worse.',
     bibTex: `TODO`,
@@ -128,7 +141,10 @@ export const PUBLICATIONS: Publication[] = [
     authors: 'Will Brackenbury, Andrew McNutt, Kyle Chard, Aaron Elmore, Blase Ur',
     journal: 'ACM UIST',
     date: 'October 2021',
-    links: [{name: 'paper', link: 'https://dl.acm.org/doi/10.1145/3472749.3474736'}],
+    links: [
+      {name: 'paper', link: 'https://dl.acm.org/doi/10.1145/3472749.3474736'},
+      {name: 'code', link: 'https://github.com/wbrackenbury/KondoCloud'}
+    ],
     abstract:
       "Users face many challenges in keeping their personal file collections organized. While current file-management interfaces help users retrieve files in disorganized repositories, they do not aid in organization. Pertinent files can be difficult to find, and files that should have been deleted may remain. To help, we designed KondoCloud, a file-browser interface for personal cloud storage. KondoCloud makes machine learning-based recommendations of files users may want to retrieve, move, or delete. These recommendations leverage the intuition that similar files should be managed similarly.<br/><br/>We developed and evaluated KondoCloud through two complementary online user studies. In our Observation Study, we logged the actions of 69 participants who spent 30 minutes manually organizing their own Google Drive repositories. We identified high-level organizational strategies, including moving related files to newly created sub-folders and extensively deleting files. To train the classifiers that underpin KondoCloud's recommendations, we had participants label whether pairs of files were similar and whether they should be managed similarly. In addition, we extracted ten metadata and content features from all files in participants' repositories. Our logistic regression classifiers all achieved F1 scores of 0.72 or higher. In our Evaluation Study, 62 participants used KondoCloud either with or without recommendations. Roughly half of participants accepted a non-trivial fraction of recommendations, and some participants accepted nearly all of them. Participants who were shown the recommendations were more likely to delete related files located in different directories. They also generally felt the recommendations improved efficiency. Participants who were not shown recommendations nonetheless manually performed about a third of the actions that would have been recommended.",
     bibTex: `TODO`,
