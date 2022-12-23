@@ -89,10 +89,7 @@ export const PROJECTS: Project[] = [
     link: 'https://github.com/mcnuttandrew/tap-react-browser/',
     sourceLink: 'https://github.com/mcnuttandrew/tap-react-browser/',
     imgLink: 'converted-images/tap-react-browser.jpg',
-    text: `In the process of building a variety of javascipt libraries in the course of
-    my graduate research, I found myself needing a testing tool that played a particular
-    role in relation to the browser, so I made one! tap-react-browser is a light
-    wrapper on tape that spits out react components.`,
+    text: `A lightweight wrapper on tape that spits out react components.`,
     tags: ['tech']
   },
   {
@@ -132,15 +129,15 @@ export const PROJECTS: Project[] = [
     text: 'A charting library for the react ecosystem.',
     tags: ['visualization', 'tech']
   },
-  {
-    title: 'CSV Conversion',
-    dates: 'December 2016',
-    link: 'http://www.mcnutt.in/csv-conversion/',
-    sourceLink: 'https://github.com/mcnuttandrew/csv-conversion',
-    imgLink: 'converted-images/csv-conversion.jpg',
-    text: 'A handy client-side csv to json converter. I built this little app, because my favorite conversion site got knocked down and I wanted to improve the UI.',
-    tags: ['tech']
-  },
+  // {
+  //   title: 'CSV Conversion',
+  //   dates: 'December 2016',
+  //   link: 'http://www.mcnutt.in/csv-conversion/',
+  //   sourceLink: 'https://github.com/mcnuttandrew/csv-conversion',
+  //   imgLink: 'converted-images/csv-conversion.jpg',
+  //   text: 'A handy client-side csv to json converter. I built this little app, because my favorite conversion site got knocked down and I wanted to improve the UI.',
+  //   tags: ['tech']
+  // },
   // {
   //   title: 'Personal Timeline',
   //   dates: 'June 2016',
