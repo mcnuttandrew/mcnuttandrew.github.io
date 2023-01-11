@@ -335,7 +335,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
   },
   // link to award: https://rcc.uchicago.edu/about-rcc/news-features/mind-bytes-2019-tipping-point-computational-and-ai-research
   {
-    link: 'assets/forum-explorer-paper.pdf',
+    link: 'https://diglib.eg.org/xmlui/bitstream/handle/10.2312/eurp20191144/053-055.pdf',
     imgLink: 'converted-images/forested-tree-view-example.jpg',
     title:
       'Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations',
