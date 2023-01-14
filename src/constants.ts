@@ -184,6 +184,11 @@ export const BLOG_POSTS = [
 
 export const AWARDS: {society: string; date: string; awardName: string; detail?: string}[] = [
   {
+    society: 'ACM SIGCHI',
+    date: '2023',
+    awardName: 'Special Recognition for Outstanding Review x3'
+  },
+  {
     society: 'Siebel',
     date: '2023',
     awardName: 'Siebel Scholars Class of 2023'
@@ -449,7 +454,7 @@ export const SERVICE: {organization: string; date: string; role: string; link?: 
 export const REVIEWING: string[] = [
   "VIS - Full Papers ('20, '21, '22), Short Papers ('20, '21), alt.vis ('21, '22), VisGuides ('22)",
   "EuroVis - Full Papers ('23)",
-  "CHI - Full Papers (⭐ '21, ⭐⭐'22, ⭐⭐'23), alt.chi ('20), Late-Breaking Work ('22)",
+  "CHI - Full Papers (⭐ '21, ⭐⭐'22, ⭐⭐⭐'23), alt.chi ('20), Late-Breaking Work ('22)",
   'UIST - Full Papers (⭐ `21)',
   'TVCG - Journal (`22)'
 ];
