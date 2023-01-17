@@ -46,6 +46,34 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
+    link: '',
+    urlTitle: 'ai-4-notebooks',
+    imgLink: 'converted-images/meta-cells-image.jpg',
+    title: 'On the Design of AI-powered Code Assistants for Notebooks',
+    authors: 'Andrew McNutt, Chenglong Wang, Rob De Line, Steven M. Drucker',
+    journal: 'ACM CHI',
+    date: 'April 2023',
+    links: [],
+    abstract: 'Abstract to appear',
+    bibTex: `TODO`,
+    type: 'conference / journal articles',
+    subtype: 'conference'
+  },
+  {
+    link: '',
+    urlTitle: 'ai-4-notebooks',
+    imgLink: 'converted-images/sauce-image.jpg',
+    title: 'A Study of Editor Features in a Creative Coding Classroom',
+    authors: 'Andrew McNutt, Anton Outkine, Ravi Chugh',
+    journal: 'ACM CHI',
+    date: 'April 2023',
+    links: [],
+    abstract: 'Abstract to appear',
+    bibTex: `TODO`,
+    type: 'conference / journal articles',
+    subtype: 'conference'
+  },
+  {
     link: 'https://arxiv.org/pdf/2207.07998.pdf',
     urlTitle: 'no-grammar',
     imgLink: 'converted-images/no-grammar.jpg',
