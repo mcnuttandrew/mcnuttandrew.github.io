@@ -1,5 +1,9 @@
 export const NEWS = [
   {
+    date: 'January 2023',
+    content: 'Thrilled to have two (first-author) papers accepted to CHI 2023!!'
+  },
+  {
     date: 'September 2022',
     content:
       'Honored to be named to [Siebel Scholars](https://cs.uchicago.edu/news/five-uchicago-cs-students-named-to-siebel-scholars-2023-class/) class of 2023!'
