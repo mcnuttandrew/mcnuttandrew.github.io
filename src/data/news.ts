@@ -1,7 +1,7 @@
 export const NEWS = [
   {
     date: 'January 2023',
-    content: 'Thrilled to have two (first-author) papers accepted to CHI 2023!!'
+    content: 'Thrilled to have two (first-author) papers  accepted to CHI 2023!!'
   },
   {
     date: 'September 2022',
