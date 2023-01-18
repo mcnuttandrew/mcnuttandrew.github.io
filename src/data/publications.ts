@@ -50,7 +50,7 @@ export const PUBLICATIONS: Publication[] = [
     urlTitle: 'ai-4-notebooks',
     imgLink: 'converted-images/meta-cells-image.jpg',
     title: 'On the Design of AI-powered Code Assistants for Notebooks',
-    authors: 'Andrew McNutt, Chenglong Wang, Rob De Line, Steven M. Drucker',
+    authors: 'Andrew McNutt, Chenglong Wang, Rob DeLine, Steven M. Drucker',
     journal: 'ACM CHI 2023 (Conditional Acceptance)',
     date: '',
     links: [],
