@@ -51,7 +51,7 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: 'converted-images/meta-cells-image.jpg',
     title: 'On the Design of AI-powered Code Assistants for Notebooks',
     authors: 'Andrew McNutt, Chenglong Wang, Rob De Line, Steven M. Drucker',
-    journal: '(Conditional Acceptance) ACM CHI 2023',
+    journal: 'ACM CHI 2023 (Conditional Acceptance)',
     date: '',
     links: [],
     abstract: `AI-powered code assistants, such as Copilot, are quickly becoming a ubiquitous component of contemporary coding contexts. Among these environments, computational notebooks, such as Jupyter, are of particular interest as they provide rich interface affordances that interleave code and output in a manner that allows for both exploratory and presentational work. Despite their popularity, little is known about the appropriate design of code assistants in notebooks. We investigate the potential of code assistants in computational notebooks by creating a design space (reified from a survey of extant tools) and through an interview-design study (with 15 practicing data scientists). Through this work, we identify challenges and opportunities for future systems in this space, such as the value of disambiguation for tasks like data visualization, the potential of tightly scoped domain-specific tools (like linters), and the importance of polite assistants.`,
@@ -65,7 +65,7 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: 'converted-images/sauce-image.jpg',
     title: 'A Study of Editor Features in a Creative Coding Classroom',
     authors: 'Andrew McNutt, Anton Outkine, Ravi Chugh',
-    journal: '(Conditional Acceptance) ACM CHI 2023',
+    journal: 'ACM CHI 2023 (Conditional Acceptance)',
     date: '',
     links: [],
     abstract:
@@ -295,7 +295,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     authors: 'Andrew McNutt, Gordon Kindlmann, Michael Correll',
     // journal:
     //   'Proceedings of the 2020 ACM annual conference on Human Factors in Computing Systems <br/> 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)',
-    journal: 'ACM CHI 2020 <br/> 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)',
+    journal: 'ACM CHI 2020 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)',
     date: '',
     links: [
       {name: 'about', link: '#/research/mirage'},
@@ -346,7 +346,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     urlTitle: 'goethe-poster',
     title: 'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
     authors: 'Agatha Seo-Hyun Kim, Andrew McNutt, Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
-    journal: 'MindBytes Research Symposium 2019. <br/> 🏆 Best Poster in Visualization 🏆',
+    journal: 'MindBytes Research Symposium 2019. 🏆 Best Poster in Visualization 🏆',
     date: '',
     links: [
       {name: 'poster', link: 'assets/posterkim102519.pdf'},

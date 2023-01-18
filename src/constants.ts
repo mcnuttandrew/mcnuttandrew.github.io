@@ -9,22 +9,25 @@ export const ZINES = zineImport;
 /* eslint-disable max-len */
 
 export const COLLABORATOR_LINKS = {
+  'Aaron Elmore': 'http://people.cs.uchicago.edu/~aelmore/',
   'Agatha Seo-Hyun Kim': 'https://history.uchicago.edu/directory/agatha-kim',
   'Alex M. Clark': 'https://scholar.google.com/citations?user=4Gv4PboAAAAJ&hl=en',
   'Allison Morgan': 'https://allisonmorgan.github.io/',
   'Anamaria Crisan': 'https://amcrisan.github.io/',
+  'Blase Ur': 'https://www.blaseur.com/',
+  'Chenglong Wang': 'https://chenglongwang.org/',
   'Gordon Kindlmann': 'http://people.cs.uchicago.edu/~glk/',
   'Joel Franklin': 'http://people.reed.edu/~jfrankli/',
   'Krishna Dole': 'https://scholar.google.com/citations?user=J4TpF1YAAAAJ&hl=en',
+  'Kyle Chard': 'https://kylechard.com/',
   'Michael Correll': 'https://correll.io/',
   'Nelia Mann': 'https://www.union.edu/physics-and-astronomy/faculty-staff/nelia-mann',
   'Ravi Chugh': 'http://people.cs.uchicago.edu/~rchugh/',
+  'Rob De Line': 'https://www.microsoft.com/en-us/research/people/rdeline/',
   'Sean Ekins': 'https://scholar.google.com/citations?user=6NNfXAMAAAAJ&hl=en',
+  'Steven M. Drucker': 'https://stevenmdrucker.github.io/#/',
   'Varchas Gopalaswamy': 'https://scholar.google.com/citations?user=PxH1Z7kAAAAJ&hl=en',
-  'Will Brackenbury': 'https://wbrackenbury.github.io/',
-  'Blase Ur': 'https://www.blaseur.com/',
-  'Aaron Elmore': 'http://people.cs.uchicago.edu/~aelmore/',
-  'Kyle Chard': 'https://kylechard.com/'
+  'Will Brackenbury': 'https://wbrackenbury.github.io/'
 };
 
 const selectedPubs = new Set(['no-grammar', 'tacos', 'ivy', 'mirage', 'sauce', 'ai-4-notebooks']);
