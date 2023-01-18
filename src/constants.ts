@@ -27,7 +27,7 @@ export const COLLABORATOR_LINKS = {
   'Kyle Chard': 'https://kylechard.com/'
 };
 
-const selectedPubs = new Set(['no-grammar', 'tacos', 'ivy', 'mirage']);
+const selectedPubs = new Set(['no-grammar', 'tacos', 'ivy', 'mirage', 'sauce', 'ai-4-notebooks']);
 export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((x) => selectedPubs.has(x.urlTitle));
 
 export const PRESENTATIONS: {title: string; details: string[]; links?: {name: string; link: string}[]}[] = [
