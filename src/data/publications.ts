@@ -51,24 +51,25 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: 'converted-images/meta-cells-image.jpg',
     title: 'On the Design of AI-powered Code Assistants for Notebooks',
     authors: 'Andrew McNutt, Chenglong Wang, Rob De Line, Steven M. Drucker',
-    journal: 'ACM CHI (Conditional Acceptance)',
-    date: 'April 2023',
+    journal: '(Conditional Acceptance) ACM CHI 2023',
+    date: '',
     links: [],
-    abstract: 'Abstract to appear',
+    abstract: `AI-powered code assistants, such as Copilot, are quickly becoming a ubiquitous component of contemporary coding contexts. Among these environments, computational notebooks, such as Jupyter, are of particular interest as they provide rich interface affordances that interleave code and output in a manner that allows for both exploratory and presentational work. Despite their popularity, little is known about the appropriate design of code assistants in notebooks. We investigate the potential of code assistants in computational notebooks by creating a design space (reified from a survey of extant tools) and through an interview-design study (with 15 practicing data scientists). Through this work, we identify challenges and opportunities for future systems in this space, such as the value of disambiguation for tasks like data visualization, the potential of tightly scoped domain-specific tools (like linters), and the importance of polite assistants.`,
     bibTex: `TODO`,
     type: 'conference / journal articles',
     subtype: 'conference'
   },
   {
     link: '',
-    urlTitle: 'ai-4-notebooks',
+    urlTitle: 'sauce',
     imgLink: 'converted-images/sauce-image.jpg',
     title: 'A Study of Editor Features in a Creative Coding Classroom',
     authors: 'Andrew McNutt, Anton Outkine, Ravi Chugh',
-    journal: 'ACM CHI (Conditional Acceptance)',
-    date: 'April 2023',
+    journal: '(Conditional Acceptance) ACM CHI 2023',
+    date: '',
     links: [],
-    abstract: 'Abstract to appear',
+    abstract:
+      'Creative coding is a rapidly expanding domain for both artistic expression and computational education. Numerous libraries and IDEs support creative coding, however there has been little consideration of how the environments themselves might be designed to serve these twin goals. To investigate this gap, we implemented and used an experimental editor to teach a sequence of college and high-school creative coding courses. In the first year, we conducted a log analysis of student work (n=39) and surveys regarding prospective features (n=25). These guided our implementation of common enhancements (e.g. color pickers) as well as uncommon ones (e.g. bidirectional shape editing). In the second year, we studied the effects of these features through logging (n=39+) and survey (n=23) studies. Reflecting on the results, we identify opportunities to improve creativity- and novice-focused IDEs and highlight tensions in their design (as in tools that augment artistry or efficiency but may hinder learning).',
     bibTex: `TODO`,
     type: 'conference / journal articles',
     subtype: 'conference'
@@ -79,8 +80,8 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: 'converted-images/no-grammar.jpg',
     title: 'No Grammar to Rule Them All: A Survey of JSON-Style DSLs for Visualization',
     authors: 'Andrew McNutt',
-    journal: 'IEEE VIS',
-    date: 'October 2022',
+    journal: 'IEEE VIS 2022',
+    date: '',
     links: [
       {name: 'paper', link: 'https://arxiv.org/pdf/2207.07998.pdf'},
       {name: 'live', link: 'https://vis-json-dsls.netlify.app/'},
@@ -123,8 +124,8 @@ export const PUBLICATIONS: Publication[] = [
       'Explaining Why: How Instructions and User Interfaces Impact Annotator Rationales When Labeling Text Data',
     authors:
       'Jamar L. Sullivan, Will Brackenbury, Andrew McNutt, Kevin Bryson, Kwam Byll, Yuxin Chen, Michael Littman, Chenhao Tan, Blase Ur',
-    journal: 'NAACL',
-    date: 'July 2022',
+    journal: 'NAACL 2022',
+    date: '',
     links: [
       {name: 'paper', link: 'https://www.blaseur.com/papers/rationales-naacl22.pdf'},
       {
@@ -148,8 +149,8 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: 'converted-images/villainy.jpg',
     title: 'Visualization for Villainy',
     authors: 'Andrew McNutt, Lilian Huang, Kathryn Koenig',
-    journal: 'alt.vis',
-    date: 'October 2021',
+    journal: 'alt.vis 2021',
+    date: '',
     links: [
       {name: 'paper', link: 'https://arxiv.org/abs/2109.06007'},
       {name: 'talk', link: 'https://youtu.be/jFbsYto_2ys?t=1471'}
@@ -167,8 +168,8 @@ export const PUBLICATIONS: Publication[] = [
     title:
       'KondoCloud: Improving Information Management in Cloud Storage via Recommendations Based on File Similarity',
     authors: 'Will Brackenbury, Andrew McNutt, Kyle Chard, Aaron Elmore, Blase Ur',
-    journal: 'ACM UIST',
-    date: 'October 2021',
+    journal: 'ACM UIST 2021',
+    date: '',
     links: [
       {name: 'paper', link: 'https://dl.acm.org/doi/10.1145/3472749.3474736'},
       {name: 'code', link: 'https://github.com/wbrackenbury/KondoCloud'}
@@ -186,8 +187,8 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: 'converted-images/zine-potential.jpg',
     title: 'On The Potential of Zines as a Medium for Visualization',
     authors: 'Andrew McNutt',
-    journal: 'IEEE VIS Short Papers',
-    date: 'October 2021',
+    journal: 'IEEE VIS 2021 (Short Papers)',
+    date: '',
     links: [
       {name: 'about', link: 'https://www.mcnutt.in/zine-potential'},
       {name: 'paper', link: 'https://arxiv.org/abs/2108.02177'},
@@ -205,8 +206,8 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: 'converted-images/tacos.jpg',
     title: 'What are Table Cartograms Good for Anyway? An Algebraic Analysis',
     authors: 'Andrew McNutt',
-    journal: 'EuroVis 🏆 Honorable Mention for Best Paper 🏆 (Juried Selection, 1 awarded)',
-    date: 'June 2021',
+    journal: 'EuroVis 2021 🏆 Honorable Mention for Best Paper 🏆 (Juried Selection, 1 awarded)',
+    date: '',
     links: [
       {name: 'about', link: '#/research/tacos'},
       {name: 'paper', link: 'https://arxiv.org/pdf/2104.04042.pdf'},
@@ -225,8 +226,8 @@ export const PUBLICATIONS: Publication[] = [
     title: 'Integrated Visualization Editing via Parameterized Declarative Templates',
     authors: 'Andrew McNutt, Ravi Chugh',
     // journal: 'Proceedings of the 2021 ACM annual conference on Human Factors in Computing Systems',
-    journal: 'ACM CHI',
-    date: 'May 2021',
+    journal: 'ACM CHI 2021',
+    date: '',
     links: [
       {name: 'about', link: '#/research/ivy'},
       {name: 'live', link: 'https://github.com/mcnuttandrew/ivy'},
@@ -250,8 +251,8 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     title:
       'Supporting Expert Close Analysis of Historical Scientific Writings: A Case Study for Near-by Reading',
     authors: 'Andrew McNutt, Agatha Seo-Hyun Kim, Sergio Elahi, Kazutaka Takahashi',
-    journal: '2020 IEEE 5th Workshop on Visualization for the Digital Humanities (VIS4DH)',
-    date: 'October 2020',
+    journal: 'Visualization for the Digital Humanities (VIS4DH) 2020',
+    date: '',
     links: [
       {name: 'about', link: '#/research/nearby'},
       {name: 'paper', link: 'https://arxiv.org/pdf/2009.02384.pdf'},
@@ -272,7 +273,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     authors: 'Andrew McNutt, Gordon Kindlmann',
     journal:
       'VIS 2020 - InfoVIS Poster Track 🏆 Honorable Mention for Best Poster Research 🏆 (Juried Selection, 2 awarded)',
-    date: 'October 2020',
+    date: '',
     links: [
       {name: 'about', link: '#/research/table-cartogram'},
       {name: 'paper', link: 'https://osf.io/kem6j/'},
@@ -294,8 +295,8 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     authors: 'Andrew McNutt, Gordon Kindlmann, Michael Correll',
     // journal:
     //   'Proceedings of the 2020 ACM annual conference on Human Factors in Computing Systems <br/> 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)',
-    journal: 'ACM CHI <br/> 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)',
-    date: 'April 2020',
+    journal: 'ACM CHI 2020 <br/> 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)',
+    date: '',
     links: [
       {name: 'about', link: '#/research/mirage'},
       {
@@ -321,8 +322,8 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     urlTitle: 'tarot',
     title: 'Divining Insights: Visual Analytics Through Cartomancy',
     authors: 'Andrew McNutt, Anamaria Crisan, Michael Correll',
-    journal: 'alt.CHI',
-    date: 'April 2020',
+    journal: 'alt.CHI 2020',
+    date: '',
     links: [
       {name: 'about', link: '#/research/tarot'},
       {
@@ -345,8 +346,8 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     urlTitle: 'goethe-poster',
     title: 'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
     authors: 'Agatha Seo-Hyun Kim, Andrew McNutt, Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
-    journal: 'MindBytes Research Symposium. <br/> 🏆 Best Poster in Visualization 🏆',
-    date: 'November 2019',
+    journal: 'MindBytes Research Symposium 2019. <br/> 🏆 Best Poster in Visualization 🏆',
+    date: '',
     links: [
       {name: 'poster', link: 'assets/posterkim102519.pdf'},
       // {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'},
@@ -370,8 +371,8 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     authors: 'Andrew McNutt, Gordon Kindlmann',
     urlTitle: 'forum-explorer-eurovis',
     // journal: 'Proceedings of the Eurographics Conference on Visualization "EuroVis" - Posters',
-    journal: 'EuroVis - Posters',
-    date: 'June 2019',
+    journal: 'EuroVis 2019 (Posters)',
+    date: '',
     links: [
       {name: 'paper', link: 'https://diglib.eg.org/xmlui/bitstream/handle/10.2312/eurp20191144/053-055.pdf'},
       {name: 'poster', link: 'assets/forum-explorer-poster.pdf'},
@@ -398,8 +399,8 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     title: 'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
     authors: 'Andrew McNutt, Gordon Kindlmann',
     journal:
-      '2nd IEEE VIS Workshop on Creation, Curation, Critique and Conditioning of Principles and Guidelines in Visualization ("VisGuides")',
-    date: 'October 2018',
+      'IEEE VIS Workshop on Creation, Curation, Critique and Conditioning of Principles and Guidelines in Visualization (VisGuides 2018)',
+    date: '',
     links: [
       {name: 'paper', link: 'assets/McNutt_Kindlmann_2018.pdf'},
       {name: 'code', link: 'https://github.com/mcnuttandrew/vislint_mpl'},

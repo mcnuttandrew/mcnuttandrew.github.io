@@ -11,7 +11,7 @@
   </div>
 
   <h2 class="text-2xl font-bold italic">SELECTED PUBLICATIONS</h2>
-  <div>Some highlights of my recent research work</div>
+  <div class="mb-8">Some highlights of my recent research work</div>
   {#each SELECTED_PUBLICATIONS as pub}
     <Publication publication={pub} />
   {/each}
