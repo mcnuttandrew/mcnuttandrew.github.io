@@ -23,7 +23,7 @@ export const COLLABORATOR_LINKS = {
   'Michael Correll': 'https://correll.io/',
   'Nelia Mann': 'https://www.union.edu/physics-and-astronomy/faculty-staff/nelia-mann',
   'Ravi Chugh': 'http://people.cs.uchicago.edu/~rchugh/',
-  'Rob De Line': 'https://www.microsoft.com/en-us/research/people/rdeline/',
+  'Rob DeLine': 'https://www.microsoft.com/en-us/research/people/rdeline/',
   'Sean Ekins': 'https://scholar.google.com/citations?user=6NNfXAMAAAAJ&hl=en',
   'Steven M. Drucker': 'https://stevenmdrucker.github.io/#/',
   'Varchas Gopalaswamy': 'https://scholar.google.com/citations?user=PxH1Z7kAAAAJ&hl=en',
