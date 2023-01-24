@@ -162,7 +162,7 @@ export const PUBLICATIONS: Publication[] = [
     subtype: 'workshop'
   },
   {
-    link: 'https://dl.acm.org/doi/10.1145/3472749.3474736',
+    link: 'https://www.blaseur.com/papers/uist21-kondocloud.pdf',
     urlTitle: 'kondoCloud',
     imgLink: 'converted-images/kondo.jpg',
     title:
@@ -171,7 +171,7 @@ export const PUBLICATIONS: Publication[] = [
     journal: 'ACM UIST 2021',
     date: '',
     links: [
-      {name: 'paper', link: 'https://dl.acm.org/doi/10.1145/3472749.3474736'},
+      {name: 'paper', link: 'https://www.blaseur.com/papers/uist21-kondocloud.pdf'},
       {name: 'code', link: 'https://github.com/wbrackenbury/KondoCloud'}
     ],
     abstract:
