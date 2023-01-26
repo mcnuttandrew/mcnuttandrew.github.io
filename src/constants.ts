@@ -27,7 +27,12 @@ export const COLLABORATOR_LINKS = {
   'Sean Ekins': 'https://scholar.google.com/citations?user=6NNfXAMAAAAJ&hl=en',
   'Steven M. Drucker': 'https://stevenmdrucker.github.io/#/',
   'Varchas Gopalaswamy': 'https://scholar.google.com/citations?user=PxH1Z7kAAAAJ&hl=en',
-  'Will Brackenbury': 'https://wbrackenbury.github.io/'
+  'Will Brackenbury': 'https://wbrackenbury.github.io/',
+  'Chenhao Tan': 'https://chenhaot.com/',
+  'Yuxin Chen': 'https://yuxinchen.org/',
+  'Kevin Bryson': 'https://cmdkev.github.io/about/',
+  'Michael Littman': 'https://www.littmania.com/',
+  'Anton Outkine': 'https://antonoutkine.com/'
 };
 
 const selectedPubs = new Set(['no-grammar', 'tacos', 'ivy', 'mirage', 'sauce', 'ai-4-notebooks']);
