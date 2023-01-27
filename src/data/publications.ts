@@ -46,14 +46,14 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
-    link: '',
+    link: 'https://arxiv.org/list/cs.HC/recent',
     urlTitle: 'ai-4-notebooks',
     imgLink: 'converted-images/meta-cells-image.jpg',
     title: 'On the Design of AI-powered Code Assistants for Notebooks',
     authors: 'Andrew McNutt, Chenglong Wang, Rob DeLine, Steven M. Drucker',
     journal: 'ACM CHI 2023 (Conditional Acceptance)',
     date: '',
-    links: [],
+    links: [{name: 'paper', link: 'https://arxiv.org/list/cs.HC/recent'}],
     abstract: `AI-powered code assistants, such as Copilot, are quickly becoming a ubiquitous component of contemporary coding contexts. Among these environments, computational notebooks, such as Jupyter, are of particular interest as they provide rich interface affordances that interleave code and output in a manner that allows for both exploratory and presentational work. Despite their popularity, little is known about the appropriate design of code assistants in notebooks. We investigate the potential of code assistants in computational notebooks by creating a design space (reified from a survey of extant tools) and through an interview-design study (with 15 practicing data scientists). Through this work, we identify challenges and opportunities for future systems in this space, such as the value of disambiguation for tasks like data visualization, the potential of tightly scoped domain-specific tools (like linters), and the importance of polite assistants.`,
     bibTex: `TODO`,
     type: 'conference / journal articles',
@@ -67,7 +67,7 @@ export const PUBLICATIONS: Publication[] = [
     authors: 'Andrew McNutt, Anton Outkine, Ravi Chugh',
     journal: 'ACM CHI 2023 (Conditional Acceptance)',
     date: '',
-    links: [],
+    links: [{name: 'live', link: 'https://people.cs.uchicago.edu/~rchugh/classes/creative-coding/'}],
     abstract:
       'Creative coding is a rapidly expanding domain for both artistic expression and computational education. Numerous libraries and IDEs support creative coding, however there has been little consideration of how the environments themselves might be designed to serve these twin goals. To investigate this gap, we implemented and used an experimental editor to teach a sequence of college and high-school creative coding courses. In the first year, we conducted a log analysis of student work (n=39) and surveys regarding prospective features (n=25). These guided our implementation of common enhancements (e.g. color pickers) as well as uncommon ones (e.g. bidirectional shape editing). In the second year, we studied the effects of these features through logging (n=39+) and survey (n=23) studies. Reflecting on the results, we identify opportunities to improve creativity- and novice-focused IDEs and highlight tensions in their design (as in tools that augment artistry or efficiency but may hinder learning).',
     bibTex: `TODO`,
