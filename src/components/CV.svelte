@@ -7,7 +7,7 @@
 
 <h1 class="text-2xl font-bold">Andrew McNutt</h1>
 <div class="leading-tight">
-  <div>PhD Student at Univeristy of Chicago in Computer Science</div>
+  <div>PhD Student at University of Chicago in Computer Science</div>
   <div>For a pdf version of my CV <a href="./assets/cv.pdf" class="text-cyan-800">click here</a></div>
   <div>CV updated January 2023</div>
 </div>

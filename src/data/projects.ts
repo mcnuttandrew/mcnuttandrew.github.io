@@ -85,7 +85,7 @@ export const PROJECTS: Project[] = [
   // },
   {
     title: 'tap-react-browser',
-    dates: 'Feburary - April 2018',
+    dates: 'February - April 2018',
     link: 'https://github.com/mcnuttandrew/tap-react-browser/',
     sourceLink: 'https://github.com/mcnuttandrew/tap-react-browser/',
     imgLink: 'converted-images/tap-react-browser.jpg',
@@ -117,7 +117,7 @@ export const PROJECTS: Project[] = [
     link: 'http://www.mcnutt.in/color-of-the-year/',
     sourceLink: 'https://github.com/mcnuttandrew/color-of-the-year',
     imgLink: 'converted-images/color-of-year.jpg',
-    text: 'A small exploration of the glory and wonder that is pantones color of the year.',
+    text: `A small exploration of the glory and wonder that is Pantone's color of the year.`,
     tags: ['visualization']
   },
   {

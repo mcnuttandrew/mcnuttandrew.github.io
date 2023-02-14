@@ -30,7 +30,7 @@ export const NEWS = [
   {
     date: 'March 2022',
     content:
-      'Quite excited to be serving on the organizing committe for [alt.vis](https://altvis.github.io/) this year!'
+      'Quite excited to be serving on the organizing committee for [alt.vis](https://altvis.github.io/) this year!'
   },
   {
     date: 'February 2022',
@@ -88,7 +88,7 @@ export const NEWS = [
       'Our paper ["Surfacing Visualization Mirages"](https://www.mcnutt.in/#/research/mirage) won a best paper honorable mention🏆 at CHI2020!!'
   },
   {
-    date: 'Feburary 2020',
+    date: 'February 2020',
     content:
       'Our paper on using tarot for visual analytics ["Divining Insights: Visual Analytics Through Cartomancy"](https://www.mcnutt.in/#/research/tarot) was accepted to alt.chi 2020'
   },
@@ -104,7 +104,7 @@ export const NEWS = [
   {
     date: 'November 2019',
     content:
-      'Our poster on using graph visualizations to compare 19th century scentific writing was shown at both MindBytes (where it won best poster!) and the 2019 Chicago Colloquium on Digital Humanities.'
+      'Our poster on using graph visualizations to compare 19th century scientific writing was shown at both MindBytes (where it won best poster!) and the 2019 Chicago Colloquium on Digital Humanities.'
   },
   {
     date: 'October 2019',
