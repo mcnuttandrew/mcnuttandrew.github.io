@@ -149,13 +149,6 @@ export const PRESENTATIONS: {title: string; details: string[]; links?: {name: st
   //   title: 'Nonequivalent Lagrangian Mechanics',
   //   journal: 'Reed Physics Seminar. April 8, 2014'
   // },
-  // {
-  // link: 'assets/QGravPresentation.pdf',
-  // links: [],
-  // title: 'The Schrodinger-Newton System with Self-field Coupling',
-  // authors: 'Varchas Gopalaswamy, Andrew McNutt, Allie Morgan, Carl Proepper.',
-  // journal: 'Reed Physics Seminar. September 18, 2013'
-  // }
 ];
 
 export const BLOG_POSTS = [
@@ -399,7 +392,7 @@ export const TEACHING = [
     location: 'Reed College'
   },
   {
-    title: 'F.L. Griffin Mathfest',
+    title: 'F.L. Griffin Math-fest',
     date: '2014',
     role: 'Teaching Assistant',
     location: 'Reed College'
@@ -438,7 +431,7 @@ export const SERVICE: {organization: string; date: string; role: string; link?: 
   {
     organization: 'South Side Civic',
     date: '2019',
-    role: 'Scopathon Facilitator'
+    role: 'Scope-athon Facilitator'
   },
   {
     organization: 'UChicago Visualization Research Reading Group',
@@ -453,7 +446,7 @@ export const SERVICE: {organization: string; date: string; role: string; link?: 
   },
 
   {
-    organization: 'F.L. Griffin Mathfest',
+    organization: 'F.L. Griffin Math-fest',
     date: 'Spring 2014',
     role: 'Teaching Assistant'
   }

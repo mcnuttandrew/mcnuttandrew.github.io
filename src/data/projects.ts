@@ -73,16 +73,6 @@ export const PROJECTS: Project[] = [
     text: "A chrome extension and website that allows users to explore threaded conversations using trees.  Information is Beautiful Awards '19 Long List.",
     tags: ['visualization', 'tech']
   },
-  // {
-  //   title: 'Readability As A Service',
-  //   dates: 'November 2018',
-  //   sourceLink: 'https://github.com/mcnuttandrew/flesch-kincaid-as-a-service',
-  //   link: 'https://www.mcnutt.in/flesch-kincaid-as-a-service/',
-  //   imgLink: 'converted-images/readability.jpg',
-  //   text: `Have you ever wanted specific numerical quantification on how readable
-  //   your prose is? This micro app wraps the textstat package as a webservice so that you can easily check.`,
-  //   tags: ['tech']
-  // },
   {
     title: 'tap-react-browser',
     dates: 'February - April 2018',
@@ -129,24 +119,6 @@ export const PROJECTS: Project[] = [
     text: 'A charting library for the react ecosystem.',
     tags: ['visualization', 'tech']
   },
-  // {
-  //   title: 'CSV Conversion',
-  //   dates: 'December 2016',
-  //   link: 'http://www.mcnutt.in/csv-conversion/',
-  //   sourceLink: 'https://github.com/mcnuttandrew/csv-conversion',
-  //   imgLink: 'converted-images/csv-conversion.jpg',
-  //   text: 'A handy client-side csv to json converter. I built this little app, because my favorite conversion site got knocked down and I wanted to improve the UI.',
-  //   tags: ['tech']
-  // },
-  // {
-  //   title: 'Personal Timeline',
-  //   dates: 'June 2016',
-  //   link: 'http://www.mcnutt.in/personal-timeline/',
-  //   sourceLink: 'https://github.com/mcnuttandrew/personal-timeline',
-  //   imgLink: 'converted-images/personal-time.jpg',
-  //   text: 'A brief timeline of my life, a resume through a dark mirror if you will.',
-  //   tags: ['visualization'],
-  // },
   {
     title: 'Unnamed Tarot Deck',
     dates: 'Dec 2015 - June 2016',
@@ -156,19 +128,4 @@ export const PROJECTS: Project[] = [
     text: 'A tarot tech themed around the signage and spirit of the American highway system.',
     tags: ['art']
   }
-  // {
-  //   title: 'Why Not Ipsum',
-  //   dates: 'September 2014',
-  //   link: 'http://why-not-ipsum.herokuapp.com/',
-  //   sourceLink: 'https://github.com/mcnuttandrew/Why-Not-Zoidberg',
-  //   imgLink: 'converted-images/why-not-image.jpg',
-  //   text: 'A Lorem Ipsum generator populated by Zoidberg quotes, built following RESTful design practices. Included a large series of data scrapes, which were necessarily followed by intensive data cleaning.',
-  //   tags: ['tech']
-  // }
-  // {
-  //   title: 'Teacup',
-  //   liveLink: 'http://tea-cup.org/',
-  //   sourceLink: 'https://github.com/mcnuttandrew/Project-Teacup',
-  //   text: 'A microblogging platform for viewing the collective unconscious. Single page Backbone app based on RESTful practices. Features data visualizations including trending topics and user population. Seed data was generated using a variety of large scale data scrapes and data cleaning techniques. Technologies included a Rails API, Backbone.js, jQuery, Nokogiri, and D3.'
-  // }
 ];
