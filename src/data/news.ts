@@ -1,7 +1,13 @@
 export const NEWS = [
   {
+    date: 'March 2023',
+    content:
+      'At long last I have been awarded the College Teaching Certificate from the University of Chicago Center for Teaching.'
+  },
+  {
     date: 'January 2023',
-    content: 'Thrilled to have two (first-author) papers  accepted to CHI 2023!!'
+    content:
+      'Thrilled to have two (first-author) papers accepted to CHI 2023!! [One came from my internship] with [MSR last summer](https://arxiv.org/abs/2301.11178), while the other is the culmination of years long work on [looking a creative coding editors](https://people.cs.uchicago.edu/~rchugh/classes/creative-coding/)'
   },
   {
     date: 'September 2022',
