@@ -312,7 +312,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     subtype: 'conference'
   },
   {
-    link: 'https://research.tableau.com/paper/divining-insights-visual-analytics-through-cartomancy',
+    link: 'https://www.tableau.com/sites/default/files/2023-01/altchi-tarot-cameraready.pdf',
     imgLink: 'converted-images/vis-tarot.jpg',
     urlTitle: 'tarot',
     title: 'Divining Insights: Visual Analytics Through Cartomancy',
@@ -323,7 +323,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       {name: 'about', link: '#/research/tarot'},
       {
         name: 'paper',
-        link: 'https://research.tableau.com/paper/divining-insights-visual-analytics-through-cartomancy'
+        link: 'https://www.tableau.com/sites/default/files/2023-01/altchi-tarot-cameraready.pdf'
       },
       {name: 'live', link: 'https://vis-tarot.netlify.com/'},
       {name: 'code', link: 'https://github.com/mcorrell/vis-tarot'},
