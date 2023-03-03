@@ -51,12 +51,27 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
+    link: 'https://osf.io/3jrcm/',
+    urlTitle: 'doom-n-fruit',
+    imgLink: 'converted-images/doom-n-fruit.jpg',
+    title:
+      'Doom or Deliciousness: Challenges and Opportunities for Visualization in the Age of Generative Models',
+    authors:
+      'Victor Schetinger, Sara Di Bartolomeo, Mennatallah El-Assady, Andrew M McNutt, Matthias Miller, João Paulo Apolinário Passos, Jane L. Adams',
+    journal: 'EuroVis 2023 (Conditional Acceptance)',
+    date: '',
+    links: [{name: 'paper', link: 'https://osf.io/3jrcm/'}],
+    abstract: `To appear`,
+    type: 'conference / journal articles',
+    subtype: 'conference'
+  },
+  {
     link: 'https://arxiv.org/abs/2301.11178',
     urlTitle: 'ai-4-notebooks',
     imgLink: 'converted-images/meta-cells-image.jpg',
     title: 'On the Design of AI-powered Code Assistants for Notebooks',
     authors: 'Andrew McNutt, Chenglong Wang, Rob DeLine, Steven M. Drucker',
-    journal: 'ACM CHI 2023 (Conditional Acceptance)',
+    journal: 'ACM CHI 2023',
     date: '',
     links: [{name: 'paper', link: 'https://arxiv.org/abs/2301.11178'}],
     abstract: `AI-powered code assistants, such as Copilot, are quickly becoming a ubiquitous component of contemporary coding contexts. Among these environments, computational notebooks, such as Jupyter, are of particular interest as they provide rich interface affordances that interleave code and output in a manner that allows for both exploratory and presentational work. Despite their popularity, little is known about the appropriate design of code assistants in notebooks. We investigate the potential of code assistants in computational notebooks by creating a design space (reified from a survey of extant tools) and through an interview-design study (with 15 practicing data scientists). Through this work, we identify challenges and opportunities for future systems in this space, such as the value of disambiguation for tasks like data visualization, the potential of tightly scoped domain-specific tools (like linters), and the importance of polite assistants.`,
@@ -69,7 +84,7 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: 'converted-images/sauce-image.jpg',
     title: 'A Study of Editor Features in a Creative Coding Classroom',
     authors: 'Andrew McNutt, Anton Outkine, Ravi Chugh',
-    journal: 'ACM CHI 2023 (Conditional Acceptance)',
+    journal: 'ACM CHI 2023',
     date: '',
     links: [
       {name: 'paper', link: 'https://arxiv.org/pdf/2301.13302'},
