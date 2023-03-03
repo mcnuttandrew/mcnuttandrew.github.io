@@ -8,31 +8,36 @@ export const PUBLICATIONS = pubsImport;
 export const ZINES = zineImport;
 /* eslint-disable max-len */
 
-export const COLLABORATOR_LINKS = {
+export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   'Aaron Elmore': 'http://people.cs.uchicago.edu/~aelmore/',
   'Agatha Seo-Hyun Kim': 'https://history.uchicago.edu/directory/agatha-kim',
   'Alex M. Clark': 'https://scholar.google.com/citations?user=4Gv4PboAAAAJ&hl=en',
   'Allison Morgan': 'https://allisonmorgan.github.io/',
   'Anamaria Crisan': 'https://amcrisan.github.io/',
+  'Anton Outkine': 'https://antonoutkine.com/',
   'Blase Ur': 'https://www.blaseur.com/',
   'Chenglong Wang': 'https://chenglongwang.org/',
+  'Chenhao Tan': 'https://chenhaot.com/',
   'Gordon Kindlmann': 'http://people.cs.uchicago.edu/~glk/',
+  'Jane L. Adams': 'http://universalities.com/',
   'Joel Franklin': 'http://people.reed.edu/~jfrankli/',
+  'Kevin Bryson': 'https://cmdkev.github.io/about/',
   'Krishna Dole': 'https://scholar.google.com/citations?user=J4TpF1YAAAAJ&hl=en',
   'Kyle Chard': 'https://kylechard.com/',
+  'Matthias Miller': 'https://www.vis.uni-konstanz.de/mitglieder/miller/',
+  'Mennatallah El-Assady': 'https://el-assady.com/',
   'Michael Correll': 'https://correll.io/',
+  'Michael Littman': 'https://www.littmania.com/',
   'Nelia Mann': 'https://www.union.edu/physics-and-astronomy/faculty-staff/nelia-mann',
   'Ravi Chugh': 'http://people.cs.uchicago.edu/~rchugh/',
   'Rob DeLine': 'https://www.microsoft.com/en-us/research/people/rdeline/',
+  'Sara Di Bartolomeo': 'https://picorana.github.io/',
   'Sean Ekins': 'https://scholar.google.com/citations?user=6NNfXAMAAAAJ&hl=en',
   'Steven M. Drucker': 'https://stevenmdrucker.github.io/#/',
   'Varchas Gopalaswamy': 'https://scholar.google.com/citations?user=PxH1Z7kAAAAJ&hl=en',
+  'Victor Schetinger': 'https://www.cvast.tuwien.ac.at/team/victor-schetinger',
   'Will Brackenbury': 'https://wbrackenbury.github.io/',
-  'Chenhao Tan': 'https://chenhaot.com/',
-  'Yuxin Chen': 'https://yuxinchen.org/',
-  'Kevin Bryson': 'https://cmdkev.github.io/about/',
-  'Michael Littman': 'https://www.littmania.com/',
-  'Anton Outkine': 'https://antonoutkine.com/'
+  'Yuxin Chen': 'https://yuxinchen.org/'
 };
 
 const selectedPubs = new Set(['no-grammar', 'tacos', 'ivy', 'mirage', 'sauce', 'ai-4-notebooks']);
