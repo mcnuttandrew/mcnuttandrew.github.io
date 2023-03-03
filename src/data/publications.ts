@@ -57,7 +57,7 @@ export const PUBLICATIONS: Publication[] = [
     title:
       'Doom or Deliciousness: Challenges and Opportunities for Visualization in the Age of Generative Models',
     authors:
-      'Victor Schetinger, Sara Di Bartolomeo, Mennatallah El-Assady, Andrew M McNutt, Matthias Miller, João Paulo Apolinário Passos, Jane L. Adams',
+      'Victor Schetinger, Sara Di Bartolomeo, Mennatallah El-Assady, Andrew McNutt, Matthias Miller, João Paulo Apolinário Passos, Jane L. Adams',
     journal: 'EuroVis 2023 (Conditional Acceptance)',
     date: '',
     links: [{name: 'paper', link: 'https://osf.io/3jrcm/'}],
