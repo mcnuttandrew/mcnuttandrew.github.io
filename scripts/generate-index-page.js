@@ -1,4 +1,4 @@
-const {writeFile} = require('hoopoe');
+const {writeFile} = require('fs/promises');
 const constants = require('../src/constants');
 
 const content = [
