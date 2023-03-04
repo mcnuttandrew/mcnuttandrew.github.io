@@ -490,11 +490,6 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-hoopoe@^1.0.1:
-  version "1.0.3"
-  resolved "https://registry.npmjs.org/hoopoe/-/hoopoe-1.0.3.tgz"
-  integrity sha512-zKMSlOnX2Fjv5cfXRPEEYcKmd+S4W1rEVP2Nil0RdLa8oNL/tZqUW+RxS6gYL0f3EbixjaJBFhYO6SDJAE1otw==
-
 inflight@^1.0.4:
   version "1.0.6"
   resolved "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz"
