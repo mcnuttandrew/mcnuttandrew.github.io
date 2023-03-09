@@ -7,7 +7,7 @@ export const NEWS = [
   {
     date: 'January 2023',
     content:
-      'Thrilled to have two (first-author) papers accepted to CHI 2023!! One came from my internship with [MSR last summer](https://arxiv.org/abs/2301.11178), while the other is the culmination of years long work on [looking a creative coding editors](https://people.cs.uchicago.edu/~rchugh/classes/creative-coding/)'
+      'Thrilled to have two (first-author) papers accepted to CHI 2023!! One came from my internship with [MSR last summer](https://arxiv.org/abs/2301.11178), while the other is the culmination of a years long work on [looking at creative coding editors](https://people.cs.uchicago.edu/~rchugh/classes/creative-coding/)'
   },
   {
     date: 'September 2022',
