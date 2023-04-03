@@ -285,6 +285,13 @@ export const TEACHING = [
     link: 'https://capp-30239-winter-2021.netlify.com/'
   },
   {
+    title: 'DATA 22700 - Data Visualization and Communication',
+    date: 'Spring 2023',
+    role: 'Teaching Assistant',
+    location: 'UChicago',
+    link: 'https://github.com/kalealex/data227-sp23'
+  },
+  {
     title: 'CMSC 11111 - Creative Coding',
     date: 'Winter 2022',
     role: 'Teaching Assistant',

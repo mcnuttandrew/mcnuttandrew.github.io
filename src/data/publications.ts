@@ -58,10 +58,10 @@ export const PUBLICATIONS: Publication[] = [
       'Doom or Deliciousness: Challenges and Opportunities for Visualization in the Age of Generative Models',
     authors:
       'Victor Schetinger, Sara Di Bartolomeo, Mennatallah El-Assady, Andrew McNutt, Matthias Miller, João Paulo Apolinário Passos, Jane L. Adams',
-    journal: 'EuroVis 2023 (Conditional Acceptance)',
+    journal: 'EuroVis 2023',
     date: '',
     links: [{name: 'paper', link: 'https://osf.io/3jrcm/'}],
-    abstract: `To appear`,
+    abstract: `Generative text-to-image models (as exemplified by DALL-E, MidJourney, and Stable Diffusion) have recently made enormous technological leaps, demonstrating impressive results in many graphical domains---from logo design to digital painting and photographic composition. However, the quality of these results has led to existential crises in some fields of art, leading to questions about the role of human agency in the production of meaning in a graphical context. Such issues are central to visualization, and while these generative models have yet to be widely applied to visualization, it seems only a matter of time until their integration is manifest. Seeking to circumvent similar ponderous dilemmas, we attempt to understand the roles that generative models might play across visualization. We do so by constructing a framework that characterizes what these technologies offer at various stages of the visualization workflow, augmented and analyzed through semi-structured interviews with 19 experts from related domains. Through this work, we map the space of opportunities and risks that might arise in this intersection, identifying doomsday prophecies and delicious low-hanging fruits that are ripe for research.`,
     type: 'conference / journal articles',
     subtype: 'conference'
   },
