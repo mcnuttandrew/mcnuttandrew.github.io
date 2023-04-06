@@ -2,9 +2,9 @@
   import {PUBLICATIONS} from '../constants';
   import Publication from './Publication.svelte';
 
-  type sort = 'type' | 'year' | 'name' | 'tile';
+  type sort = 'type' | 'year' | 'paper name' | 'tile';
   let currentSort: sort = 'type';
-  const sorts: sort[] = ['type', 'year', 'name'];
+  const sorts: sort[] = ['type', 'year', 'paper name'];
   const typeOrder = [
     'conference / journal articles',
     'extended abstract / workshop papers',
@@ -12,20 +12,10 @@
     'theses / book chapters'
   ];
 
-  function toYear(date) {
-    const isNumber = `${Number(date)}` === date;
-    if (isNumber) {
-      return Number(date);
-    }
-    return new Date(date).getFullYear();
-  }
-
   export function sortPublications(currentSort: sort) {
     if (currentSort === 'type' || currentSort === 'year') {
-      const yearOrder = Array.from(
-        PUBLICATIONS.reduce((acc, x) => acc.add(toYear(x.date)), new Set())
-      ) as string[];
-      return PUBLICATIONS.map((x) => ({...x, year: toYear(x.date)})).reduce(
+      const yearOrder = Array.from(PUBLICATIONS.reduce((acc, x) => acc.add(x.year), new Set())) as string[];
+      return PUBLICATIONS.map((x) => ({...x, year: x.year})).reduce(
         (acc, row) => {
           acc[row[currentSort]].push(row);
           return acc;

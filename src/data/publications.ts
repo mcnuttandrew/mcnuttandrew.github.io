@@ -47,6 +47,7 @@ export interface Publication {
   abstract: string;
   type: PubType;
   subtype: PubSubtype;
+  year: number;
 }
 
 export const PUBLICATIONS: Publication[] = [
@@ -60,6 +61,7 @@ export const PUBLICATIONS: Publication[] = [
       'Victor Schetinger, Sara Di Bartolomeo, Mennatallah El-Assady, Andrew McNutt, Matthias Miller, João Paulo Apolinário Passos, Jane L. Adams',
     journal: 'EuroVis 2023',
     date: '',
+    year: 2023,
     links: [{name: 'paper', link: 'https://osf.io/3jrcm/'}],
     abstract: `Generative text-to-image models (as exemplified by DALL-E, MidJourney, and Stable Diffusion) have recently made enormous technological leaps, demonstrating impressive results in many graphical domains---from logo design to digital painting and photographic composition. However, the quality of these results has led to existential crises in some fields of art, leading to questions about the role of human agency in the production of meaning in a graphical context. Such issues are central to visualization, and while these generative models have yet to be widely applied to visualization, it seems only a matter of time until their integration is manifest. Seeking to circumvent similar ponderous dilemmas, we attempt to understand the roles that generative models might play across visualization. We do so by constructing a framework that characterizes what these technologies offer at various stages of the visualization workflow, augmented and analyzed through semi-structured interviews with 19 experts from related domains. Through this work, we map the space of opportunities and risks that might arise in this intersection, identifying doomsday prophecies and delicious low-hanging fruits that are ripe for research.`,
     type: 'conference / journal articles',
@@ -75,6 +77,7 @@ export const PUBLICATIONS: Publication[] = [
     date: '',
     links: [{name: 'paper', link: 'https://arxiv.org/abs/2301.11178'}],
     abstract: `AI-powered code assistants, such as Copilot, are quickly becoming a ubiquitous component of contemporary coding contexts. Among these environments, computational notebooks, such as Jupyter, are of particular interest as they provide rich interface affordances that interleave code and output in a manner that allows for both exploratory and presentational work. Despite their popularity, little is known about the appropriate design of code assistants in notebooks. We investigate the potential of code assistants in computational notebooks by creating a design space (reified from a survey of extant tools) and through an interview-design study (with 15 practicing data scientists). Through this work, we identify challenges and opportunities for future systems in this space, such as the value of disambiguation for tasks like data visualization, the potential of tightly scoped domain-specific tools (like linters), and the importance of polite assistants.`,
+    year: 2023,
     type: 'conference / journal articles',
     subtype: 'conference'
   },
@@ -85,6 +88,7 @@ export const PUBLICATIONS: Publication[] = [
     title: 'A Study of Editor Features in a Creative Coding Classroom',
     authors: 'Andrew McNutt, Anton Outkine, Ravi Chugh',
     journal: 'ACM CHI 2023',
+    year: 2023,
     date: '',
     links: [
       {name: 'paper', link: 'https://arxiv.org/pdf/2301.13302'},
@@ -101,6 +105,7 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: 'converted-images/no-grammar.jpg',
     title: 'No Grammar to Rule Them All: A Survey of JSON-Style DSLs for Visualization',
     authors: 'Andrew McNutt',
+    year: 2022,
     journal: 'IEEE VIS 2022',
     date: '',
     links: [
@@ -128,6 +133,7 @@ export const PUBLICATIONS: Publication[] = [
     title: 'Goethe and Candolle: National forms of scientific writing?',
     authors: 'Agatha Seo-Hyun Kim, Andrew McNutt ',
     journal: 'Theory in Biosciences',
+    year: 2022,
     date: 'August 2022',
     links: [{name: 'paper', link: 'https://link.springer.com/article/10.1007/s12064-022-00376-8'}],
     abstract:
@@ -145,6 +151,7 @@ export const PUBLICATIONS: Publication[] = [
       'Jamar L. Sullivan, Will Brackenbury, Andrew McNutt, Kevin Bryson, Kwam Byll, Yuxin Chen, Michael Littman, Chenhao Tan, Blase Ur',
     journal: 'NAACL 2022',
     date: '',
+    year: 2022,
     links: [
       {name: 'paper', link: 'https://www.blaseur.com/papers/rationales-naacl22.pdf'},
       {
@@ -173,6 +180,7 @@ export const PUBLICATIONS: Publication[] = [
       {name: 'paper', link: 'https://arxiv.org/abs/2109.06007'},
       {name: 'talk', link: 'https://youtu.be/jFbsYto_2ys?t=1471'}
     ],
+    year: 2021,
     abstract:
       'Visualization has long been seen as a dependable and trustworthy tool for carrying out analysis and communication tasks -- a view reinforced by the growing interest in applying it to socially positive ends. However, despite the benign light in which visualization is usually perceived, it carries the potential to do harm to people, places, concepts, and things. In this paper, we capitalize on this negative potential to serve an underrepresented (but technologically engaged) group: villains. To achieve these ends, we introduce a design space for this type of graphical violence, which allows us to unify prior work on deceptive visualization with novel data-driven dastardly deeds, such as emotional spear phishing and unsafe data physicalization. By charting this vile charting landscape, we open new doors to collaboration with terrifying domain experts, and hopefully, make the world just a bit worse.',
     type: 'extended abstract / workshop papers',
@@ -186,6 +194,7 @@ export const PUBLICATIONS: Publication[] = [
       'KondoCloud: Improving Information Management in Cloud Storage via Recommendations Based on File Similarity',
     authors: 'Will Brackenbury, Andrew McNutt, Kyle Chard, Aaron Elmore, Blase Ur',
     journal: 'ACM UIST 2021',
+    year: 2021,
     date: '',
     links: [
       {name: 'paper', link: 'https://www.blaseur.com/papers/uist21-kondocloud.pdf'},
@@ -203,6 +212,7 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: 'converted-images/zine-potential.jpg',
     title: 'On The Potential of Zines as a Medium for Visualization',
     authors: 'Andrew McNutt',
+    year: 2021,
     journal: 'IEEE VIS 2021 (Short Papers)',
     date: '',
     links: [
@@ -223,6 +233,7 @@ export const PUBLICATIONS: Publication[] = [
     authors: 'Andrew McNutt',
     journal: 'EuroVis 2021 🏆 Honorable Mention for Best Paper 🏆 (Juried Selection, 1 awarded)',
     date: '',
+    year: 2021,
     links: [
       {name: 'about', link: '#/research/tacos'},
       {name: 'paper', link: 'https://arxiv.org/pdf/2104.04042.pdf'},
@@ -242,6 +253,7 @@ export const PUBLICATIONS: Publication[] = [
     // journal: 'Proceedings of the 2021 ACM annual conference on Human Factors in Computing Systems',
     journal: 'ACM CHI 2021',
     date: '',
+    year: 2021,
     links: [
       {name: 'about', link: '#/research/ivy'},
       {name: 'live', link: 'https://github.com/mcnuttandrew/ivy'},
@@ -261,6 +273,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     link: 'https://arxiv.org/pdf/2009.02384.pdf',
     urlTitle: 'nearby',
     imgLink: 'converted-images/nearby-preview.jpg',
+    year: 2020,
     title:
       'Supporting Expert Close Analysis of Historical Scientific Writings: A Case Study for Near-by Reading',
     authors: 'Andrew McNutt, Agatha Seo-Hyun Kim, Sergio Elahi, Kazutaka Takahashi',
@@ -283,6 +296,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     imgLink: 'converted-images/tc-preview.jpg',
     title: 'A Minimally Constrained Optimization Algorithm for Table Cartograms',
     authors: 'Andrew McNutt, Gordon Kindlmann',
+    year: 2020,
     journal:
       'VIS 2020 - InfoVIS Poster Track 🏆 Honorable Mention for Best Poster Research 🏆 (Juried Selection, 2 awarded)',
     date: '',
@@ -304,6 +318,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     imgLink: 'converted-images/surfacing-visualization-mirages.jpg',
     title: 'Surfacing Visualization Mirages',
     authors: 'Andrew McNutt, Gordon Kindlmann, Michael Correll',
+    year: 2020,
     // journal:
     //   'Proceedings of the 2020 ACM annual conference on Human Factors in Computing Systems <br/> 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)',
     journal: 'ACM CHI 2020 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)',
@@ -333,6 +348,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     title: 'Divining Insights: Visual Analytics Through Cartomancy',
     authors: 'Andrew McNutt, Anamaria Crisan, Michael Correll',
     journal: 'alt.CHI 2020',
+    year: 2020,
     date: '',
     links: [
       {name: 'about', link: '#/research/tarot'},
@@ -356,6 +372,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     title: 'Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle',
     authors: 'Agatha Seo-Hyun Kim, Andrew McNutt, Sergio Elahi, Kazutaka Takahashi, Robert J Richards',
     journal: 'MindBytes Research Symposium 2019. 🏆 Best Poster in Visualization 🏆',
+    year: 2019,
     date: '',
     links: [
       {name: 'poster', link: 'assets/posterkim102519.pdf'},
@@ -378,6 +395,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       'Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations',
     authors: 'Andrew McNutt, Gordon Kindlmann',
     urlTitle: 'forum-explorer-eurovis',
+    year: 2019,
     // journal: 'Proceedings of the Eurographics Conference on Visualization "EuroVis" - Posters',
     journal: 'EuroVis 2019 (Posters)',
     date: '',
@@ -399,6 +417,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     urlTitle: 'linting-visguides',
     title: 'Linting for Visualization: Towards a Practical Automated Visualization Guidance System',
     authors: 'Andrew McNutt, Gordon Kindlmann',
+    year: 2018,
     journal:
       'IEEE VIS Workshop on Creation, Curation, Critique and Conditioning of Principles and Guidelines in Visualization (VisGuides 2018)',
     date: '',
@@ -420,6 +439,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     authors: `Sean Ekins, Alex M. Clark, Krishna Dole, Kellan Gregory, Andrew McNutt,
     Anna Coulon Spektor, Charlie Weatherall, Nadia K Litterman, Barry A Bunin`,
     journal: 'Reporter Gene Assays',
+    year: 2018,
     date: '2018',
     links: [{name: 'paper', link: 'https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14'}],
     abstract:
@@ -434,6 +454,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     authors: 'Joel Franklin, Youdan Guo, Andrew McNutt, Allison Morgan',
     urlTitle: 'qgrav',
     journal: 'Journal of Classical and Quantum Gravity',
+    year: 2015,
     date: '2015',
     links: [
       {name: 'paper', link: 'https://arxiv.org/abs/1501.07537'},
@@ -453,6 +474,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     George Grass, Joel S. Freundlich, Robert C. Reynolds, Sean Ekins`,
     journal: 'Journal of Chemical Information and Modeling',
     date: '2015',
+    year: 2015,
     links: [{name: 'paper', link: 'http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143'}],
     abstract:
       'On the order of hundreds of absorption, distribution, metabolism, excretion, and toxicity (ADME/Tox) models have been described in the literature in the past decade which are more often than not inaccessible to anyone but their authors. Public accessibility is also an issue with computational models for bioactivity, and the ability to share such models still remains a major challenge limiting drug discovery. We describe the creation of a reference implementation of a Bayesian model-building software module, which we have released as an open source component that is now included in the Chemistry Development Kit (CDK) project, as well as implemented in the CDD Vault and in several mobile apps. We use this implementation to build an array of Bayesian models for ADME/Tox, in vitro and in vivo bioactivity, and other physicochemical properties. We show that these models possess cross-validation receiver operator curve values comparable to those generated previously in prior publications using alternative tools. We have now described how the implementation of Bayesian models with FCFP6 descriptors generated in the CDD Vault enables the rapid production of robust machine learning models from public data or the user’s own datasets. The current study sets the stage for generating models in proprietary software (such as CDD) and exporting these models in a format that could be run in open source software using CDK components. This work also demonstrates that we can enable biocomputation across distributed private or public datasets to enhance drug discovery.',
@@ -467,6 +489,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     authors: 'Andrew McNutt (Advised by Nelia Mann)',
     journal: 'Undergraduate thesis. Reed College',
     date: 'June 2014',
+    year: 2014,
     links: [
       {name: 'thesis', link: 'assets/thesis.pdf'},
       {name: 'slides', link: 'assets/nlm-talk.pdf'}
