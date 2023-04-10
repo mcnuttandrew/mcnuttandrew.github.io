@@ -39,6 +39,12 @@ const ZINES: Zine[] = [
     imgLink: 'https://www.mcnutt.in/converted-images/no-grammar-zine-cover.jpg',
     text: 'A zine for my paper "No Grammar to rule them all: a survey of JSON-style DSLs for Visualization". (print only)',
     year: 2022
+  },
+  {
+    title: 'Double Header CHI23 Zine',
+    imgLink: 'https://www.mcnutt.in/converted-images/chi23-zine-preview.jpg',
+    text: 'A two-sided zine describing my papers "On the Design of AI-powered Code Assistants for Notebooks" and "A Study of Editor Features in a Creative Coding Classroom"  (print only)',
+    year: 2022
   }
 ];
 export default ZINES;
