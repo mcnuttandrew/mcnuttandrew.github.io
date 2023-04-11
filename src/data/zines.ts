@@ -44,7 +44,7 @@ const ZINES: Zine[] = [
     title: 'Double Header CHI23 Zine',
     imgLink: 'https://www.mcnutt.in/converted-images/chi23-zine-preview.jpg',
     text: 'A two-sided zine describing my papers "On the Design of AI-powered Code Assistants for Notebooks" and "A Study of Editor Features in a Creative Coding Classroom"  (print only)',
-    year: 2022
+    year: 2023
   }
 ];
 export default ZINES;
