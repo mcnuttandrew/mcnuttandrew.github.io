@@ -2,7 +2,7 @@
   import {slide} from 'svelte/transition';
   import {addLinks} from '../utils';
   import {marked} from 'marked';
-  import type {Publication} from '../constants';
+  import type {Publication} from '../data/publications';
 
   export let asTile = false;
   export let compact = false;
@@ -13,11 +13,11 @@
     abstractOpen = !abstractOpen;
   }
   const keys = ['subtitle', 'journal', 'date'];
-  const preppedKeys = keys.map((x) => publication[x]).filter((x) => x);
-  const moreInfo = [addLinks(publication.authors), publication.date].filter((x) => x).join('. ');
+  $: preppedKeys = keys.map((x) => publication[x]).filter((x) => x);
+  let moreInfo = [addLinks(publication.authors), publication.date].filter((x) => x).join('. ');
   const knownPunc = new Set(['.', '?', '!']);
-  const punc = knownPunc.has(publication.title[publication.title.length - 1]) ? '' : '.';
-  const mdRepresentation = `**${publication.title}**${punc} _${publication.journal}_. ${moreInfo}`;
+  let punc = knownPunc.has(publication.title[publication.title.length - 1]) ? '' : '.';
+  let mdRepresentation = `**${publication.title}**${punc} _${publication.journal}_. ${moreInfo}`;
 </script>
 
 <div class="flex-col" class:mb-5={compact}>
@@ -38,7 +38,7 @@
       </div>
     {/if}
     <!-- the tile mode -->
-    <div class="flex flex-col w-48  mr-8 mb-8" class:hidden={!asTile}>
+    <div class="flex flex-col w-48 mr-8 mb-8" class:hidden={!asTile}>
       <img alt="image drawn from {publication.title}" src={publication.imgLink} class="cursor-pointer w-48" />
       <a href={publication.link} class="text-cyan-800 font-bold">{publication.title}</a>
     </div>
@@ -77,7 +77,7 @@
   {#if abstractOpen}
     <div class="text-xs" transition:slide>{@html marked(publication.abstract)}</div>
   {/if}
-  <div class="rounded-xl uppercase font-bold italic " />
+  <div class="rounded-xl uppercase font-bold italic" />
 </div>
 
 <style>

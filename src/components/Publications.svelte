@@ -1,6 +1,6 @@
 <script lang="ts">
   import {PUBLICATIONS} from '../constants';
-  import Publication from './Publication.svelte';
+  import PublicationComponent from './Publication.svelte';
 
   type sort = 'type' | 'year' | 'paper name' | 'tile';
   let currentSort: sort = 'type';
@@ -17,7 +17,7 @@
       const yearOrder = Array.from(PUBLICATIONS.reduce((acc, x) => acc.add(x.year), new Set())) as string[];
       return PUBLICATIONS.map((x) => ({...x, year: x.year})).reduce(
         (acc, row) => {
-          acc[row[currentSort]].push(row);
+          acc[row[currentSort]].push({...row});
           return acc;
         },
         (currentSort === 'type' ? typeOrder : yearOrder).reduce(
@@ -71,7 +71,7 @@
     >
       {#each pubs[1] as publication}
         <br />
-        <Publication {publication} asTile={currentSort === 'tile'} />
+        <PublicationComponent bind:publication asTile={currentSort === 'tile'} />
       {/each}
     </div>
   {/each}
