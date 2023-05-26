@@ -1,4 +1,4 @@
-I'm a PhD candidate in Computer Science at the University of Chicago. My work falls in the intersection of Data Visualization and HCI. 
+I'm an incoming assistant professor of Computer Science at the University of Utah in the School of Computing and Imaging Institute. My work falls in the intersection of Data Visualization and HCI. 
 
 <br/>
 
@@ -8,7 +8,3 @@ I'm interested in theories of visualization (and finding opportunities for the o
 In the near past I worked as a data visualization engineer for a variety of companies in San Francisco. 
 Before that I majored in physics at Reed College in Portland. 
 I am a fan of deserts, <a href="https://www.mcnutt.in/#/zines">zines</a>, buffalo, and bicycles.
-
-<br />
-<br />
-I'm currently on the academic job market looking for assistant professor roles in North America. Feel free drop me a line by email (mcnutt AT uchicago DOT edu).
