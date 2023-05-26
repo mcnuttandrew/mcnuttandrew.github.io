@@ -1,4 +1,4 @@
-I'm an incoming assistant professor of Computer Science at the University of Utah in the School of Computing and Imaging Institute. My work falls in the intersection of Data Visualization and HCI. 
+I'm an incoming assistant professor of Computer Science at the University of Utah in the School of Computing + Scientific Computing and Imaging Institute. My work falls in the intersection of Data Visualization and HCI. 
 
 <br/>
 
