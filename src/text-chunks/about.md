@@ -1,8 +1,8 @@
-I'm a Ph.D. candidate at the University of Chicago's department of computer science, where I'm advised by [Ravi Chugh](http://people.cs.uchicago.edu/~rchugh/). I am also an incoming assistant professor of Computer Science at the University of Utah in the School of Computing and Imaging Institute. 
+I'm a recently minted Ph.D. at the University of Chicago's department of computer science, where I'm advised by [Ravi Chugh](http://people.cs.uchicago.edu/~rchugh/). I am also an incoming assistant professor of Computer Science at the University of Utah in the School of Computing and Imaging Institute. I'm also also an incoming Post Doc at University of Washington with the [Interactive Data Lab](https://idl.cs.washington.edu/).
 
 <br/>
 
-I'm interested in theories of visualization (and finding opportunities for the operationalization of those ideas) and the design of programming interfaces (such as visual analytics and creative coding).  
+I'm interested in theories of visualization (and finding opportunities for the operationalization of those ideas) and the design of programming interfaces (such for as visual analytics and creative coding). If you are interested in working with me (such as by being a PhD student at the University of Utah) please reach out! I'm looking for students for students starting the 2024-25 school year. 
 
 <br/>
 In the past I worked as a data visualization engineer for a variety of companies in San Francisco. 
