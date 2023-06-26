@@ -1,10 +1,5 @@
 export const NEWS = [
   {
-    date: 'June 2023',
-    content:
-      'I have defended my Ph.D.! I am now a doctor of computer science! Extreme thanks to my committee, Ravi Chugh, Arvind Satyanarayan, Blase Ur, and Alex Kale.'
-  },
-  {
     date: 'March 2023',
     content:
       'At long last I have been awarded the College Teaching Certificate from the University of Chicago Center for Teaching.'
