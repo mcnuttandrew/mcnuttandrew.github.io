@@ -1,5 +1,15 @@
 export const NEWS = [
   {
+    date: 'June 2023',
+    content:
+      'I got my Ph.D.!! Thanks to my committee, mentors, friends, family, and everyone else who supported me through it.'
+  },
+
+  {
+    date: 'April 2023',
+    content: '[Our paper](https://osf.io/3jrcm/) on generative AI methods was accepted to EuroVIS23! '
+  },
+  {
     date: 'March 2023',
     content:
       'At long last I have been awarded the College Teaching Certificate from the University of Chicago Center for Teaching.'
