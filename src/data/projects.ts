@@ -10,6 +10,25 @@ interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    title: 'Prong Editor',
+    dates: 'September 2021 - ',
+    sourceLink: 'https://github.com/mcnuttandrew/prong',
+    link: 'http://prong-editor.netlify.app/',
+    imgLink: 'converted-images/prong-logo.jpg',
+    text: 'A projectional editor for JSON-based DSLs',
+    tags: ['visualization', 'tech']
+  },
+  {
+    title: 'Zines',
+    dates: 'May 2019 - ',
+    sourceLink: 'https://www.mcnutt.in/#/zines',
+    link: 'http://prong-editor.netlify.app/',
+    imgLink: 'converted-images/bison-eylsium-cover.jpg',
+    text: 'Zines are cool and I make them for various reasons',
+    tags: ['art', 'tech', 'visualization']
+  },
+
+  {
     title: 'Ivy',
     dates: 'November 2019 - August 2020',
     sourceLink: 'https://github.com/mcnuttandrew/ivy',
