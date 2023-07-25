@@ -26,9 +26,9 @@
       class="w-52 max-w-full h-auto rounded-full"
     />
     <h1 class="text-xl font-bold">Andrew McNutt</h1>
-    <h3 class="text-xl">PhD Candidate</h3>
+    <h3 class="text-xl">Imminent PostDoc / Prof</h3>
     <h3 class="text-xl">Visualization / HCI</h3>
-    <h3 class="text-xl">UChicago CS</h3>
+    <!-- <h3 class="text-xl">UChicago CS</h3> -->
     <div class="flex align space-between">
       <a class="mr-2" href="https://github.com/mcnuttandrew"
         ><img src="icons/github.svg" alt="link to github account" /></a

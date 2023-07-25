@@ -51,6 +51,44 @@ export interface Publication {
 }
 
 export const PUBLICATIONS: Publication[] = [
+  // {
+  //   link: '',
+  //   urlTitle: 'notascope',
+  //   imgLink: 'converted-images/prong-logo.jpg',
+  //   title: 'Metrics-Based Evaluation and Comparison of Visualization Notations',
+  //   authors: 'Nicolas Kruchten, Andrew McNutt, and Michael J. McGuffin',
+  //   journal: 'IEEE VIS 2023',
+  //   date: '',
+  //   year: 2023,
+  //   links: [
+  //     {name: 'live', link: 'https://app.notascope.io/'},
+  //     {name: 'osf', link: 'https://osf.io/8924y/'},
+  //     {name: 'paper', link: ''}
+  //   ],
+  //   abstract: `A visualization notation is a recurring pattern of symbols used to author specifications of visualizations, from data transformation to visual mapping. Programmatic notations use symbols defined by grammars or domain-specific languages (e.g., ggplot2, dplyr, Vega-Lite) or libraries (e.g., Matplotlib, Pandas).   Designers and prospective users of grammars and libraries often evaluate visualization notations by inspecting galleries of examples.  While such collections demonstrate usage and expressiveness, their construction and evaluation are usually ad hoc, making comparisons of different notations difficult.  More rarely, experts analyze notations via usability heuristics, such as the Cognitive Dimensions of Notations framework. These analyses, akin to structured close readings of text, can reveal design deficiencies, but place a burden on the expert to simultaneously consider many facets of often complex systems.  To alleviate these issues, we introduce a metrics-based approach to usability evaluation and comparison of notations in which metrics are computed for a gallery of examples across a suite of notations.  While applicable to any visualization domain, we explore the utility of our approach via a case study considering statistical graphics that explores 40 visualizations across 9 widely used notations. We facilitate the computation of appropriate metrics and analysis via a new tool called NotaScope.  We gathered feedback via interviews with authors or maintainers of prominent charting libraries (n=6).  We find that this approach is a promising way to formalize, externalize, and extend evaluations and comparisons of visualization notations.`,
+  //   type: 'conference / journal articles',
+  //   subtype: 'conference'
+  // },
+  {
+    link: 'https://arxiv.org/abs/2307.11260',
+    urlTitle: 'prong',
+    imgLink: 'converted-images/prong-logo.jpg',
+    title: 'Projectional Editors for JSON-Based DSLs',
+    authors: 'Andrew McNutt, Ravi Chugh',
+    journal: 'VL/HCC 2023',
+    date: '',
+    year: 2023,
+    links: [
+      {name: 'live', link: 'https://prong-editor.netlify.app/'},
+      {name: 'code', link: 'https://github.com/mcnuttandrew/prong'},
+      {name: 'paper', link: 'https://arxiv.org/abs/2307.11260'}
+    ],
+    abstract: `Augmenting text-based programming with rich structured interactions has been explored in many ways. Among these, projectional editors offer an enticing combination of structure editing and domain-specific program visualization. Yet such tools are typically bespoke and expensive to produce, leaving them inaccessible to many DSL and application designers.
+
+We describe a relatively inexpensive way to build rich projectional editors for a large class of DSLs -- namely, those defined using JSON. Given any such JSON-based DSL, we derive a projectional editor through (i) a language-agnostic mapping from JSON Schemas to structure-editor GUIs and (ii) an API for application designers to implement custom views for the domain-specific types described in a schema. We implement these ideas in a prototype, Prong, which we illustrate with several examples including the Vega and Vega-Lite data visualization DSLs.`,
+    type: 'conference / journal articles',
+    subtype: 'conference'
+  },
   {
     link: 'https://osf.io/3jrcm/',
     urlTitle: 'doom-n-fruit',
@@ -65,7 +103,7 @@ export const PUBLICATIONS: Publication[] = [
     links: [{name: 'paper', link: 'https://osf.io/3jrcm/'}],
     abstract: `Generative text-to-image models (as exemplified by DALL-E, MidJourney, and Stable Diffusion) have recently made enormous technological leaps, demonstrating impressive results in many graphical domains---from logo design to digital painting and photographic composition. However, the quality of these results has led to existential crises in some fields of art, leading to questions about the role of human agency in the production of meaning in a graphical context. Such issues are central to visualization, and while these generative models have yet to be widely applied to visualization, it seems only a matter of time until their integration is manifest. Seeking to circumvent similar ponderous dilemmas, we attempt to understand the roles that generative models might play across visualization. We do so by constructing a framework that characterizes what these technologies offer at various stages of the visualization workflow, augmented and analyzed through semi-structured interviews with 19 experts from related domains. Through this work, we map the space of opportunities and risks that might arise in this intersection, identifying doomsday prophecies and delicious low-hanging fruits that are ripe for research.`,
     type: 'conference / journal articles',
-    subtype: 'conference'
+    subtype: 'journal'
   },
   {
     link: 'https://arxiv.org/abs/2301.11178',
