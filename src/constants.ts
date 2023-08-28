@@ -18,6 +18,7 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   'Blase Ur': 'https://www.blaseur.com/',
   'Chenglong Wang': 'https://chenglongwang.org/',
   'Chenhao Tan': 'https://chenhaot.com/',
+  'Elsie Lee-Robbins': 'https://elsiejlee.com/',
   'Gordon Kindlmann': 'http://people.cs.uchicago.edu/~glk/',
   'Jane L. Adams': 'http://universalities.com/',
   'Joel Franklin': 'http://people.reed.edu/~jfrankli/',
@@ -27,8 +28,10 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   'Matthias Miller': 'https://www.vis.uni-konstanz.de/mitglieder/miller/',
   'Mennatallah El-Assady': 'https://el-assady.com/',
   'Michael Correll': 'https://correll.io/',
+  'Michael J. McGuffin': 'https://www.michaelmcguffin.com/',
   'Michael Littman': 'https://www.littmania.com/',
   'Nelia Mann': 'https://www.union.edu/physics-and-astronomy/faculty-staff/nelia-mann',
+  'Nicolas Kruchten': 'http://nicolas.kruchten.com/',
   'Ravi Chugh': 'http://people.cs.uchicago.edu/~rchugh/',
   'Rob DeLine': 'https://www.microsoft.com/en-us/research/people/rdeline/',
   'Sara Di Bartolomeo': 'https://picorana.github.io/',
@@ -40,7 +43,7 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   'Yuxin Chen': 'https://yuxinchen.org/'
 };
 
-const selectedPubs = new Set(['no-grammar', 'tacos', 'ivy', 'mirage', 'sauce', 'ai-4-notebooks']);
+const selectedPubs = new Set(['tacos', 'mirage', 'sauce', 'ai-4-notebooks']);
 export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((x) => selectedPubs.has(x.urlTitle));
 
 export const PRESENTATIONS: {title: string; details: string[]; links?: {name: string; link: string}[]}[] = [

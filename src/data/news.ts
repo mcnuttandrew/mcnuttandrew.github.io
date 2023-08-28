@@ -1,5 +1,10 @@
 export const NEWS = [
   {
+    date: 'August 2023',
+    content:
+      'Excited that our full paper on evaluating visualization notations 📊 will be presented at VIS 2023! Also excited that our reflection on the 🌲🌲🌲environmental sustainability🌲🌲🌲 of IEEE VIS will be presented at alt.vis 2023!!'
+  },
+  {
     date: 'June 2023',
     content:
       'I got my Ph.D.!! Thanks to my committee, mentors, friends, family, and everyone else who supported me through it.'
@@ -17,7 +22,7 @@ export const NEWS = [
   {
     date: 'January 2023',
     content:
-      'Thrilled to have two (first-author) papers accepted to CHI 2023!! One came from my internship with [MSR last summer](https://arxiv.org/abs/2301.11178), while the other is the culmination of a years long work on [looking at creative coding editors](https://people.cs.uchicago.edu/~rchugh/classes/creative-coding/)'
+      'Thrilled to have two (first-author) papers accepted to CHI 2023!! One came from my internship with [MSR last summer](https://arxiv.org/abs/2301.11178), while the other is the culmination of a years long work on [looking at creative coding editors](https://people.cs.uchicago.edu/~rchugh/classes/creative-coding/).'
   },
   {
     date: 'September 2022',
