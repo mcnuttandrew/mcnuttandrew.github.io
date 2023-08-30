@@ -80,7 +80,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     subtype: 'thesis'
   },
   {
-    link: '',
+    link: 'https://arxiv.org/abs/2308.15429',
     urlTitle: 'only-you',
     imgLink: 'converted-images/only-you.jpg',
     title: 'Only YOU Can Make IEEE VIS Environmentally Sustainable',

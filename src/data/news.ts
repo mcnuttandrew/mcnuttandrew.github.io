@@ -2,7 +2,7 @@ export const NEWS = [
   {
     date: 'August 2023',
     content:
-      'Excited that our full paper on evaluating visualization notations 📊 will be presented at VIS 2023! Also excited that our reflection on the 🌲🌲🌲environmental sustainability🌲🌲🌲 of IEEE VIS will be presented at alt.vis 2023!!'
+      'Excited that our full paper on evaluating visualization notations 📊 will be presented at VIS 2023! Also excited that [our reflection](https://arxiv.org/abs/2308.15429) on the 🌲🌲🌲environmental sustainability🌲🌲🌲 of IEEE VIS will be presented at alt.vis 2023!!'
   },
   {
     date: 'June 2023',
