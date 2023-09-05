@@ -2,7 +2,7 @@ I'm a recently minted Ph.D. at the University of Chicago's department of compute
 
 <br/>
 
-I'm interested in theories of visualization (and finding opportunities for the operationalization of those ideas) and the design of programming interfaces (such for as visual analytics and creative coding). If you are interested in working with me (such as by being a PhD student at the University of Utah) please reach out! I'm looking for students for students starting the 2024-25 school year. 
+I'm interested in theories of visualization (and finding opportunities for the operationalization of those ideas) and the design of programming interfaces (such for as visual analytics and creative coding). If you are interested in working with me (such as by being a PhD student at the University of Utah) please reach out (mcnutt at uchicago dot edu)! I'm looking for students for students starting the 2024-25 school year.
 
 <br/>
 In the past I worked as a data visualization engineer for a variety of companies in San Francisco. 
