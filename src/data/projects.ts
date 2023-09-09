@@ -22,7 +22,7 @@ export const PROJECTS: Project[] = [
     title: 'Zines',
     dates: 'May 2019 - ',
     sourceLink: 'https://www.mcnutt.in/#/zines',
-    link: 'http://prong-editor.netlify.app/',
+    link: 'https://www.mcnutt.in/#/zines',
     imgLink: 'converted-images/bison-eylsium-cover.jpg',
     text: 'Zines are cool and I make them for various reasons',
     tags: ['art', 'tech', 'visualization']
