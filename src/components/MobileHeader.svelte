@@ -15,7 +15,8 @@
   }
   const externalLinks = [
     {link: 'https://scholar.google.com/citations?user=BFOrUoQAAAAJ', name: 'scholar'},
-    {link: 'https://github.com/mcnuttandrew', name: 'github'}
+    {link: 'https://github.com/mcnuttandrew', name: 'github'},
+    {link: 'https://www.mcnutt.in/assets/cv.pdf', name: 'cv', noImage: true}
   ];
 </script>
 
@@ -33,7 +34,7 @@
   </div>
   {#if open}
     <div class="flex-col flex mb-3">
-      {#each ['about', 'publications', 'projects', 'cv'] as section (section)}
+      {#each ['about', 'publications', 'projects'] as section (section)}
         <a
           href="/#/{section}"
           class:font-bold={currentSection === section}
@@ -50,7 +51,9 @@
           class="padding externalLink text-3xl no-underline flex"
         >
           {x.name.toUpperCase()}
-          <img src="icons/{x.name}.svg" alt="link to {x.name} account" class="ml-2" />
+          {#if !x.noImage}
+            <img src="icons/{x.name}.svg" alt="link to {x.name} account" class="ml-2" />
+          {/if}
         </a>
       {/each}
     </div>

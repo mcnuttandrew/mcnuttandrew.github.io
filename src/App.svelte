@@ -7,7 +7,6 @@
   import Publications from './components/Publications.svelte';
   import Teaching from './components/Teaching.svelte';
   import ShowPage from './components/ShowPage.svelte';
-  import CV from './components/CV.svelte';
   import News from './components/News.svelte';
   import Zines from './components/Zines.svelte';
   import {getRoute} from './utils';
@@ -26,7 +25,7 @@
       class="w-52 max-w-full h-auto rounded-full"
     />
     <h1 class="text-xl font-bold">Andrew McNutt</h1>
-    <h3 class="text-xl">Imminent PostDoc / Prof</h3>
+    <h3 class="text-xl">PostDoc / Imminent Prof</h3>
     <h3 class="text-xl">Visualization / HCI</h3>
     <!-- <h3 class="text-xl">UChicago CS</h3> -->
     <div class="flex align space-between">
@@ -36,6 +35,7 @@
       <a href="https://scholar.google.com/citations?user=BFOrUoQAAAAJ"
         ><img src="icons/scholar.svg" alt="link to scholar page" /></a
       >
+      <a class="ml-2 text-xl text-cyan-800 font-bold" href="./assets/cv.pdf">CV</a>
     </div>
   </div>
   <div class="px-4 md:w-1/2">
@@ -45,8 +45,6 @@
         <Publications />
       {:else if currentSection === 'show-page'}
         <ShowPage />
-      {:else if currentSection === 'cv'}
-        <CV />
       {:else if currentSection === 'projects'}
         <Projects />
       {:else if currentSection === 'teaching'}

@@ -1,4 +1,4 @@
-I'm a recently minted Ph.D. at the University of Chicago's department of computer science, where I'm advised by [Ravi Chugh](http://people.cs.uchicago.edu/~rchugh/). I am also an incoming assistant professor of Computer Science at the University of Utah in the [School of Computing and Imaging](https://www.sci.utah.edu/) Institute (SCI). I'm also also an incoming Post Doc at University of Washington with the [Interactive Data Lab](https://idl.cs.washington.edu/).
+I'm a Post Doc at University of Washington with the [Interactive Data Lab](https://idl.cs.washington.edu/). I am also an incoming assistant professor of Computer Science at the University of Utah in the [School of Computing and Imaging](https://www.sci.utah.edu/) Institute (SCI). I recently graduated from UChicago CS where I was advised by [Ravi Chugh](http://people.cs.uchicago.edu/~rchugh/). 
 
 <br/>
 
