@@ -33,7 +33,7 @@
     "build-no-script-version": "node -r esm scripts/generate-index-page.js",
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv ./",
+    "start": "sirv ./ --port 5555",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   }
 }

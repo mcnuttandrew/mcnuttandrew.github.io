@@ -1,6 +1,6 @@
 import {PUBLICATIONS, COLLABORATOR_LINKS} from './constants';
 
-const routes = new Set(['cv', 'publications', 'projects', 'about', 'teaching', 'zines', 'news']);
+const routes = new Set(['publications', 'projects', 'about', 'teaching', 'zines', 'news']);
 export function getRoute() {
   const locationSplit = location.href.split('/');
   const naiveLocation = locationSplit[locationSplit.length - 1].toLowerCase();

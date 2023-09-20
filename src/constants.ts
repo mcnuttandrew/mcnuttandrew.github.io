@@ -48,6 +48,31 @@ export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((x) => selectedPubs.has
 
 export const PRESENTATIONS: {title: string; details: string[]; links?: {name: string; link: string}[]}[] = [
   {
+    title: 'Safer Interfaces for Data Visualization',
+    details: ['VL/HCC, October, 2023, Washington, D.C.', 'Vega Conf, September, 2023, Seattle, Washington'],
+    links: []
+  },
+  {
+    title: 'Safer Interfaces for Data Visualization',
+    details: [
+      'University of California Berkeley, May, 2023, Berkeley, California',
+      'Microsoft Research, April, 2023, Cambridge, England (Virtual)',
+      'Roux Institute, March, 2023, Portland, Maine',
+      'University of Utah, February, 2023, Salt Lake City, Utah'
+    ],
+    links: []
+  },
+  {
+    title: 'A Study of Editor Features in a Creative Coding Classroom',
+    details: ['SIGCHI, April, 2023, Hamburg, Germany'],
+    links: []
+  },
+  {
+    title: 'On the Design of AI-powered Code Assistants for Notebooks',
+    details: ['SIGCHI, April, 2023, Hamburg, Germany'],
+    links: []
+  },
+  {
     title: 'Understanding and Enhancing JSON-based DSL Interfaces for Visualization',
     details: [
       'Shandong University, November 15, 2022, Qingdao, China. (Virtual)',
@@ -192,6 +217,11 @@ export const BLOG_POSTS = [
 ];
 
 export const AWARDS: {society: string; date: string; awardName: string; detail?: string}[] = [
+  {
+    society: 'IEEE VIS',
+    date: '2023',
+    awardName: 'Special Recognition for Outstanding Review'
+  },
   {
     society: 'ACM SIGCHI',
     date: '2023',
@@ -416,6 +446,18 @@ export const TEACHING = [
 
 export const SERVICE: {organization: string; date: string; role: string; link?: string}[] = [
   {
+    organization: 'Information+ Conference',
+    date: '2023',
+    role: 'Organizing Committee',
+    link: 'https://informationplusconference.com/2023/'
+  },
+  {
+    organization: 'alt.vis',
+    date: '2023',
+    role: 'Organizing Committee',
+    link: 'https://altvis.github.io/'
+  },
+  {
     organization: 'alt.vis',
     date: '2022',
     role: 'Organizing Committee',
@@ -468,7 +510,7 @@ export const SERVICE: {organization: string; date: string; role: string; link?: 
 ];
 
 export const REVIEWING: string[] = [
-  "VIS - Full Papers ('20, '21, '22), Short Papers ('20, '21), alt.vis ('21, '22), VisGuides ('22)",
+  "VIS - Full Papers ('20, '21, '22, '23⭐), Short Papers ('20, '21), alt.vis ('21, '22), VisGuides ('22)",
   "EuroVis - Full Papers ('23)",
   "CHI - Full Papers (⭐ '21, ⭐⭐'22, ⭐⭐⭐'23), alt.chi ('20), Late-Breaking Work ('22)",
   'UIST - Full Papers (⭐ `21)',

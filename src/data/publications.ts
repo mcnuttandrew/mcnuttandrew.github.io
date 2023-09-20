@@ -94,7 +94,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     subtype: 'workshop'
   },
   {
-    link: 'https://arxiv.org/pdf/2308.16353.pdf',
+    link: 'https://arxiv.org/abs/2308.16353',
     urlTitle: 'notascope',
     imgLink: 'converted-images/notascope.jpg',
     title: 'Metrics-Based Evaluation and Comparison of Visualization Notations',
@@ -105,7 +105,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     links: [
       {name: 'live', link: 'https://app.notascope.io/'},
       {name: 'osf', link: 'https://osf.io/8924y/'},
-      {name: 'paper', link: 'https://arxiv.org/pdf/2308.16353.pdf'}
+      {name: 'paper', link: 'https://arxiv.org/abs/2308.16353'}
     ],
     abstract: `A visualization notation is a recurring pattern of symbols used to author specifications of visualizations, from data transformation to visual mapping. Programmatic notations use symbols defined by grammars or domain-specific languages (e.g., ggplot2, dplyr, Vega-Lite) or libraries (e.g., Matplotlib, Pandas).   Designers and prospective users of grammars and libraries often evaluate visualization notations by inspecting galleries of examples.  While such collections demonstrate usage and expressiveness, their construction and evaluation are usually ad hoc, making comparisons of different notations difficult.  More rarely, experts analyze notations via usability heuristics, such as the Cognitive Dimensions of Notations framework. These analyses, akin to structured close readings of text, can reveal design deficiencies, but place a burden on the expert to simultaneously consider many facets of often complex systems.  To alleviate these issues, we introduce a metrics-based approach to usability evaluation and comparison of notations in which metrics are computed for a gallery of examples across a suite of notations.  While applicable to any visualization domain, we explore the utility of our approach via a case study considering statistical graphics that explores 40 visualizations across 9 widely used notations. We facilitate the computation of appropriate metrics and analysis via a new tool called NotaScope.  We gathered feedback via interviews with authors or maintainers of prominent charting libraries (n=6).  We find that this approach is a promising way to formalize, externalize, and extend evaluations and comparisons of visualization notations.`,
     type: 'conference / journal articles',
@@ -180,7 +180,7 @@ We describe a relatively inexpensive way to build rich projectional editors for 
     subtype: 'conference'
   },
   {
-    link: 'https://arxiv.org/pdf/2207.07998.pdf',
+    link: 'https://arxiv.org/abs/2207.07998',
     urlTitle: 'no-grammar',
     imgLink: 'converted-images/no-grammar.jpg',
     title: 'No Grammar to Rule Them All: A Survey of JSON-Style DSLs for Visualization',
@@ -189,7 +189,7 @@ We describe a relatively inexpensive way to build rich projectional editors for 
     journal: 'IEEE VIS 2022',
     date: '',
     links: [
-      {name: 'paper', link: 'https://arxiv.org/pdf/2207.07998.pdf'},
+      {name: 'paper', link: 'https://arxiv.org/abs/2207.07998'},
       {name: 'live', link: 'https://vis-json-dsls.netlify.app/'},
       {name: 'talk', link: 'https://youtu.be/GMy2QCE-y7o?t=3783'},
       {
@@ -306,7 +306,7 @@ We describe a relatively inexpensive way to build rich projectional editors for 
     subtype: 'conference'
   },
   {
-    link: 'https://arxiv.org/pdf/2104.04042.pdf',
+    link: 'https://arxiv.org/abs/2104.04042',
     urlTitle: 'tacos',
     imgLink: 'converted-images/tacos.jpg',
     title: 'What are Table Cartograms Good for Anyway? An Algebraic Analysis',
@@ -316,7 +316,7 @@ We describe a relatively inexpensive way to build rich projectional editors for 
     year: 2021,
     links: [
       {name: 'about', link: '#/research/tacos'},
-      {name: 'paper', link: 'https://arxiv.org/pdf/2104.04042.pdf'},
+      {name: 'paper', link: 'https://arxiv.org/abs/2104.04042'},
       {name: 'talk', link: 'https://www.youtube.com/watch?v=ozBn5bLsGQw&t=2594s'}
     ],
     abstract: `Unfamiliar or esoteric visual forms arise in many areas of visualization. While such forms can be intriguing, it can be unclear how to make effective use of them without long periods of practice or costly user studies. In this work we analyze the table cartogram—a graphic which visualizes tabular data by bringing the areas of a grid of quadrilaterals into correspondence with the input data, like a heat map that has been *area-ed* rather than colored. Despite having existed for several years, little is known about its appropriate usage. We mend this gap by using Algebraic Visualization Design to show that they are best suited to relatively small tables with ordinal axes for some comparison and outlier identification tasks. In doing so we demonstrate a discount theory-based analysis that can be used to cheaply determine best practices for unknown visualizations.
@@ -325,7 +325,7 @@ We describe a relatively inexpensive way to build rich projectional editors for 
     subtype: 'journal'
   },
   {
-    link: 'https://arxiv.org/pdf/2101.07902.pdf',
+    link: 'https://arxiv.org/abs/2101.07902',
     urlTitle: 'ivy',
     imgLink: 'converted-images/ivy.jpg',
     title: 'Integrated Visualization Editing via Parameterized Declarative Templates',
@@ -337,7 +337,7 @@ We describe a relatively inexpensive way to build rich projectional editors for 
     links: [
       {name: 'about', link: '#/research/ivy'},
       {name: 'live', link: 'https://github.com/mcnuttandrew/ivy'},
-      {name: 'paper', link: 'https://arxiv.org/pdf/2101.07902.pdf'},
+      {name: 'paper', link: 'https://arxiv.org/abs/2101.07902'},
       {name: 'osf', link: 'https://osf.io/cture/'},
       {name: 'talk', link: 'https://www.youtube.com/watch?v=FzIdVnSi9Po'}
     ],
@@ -350,7 +350,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     subtype: 'conference'
   },
   {
-    link: 'https://arxiv.org/pdf/2009.02384.pdf',
+    link: 'https://arxiv.org/abs/2009.02384',
     urlTitle: 'nearby',
     imgLink: 'converted-images/nearby-preview.jpg',
     year: 2020,
@@ -361,7 +361,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     date: '',
     links: [
       {name: 'about', link: '#/research/nearby'},
-      {name: 'paper', link: 'https://arxiv.org/pdf/2009.02384.pdf'},
+      {name: 'paper', link: 'https://arxiv.org/abs/2009.02384'},
       {name: 'code', link: 'https://github.com/mcnuttandrew/sci-text-compare'},
       {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'}
     ],
@@ -393,7 +393,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     subtype: 'poster'
   },
   {
-    link: 'https://arxiv.org/pdf/2001.02316.pdf',
+    link: 'https://arxiv.org/abs/2001.02316',
     urlTitle: 'mirage',
     imgLink: 'converted-images/surfacing-visualization-mirages.jpg',
     title: 'Surfacing Visualization Mirages',
@@ -409,7 +409,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
         name: 'blog post',
         link: 'https://medium.com/multiple-views-visualization-research-explained/surfacing-visualization-mirages-8d39e547e38c'
       },
-      {name: 'paper', link: 'https://arxiv.org/pdf/2001.02316.pdf'},
+      {name: 'paper', link: 'https://arxiv.org/abs/2001.02316'},
       {name: 'live', link: 'https://metamorphic-linting.netlify.com/'},
       {name: 'code', link: 'https://github.com/tableau/Visualization-Linting'},
       {name: 'osf', link: 'https://osf.io/je3x9'},
@@ -446,23 +446,21 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: 'extended abstract / workshop papers',
     subtype: 'ex. abs.'
   },
-    {
+  {
     link: 'https://www.mcnutt.in/ms-zine/',
     imgLink: 'converted-images/ms-thesis.jpg',
-    title: 'Design and Analysis of Table Cartograms: Simultaneous Multipurpose Tabular Area-encoding Displays',
+    title:
+      'Design and Analysis of Table Cartograms: Simultaneous Multipurpose Tabular Area-encoding Displays',
     urlTitle: 'ms-thesis',
     authors: 'Andrew McNutt (Advised by Gordon Kindlmann)',
     journal: 'Masters thesis. University of Chicago',
     date: 'June 2014',
     year: 2014,
-    links: [
-      {name: 'zine', link: 'https://www.mcnutt.in/ms-zine/'},
-    ],
-    abstract:
-      '',
+    links: [{name: 'zine', link: 'https://www.mcnutt.in/ms-zine/'}],
+    abstract: '',
     type: 'theses / book chapters',
     subtype: 'thesis'
-  }
+  },
   {
     imgLink: 'converted-images/agathas-thing.jpg',
     urlTitle: 'goethe-poster',
@@ -484,7 +482,6 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: 'posters',
     subtype: 'poster'
   },
-  // link to award: https://rcc.uchicago.edu/about-rcc/news-features/mind-bytes-2019-tipping-point-computational-and-ai-research
   {
     link: 'https://diglib.eg.org/xmlui/bitstream/handle/10.2312/eurp20191144/053-055.pdf',
     imgLink: 'converted-images/forested-tree-view-example.jpg',
@@ -501,7 +498,11 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       {name: 'poster', link: 'assets/forum-explorer-poster.pdf'},
       {name: 'live', link: 'https://www.mcnutt.in/forum-explorer/'},
       {name: 'code', link: 'https://github.com/mcnuttandrew/forum-explorer'},
-      {name: 'osf', link: 'https://osf.io/nrhqw/'}
+      {name: 'osf', link: 'https://osf.io/nrhqw/'},
+      {
+        name: 'award',
+        link: 'https://rcc.uchicago.edu/about-rcc/news-features/mind-bytes-2019-tipping-point-computational-and-ai-research'
+      }
     ],
     abstract:
       'Large threaded conversations, such as those found on YCombinator’s HackerNews, are typically presented in a way that shows individual comments clearly, but can obscure larger trends or patterns within the conversational corpus. Previous research has addressed this problem through graphical-overviews and NLP-generated summaries. These efforts have generally assumed a particular (and modest) data size, which limits their utility for large or deeply-nested conversations, and often require non-trivial offline processing time, which makes them impractical for day-to-day usage. We describe here Forum Explorer, a Chrome extension that combines and expands upon prior art through a collection of techniques that enable this type of representation to handle wider ranges of data in real time. Materials for this project are available at https://osf.io/nrhqw/.',
