@@ -98,7 +98,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     urlTitle: 'notascope',
     imgLink: 'converted-images/notascope.jpg',
     title: 'Metrics-Based Evaluation and Comparison of Visualization Notations',
-    authors: 'Nicolas Kruchten, Andrew McNutt, and Michael J. McGuffin',
+    authors: 'Nicolas Kruchten, Andrew McNutt, Michael J. McGuffin',
     journal: 'IEEE VIS 2023',
     date: '',
     year: 2023,
