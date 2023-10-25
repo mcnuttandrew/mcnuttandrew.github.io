@@ -88,7 +88,10 @@ We primarily consider languages focused on data visualization tasks, as there ha
     journal: 'alt.vis 2023',
     date: '',
     year: 2023,
-    links: [{name: 'paper', link: 'https://arxiv.org/abs/2308.15429'}],
+    links: [
+      {name: 'paper', link: 'https://arxiv.org/abs/2308.15429'},
+      {name: 'talk', link: 'https://www.youtube.com/watch?v=WDp75Puoh24'}
+    ],
     abstract: `The IEEE VIS Conference (or VIS) hosts more than 1000 people annually. It brings together visualization researchers and practitioners from across the world to share new research and knowledge. Behind the scenes, a team of volunteers puts together the entire conference and makes sure it runs smoothly. Organizing involves logistics of the conference, ensuring that the attendees have an enjoyable time, allocating rooms to multiple concurrent tracks, and keeping the conference within budget. In recent years, the COVID-19 pandemic has abruptly disrupted plans, forcing organizers to switch to virtual, hybrid, and satellite formats. These alternatives offer many benefits:  fewer costs (e.g., travel, venue, institutional), greater accessibility (who can physically travel, who can get visas, who can get child care), and a lower carbon footprint (as people do not need to fly to attend). As many conferences begin to revert to the pre-pandemic status quo of primarily in-person conferences, we suggest that it is an opportune moment to reflect on the benefits and drawbacks of lower-carbon conference formats. To learn more about the logistics of conference organizing, we talked to 6 senior executive-level VIS organizers. We review some of the many considerations that go into planning, particularly with regard to how they influence decisions about alternative formats.   We aim to start a discussion about the sustainability of VIS---including sustainability for finance, volunteers, and, central to this work, the environment---for the next three years and the next three hundred years. `,
     type: 'extended abstract / workshop papers',
     subtype: 'workshop'
@@ -98,14 +101,18 @@ We primarily consider languages focused on data visualization tasks, as there ha
     urlTitle: 'notascope',
     imgLink: 'converted-images/notascope.jpg',
     title: 'Metrics-Based Evaluation and Comparison of Visualization Notations',
-    authors: 'Nicolas Kruchten, Andrew McNutt, and Michael J. McGuffin',
+    authors: 'Nicolas Kruchten, Andrew McNutt, Michael J. McGuffin',
     journal: 'IEEE VIS 2023',
     date: '',
     year: 2023,
     links: [
       {name: 'live', link: 'https://app.notascope.io/'},
       {name: 'osf', link: 'https://osf.io/8924y/'},
-      {name: 'paper', link: 'https://arxiv.org/abs/2308.16353'}
+      {name: 'paper', link: 'https://arxiv.org/abs/2308.16353'},
+      {
+        name: 'blog post',
+        link: 'https://medium.com/multiple-views-visualization-research-explained/metrics-for-reasoning-about-the-usability-of-visualization-notations-6c03b9292780'
+      }
     ],
     abstract: `A visualization notation is a recurring pattern of symbols used to author specifications of visualizations, from data transformation to visual mapping. Programmatic notations use symbols defined by grammars or domain-specific languages (e.g., ggplot2, dplyr, Vega-Lite) or libraries (e.g., Matplotlib, Pandas).   Designers and prospective users of grammars and libraries often evaluate visualization notations by inspecting galleries of examples.  While such collections demonstrate usage and expressiveness, their construction and evaluation are usually ad hoc, making comparisons of different notations difficult.  More rarely, experts analyze notations via usability heuristics, such as the Cognitive Dimensions of Notations framework. These analyses, akin to structured close readings of text, can reveal design deficiencies, but place a burden on the expert to simultaneously consider many facets of often complex systems.  To alleviate these issues, we introduce a metrics-based approach to usability evaluation and comparison of notations in which metrics are computed for a gallery of examples across a suite of notations.  While applicable to any visualization domain, we explore the utility of our approach via a case study considering statistical graphics that explores 40 visualizations across 9 widely used notations. We facilitate the computation of appropriate metrics and analysis via a new tool called NotaScope.  We gathered feedback via interviews with authors or maintainers of prominent charting libraries (n=6).  We find that this approach is a promising way to formalize, externalize, and extend evaluations and comparisons of visualization notations.`,
     type: 'conference / journal articles',
