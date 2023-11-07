@@ -1,5 +1,10 @@
 export const NEWS = [
   {
+    date: 'September 2023',
+    content:
+      "Started my PostDoc at University of Washington's [Interactive Data Lab](https://idl.cs.washington.edu/) with Leilani Battle and Jeff Heer."
+  },
+  {
     date: 'August 2023',
     content:
       'Excited that our full paper on [evaluating visualization notations](https://arxiv.org/pdf/2308.16353.pdf) 📊 will be presented at VIS 2023! Also excited that [our reflection](https://arxiv.org/abs/2308.15429) on the 🌲🌲🌲environmental sustainability🌲🌲🌲 of IEEE VIS will be presented at alt.vis 2023!!'
