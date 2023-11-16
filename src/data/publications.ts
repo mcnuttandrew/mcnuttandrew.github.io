@@ -54,32 +54,6 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
-    link: '',
-    urlTitle: 'phd-thesis',
-    imgLink: 'converted-images/phd-thesis.jpg',
-    title: 'Understanding and Enhancing JSON-based DSL Interfaces for Visualization',
-    authors: 'Andrew McNutt (advised by Ravi Chugh)',
-    journal: 'Ph.D. Thesis. University of Chicago, Department of Computer Science, 2023',
-    date: '',
-    year: 2023,
-    links: [
-      {name: 'paper', link: 'https://osf.io/fy246'},
-      {name: 'supplementary materials', link: 'https://osf.io/ywcqa/'}
-    ],
-    abstract: `Domain-specific languages represented in data serialization formats (such as Javascript Object Notation or JSON) are an increasingly common means to control numerous systems.
-These range from database queries to application configuration, narrative generation, Twitter bots, data visualization, and many other areas.
-These languages allow potentially unsophisticated human users to concisely specify their intent through logic and notation that is relevant to task domain.
-Further, they provide a means for computational agents to easily manipulate that form, allowing for powerful recommendation engines and systems of automated analyses.
-
-In this thesis, we consider how end-user agency might be enhanced and maintained through the design of tools that support these domain-specific languages, as well as through the study of the design of the languages themselves.
-In support of this goal, we conducted four interconnected projects which variously study how JSON-based DSLs are designed, how abstraction can be integrated into those languages, how interfaces can be designed to specifically facilitate their manipulation, as well as how those programs might be automatically validated.
-Through these projects, we demonstrate that giving primacy to these textual interfaces as design elements can be valuable for end users.
-We find that this style of interventions are useful for helping end users learn, use, and re-use programs written in these languages.
-We primarily consider languages focused on data visualization tasks, as there has been substantial work in the visualization research community on this form of interface—although the lessons learned could be applied to any relevant domain.`,
-    type: 'theses / book chapters',
-    subtype: 'thesis'
-  },
-  {
     link: 'https://arxiv.org/abs/2308.15429',
     urlTitle: 'only-you',
     imgLink: 'converted-images/only-you.jpg',
@@ -139,6 +113,33 @@ We describe a relatively inexpensive way to build rich projectional editors for 
     subtype: 'conference'
   },
   {
+    link: '',
+    urlTitle: 'phd-thesis',
+    imgLink: 'converted-images/phd-thesis.jpg',
+    title: 'Understanding and Enhancing JSON-based DSL Interfaces for Visualization',
+    authors: 'Andrew McNutt (advised by Ravi Chugh)',
+    journal: 'Ph.D. Thesis. University of Chicago, Department of Computer Science, 2023',
+    date: '',
+    year: 2023,
+    links: [
+      {name: 'paper', link: 'https://osf.io/fy246'},
+      {name: 'supplementary materials', link: 'https://osf.io/ywcqa/'}
+    ],
+    abstract: `Domain-specific languages represented in data serialization formats (such as Javascript Object Notation or JSON) are an increasingly common means to control numerous systems.
+These range from database queries to application configuration, narrative generation, Twitter bots, data visualization, and many other areas.
+These languages allow potentially unsophisticated human users to concisely specify their intent through logic and notation that is relevant to task domain.
+Further, they provide a means for computational agents to easily manipulate that form, allowing for powerful recommendation engines and systems of automated analyses.
+
+In this thesis, we consider how end-user agency might be enhanced and maintained through the design of tools that support these domain-specific languages, as well as through the study of the design of the languages themselves.
+In support of this goal, we conducted four interconnected projects which variously study how JSON-based DSLs are designed, how abstraction can be integrated into those languages, how interfaces can be designed to specifically facilitate their manipulation, as well as how those programs might be automatically validated.
+Through these projects, we demonstrate that giving primacy to these textual interfaces as design elements can be valuable for end users.
+We find that this style of interventions are useful for helping end users learn, use, and re-use programs written in these languages.
+We primarily consider languages focused on data visualization tasks, as there has been substantial work in the visualization research community on this form of interface—although the lessons learned could be applied to any relevant domain.`,
+    type: 'theses / book chapters',
+    subtype: 'thesis'
+  },
+
+  {
     link: 'https://osf.io/3jrcm/',
     urlTitle: 'doom-n-fruit',
     imgLink: 'converted-images/doom-n-fruit.jpg',
@@ -162,7 +163,10 @@ We describe a relatively inexpensive way to build rich projectional editors for 
     authors: 'Andrew McNutt, Chenglong Wang, Rob DeLine, Steven M. Drucker',
     journal: 'ACM CHI 2023',
     date: '',
-    links: [{name: 'paper', link: 'https://arxiv.org/abs/2301.11178'}],
+    links: [
+      {name: 'paper', link: 'https://arxiv.org/abs/2301.11178'},
+      {name: 'talk', link: 'https://www.youtube.com/watch?v=g0prh8mE3bI'}
+    ],
     abstract: `AI-powered code assistants, such as Copilot, are quickly becoming a ubiquitous component of contemporary coding contexts. Among these environments, computational notebooks, such as Jupyter, are of particular interest as they provide rich interface affordances that interleave code and output in a manner that allows for both exploratory and presentational work. Despite their popularity, little is known about the appropriate design of code assistants in notebooks. We investigate the potential of code assistants in computational notebooks by creating a design space (reified from a survey of extant tools) and through an interview-design study (with 15 practicing data scientists). Through this work, we identify challenges and opportunities for future systems in this space, such as the value of disambiguation for tasks like data visualization, the potential of tightly scoped domain-specific tools (like linters), and the importance of polite assistants.`,
     year: 2023,
     type: 'conference / journal articles',
@@ -179,7 +183,8 @@ We describe a relatively inexpensive way to build rich projectional editors for 
     date: '',
     links: [
       {name: 'paper', link: 'https://arxiv.org/pdf/2301.13302'},
-      {name: 'live', link: 'http://cs111.org/'}
+      {name: 'live', link: 'http://cs111.org/'},
+      {name: 'talk', link: 'https://www.youtube.com/watch?v=g2GkTdOKU3A'}
     ],
     abstract:
       'Creative coding is a rapidly expanding domain for both artistic expression and computational education. Numerous libraries and IDEs support creative coding, however there has been little consideration of how the environments themselves might be designed to serve these twin goals. To investigate this gap, we implemented and used an experimental editor to teach a sequence of college and high-school creative coding courses. In the first year, we conducted a log analysis of student work (n=39) and surveys regarding prospective features (n=25). These guided our implementation of common enhancements (e.g. color pickers) as well as uncommon ones (e.g. bidirectional shape editing). In the second year, we studied the effects of these features through logging (n=39+) and survey (n=23) studies. Reflecting on the results, we identify opportunities to improve creativity- and novice-focused IDEs and highlight tensions in their design (as in tools that augment artistry or efficiency but may hinder learning).',
