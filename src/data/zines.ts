@@ -45,6 +45,13 @@ const ZINES: Zine[] = [
     imgLink: 'https://www.mcnutt.in/converted-images/chi23-zine-preview.jpg',
     text: 'A two-sided zine describing my papers "On the Design of AI-powered Code Assistants for Notebooks" and "A Study of Editor Features in a Creative Coding Classroom"  (print only)',
     year: 2023
+  },
+  {
+    title: 'Information Plus 2023 Program Zines',
+    imgLink: 'https://www.mcnutt.in/converted-images/info-plus-zines.jpg',
+    link: 'https://www.mcnutt.in/info-plus-2023-zine-content/',
+    text: 'A two-sided zine describing my papers "On the Design of AI-powered Code Assistants for Notebooks" and "A Study of Editor Features in a Creative Coding Classroom"  (print only)',
+    year: 2023
   }
 ];
 export default ZINES;
