@@ -1,7 +1,8 @@
-rm -rf converted-images
-mkdir converted-images
 cd assets/
 for i in *.png *.jpg; do
     prefix="${i%.*}"
-    convert -flatten -strip -interlace  Plane -quality 80 $i ../converted-images/$prefix.jpg
+    # if the file already exists, skip it
+    if [ ! -f ../converted-images/$prefix.jpg ]; then
+        convert -flatten -strip -interlace  Plane -quality 80 $i ../converted-images/$prefix.jpg
+    fi
 done

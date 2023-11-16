@@ -50,7 +50,7 @@ const ZINES: Zine[] = [
     title: 'Information Plus 2023 Program Zines',
     imgLink: 'https://www.mcnutt.in/converted-images/info-plus-zines.jpg',
     link: 'https://www.mcnutt.in/info-plus-2023-zine-content/',
-    text: 'A two-sided zine describing my papers "On the Design of AI-powered Code Assistants for Notebooks" and "A Study of Editor Features in a Creative Coding Classroom"  (print only)',
+    text: 'Zines made for the information plus conference. Made in collaboration with Elsie Lee-Robbins and Jonathan Zong.',
     year: 2023
   }
 ];
