@@ -35,6 +35,9 @@
       <a href="https://scholar.google.com/citations?user=BFOrUoQAAAAJ"
         ><img src="icons/scholar.svg" alt="link to scholar page" /></a
       >
+      <a href="https://vis.social/@mcnutt" rel="me" class="ml-2"
+        ><img src="icons/mastodon.png" alt="link to mastodon page" class="w-8" id="mastodon" /></a
+      >
       <a class="ml-2 text-xl text-cyan-800 font-bold" href="./assets/cv.pdf">CV</a>
     </div>
   </div>
@@ -65,7 +68,7 @@
   @tailwind components;
   @tailwind utilities;
 
-  /* .w-xxxxxl {
-    width: 54rem;
-  } */
+  #mastodon {
+    margin-top: -2px;
+  }
 </style>

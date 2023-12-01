@@ -16,6 +16,7 @@
   const externalLinks = [
     {link: 'https://scholar.google.com/citations?user=BFOrUoQAAAAJ', name: 'scholar'},
     {link: 'https://github.com/mcnuttandrew', name: 'github'},
+    {link: 'https://vis.social/@mcnutt', name: 'mastodon'},
     {link: 'https://www.mcnutt.in/assets/cv.pdf', name: 'cv', noImage: true}
   ];
 </script>
@@ -52,7 +53,7 @@
         >
           {x.name.toUpperCase()}
           {#if !x.noImage}
-            <img src="icons/{x.name}.svg" alt="link to {x.name} account" class="ml-2" />
+            <img src="icons/{x.name}.svg" alt="link to {x.name} account" class="ml-2 w-7" />
           {/if}
         </a>
       {/each}
