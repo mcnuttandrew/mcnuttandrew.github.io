@@ -32,7 +32,7 @@
       <a class="mr-2" href="https://github.com/mcnuttandrew"
         ><img src="icons/github.svg" alt="link to github account" /></a
       >
-      <a href="https://scholar.google.com/citations?user=BFOrUoQAAAAJ"
+      <a href="https://scholar.google.com/citations?user=AHwQg4kAAAAJ&hl=en"
         ><img src="icons/scholar.svg" alt="link to scholar page" /></a
       >
       <a href="https://vis.social/@mcnutt" rel="me" class="ml-2"
