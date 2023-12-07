@@ -14,7 +14,7 @@
     rotation.set(!$rotation ? 90 : 0);
   }
   const externalLinks = [
-    {link: 'https://scholar.google.com/citations?user=BFOrUoQAAAAJ', name: 'scholar'},
+    {link: 'https://scholar.google.com/citations?user=AHwQg4kAAAAJ&hl=en', name: 'scholar'},
     {link: 'https://github.com/mcnuttandrew', name: 'github'},
     {link: 'https://vis.social/@mcnutt', name: 'mastodon'},
     {link: 'https://www.mcnutt.in/assets/cv.pdf', name: 'cv', noImage: true}
