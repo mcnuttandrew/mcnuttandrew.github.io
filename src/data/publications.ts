@@ -54,6 +54,20 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
+    link: 'https://arxiv.org/pdf/2309.10108.pdf',
+    urlTitle: 'woz-ai',
+    imgLink: 'converted-images/woz.jpg',
+    title: 'How Do Data Analysts Respond to AI Assistance? A Wizard-of-Oz Study',
+    authors: 'Ken Gu, Madeleine Grunde-McLaughlin, Andrew McNutt, Jeffrey Heer, Tim Althoff',
+    journal: 'ACM CHI 2024',
+    date: '',
+    year: 2024,
+    links: [{name: 'paper', link: 'https://arxiv.org/pdf/2309.10108.pdf'}],
+    abstract: `Data analysis is challenging as analysts must navigate nuanced decisions that may yield divergent conclusions. AI assistants have the potential to support analysts in planning their analyses, enabling more robust decision-making. Though AI-based assistants that target code execution (e.g., Github Copilot) have received significant attention, limited research addresses assistance for both analysis execution and planning. In this work, we characterize helpful planning suggestions and their impacts on analysts' workflows. We first review the analysis planning literature and crowd-sourced analysis studies to categorize suggestion content. We then conduct a Wizard-of-Oz study (n=13) to observe analysts' preferences and reactions to planning assistance in a realistic scenario. Our findings highlight subtleties in contextual factors that impact suggestion helpfulness, emphasizing design implications for supporting different abstractions of assistance, forms of initiative, increased engagement, and alignment of goals between analysts and assistants.`,
+    type: 'conference / journal articles',
+    subtype: 'conference'
+  },
+  {
     link: 'https://arxiv.org/abs/2308.15429',
     urlTitle: 'only-you',
     imgLink: 'converted-images/only-you.jpg',
