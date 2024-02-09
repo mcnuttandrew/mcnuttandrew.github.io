@@ -59,7 +59,7 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: 'converted-images/woz.jpg',
     title: 'How Do Data Analysts Respond to AI Assistance? A Wizard-of-Oz Study',
     authors: 'Ken Gu, Madeleine Grunde-McLaughlin, Andrew McNutt, Jeffrey Heer, Tim Althoff',
-    journal: 'ACM CHI 2024',
+    journal: 'ACM CHI 2024 [Conditional Accept]',
     date: '',
     year: 2024,
     links: [{name: 'paper', link: 'https://arxiv.org/pdf/2309.10108.pdf'}],
