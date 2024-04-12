@@ -512,11 +512,3 @@ export const SERVICE: {organization: string; date: string; role: string; link?: 
     role: 'Teaching Assistant'
   }
 ];
-
-export const REVIEWING: string[] = [
-  "VIS - Full Papers ('20, '21, '22, '23⭐), Short Papers ('20, '21), alt.vis ('21, '22), VisGuides ('22)",
-  "EuroVis - Full Papers ('23)",
-  "CHI - Full Papers (⭐ '21, ⭐⭐'22, ⭐⭐⭐'23), alt.chi ('20), Late-Breaking Work ('22)",
-  'UIST - Full Papers (⭐ `21)',
-  'TVCG - Journal (`22)'
-];
