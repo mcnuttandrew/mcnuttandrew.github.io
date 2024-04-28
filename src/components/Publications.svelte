@@ -2,7 +2,7 @@
   import {PUBLICATIONS} from '../constants';
   import PublicationComponent from './Publication.svelte';
 
-  type sort = 'type' | 'year' | 'paper name' | 'tile';
+  type sort = 'type' | 'year' | 'paper name';
   let currentSort: sort = 'type';
   const sorts: sort[] = ['type', 'year', 'paper name'];
   const typeOrder = [
@@ -26,9 +26,7 @@
         )
       );
     }
-    if (currentSort === 'tile') {
-      return {'': PUBLICATIONS.sort((a, b) => a.title.localeCompare(b.title))};
-    }
+
     return {publications: PUBLICATIONS.sort((a, b) => a.title.localeCompare(b.title))};
   }
 
@@ -40,13 +38,6 @@
 
 <div>
   <div class="flex w-full justify-between">
-    <button
-      class:font-bold={currentSort === 'tile'}
-      class="text-lg p-2 border-none text-cyan-800"
-      on:click={() => {
-        currentSort = 'tile';
-      }}>As tiles</button
-    >
     {#each sorts as sort}
       <button
         class:font-bold={sort === currentSort}
@@ -63,15 +54,9 @@
   {#each sortedPublications as pubs}
     <h2 class="mt-8 text-2xl font-bold">{pubs[0].toUpperCase()}</h2>
 
-    <div
-      class="flex"
-      class:flex-col={currentSort !== 'tile'}
-      class:flex-wrap={currentSort === 'tile'}
-      class:justify-between={currentSort === 'tile'}
-    >
+    <div class="flex flex-col">
       {#each pubs[1] as publication}
-        <br />
-        <PublicationComponent bind:publication asTile={currentSort === 'tile'} />
+        <PublicationComponent bind:publication />
       {/each}
     </div>
   {/each}

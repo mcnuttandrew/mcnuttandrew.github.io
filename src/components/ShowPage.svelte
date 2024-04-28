@@ -1,10 +1,16 @@
 <script lang="ts">
   import {PUBLICATIONS} from '../constants';
   import {getShowPage, addLinks} from '../utils';
+  import markdownit from 'markdown-it';
+  const md = markdownit({
+    html: true,
+    linkify: true,
+    typographer: true
+  });
+
   const pubName = getShowPage();
   const publication = PUBLICATIONS.find((d) => d.urlTitle === pubName);
   const keys = ['subtitle', 'date', 'journal'];
-  import {marked} from 'marked';
 </script>
 
 <div class="flex-down publication">
@@ -18,7 +24,7 @@
       {#if publication[key]}<span>{publication[key]}</span>{/if}
     {/each}
     {#if publication.authors}
-      <span>{@html marked(addLinks(publication.authors))}</span>
+      <span>{@html md.render(addLinks(publication.authors))}</span>
     {/if}
   </div>
   <div class="section-subtitle">Materials</div>
@@ -28,7 +34,7 @@
     </div>
   </div>
   <div class="section-subtitle">Abstract</div>
-  <div class="abstract">{@html marked(publication.abstract)}</div>
+  <div class="abstract">{@html md.render(publication.abstract)}</div>
 </div>
 
 <style>

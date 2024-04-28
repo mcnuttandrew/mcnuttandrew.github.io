@@ -17,3 +17,7 @@ body {
 div a {
   color: #145f75;
 }
+
+.md-container p, .abstract-content p {
+  margin-bottom: 1em;
+}

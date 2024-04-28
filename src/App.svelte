@@ -9,11 +9,15 @@
   import ShowPage from './components/ShowPage.svelte';
   import News from './components/News.svelte';
   import Zines from './components/Zines.svelte';
+  import NewsItem from './components/NewsItem.svelte';
+  import {NEWS} from './constants';
+
   import {getRoute} from './utils';
   let currentSection = getRoute();
   window.onhashchange = () => {
     currentSection = getRoute();
   };
+  let news = NEWS.slice(0, 4);
 </script>
 
 <div class="h-full w-full md:justify-center flex flex-col md:flex-row leading-tight">
@@ -40,10 +44,17 @@
       >
       <a class="ml-2 text-xl text-cyan-800 font-bold" href="./assets/cv.pdf">CV</a>
     </div>
+    <h2 class="text-2xl font-bold italic mt-8 hidden md:block text-left">NEWS</h2>
+    <div class="about-section hidden md:block w-80">
+      {#each news as newsItem}
+        <NewsItem {newsItem} />
+      {/each}
+      <a href="/#/news">Older News</a>
+    </div>
   </div>
   <div class="px-4 md:w-1/2">
     <Header {currentSection} />
-    <div class="content-wrapper">
+    <div class="content-wrapper mb-11">
       {#if currentSection === 'publications'}
         <Publications />
       {:else if currentSection === 'show-page'}
