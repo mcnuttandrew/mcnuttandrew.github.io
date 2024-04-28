@@ -1,13 +1,21 @@
 <script lang="ts">
+  import NewsItem from './NewsItem.svelte';
   import {NEWS, SELECTED_PUBLICATIONS} from '../constants';
   import ABOUT from '../text-chunks/about.md';
-  import {marked} from 'marked';
+  import markdownit from 'markdown-it';
+  const md = markdownit({
+    html: true,
+    linkify: true,
+    typographer: true
+  });
   import Publication from './Publication.svelte';
+
+  let news = NEWS.slice(0, 4);
 </script>
 
 <div class="">
-  <div class="my-8 text-xl">
-    {@html marked(ABOUT)}
+  <div class="my-8 text-xl md-container">
+    {@html md.render(ABOUT)}
   </div>
 
   <h2 class="text-2xl font-bold italic">SELECTED PUBLICATIONS</h2>
@@ -16,13 +24,10 @@
     <Publication publication={pub} />
   {/each}
 
-  <h2 class="text-2xl font-bold italic mt-8">NEWS</h2>
-  <div class="about-section">
-    {#each NEWS.slice(0, 10) as { date, content }}
-      <div class="mb-2">
-        <span class="italic font-bold text-right">{date}</span>
-        {@html marked(content)}
-      </div>
+  <h2 class="text-2xl font-bold italic mt-8 md:hidden">NEWS</h2>
+  <div class="about-section md:hidden">
+    {#each news as newsItem}
+      <NewsItem {newsItem} />
     {/each}
     <a href="/#/news">Older News</a>
   </div>

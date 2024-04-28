@@ -1,12 +1,17 @@
 <script lang="ts">
   import {NEWS} from '../constants';
-  import {marked} from 'marked';
+  import markdownit from 'markdown-it';
+  const md = markdownit({
+    html: true,
+    linkify: true,
+    typographer: true
+  });
   const groupedByYear = Object.entries(
     NEWS.reduce((acc, row) => {
       const [_, year] = row.date.split(' ');
       acc[year] = (acc[year] || []).concat(row);
       return acc;
-    }, {}),
+    }, {})
   ).sort(([yearA], [yearB]) => Number(yearB) - Number(yearA));
 </script>
 
@@ -17,7 +22,7 @@
     <div class="news-item">
       <div class="news-item-date">{date}</div>
       <div class="news-item-content">
-        {@html marked(content)}
+        {@html md.render(content)}
       </div>
     </div>
   {/each}
