@@ -1,14 +1,15 @@
 <script lang="ts">
-  import NewsItem from './NewsItem.svelte';
-  import {NEWS, SELECTED_PUBLICATIONS} from '../constants';
-  import ABOUT from '../text-chunks/about.md';
-  import markdownit from 'markdown-it';
+  import NewsItem from "./NewsItem.svelte";
+  import { NEWS, SELECTED_PUBLICATIONS } from "../constants";
+  // @ts-ignore
+  import ABOUT from "../text-chunks/about.md?raw";
+  import markdownit from "markdown-it";
   const md = markdownit({
     html: true,
     linkify: true,
-    typographer: true
+    typographer: true,
   });
-  import Publication from './Publication.svelte';
+  import Publication from "./Publication.svelte";
 
   let news = NEWS.slice(0, 4);
 </script>

@@ -1,18 +1,21 @@
 <script lang="ts">
-  import {NEWS} from '../constants';
-  import markdownit from 'markdown-it';
+  import { NEWS } from "../constants";
+  import markdownit from "markdown-it";
   const md = markdownit({
     html: true,
     linkify: true,
-    typographer: true
+    typographer: true,
   });
   const groupedByYear = Object.entries(
     NEWS.reduce((acc, row) => {
-      const [_, year] = row.date.split(' ');
+      const [_, year] = row.date.split(" ");
       acc[year] = (acc[year] || []).concat(row);
       return acc;
-    }, {})
-  ).sort(([yearA], [yearB]) => Number(yearB) - Number(yearA)) as unknown as [number, (typeof NEWS)[0][]][];
+    }, {} as any)
+  ).sort(([yearA], [yearB]) => Number(yearB) - Number(yearA)) as unknown as [
+    number,
+    (typeof NEWS)[0][],
+  ][];
 </script>
 
 <h1>NEWS</h1>

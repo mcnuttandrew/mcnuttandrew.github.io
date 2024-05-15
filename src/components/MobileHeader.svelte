@@ -1,10 +1,10 @@
 <script lang="ts">
-  import {tweened} from 'svelte/motion';
-  import {cubicOut} from 'svelte/easing';
+  import { tweened } from "svelte/motion";
+  import { cubicOut } from "svelte/easing";
 
   const rotation = tweened(0, {
     duration: 400,
-    easing: cubicOut
+    easing: cubicOut,
   });
 
   export let currentSection;
@@ -14,15 +14,23 @@
     rotation.set(!$rotation ? 90 : 0);
   }
   const externalLinks = [
-    {link: 'https://scholar.google.com/citations?user=AHwQg4kAAAAJ&hl=en', name: 'scholar'},
-    {link: 'https://github.com/mcnuttandrew', name: 'github'},
-    {link: 'https://vis.social/@mcnutt', name: 'mastodon'},
-    {link: 'https://www.mcnutt.in/assets/cv.pdf', name: 'cv', noImage: true}
+    {
+      link: "https://scholar.google.com/citations?user=AHwQg4kAAAAJ&hl=en",
+      name: "scholar",
+    },
+    { link: "https://github.com/mcnuttandrew", name: "github" },
+    { link: "https://vis.social/@mcnutt", name: "mastodon" },
+    { link: "https://www.mcnutt.in/assets/cv.pdf", name: "cv", noImage: true },
   ];
 </script>
 
-<div class="flex-col cursor-pointer px-3 z-10 flex md:hidden bg-white shadow-md">
-  <div on:click={toggleHeader} class="flex h-16 justify-between w-full items-center">
+<div
+  class="flex-col cursor-pointer px-3 z-10 flex md:hidden bg-white shadow-md"
+>
+  <button
+    on:click={toggleHeader}
+    class="flex h-16 justify-between w-full items-center"
+  >
     <h1 class="text-3xl">Andrew McNutt</h1>
     <div>
       <!-- hamburger menu -->
@@ -32,10 +40,10 @@
         <rect x="0" y="14" width="25" height="3" />
       </svg>
     </div>
-  </div>
+  </button>
   {#if open}
     <div class="flex-col flex mb-3">
-      {#each ['about', 'publications', 'projects'] as section (section)}
+      {#each ["about", "publications", "projects"] as section (section)}
         <a
           href="/#/{section}"
           class:font-bold={currentSection === section}
@@ -53,7 +61,11 @@
         >
           {x.name.toUpperCase()}
           {#if !x.noImage}
-            <img src="icons/{x.name}.svg" alt="link to {x.name} account" class="ml-2 w-7" />
+            <img
+              src="icons/{x.name}.svg"
+              alt="link to {x.name} account"
+              class="ml-2 w-7"
+            />
           {/if}
         </a>
       {/each}
