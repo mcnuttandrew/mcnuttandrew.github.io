@@ -1,0 +1,36 @@
+body {
+    color: #333;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+
+#no-script h1, #no-script h2, #no-script h3, #no-script h4, #no-script h5, #no-script h6 {
+    padding: 0;
+    margin: 0;
+}
+
+#no-script {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#no-script-content {
+    width: 100%;
+    max-width: 800px;
+    padding: 1em;
+}
+
+#no-script a {
+    color: #145f75;
+}
+
+/* media query for no-script content */
+@media (max-width: 800px) {
+    #no-script-content {
+        padding: 0.5em;
+        max-width: 100%;
+    }
+}

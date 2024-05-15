@@ -1,4 +1,6 @@
 <script lang="ts">
+  import "./app.css";
+
   import Header from "./components/Header.svelte";
   import MobileHeader from "./components/MobileHeader.svelte";
 
@@ -13,7 +15,7 @@
   import { NEWS } from "./constants";
 
   import { getRoute } from "./utils";
-  import "./global.css";
+
   let currentSection = getRoute();
   window.onhashchange = () => {
     currentSection = getRoute();
