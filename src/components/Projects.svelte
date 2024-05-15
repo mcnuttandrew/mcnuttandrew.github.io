@@ -1,47 +1,33 @@
 <script lang="ts">
-  import {PROJECTS} from '../constants';
+  import { PROJECTS } from "../constants";
   let selectedProjects = PROJECTS;
-  const tagCounts = PROJECTS.reduce((acc, {tags}) => {
-    tags.forEach((tag) => {
-      acc[tag] = (acc[tag] || 0) + 1;
-    });
-    return acc;
-  }, {});
-  let selectedTags = Object.keys(tagCounts).reduce((acc, row) => ({...acc, [row]: true}), {});
-
-  function filterProjects(selectedTags) {
-    selectedProjects = PROJECTS.filter(({tags}) => tags.some((tag) => selectedTags[tag]));
-  }
-  function toggleTag(tag) {
-    selectedTags[tag] = !selectedTags[tag];
-    filterProjects(selectedTags);
-  }
-  function reset() {
-    Object.keys(selectedTags).forEach((tag) => {
-      selectedTags[tag] = true;
-    });
-    filterProjects(selectedTags);
-  }
 </script>
 
 <div class="px-4">
   <p class="my-6">
-    This is a small collection of things I've made for various tech, visualization, or artistic purposes. Some
-    of them are serious, some of them are fanciful. I made some of them for fun, while others are standalone
+    This is a small collection of things I've made for various tech,
+    visualization, or artistic purposes. Some of them are serious, some of them
+    are fanciful. I made some of them for fun, while others are standalone
     artifacts from academic work.
   </p>
   <div class="flex flex-wrap justify-around">
     {#each selectedProjects as project (project.title)}
       <div class="project-block">
         <a href={project.link}>
-          <div class="img-container"><img src={project.imgLink} alt="image for {project.title}" /></div>
+          <div class="img-container">
+            <img src={project.imgLink} alt="image for {project.title}" />
+          </div>
         </a>
         <h3 class="text-xl">{project.title}</h3>
         <!-- <h5>{project.dates}</h5> -->
         <div class="flex justify-start items-center">
           {#if project.sourceLink}
             <a href={project.sourceLink} class="mr-3">
-              <img alt="github icon" src="icons/github.svg" class="gh-icon p-0 m-0 h-4" />
+              <img
+                alt="github icon"
+                src="icons/github.svg"
+                class="gh-icon p-0 m-0 h-4"
+              />
             </a>
           {/if}
           {#if project.link}<a href={project.link}>Live</a>{/if}

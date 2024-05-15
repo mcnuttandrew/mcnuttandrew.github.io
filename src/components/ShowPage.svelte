@@ -1,16 +1,16 @@
 <script lang="ts">
-  import {PUBLICATIONS} from '../constants';
-  import {getShowPage, addLinks} from '../utils';
-  import markdownit from 'markdown-it';
+  import { PUBLICATIONS } from "../constants";
+  import { getShowPage, addLinks } from "../utils";
+  import markdownit from "markdown-it";
   const md = markdownit({
     html: true,
     linkify: true,
-    typographer: true
+    typographer: true,
   });
 
-  const pubName = getShowPage();
-  const publication = PUBLICATIONS.find((d) => d.urlTitle === pubName);
-  const keys = ['subtitle', 'date', 'journal'];
+  $: pubName = getShowPage();
+  $: publication = PUBLICATIONS.find((d) => d.urlTitle === pubName)!;
+  const keys = ["subtitle", "date", "journal"] as const;
 </script>
 
 <div class="flex-down publication">
@@ -30,7 +30,9 @@
   <div class="section-subtitle">Materials</div>
   <div class="materials">
     <div class="flex">
-      {#each publication.links as { name, link }}<a class="publink" href={link}>{name}</a>{/each}
+      {#each publication.links as { name, link }}<a class="publink" href={link}>
+          {name}
+        </a>{/each}
     </div>
   </div>
   <div class="section-subtitle">Abstract</div>
@@ -61,11 +63,11 @@
     text-decoration: none;
   }
   .publink::after {
-    content: '•';
+    content: "•";
     padding: 0 3px;
   }
   .publink:last-child::after {
-    content: '';
+    content: "";
   }
 
   .abstract {
