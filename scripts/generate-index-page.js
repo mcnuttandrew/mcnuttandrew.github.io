@@ -1,5 +1,6 @@
 const {writeFile, readFile} = require('fs/promises');
 const constants = require('../src/constants');
+const publications = require('../src/data/publications');
 
 async function main() {
   const about = await readFile('./src/text-chunks/about.md', 'utf-8');

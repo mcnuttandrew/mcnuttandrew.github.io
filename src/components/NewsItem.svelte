@@ -5,7 +5,7 @@
     linkify: true,
     typographer: true
   });
-  import {NEWS} from '../constants';
+  import type {NEWS} from '../constants';
   type NewsItem = (typeof NEWS)[0];
   export let newsItem: NewsItem;
 </script>

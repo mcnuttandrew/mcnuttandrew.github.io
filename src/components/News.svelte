@@ -12,7 +12,7 @@
       acc[year] = (acc[year] || []).concat(row);
       return acc;
     }, {})
-  ).sort(([yearA], [yearB]) => Number(yearB) - Number(yearA));
+  ).sort(([yearA], [yearB]) => Number(yearB) - Number(yearA)) as unknown as [number, (typeof NEWS)[0][]][];
 </script>
 
 <h1>NEWS</h1>
