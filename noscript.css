@@ -9,6 +9,25 @@ body {
 #no-script h1, #no-script h2, #no-script h3, #no-script h4, #no-script h5, #no-script h6 {
     padding: 0;
     margin: 0;
+    font-weight: bold;
+}
+
+#no-script h1 {
+    font-size: 2em;
+
+}
+
+#no-script h2 {
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
+#no-script h3 {
+    font-size: 1.5em;
+}
+
+#no-script p {
+    margin-bottom: 1em;
 }
 
 #no-script {
