@@ -16,7 +16,7 @@ async function main() {
   const about = await readFile("./src/text-chunks/about.md", "utf-8");
   const content = `
 # Andrew McNutt
-## Post Doc in HCI / Visualization
+### Post Doc in HCI / Visualization
 ${about}
 
 ## News
