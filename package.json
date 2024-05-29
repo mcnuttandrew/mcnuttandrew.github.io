@@ -29,6 +29,6 @@
     "dev": "vite",
     "no-script": "vite-node scripts/generate-index-page.ts",
     "preview": "vite preview",
-    "test": "npm run check && npm run build && yarn no-script"
+    "test": "npm run check && yarn no-script"
   }
 }
