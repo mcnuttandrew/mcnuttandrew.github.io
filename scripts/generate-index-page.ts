@@ -49,6 +49,7 @@ ${PUBLICATIONS.map(
     </div>
     </div></noscript>
     <script type="module" src="/src/main.ts"></script>
+    <a href="https://vis.social/@mcnutt" rel="me"></a>
   </body>
 </html>
 

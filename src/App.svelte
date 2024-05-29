@@ -58,6 +58,7 @@
         CV
       </a>
     </div>
+    <h3 class="">amcnutt @ uw.edu</h3>
     <h2 class="text-2xl font-bold italic mt-8 hidden md:block text-left">
       NEWS
     </h2>
