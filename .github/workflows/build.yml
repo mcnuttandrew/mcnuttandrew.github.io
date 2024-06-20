@@ -28,7 +28,7 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@v1
         with:
-          args: https://www.mcnutt.in/ --verbose
+          args: src/data/*.ts src/text-chunks/about.md --verbose
 
       - name: Create Issue From File
         if: env.lychee_exit_code != 0
