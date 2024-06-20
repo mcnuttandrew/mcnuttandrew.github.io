@@ -54,7 +54,9 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
-    link: "https://arxiv.org/pdf/2309.10108.pdf",
+    // link: "https://arxiv.org/pdf/2309.10108.pdf",
+    // intentionall broken link
+    link: "https://arxiv.org/pdf/2309.10108.pd",
     urlTitle: "woz-ai",
     imgLink: "converted-images/woz.jpg",
     title:
@@ -464,7 +466,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
         link: "https://medium.com/multiple-views-visualization-research-explained/surfacing-visualization-mirages-8d39e547e38c",
       },
       { name: "paper", link: "https://arxiv.org/abs/2001.02316" },
-      { name: "live", link: "https://metamorphic-linting.netlify.com/" },
+      { name: "live", link: "https://metamorphic-linting.netlify.app/" },
       {
         name: "code",
         link: "https://github.com/tableau/Visualization-Linting",
@@ -634,7 +636,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     subtype: "journal",
   },
   {
-    link: "http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00143",
+    link: "https://pubs.acs.org/doi/full/10.1021/acs.jcim.5b00143",
     imgLink: "converted-images/cdd-models-pic.jpg",
     title:
       "Open source Bayesian models. 1. Application to ADME/Tox and drug discovery datasets",
