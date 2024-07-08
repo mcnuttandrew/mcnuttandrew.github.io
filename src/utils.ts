@@ -2,14 +2,14 @@ import { PUBLICATIONS, COLLABORATOR_LINKS } from "./constants";
 
 const routes = new Set([
   "publications",
-  "projects",
   "about",
   "teaching",
   "zines",
   "news",
+  "misc",
 ]);
 export function getRoute() {
-  const locationSplit = location.href.split("/");
+  const locationSplit = location.href.split("/").filter((d) => d.length);
   const naiveLocation = locationSplit[locationSplit.length - 1].toLowerCase();
   if (
     location.href.includes("research") &&
