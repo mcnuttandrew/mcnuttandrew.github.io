@@ -1,14 +1,14 @@
-interface Project {
+interface Misc {
   title: string;
   dates: string;
-  sourceLink: string;
+  sourceLink?: string;
   link: string;
   imgLink: string;
   text: string;
   tags: ("visualization" | "tech" | "art")[];
 }
 
-export const PROJECTS: Project[] = [
+export const MISC: Misc[] = [
   {
     title: "Prong Editor",
     dates: "September 2021 - ",
@@ -21,7 +21,6 @@ export const PROJECTS: Project[] = [
   {
     title: "Zines",
     dates: "May 2019 - ",
-    sourceLink: "https://www.mcnutt.in/#/zines",
     link: "https://www.mcnutt.in/#/zines",
     imgLink: "converted-images/bison-eylsium-cover.jpg",
     text: "Zines are cool and I make them for various reasons",
@@ -55,15 +54,15 @@ export const PROJECTS: Project[] = [
     text: "A tarot based visual analytics system. It guides users analytics process via the divine hands of fate.",
     tags: ["visualization"],
   },
-  {
-    title: "Data is Plural Search",
-    dates: "May 2020",
-    sourceLink: "https://github.com/mcnuttandrew/data-is-plural-search",
-    link: "https://data-is-plural-search.netlify.app/",
-    imgLink: "converted-images/data-is-plural.jpg",
-    text: "A simple web view for the data is plural news letter by Singer-Vine.",
-    tags: ["tech"],
-  },
+  // {
+  //   title: "Data is Plural Search",
+  //   dates: "May 2020",
+  //   sourceLink: "https://github.com/mcnuttandrew/data-is-plural-search",
+  //   link: "https://data-is-plural-search.netlify.app/",
+  //   imgLink: "converted-images/data-is-plural.jpg",
+  //   text: "A simple web view for the data is plural news letter by Singer-Vine.",
+  //   tags: ["tech"],
+  // },
 
   {
     title: "Cycles & Rain / Seasons In Size",
@@ -92,15 +91,15 @@ export const PROJECTS: Project[] = [
     text: "A chrome extension and website that allows users to explore threaded conversations using trees.  Information is Beautiful Awards '19 Long List.",
     tags: ["visualization", "tech"],
   },
-  {
-    title: "tap-react-browser",
-    dates: "February - April 2018",
-    link: "https://github.com/mcnuttandrew/tap-react-browser/",
-    sourceLink: "https://github.com/mcnuttandrew/tap-react-browser/",
-    imgLink: "converted-images/tap-react-browser.jpg",
-    text: `A lightweight wrapper on tape that spits out react components.`,
-    tags: ["tech"],
-  },
+  // {
+  //   title: "tap-react-browser",
+  //   dates: "February - April 2018",
+  //   link: "https://github.com/mcnuttandrew/tap-react-browser/",
+  //   sourceLink: "https://github.com/mcnuttandrew/tap-react-browser/",
+  //   imgLink: "converted-images/tap-react-browser.jpg",
+  //   text: `A lightweight wrapper on tape that spits out react components.`,
+  //   tags: ["tech"],
+  // },
   {
     title: "Constellations of Home - XMAS CARDS 2017",
     dates: "December 2017",
