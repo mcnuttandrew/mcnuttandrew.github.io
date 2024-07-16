@@ -1,5 +1,15 @@
 export const NEWS = [
   {
+    date: "July 2024",
+    content:
+      "Finished my postdoc and started my new position at University of Utah as an assistant professor in the [School of Computing](https://www.cs.utah.edu/) / [Scientific Computing and Imaging Institute](https://www.sci.utah.edu/)!!",
+  },
+  {
+    date: "May 2024",
+    content:
+      "Joined the [JOVI](https://www.journalovi.org/)'s editorial board as an associate editor! 📝",
+  },
+  {
     date: "April 2024",
     content:
       "Excited to be co-organizing [VISions of the Future](https://visionsofthefuture.github.io/) an VIS24 workshop on cultural📈 and environmental🌴 sustainability. ",
