@@ -54,7 +54,9 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
-    link: "https://arxiv.org/pdf/2309.10108.pdf",
+    // link: "https://arxiv.org/pdf/2309.10108.pdf",
+    // intentionall broken link
+    link: "https://arxiv.org/pdf/2309.10108.pd",
     urlTitle: "woz-ai",
     imgLink: "converted-images/woz.jpg",
     title:
