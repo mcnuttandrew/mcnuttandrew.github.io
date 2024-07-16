@@ -44,7 +44,7 @@
   </button>
   {#if open}
     <div class="flex-col flex mb-3">
-      {#each ["about", "publications", "projects"] as section (section)}
+      {#each ["about", "publications", "misc"] as section (section)}
         <a
           href="/#/{section}"
           class:font-bold={currentSection === section}

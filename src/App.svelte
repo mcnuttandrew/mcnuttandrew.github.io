@@ -5,7 +5,7 @@
   import MobileHeader from "./components/MobileHeader.svelte";
 
   import About from "./components/About.svelte";
-  import Projects from "./components/Projects.svelte";
+  import Misc from "./components/Misc.svelte";
   import Publications from "./components/Publications.svelte";
   import Teaching from "./components/Teaching.svelte";
   import ShowPage from "./components/ShowPage.svelte";
@@ -32,13 +32,14 @@
   >
     <img
       src="converted-images/headshot.jpg"
-      alt="headshot of andrew mcnutt"
+      alt="head shot of andrew mcnutt"
       class="w-52 max-w-full h-auto rounded-full"
     />
     <h1 class="text-xl font-bold">Andrew McNutt</h1>
-    <h3 class="text-xl">PostDoc / Imminent Prof</h3>
+    <h3 class="text-xl">Assistant Professor</h3>
     <h3 class="text-xl">Visualization / HCI</h3>
-    <!-- <h3 class="text-xl">UChicago CS</h3> -->
+    <h3 class="mb-2">University of Utah</h3>
+
     <div class="flex align space-between">
       <a class="mr-2" href="https://github.com/mcnuttandrew">
         <img src="icons/github.svg" alt="link to github account" />
@@ -76,8 +77,8 @@
         <Publications />
       {:else if currentSection === "show-page"}
         <ShowPage />
-      {:else if currentSection === "projects"}
-        <Projects />
+      {:else if currentSection === "misc"}
+        <Misc />
       {:else if currentSection === "teaching"}
         <Teaching />
       {:else if currentSection === "news"}

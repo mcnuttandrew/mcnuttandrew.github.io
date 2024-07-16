@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { PROJECTS } from "../constants";
-  let selectedProjects = PROJECTS;
+  import { MISC } from "../constants";
+  let selectedMisc = MISC;
 </script>
 
 <div class="px-4">
@@ -11,7 +11,7 @@
     artifacts from academic work.
   </p>
   <div class="flex flex-wrap justify-around">
-    {#each selectedProjects as project (project.title)}
+    {#each selectedMisc as project (project.title)}
       <div class="project-block">
         <a href={project.link}>
           <div class="img-container">

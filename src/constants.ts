@@ -1,9 +1,10 @@
-import { PROJECTS as projectsImport } from "./data/projects";
+import { MISC as miscImport } from "./data/misc";
+
 import { NEWS as newsImport } from "./data/news";
 import { PUBLICATIONS as pubsImport } from "./data/publications";
 import zineImport from "./data/zines";
 export const NEWS = newsImport;
-export const PROJECTS = projectsImport;
+export const MISC = miscImport;
 export const PUBLICATIONS = pubsImport;
 export const ZINES = zineImport;
 /* eslint-disable max-len */

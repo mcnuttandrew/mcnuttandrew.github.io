@@ -66,7 +66,13 @@ export const PUBLICATIONS: Publication[] = [
     journal: "ACM CHI 2024",
     date: "",
     year: 2024,
-    links: [{ name: "paper", link: "https://arxiv.org/pdf/2309.10108.pdf" }],
+    links: [
+      { name: "paper", link: "https://arxiv.org/pdf/2309.10108.pdf" },
+      {
+        name: "code",
+        link: "https://github.com/behavioral-data/Data-Assistant-Interface",
+      },
+    ],
     abstract: `Data analysis is challenging as analysts must navigate nuanced decisions that may yield divergent conclusions. AI assistants have the potential to support analysts in planning their analyses, enabling more robust decision-making. Though AI-based assistants that target code execution (e.g., Github Copilot) have received significant attention, limited research addresses assistance for both analysis execution and planning. In this work, we characterize helpful planning suggestions and their impacts on analysts' workflows. We first review the analysis planning literature and crowd-sourced analysis studies to categorize suggestion content. We then conduct a Wizard-of-Oz study (n=13) to observe analysts' preferences and reactions to planning assistance in a realistic scenario. Our findings highlight subtleties in contextual factors that impact suggestion helpfulness, emphasizing design implications for supporting different abstractions of assistance, forms of initiative, increased engagement, and alignment of goals between analysts and assistants.`,
     type: "conference / journal articles",
     subtype: "conference",
@@ -100,6 +106,7 @@ export const PUBLICATIONS: Publication[] = [
     links: [
       { name: "live", link: "https://app.notascope.io/" },
       { name: "osf", link: "https://osf.io/8924y/" },
+      { name: "code", link: "https://github.com/notascope/notascope" },
       { name: "paper", link: "https://arxiv.org/abs/2308.16353" },
       {
         name: "blog post",
@@ -417,7 +424,8 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
         name: "code",
         link: "https://github.com/mcnuttandrew/sci-text-compare",
       },
-      { name: "live", link: "https://goetheanddecandolle.rcc.uchicago.edu/" },
+      // { name: "live", link: "https://goetheanddecandolle.rcc.uchicago.edu/" },
+      { name: "live", link: "https://www.mcnutt.in/sci-text-compare/" },
     ],
     abstract:
       "Distant reading methodologies make use of computational processes to aid in the analysis of large text corpora which might not be pliable to traditional methods of scholarly analysis due to their volume. While these methods have been applied effectively to a variety of types of texts and contexts, they can leave unaddressed the needs of scholars in the humanities disciplines like history, who often engage in close reading of sources. Complementing the close analysis of texts with some of the tools of distant reading, such as visualization, can resolve some of the issues. We focus on a particular category of this intersection—which we refer to as near-by reading—wherein an expert engages in a computer-mediated analysis of a text with which they are familiar. We provide an example of this approach by developing a visual analysis application for the near-by reading of 19th-century scientific writings by J. W. von Goethe and A. P. de Candolle. We show that even the most formal and public texts, such as scientific treatises, can reveal unexpressed personal biases and philosophies that the authors themselves might not have recognized.",
@@ -545,7 +553,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     subtype: "poster",
   },
   {
-    link: "https://diglib.eg.org/xmlui/bitstream/handle/10.2312/eurp20191144/053-055.pdf",
+    link: "https://diglib.eg.org:8443/server/api/core/bitstreams/845e021f-38b3-4c16-8f94-128d186551c0/content",
     imgLink: "converted-images/forested-tree-view-example.jpg",
     title:
       "Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations",
