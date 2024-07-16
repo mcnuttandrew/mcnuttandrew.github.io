@@ -21,7 +21,7 @@
     { link: "https://github.com/mcnuttandrew", name: "github" },
     { link: "https://vis.social/@mcnutt", name: "mastodon" },
     { link: "https://www.mcnutt.in/assets/cv.pdf", name: "cv", noImage: true },
-    { link: "", name: "amcnutt @ uw.edu", noImage: true },
+    { link: "", name: "andrew.mcnutt @ utah.edu", noImage: true },
   ];
 </script>
 
