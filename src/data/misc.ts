@@ -10,6 +10,15 @@ interface Misc {
 
 export const MISC: Misc[] = [
   {
+    title: "Open Grad Positions in Visualization",
+    dates: "2023 - ",
+    sourceLink: "https://github.com/mcnuttandrew/vis-phd-positions",
+    link: "https://vis-phd-positions.netlify.app/",
+    imgLink: "converted-images/open-vis-pos.jpg",
+    text: "A collection of advertisements for open visualization PhD positions",
+    tags: ["visualization"],
+  },
+  {
     title: "Prong Editor",
     dates: "September 2021 - ",
     sourceLink: "https://github.com/mcnuttandrew/prong",
