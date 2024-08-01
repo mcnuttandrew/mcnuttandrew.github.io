@@ -385,14 +385,16 @@ export const TEACHING = [
     title: "Art with Science: Creative Coding",
     date: "Summer 2021",
     role: "Teaching Assistant",
-    location: "Collegiate Scholars Program (Highschool students)",
+    // location: "Collegiate Scholars Program (Highschool students)",
+    location: "UChicago",
     link: "https://www.classes.cs.uchicago.edu/archive/2021/summer/creative-coding/csp/",
   },
   {
     title: "Introduction to Creative Coding",
     date: "Summer 2021",
     role: "Teaching Assistant",
-    location: "UChicago (Highschool students)",
+    // location: "UChicago (Highschool students)",
+    location: "UChicago",
     link: "https://www.classes.cs.uchicago.edu/archive/2021/summer/creative-coding/immersion/",
   },
   {
