@@ -9,11 +9,14 @@ export const PUBLICATIONS = pubsImport;
 export const ZINES = zineImport;
 /* eslint-disable max-len */
 
+export const SECTIONS = ["about", "publications", "teaching", "misc"];
+
 export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   "Aaron Elmore": "http://people.cs.uchicago.edu/~aelmore/",
   "Agatha Seo-Hyun Kim": "https://orcid.org/0000-0002-0806-5410",
   "Alex M. Clark":
     "https://scholar.google.com/citations?user=4Gv4PboAAAAJ&hl=en",
+  "Alex Kale": "https://people.cs.uchicago.edu/~kalea/",
   "Allison Morgan": "https://allisonmorgan.github.io/",
   "Anamaria Crisan": "https://amcrisan.github.io/",
   "Anton Outkine": "https://antonoutkine.com/",
@@ -24,13 +27,16 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   "Gordon Kindlmann": "http://people.cs.uchicago.edu/~glk/",
   "Jane L. Adams": "http://universalities.com/",
   "Jeffrey Heer": "https://homes.cs.washington.edu/~jheer/",
+  "Junran Yang": "https://homes.cs.washington.edu/~junran/",
   "Joel Franklin": "http://people.reed.edu/~jfrankli/",
   "Ken Gu": "https://kenqgu.com/",
   "Kevin Bryson": "https://kevinbryson.world/",
   "Krishna Dole":
     "https://scholar.google.com/citations?user=J4TpF1YAAAAJ&hl=en",
   "Kyle Chard": "https://kylechard.com/",
+  "Leilani Battle": "https://homes.cs.washington.edu/~leibatt/bio.html",
   "Madeleine Grunde-McLaughlin": "https://madeleinegrunde.github.io/",
+  "Maureen C. Stone": "https://mcstone.github.io/",
   "Matthias Miller": "https://www.vis.uni-konstanz.de/mitglieder/miller/",
   "Mennatallah El-Assady": "https://el-assady.com/",
   "Michael Correll": "https://correll.io/",
@@ -347,6 +353,13 @@ export const AWARDS: {
 ];
 
 export const TEACHING = [
+  {
+    title: "COMP 1010 - Programming for All 1",
+    date: "Fall 2024",
+    role: "Instructor",
+    location: "University of Utah",
+    link: "https://utah.instructure.com/courses/1001929",
+  },
   {
     title: "CAPP 30239 - Data Visualization For Public Policy",
     date: "Winter 2021",

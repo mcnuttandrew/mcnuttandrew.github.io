@@ -10,7 +10,7 @@
 
   $: pubName = getShowPage();
   $: publication = PUBLICATIONS.find((d) => d.urlTitle === pubName)!;
-  const keys = ["subtitle", "date", "journal"] as const;
+  const keys = ["subtitle", "journal"] as const;
 </script>
 
 <div class="flex-down publication">

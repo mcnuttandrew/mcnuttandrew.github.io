@@ -1,5 +1,10 @@
 export const NEWS = [
   {
+    date: "August 2024",
+    content:
+      "Three papers this fall! Two at VIS (on [linting color palettes](https://arxiv.org/abs/2407.21285) 🌈 and [participatory budgeting](https://arxiv.org/abs/2407.20103) 🗳️) and one at VL/HCC (on the [design of example galleries](https://arxiv.org/abs/2407.20571) 🖼️).",
+  },
+  {
     date: "July 2024",
     content:
       "Finished my postdoc and started my new position at University of Utah as an assistant professor in the [School of Computing](https://www.cs.utah.edu/) / [Scientific Computing and Imaging Institute](https://www.sci.utah.edu/)!!",
