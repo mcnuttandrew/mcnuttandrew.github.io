@@ -27,7 +27,7 @@ type linkType =
   | "thesis"
   | "replicability badge"
   | "zine"
-  | "supplementary materials"
+  | "materials"
   | "press";
 type Link =
   | `https://${string}`
@@ -44,7 +44,6 @@ export interface Publication {
   shortTitle?: string;
   authors: string;
   journal: string;
-  date: string;
   links: { name: linkType; link: Link }[];
   abstract: string;
   type: PubType;
@@ -54,9 +53,54 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
-    // link: "https://arxiv.org/pdf/2309.10108.pdf",
-    // intentionall broken link
-    link: "https://arxiv.org/pdf/2309.10108.pd",
+    link: "",
+    urlTitle: "color-buddy",
+    imgLink: "converted-images/color-buddy.jpg",
+    title: "Mixing Linters with GUIs: A Color Palette Design Probe",
+    authors: "Andrew McNutt, Maureen C. Stone, Jeffrey Heer",
+    journal: "IEEE VIS 2024",
+    year: 2024,
+    links: [{ name: "paper", link: "https://arxiv.org/abs/2407.21285" }],
+    abstract: `Visualization linters are end-user facing evaluators that automatically identify potential chart issues. These spell-checker like systems offer a blend of interpretability and customization that is not found in other forms of automated assistance. However, existing linters do not model context and have primarily targeted users who do not need assistance, resulting in obvious—even annoying—advice. We investigate these issues within the domain of color palette design, which serves as a microcosm of visualization design concerns. We contribute a GUI-based color palette linter as a design probe that covers perception, accessibility, context, and other design criteria, and use it to explore visual explanations, integrated fixes, and user defined linting rules. Through a formative interview study and theory-driven analysis, we find that linters can be meaningfully integrated into graphical contexts thereby addressing many of their core issues. We discuss implications for integrating linters into visualization tools, developing improved assertion languages, and supporting end-user tunable advice—all laying the groundwork for more effective visualization linters in any context.`,
+    type: "conference / journal articles",
+    subtype: "conference",
+  },
+  {
+    link: "https://arxiv.org/abs/2407.20103",
+    urlTitle: "ue-pb",
+    imgLink: "converted-images/ue-pb.jpg",
+    title:
+      "What Can Interactive Visualization do for Participatory Budgeting in Chicago?",
+    authors:
+      "Alex Kale, Danni Liu, Maria Gabriela Ayala, Harper Schwab, Andrew McNutt",
+    journal: "IEEE VIS 2024",
+    year: 2024,
+    links: [
+      { name: "paper", link: "https://arxiv.org/abs/2407.20103" },
+      {
+        name: "materials",
+        link: "https://github.com/mcnuttandrew/chicago-pb-probe",
+      },
+    ],
+    abstract: `Participatory budgeting (PB) is a democratic approach to allocating municipal spending that has been adopted in many places in recent years, including in Chicago. Current PB voting resembles a ballot where residents are asked which municipal projects, such as school improvements and road repairs, to fund with a limited budget. In this work, we ask how interactive visualization can benefit PB by conducting a design probe-based interview study (N=13) with policy workers and academics with expertise in PB, urban planning, and civic HCI. Our probe explores how graphical elicitation of voter preferences and a dashboard of voting statistics can be incorporated into a realistic PB tool. Through qualitative analysis, we find that visualization creates opportunities for city government to set expectations about budget constraints while also granting their constituents greater freedom to articulate a wider range of preferences. However, using visualization to provide transparency about PB requires efforts to mitigate potential access barriers and mistrust. We call for more visualization professionals to help build civic capacity by working in and studying political systems.`,
+    type: "conference / journal articles",
+    subtype: "conference",
+  },
+  {
+    link: "https://arxiv.org/abs/2407.20571",
+    urlTitle: "gallery-study",
+    imgLink: "converted-images/gallery-study.jpg",
+    title: "Considering Visualization Example Galleries",
+    authors: "Junran Yang, Andrew McNutt, Leilani Battle",
+    journal: "IEEE VL/HCC 2024",
+    year: 2024,
+    links: [],
+    abstract: `Data analysis is challenging as analysts must navigate nuanced decisions that may yield divergent conclusions. AI assistants have the potential to support analysts in planning their analyses, enabling more robust decision-making. Though AI-based assistants that target code execution (e.g., Github Copilot) have received significant attention, limited research addresses assistance for both analysis execution and planning. In this work, we characterize helpful planning suggestions and their impacts on analysts' workflows. We first review the analysis planning literature and crowd-sourced analysis studies to categorize suggestion content. We then conduct a Wizard-of-Oz study (n=13) to observe analysts' preferences and reactions to planning assistance in a realistic scenario. Our findings highlight subtleties in contextual factors that impact suggestion helpfulness, emphasizing design implications for supporting different abstractions of assistance, forms of initiative, increased engagement, and alignment of goals between analysts and assistants.`,
+    type: "conference / journal articles",
+    subtype: "conference",
+  },
+  {
+    link: "https://arxiv.org/abs/2309.10108.pdf",
     urlTitle: "woz-ai",
     imgLink: "converted-images/woz.jpg",
     title:
@@ -64,10 +108,9 @@ export const PUBLICATIONS: Publication[] = [
     authors:
       "Ken Gu, Madeleine Grunde-McLaughlin, Andrew McNutt, Jeffrey Heer, Tim Althoff",
     journal: "ACM CHI 2024",
-    date: "",
     year: 2024,
     links: [
-      { name: "paper", link: "https://arxiv.org/pdf/2309.10108.pdf" },
+      { name: "paper", link: "https://arxiv.org/abs/2309.10108.pdf" },
       {
         name: "code",
         link: "https://github.com/behavioral-data/Data-Assistant-Interface",
@@ -84,7 +127,6 @@ export const PUBLICATIONS: Publication[] = [
     title: "Only YOU Can Make IEEE VIS Environmentally Sustainable",
     authors: "Elsie Lee-Robbins, Andrew McNutt",
     journal: "alt.vis 2023",
-    date: "",
     year: 2023,
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2308.15429" },
@@ -101,7 +143,6 @@ export const PUBLICATIONS: Publication[] = [
     title: "Metrics-Based Evaluation and Comparison of Visualization Notations",
     authors: "Nicolas Kruchten, Andrew McNutt, Michael J. McGuffin",
     journal: "IEEE VIS 2023",
-    date: "",
     year: 2023,
     links: [
       { name: "live", link: "https://app.notascope.io/" },
@@ -124,7 +165,6 @@ export const PUBLICATIONS: Publication[] = [
     title: "Projectional Editors for JSON-Based DSLs",
     authors: "Andrew McNutt, Ravi Chugh",
     journal: "VL/HCC 2023",
-    date: "",
     year: 2023,
     links: [
       { name: "live", link: "https://prong-editor.netlify.app/" },
@@ -146,11 +186,10 @@ We describe a relatively inexpensive way to build rich projectional editors for 
     authors: "Andrew McNutt (advised by Ravi Chugh)",
     journal:
       "Ph.D. Thesis. University of Chicago, Department of Computer Science, 2023",
-    date: "",
     year: 2023,
     links: [
       { name: "paper", link: "https://osf.io/fy246" },
-      { name: "supplementary materials", link: "https://osf.io/ywcqa/" },
+      { name: "materials", link: "https://osf.io/ywcqa/" },
     ],
     abstract: `Domain-specific languages represented in data serialization formats (such as Javascript Object Notation or JSON) are an increasingly common means to control numerous systems.
 These range from database queries to application configuration, narrative generation, Twitter bots, data visualization, and many other areas.
@@ -175,7 +214,6 @@ We primarily consider languages focused on data visualization tasks, as there ha
     authors:
       "Victor Schetinger, Sara Di Bartolomeo, Mennatallah El-Assady, Andrew McNutt, Matthias Miller, João Paulo Apolinário Passos, Jane L. Adams",
     journal: "EuroVis 2023",
-    date: "",
     year: 2023,
     links: [{ name: "paper", link: "https://osf.io/3jrcm/" }],
     abstract: `Generative text-to-image models (as exemplified by DALL-E, MidJourney, and Stable Diffusion) have recently made enormous technological leaps, demonstrating impressive results in many graphical domains---from logo design to digital painting and photographic composition. However, the quality of these results has led to existential crises in some fields of art, leading to questions about the role of human agency in the production of meaning in a graphical context. Such issues are central to visualization, and while these generative models have yet to be widely applied to visualization, it seems only a matter of time until their integration is manifest. Seeking to circumvent similar ponderous dilemmas, we attempt to understand the roles that generative models might play across visualization. We do so by constructing a framework that characterizes what these technologies offer at various stages of the visualization workflow, augmented and analyzed through semi-structured interviews with 19 experts from related domains. Through this work, we map the space of opportunities and risks that might arise in this intersection, identifying doomsday prophecies and delicious low-hanging fruits that are ripe for research.`,
@@ -189,7 +227,6 @@ We primarily consider languages focused on data visualization tasks, as there ha
     title: "On the Design of AI-powered Code Assistants for Notebooks",
     authors: "Andrew McNutt, Chenglong Wang, Rob DeLine, Steven M. Drucker",
     journal: "ACM CHI 2023",
-    date: "",
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2301.11178" },
       { name: "talk", link: "https://www.youtube.com/watch?v=g0prh8mE3bI" },
@@ -200,16 +237,15 @@ We primarily consider languages focused on data visualization tasks, as there ha
     subtype: "conference",
   },
   {
-    link: "https://arxiv.org/pdf/2301.13302",
+    link: "https://arxiv.org/abs/2301.13302",
     urlTitle: "sauce",
     imgLink: "converted-images/sauce-image.jpg",
     title: "A Study of Editor Features in a Creative Coding Classroom",
     authors: "Andrew McNutt, Anton Outkine, Ravi Chugh",
     journal: "ACM CHI 2023",
     year: 2023,
-    date: "",
     links: [
-      { name: "paper", link: "https://arxiv.org/pdf/2301.13302" },
+      { name: "paper", link: "https://arxiv.org/abs/2301.13302" },
       { name: "live", link: "http://cs111.org/" },
       { name: "talk", link: "https://www.youtube.com/watch?v=g2GkTdOKU3A" },
     ],
@@ -227,7 +263,6 @@ We primarily consider languages focused on data visualization tasks, as there ha
     authors: "Andrew McNutt",
     year: 2022,
     journal: "IEEE VIS 2022",
-    date: "",
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2207.07998" },
       { name: "live", link: "https://vis-json-dsls.netlify.app/" },
@@ -254,7 +289,6 @@ We primarily consider languages focused on data visualization tasks, as there ha
     authors: "Agatha Seo-Hyun Kim, Andrew McNutt ",
     journal: "Theory in Biosciences",
     year: 2022,
-    date: "August 2022",
     links: [
       {
         name: "paper",
@@ -275,7 +309,6 @@ We primarily consider languages focused on data visualization tasks, as there ha
     authors:
       "Jamar L. Sullivan, Will Brackenbury, Andrew McNutt, Kevin Bryson, Kwam Byll, Yuxin Chen, Michael Littman, Chenhao Tan, Blase Ur",
     journal: "NAACL 2022",
-    date: "",
     year: 2022,
     links: [
       {
@@ -303,7 +336,6 @@ We primarily consider languages focused on data visualization tasks, as there ha
     title: "Visualization for Villainy",
     authors: "Andrew McNutt, Lilian Huang, Kathryn Koenig",
     journal: "alt.vis 2021",
-    date: "",
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2109.06007" },
       { name: "talk", link: "https://youtu.be/jFbsYto_2ys?t=1471" },
@@ -324,7 +356,6 @@ We primarily consider languages focused on data visualization tasks, as there ha
       "Will Brackenbury, Andrew McNutt, Kyle Chard, Aaron Elmore, Blase Ur",
     journal: "ACM UIST 2021",
     year: 2021,
-    date: "",
     links: [
       {
         name: "paper",
@@ -346,7 +377,6 @@ We primarily consider languages focused on data visualization tasks, as there ha
     authors: "Andrew McNutt",
     year: 2021,
     journal: "IEEE VIS 2021 (Short Papers)",
-    date: "",
     links: [
       { name: "about", link: "https://www.mcnutt.in/zine-potential" },
       { name: "paper", link: "https://arxiv.org/abs/2108.02177" },
@@ -365,7 +395,6 @@ We primarily consider languages focused on data visualization tasks, as there ha
     authors: "Andrew McNutt",
     journal:
       "EuroVis 2021 🏆 Honorable Mention for Best Paper 🏆 (Juried Selection, 1 awarded)",
-    date: "",
     year: 2021,
     links: [
       { name: "about", link: "#/research/tacos" },
@@ -389,7 +418,6 @@ We primarily consider languages focused on data visualization tasks, as there ha
     authors: "Andrew McNutt, Ravi Chugh",
     // journal: 'Proceedings of the 2021 ACM annual conference on Human Factors in Computing Systems',
     journal: "ACM CHI 2021",
-    date: "",
     year: 2021,
     links: [
       { name: "about", link: "#/research/ivy" },
@@ -416,7 +444,6 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     authors:
       "Andrew McNutt, Agatha Seo-Hyun Kim, Sergio Elahi, Kazutaka Takahashi",
     journal: "Visualization for the Digital Humanities (VIS4DH) 2020",
-    date: "",
     links: [
       { name: "about", link: "#/research/nearby" },
       { name: "paper", link: "https://arxiv.org/abs/2009.02384" },
@@ -442,7 +469,6 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     year: 2020,
     journal:
       "VIS 2020 - InfoVIS Poster Track 🏆 Honorable Mention for Best Poster Research 🏆 (Juried Selection, 2 awarded)",
-    date: "",
     links: [
       { name: "about", link: "#/research/table-cartogram" },
       { name: "paper", link: "https://osf.io/kem6j/" },
@@ -466,7 +492,6 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     //   'Proceedings of the 2020 ACM annual conference on Human Factors in Computing Systems <br/> 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)',
     journal:
       "ACM CHI 2020 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)",
-    date: "",
     links: [
       { name: "about", link: "#/research/mirage" },
       {
@@ -496,7 +521,6 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     authors: "Andrew McNutt, Anamaria Crisan, Michael Correll",
     journal: "alt.CHI 2020",
     year: 2020,
-    date: "",
     links: [
       { name: "about", link: "#/research/tarot" },
       {
@@ -521,7 +545,6 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     urlTitle: "ms-thesis",
     authors: "Andrew McNutt (Advised by Gordon Kindlmann)",
     journal: "Masters thesis. University of Chicago",
-    date: "June 2018",
     year: 2018,
     links: [{ name: "zine", link: "https://www.mcnutt.in/ms-zine/" }],
     abstract: "",
@@ -538,7 +561,6 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     journal:
       "MindBytes Research Symposium 2019. 🏆 Best Poster in Visualization 🏆",
     year: 2019,
-    date: "",
     links: [
       { name: "poster", link: "assets/posterkim102519.pdf" },
       // {name: 'live', link: 'https://goetheanddecandolle.rcc.uchicago.edu/'},
@@ -562,7 +584,6 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     year: 2019,
     // journal: 'Proceedings of the Eurographics Conference on Visualization "EuroVis" - Posters',
     journal: "EuroVis 2019 (Posters)",
-    date: "",
     links: [
       {
         name: "paper",
@@ -592,7 +613,6 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     year: 2018,
     journal:
       "IEEE VIS Workshop on Creation, Curation, Critique and Conditioning of Principles and Guidelines in Visualization (VisGuides 2018)",
-    date: "",
     links: [
       { name: "paper", link: "assets/McNutt_Kindlmann_2018.pdf" },
       { name: "code", link: "https://github.com/mcnuttandrew/vislint_mpl" },
@@ -613,7 +633,6 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     Anna Coulon Spektor, Charlie Weatherall, Nadia K Litterman, Barry A Bunin`,
     journal: "Reporter Gene Assays",
     year: 2018,
-    date: "2018",
     links: [
       {
         name: "paper",
@@ -633,7 +652,6 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     urlTitle: "qgrav",
     journal: "Journal of Classical and Quantum Gravity",
     year: 2015,
-    date: "2015",
     links: [
       { name: "paper", link: "https://arxiv.org/abs/1501.07537" },
       { name: "slides", link: "assets/QGravPresentation.pdf" },
@@ -652,7 +670,6 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     authors: `Alex M. Clark, Krishna Dole, Anna Coulon-Spektor, Andrew McNutt,
     George Grass, Joel S. Freundlich, Robert C. Reynolds, Sean Ekins`,
     journal: "Journal of Chemical Information and Modeling",
-    date: "2015",
     year: 2015,
     links: [
       {
@@ -672,7 +689,6 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     urlTitle: "nonequiv",
     authors: "Andrew McNutt (Advised by Nelia Mann)",
     journal: "Undergraduate thesis. Reed College",
-    date: "June 2014",
     year: 2014,
     links: [
       { name: "thesis", link: "assets/thesis.pdf" },

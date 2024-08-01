@@ -15,7 +15,7 @@
     e.preventDefault();
     abstractOpen = !abstractOpen;
   }
-  const keys = ["subtitle", "journal", "date"] as const;
+  const keys = ["subtitle", "journal"] as const;
   $: preppedKeys = keys.map((x) => publication[x]).filter((x) => x) as string[];
 </script>
 

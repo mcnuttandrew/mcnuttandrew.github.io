@@ -1,6 +1,7 @@
 <script lang="ts">
   import { tweened } from "svelte/motion";
   import { cubicOut } from "svelte/easing";
+  import { SECTIONS } from "../constants";
 
   const rotation = tweened(0, {
     duration: 400,
@@ -44,7 +45,7 @@
   </button>
   {#if open}
     <div class="flex-col flex mb-3">
-      {#each ["about", "publications", "misc"] as section (section)}
+      {#each SECTIONS as section (section)}
         <a
           href="/#/{section}"
           class:font-bold={currentSection === section}
