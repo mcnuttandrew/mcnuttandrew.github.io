@@ -23,12 +23,14 @@
   <div class="flex flex-col md:flex-row">
     <!-- the regular image -->
     <div class="h-full hidden md:block">
-      <div class="items-start flex justify-center w-24 min-w-24 mx-6">
+      <div
+        class="flex justify-center w-24 min-w-24 mx-6 max-h-24 overflow-hidden items-center"
+      >
         <a href={publication.link}>
           <img
             alt="image drawn from {publication.title}"
             src={publication.imgLink}
-            class="cursor-pointer h-24 rounded-full"
+            class="cursor-pointer min-w-24"
           />
         </a>
       </div>
