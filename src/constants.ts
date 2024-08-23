@@ -58,7 +58,12 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   "Yuxin Chen": "https://yuxinchen.org/",
 };
 
-const selectedPubs = new Set(["tacos", "mirage", "sauce", "ai-4-notebooks"]);
+const selectedPubs = new Set([
+  "mirage",
+  "sauce",
+  "ai-4-notebooks",
+  "color-buddy",
+]);
 export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((x) =>
   selectedPubs.has(x.urlTitle)
 );

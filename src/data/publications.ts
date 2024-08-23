@@ -94,10 +94,15 @@ export const PUBLICATIONS: Publication[] = [
     authors: "Junran Yang, Andrew McNutt, Leilani Battle",
     journal: "IEEE VL/HCC 2024",
     year: 2024,
-    links: [],
-    abstract: `Data analysis is challenging as analysts must navigate nuanced decisions that may yield divergent conclusions. AI assistants have the potential to support analysts in planning their analyses, enabling more robust decision-making. Though AI-based assistants that target code execution (e.g., Github Copilot) have received significant attention, limited research addresses assistance for both analysis execution and planning. In this work, we characterize helpful planning suggestions and their impacts on analysts' workflows. We first review the analysis planning literature and crowd-sourced analysis studies to categorize suggestion content. We then conduct a Wizard-of-Oz study (n=13) to observe analysts' preferences and reactions to planning assistance in a realistic scenario. Our findings highlight subtleties in contextual factors that impact suggestion helpfulness, emphasizing design implications for supporting different abstractions of assistance, forms of initiative, increased engagement, and alignment of goals between analysts and assistants.`,
-    type: "conference / journal articles",
+    links: [
+      {
+        name: "paper",
+        link: "https://arxiv.org/abs/2407.20571",
+      },
+    ],
+    abstract: `Example galleries are often used to teach, document, and advertise visually-focused domain-specific languages and libraries, such as those producing visualizations, diagrams, or webpages. Despite their ubiquity, there is no consensus on the role of "example galleries", let alone what the best practices might be for their creation or curation. To understand gallery meaning and usage, we interviewed the creators (N=11) and users (N=9) of prominent visualization-adjacent tools. From these interviews we synthesized strategies and challenges for gallery curation and management (e.g. weighing the costs/benefits of adding new examples and trade-offs in richness vs ease of use), highlighted the differences between planned and actual gallery usage (e.g. opportunistic reuse vs search-engine optimization), and reflected on parts of the gallery design space not explored (e.g. highlighting the potential of tool assistance). We found that galleries are multi-faceted structures whose form and content are motivated to accommodate different usages--ranging from marketing material to test suite to extended documentation. This work offers a foundation for future support tools by characterizing gallery design and management, as well as by highlighting challenges and opportunities in the space (such as how more diverse galleries make reuse tasks simpler, but complicate upkeep).`,
     subtype: "conference",
+    type: "conference / journal articles",
   },
   {
     link: "https://arxiv.org/abs/2309.10108.pdf",
