@@ -29,3 +29,27 @@ div a {
 .md-container p, .abstract-content p {
   margin-bottom: 1em;
 }
+
+.md-container blockquote {
+  padding: 0.25em 0.5em;
+  border-left: 1em solid green;
+  margin-bottom: 10px;
+}
+
+.md-container blockquote p {
+  margin: 0;
+}
+
+.md-container h1 {
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.md-container h2 {
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}

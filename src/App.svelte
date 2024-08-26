@@ -13,6 +13,9 @@
   import Zines from "./components/Zines.svelte";
   import NewsItem from "./components/NewsItem.svelte";
   import { NEWS } from "./constants";
+  // @ts-ignore
+  import HIRING24 from "./text-chunks/hiring-24.md?raw";
+  import Post from "./components/Post.svelte";
 
   import { getRoute } from "./utils";
 
@@ -85,6 +88,8 @@
         <News />
       {:else if currentSection === "zines"}
         <Zines />
+      {:else if currentSection === "hiring-24"}
+        <Post content={HIRING24} />
       {:else}
         <About />
       {/if}
