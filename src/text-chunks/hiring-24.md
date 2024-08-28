@@ -6,7 +6,7 @@ I'm looking for students who are interested in some combination of HCI, Vis, or 
 
 Some of my main approaches to research involve system design and prototyping, theory/critical reflection, and qualitative analysis. It is a strong signal to me if you have experience in one of these areas and can show it in some way that matters to you.
 For instance, if you aspire to build things, having built something you care about is a great way to show that. I love to see cool things people have made.
-Not every interest or approach matches perfectly with making demos, for instance, having thought carefully about the context and usage of a particular system, as reified via an essay, blog post, or other writing, is also a strong signal. When considering a phd it is good, and possibly even essential, to care about something.
+Not every interest or approach matches perfectly with making demos, for instance, having thought carefully about the context and usage of a particular system won't necessarily yield a pretty picture. But reifying that critical thinking as an essay, blog post, or other writing, is a strong signal. When considering a phd it is good, and possibly even essential, to care about something and have a means showing it.
 
 There are many types of people who apply for Ph.D. programs for a wide range of reasons. I'm excited to work with a diverse group of students, but more than that I'm interested in working with interested and engaged people.
 There's lots of ways to show that you're interested and engaged, and I'm interested in seeing them.
