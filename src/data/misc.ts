@@ -10,6 +10,15 @@ interface Misc {
 
 export const MISC: Misc[] = [
   {
+    title: "Color Buddy",
+    dates: "2023 - ",
+    sourceLink: "https://github.com/mcnuttandrew/color-buddy",
+    link: "https://color-buddy.netlify.app/",
+    imgLink: "converted-images/color-buddy.jpg",
+    text: "A modern color palette design system",
+    tags: ["visualization"],
+  },
+  {
     title: "Open Grad Positions in Visualization",
     dates: "2023 - ",
     sourceLink: "https://github.com/mcnuttandrew/vis-phd-positions",
