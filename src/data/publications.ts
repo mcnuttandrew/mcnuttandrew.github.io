@@ -58,14 +58,28 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
-    link: "",
+    link: "https://color-buddy.netlify.app/",
     urlTitle: "color-buddy",
     imgLink: "converted-images/color-buddy.jpg",
     title: "Mixing Linters with GUIs: A Color Palette Design Probe",
     authors: "Andrew McNutt, Maureen C. Stone, Jeffrey Heer",
     journal: "IEEE VIS 2024",
     year: 2024,
-    links: [{ name: "paper", link: "https://arxiv.org/abs/2407.21285" }],
+    links: [
+      { name: "paper", link: "https://arxiv.org/abs/2407.21285" },
+      {
+        name: "materials",
+        link: "https://osf.io/geauf/",
+      },
+      {
+        name: "live",
+        link: "https://color-buddy.netlify.app/",
+      },
+      {
+        name: "code",
+        link: "https://github.com/mcnuttandrew/color-buddy",
+      },
+    ],
     abstract: `Visualization linters are end-user facing evaluators that automatically identify potential chart issues. These spell-checker like systems offer a blend of interpretability and customization that is not found in other forms of automated assistance. However, existing linters do not model context and have primarily targeted users who do not need assistance, resulting in obvious—even annoying—advice. We investigate these issues within the domain of color palette design, which serves as a microcosm of visualization design concerns. We contribute a GUI-based color palette linter as a design probe that covers perception, accessibility, context, and other design criteria, and use it to explore visual explanations, integrated fixes, and user defined linting rules. Through a formative interview study and theory-driven analysis, we find that linters can be meaningfully integrated into graphical contexts thereby addressing many of their core issues. We discuss implications for integrating linters into visualization tools, developing improved assertion languages, and supporting end-user tunable advice—all laying the groundwork for more effective visualization linters in any context.`,
     type: "conference / journal articles",
     subtype: "conference",
