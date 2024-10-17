@@ -50,7 +50,7 @@
       <a href="https://scholar.google.com/citations?user=AHwQg4kAAAAJ&hl=en">
         <img src="icons/scholar.svg" alt="link to scholar page" />
       </a>
-      <a href="https://vis.social/@mcnutt" rel="me" class="ml-2">
+      <a href="https://hci.social/@mcnuttandrew" rel="me" class="ml-2">
         <img
           src="icons/mastodon.png"
           alt="link to mastodon page"
