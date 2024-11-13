@@ -359,6 +359,13 @@ export const AWARDS: {
 
 export const TEACHING = [
   {
+    title: "CS6967: Critical VIS+HCI",
+    date: "Spring 2025",
+    role: "Instructor",
+    location: "University of Utah",
+    link: "https://www.mcnutt.in/critical-hci-vis-class/",
+  },
+  {
     title: "COMP 1010 - Programming for All 1",
     date: "Fall 2024",
     role: "Instructor",
