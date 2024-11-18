@@ -26,3 +26,7 @@ If you're interested in working with me, please apply to the [University of Utah
 _Can I do ML/AI/etc work with you?_ While my work sometimes touches AI or AI-ish topics, it is not generally a subject I study. If your interests are primarily in AI/ML, I'm not the right advisor for you and you should look elsewhere.
 
 _Are you hiring interns (or another non-phd position)?_ I am only hiring Ph.D. students at this time.
+
+_Do I need to email you before applying?_ nope! you dont need anyone's permission to apply. Just mention me in your statement and thatll set the wheels in motion.
+
+
