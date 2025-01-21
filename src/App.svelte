@@ -36,7 +36,7 @@
     <img
       src="converted-images/headshot.jpg"
       alt="head shot of andrew mcnutt"
-      class="w-52 max-w-full h-auto rounded-full"
+      class="w-52 max-w-full h-auto rounded-full hidden lg:block"
     />
     <h1 class="text-xl font-bold">Andrew McNutt</h1>
     <h3 class="text-xl">Assistant Professor</h3>
