@@ -48,6 +48,7 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   "Ravi Chugh": "http://people.cs.uchicago.edu/~rchugh/",
   "Rob DeLine": "https://www.microsoft.com/en-us/research/people/rdeline/",
   "Sara Di Bartolomeo": "https://picorana.github.io/",
+  "Sam Cohen": "https://sbcohen.net/",
   "Sean Ekins": "https://scholar.google.com/citations?user=6NNfXAMAAAAJ&hl=en",
   "Steven M. Drucker": "https://stevenmdrucker.github.io/#/",
   "Tim Althoff": "https://homes.cs.washington.edu/~althoff/",

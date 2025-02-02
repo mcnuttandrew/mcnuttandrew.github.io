@@ -24,7 +24,7 @@
     <!-- the regular image -->
     <div class="h-full hidden md:block">
       <div
-        class="flex justify-center w-24 min-w-24 mx-6 max-h-24 overflow-hidden items-center"
+        class="flex justify-center w-24 min-w-24 mx-6 max-h-24 h-24 overflow-hidden items-center"
       >
         <a href={publication.link}>
           <img

@@ -58,6 +58,40 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
+    link: "",
+    urlTitle: "linting-is-people",
+    imgLink: "converted-images/linting-is-people.jpg",
+    title:
+      "Linting is People! Exploring the Potential of Human Computation as a Sociotechnical Linter of Data Visualizations",
+    authors: "Anamaria Crisan, Andrew McNutt",
+    journal: "alt.CHI 2025",
+    year: 2025,
+    links: [
+      // { name: "paper", link: "" }
+    ],
+    type: "extended abstract / workshop papers",
+    subtype: "ex. abs.",
+    theme: "vis-correctness",
+    abstract:
+      "Traditionally, linters are code analysis tools that help developers by flagging potential issues from syntax and logic errors to enforcing syntactical and stylistic conventions. Recently, linting has been taken as an interface metaphor, allowing it to be extended to more complex inputs, such as visualizations, which demand a broader perspective and alternative approach to evaluation. We explore a further extended consideration of linting inputs, and modes of evaluation, across the puritanical, neutral, and rebellious dimensions. We specifically investigate the potential for leveraging human computation in linting operations through Community Notes---crowd-sourced contextual text snippets aimed at checking and critiquing potentially accurate or misleading content on social media. We demonstrate that human-powered assessments not only identify misleading or error-prone visualizations but that integrating human computation enhances traditional linting by offering social insights. As is required these days, we consider the implications of building linters powered by Artificial Intelligence.",
+  },
+  {
+    link: "https://osf.io/preprints/osf/83z94_v1",
+    urlTitle: "tattoo",
+    imgLink: "converted-images/tattoo.jpg",
+    title:
+      "Slowness, Politics, and Joy: Values That Guide Technology Choices in Creative Coding Classrooms",
+    authors: "Andrew McNutt, Sam Cohen, Ravi Chugh",
+    journal: "ACM CHI 2025",
+    year: 2025,
+    links: [{ name: "paper", link: "https://osf.io/preprints/osf/83z94_v1" }],
+    type: "conference / journal articles",
+    subtype: "conference",
+    theme: "critical-perspectives",
+    abstract:
+      "There are many tools and technologies for making art with code, each embodying distinct values and affordances. Within this landscape, creative coding educators must evaluate how different tools map onto their own principles and examine the potential impacts of those choices on students' learning and artistic development. Understanding the values guiding these decisions is critical, as they reflect insights about these contexts, communities, and pedagogies. We explore these values through semi-structured interviews with (N=12) creative coding educators and toolbuilders. We identify three major themes: slowness (how friction can make room for reflection), politics (including the lasting effects of particular technologies), and joy (or the capacity for playful engagement). The lessons and priorities voiced by our participants offer valuable, transferable perspectives---like preferring community building (such as through documentation) over techno-solutionism. We demonstrate application of these critical lenses to two tool design areas (accessibility and AI assistance).",
+  },
+  {
     link: "https://color-buddy.netlify.app/",
     urlTitle: "color-buddy",
     imgLink: "converted-images/color-buddy.jpg",
