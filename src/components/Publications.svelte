@@ -21,6 +21,11 @@
       description:
         "What does it mean for a visualization to be good? This line of work explores systems and strategies for evaluating the correctness of visualizations. Much of this work draws on the Algebraic Visualization Design framework as underlying theory.",
     },
+    "creative-coding": {
+      title: "Creative Coding",
+      description:
+        "This area explores the use of code in art. This includes questions like, as toolmakers how can we support artists? What sorts of interventions are useful for art? What about those for who are learning to code via art?",
+    },
     "programming-interfaces": {
       title: "Programming Interfaces and Programming Interface Accessories",
       description:

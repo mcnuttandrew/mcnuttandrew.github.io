@@ -52,13 +52,14 @@ export interface Publication {
   theme:
     | "programming-interfaces"
     | "vis-correctness"
+    | "creative-coding"
     | "critical-perspectives"
     | "NA";
 }
 
 export const PUBLICATIONS: Publication[] = [
   {
-    link: "",
+    link: "https://arxiv.org/abs/2502.07649",
     urlTitle: "linting-is-people",
     imgLink: "converted-images/linting-is-people.jpg",
     title:
@@ -66,9 +67,7 @@ export const PUBLICATIONS: Publication[] = [
     authors: "Anamaria Crisan, Andrew McNutt",
     journal: "alt.CHI 2025",
     year: 2025,
-    links: [
-      // { name: "paper", link: "" }
-    ],
+    links: [{ name: "paper", link: "https://arxiv.org/abs/2502.07649" }],
     type: "extended abstract / workshop papers",
     subtype: "ex. abs.",
     theme: "vis-correctness",
@@ -87,7 +86,7 @@ export const PUBLICATIONS: Publication[] = [
     links: [{ name: "paper", link: "https://osf.io/preprints/osf/83z94_v1" }],
     type: "conference / journal articles",
     subtype: "conference",
-    theme: "critical-perspectives",
+    theme: "creative-coding",
     abstract:
       "There are many tools and technologies for making art with code, each embodying distinct values and affordances. Within this landscape, creative coding educators must evaluate how different tools map onto their own principles and examine the potential impacts of those choices on students' learning and artistic development. Understanding the values guiding these decisions is critical, as they reflect insights about these contexts, communities, and pedagogies. We explore these values through semi-structured interviews with (N=12) creative coding educators and toolbuilders. We identify three major themes: slowness (how friction can make room for reflection), politics (including the lasting effects of particular technologies), and joy (or the capacity for playful engagement). The lessons and priorities voiced by our participants offer valuable, transferable perspectives---like preferring community building (such as through documentation) over techno-solutionism. We demonstrate application of these critical lenses to two tool design areas (accessibility and AI assistance).",
   },
@@ -325,7 +324,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
       "Creative coding is a rapidly expanding domain for both artistic expression and computational education. Numerous libraries and IDEs support creative coding, however there has been little consideration of how the environments themselves might be designed to serve these twin goals. To investigate this gap, we implemented and used an experimental editor to teach a sequence of college and high-school creative coding courses. In the first year, we conducted a log analysis of student work (n=39) and surveys regarding prospective features (n=25). These guided our implementation of common enhancements (e.g. color pickers) as well as uncommon ones (e.g. bidirectional shape editing). In the second year, we studied the effects of these features through logging (n=39+) and survey (n=23) studies. Reflecting on the results, we identify opportunities to improve creativity- and novice-focused IDEs and highlight tensions in their design (as in tools that augment artistry or efficiency but may hinder learning).",
     type: "conference / journal articles",
     subtype: "conference",
-    theme: "programming-interfaces",
+    theme: "creative-coding",
   },
   {
     link: "https://arxiv.org/abs/2207.07998",
@@ -403,7 +402,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
       "In the context of data labeling, NLP researchers are increasingly interested in having humans select _rationales_, a subset of input tokens relevant to the chosen label. We conducted a 332-participant online user study to understand how humans select rationales, especially how different instructions and user interface affordances impact the rationales chosen. Participants labeled ten movie reviews as positive or negative, selecting words and phrases supporting their label as rationales. We varied the instructions given, the rationale-selection task, and the user interface. Participants often selected about 12% of input tokens as rationales, but selected fewer if unable to drag over multiple tokens at once. Whereas participants were near unanimous in their data labels, they were far less consistent in their rationales. The user interface affordances and task greatly impacted the types of rationales chosen. We also observed large variance across participants.",
     type: "conference / journal articles",
     subtype: "conference",
-    theme: "programming-interfaces",
+    theme: "NA",
   },
   {
     link: "https://arxiv.org/abs/2109.06007",
