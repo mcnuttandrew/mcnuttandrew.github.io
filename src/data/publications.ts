@@ -75,7 +75,7 @@ export const PUBLICATIONS: Publication[] = [
       "Traditionally, linters are code analysis tools that help developers by flagging potential issues from syntax and logic errors to enforcing syntactical and stylistic conventions. Recently, linting has been taken as an interface metaphor, allowing it to be extended to more complex inputs, such as visualizations, which demand a broader perspective and alternative approach to evaluation. We explore a further extended consideration of linting inputs, and modes of evaluation, across the puritanical, neutral, and rebellious dimensions. We specifically investigate the potential for leveraging human computation in linting operations through Community Notes---crowd-sourced contextual text snippets aimed at checking and critiquing potentially accurate or misleading content on social media. We demonstrate that human-powered assessments not only identify misleading or error-prone visualizations but that integrating human computation enhances traditional linting by offering social insights. As is required these days, we consider the implications of building linters powered by Artificial Intelligence.",
   },
   {
-    link: "https://osf.io/preprints/osf/83z94_v1",
+    link: "assets/tattoo.pdf",
     urlTitle: "tattoo",
     imgLink: "converted-images/tattoo.jpg",
     title:
@@ -83,7 +83,10 @@ export const PUBLICATIONS: Publication[] = [
     authors: "Andrew McNutt, Sam Cohen, Ravi Chugh",
     journal: "ACM CHI 2025",
     year: 2025,
-    links: [{ name: "paper", link: "https://osf.io/preprints/osf/83z94_v1" }],
+    links: [
+      { name: "paper", link: "assets/tattoo.pdf" },
+      { name: "osf", link: "https://osf.io/preprints/osf/83z94_v1" },
+    ],
     type: "conference / journal articles",
     subtype: "conference",
     theme: "creative-coding",
