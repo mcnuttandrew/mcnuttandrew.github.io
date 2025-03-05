@@ -10,6 +10,16 @@ interface Misc {
 
 export const MISC: Misc[] = [
   {
+    title: "CDN/TDPS Template",
+    dates: "2025",
+    // sourceLink:
+    //   "https://docs.google.com/spreadsheets/d/1_1D6WTnhZ60hw-u8CwP7SM_heWX8YR9KsWVq1mYGZOc/edit?usp=sharing",
+    link: "https://docs.google.com/spreadsheets/d/1_1D6WTnhZ60hw-u8CwP7SM_heWX8YR9KsWVq1mYGZOc/edit?usp=sharing",
+    imgLink: "converted-images/cdn-tdps-template.jpg",
+    text: "A template for conducting [Cognitive Dimensions](https://en.wikipedia.org/wiki/Cognitive_dimensions_of_notations) or [Technical Dimensions](https://tomasp.net/techdims/) analyses",
+    tags: ["tech"],
+  },
+  {
     title: "Color Buddy",
     dates: "2023 - ",
     sourceLink: "https://github.com/mcnuttandrew/color-buddy",
@@ -51,7 +61,7 @@ export const MISC: Misc[] = [
     sourceLink: "https://github.com/mcnuttandrew/ivy",
     link: "http://ivy-vis.netlify.app/",
     imgLink: "converted-images/ivy.jpg",
-    text: "A meta-level approach to visual analytics. Information is Beautiful Awards '22 Long List.",
+    text: "A meta-level approach to visual analytics. Information is Beautiful Awards '22 [Long List](https://www.informationisbeautifulawards.com/showcase/5139-ivy-integrated-visualization-editing-via-parameterized-declarative-templates).",
     tags: ["visualization", "tech"],
   },
   {

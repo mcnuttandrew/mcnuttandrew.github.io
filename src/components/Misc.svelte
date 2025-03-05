@@ -1,6 +1,12 @@
 <script lang="ts">
   import { MISC } from "../constants";
   let selectedMisc = MISC;
+  import markdownit from "markdown-it";
+  const md = markdownit({
+    html: true,
+    linkify: true,
+    typographer: true,
+  });
 </script>
 
 <div class="px-4">
@@ -32,7 +38,7 @@
           {/if}
           {#if project.link}<a href={project.link}>Live</a>{/if}
         </div>
-        <p class="text-sm">{project.text}</p>
+        <p class="text-sm">{@html md.render(project.text)}</p>
       </div>
     {/each}
   </div>
