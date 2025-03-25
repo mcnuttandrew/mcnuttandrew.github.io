@@ -1,5 +1,15 @@
 export const NEWS = [
   {
+    date: "April 2025",
+    content:
+      "Three papers this spring! Two at CHI (one on [creative coding](assets/tattoo.pdf) 🎨👾 and one on [linting community notes](https://arxiv.org/abs/2502.07649) (at the final alt.chi!!)) and one at EuroVIS (on the designing [accessible descriptive texts for UpSet plots](https://vdl.sci.utah.edu/publications/2025_eurovis_text-descriptions/)).",
+  },
+  {
+    date: "October 2024",
+    content:
+      "Co-organized the [VISions of the Future](https://visionsofthefuture.github.io/) workshop at VIS24. It was a great 🌟🌲",
+  },
+  {
     date: "August 2024",
     content:
       "Three papers this fall! Two at VIS (on [linting color palettes](https://arxiv.org/abs/2407.21285) 🌈 and [participatory budgeting](https://arxiv.org/abs/2407.20103) 🗳️) and one at VL/HCC (on the [design of example galleries](https://arxiv.org/abs/2407.20571) 🖼️).",

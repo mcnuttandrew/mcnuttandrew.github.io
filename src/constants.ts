@@ -17,6 +17,7 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   "Alex M. Clark":
     "https://scholar.google.com/citations?user=4Gv4PboAAAAJ&hl=en",
   "Alex Kale": "https://people.cs.uchicago.edu/~kalea/",
+  "Alexander Lex": "https://vdl.sci.utah.edu/team/lex/",
   "Allison Morgan": "https://allisonmorgan.github.io/",
   "Anamaria Crisan": "https://amcrisan.github.io/",
   "Anton Outkine": "https://antonoutkine.com/",
@@ -62,7 +63,8 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
 const selectedPubs = new Set([
   "mirage",
   "sauce",
-  "ai-4-notebooks",
+  "tattoo",
+  // "ai-4-notebooks",
   "color-buddy",
 ]);
 export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((x) =>
