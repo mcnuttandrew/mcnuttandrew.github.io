@@ -21,6 +21,7 @@ type linkType =
   | "osf"
   | "code"
   | "poster"
+  | "video figure"
   | "slides"
   | "blog post"
   | "award"
@@ -58,6 +59,37 @@ export interface Publication {
 }
 
 export const PUBLICATIONS: Publication[] = [
+  {
+    link: "https://arxiv.org/html/2503.17517v1",
+    urlTitle: "upset-alt-text",
+    imgLink: "converted-images/upset-alt-text.jpg",
+    title: "Accessible Text Descriptions for UpSet Plots",
+    authors:
+      "Andrew McNutt, Maggie K McCracken, Ishrat Jahan Eliza, Daniel Hajas, Jake Wagoner, Nate Lanza, Jack Wilburn, Sarah Creem-Regehr, Alexander Lex",
+    journal: "EuroVIS 2025",
+    year: 2025,
+    links: [
+      { name: "paper", link: "https://arxiv.org/abs/2502.07649" },
+      { name: "osf", link: "https://osf.io/kbvs9/" },
+      {
+        name: "live",
+        link: "https://vdl.sci.utah.edu/Upset-alttxt-study/Upset-Alttext-User-Survey/",
+      },
+      {
+        name: "code",
+        link: "https://github.com/visdesignlab/upset-alt-txt-gen",
+      },
+      {
+        name: "video figure",
+        link: "https://www.youtube.com/watch?v=OhScWL1bUkQ",
+      },
+    ],
+    type: "conference / journal articles",
+    subtype: "conference",
+    theme: "programming-interfaces",
+    abstract:
+      "Data visualizations are typically not accessible to blind and low-vision (BLV) users. Automatically generating text descriptions offers an enticing mechanism for democratizing access to the information held in complex scientific charts, yet appropriate procedures for generating those texts remain elusive. Pursuing this issue, we study a single complex chart form: UpSet plots. UpSet Plots are a common way to analyze set data, an area largely unexplored by prior accessibility literature. By analyzing the patterns present in real-world examples, we develop a system for automatically captioning any UpSet plot. We evaluated the utility of our captions via semi-structured interviews with (N=11) BLV users and found that BLV users find them informative. In extensions, we find that sighted users can use our texts similarly to UpSet plots and that they are better than naive LLM usage. ",
+  },
   {
     link: "https://arxiv.org/abs/2502.07649",
     urlTitle: "linting-is-people",
