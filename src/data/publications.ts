@@ -69,7 +69,7 @@ export const PUBLICATIONS: Publication[] = [
     journal: "EuroVIS 2025",
     year: 2025,
     links: [
-      { name: "paper", link: "https://arxiv.org/abs/2502.07649" },
+      { name: "paper", link: "https://arxiv.org/abs/2503.17517v1" },
       { name: "osf", link: "https://osf.io/kbvs9/" },
       {
         name: "live",
