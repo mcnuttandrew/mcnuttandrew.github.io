@@ -113,7 +113,7 @@ export const PUBLICATIONS: Publication[] = [
     title:
       "Slowness, Politics, and Joy: Values That Guide Technology Choices in Creative Coding Classrooms",
     authors: "Andrew McNutt, Sam Cohen, Ravi Chugh",
-    journal: "ACM CHI 2025",
+    journal: "ACM CHI 2025 🏆 Honorable Mention for Best Paper 🏆",
     year: 2025,
     links: [
       { name: "paper", link: "assets/tattoo.pdf" },
