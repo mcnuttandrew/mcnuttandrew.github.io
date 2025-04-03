@@ -59,5 +59,11 @@ const ZINES: Zine[] = [
     text: "A zine for our paper 'Mixing Linters with GUIs: A Color Palette Design Probe'. (print only)",
     year: 2024,
   },
+  {
+    title: "Slowness, Politics, and Joy CHI25 Zine",
+    imgLink: "https://www.mcnutt.in/converted-images/tattoo-cover.jpg",
+    text: "A zine for our paper 'Slowness, Politics, and Joy: Values That Guide Technology Choices in Creative Coding Classrooms'. (print only)",
+    year: 2025,
+  },
 ];
 export default ZINES;
