@@ -169,8 +169,9 @@ export const PUBLICATIONS: Publication[] = [
     year: 2024,
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2407.20103" },
+      { name: "live", link: "https://chicago-pb-probe.netlify.app/" },
       {
-        name: "materials",
+        name: "code",
         link: "https://github.com/mcnuttandrew/chicago-pb-probe",
       },
     ],
@@ -272,6 +273,7 @@ export const PUBLICATIONS: Publication[] = [
       { name: "live", link: "https://prong-editor.netlify.app/" },
       { name: "code", link: "https://github.com/mcnuttandrew/prong" },
       { name: "paper", link: "https://arxiv.org/abs/2307.11260" },
+      { name: "talk", link: "https://youtu.be/-62Slx5Tq6o" },
     ],
     abstract: `Augmenting text-based programming with rich structured interactions has been explored in many ways. Among these, projectional editors offer an enticing combination of structure editing and domain-specific program visualization. Yet such tools are typically bespoke and expensive to produce, leaving them inaccessible to many DSL and application designers.
 
