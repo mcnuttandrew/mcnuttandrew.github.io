@@ -60,6 +60,37 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
+    link: "",
+    urlTitle: "buckaroo-demo",
+    imgLink: "converted-images/buckaroo-demo.jpg",
+    title: "Buckaroo: A Direct Manipulation Visual Data Wrangler",
+    authors: "Annabelle Warner, Andrew McNutt, Paul Rosen, El Kindi Rezig",
+    journal: "VLDB 2025",
+    year: 2025,
+    links: [],
+    type: "extended abstract / workshop papers",
+    subtype: "ex. abs.",
+    theme: "NA",
+    abstract:
+      "Preparing datasets—a critical phase known as data wrangling—constitutes the dominant phase of data science development, consuming upwards of 80% of the total project time. This phase encompasses a myriad of tasks: parsing data, restructuring it for analysis,repairing inaccuracies, merging sources, eliminating duplicates,and ensuring overall data integrity. Traditional approaches, typically through manual coding in languages such as Python or using spreadsheets, are not only laborious but also error-prone. These issues range from missing entries and formatting inconsistencies to data type inaccuracies, all of which can affect the quality of downstream tasks if not properly corrected. To address these challenges, we present Buckaroo, a visualization system to highlight discrepancies in data and enable on-the-spot corrections through direct manipulations of visual objects. Buckaroo (1) automatically finds “interesting” data groups that exhibit anomalies compared to the rest of the groups and recommends them for inspection;(2) suggests wrangling actions that the user can choose to repair the anomalies; and (3) allows users to visually manipulate their databy displaying the effects of their wrangling actions and offering the ability to undo or redo these actions, which supports the iterative nature of data wrangling",
+  },
+  {
+    link: "",
+    urlTitle: "revisit-py",
+    imgLink: "converted-images/revisit-py.jpg",
+    title: "ReVISitPy: Python Bindings for the reVISit Study Framework",
+    authors:
+      "Hilson Shrestha, Jack Wilburn, Brian Bollen, Andrew McNutt, Alexander Lex, Lane Harrison",
+    journal: "EuroVIS Posters 2025",
+    year: 2025,
+    links: [],
+    type: "extended abstract / workshop papers",
+    subtype: "poster",
+    theme: "programming-interfaces",
+    abstract:
+      "User experiments are an important part of visualization research, yet they remain costly, time-consuming to create, and difficult to prototype and pilot. The process of prototyping a study—from initial design to data collection and analysis—often requires the use of multiple systems (e.g. webservers and databases), adding complexity. We present reVISitPy, a Python library that enables visualization researchers to design, pilot deployments, and analyze pilot data entirely within a Jupyter notebook. Re- VISitPy provides a higher-level Python interface for the reVISit Domain-Specific Language (DSL) and study framework, which traditionally relies on manually authoring complex JSON configuration files. As study configurations grow larger, editing raw JSON becomes increasingly tedious and error-prone. By streamlining the configuration, testing, and preliminary analysis work- flows, reVISitPy reduces the overhead of study prototyping and helps researchers quickly iterate on study designs before full deployment through the reVISit framework.",
+  },
+  {
     link: "https://arxiv.org/html/2503.17517v1",
     urlTitle: "upset-alt-text",
     imgLink: "converted-images/upset-alt-text.jpg",
@@ -308,11 +339,10 @@ We find that this style of interventions are useful for helping end users learn,
 We primarily consider languages focused on data visualization tasks, as there has been substantial work in the visualization research community on this form of interface—although the lessons learned could be applied to any relevant domain.`,
     type: "theses / book chapters",
     subtype: "thesis",
-    theme: "NA",
+    theme: "programming-interfaces",
   },
-
   {
-    link: "https://osf.io/3jrcm/",
+    link: "assets/doom-n-fruit.pdf",
     urlTitle: "doom-n-fruit",
     imgLink: "converted-images/doom-n-fruit.jpg",
     title:
@@ -321,7 +351,10 @@ We primarily consider languages focused on data visualization tasks, as there ha
       "Victor Schetinger, Sara Di Bartolomeo, Mennatallah El-Assady, Andrew McNutt, Matthias Miller, João Paulo Apolinário Passos, Jane L. Adams",
     journal: "EuroVis 2023",
     year: 2023,
-    links: [{ name: "paper", link: "https://osf.io/3jrcm/" }],
+    links: [
+      { name: "osf", link: "assets/doom-n-fruit.pdf" },
+      { name: "osf", link: "https://osf.io/3jrcm/" },
+    ],
     abstract: `Generative text-to-image models (as exemplified by DALL-E, MidJourney, and Stable Diffusion) have recently made enormous technological leaps, demonstrating impressive results in many graphical domains---from logo design to digital painting and photographic composition. However, the quality of these results has led to existential crises in some fields of art, leading to questions about the role of human agency in the production of meaning in a graphical context. Such issues are central to visualization, and while these generative models have yet to be widely applied to visualization, it seems only a matter of time until their integration is manifest. Seeking to circumvent similar ponderous dilemmas, we attempt to understand the roles that generative models might play across visualization. We do so by constructing a framework that characterizes what these technologies offer at various stages of the visualization workflow, augmented and analyzed through semi-structured interviews with 19 experts from related domains. Through this work, we map the space of opportunities and risks that might arise in this intersection, identifying doomsday prophecies and delicious low-hanging fruits that are ripe for research.`,
     type: "conference / journal articles",
     subtype: "journal",
