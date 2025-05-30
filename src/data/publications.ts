@@ -59,21 +59,21 @@ export interface Publication {
 }
 
 export const PUBLICATIONS: Publication[] = [
-  {
-    link: "",
-    urlTitle: "buckaroo-demo",
-    imgLink: "converted-images/buckaroo-demo.jpg",
-    title: "Buckaroo: A Direct Manipulation Visual Data Wrangler",
-    authors: "Annabelle Warner, Andrew McNutt, Paul Rosen, El Kindi Rezig",
-    journal: "VLDB 2025",
-    year: 2025,
-    links: [],
-    type: "extended abstract / workshop papers",
-    subtype: "ex. abs.",
-    theme: "NA",
-    abstract:
-      "Preparing datasets—a critical phase known as data wrangling—constitutes the dominant phase of data science development, consuming upwards of 80% of the total project time. This phase encompasses a myriad of tasks: parsing data, restructuring it for analysis,repairing inaccuracies, merging sources, eliminating duplicates,and ensuring overall data integrity. Traditional approaches, typically through manual coding in languages such as Python or using spreadsheets, are not only laborious but also error-prone. These issues range from missing entries and formatting inconsistencies to data type inaccuracies, all of which can affect the quality of downstream tasks if not properly corrected. To address these challenges, we present Buckaroo, a visualization system to highlight discrepancies in data and enable on-the-spot corrections through direct manipulations of visual objects. Buckaroo (1) automatically finds “interesting” data groups that exhibit anomalies compared to the rest of the groups and recommends them for inspection;(2) suggests wrangling actions that the user can choose to repair the anomalies; and (3) allows users to visually manipulate their databy displaying the effects of their wrangling actions and offering the ability to undo or redo these actions, which supports the iterative nature of data wrangling",
-  },
+  // {
+  //   link: "",
+  //   urlTitle: "buckaroo-demo",
+  //   imgLink: "converted-images/buckaroo-demo.jpg",
+  //   title: "Buckaroo: A Direct Manipulation Visual Data Wrangler",
+  //   authors: "Annabelle Warner, Andrew McNutt, Paul Rosen, El Kindi Rezig",
+  //   journal: "VLDB 2025 Demo",
+  //   year: 2025,
+  //   links: [],
+  //   type: "extended abstract / workshop papers",
+  //   subtype: "ex. abs.",
+  //   theme: "NA",
+  //   abstract:
+  //     "Preparing datasets—a critical phase known as data wrangling—constitutes the dominant phase of data science development, consuming upwards of 80% of the total project time. This phase encompasses a myriad of tasks: parsing data, restructuring it for analysis,repairing inaccuracies, merging sources, eliminating duplicates,and ensuring overall data integrity. Traditional approaches, typically through manual coding in languages such as Python or using spreadsheets, are not only laborious but also error-prone. These issues range from missing entries and formatting inconsistencies to data type inaccuracies, all of which can affect the quality of downstream tasks if not properly corrected. To address these challenges, we present Buckaroo, a visualization system to highlight discrepancies in data and enable on-the-spot corrections through direct manipulations of visual objects. Buckaroo (1) automatically finds “interesting” data groups that exhibit anomalies compared to the rest of the groups and recommends them for inspection;(2) suggests wrangling actions that the user can choose to repair the anomalies; and (3) allows users to visually manipulate their databy displaying the effects of their wrangling actions and offering the ability to undo or redo these actions, which supports the iterative nature of data wrangling",
+  // },
   {
     link: "",
     urlTitle: "revisit-py",
