@@ -1,6 +1,5 @@
 <script lang="ts">
   import { PUBLICATIONS } from "../constants";
-  import store from "../store";
   import PublicationComponent from "./Publication.svelte";
 
   type sort = "type" | "year" | "paper name" | "theme";
@@ -119,9 +118,7 @@
     {/if}
     <div class="flex flex-col">
       {#each pubs[1] as publication}
-        {#if ($store.focusedPubs.length && $store.focusedPubs.join("----") === publication.topics.join("----")) || $store.focusedPubs.length === 0}
-          <PublicationComponent bind:publication />
-        {/if}
+        <PublicationComponent bind:publication />
       {/each}
     </div>
   {/each}

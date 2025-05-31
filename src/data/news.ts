@@ -2,7 +2,7 @@ export const NEWS = [
   {
     date: "April 2025",
     content:
-      "Three-ish papers this spring! Two at CHI: one on [creative coding](assets/tattoo.pdf) 🎨👾 and one on [linting community notes](https://arxiv.org/abs/2502.07649) (at the final alt.chi!!). One at EuroVIS (on the designing [accessible descriptive texts for UpSet plots](https://vdl.sci.utah.edu/publications/2025_eurovis_text-descriptions/)) as well as a poster (on [ReVISit](https://revisit.dev/))",
+      "Three-ish papers this spring! Two at CHI: one on [creative coding](assets/tattoo.pdf) 🎨👾 and one on [linting community notes](https://arxiv.org/abs/2502.07649) (at the final alt.chi!!). One at EuroVIS (on the designing [accessible descriptive texts for UpSet plots](https://vdl.sci.utah.edu/publications/2025_eurovis_text-descriptions/)) as well as a poster (on [ReVISit](https://revisit.dev/)).",
   },
   {
     date: "October 2024",
