@@ -25,7 +25,6 @@ function createStore() {
 
   return {
     subscribe,
-    // setPubs: (val: string[]) => update((old) => ({ ...old, focusedPubs: val })),
     focusSet: (val: string) =>
       update((old) => ({
         ...old,
