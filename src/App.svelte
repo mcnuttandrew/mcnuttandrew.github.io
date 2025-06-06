@@ -12,6 +12,7 @@
   import News from "./components/News.svelte";
   import Zines from "./components/Zines.svelte";
   import NewsItem from "./components/NewsItem.svelte";
+  import Upset from "./components/Upset.svelte";
   import { NEWS } from "./constants";
   // @ts-ignore
   import HIRING24 from "./text-chunks/hiring-24.md?raw";
@@ -31,7 +32,7 @@
 >
   <MobileHeader {currentSection} />
   <div
-    class="h-full flex-col items-center justify-center hidden md:flex min-w-fit w-64 static"
+    class="h-full flex-col items-center hidden md:flex min-w-fit w-64 static"
   >
     <img
       src="converted-images/headshot.jpg"
@@ -64,15 +65,19 @@
       </a>
     </div>
     <h3 class="">andrew.mcnutt @ utah.edu</h3>
-    <h2 class="text-2xl font-bold italic mt-8 hidden md:block text-left">
-      NEWS
-    </h2>
-    <div class="about-section hidden md:block w-80">
-      {#each news as newsItem}
-        <NewsItem {newsItem} />
-      {/each}
-      <a href="/#/news">Older News</a>
-    </div>
+    {#if currentSection === "publications"}
+      <Upset />
+    {:else}
+      <h2 class="text-2xl font-bold italic mt-8 hidden md:block text-left">
+        NEWS
+      </h2>
+      <div class="about-section hidden md:block w-80">
+        {#each news as newsItem}
+          <NewsItem {newsItem} />
+        {/each}
+        <a href="/#/news">Older News</a>
+      </div>
+    {/if}
   </div>
   <div class="px-4 md:w-1/2">
     <Header {currentSection} />
