@@ -115,6 +115,7 @@
               ? selectedColor
               : barColor}
             stroke="white"
+            class="cursor-pointer"
             on:mouseenter={() => {
               if (!locked) store.focusSet(set.name);
             }}
@@ -153,6 +154,7 @@
 
       <!-- intersection -->
       <g transform={`translate(0, ${topBarHeight + sectionMargin * 1})`}>
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
         {#each combinations as combination}
           <!-- background row -->
           <rect
@@ -184,6 +186,7 @@
                   ? highlightColor
                   : "white"}
                 opacity={$store.focusTopic.join(SPLIT_KEY) === set.name ? 1 : 0}
+                class="cursor-pointer"
                 on:mouseenter={() => {
                   if (!locked)
                     store.focusIntersection(combination.name.split(SPLIT_KEY));
@@ -234,6 +237,9 @@
             />
           {/if}
           <!-- histogram -->
+          <!-- svelte-ignore a11y-click-events-have-key-events -->
+          <!-- svelte-ignore a11y-no-static-element-interactions -->
+          <!-- svelte-ignore a11y-mouse-events-have-key-events -->
           <rect
             x={width}
             y={(intersectionScale(combination.name) || 0) -
@@ -244,6 +250,25 @@
               ? selectedColor
               : barColor}
             stroke="white"
+            class="cursor-pointer"
+            on:mouseenter={() => {
+              if (!locked)
+                store.focusIntersection(combination.name.split(SPLIT_KEY));
+            }}
+            on:mouseout={() => {
+              if (!locked) store.focusIntersection([]);
+            }}
+            on:click={() => {
+              if (
+                locked === true &&
+                $store.focusTopic.join(SPLIT_KEY) === combination.name
+              ) {
+                locked = false;
+              } else {
+                store.focusIntersection(combination.name.split(SPLIT_KEY));
+                locked = true;
+              }
+            }}
           />
           <text
             x={width + 5}
