@@ -717,7 +717,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "extended abstract / workshop papers",
     subtype: "ex. abs.",
     theme: "critical-perspectives",
-    topics: ["Critical Visualization"],
+    topics: ["Critical Visualization", "Visualization Systems"],
   },
   {
     link: "https://www.mcnutt.in/ms-zine/",
