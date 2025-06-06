@@ -117,7 +117,7 @@ export const PUBLICATIONS: Publication[] = [
         link: "https://www.youtube.com/watch?v=OhScWL1bUkQ",
       },
     ],
-    topics: ["Accessibility", "Sociotechnical Factors"],
+    topics: ["Accessibility", "Visualization Systems"],
     type: "conference / journal articles",
     subtype: "conference",
     theme: "programming-interfaces",
@@ -137,7 +137,7 @@ export const PUBLICATIONS: Publication[] = [
     type: "extended abstract / workshop papers",
     subtype: "ex. abs.",
     theme: "vis-correctness",
-    topics: ["Visualization Correctness"],
+    topics: ["Visualization Correctness", "Sociotechnical Factors"],
     abstract:
       "Traditionally, linters are code analysis tools that help developers by flagging potential issues from syntax and logic errors to enforcing syntactical and stylistic conventions. Recently, linting has been taken as an interface metaphor, allowing it to be extended to more complex inputs, such as visualizations, which demand a broader perspective and alternative approach to evaluation. We explore a further extended consideration of linting inputs, and modes of evaluation, across the puritanical, neutral, and rebellious dimensions. We specifically investigate the potential for leveraging human computation in linting operations through Community Notes---crowd-sourced contextual text snippets aimed at checking and critiquing potentially accurate or misleading content on social media. We demonstrate that human-powered assessments not only identify misleading or error-prone visualizations but that integrating human computation enhances traditional linting by offering social insights. As is required these days, we consider the implications of building linters powered by Artificial Intelligence.",
   },
@@ -192,7 +192,7 @@ export const PUBLICATIONS: Publication[] = [
     type: "conference / journal articles",
     subtype: "conference",
     theme: "vis-correctness",
-    topics: ["Visualization Correctness", "Accessibility"],
+    topics: ["Visualization Correctness", "Accessibility", "DSLs"],
   },
   {
     link: "https://arxiv.org/abs/2407.20103",
@@ -439,7 +439,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "conference / journal articles",
     subtype: "journal",
     theme: "programming-interfaces",
-    topics: ["Programming Interfaces", "DSLs"],
+    topics: ["Visualization Systems", "DSLs"],
   },
   {
     link: "https://link.springer.com/article/10.1007/s12064-022-00376-8",
@@ -510,7 +510,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "extended abstract / workshop papers",
     subtype: "workshop",
     theme: "critical-perspectives",
-    topics: ["Sociotechnical Factors", "Critical Visualization"],
+    topics: ["Critical Visualization"],
   },
   {
     link: "https://www.blaseur.com/papers/uist21-kondocloud.pdf",
@@ -657,7 +657,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "posters",
     subtype: "poster",
     theme: "NA",
-    topics: ["Visualization Systems"],
+    topics: ["Visualization Design"],
   },
   {
     link: "https://arxiv.org/abs/2001.02316",
@@ -733,7 +733,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "theses / book chapters",
     subtype: "thesis",
     theme: "NA",
-    topics: ["Visualization Systems"],
+    topics: ["Visualization Design"],
   },
   {
     imgLink: "converted-images/agathas-thing.jpg",
@@ -811,7 +811,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "extended abstract / workshop papers",
     subtype: "workshop",
     theme: "vis-correctness",
-    topics: ["Visualization Correctness"],
+    topics: ["Visualization Correctness", "Visualization Systems"],
   },
   {
     link: "https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14",

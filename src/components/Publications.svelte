@@ -91,18 +91,10 @@
       return [theme, sortedPublications.find((x) => x[0] === theme)?.[1] || []];
     });
   }
-
-  function isSubset(A: string[], B: string[]) {
-    return B.every((b) => A.includes(b));
-  }
-  function setEqual(A: string[], B: string[]) {
-    return isSubset(A, B) && isSubset(B, A);
-  }
-  $: console.log($store);
 </script>
 
 <div>
-  <div class="flex w-full justify-between">
+  <div class="flex w-full justify-between flex-wrap">
     {#each sorts as sort}
       <button
         class:font-bold={sort === currentSort}
@@ -127,7 +119,7 @@
     {/if}
     <div class="flex flex-col">
       {#each pubs[1] as publication}
-        {#if ($store.mode === "only-exact-matches" && $store.focusedPubs.length && setEqual($store.focusedPubs, publication.topics)) || ($store.mode === "include-subsets" && $store.focusedPubs.length && isSubset($store.focusedPubs, publication.topics)) || $store.focusedPubs.length === 0}
+        {#if $store.focusedPubs.includes(publication.title) || $store.focusedPubs.length === 0}
           <PublicationComponent bind:publication />
         {/if}
       {/each}

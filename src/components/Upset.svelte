@@ -85,13 +85,12 @@
   const sectionMargin = 20;
   const margins = { left: 20, right: 0, top: 20, bottom: 0 };
 
-  $: focusedIntersection = null as string | null;
-  $: focusedSets = [] as string[];
-  $: focusedColumn = null as string | null;
   const barColor = "oklch(87.2% 0.01 258.338)";
   const circleColor = "oklch(96.7% 0.003 264.542)";
   const selectedColor = "oklch(70.6% 0.03 256.802)";
   const highlightColor = "oklch(88.2% 0.059 254.128)";
+
+  $: locked = false;
 </script>
 
 <div class="block">
@@ -112,21 +111,26 @@
             y={topBarHeight - setSizeScale(set.cardinality)}
             width={setScale.bandwidth()}
             height={setSizeScale(set.cardinality)}
-            fill={focusedSets.includes(set.name) || focusedColumn === set.name
+            fill={$store.focusTopic.includes(set.name)
               ? selectedColor
               : barColor}
             stroke="white"
             on:mouseenter={() => {
-              focusedColumn = set.name;
-              focusedIntersection = null;
-              focusedSets = [];
+              if (!locked) store.focusSet(set.name);
             }}
             on:mouseout={() => {
-              focusedColumn = null;
+              if (!locked) store.focusIntersection([]);
             }}
             on:click={() => {
-              store.setPubs([set.name]);
-              store.setMode("include-subsets");
+              if (
+                locked === true &&
+                $store.focusTopic.join(SPLIT_KEY) === set.name
+              ) {
+                locked = false;
+              } else {
+                store.focusSet(set.name);
+                locked = true;
+              }
             }}
           />
 
@@ -157,7 +161,7 @@
               intersectionScale.bandwidth() / 2}
             width={width + interSectionWidth}
             height={intersectionScale.bandwidth()}
-            fill={focusedIntersection === combination.name
+            fill={$store.focusTopic.join(SPLIT_KEY) === combination.name
               ? highlightColor
               : "white"}
           />
@@ -176,38 +180,27 @@
                 y={-intersectionScale.bandwidth() / 2}
                 width={setScale.bandwidth()}
                 height={intersectionScale.bandwidth()}
-                fill={focusedColumn === set.name ? highlightColor : "white"}
-                opacity={focusedColumn === set.name ? 1 : 0}
+                fill={$store.focusTopic.join(SPLIT_KEY) === set.name
+                  ? highlightColor
+                  : "white"}
+                opacity={$store.focusTopic.join(SPLIT_KEY) === set.name ? 1 : 0}
                 on:mouseenter={() => {
-                  if ($store.focusedPubs.length) {
-                    return;
-                  }
-                  focusedSets = Array.from(
-                    combination.name.split(SPLIT_KEY) || []
-                  ).filter((s) => s !== set.name);
-                  focusedIntersection = combination.name;
+                  if (!locked)
+                    store.focusIntersection(combination.name.split(SPLIT_KEY));
                 }}
                 on:mouseout={() => {
-                  if ($store.focusedPubs.length) {
-                    return;
-                  }
-                  focusedIntersection = null;
-                  focusedColumn = null;
+                  if (!locked) store.focusIntersection([]);
                 }}
                 on:click={() => {
-                  focusedSets = Array.from(
-                    combination.name.split(SPLIT_KEY) || []
-                  ).filter((s) => s !== set.name);
-                  focusedIntersection = combination.name;
                   if (
-                    focusedSets.join(",") === $store.focusedPubs.join(",") &&
-                    focusedSets.length
+                    locked === true &&
+                    $store.focusTopic.join(SPLIT_KEY) === combination.name
                   ) {
-                    store.setPubs([]);
+                    locked = false;
                   } else {
-                    store.setPubs(focusedSets);
+                    store.focusIntersection(combination.name.split(SPLIT_KEY));
+                    locked = true;
                   }
-                  store.setMode("only-exact-matches");
                 }}
               />
               <circle
@@ -247,7 +240,7 @@
               intersectionScale.bandwidth() / 2}
             width={intersectionSizeScale(combination.cardinality)}
             height={intersectionScale.bandwidth()}
-            fill={focusedIntersection === combination.name
+            fill={$store.focusTopic.join(SPLIT_KEY) === combination.name
               ? selectedColor
               : barColor}
             stroke="white"
@@ -265,18 +258,7 @@
     </g>
   </svg>
 </div>
-<button
-  class="mt-2"
-  on:click={() => {
-    focusedColumn = null;
-    focusedIntersection = null;
-    focusedSets = [];
-    store.setPubs([]);
-    store.setMode("only-exact-matches");
-  }}
->
-  Clear
-</button>
+<button class="mt-2" on:click={() => store.focusIntersection([])}>Clear</button>
 
 <style>
   svg {
