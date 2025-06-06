@@ -22,7 +22,6 @@
     "vite-node": "^1.6.0"
   },
   "dependencies": {
-    "@upsetjs/bundle": "^1.11.0",
     "d3-scale": "^4.0.2",
     "markdown-it": "^14.1.0"
   },

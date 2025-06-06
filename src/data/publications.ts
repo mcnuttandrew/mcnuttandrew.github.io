@@ -301,7 +301,7 @@ export const PUBLICATIONS: Publication[] = [
     type: "conference / journal articles",
     subtype: "conference",
     theme: "programming-interfaces",
-    topics: ["Visualization Systems", "Sociotechnical Factors"],
+    topics: ["Visualization Systems", "DSLs"],
   },
   {
     link: "https://arxiv.org/abs/2307.11260",
@@ -606,7 +606,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "conference / journal articles",
     subtype: "conference",
     theme: "programming-interfaces",
-    topics: ["Visualization Systems", "Programming Interfaces"],
+    topics: ["Visualization Systems", "DSLs"],
   },
   {
     link: "https://arxiv.org/abs/2009.02384",
@@ -733,7 +733,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "theses / book chapters",
     subtype: "thesis",
     theme: "NA",
-    topics: ["vis-correctness"],
+    topics: ["Visualization Systems"],
   },
   {
     imgLink: "converted-images/agathas-thing.jpg",
@@ -811,7 +811,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "extended abstract / workshop papers",
     subtype: "workshop",
     theme: "vis-correctness",
-    topics: ["vis-correctness"],
+    topics: ["Visualization Correctness"],
   },
   {
     link: "https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14",
