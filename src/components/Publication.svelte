@@ -19,7 +19,7 @@
   $: preppedKeys = keys.map((x) => publication[x]).filter((x) => x) as string[];
 </script>
 
-<div class="flex-col mb-10">
+<div class="flex-col mb-10" transition:slide>
   <div class="flex flex-col md:flex-row">
     <!-- the regular image -->
     <div class="h-full hidden md:block">

@@ -50,6 +50,7 @@ export interface Publication {
   type: PubType;
   subtype: PubSubtype;
   year: number;
+  topics: string[];
   theme:
     | "programming-interfaces"
     | "vis-correctness"
@@ -89,6 +90,7 @@ export const PUBLICATIONS: Publication[] = [
     theme: "programming-interfaces",
     abstract:
       "User experiments are an important part of visualization research, yet they remain costly, time-consuming to create, and difficult to prototype and pilot. The process of prototyping a study—from initial design to data collection and analysis—often requires the use of multiple systems (e.g. webservers and databases), adding complexity. We present reVISitPy, a Python library that enables visualization researchers to design, pilot deployments, and analyze pilot data entirely within a Jupyter notebook. Re- VISitPy provides a higher-level Python interface for the reVISit Domain-Specific Language (DSL) and study framework, which traditionally relies on manually authoring complex JSON configuration files. As study configurations grow larger, editing raw JSON becomes increasingly tedious and error-prone. By streamlining the configuration, testing, and preliminary analysis work- flows, reVISitPy reduces the overhead of study prototyping and helps researchers quickly iterate on study designs before full deployment through the reVISit framework.",
+    topics: ["Visualization Systems", "DSLs"],
   },
   {
     link: "https://arxiv.org/html/2503.17517v1",
@@ -115,6 +117,7 @@ export const PUBLICATIONS: Publication[] = [
         link: "https://www.youtube.com/watch?v=OhScWL1bUkQ",
       },
     ],
+    topics: ["Accessibility", "Visualization Systems"],
     type: "conference / journal articles",
     subtype: "conference",
     theme: "programming-interfaces",
@@ -134,6 +137,7 @@ export const PUBLICATIONS: Publication[] = [
     type: "extended abstract / workshop papers",
     subtype: "ex. abs.",
     theme: "vis-correctness",
+    topics: ["Visualization Correctness", "Sociotechnical Factors"],
     abstract:
       "Traditionally, linters are code analysis tools that help developers by flagging potential issues from syntax and logic errors to enforcing syntactical and stylistic conventions. Recently, linting has been taken as an interface metaphor, allowing it to be extended to more complex inputs, such as visualizations, which demand a broader perspective and alternative approach to evaluation. We explore a further extended consideration of linting inputs, and modes of evaluation, across the puritanical, neutral, and rebellious dimensions. We specifically investigate the potential for leveraging human computation in linting operations through Community Notes---crowd-sourced contextual text snippets aimed at checking and critiquing potentially accurate or misleading content on social media. We demonstrate that human-powered assessments not only identify misleading or error-prone visualizations but that integrating human computation enhances traditional linting by offering social insights. As is required these days, we consider the implications of building linters powered by Artificial Intelligence.",
   },
@@ -155,6 +159,7 @@ export const PUBLICATIONS: Publication[] = [
     theme: "creative-coding",
     abstract:
       "There are many tools and technologies for making art with code, each embodying distinct values and affordances. Within this landscape, creative coding educators must evaluate how different tools map onto their own principles and examine the potential impacts of those choices on students' learning and artistic development. Understanding the values guiding these decisions is critical, as they reflect insights about these contexts, communities, and pedagogies. We explore these values through semi-structured interviews with (N=12) creative coding educators and toolbuilders. We identify three major themes: slowness (how friction can make room for reflection), politics (including the lasting effects of particular technologies), and joy (or the capacity for playful engagement). The lessons and priorities voiced by our participants offer valuable, transferable perspectives---like preferring community building (such as through documentation) over techno-solutionism. We demonstrate application of these critical lenses to two tool design areas (accessibility and AI assistance).",
+    topics: ["Creative Coding", "Sociotechnical Factors"],
   },
   {
     link: "https://color-buddy.netlify.app/",
@@ -187,6 +192,7 @@ export const PUBLICATIONS: Publication[] = [
     type: "conference / journal articles",
     subtype: "conference",
     theme: "vis-correctness",
+    topics: ["Visualization Correctness", "Accessibility", "DSLs"],
   },
   {
     link: "https://arxiv.org/abs/2407.20103",
@@ -210,6 +216,7 @@ export const PUBLICATIONS: Publication[] = [
     type: "conference / journal articles",
     subtype: "conference",
     theme: "critical-perspectives",
+    topics: ["Sociotechnical Factors", "Visualization Systems"],
   },
   {
     link: "https://arxiv.org/abs/2407.20571",
@@ -229,6 +236,7 @@ export const PUBLICATIONS: Publication[] = [
     subtype: "conference",
     type: "conference / journal articles",
     theme: "programming-interfaces",
+    topics: ["Visualization Systems", "Sociotechnical Factors"],
   },
   {
     link: "https://arxiv.org/abs/2309.10108.pdf",
@@ -251,6 +259,7 @@ export const PUBLICATIONS: Publication[] = [
     type: "conference / journal articles",
     subtype: "conference",
     theme: "programming-interfaces",
+    topics: ["AI", "Programming Interfaces"],
   },
   {
     link: "https://arxiv.org/abs/2308.15429",
@@ -268,6 +277,7 @@ export const PUBLICATIONS: Publication[] = [
     type: "extended abstract / workshop papers",
     subtype: "workshop",
     theme: "critical-perspectives",
+    topics: ["Critical Visualization", "Sociotechnical Factors"],
   },
   {
     link: "https://arxiv.org/abs/2308.16353",
@@ -291,6 +301,7 @@ export const PUBLICATIONS: Publication[] = [
     type: "conference / journal articles",
     subtype: "conference",
     theme: "programming-interfaces",
+    topics: ["Visualization Systems", "DSLs"],
   },
   {
     link: "https://arxiv.org/abs/2307.11260",
@@ -312,6 +323,7 @@ We describe a relatively inexpensive way to build rich projectional editors for 
     type: "conference / journal articles",
     subtype: "conference",
     theme: "programming-interfaces",
+    topics: ["Visualization Systems", "Programming Interfaces", "DSLs"],
   },
   {
     link: "",
@@ -340,6 +352,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "theses / book chapters",
     subtype: "thesis",
     theme: "programming-interfaces",
+    topics: ["Visualization Systems", "Programming Interfaces", "DSLs"],
   },
   {
     link: "assets/doom-n-fruit.pdf",
@@ -359,6 +372,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "conference / journal articles",
     subtype: "journal",
     theme: "critical-perspectives",
+    topics: ["AI", "Sociotechnical Factors"],
   },
   {
     link: "https://arxiv.org/abs/2301.11178",
@@ -376,6 +390,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "conference / journal articles",
     subtype: "conference",
     theme: "programming-interfaces",
+    topics: ["AI", "Programming Interfaces"],
   },
   {
     link: "https://arxiv.org/abs/2301.13302",
@@ -395,6 +410,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "conference / journal articles",
     subtype: "conference",
     theme: "creative-coding",
+    topics: ["Creative Coding", "Programming Interfaces"],
   },
   {
     link: "https://arxiv.org/abs/2207.07998",
@@ -423,6 +439,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "conference / journal articles",
     subtype: "journal",
     theme: "programming-interfaces",
+    topics: ["Visualization Systems", "DSLs"],
   },
   {
     link: "https://link.springer.com/article/10.1007/s12064-022-00376-8",
@@ -443,6 +460,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "conference / journal articles",
     subtype: "journal",
     theme: "NA",
+    topics: ["Visualization Systems", "History of Science"],
   },
   {
     link: "https://www.blaseur.com/papers/rationales-naacl22.pdf",
@@ -473,6 +491,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "conference / journal articles",
     subtype: "conference",
     theme: "NA",
+    topics: ["AI", "Sociotechnical Factors"],
   },
   {
     link: "https://arxiv.org/abs/2109.06007",
@@ -491,6 +510,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "extended abstract / workshop papers",
     subtype: "workshop",
     theme: "critical-perspectives",
+    topics: ["Critical Visualization"],
   },
   {
     link: "https://www.blaseur.com/papers/uist21-kondocloud.pdf",
@@ -514,6 +534,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "conference / journal articles",
     subtype: "conference",
     theme: "programming-interfaces",
+    topics: ["AI", "Programming Interfaces"],
   },
   {
     link: "https://www.mcnutt.in/zine-potential",
@@ -534,6 +555,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "conference / journal articles",
     subtype: "conference",
     theme: "critical-perspectives",
+    topics: ["Critical Visualization"],
   },
   {
     link: "https://arxiv.org/abs/2104.04042",
@@ -557,6 +579,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "conference / journal articles",
     subtype: "journal",
     theme: "vis-correctness",
+    topics: ["Visualization Correctness", "Visualization Theory"],
   },
   {
     link: "https://arxiv.org/abs/2101.07902",
@@ -583,6 +606,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "conference / journal articles",
     subtype: "conference",
     theme: "programming-interfaces",
+    topics: ["Visualization Systems", "DSLs"],
   },
   {
     link: "https://arxiv.org/abs/2009.02384",
@@ -609,6 +633,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "extended abstract / workshop papers",
     subtype: "workshop",
     theme: "critical-perspectives",
+    topics: ["Visualization Systems", "History of Science"],
   },
   {
     link: "https://www.mcnutt.in/table-cartogram/",
@@ -632,6 +657,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "posters",
     subtype: "poster",
     theme: "NA",
+    topics: ["Visualization Design"],
   },
   {
     link: "https://arxiv.org/abs/2001.02316",
@@ -665,6 +691,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "conference / journal articles",
     subtype: "conference",
     theme: "vis-correctness",
+    topics: ["Visualization Correctness", "Visualization Theory"],
   },
   {
     link: "https://www.tableau.com/sites/default/files/2023-01/altchi-tarot-cameraready.pdf",
@@ -690,6 +717,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "extended abstract / workshop papers",
     subtype: "ex. abs.",
     theme: "critical-perspectives",
+    topics: ["Critical Visualization", "Visualization Systems"],
   },
   {
     link: "https://www.mcnutt.in/ms-zine/",
@@ -705,6 +733,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "theses / book chapters",
     subtype: "thesis",
     theme: "NA",
+    topics: ["Visualization Design"],
   },
   {
     imgLink: "converted-images/agathas-thing.jpg",
@@ -729,6 +758,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "posters",
     subtype: "poster",
     theme: "NA",
+    topics: ["Visualization Systems", "History of Science"],
   },
   {
     link: "https://diglib.eg.org:8443/server/api/core/bitstreams/845e021f-38b3-4c16-8f94-128d186551c0/content",
@@ -759,6 +789,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "posters",
     subtype: "poster",
     theme: "NA",
+    topics: ["Visualization Systems"],
   },
   {
     link: "assets/McNutt_Kindlmann_2018.pdf",
@@ -780,6 +811,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "extended abstract / workshop papers",
     subtype: "workshop",
     theme: "vis-correctness",
+    topics: ["Visualization Correctness", "Visualization Systems"],
   },
   {
     link: "https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14",
@@ -802,6 +834,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "theses / book chapters",
     subtype: "chapter",
     theme: "NA",
+    topics: ["Drug Discovery"],
   },
   {
     link: "https://arxiv.org/abs/1501.07537",
@@ -820,6 +853,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "conference / journal articles",
     subtype: "journal",
     theme: "NA",
+    topics: ["Physics"],
   },
   {
     link: "https://pubs.acs.org/doi/full/10.1021/acs.jcim.5b00143",
@@ -842,6 +876,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "conference / journal articles",
     subtype: "journal",
     theme: "NA",
+    topics: ["Drug Discovery"],
   },
   {
     link: "assets/thesis.pdf",
@@ -860,5 +895,6 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "theses / book chapters",
     subtype: "thesis",
     theme: "NA",
+    topics: ["Physics"],
   },
 ];
