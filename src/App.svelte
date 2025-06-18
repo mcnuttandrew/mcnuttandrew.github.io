@@ -3,6 +3,9 @@
 
   import Header from "./components/Header.svelte";
   import MobileHeader from "./components/MobileHeader.svelte";
+  import store from "./store";
+
+  import { PUBLICATIONS } from "./constants";
 
   import About from "./components/About.svelte";
   import Misc from "./components/Misc.svelte";
@@ -13,6 +16,7 @@
   import Zines from "./components/Zines.svelte";
   import NewsItem from "./components/NewsItem.svelte";
   import Upset from "./components/Upset.svelte";
+  import Lab from "./components/Lab.svelte";
   import { NEWS } from "./constants";
   // @ts-ignore
   import HIRING24 from "./text-chunks/hiring-24.md?raw";
@@ -32,13 +36,15 @@
 >
   <MobileHeader {currentSection} />
   <div
-    class="h-full flex-col items-center hidden md:flex min-w-fit w-64 static"
+    class="h-full flex-col items-center hidden md:flex min-w-fit w-[350px] static"
   >
-    <img
-      src="converted-images/headshot.jpg"
-      alt="head shot of andrew mcnutt"
-      class="w-52 max-w-full h-auto rounded-full hidden lg:block"
-    />
+    <a href="/#/about">
+      <img
+        src="converted-images/headshot.jpg"
+        alt="head shot of andrew mcnutt"
+        class="w-52 max-w-full h-auto rounded-full hidden lg:block"
+      />
+    </a>
     <h1 class="text-xl font-bold">Andrew McNutt</h1>
     <h3 class="text-xl">Assistant Professor</h3>
     <h3 class="text-xl">Visualization / HCI</h3>
@@ -66,7 +72,15 @@
     </div>
     <h3 class="">andrew.mcnutt @ utah.edu</h3>
     {#if currentSection === "publications"}
-      <Upset />
+      <Upset
+        data={PUBLICATIONS.map((row) => ({
+          name: row.title,
+          sets: row.topics,
+        }))}
+        focusedTopic={$store.focusTopic}
+        focusIntersection={store.focusIntersection}
+        focusSet={store.focusSet}
+      />
     {:else}
       <h2 class="text-2xl font-bold italic mt-8 hidden md:block text-left">
         NEWS
@@ -88,6 +102,8 @@
         <ShowPage />
       {:else if currentSection === "misc"}
         <Misc />
+      {:else if currentSection === "lab"}
+        <Lab />
       {:else if currentSection === "teaching"}
         <Teaching />
       {:else if currentSection === "news"}

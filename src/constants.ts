@@ -8,7 +8,13 @@ export const MISC = miscImport;
 export const PUBLICATIONS = pubsImport;
 export const ZINES = zineImport;
 
-export const SECTIONS = ["about", "publications", "teaching", "misc"];
+export const SECTIONS = [
+  // "about",
+  "publications",
+  "lab",
+  "teaching",
+  "misc",
+];
 
 export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   "Aaron Elmore": "http://people.cs.uchicago.edu/~aelmore/",

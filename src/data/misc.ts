@@ -10,6 +10,16 @@ interface Misc {
 
 export const MISC: Misc[] = [
   {
+    title: "Upset Implementation in Svelte",
+    dates: "2025",
+    sourceLink:
+      "https://svelte.dev/playground/0a00cf7ecd85493ab8eed603d5169d9d?version=5.34.6",
+    link: "https://svelte.dev/playground/0a00cf7ecd85493ab8eed603d5169d9d?version=5.34.6",
+    imgLink: "converted-images/upset-svelte.jpg",
+    text: "A simple implementation of an upset plot in Svelte",
+    tags: ["visualization", "tech"],
+  },
+  {
     title: "CDN/TDPS Template",
     dates: "2025",
     // sourceLink:
