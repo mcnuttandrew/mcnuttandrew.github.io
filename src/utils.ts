@@ -5,9 +5,10 @@ const routes = new Set([
   "about",
   "teaching",
   "zines",
+  "lab",
   "news",
   "misc",
-  "hiring-24"
+  "hiring-24",
 ]);
 export function getRoute() {
   const locationSplit = location.href.split("/").filter((d) => d.length);
