@@ -36,7 +36,7 @@
 >
   <MobileHeader {currentSection} />
   <div
-    class="h-full flex-col items-center hidden md:flex min-w-fit w-64 static"
+    class="h-full flex-col items-center hidden md:flex min-w-fit w-[350px] static"
   >
     <a href="/#/about">
       <img

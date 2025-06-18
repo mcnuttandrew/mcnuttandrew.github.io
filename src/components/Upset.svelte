@@ -13,7 +13,7 @@
   export let circleColor: string = "oklch(96.7% 0.003 264.542)";
   export let selectedColor: string = "oklch(70.6% 0.03 256.802)";
   export let highlightColor: string = "oklch(88.2% 0.059 254.128)";
-  export let width = 300;
+  export let width = 280;
   export let topBarHeight = 150;
   export let rowSize = 25;
   export let interSectionWidth = 50;
