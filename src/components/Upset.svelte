@@ -1,33 +1,39 @@
 <script lang="ts">
-  import { PUBLICATIONS } from "../constants";
-  import { onMount } from "svelte";
   import { scaleLinear, scaleBand } from "d3-scale";
-  import store from "../store";
+
+  // data
+  export let data: { name: string; sets: string[] }[] = [];
+  // selection
+  export let focusedTopic: string[] = [];
+  export let focusIntersection: (topics: string[]) => void;
+  export let focusSet: (set: string) => void;
+
+  // styling
+  export let barColor: string = "oklch(87.2% 0.01 258.338)";
+  export let circleColor: string = "oklch(96.7% 0.003 264.542)";
+  export let selectedColor: string = "oklch(70.6% 0.03 256.802)";
+  export let highlightColor: string = "oklch(88.2% 0.059 254.128)";
+  export let width = 300;
+  export let topBarHeight = 150;
+  export let rowSize = 25;
+  export let interSectionWidth = 50;
+  export let sectionMargin = 20;
+  export let margins = { left: 20, right: 0, top: 20, bottom: 0 };
 
   type Combination = {
     cardinality: number;
     name: string;
   };
-  $: combinations = [] as Combination[];
-  $: sets = [] as Combination[];
+  $: results = buildSets(data);
+  $: combinations = results.combinations as Combination[];
+  $: sets = results.sets as Combination[];
+
   const SPLIT_KEY = " INTERSECT ";
-  onMount(() => {
-    const preSets = PUBLICATIONS.map((pub) => ({
-      name: pub.title,
-      sets: pub.topics,
-    })) as {
-      name: string;
-      sets: string[];
-    }[];
-    const results = buildSets(preSets);
-    combinations = results.combinations;
-    sets = results.sets;
-  });
   function buildSets(sets: { name: string; sets: string[] }[]): {
     sets: Combination[];
     combinations: Combination[];
   } {
-    // computer set info
+    // compute set info
     const setCategories = sets.reduce(
       (acc, set) => {
         set.sets.forEach((s) => {
@@ -59,9 +65,6 @@
     };
   }
 
-  const width = 300;
-  const topBarHeight = 150;
-
   $: setSizeScale = scaleLinear()
     .domain([0, Math.max(...sets.map((s) => s.cardinality))])
     .range([0, topBarHeight]);
@@ -71,8 +74,6 @@
     .range([0, width])
     .padding(0);
 
-  const rowSize = 25;
-  const interSectionWidth = 50;
   $: height = rowSize * combinations.length;
   $: intersectionSizeScale = scaleLinear()
     .domain([0, Math.max(...combinations.map((c) => c.cardinality))])
@@ -82,18 +83,13 @@
     .range([0, height])
     .padding(0);
 
-  const sectionMargin = 20;
-  const margins = { left: 20, right: 0, top: 20, bottom: 0 };
-
-  const barColor = "oklch(87.2% 0.01 258.338)";
-  const circleColor = "oklch(96.7% 0.003 264.542)";
-  const selectedColor = "oklch(70.6% 0.03 256.802)";
-  const highlightColor = "oklch(88.2% 0.059 254.128)";
-
   $: locked = false;
+  $: comboToNumbers = (combo: string): number[] => [
+    ...Array.from(combo.split(SPLIT_KEY) || []).map((s) => setScale(s) || 0),
+  ];
 </script>
 
-<div class="block">
+<div>
   <svg
     width={width + interSectionWidth + margins.left + margins.right}
     height={height + topBarHeight + margins.top + margins.bottom}
@@ -111,25 +107,23 @@
             y={topBarHeight - setSizeScale(set.cardinality)}
             width={setScale.bandwidth()}
             height={setSizeScale(set.cardinality)}
-            fill={$store.focusTopic.includes(set.name)
-              ? selectedColor
-              : barColor}
+            fill={focusedTopic.includes(set.name) ? selectedColor : barColor}
             stroke="white"
             class="cursor-pointer"
             on:mouseenter={() => {
-              if (!locked) store.focusSet(set.name);
+              if (!locked) focusSet(set.name);
             }}
             on:mouseout={() => {
-              if (!locked) store.focusIntersection([]);
+              if (!locked) focusIntersection([]);
             }}
             on:click={() => {
               if (
                 locked === true &&
-                $store.focusTopic.join(SPLIT_KEY) === set.name
+                focusedTopic.join(SPLIT_KEY) === set.name
               ) {
                 locked = false;
               } else {
-                store.focusSet(set.name);
+                focusSet(set.name);
                 locked = true;
               }
             }}
@@ -163,7 +157,7 @@
               intersectionScale.bandwidth() / 2}
             width={width + interSectionWidth}
             height={intersectionScale.bandwidth()}
-            fill={$store.focusTopic.join(SPLIT_KEY) === combination.name
+            fill={focusedTopic.join(SPLIT_KEY) === combination.name
               ? highlightColor
               : "white"}
           />
@@ -182,26 +176,26 @@
                 y={-intersectionScale.bandwidth() / 2}
                 width={setScale.bandwidth()}
                 height={intersectionScale.bandwidth()}
-                fill={$store.focusTopic.join(SPLIT_KEY) === set.name
+                fill={focusedTopic.join(SPLIT_KEY) === set.name
                   ? highlightColor
                   : "white"}
-                opacity={$store.focusTopic.join(SPLIT_KEY) === set.name ? 1 : 0}
+                opacity={focusedTopic.join(SPLIT_KEY) === set.name ? 1 : 0}
                 class="cursor-pointer"
                 on:mouseenter={() => {
                   if (!locked)
-                    store.focusIntersection(combination.name.split(SPLIT_KEY));
+                    focusIntersection(combination.name.split(SPLIT_KEY));
                 }}
                 on:mouseout={() => {
-                  if (!locked) store.focusIntersection([]);
+                  if (!locked) focusIntersection([]);
                 }}
                 on:click={() => {
                   if (
                     locked === true &&
-                    $store.focusTopic.join(SPLIT_KEY) === combination.name
+                    focusedTopic.join(SPLIT_KEY) === combination.name
                   ) {
                     locked = false;
                   } else {
-                    store.focusIntersection(combination.name.split(SPLIT_KEY));
+                    focusIntersection(combination.name.split(SPLIT_KEY));
                     locked = true;
                   }
                 }}
@@ -219,17 +213,11 @@
           {/each}
           {#if combination.name.split(SPLIT_KEY).length >= 1}
             <line
-              x1={Math.min(
-                ...Array.from(combination.name.split(SPLIT_KEY) || []).map(
-                  (s) => setScale(s) || 0
-                )
-              ) + 5}
+              x1={Math.min(...comboToNumbers(combination.name)) +
+                setScale.bandwidth() / 2}
               y1={intersectionScale(combination.name) || 0}
-              x2={Math.max(
-                ...Array.from(combination.name.split(SPLIT_KEY) || []).map(
-                  (s) => setScale(s) || 0
-                )
-              ) + 5}
+              x2={Math.max(...comboToNumbers(combination.name)) +
+                setScale.bandwidth() / 2}
               y2={intersectionScale(combination.name) || 0}
               stroke={selectedColor}
               stroke-width="5"
@@ -246,26 +234,25 @@
               intersectionScale.bandwidth() / 2}
             width={intersectionSizeScale(combination.cardinality)}
             height={intersectionScale.bandwidth()}
-            fill={$store.focusTopic.join(SPLIT_KEY) === combination.name
+            fill={focusedTopic.join(SPLIT_KEY) === combination.name
               ? selectedColor
               : barColor}
             stroke="white"
             class="cursor-pointer"
             on:mouseenter={() => {
-              if (!locked)
-                store.focusIntersection(combination.name.split(SPLIT_KEY));
+              if (!locked) focusIntersection(combination.name.split(SPLIT_KEY));
             }}
             on:mouseout={() => {
-              if (!locked) store.focusIntersection([]);
+              if (!locked) focusIntersection([]);
             }}
             on:click={() => {
               if (
                 locked === true &&
-                $store.focusTopic.join(SPLIT_KEY) === combination.name
+                focusedTopic.join(SPLIT_KEY) === combination.name
               ) {
                 locked = false;
               } else {
-                store.focusIntersection(combination.name.split(SPLIT_KEY));
+                focusIntersection(combination.name.split(SPLIT_KEY));
                 locked = true;
               }
             }}
@@ -283,10 +270,19 @@
     </g>
   </svg>
 </div>
-<button class="mt-2" on:click={() => store.focusIntersection([])}>Clear</button>
+<button class="mt-2" on:click={() => focusIntersection([])}>Clear</button>
 
 <style>
   svg {
     overflow: visible;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .pointer-events-none {
+    pointer-events: none;
+  }
+  .mt-2 {
+    margin-top: 0.5rem;
   }
 </style>

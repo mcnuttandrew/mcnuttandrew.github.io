@@ -3,6 +3,9 @@
 
   import Header from "./components/Header.svelte";
   import MobileHeader from "./components/MobileHeader.svelte";
+  import store from "./store";
+
+  import { PUBLICATIONS } from "./constants";
 
   import About from "./components/About.svelte";
   import Misc from "./components/Misc.svelte";
@@ -66,7 +69,15 @@
     </div>
     <h3 class="">andrew.mcnutt @ utah.edu</h3>
     {#if currentSection === "publications"}
-      <Upset />
+      <Upset
+        data={PUBLICATIONS.map((row) => ({
+          name: row.title,
+          sets: row.topics,
+        }))}
+        focusedTopic={$store.focusTopic}
+        focusIntersection={store.focusIntersection}
+        focusSet={store.focusSet}
+      />
     {:else}
       <h2 class="text-2xl font-bold italic mt-8 hidden md:block text-left">
         NEWS
