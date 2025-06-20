@@ -29,9 +29,14 @@
 
 <p>
   The HAVOC Lab is my research group at the University of Utah. We study a broad
-  range of topics in visualization and human-computer interaction. We're always
-  looking for new students to join us, so if you're interested in working with
-  us, please reach out!
+  range of topics in visualization and human-computer interaction. Broadly we
+  aim to understand and improve how people interact with information, whether it
+  is in data, visualization, art, or anywhere else. Methodologically, we use a
+  mix of qualitative and quantitative methods and user interface design to
+  answer questions in these spaces. If you are currently a student at the
+  University of Utah and are interested in doing some research, please reach out
+  to me via email. If you are not a student at the University of Utah, please
+  check out my web page calls for applications for the lab.
 </p>
 
 <h1 class="text-3xl font-bold mt-4">People</h1>
@@ -49,7 +54,7 @@
         <h3 class="text-lg font-bold">{student.name}</h3>
         <p>{student.role}</p>
         <a href={student.link} class="text-blue-500 hover:underline">webpage</a>
-        <p class="text-sm italic">{student.researchInterests}</p>
+        <p class="text-sm italic max-w-48">{student.researchInterests}</p>
       </div>
     </div>
   {/each}
