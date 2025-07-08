@@ -61,7 +61,7 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
-    link: "",
+    link: "https://arxiv.org/abs/2507.04236",
     urlTitle: "annogram",
     imgLink: "converted-images/annogram.jpg",
     title: "AnnoGram: An Annotative Grammar of Graphics Extension ",
@@ -70,6 +70,10 @@ export const PUBLICATIONS: Publication[] = [
     journal: "IEEE VIS 2025 (Short Papers)",
     year: 2025,
     links: [
+      {
+        name: "paper",
+        link: "https://arxiv.org/abs/2507.04236",
+      },
       {
         name: "live",
         link: "https://vl-annotation.netlify.app/",
