@@ -51,6 +51,8 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   "Maureen C. Stone": "https://mcstone.github.io/",
   "Mennatallah El-Assady": "https://el-assady.com/",
   "Michael Correll": "https://correll.io/",
+  "Md Dilshadur Rahman": "https://dilshadur.owlstown.net/",
+  "Md Rahat-uz-Zaman": "https://rahatzamancse.netlify.app/",
   "Michael J. McGuffin": "https://www.michaelmcguffin.com/",
   "Michael Littman": "https://www.littmania.com/",
   "Nelia Mann":

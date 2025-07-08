@@ -60,23 +60,54 @@ export interface Publication {
 }
 
 export const PUBLICATIONS: Publication[] = [
-  // {
-  //   link: "",
-  //   urlTitle: "buckaroo-demo",
-  //   imgLink: "converted-images/buckaroo-demo.jpg",
-  //   title: "Buckaroo: A Direct Manipulation Visual Data Wrangler",
-  //   authors: "Annabelle Warner, Andrew McNutt, Paul Rosen, El Kindi Rezig",
-  //   journal: "VLDB 2025 Demo",
-  //   year: 2025,
-  //   links: [],
-  //   type: "extended abstract / workshop papers",
-  //   subtype: "ex. abs.",
-  //   theme: "NA",
-  //   abstract:
-  //     "Preparing datasets—a critical phase known as data wrangling—constitutes the dominant phase of data science development, consuming upwards of 80% of the total project time. This phase encompasses a myriad of tasks: parsing data, restructuring it for analysis,repairing inaccuracies, merging sources, eliminating duplicates,and ensuring overall data integrity. Traditional approaches, typically through manual coding in languages such as Python or using spreadsheets, are not only laborious but also error-prone. These issues range from missing entries and formatting inconsistencies to data type inaccuracies, all of which can affect the quality of downstream tasks if not properly corrected. To address these challenges, we present Buckaroo, a visualization system to highlight discrepancies in data and enable on-the-spot corrections through direct manipulations of visual objects. Buckaroo (1) automatically finds “interesting” data groups that exhibit anomalies compared to the rest of the groups and recommends them for inspection;(2) suggests wrangling actions that the user can choose to repair the anomalies; and (3) allows users to visually manipulate their databy displaying the effects of their wrangling actions and offering the ability to undo or redo these actions, which supports the iterative nature of data wrangling",
-  // },
+  {
+    link: "https://arxiv.org/abs/2507.04236",
+    urlTitle: "annogram",
+    imgLink: "converted-images/annogram.jpg",
+    title: "AnnoGram: An Annotative Grammar of Graphics Extension ",
+    authors:
+      "Md Dilshadur Rahman, Md Rahat-uz-Zaman, Andrew McNutt, Paul Rosen",
+    journal: "IEEE VIS 2025 (Short Papers)",
+    year: 2025,
+    links: [
+      {
+        name: "paper",
+        link: "https://arxiv.org/abs/2507.04236",
+      },
+      {
+        name: "live",
+        link: "https://vl-annotation.netlify.app/",
+      },
+      {
+        name: "code",
+        link: "https://github.com/shape-vis/vega-lite-annotation",
+      },
+    ],
+    type: "conference / journal articles",
+    subtype: "conference",
+    theme: "programming-interfaces",
+    abstract:
+      "Annotations are central to effective data communication, yet most visualization tools treat them as secondary constructs---manually defined, difficult to reuse, and loosely coupled to the underlying visualization grammar. We propose a declarative extension to Wilkinson's Grammar of Graphics that reifies annotations as first-class design elements, enabling structured specification of annotation targets, types, and positioning strategies. To demonstrate the utility of our approach, we develop a prototype extension called Vega-Lite Annotation. Through comparison with eight existing tools, we show that our approach enhances expressiveness, reduces authoring effort, and enables portable, semantically integrated annotation workflows.",
+    topics: ["Visualization Systems", "DSLs"],
+  },
   {
     link: "",
+    urlTitle: "buckaroo-demo",
+    imgLink: "converted-images/buckaroo-demo.jpg",
+    title: "Buckaroo: A Direct Manipulation Visual Data Wrangler",
+    authors: "Annabelle Warner, Andrew McNutt, Paul Rosen, El Kindi Rezig",
+    journal: "VLDB 2025 Demo",
+    year: 2025,
+    links: [],
+    type: "extended abstract / workshop papers",
+    subtype: "ex. abs.",
+    theme: "NA",
+    abstract:
+      "Preparing datasets—a critical phase known as data wrangling—constitutes the dominant phase of data science development, consuming upwards of 80% of the total project time. This phase encompasses a myriad of tasks: parsing data, restructuring it for analysis, repairing inaccuracies, merging sources, eliminating duplicates,and ensuring overall data integrity. Traditional approaches, typically through manual coding in languages such as Python or using spreadsheets, are not only laborious but also error-prone. These issues range from missing entries and formatting inconsistencies to data type inaccuracies, all of which can affect the quality of downstream tasks if not properly corrected. To address these challenges, we present Buckaroo, a visualization system to highlight discrepancies in data and enable on-the-spot corrections through direct manipulations of visual objects. Buckaroo (1) automatically finds “interesting” data groups that exhibit anomalies compared to the rest of the groups and recommends them for inspection;(2) suggests wrangling actions that the user can choose to repair the anomalies; and (3) allows users to visually manipulate their data by displaying the effects of their wrangling actions and offering the ability to undo or redo these actions, which supports the iterative nature of data wrangling",
+    topics: ["Visualization Systems", "Programming Interfaces"],
+  },
+  {
+    link: "https://github.com/revisit-studies/revisitpy",
     urlTitle: "revisit-py",
     imgLink: "converted-images/revisit-py.jpg",
     title: "ReVISitPy: Python Bindings for the reVISit Study Framework",
@@ -84,7 +115,13 @@ export const PUBLICATIONS: Publication[] = [
       "Hilson Shrestha, Jack Wilburn, Brian Bollen, Andrew McNutt, Alexander Lex, Lane Harrison",
     journal: "EuroVIS Posters 2025",
     year: 2025,
-    links: [],
+    links: [
+      { name: "code", link: "https://github.com/revisit-studies/revisitpy" },
+      {
+        name: "paper",
+        link: "https://diglib.eg.org/items/48f6a45a-371c-4f3e-bdf3-28f064860c63",
+      },
+    ],
     type: "extended abstract / workshop papers",
     subtype: "poster",
     theme: "programming-interfaces",
@@ -534,7 +571,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "conference / journal articles",
     subtype: "conference",
     theme: "programming-interfaces",
-    topics: ["AI", "Programming Interfaces"],
+    topics: ["AI"],
   },
   {
     link: "https://www.mcnutt.in/zine-potential",

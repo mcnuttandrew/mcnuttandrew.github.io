@@ -16,7 +16,7 @@ export const STUDENTS: Student[] = [
   {
     name: "Zach Cutler",
     role: "PhD Student",
-    researchInterests: "TBD",
+    researchInterests: "",
     link: "https://zach-cutler.com/",
     image: "converted-images/students/zcutler.jpg",
   },
