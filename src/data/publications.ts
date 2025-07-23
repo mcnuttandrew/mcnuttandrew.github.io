@@ -98,7 +98,12 @@ export const PUBLICATIONS: Publication[] = [
     authors: "Annabelle Warner, Andrew McNutt, Paul Rosen, El Kindi Rezig",
     journal: "VLDB 2025 Demo",
     year: 2025,
-    links: [],
+    links: [
+      {
+        name: "paper",
+        link: "https://arxiv.org/abs/2507.16073",
+      },
+    ],
     type: "extended abstract / workshop papers",
     subtype: "ex. abs.",
     theme: "NA",
