@@ -91,20 +91,48 @@ export const PUBLICATIONS: Publication[] = [
     topics: ["Visualization Systems", "DSLs"],
   },
   {
-    link: "",
+    link: "https://arxiv.org/abs/2507.16073",
     urlTitle: "buckaroo-demo",
     imgLink: "converted-images/buckaroo-demo.jpg",
     title: "Buckaroo: A Direct Manipulation Visual Data Wrangler",
     authors: "Annabelle Warner, Andrew McNutt, Paul Rosen, El Kindi Rezig",
     journal: "VLDB 2025 Demo",
     year: 2025,
-    links: [],
+    links: [
+      {
+        name: "paper",
+        link: "https://arxiv.org/abs/2507.16073",
+      },
+    ],
     type: "extended abstract / workshop papers",
     subtype: "ex. abs.",
     theme: "NA",
     abstract:
       "Preparing datasets—a critical phase known as data wrangling—constitutes the dominant phase of data science development, consuming upwards of 80% of the total project time. This phase encompasses a myriad of tasks: parsing data, restructuring it for analysis, repairing inaccuracies, merging sources, eliminating duplicates,and ensuring overall data integrity. Traditional approaches, typically through manual coding in languages such as Python or using spreadsheets, are not only laborious but also error-prone. These issues range from missing entries and formatting inconsistencies to data type inaccuracies, all of which can affect the quality of downstream tasks if not properly corrected. To address these challenges, we present Buckaroo, a visualization system to highlight discrepancies in data and enable on-the-spot corrections through direct manipulations of visual objects. Buckaroo (1) automatically finds “interesting” data groups that exhibit anomalies compared to the rest of the groups and recommends them for inspection;(2) suggests wrangling actions that the user can choose to repair the anomalies; and (3) allows users to visually manipulate their data by displaying the effects of their wrangling actions and offering the ability to undo or redo these actions, which supports the iterative nature of data wrangling",
     topics: ["Visualization Systems", "Programming Interfaces"],
+  },
+  {
+    link: "https://www.computer.org/csdl/magazine/cg/2025/03/11086543/28xfB5z12rC",
+    urlTitle: "critical-data-vis-intro",
+    imgLink: "converted-images/critical-vis-intro.jpg",
+    title: "Critical Data Visualization—Part I/II",
+    authors:
+      "Georgia Panagiotidou, Andrew McNutt, Derya Akbaba, Nicole Hengesbach, Miriah Meyer",
+    journal:
+      "Computer Graphics & Applications — Special Issue(s) Introduction(s)",
+    year: 2025,
+    links: [
+      {
+        name: "paper",
+        link: "https://www.computer.org/csdl/magazine/cg/2025/03/11086543/28xfB5z12rC",
+      },
+    ],
+    type: "extended abstract / workshop papers",
+    subtype: "ex. abs.",
+    theme: "NA",
+    abstract:
+      "We began this special issue with the twin goals of complicating and coalescing the visualization research community's definition of critical visualization. In true critical fashion, this proved to be more challenging than expected.",
+    topics: ["Critical Visualization"],
   },
   {
     link: "https://github.com/revisit-studies/revisitpy",
@@ -493,7 +521,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
       },
     ],
     abstract:
-      "What role does nationality—or the image of a nation—play in how one thinks and receives scientific ideas? This paper investigates the commonly held ideas about “German science” and “French science” in early nineteenth-century France. During the politically turbulent time, the seemingly independent scientific community found itself in a difficult position: first, between the cosmopolitan ideals of scientific community and the invasive political reality, and second, between the popularized image of national differences and the actual comparisons of international scientific ideas. The tension between multiple sets of fictions and realities underscores the fragility of the concept of nationality as a scientific measure. A case study comparing morphological ideas, receptions in France, and the actual scientific texts of J. W. von Goethe and A. P. de Candolle further illustrates this fragility. Goethe and Candolle make an ideal comparative case because they were received in very different lights despite their similar concept of the plant type. Our sentence-classification and visualization methods are applied to their scientific texts, to compare the actual compositions and forms of the texts that purportedly represented German and French sciences. This paper concludes that there was a gap between what French readers assumed they read and what they really read, when it came to foreign scientific texts. The differences between Goethe’s and Candolle’s texts transcended the perceived national differences between German Romanticism and French Classicism.",
+      "What role does nationality—or the image of a nation—play in how one thinks and receives scientific ideas? This paper investigates the commonly held ideas about “German science” and “French science” in early nineteenth-century France. During the politically turbulent time, the seemingly independent scientific community found itself in a difficult position: first, between the cosmopolitan ideals of scientific community and the invasive political reality, and second, between the popularized image of national differences and the actual comparisons of international scientific ideas. The tension between multiple sets of fictions and realities underscores the fragility of the concept of nationality as a scientific measure. A case study comparing morphological ideas, receptions in France, and the actual scientific texts of J. W. von Goethe and A. P. de Candolle further illustrates this fragility. Goethe and Candolle make an ideal comparative case because they were received in very different lights despite their similar concept of the plant type. Our sentence-classification and visualization methods are applied to their scientific texts, to compare the actual compositions and forms of the texts that purportedly represented German and French sciences. This paper concludes that there was a gap between what French readers assumed they read and what they really read, when it came to foreign scientific texts. The differences between Goethe's and Candolle's texts transcended the perceived national differences between German Romanticism and French Classicism.",
     type: "conference / journal articles",
     subtype: "journal",
     theme: "NA",
@@ -822,7 +850,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       },
     ],
     abstract:
-      "Large threaded conversations, such as those found on YCombinator’s HackerNews, are typically presented in a way that shows individual comments clearly, but can obscure larger trends or patterns within the conversational corpus. Previous research has addressed this problem through graphical-overviews and NLP-generated summaries. These efforts have generally assumed a particular (and modest) data size, which limits their utility for large or deeply-nested conversations, and often require non-trivial offline processing time, which makes them impractical for day-to-day usage. We describe here Forum Explorer, a Chrome extension that combines and expands upon prior art through a collection of techniques that enable this type of representation to handle wider ranges of data in real time. Materials for this project are available at https://osf.io/nrhqw/.",
+      "Large threaded conversations, such as those found on YCombinator's HackerNews, are typically presented in a way that shows individual comments clearly, but can obscure larger trends or patterns within the conversational corpus. Previous research has addressed this problem through graphical-overviews and NLP-generated summaries. These efforts have generally assumed a particular (and modest) data size, which limits their utility for large or deeply-nested conversations, and often require non-trivial offline processing time, which makes them impractical for day-to-day usage. We describe here Forum Explorer, a Chrome extension that combines and expands upon prior art through a collection of techniques that enable this type of representation to handle wider ranges of data in real time. Materials for this project are available at https://osf.io/nrhqw/.",
     type: "posters",
     subtype: "poster",
     theme: "NA",
@@ -909,7 +937,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       },
     ],
     abstract:
-      "On the order of hundreds of absorption, distribution, metabolism, excretion, and toxicity (ADME/Tox) models have been described in the literature in the past decade which are more often than not inaccessible to anyone but their authors. Public accessibility is also an issue with computational models for bioactivity, and the ability to share such models still remains a major challenge limiting drug discovery. We describe the creation of a reference implementation of a Bayesian model-building software module, which we have released as an open source component that is now included in the Chemistry Development Kit (CDK) project, as well as implemented in the CDD Vault and in several mobile apps. We use this implementation to build an array of Bayesian models for ADME/Tox, in vitro and in vivo bioactivity, and other physicochemical properties. We show that these models possess cross-validation receiver operator curve values comparable to those generated previously in prior publications using alternative tools. We have now described how the implementation of Bayesian models with FCFP6 descriptors generated in the CDD Vault enables the rapid production of robust machine learning models from public data or the user’s own datasets. The current study sets the stage for generating models in proprietary software (such as CDD) and exporting these models in a format that could be run in open source software using CDK components. This work also demonstrates that we can enable biocomputation across distributed private or public datasets to enhance drug discovery.",
+      "On the order of hundreds of absorption, distribution, metabolism, excretion, and toxicity (ADME/Tox) models have been described in the literature in the past decade which are more often than not inaccessible to anyone but their authors. Public accessibility is also an issue with computational models for bioactivity, and the ability to share such models still remains a major challenge limiting drug discovery. We describe the creation of a reference implementation of a Bayesian model-building software module, which we have released as an open source component that is now included in the Chemistry Development Kit (CDK) project, as well as implemented in the CDD Vault and in several mobile apps. We use this implementation to build an array of Bayesian models for ADME/Tox, in vitro and in vivo bioactivity, and other physicochemical properties. We show that these models possess cross-validation receiver operator curve values comparable to those generated previously in prior publications using alternative tools. We have now described how the implementation of Bayesian models with FCFP6 descriptors generated in the CDD Vault enables the rapid production of robust machine learning models from public data or the user's own datasets. The current study sets the stage for generating models in proprietary software (such as CDD) and exporting these models in a format that could be run in open source software using CDK components. This work also demonstrates that we can enable biocomputation across distributed private or public datasets to enhance drug discovery.",
     type: "conference / journal articles",
     subtype: "journal",
     theme: "NA",

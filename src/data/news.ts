@@ -1,5 +1,10 @@
 export const NEWS = [
   {
+    date: "July 2025",
+    content:
+      "At long last, our pair of special issues on [Critical Data Visualization](https://www.computer.org/csdl/magazine/cg/2025/03) are out! 🎉 It has a wonderful slate of thoughtful and interesting papers.",
+  },
+  {
     date: "May 2025",
     content:
       "🌀🌀[alt.vis](https://altvis.github.io/) is returning to IEEE VIS! Send us your chaos, critiques, and creativity!🌀🌀",
