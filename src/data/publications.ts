@@ -181,6 +181,10 @@ export const PUBLICATIONS: Publication[] = [
         name: "video figure",
         link: "https://www.youtube.com/watch?v=OhScWL1bUkQ",
       },
+      {
+        name: "blog post",
+        link: "https://vdl.sci.utah.edu/blog/",
+      },
     ],
     topics: ["Accessibility", "Visualization Systems"],
     type: "conference / journal articles",
