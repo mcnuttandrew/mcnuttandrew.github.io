@@ -73,6 +73,12 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   "Victor Schetinger": "https://www.cvast.tuwien.ac.at/team/victor-schetinger",
   "Will Brackenbury": "https://wbrackenbury.github.io/",
   "Yuxin Chen": "https://yuxinchen.org/",
+  "Connor Scully-Allison":
+    "https://scholar.google.com/citations?user=ms-QI24AAAAJ&hl=en",
+  "Kristin Potter":
+    "https://scholar.google.com/citations?user=uYkNjF8AAAAJ&hl=en",
+  "Katherine E. Isaacs": "https://kisaacs.github.io/",
+  "Dmitry Duplyakin": "https://www.duplyakin.org/",
 };
 
 const selectedPubs = new Set([

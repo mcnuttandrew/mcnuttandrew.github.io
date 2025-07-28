@@ -8,6 +8,7 @@ type PubSubtype =
   | "chapter"
   | "thesis"
   | "conference"
+  | "preprint"
   | "journal"
   | "short conf."
   | "poster"
@@ -133,6 +134,23 @@ export const PUBLICATIONS: Publication[] = [
     abstract:
       "We began this special issue with the twin goals of complicating and coalescing the visualization research community's definition of critical visualization. In true critical fashion, this proved to be more challenging than expected.",
     topics: ["Critical Visualization"],
+  },
+  {
+    link: "https://arxiv.org/pdf/2507.17898",
+    urlTitle: "same-data-different-audiences",
+    imgLink: "converted-images/same-data-different-audiences.jpg",
+    title:
+      "Same Data, Different Audiences: Using Personas to Scope a Supercomputing Job Queue Visualization",
+    authors:
+      "Connor Scully-Allison, Kevin Menear, Kristin Potter, Andrew McNutt, Katherine E. Isaacs, Dmitry Duplyakin",
+    year: 2025,
+    journal: "preprint",
+    links: [{ name: "paper", link: "https://arxiv.org/pdf/2507.17898" }],
+    type: "conference / journal articles",
+    subtype: "preprint",
+    theme: "programming-interfaces",
+    topics: ["Visualization Systems", "Programming Interfaces"],
+    abstract: `Domain-specific visualizations sometimes focus on narrow, albeit important, tasks for one group of users. This focus limits the utility of a visualization to other groups working with the same data. While tasks elicited from other groups can present a design pitfall if not disambiguated, they also present a design opportunity—development of visualizations that support multiple groups. This development choice presents a trade off of broadening the scope but limiting support for the more narrow tasks of any one group, which in some cases can enhance the overall utility of the visualization. We investigate this scenario through a design study where we develop Guidepost, a notebook-embedded visualization of supercomputer queue data that helps scientists assess supercomputer queue wait times, machine learning researchers understand prediction accuracy, and system maintainers analyze usage trends. We adapt the use of personas for visualization design from existing literature in the HCI and software engineering domains and apply them in categorizing tasks based on their uniqueness across the stakeholder personas. Under this model, tasks shared between all groups should be supported by interactive visualizations and tasks unique to each group can be deferred to scripting with notebook-embedded visualization design. We evaluate our visualization with nine expert analysts organized into two groups: a "research analyst" group that uses supercomputer queue data in their research (representing the Machine Learning researchers and Jobs Data Analyst personas) and a "supercomputer user" group that uses this data conditionally (representing the HPC User persona). We find that our visualization serves our three stakeholder groups by enabling users to successfully execute shared tasks with point-and-click interaction while facilitating case-specific programmatic analysis workflows.`,
   },
   {
     link: "https://github.com/revisit-studies/revisitpy",
