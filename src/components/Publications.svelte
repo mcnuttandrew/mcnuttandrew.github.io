@@ -4,7 +4,7 @@
   import PublicationComponent from "./Publication.svelte";
 
   type sort = "type" | "year" | "paper name" | "theme";
-  let currentSort: sort = "theme";
+  let currentSort: sort = "year";
   const sorts: sort[] = ["theme", "type", "year", "paper name"];
   const typeOrder = [
     "conference / journal articles",

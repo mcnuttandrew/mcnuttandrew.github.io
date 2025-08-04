@@ -23,6 +23,7 @@ type linkType =
   | "code"
   | "poster"
   | "video figure"
+  | "studies"
   | "slides"
   | "blog post"
   | "award"
@@ -38,7 +39,7 @@ type Link =
   | `assets/${string}`
   | `talks/${string}`;
 export interface Publication {
-  link?: string;
+  link: string;
   urlTitle: string;
   imgLink: string;
   title: string;
@@ -62,10 +63,44 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
+    link: "",
+    urlTitle: "revisit-2",
+    imgLink: "converted-images/revisit-py.jpg",
+    title: "ReVISit 2: A Full Experiment Life Cycle User Study Framework",
+    authors:
+      "Zach Cutler, Jack Wilburn, Hilson Shrestha, Yiren Ding, Brian C Bollen, Khandaker Abrar Nadib, Tingying He, Andrew McNutt, Lane Harrison, Alexander Lex",
+    journal: "IEEE VIS 2025",
+    year: 2025,
+    links: [
+      {
+        name: "live",
+        link: "https://revisit.dev/",
+      },
+      {
+        name: "studies",
+        link: "https://revisit.dev/replication-studies/",
+      },
+      {
+        name: "code",
+        link: "https://github.com/revisit-studies/replication-studies",
+      },
+      {
+        name: "osf",
+        link: "https://osf.io/e8anx/",
+      },
+    ],
+    type: "conference / journal articles",
+    subtype: "conference",
+    theme: "programming-interfaces",
+    abstract:
+      "Online user studies of visualizations, visual encodings, and interaction techniques are ubiquitous in visualization research. Yet designing, conducting, and analyzing studies effectively is still a major burden. While a variety of packages support such user studies, most solutions only address facets of the experiment life cycle, make reproducibility difficult, or do not cater to nuanced study designs or interactions. We introduce reVISit 2.0, a software framework that supports visualization researchers at all stages of designing and conducting browser-based user studies. reVISit supports researchers in the design, debug & pilot, data collection, analysis, and dissemination experiment phases by providing both technical affordances (such as replay of participation interactions) and sociotechnical aids (such as a mindfully maintained community of support). It is a proven system that can be (and has been) used in publication quality studies---which we demonstrate through a series of experimental replications. We reflect on the design of the system via interviews and an analysis of its technical dimensions. Through this work we seek to elevate the ease by which studies are conducted, improve the reproducibility of studies within our community, and support the construction of advanced interactive studies.",
+    topics: ["Visualization Systems", "DSLs"],
+  },
+  {
     link: "https://arxiv.org/abs/2507.04236",
     urlTitle: "annogram",
     imgLink: "converted-images/annogram.jpg",
-    title: "AnnoGram: An Annotative Grammar of Graphics Extension ",
+    title: "AnnoGram: An Annotative Grammar of Graphics Extension",
     authors:
       "Md Dilshadur Rahman, Md Rahat-uz-Zaman, Andrew McNutt, Paul Rosen",
     journal: "IEEE VIS 2025 (Short Papers)",
@@ -90,6 +125,51 @@ export const PUBLICATIONS: Publication[] = [
     abstract:
       "Annotations are central to effective data communication, yet most visualization tools treat them as secondary constructs---manually defined, difficult to reuse, and loosely coupled to the underlying visualization grammar. We propose a declarative extension to Wilkinson's Grammar of Graphics that reifies annotations as first-class design elements, enabling structured specification of annotation targets, types, and positioning strategies. To demonstrate the utility of our approach, we develop a prototype extension called Vega-Lite Annotation. Through comparison with eight existing tools, we show that our approach enhances expressiveness, reduces authoring effort, and enables portable, semantically integrated annotation workflows.",
     topics: ["Visualization Systems", "DSLs"],
+  },
+  {
+    link: "",
+    urlTitle: "teaching-critical-vis",
+    imgLink: "converted-images/teaching-critical-vis.jpg",
+    title: "Teaching Critical Visualization: A Field Report",
+    authors:
+      "Andrew McNutt, Shiyi He, Sujit Kumar Kamaraj, Purbid Bambroo, Nastaran Jadidi, John Bovard, Chang Han",
+    abstract:
+      "Critical Visualization is gaining popularity and academic focus, yet relatively few academic courses have been offered to support students in this complex area. This experience report describes a recent experimental course on the topic, exploring both what the topic could be as well as an experimental content structure (namely as scavenger hunt). Generally the course was successful, achieving the learning objectives of developing critical thinking skills, improving communication about complex ideas, and developing a knowledge about theories in the area.  While improvements can be made, we hope that humanistic notions of criticality are embraced more deeply in visualization pedagogy. ",
+    topics: ["Critical Visualization", "Zines"],
+
+    type: "extended abstract / workshop papers",
+    subtype: "workshop",
+    theme: "critical-perspectives",
+    journal:
+      "IEEE VIS Workshop on Visualization Education, Literacy, and Activities (EduVIS) 2025",
+    year: 2025,
+    links: [{ name: "osf", link: "https://osf.io/hxtq2/" }],
+  },
+  {
+    link: "",
+    urlTitle: "keyframer",
+    imgLink: "converted-images/keyframer.jpg",
+    title:
+      "Keyframer: A Design Probe for Exploring LLM Assistance in 2D Animation Design ",
+    authors: "Tiffany Tseng, Ruijia Cheng, Andrew McNutt, Jeffrey Nichols",
+    journal: "IEEE VL/HCC 2025 (Short Papers)",
+    year: 2025,
+    links: [
+      {
+        name: "video figure",
+        link: "https://machinelearning.apple.com/research/keyframer",
+      },
+      {
+        name: "paper",
+        link: "https://arxiv.org/pdf/2402.06071",
+      },
+    ],
+    type: "conference / journal articles",
+    subtype: "conference",
+    theme: "programming-interfaces",
+    abstract:
+      "Creating 2D animations is challenging because it requires iterative refinement of movement and transitions across multiple elements within a scene. We explored the potential of LLMs to support animation design by first identifying current challenges in formative interviews with animation creators, and then developing a design probe and LLM-based animation design tool called Keyframer. From user-provided graphics and natural language prompts, Keyframer generates animation code, enables users to preview rendered animations inline, and supports direct edits for iterative design refinement. We utilized this design probe to uncover user prompting styles for describing animation in natural language and observe user strategies for iterating on animations in an exploratory user study with 13 novices and experts in animation design and programming. Through this study, we contribute a categorization of prompting styles users employed for specifying animation goals, along with design insights on supporting iterative refinement of animations through the combination of direct editing and natural language interfaces.",
+    topics: ["Programming Interfaces", "AI"],
   },
   {
     link: "https://arxiv.org/abs/2507.16073",
@@ -364,7 +444,7 @@ export const PUBLICATIONS: Publication[] = [
     type: "extended abstract / workshop papers",
     subtype: "workshop",
     theme: "critical-perspectives",
-    topics: ["Critical Visualization", "Sociotechnical Factors"],
+    topics: ["Critical Visualization"],
   },
   {
     link: "https://arxiv.org/abs/2308.16353",
@@ -413,7 +493,7 @@ We describe a relatively inexpensive way to build rich projectional editors for 
     topics: ["Visualization Systems", "Programming Interfaces", "DSLs"],
   },
   {
-    link: "",
+    link: "https://osf.io/fy246",
     urlTitle: "phd-thesis",
     imgLink: "converted-images/phd-thesis.jpg",
     title:
@@ -642,7 +722,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "conference / journal articles",
     subtype: "conference",
     theme: "critical-perspectives",
-    topics: ["Critical Visualization"],
+    topics: ["Critical Visualization", "Zines"],
   },
   {
     link: "https://arxiv.org/abs/2104.04042",
@@ -666,7 +746,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     type: "conference / journal articles",
     subtype: "journal",
     theme: "vis-correctness",
-    topics: ["Visualization Correctness", "Visualization Theory"],
+    topics: ["Visualization Correctness"],
   },
   {
     link: "https://arxiv.org/abs/2101.07902",
@@ -744,7 +824,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "posters",
     subtype: "poster",
     theme: "NA",
-    topics: ["Visualization Design"],
+    topics: ["Visualization Systems"],
   },
   {
     link: "https://arxiv.org/abs/2001.02316",
@@ -778,7 +858,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "conference / journal articles",
     subtype: "conference",
     theme: "vis-correctness",
-    topics: ["Visualization Correctness", "Visualization Theory"],
+    topics: ["Visualization Correctness"],
   },
   {
     link: "https://www.tableau.com/sites/default/files/2023-01/altchi-tarot-cameraready.pdf",
@@ -820,9 +900,10 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "theses / book chapters",
     subtype: "thesis",
     theme: "NA",
-    topics: ["Visualization Design"],
+    topics: ["Visualization Systems"],
   },
   {
+    link: "assets/posterkim102519.pdf",
     imgLink: "converted-images/agathas-thing.jpg",
     urlTitle: "goethe-poster",
     title:
@@ -844,6 +925,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       "When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as 'national science'? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.",
     type: "posters",
     subtype: "poster",
+
     theme: "NA",
     topics: ["Visualization Systems", "History of Science"],
   },

@@ -39,9 +39,13 @@
     <!-- the normal content -->
     <div class="flex-col w-full">
       <div class="info-container">
-        <a href={publication.link} class="text-cyan-800 font-bold">
-          {publication.title}
-        </a>
+        {#if publication.link && publication.link !== ""}
+          <a href={publication.link} class="text-cyan-800 font-bold">
+            {publication.title}
+          </a>
+        {:else}
+          <span class="text-black-800 font-bold">{publication.title}</span>
+        {/if}
         {#if publication.authors}
           <span>{@html md.render(addLinks(publication.authors))}</span>
         {/if}
