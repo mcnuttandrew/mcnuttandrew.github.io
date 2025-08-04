@@ -111,7 +111,7 @@ export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((x) =>
 
 export const BLOG_POSTS = [
   {
-    imgLink: "converted-images/tarot-image.jpg",
+    imgLink: "assets/tarot-image.jpg",
     title:
       "A Brief Saga Concerning the Making of a Tarot Deck About the American Highway System",
     subtitle: "A little essay about making",
@@ -126,7 +126,7 @@ export const BLOG_POSTS = [
     ],
   },
   {
-    imgLink: "converted-images/advanced-react-vis-pic.jpg",
+    imgLink: "assets/advanced-react-vis-pic.jpg",
     title: "Advanced Visualization with react-vis",
     subtitle:
       "Using Voronois, single pass rendering, and canvas components for amazing user experiences",

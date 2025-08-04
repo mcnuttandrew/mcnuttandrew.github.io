@@ -11,14 +11,14 @@ export const STUDENTS: Student[] = [
     role: "PhD Student",
     researchInterests: "HCI, Data Visualization, and Notation Systems",
     link: "https://shiyihe-neko.github.io/",
-    image: "converted-images/students/shiyi-he.jpg",
+    image: "assets/students/shiyi-he.jpg",
   },
   {
     name: "Zach Cutler",
     role: "PhD Student",
-    researchInterests: "",
+    researchInterests: "Visualization",
     link: "https://zach-cutler.com/",
-    image: "converted-images/students/zcutler.jpg",
+    image: "assets/students/zcutler.jpg",
   },
 
   {
@@ -26,6 +26,6 @@ export const STUDENTS: Student[] = [
     role: "MS Student",
     researchInterests: "Data Visualization, HCI, and Cloud Computing",
     link: "https://github.com/HimaMynampaty",
-    image: "converted-images/students/hima-mynampaty.jpg",
+    image: "assets/students/hima-mynampaty.jpg",
   },
 ];
