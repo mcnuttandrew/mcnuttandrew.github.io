@@ -53,3 +53,20 @@ div a {
   margin-bottom: 0.5em;
   font-weight: bold;
 }
+
+.md-container ul {
+  margin: 0;
+}
+
+.md-container li {
+  margin-bottom: 0.5em;
+}
+
+.md-container li::before {
+  content: "•";
+  color: #145f75;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}

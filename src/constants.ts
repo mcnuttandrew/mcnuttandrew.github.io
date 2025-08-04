@@ -98,12 +98,13 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
 };
 
 const selectedPubs = new Set([
-  "mirage",
+  // "mirage",
   // "sauce",
   "tattoo",
   // "no-grammar",
   "ai-4-notebooks",
   "color-buddy",
+  "revisit-2",
 ]);
 export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((x) =>
   selectedPubs.has(x.urlTitle)
