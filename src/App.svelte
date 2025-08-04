@@ -40,7 +40,7 @@
   >
     <a href="/#/about">
       <img
-        src="converted-images/headshot.jpg"
+        src="assets/headshot.jpg"
         alt="head shot of andrew mcnutt"
         class="w-52 max-w-full h-auto rounded-full hidden lg:block"
       />

@@ -73,6 +73,28 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   "Victor Schetinger": "https://www.cvast.tuwien.ac.at/team/victor-schetinger",
   "Will Brackenbury": "https://wbrackenbury.github.io/",
   "Yuxin Chen": "https://yuxinchen.org/",
+  "Connor Scully-Allison":
+    "https://scholar.google.com/citations?user=ms-QI24AAAAJ&hl=en",
+  "Kristin Potter":
+    "https://scholar.google.com/citations?user=uYkNjF8AAAAJ&hl=en",
+  "Katherine E. Isaacs": "https://kisaacs.github.io/",
+  "Dmitry Duplyakin": "https://www.duplyakin.org/",
+  "Zach Cutler": "https://zach-cutler.com/",
+  "Yiren Ding": "https://dyr429.github.io/",
+  "Brian C Bollen": "https://www.briancbollen.com/about",
+  "Khandaker Abrar Nadib": "https://abrarnad.github.io/",
+  "Tingying He": "https://tingying-he.github.io/",
+  "Jeffrey Nichols": "http://www.jeffreynichols.com/",
+  "Tiffany Tseng": "https://tifftseng.com/",
+  "Ruijia Cheng": "https://reginachangzhou.github.io/",
+  "Daniel Hajas":
+    "https://www.disabilityinnovation.com/who-we-are/our-team/daniel-hajas",
+  "Sarah Creem-Regehr":
+    "https://psych.utah.edu/people/faculty/creem-regehr-sarah.php",
+  "Shiyi He": "https://shiyihe-neko.github.io/",
+  "Nastaran Jadidi":
+    "https://scholar.google.com/citations?user=e4en0xQAAAAJ&hl=en",
+  "Chang Han": "https://hconhisway.github.io/",
 };
 
 const selectedPubs = new Set([
@@ -89,7 +111,7 @@ export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((x) =>
 
 export const BLOG_POSTS = [
   {
-    imgLink: "converted-images/tarot-image.jpg",
+    imgLink: "assets/tarot-image.jpg",
     title:
       "A Brief Saga Concerning the Making of a Tarot Deck About the American Highway System",
     subtitle: "A little essay about making",
@@ -104,7 +126,7 @@ export const BLOG_POSTS = [
     ],
   },
   {
-    imgLink: "converted-images/advanced-react-vis-pic.jpg",
+    imgLink: "assets/advanced-react-vis-pic.jpg",
     title: "Advanced Visualization with react-vis",
     subtitle:
       "Using Voronois, single pass rendering, and canvas components for amazing user experiences",

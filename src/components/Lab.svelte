@@ -6,7 +6,7 @@
 <div class="mb-10 block" class:bg-black={darkMode} class:bg-white={!darkMode}>
   <div>
     <img
-      src="converted-images/logo-{darkMode ? 'white' : 'black'}.png"
+      src="assets/logo-{darkMode ? 'white' : 'black'}.jpg"
       alt="logo for the havoc lab. it is a stylized representation of the word havoc"
     />
   </div>
