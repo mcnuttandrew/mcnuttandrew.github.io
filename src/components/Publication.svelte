@@ -17,6 +17,8 @@
   }
   const keys = ["subtitle", "journal"] as const;
   $: preppedKeys = keys.map((x) => publication[x]).filter((x) => x) as string[];
+  $: altSpace = publication.imgDescription.at(-1) === "." ? "" : ".";
+  $: altText = `${publication.imgDescription}${altSpace} The image is drawn from ${publication.title}.`;
 </script>
 
 <div class="flex-col mb-10" transition:slide>
@@ -28,7 +30,8 @@
       >
         <a href={publication.link}>
           <img
-            alt="image drawn from {publication.title}"
+            alt={altText}
+            title={altText}
             src={publication.imgLink}
             class="cursor-pointer min-w-24"
           />
