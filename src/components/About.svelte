@@ -15,7 +15,7 @@
 </script>
 
 <div class="">
-  <div class="my-8 text-xl md-container">
+  <div class="my-8 md-container">
     {@html md.render(ABOUT)}
   </div>
 
