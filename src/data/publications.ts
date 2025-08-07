@@ -64,7 +64,7 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
-    link: "",
+    link: "https://arxiv.org/abs/2508.03876",
     urlTitle: "revisit-2",
     imgLink: "assets/revisit-py.jpg",
     imgDescription: "The reVISit logo",
@@ -74,6 +74,10 @@ export const PUBLICATIONS: Publication[] = [
     journal: "IEEE VIS 2025",
     year: 2025,
     links: [
+      {
+        name: "paper",
+        link: "https://arxiv.org/abs/2508.03876",
+      },
       {
         name: "live",
         link: "https://revisit.dev/",
@@ -131,7 +135,7 @@ export const PUBLICATIONS: Publication[] = [
     topics: ["Visualization Systems", "DSLs"],
   },
   {
-    link: "",
+    link: "https://arxiv.org/abs/2508.02592",
     urlTitle: "teaching-critical-vis",
     imgLink: "assets/teaching-critical-vis.jpg",
     imgDescription:
@@ -149,7 +153,10 @@ export const PUBLICATIONS: Publication[] = [
     journal:
       "IEEE VIS Workshop on Visualization Education, Literacy, and Activities (EduVIS) 2025",
     year: 2025,
-    links: [{ name: "osf", link: "https://osf.io/hxtq2/" }],
+    links: [
+      { name: "osf", link: "https://osf.io/hxtq2/" },
+      { name: "paper", link: "https://arxiv.org/abs/2508.02592" },
+    ],
   },
   {
     link: "",
@@ -170,6 +177,10 @@ export const PUBLICATIONS: Publication[] = [
       {
         name: "paper",
         link: "https://arxiv.org/pdf/2402.06071",
+      },
+      {
+        name: "code",
+        link: "https://github.com/apple/ml-keyframer",
       },
     ],
     type: "conference / journal articles",
