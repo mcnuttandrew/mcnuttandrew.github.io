@@ -2,7 +2,7 @@ export const NEWS = [
   {
     date: "August 2025",
     content:
-      "A big fall! A full VIS paper (on [reVISit](https://revisit.dev/)), a short VIS paper (on [annogram](https://vl-annotation.netlify.app/)), a VL/HCC short paper (on [keyframer](https://machinelearning.apple.com/research/keyframer)), a workshop paper (on [teaching critical visualization](https://osf.io/hxtq2/)), and a [VLDB demo paper](https://arxiv.org/abs/2507.16073).",
+      "A big fall! A full VIS paper (on [reVISit](https://revisit.dev/)), a short VIS paper (on [annogram](https://vl-annotation.netlify.app/)), a VL/HCC short paper (on [keyframer](https://machinelearning.apple.com/research/keyframer)), a workshop paper (on [teaching critical visualization](https://arxiv.org/abs/2508.02592)), and a [VLDB demo paper](https://arxiv.org/abs/2507.16073).",
   },
   {
     date: "July 2025",

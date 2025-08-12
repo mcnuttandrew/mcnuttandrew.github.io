@@ -229,6 +229,10 @@ export const PUBLICATIONS: Publication[] = [
         name: "paper",
         link: "https://www.computer.org/csdl/magazine/cg/2025/03/11086543/28xfB5z12rC",
       },
+      {
+        name: "paper",
+        link: "https://www.computer.org/csdl/magazine/cg/2025/04/11120866/2917v8dYNJC",
+      },
     ],
     type: "extended abstract / workshop papers",
     subtype: "ex. abs.",
