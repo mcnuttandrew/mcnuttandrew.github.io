@@ -217,7 +217,7 @@ export const PUBLICATIONS: Publication[] = [
     urlTitle: "critical-data-vis-intro",
     imgLink: "assets/critical-vis-intro.jpg",
     imgDescription:
-      "The cover of a magzine, it reads 'Computer Graphics & Applications Critical Data Visualization Part i'",
+      "The cover of a magazine, it reads 'Computer Graphics & Applications Critical Data Visualization Part i'",
     title: "Critical Data Visualization—Part I/II",
     authors:
       "Georgia Panagiotidou, Andrew McNutt, Derya Akbaba, Nicole Hengesbach, Miriah Meyer",

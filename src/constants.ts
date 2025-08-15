@@ -150,6 +150,20 @@ export const BLOG_POSTS = [
 export const TEACHING = [
   {
     title: "CS6967: Critical VIS+HCI",
+    date: "Spring 2026",
+    role: "Instructor",
+    location: "University of Utah",
+    link: "https://www.mcnutt.in/critical-hci-vis-class/",
+  },
+  {
+    title: "COMP 1010 - Programming for All 1",
+    date: "Fall 2025",
+    role: "Instructor",
+    location: "University of Utah",
+    link: "https://utah.instructure.com/courses/1200671",
+  },
+  {
+    title: "CS6967: Critical VIS+HCI",
     date: "Spring 2025",
     role: "Instructor",
     location: "University of Utah",
