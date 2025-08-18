@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { STUDENTS } from "../data/students";
+  import { STUDENTS, GROUP_PHOTOS } from "../data/students";
   let darkMode = false;
 </script>
 
@@ -53,9 +53,22 @@
       <div class="text-center">
         <h3 class="text-lg font-bold">{student.name}</h3>
         <p>{student.role}</p>
-        <a href={student.link} class="text-blue-500 hover:underline">webpage</a>
+        {#if student.link}
+          <a href={student.link} class="text-blue-500 hover:underline">
+            webpage
+          </a>
+        {/if}
         <p class="text-sm italic max-w-48">{student.researchInterests}</p>
       </div>
+    </div>
+  {/each}
+</div>
+
+<h1 class="text-3xl font-bold mt-4">Group Photos</h1>
+<div class="flex flex-wrap justify-center">
+  {#each GROUP_PHOTOS as photo}
+    <div class="flex flex-col items-center mb-2 ml-4">
+      <img src={photo.image} alt={photo.altText} class="w-80 mr-2" />
     </div>
   {/each}
 </div>
