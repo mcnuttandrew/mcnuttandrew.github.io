@@ -94,6 +94,10 @@ export const PUBLICATIONS: Publication[] = [
         name: "osf",
         link: "https://osf.io/e8anx/",
       },
+      {
+        name: "video figure",
+        link: "https://www.youtube.com/watch?v=1t3nWNnv6BE",
+      },
     ],
     type: "conference / journal articles",
     subtype: "conference",
@@ -158,6 +162,76 @@ export const PUBLICATIONS: Publication[] = [
       { name: "paper", link: "https://arxiv.org/abs/2508.02592" },
     ],
   },
+  //   {
+  //     link: "https://f.luid.org/",
+  //     urlTitle: "fluid-live",
+  //     imgLink: "assets/fluid.jpg",
+  //     imgDescription:
+  //       'The fluid logo, it says the word "fluid" in a purple, blocky font',
+  //     shortTitle: "Fluid",
+  //     title: "Language-Based Dependency-Tracking for Explorables",
+  //     authors:
+  //       "Roly Perera, Joseph Bond, Cristina David, Andrew McNutt, Alfonso Piscitelli",
+  //     journal: "LIVE Workshop 2025",
+  //     year: 2025,
+  //     type: "extended abstract / workshop papers",
+  //     subtype: "workshop",
+  //     abstract: `Explorable explanations are interactive web essays that explain challenging technical ideas. For example, an elegant distill.pub article explains matrix convolution and related ideas like receptive field, important notions in CNNs that also have applications in image processing. Educational efforts like these are valuable but labour-intensive, especially for the kind of interactive graphics we might like to use in order to illustrate how an algorithm like convolution works.
+
+  // In this talk we present a programming language with built-in dependency tracking, called Fluid, which produces computed content where the relationship to inputs can be interactively explored. To date we have mainly explored the applications of this feature to open science. For this talk we explore the idea that built-in provenance-tracking can also help with science communication, allowing a reader to explore the relationships between the stages of a pipeline, using automatically provided interactions. While our current implementation has some limitations, we hope to motivate the idea that this direction in languages moves real implementations closer to being self-explanatory artifacts, potentially reducing the need for separate, custom-crafted explorables. Enriched with integrated documentation, “explorable implementations” like these could form the basis of a kind of literate execution and provide a way of authoring explorable explanations with less effort.
+  // `,
+
+  //     links: [
+  //       {
+  //         name: "live",
+  //         link: "https://f.luid.org/",
+  //       },
+  //     ],
+  //     theme: "programming-interfaces",
+  //     topics: ["Programming Interfaces", "DSLs", "Visualization Systems"],
+  //   },
+  {
+    link: "https://f.luid.org/",
+    urlTitle: "fluid-propl",
+    imgLink: "assets/fluid.jpg",
+    imgDescription:
+      'The fluid logo, it says the word "fluid" in a purple, blocky font',
+    shortTitle: "Fluid",
+    title: "Authoring Tools for Transparent Climate Reporting",
+    authors:
+      "Roly Perera, Joseph Bond, Cristina David, Andrew McNutt, Alfonso Piscitelli",
+    journal: "ACM SIGPLAN International Workshop on Programming for the Planet",
+    year: 2025,
+    type: "extended abstract / workshop papers",
+    subtype: "workshop",
+    abstract: `Energy transition and decarbonisation, adaptation to climate change, risk mitigation strategies and
+other components of a sustainable future all require changes in public policy and behaviour. These
+in turn require transparent, evidence-based communication of the core issues to policymakers,
+other scientists, and the general public. This talk will highlight the role of software infrastructure in
+meeting these transparency requirements and will report on a “transparent programming languages”
+project called Fluid.
+
+Today, “open” means primarily that the data and source code associated with a scientific output
+are available somewhere for download. This is an important step but fails to address the crucial
+ergonomic aspects of open science, such as the need for the underlying evidence to be accessible,
+interpretable, or easy to engage with. Fluid is a programming language project with built-in
+dependency tracking infrastructure which aims to make it easy to produce scientific content
+where the evidence base is integrated into an online version of the final document, allowing readers
+to interactively explore the bidirectional relationships between text, charts and data on an as-needed
+basis. The long term goal is to develop new authoring and publishing pipelines which allow research
+outputs to be more open, interpretable and explorable in situ.
+`,
+
+    links: [
+      {
+        name: "live",
+        link: "https://f.luid.org/",
+      },
+    ],
+    theme: "programming-interfaces",
+    topics: ["Programming Interfaces", "DSLs", "Visualization Systems"],
+  },
+
   {
     link: "",
     urlTitle: "keyframer",
@@ -962,7 +1036,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "extended abstract / workshop papers",
     subtype: "ex. abs.",
     theme: "critical-perspectives",
-    topics: ["Critical Visualization", "Visualization Systems"],
+    topics: ["Critical Visualization"],
   },
   {
     link: "https://www.mcnutt.in/ms-zine/",
@@ -1065,7 +1139,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     type: "extended abstract / workshop papers",
     subtype: "workshop",
     theme: "vis-correctness",
-    topics: ["Visualization Correctness", "Visualization Systems"],
+    topics: ["Visualization Correctness"],
   },
   {
     link: "https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14",
