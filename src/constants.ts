@@ -95,6 +95,10 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   "Nastaran Jadidi":
     "https://scholar.google.com/citations?user=e4en0xQAAAAJ&hl=en",
   "Chang Han": "https://hconhisway.github.io/",
+  "Roly Perera": "https://dynamicaspects.org/research/",
+  "Cristina David": "https://cristina-david.github.io/",
+  "Alfonso Piscitelli":
+    "https://scholar.google.com/citations?user=pfVqPQgAAAAJ&hl=en",
 };
 
 const selectedPubs = new Set([
