@@ -71,7 +71,7 @@ export const PUBLICATIONS: Publication[] = [
     title: "ReVISit 2: A Full Experiment Life Cycle User Study Framework",
     authors:
       "Zach Cutler, Jack Wilburn, Hilson Shrestha, Yiren Ding, Brian C Bollen, Khandaker Abrar Nadib, Tingying He, Andrew McNutt, Lane Harrison, Alexander Lex",
-    journal: "IEEE VIS 2025",
+    journal: "IEEE VIS 2025 🏆 Best Paper 🏆",
     year: 2025,
     links: [
       {
@@ -162,34 +162,73 @@ export const PUBLICATIONS: Publication[] = [
       { name: "paper", link: "https://arxiv.org/abs/2508.02592" },
     ],
   },
-  //   {
-  //     link: "https://f.luid.org/",
-  //     urlTitle: "fluid-live",
-  //     imgLink: "assets/fluid.jpg",
-  //     imgDescription:
-  //       'The fluid logo, it says the word "fluid" in a purple, blocky font',
-  //     shortTitle: "Fluid",
-  //     title: "Language-Based Dependency-Tracking for Explorables",
-  //     authors:
-  //       "Roly Perera, Joseph Bond, Cristina David, Andrew McNutt, Alfonso Piscitelli",
-  //     journal: "LIVE Workshop 2025",
-  //     year: 2025,
-  //     type: "extended abstract / workshop papers",
-  //     subtype: "workshop",
-  //     abstract: `Explorable explanations are interactive web essays that explain challenging technical ideas. For example, an elegant distill.pub article explains matrix convolution and related ideas like receptive field, important notions in CNNs that also have applications in image processing. Educational efforts like these are valuable but labour-intensive, especially for the kind of interactive graphics we might like to use in order to illustrate how an algorithm like convolution works.
+  {
+    link: "",
+    urlTitle: "charts-and-measures",
+    imgLink: "assets/charts-and-measures.jpg",
+    imgDescription:
+      "A poorly rendered AI generated version of a New Yorkers cartoon. It shows a cowboy trying to teaching about visualization on a chalk board to a group of lobster people.",
+    title: "Charts and Measures",
+    authors: "Andrew McNutt",
+    abstract:
+      "alt.vis has gone mainstream. What else can be thought of a venue that has reached its fourth edition besides that is has become institutionalized? Enured to the real truths and harsh realities of the world surrounding us, alt.vis no longer has the aesthetic clarity or purity to conduct its much-needed work. To rectify this issue, we propose a new workshop housed within the alt.vis workshop entitled ``Charts and Measures''---housed within the now-conventional alt.vis. To ensure the alternative integrity of this new venue, we limit submissions to only those approved to submit by the organizing committee, both of which are composed of Andrew McNutt. These proceedings include a range of topics, such as the inherent imperialism of some research fields, to quagmires we have found ourselves struggling through. ",
+    topics: ["Critical Visualization"],
 
-  // In this talk we present a programming language with built-in dependency tracking, called Fluid, which produces computed content where the relationship to inputs can be interactively explored. To date we have mainly explored the applications of this feature to open science. For this talk we explore the idea that built-in provenance-tracking can also help with science communication, allowing a reader to explore the relationships between the stages of a pipeline, using automatically provided interactions. While our current implementation has some limitations, we hope to motivate the idea that this direction in languages moves real implementations closer to being self-explanatory artifacts, potentially reducing the need for separate, custom-crafted explorables. Enriched with integrated documentation, “explorable implementations” like these could form the basis of a kind of literate execution and provide a way of authoring explorable explanations with less effort.
-  // `,
+    type: "extended abstract / workshop papers",
+    subtype: "workshop",
+    theme: "critical-perspectives",
+    journal: "alt.vis 2025",
+    year: 2025,
+    links: [],
+  },
+  {
+    link: "",
+    urlTitle: "feng-shui-vis",
+    imgLink: "assets/feng-shui-vis.jpg",
+    imgDescription:
+      "A poorly rendered AI generated version of a New Yorkers cartoon. It shows a cowboy trying to teaching about visualization on a chalk board to a group of lobster people.",
+    title:
+      "The Feng Shui of Visualization: Design the Path to SUCCESS and GOOD FORTUNE ",
+    authors: "Chang Han, Andrew McNutt",
+    abstract:
+      "Superstition and religious belief system have historically shaped human behavior, offering powerful psychological motivations and persuasive frameworks to guide actions. Inspired by Feng Shui---an ancient Chinese superstition---this paper proposes a pseudo-theoretical framework that integrates superstition-like heuristics into visualization design. Rather than seeking empirical truth, this framework leverages culturally resonant (superstitious) narratives and symbolic metaphors as persuasive tools to encourage desirable design practices, such as clarity, accessibility, and audience-centered thinking. We articulate a set of visualization designs into a Feng Shui compass, reframing empirical design principles and guidelines within an engaing mythology. We present how visualization design principles can be intepreted in Feng Shui narratives, discussing the potential of these metaphorical principles in reducing designer anxiety, fostering community norms, and enhancing the memorability and internalization of visualization design guidelines. Finally, we discuss Feng Shui visualization theory as a set of cognitive shortcuts that can exert persuasive power through playful, belief-like activities.",
+    topics: ["Critical Visualization"],
 
-  //     links: [
-  //       {
-  //         name: "live",
-  //         link: "https://f.luid.org/",
-  //       },
-  //     ],
-  //     theme: "programming-interfaces",
-  //     topics: ["Programming Interfaces", "DSLs", "Visualization Systems"],
-  //   },
+    type: "extended abstract / workshop papers",
+    subtype: "workshop",
+    theme: "critical-perspectives",
+    journal: "alt.vis 2025",
+    year: 2025,
+    links: [],
+  },
+  {
+    link: "https://f.luid.org/",
+    urlTitle: "fluid-live",
+    imgLink: "assets/fluid.jpg",
+    imgDescription:
+      'The fluid logo, it says the word "fluid" in a purple, blocky font',
+    shortTitle: "Fluid",
+    title: "Language-Based Dependency-Tracking for Explorables",
+    authors:
+      "Roly Perera, Joseph Bond, Cristina David, Andrew McNutt, Alfonso Piscitelli",
+    journal: "LIVE Workshop 2025",
+    year: 2025,
+    type: "extended abstract / workshop papers",
+    subtype: "workshop",
+    abstract: `Explorable explanations are interactive web essays that explain challenging technical ideas. For example, an elegant distill.pub article explains matrix convolution and related ideas like receptive field, important notions in CNNs that also have applications in image processing. Educational efforts like these are valuable but labour-intensive, especially for the kind of interactive graphics we might like to use in order to illustrate how an algorithm like convolution works.
+
+  In this talk we present a programming language with built-in dependency tracking, called Fluid, which produces computed content where the relationship to inputs can be interactively explored. To date we have mainly explored the applications of this feature to open science. For this talk we explore the idea that built-in provenance-tracking can also help with science communication, allowing a reader to explore the relationships between the stages of a pipeline, using automatically provided interactions. While our current implementation has some limitations, we hope to motivate the idea that this direction in languages moves real implementations closer to being self-explanatory artifacts, potentially reducing the need for separate, custom-crafted explorables. Enriched with integrated documentation, “explorable implementations” like these could form the basis of a kind of literate execution and provide a way of authoring explorable explanations with less effort.
+  `,
+
+    links: [
+      {
+        name: "live",
+        link: "https://f.luid.org/",
+      },
+    ],
+    theme: "programming-interfaces",
+    topics: ["Programming Interfaces", "DSLs", "Visualization Systems"],
+  },
   {
     link: "https://f.luid.org/",
     urlTitle: "fluid-propl",
