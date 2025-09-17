@@ -31,6 +31,7 @@ type linkType =
   | "replicability badge"
   | "zine"
   | "materials"
+  | "annotated-version"
   | "press";
 type Link =
   | `https://${string}`
@@ -179,7 +180,12 @@ export const PUBLICATIONS: Publication[] = [
     theme: "critical-perspectives",
     journal: "alt.vis 2025",
     year: 2025,
-    links: [],
+    links: [
+      {
+        name: "annotated-version",
+        link: "https://www.mcnutt.in/assets/charts-and-measures-explained.pdf",
+      },
+    ],
   },
   {
     link: "",
