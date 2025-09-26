@@ -164,7 +164,7 @@ export const PUBLICATIONS: Publication[] = [
     ],
   },
   {
-    link: "https://www.mcnutt.in/assets/charts-and-measures.pdf",
+    link: "https://www.mcnutt.in/assets/charts_and_measures.pdf",
     urlTitle: "charts-and-measures",
     imgLink: "assets/charts-and-measures.jpg",
     imgDescription:
@@ -183,7 +183,7 @@ export const PUBLICATIONS: Publication[] = [
     links: [
       {
         name: "paper",
-        link: "https://www.mcnutt.in/assets/charts-and-measures.pdf",
+        link: "https://www.mcnutt.in/assets/charts_and_measures.pdf",
       },
       {
         name: "annotated-version",
