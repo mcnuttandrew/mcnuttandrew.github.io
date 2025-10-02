@@ -192,7 +192,7 @@ export const PUBLICATIONS: Publication[] = [
     ],
   },
   {
-    link: "",
+    link: "https://arxiv.org/pdf/2510.00344",
     urlTitle: "feng-shui-vis",
     imgLink: "assets/feng-shui-vis.jpg",
     imgDescription:
@@ -209,7 +209,16 @@ export const PUBLICATIONS: Publication[] = [
     theme: "critical-perspectives",
     journal: "alt.vis 2025",
     year: 2025,
-    links: [],
+    links: [
+      {
+        name: "paper",
+        link: "https://arxiv.org/pdf/2510.00344",
+      },
+      {
+        name: "live",
+        link: "https://hconhisway.github.io/FengShuiPan/",
+      },
+    ],
   },
   {
     link: "https://f.luid.org/",
