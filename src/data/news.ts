@@ -1,5 +1,9 @@
 export const NEWS = [
   {
+    date: "October 2025",
+    content: "ReVISit 2 wins best paper at IEEE VIS 2025!! 🎉🎉🎉",
+  },
+  {
     date: "August 2025",
     content:
       "A big fall! A full VIS paper (on [reVISit](https://revisit.dev/)), a short VIS paper (on [annogram](https://vl-annotation.netlify.app/)), a VL/HCC short paper (on [keyframer](https://machinelearning.apple.com/research/keyframer)), five workshop papers (on a range of topics including [teaching critical visualization](https://arxiv.org/abs/2508.02592) and the [fluid](https://f.luid.org/) programming language), and a [VLDB demo paper](https://arxiv.org/abs/2507.16073).",
