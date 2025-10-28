@@ -24,7 +24,7 @@ export const STUDENTS: {
     name: "Hima Mynampaty",
     role: "MS Student",
     researchInterests: "Data Visualization, HCI, and Cloud Computing",
-    link: "https://github.com/HimaMynampaty",
+    link: "https://hima-mynampaty.vercel.app/",
     image: "assets/students/hima-mynampaty.jpg",
   },
 
