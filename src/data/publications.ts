@@ -182,6 +182,10 @@ export const PUBLICATIONS: Publication[] = [
     year: 2025,
     links: [
       {
+        name: "osf",
+        link: "https://osf.io/preprints/metaarxiv/zg6xj_v1",
+      },
+      {
         name: "paper",
         link: "https://www.mcnutt.in/assets/charts_and_measures.pdf",
       },
