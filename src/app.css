@@ -70,3 +70,8 @@ div a {
   width: 1em;
   margin-left: -1em;
 }
+
+code {
+  text-wrap: auto;
+  font-size: 12px;
+}

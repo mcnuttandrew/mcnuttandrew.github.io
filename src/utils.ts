@@ -1,3 +1,4 @@
+import type { Publication } from "./data/publications";
 import { PUBLICATIONS, COLLABORATOR_LINKS } from "./constants";
 
 const routes = new Set([
@@ -41,4 +42,33 @@ export function addLinks(authors: string) {
   return Object.entries(COLLABORATOR_LINKS).reduce((str, [key, link]) => {
     return str.replace(key, `[${key}](${link})`);
   }, authors.replace("Andrew McNutt", "__Andrew McNutt__"));
+}
+
+function formatAuthorsForLatex(authors: string): string {
+  return authors
+    .split(",")
+    .map((author) => {
+      const names = author.split(" ").filter((x) => x.length > 1);
+      return `${names.at(-1)}, ${names.slice(0, names.length - 1).join(" ")}`;
+    })
+    .join(" and ");
+}
+
+export function buildBibTexEntry(publication: Publication): string {
+  const name = publication.authors.split(",").at(0)?.split(" ").at(-1);
+  const titleKey = publication.title.split(" ").at(0);
+  const key = `${name}${publication.year}${publication.year}${titleKey}`;
+  if (publication.type === "theses / book chapters") {
+    return "";
+  }
+  return `
+\`\`\`  
+@inproceedings{${key},
+    title={${publication.title}},
+    author    = {${formatAuthorsForLatex(publication.authors)}},
+    journal   = {${publication.pureJournal}},
+    year      = {${publication.year}}
+
+}
+\`\`\`  `;
 }
