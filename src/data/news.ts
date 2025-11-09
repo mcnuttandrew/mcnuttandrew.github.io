@@ -1,7 +1,12 @@
 export const NEWS = [
   {
-    date: "October 2025",
+    date: "November 2025",
     content: "ReVISit 2 wins best paper at IEEE VIS 2025!! 🎉🎉🎉",
+  },
+  {
+    date: "November 2025",
+    content:
+      "alt.vis was an overflowing font of joy and chaos! Our papers, on [Feng Shui](https://arxiv.org/pdf/2510.00344) and documenting [Charts and Measures](https://www.mcnutt.in/assets/charts_and_measures.pdf)  won 🏆 Most Auspicious 🏆 and 🏆 Most Meta 🏆 awards respectively",
   },
   {
     date: "August 2025",

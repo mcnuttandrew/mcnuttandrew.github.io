@@ -49,6 +49,7 @@ export interface Publication {
   shortTitle?: string;
   authors: string;
   journal: string;
+  pureJournal: string;
   links: { name: linkType; link: Link }[];
   abstract: string;
   type: PubType;
@@ -73,6 +74,7 @@ export const PUBLICATIONS: Publication[] = [
     authors:
       "Zach Cutler, Jack Wilburn, Hilson Shrestha, Yiren Ding, Brian C Bollen, Khandaker Abrar Nadib, Tingying He, Andrew McNutt, Lane Harrison, Alexander Lex",
     journal: "IEEE VIS 2025 🏆 Best Paper 🏆",
+    pureJournal: "IEEE Transactions on Visualization and Computer Graphics",
     year: 2025,
     links: [
       {
@@ -117,6 +119,7 @@ export const PUBLICATIONS: Publication[] = [
     authors:
       "Md Dilshadur Rahman, Md Rahat-uz-Zaman, Andrew McNutt, Paul Rosen",
     journal: "IEEE VIS 2025 (Short Papers)",
+    pureJournal: "Proceedings of IEEE VIS (Short Papers)",
     year: 2025,
     links: [
       {
@@ -157,6 +160,8 @@ export const PUBLICATIONS: Publication[] = [
     theme: "critical-perspectives",
     journal:
       "IEEE VIS Workshop on Visualization Education, Literacy, and Activities (EduVIS) 2025",
+    pureJournal:
+      "IEEE VIS Workshop on Visualization Education, Literacy, and Activities (EduVIS)",
     year: 2025,
     links: [
       { name: "osf", link: "https://osf.io/hxtq2/" },
@@ -178,9 +183,14 @@ export const PUBLICATIONS: Publication[] = [
     type: "extended abstract / workshop papers",
     subtype: "workshop",
     theme: "critical-perspectives",
-    journal: "alt.vis 2025",
+    journal: "alt.vis 2025 🏆 Most Meta 🏆",
+    pureJournal: "alt.vis",
     year: 2025,
     links: [
+      {
+        name: "osf",
+        link: "https://osf.io/preprints/metaarxiv/zg6xj_v1",
+      },
       {
         name: "paper",
         link: "https://www.mcnutt.in/assets/charts_and_measures.pdf",
@@ -198,7 +208,7 @@ export const PUBLICATIONS: Publication[] = [
     imgDescription:
       "A poorly rendered AI generated version of a New Yorkers cartoon. It shows a cowboy trying to teaching about visualization on a chalk board to a group of lobster people.",
     title:
-      "The Feng Shui of Visualization: Design the Path to SUCCESS and GOOD FORTUNE ",
+      "The Feng Shui of Visualization: Design the Path to SUCCESS and GOOD FORTUNE",
     authors: "Chang Han, Andrew McNutt",
     abstract:
       "Superstition and religious belief system have historically shaped human behavior, offering powerful psychological motivations and persuasive frameworks to guide actions. Inspired by Feng Shui---an ancient Chinese superstition---this paper proposes a pseudo-theoretical framework that integrates superstition-like heuristics into visualization design. Rather than seeking empirical truth, this framework leverages culturally resonant (superstitious) narratives and symbolic metaphors as persuasive tools to encourage desirable design practices, such as clarity, accessibility, and audience-centered thinking. We articulate a set of visualization designs into a Feng Shui compass, reframing empirical design principles and guidelines within an engaing mythology. We present how visualization design principles can be intepreted in Feng Shui narratives, discussing the potential of these metaphorical principles in reducing designer anxiety, fostering community norms, and enhancing the memorability and internalization of visualization design guidelines. Finally, we discuss Feng Shui visualization theory as a set of cognitive shortcuts that can exert persuasive power through playful, belief-like activities.",
@@ -207,7 +217,8 @@ export const PUBLICATIONS: Publication[] = [
     type: "extended abstract / workshop papers",
     subtype: "workshop",
     theme: "critical-perspectives",
-    journal: "alt.vis 2025",
+    journal: "alt.vis 2025 🏆 Most Auspicious 🏆",
+    pureJournal: "alt.vis",
     year: 2025,
     links: [
       {
@@ -231,6 +242,7 @@ export const PUBLICATIONS: Publication[] = [
     authors:
       "Roly Perera, Joseph Bond, Cristina David, Andrew McNutt, Alfonso Piscitelli",
     journal: "LIVE Workshop 2025",
+    pureJournal: "LIVE Workshop",
     year: 2025,
     type: "extended abstract / workshop papers",
     subtype: "workshop",
@@ -259,6 +271,8 @@ export const PUBLICATIONS: Publication[] = [
     authors:
       "Roly Perera, Joseph Bond, Cristina David, Andrew McNutt, Alfonso Piscitelli",
     journal: "ACM SIGPLAN International Workshop on Programming for the Planet",
+    pureJournal:
+      "ACM SIGPLAN International Workshop on Programming for the Planet",
     year: 2025,
     type: "extended abstract / workshop papers",
     subtype: "workshop",
@@ -300,6 +314,8 @@ outputs to be more open, interpretable and explorable in situ.
       "Keyframer: A Design Probe for Exploring LLM Assistance in 2D Animation Design",
     authors: "Tiffany Tseng, Ruijia Cheng, Andrew McNutt, Jeffrey Nichols",
     journal: "IEEE VL/HCC 2025 (Short Papers)",
+    pureJournal:
+      "IEEE Symposium on Visual Languages and Human Centered Computing (Short Papers)",
     year: 2025,
     links: [
       {
@@ -330,6 +346,7 @@ outputs to be more open, interpretable and explorable in situ.
     title: "Buckaroo: A Direct Manipulation Visual Data Wrangler",
     authors: "Annabelle Warner, Andrew McNutt, Paul Rosen, El Kindi Rezig",
     journal: "VLDB 2025 Demo",
+    pureJournal: "Proceedings of the VLDB Endowment (Demo)",
     year: 2025,
     links: [
       {
@@ -355,6 +372,7 @@ outputs to be more open, interpretable and explorable in situ.
       "Georgia Panagiotidou, Andrew McNutt, Derya Akbaba, Nicole Hengesbach, Miriah Meyer",
     journal:
       "Computer Graphics & Applications — Special Issue(s) Introduction(s)",
+    pureJournal: "Computer Graphics & Applications",
     year: 2025,
     links: [
       {
@@ -385,6 +403,7 @@ outputs to be more open, interpretable and explorable in situ.
       "Connor Scully-Allison, Kevin Menear, Kristin Potter, Andrew McNutt, Katherine E. Isaacs, Dmitry Duplyakin",
     year: 2025,
     journal: "preprint",
+    pureJournal: "preprint",
     links: [{ name: "paper", link: "https://arxiv.org/pdf/2507.17898" }],
     type: "conference / journal articles",
     subtype: "preprint",
@@ -401,6 +420,7 @@ outputs to be more open, interpretable and explorable in situ.
     authors:
       "Hilson Shrestha, Jack Wilburn, Brian Bollen, Andrew McNutt, Alexander Lex, Lane Harrison",
     journal: "EuroVIS Posters 2025",
+    pureJournal: "EuroVIS Posters",
     year: 2025,
     links: [
       { name: "code", link: "https://github.com/revisit-studies/revisitpy" },
@@ -426,6 +446,7 @@ outputs to be more open, interpretable and explorable in situ.
     authors:
       "Andrew McNutt, Maggie K McCracken, Ishrat Jahan Eliza, Daniel Hajas, Jake Wagoner, Nate Lanza, Jack Wilburn, Sarah Creem-Regehr, Alexander Lex",
     journal: "EuroVIS 2025",
+    pureJournal: "Computer Graphics Forum (EuroVis)",
     year: 2025,
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2503.17517v1" },
@@ -464,6 +485,8 @@ outputs to be more open, interpretable and explorable in situ.
       "Linting is People! Exploring the Potential of Human Computation as a Sociotechnical Linter of Data Visualizations",
     authors: "Anamaria Crisan, Andrew McNutt",
     journal: "alt.CHI 2025",
+    pureJournal:
+      "Extended Abstracts of the ACM Conference on Human Factors in Computing (alt.chi)",
     year: 2025,
     links: [{ name: "paper", link: "https://arxiv.org/abs/2502.07649" }],
     type: "extended abstract / workshop papers",
@@ -483,6 +506,8 @@ outputs to be more open, interpretable and explorable in situ.
       "Slowness, Politics, and Joy: Values That Guide Technology Choices in Creative Coding Classrooms",
     authors: "Andrew McNutt, Sam Cohen, Ravi Chugh",
     journal: "ACM CHI 2025 🏆 Honorable Mention for Best Paper 🏆",
+    pureJournal:
+      "Proceedings of the ACM Conference on Human Factors in Computing (SIGCHI)",
     year: 2025,
     links: [
       { name: "paper", link: "assets/tattoo.pdf" },
@@ -504,6 +529,7 @@ outputs to be more open, interpretable and explorable in situ.
     title: "Mixing Linters with GUIs: A Color Palette Design Probe",
     authors: "Andrew McNutt, Maureen C. Stone, Jeffrey Heer",
     journal: "IEEE VIS 2024",
+    pureJournal: "IEEE Transactions on Visualization and Computer Graphics",
     year: 2024,
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2407.21285" },
@@ -541,6 +567,7 @@ outputs to be more open, interpretable and explorable in situ.
     authors:
       "Alex Kale, Danni Liu, Maria Gabriela Ayala, Harper Schwab, Andrew McNutt",
     journal: "IEEE VIS 2024",
+    pureJournal: "IEEE Transactions on Visualization and Computer Graphics",
     year: 2024,
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2407.20103" },
@@ -564,6 +591,8 @@ outputs to be more open, interpretable and explorable in situ.
     title: "Considering Visualization Example Galleries",
     authors: "Junran Yang, Andrew McNutt, Leilani Battle",
     journal: "IEEE VL/HCC 2024",
+    pureJournal:
+      "IEEE Symposium on Visual Languages and Human Centered Computing",
     year: 2024,
     links: [
       {
@@ -587,6 +616,8 @@ outputs to be more open, interpretable and explorable in situ.
     authors:
       "Ken Gu, Madeleine Grunde-McLaughlin, Andrew McNutt, Jeffrey Heer, Tim Althoff",
     journal: "ACM CHI 2024",
+    pureJournal:
+      "Proceedings of the ACM Conference on Human Factors in Computing (SIGCHI)",
     year: 2024,
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2309.10108.pdf" },
@@ -610,6 +641,7 @@ outputs to be more open, interpretable and explorable in situ.
     title: "Only YOU Can Make IEEE VIS Environmentally Sustainable",
     authors: "Elsie Lee-Robbins, Andrew McNutt",
     journal: "alt.vis 2023",
+    pureJournal: "alt.vis",
     year: 2023,
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2308.15429" },
@@ -630,6 +662,7 @@ outputs to be more open, interpretable and explorable in situ.
     title: "Metrics-Based Evaluation and Comparison of Visualization Notations",
     authors: "Nicolas Kruchten, Andrew McNutt, Michael J. McGuffin",
     journal: "IEEE VIS 2023",
+    pureJournal: "IEEE Transactions on Visualization and Computer Graphics",
     year: 2023,
     links: [
       { name: "live", link: "https://app.notascope.io/" },
@@ -655,7 +688,9 @@ outputs to be more open, interpretable and explorable in situ.
       "An abstract logo, at its center are a pair of curly braces. They are surrounded by rotated and scaled curly braces.",
     title: "Projectional Editors for JSON-Based DSLs",
     authors: "Andrew McNutt, Ravi Chugh",
-    journal: "VL/HCC 2023",
+    journal: "IEEE VL/HCC 2023",
+    pureJournal:
+      "IEEE Symposium on Visual Languages and Human Centered Computing (Short Papers)",
     year: 2023,
     links: [
       { name: "live", link: "https://prong-editor.netlify.app/" },
@@ -682,6 +717,7 @@ We describe a relatively inexpensive way to build rich projectional editors for 
     authors: "Andrew McNutt (advised by Ravi Chugh)",
     journal:
       "Ph.D. Thesis. University of Chicago, Department of Computer Science, 2023",
+    pureJournal: "Ph.D. Thesis",
     year: 2023,
     links: [
       { name: "paper", link: "https://osf.io/fy246" },
@@ -713,6 +749,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     authors:
       "Victor Schetinger, Sara Di Bartolomeo, Mennatallah El-Assady, Andrew McNutt, Matthias Miller, João Paulo Apolinário Passos, Jane L. Adams",
     journal: "EuroVis 2023",
+    pureJournal: "Computer Graphics Forum (EuroVis)",
     year: 2023,
     links: [
       { name: "osf", link: "assets/doom-n-fruit.pdf" },
@@ -733,6 +770,8 @@ We primarily consider languages focused on data visualization tasks, as there ha
     title: "On the Design of AI-powered Code Assistants for Notebooks",
     authors: "Andrew McNutt, Chenglong Wang, Rob DeLine, Steven M. Drucker",
     journal: "ACM CHI 2023",
+    pureJournal:
+      "Proceedings of the ACM Conference on Human Factors in Computing (SIGCHI)",
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2301.11178" },
       { name: "talk", link: "https://www.youtube.com/watch?v=g0prh8mE3bI" },
@@ -753,6 +792,8 @@ We primarily consider languages focused on data visualization tasks, as there ha
     title: "A Study of Editor Features in a Creative Coding Classroom",
     authors: "Andrew McNutt, Anton Outkine, Ravi Chugh",
     journal: "ACM CHI 2023",
+    pureJournal:
+      "Proceedings of the ACM Conference on Human Factors in Computing (SIGCHI)",
     year: 2023,
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2301.13302" },
@@ -777,6 +818,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     authors: "Andrew McNutt",
     year: 2022,
     journal: "IEEE VIS 2022",
+    pureJournal: "IEEE Transactions on Visualization and Computer Graphics",
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2207.07998" },
       { name: "live", link: "https://vis-json-dsls.netlify.app/" },
@@ -806,6 +848,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     title: "Goethe and Candolle: National forms of scientific writing?",
     authors: "Agatha Seo-Hyun Kim, Andrew McNutt ",
     journal: "Theory in Biosciences",
+    pureJournal: "Theory in Biosciences",
     year: 2022,
     links: [
       {
@@ -831,6 +874,8 @@ We primarily consider languages focused on data visualization tasks, as there ha
     authors:
       "Jamar L. Sullivan, Will Brackenbury, Andrew McNutt, Kevin Bryson, Kwam Byll, Yuxin Chen, Michael Littman, Chenhao Tan, Blase Ur",
     journal: "NAACL 2022",
+    pureJournal:
+      "Proceedings of the North American Association of Computational Linguistics",
     year: 2022,
     links: [
       {
@@ -862,6 +907,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     title: "Visualization for Villainy",
     authors: "Andrew McNutt, Lilian Huang, Kathryn Koenig",
     journal: "alt.vis 2021",
+    pureJournal: "alt.vis",
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2109.06007" },
       { name: "talk", link: "https://youtu.be/jFbsYto_2ys?t=1471" },
@@ -885,6 +931,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     authors:
       "Will Brackenbury, Andrew McNutt, Kyle Chard, Aaron Elmore, Blase Ur",
     journal: "ACM UIST 2021",
+    pureJournal: "ACM Symposium on User Interface Systems and Technologies",
     year: 2021,
     links: [
       {
@@ -911,6 +958,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     authors: "Andrew McNutt",
     year: 2021,
     journal: "IEEE VIS 2021 (Short Papers)",
+    pureJournal: "Proceedings of IEEE VIS (Short Papers)",
     links: [
       { name: "about", link: "https://www.mcnutt.in/zine-potential" },
       { name: "paper", link: "https://arxiv.org/abs/2108.02177" },
@@ -933,6 +981,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     authors: "Andrew McNutt",
     journal:
       "EuroVis 2021 🏆 Honorable Mention for Best Paper 🏆 (Juried Selection, 1 awarded)",
+    pureJournal: "Computer Graphics Forum (EuroVis)",
     year: 2021,
     links: [
       { name: "about", link: "#/research/tacos" },
@@ -960,6 +1009,8 @@ We primarily consider languages focused on data visualization tasks, as there ha
     authors: "Andrew McNutt, Ravi Chugh",
     // journal: 'Proceedings of the 2021 ACM annual conference on Human Factors in Computing Systems',
     journal: "ACM CHI 2021",
+    pureJournal:
+      "Proceedings of the ACM Conference on Human Factors in Computing (SIGCHI)",
     year: 2021,
     links: [
       { name: "about", link: "#/research/ivy" },
@@ -990,6 +1041,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     authors:
       "Andrew McNutt, Agatha Seo-Hyun Kim, Sergio Elahi, Kazutaka Takahashi",
     journal: "Visualization for the Digital Humanities (VIS4DH) 2020",
+    pureJournal: "Visualization for the Digital Humanities (VIS4DH)",
     links: [
       { name: "about", link: "#/research/nearby" },
       { name: "paper", link: "https://arxiv.org/abs/2009.02384" },
@@ -1019,6 +1071,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     year: 2020,
     journal:
       "VIS 2020 - InfoVIS Poster Track 🏆 Honorable Mention for Best Poster Research 🏆 (Juried Selection, 2 awarded)",
+    pureJournal: "IEEE InfoVis Posters",
     links: [
       { name: "about", link: "#/research/table-cartogram" },
       { name: "paper", link: "https://osf.io/kem6j/" },
@@ -1046,6 +1099,8 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     //   'Proceedings of the 2020 ACM annual conference on Human Factors in Computing Systems <br/> 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)',
     journal:
       "ACM CHI 2020 🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)",
+    pureJournal:
+      "Proceedings of the ACM Conference on Human Factors in Computing (SIGCHI)",
     links: [
       { name: "about", link: "#/research/mirage" },
       {
@@ -1077,6 +1132,8 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     title: "Divining Insights: Visual Analytics Through Cartomancy",
     authors: "Andrew McNutt, Anamaria Crisan, Michael Correll",
     journal: "alt.CHI 2020",
+    pureJournal:
+      "Extended Abstracts of the ACM Conference on Human Factors in Computing (alt.chi)",
     year: 2020,
     links: [
       { name: "about", link: "#/research/tarot" },
@@ -1106,6 +1163,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     urlTitle: "ms-thesis",
     authors: "Andrew McNutt (Advised by Gordon Kindlmann)",
     journal: "Masters thesis. University of Chicago",
+    pureJournal: "Masters thesis",
     year: 2018,
     links: [{ name: "zine", link: "https://www.mcnutt.in/ms-zine/" }],
     abstract: "",
@@ -1125,6 +1183,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       "Agatha Seo-Hyun Kim, Andrew McNutt, Sergio Elahi, Kazutaka Takahashi, Robert J Richards",
     journal:
       "MindBytes Research Symposium 2019. 🏆 Best Poster in Visualization 🏆",
+    pureJournal: "MindBytes Research Symposium",
     year: 2019,
     links: [
       { name: "poster", link: "assets/posterkim102519.pdf" },
@@ -1154,6 +1213,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     year: 2019,
     // journal: 'Proceedings of the Eurographics Conference on Visualization "EuroVis" - Posters',
     journal: "EuroVis 2019 (Posters)",
+    pureJournal: "EuroVis 2019 (Posters)",
     links: [
       {
         name: "paper",
@@ -1187,6 +1247,8 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     year: 2018,
     journal:
       "IEEE VIS Workshop on Creation, Curation, Critique and Conditioning of Principles and Guidelines in Visualization (VisGuides 2018)",
+    pureJournal:
+      "IEEE VIS Workshop on Creation, Curation, Critique and Conditioning of Principles and Guidelines in Visualization",
     links: [
       { name: "paper", link: "assets/McNutt_Kindlmann_2018.pdf" },
       { name: "code", link: "https://github.com/mcnuttandrew/vislint_mpl" },
@@ -1210,6 +1272,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     authors: `Sean Ekins, Alex M. Clark, Krishna Dole, Kellan Gregory, Andrew McNutt,
     Anna Coulon Spektor, Charlie Weatherall, Nadia K Litterman, Barry A Bunin`,
     journal: "Reporter Gene Assays",
+    pureJournal: "Reporter Gene Assays",
     year: 2018,
     links: [
       {
@@ -1233,6 +1296,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     authors: "Joel Franklin, Youdan Guo, Andrew McNutt, Allison Morgan",
     urlTitle: "qgrav",
     journal: "Journal of Classical and Quantum Gravity",
+    pureJournal: "Journal of Classical and Quantum Gravity",
     year: 2015,
     links: [
       { name: "paper", link: "https://arxiv.org/abs/1501.07537" },
@@ -1255,6 +1319,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     authors: `Alex M. Clark, Krishna Dole, Anna Coulon-Spektor, Andrew McNutt,
     George Grass, Joel S. Freundlich, Robert C. Reynolds, Sean Ekins`,
     journal: "Journal of Chemical Information and Modeling",
+    pureJournal: "Journal of Chemical Information and Modeling",
     year: 2015,
     links: [
       {
@@ -1278,6 +1343,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     urlTitle: "nonequiv",
     authors: "Andrew McNutt (Advised by Nelia Mann)",
     journal: "Undergraduate thesis. Reed College",
+    pureJournal: "Undergraduate thesis",
     year: 2014,
     links: [
       { name: "thesis", link: "assets/thesis.pdf" },

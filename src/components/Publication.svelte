@@ -1,6 +1,7 @@
 <script lang="ts">
   import { slide } from "svelte/transition";
-  import { addLinks } from "../utils";
+  import { addLinks, buildBibTexEntry } from "../utils";
+
   import markdownit from "markdown-it";
   const md = markdownit({
     html: true,
@@ -11,9 +12,14 @@
 
   export let publication: Publication;
   let abstractOpen = false;
+  let bibTexOpen = false;
   function toggleAbstract(e: MouseEvent) {
     e.preventDefault();
     abstractOpen = !abstractOpen;
+  }
+  function toggleBibtex(e: MouseEvent) {
+    e.preventDefault();
+    bibTexOpen = !bibTexOpen;
   }
   const keys = ["subtitle", "journal"] as const;
   $: preppedKeys = keys.map((x) => publication[x]).filter((x) => x) as string[];
@@ -74,12 +80,23 @@
             abstract ({abstractOpen ? "-" : "+"})
           </button>
         {/if}
+        <button
+          class="publink items-center text-cyan-800 cursor-pointer flex text-sm no-underline"
+          on:click={toggleBibtex}
+        >
+          bibtex ({bibTexOpen ? "-" : "+"})
+        </button>
       </div>
     </div>
   </div>
   {#if abstractOpen}
     <div class="text-sm abstract-content" transition:slide>
       {@html md.render(publication.abstract)}
+    </div>
+  {/if}
+  {#if bibTexOpen}
+    <div class="text-sm abstract-content" transition:slide>
+      {@html md.render(buildBibTexEntry(publication))}
     </div>
   {/if}
   <div class="rounded-xl uppercase font-bold italic" />
