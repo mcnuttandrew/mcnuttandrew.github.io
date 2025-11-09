@@ -183,7 +183,7 @@ export const PUBLICATIONS: Publication[] = [
     type: "extended abstract / workshop papers",
     subtype: "workshop",
     theme: "critical-perspectives",
-    journal: "alt.vis 2025",
+    journal: "alt.vis 2025 🏆 Most Meta 🏆",
     pureJournal: "alt.vis",
     year: 2025,
     links: [
@@ -208,7 +208,7 @@ export const PUBLICATIONS: Publication[] = [
     imgDescription:
       "A poorly rendered AI generated version of a New Yorkers cartoon. It shows a cowboy trying to teaching about visualization on a chalk board to a group of lobster people.",
     title:
-      "The Feng Shui of Visualization: Design the Path to SUCCESS and GOOD FORTUNE ",
+      "The Feng Shui of Visualization: Design the Path to SUCCESS and GOOD FORTUNE",
     authors: "Chang Han, Andrew McNutt",
     abstract:
       "Superstition and religious belief system have historically shaped human behavior, offering powerful psychological motivations and persuasive frameworks to guide actions. Inspired by Feng Shui---an ancient Chinese superstition---this paper proposes a pseudo-theoretical framework that integrates superstition-like heuristics into visualization design. Rather than seeking empirical truth, this framework leverages culturally resonant (superstitious) narratives and symbolic metaphors as persuasive tools to encourage desirable design practices, such as clarity, accessibility, and audience-centered thinking. We articulate a set of visualization designs into a Feng Shui compass, reframing empirical design principles and guidelines within an engaing mythology. We present how visualization design principles can be intepreted in Feng Shui narratives, discussing the potential of these metaphorical principles in reducing designer anxiety, fostering community norms, and enhancing the memorability and internalization of visualization design guidelines. Finally, we discuss Feng Shui visualization theory as a set of cognitive shortcuts that can exert persuasive power through playful, belief-like activities.",
@@ -217,7 +217,7 @@ export const PUBLICATIONS: Publication[] = [
     type: "extended abstract / workshop papers",
     subtype: "workshop",
     theme: "critical-perspectives",
-    journal: "alt.vis 2025",
+    journal: "alt.vis 2025 🏆 Most Auspicious 🏆",
     pureJournal: "alt.vis",
     year: 2025,
     links: [

@@ -63,12 +63,13 @@ export function buildBibTexEntry(publication: Publication): string {
   }
   return `
 \`\`\`  
+
 @inproceedings{${key},
     title={${publication.title}},
     author    = {${formatAuthorsForLatex(publication.authors)}},
     journal   = {${publication.pureJournal}},
     year      = {${publication.year}}
-
 }
+
 \`\`\`  `;
 }
