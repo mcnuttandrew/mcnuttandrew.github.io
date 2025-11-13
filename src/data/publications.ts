@@ -101,6 +101,10 @@ export const PUBLICATIONS: Publication[] = [
         name: "video figure",
         link: "https://www.youtube.com/watch?v=1t3nWNnv6BE",
       },
+      {
+        name: "talk",
+        link: "https://youtu.be/3EozS40EBjc?si=SW0JwEpYIspZCzfw&t=2245",
+      },
     ],
     type: "conference / journal articles",
     subtype: "conference",
