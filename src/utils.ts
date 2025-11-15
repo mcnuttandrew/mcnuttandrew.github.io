@@ -55,9 +55,12 @@ function formatAuthorsForLatex(authors: string): string {
 }
 
 export function buildBibTexEntry(publication: Publication): string {
-  const name = publication.authors.split(",").at(0)?.split(" ").at(-1);
+  const name =
+    publication.authors.split(",").at(0)?.split(" ").at(-1)?.toLowerCase() ||
+    "";
   const titleKey = publication.title.split(" ").at(0);
-  const key = `${name}${publication.year}${publication.year}${titleKey}`;
+  const key =
+    `${name}${publication.year}${publication.year}${titleKey}`.replace(":", "");
   if (publication.type === "theses / book chapters") {
     return "";
   }
