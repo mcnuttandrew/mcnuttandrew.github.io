@@ -25,6 +25,7 @@
   $: preppedKeys = keys.map((x) => publication[x]).filter((x) => x) as string[];
   $: altSpace = publication.imgDescription.at(-1) === "." ? "" : ".";
   $: altText = `${publication.imgDescription}${altSpace} The image is drawn from ${publication.title}.`;
+  let copiedState = false;
 </script>
 
 <div class="flex-col mb-10" transition:slide>
@@ -97,6 +98,20 @@
   {#if bibTexOpen}
     <div class="text-sm abstract-content" transition:slide>
       {@html md.render(buildBibTexEntry(publication))}
+      <!-- copy the text -->
+      <button
+        class="mt-2 px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm"
+        class:font-bold={copiedState}
+        on:click={() => {
+          let entry = buildBibTexEntry(publication).slice(4, -5).trim(); // remove the <pre> tags
+
+          navigator.clipboard.writeText(entry);
+          copiedState = true;
+          setTimeout(() => (copiedState = false), 2000);
+        }}
+      >
+        {#if copiedState}Copied!{:else}Copy to clipboard{/if}
+      </button>
     </div>
   {/if}
   <div class="rounded-xl uppercase font-bold italic" />
