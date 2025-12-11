@@ -66,6 +66,31 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
+    link: "",
+    title: "Towards Scalable Visual Data Wrangling via Direct Manipulation",
+    urlTitle: "cidr-buckaroo",
+    imgLink: "assets/buckaroo-cidr.jpg",
+    imgDescription:
+      "An AI generated cartoon illustration of a child dressed as a cowboy riding a horse, he is a rope, apparently as a lasso",
+    authors:
+      "El Kindi Rezig, Mir Mahathir Mohammad, Nicolas Baret, Ricardo Mayerhofer, Andrew McNutt, Paul Rosen",
+    abstract:
+      "Data wrangling—the process of cleaning, transforming, and preparing data for analysis—is a well-known bottleneck in data science workflows. Existing tools either rely on manual scripting, which is error-prone and hard to debug, or automate cleaning through opaque black-box pipelines that offer limited control. We present Buckaroo, a scalable visual data wrangling system that restructures data preparation as a direct manipulation task over visualizations. Buckaroo enables users to explore and repair data anomalies—such as missing values, outliers, and type mismatches—by interacting directly with coordinated data visualizations. The system extensibly supports user-defined error detectors and wranglers, tracks provenance for undo/redo, and generates reproducible scripts for downstream tasks. Buckaroo maintains efficient indexing data structures and differential storage to localize anomaly detection and minimize recomputation. To demonstrate the applicability of our model, Buckaroo is integrated with the Hopara pan-and-zoom engine, which enables multi-layered navigation over large datasets without sacrificing interactivity. Through empirical evaluation and an expert review we show that Buckaroo makes visual data wrangling scalable—bridging the gap between visual inspection and programmable repairs.",
+    journal: "CIDR 2026",
+    pureJournal: "Conference on Innovative Data Systems Research",
+    year: 2026,
+    links: [
+      {
+        name: "code",
+        link: "https://github.com/shape-vis/BuckarooVisualWrangler",
+      },
+    ],
+    type: "conference / journal articles",
+    subtype: "conference",
+    theme: "programming-interfaces",
+    topics: ["Visualization Systems"],
+  },
+  {
     link: "https://arxiv.org/abs/2508.03876",
     urlTitle: "revisit-2",
     imgLink: "assets/revisit-py.jpg",
@@ -192,10 +217,6 @@ export const PUBLICATIONS: Publication[] = [
     year: 2025,
     links: [
       {
-        name: "osf",
-        link: "https://osf.io/preprints/metaarxiv/zg6xj_v1",
-      },
-      {
         name: "paper",
         link: "https://www.mcnutt.in/assets/charts_and_measures.pdf",
       },
@@ -309,7 +330,7 @@ outputs to be more open, interpretable and explorable in situ.
   },
 
   {
-    link: "",
+    link: "https://arxiv.org/pdf/2402.06071",
     urlTitle: "keyframer",
     imgLink: "assets/keyframer.jpg",
     imgDescription:
