@@ -99,6 +99,7 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   "Cristina David": "https://cristina-david.github.io/",
   "Alfonso Piscitelli":
     "https://scholar.google.com/citations?user=pfVqPQgAAAAJ&hl=en",
+  "Mir Mahathir Mohammad": "https://mirmahathir.com/",
 };
 
 const selectedPubs = new Set([
