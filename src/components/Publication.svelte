@@ -61,7 +61,7 @@
         {/if}
         <span>
           <span>
-            {`${publication.journal} ${publication.year} ${publication.note}`}
+            {`${publication.journal} ${publication.year} ${publication.note || ""}`}
           </span>
         </span>
       </div>
