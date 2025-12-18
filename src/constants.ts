@@ -112,45 +112,8 @@ const selectedPubs = new Set([
   "revisit-2",
 ]);
 export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((x) =>
-  selectedPubs.has(x.urlTitle)
+  selectedPubs.has(x.paperKey)
 );
-
-export const BLOG_POSTS = [
-  {
-    imgLink: "assets/tarot-image.jpg",
-    title:
-      "A Brief Saga Concerning the Making of a Tarot Deck About the American Highway System",
-    subtitle: "A little essay about making",
-    date: "Personal Blog. December 10, 2018",
-    link: "https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8",
-    links: [
-      {
-        name: "blog post",
-        link: "https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8",
-      },
-      { name: "github", link: "https://github.com/mcnuttandrew/tarot-deck" },
-    ],
-  },
-  {
-    imgLink: "assets/advanced-react-vis-pic.jpg",
-    title: "Advanced Visualization with react-vis",
-    subtitle:
-      "Using Voronois, single pass rendering, and canvas components for amazing user experiences",
-    date: "Towards Data Science. May 21, 2018",
-    link: "https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4",
-    links: [
-      {
-        name: "blog post",
-        link: "https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4",
-      },
-      // {name: 'talk', link: 'http://tinyurl.com/reactvisdesignpatterns'},
-      {
-        name: "code",
-        link: "https://github.com/mcnuttandrew/advanced-react-vis-tutorial",
-      },
-    ],
-  },
-];
 
 export const TEACHING = [
   {

@@ -5,7 +5,7 @@ interface Misc {
   link: string;
   imgLink: string;
   text: string;
-  tags: ("visualization" | "tech" | "art")[];
+  venue?: string;
 }
 
 export const MISC: Misc[] = [
@@ -17,7 +17,7 @@ export const MISC: Misc[] = [
     link: "https://svelte.dev/playground/0a00cf7ecd85493ab8eed603d5169d9d?version=5.34.6",
     imgLink: "assets/upset-svelte.jpg",
     text: "A simple implementation of an upset plot in Svelte",
-    tags: ["visualization", "tech"],
+    // tags: ["visualization", "tech"],
   },
   {
     title: "CDN/TDPS Template",
@@ -27,7 +27,15 @@ export const MISC: Misc[] = [
     link: "https://docs.google.com/spreadsheets/d/1_1D6WTnhZ60hw-u8CwP7SM_heWX8YR9KsWVq1mYGZOc/edit?usp=sharing",
     imgLink: "assets/cdn-tdps-template.jpg",
     text: "A template for conducting [Cognitive Dimensions](https://en.wikipedia.org/wiki/Cognitive_dimensions_of_notations) or [Technical Dimensions](https://tomasp.net/techdims/) analyses",
-    tags: ["tech"],
+    // tags: ["tech"],
+  },
+  {
+    title: "Getting your CHI diff ready",
+    dates: "2023",
+    link: "https://medium.com/@mcnutt/getting-your-chi-diff-ready-1714eb3c75f6",
+    imgLink: "assets/chi-diff.jpg",
+    text: "A guide for preparing your CHI diff for submission",
+    // tags: ["tech"],
   },
   {
     title: "Color Buddy",
@@ -36,7 +44,7 @@ export const MISC: Misc[] = [
     link: "https://color-buddy.netlify.app/",
     imgLink: "assets/color-buddy.jpg",
     text: "A modern color palette design system",
-    tags: ["visualization"],
+    // tags: ["visualization"],
   },
   {
     title: "Open Grad Positions in Visualization",
@@ -45,7 +53,7 @@ export const MISC: Misc[] = [
     link: "https://vis-phd-positions.netlify.app/",
     imgLink: "assets/open-vis-pos.jpg",
     text: "A collection of advertisements for open visualization PhD positions",
-    tags: ["visualization"],
+    // tags: ["visualization"],
   },
   {
     title: "Prong Editor",
@@ -54,7 +62,7 @@ export const MISC: Misc[] = [
     link: "http://prong-editor.netlify.app/",
     imgLink: "assets/prong-logo.jpg",
     text: "A projectional editor for JSON-based DSLs",
-    tags: ["visualization", "tech"],
+    // tags: ["visualization", "tech"],
   },
   {
     title: "Zines",
@@ -62,7 +70,7 @@ export const MISC: Misc[] = [
     link: "https://www.mcnutt.in/#/zines",
     imgLink: "assets/bison-eylsium-cover.jpg",
     text: "Zines are cool and I make them for various reasons",
-    tags: ["art", "tech", "visualization"],
+    // tags: ["art", "tech", "visualization"],
   },
 
   {
@@ -72,7 +80,7 @@ export const MISC: Misc[] = [
     link: "http://ivy-vis.netlify.app/",
     imgLink: "assets/ivy.jpg",
     text: "A meta-level approach to visual analytics. Information is Beautiful Awards '22 [Long List](https://www.informationisbeautifulawards.com/showcase/5139-ivy-integrated-visualization-editing-via-parameterized-declarative-templates).",
-    tags: ["visualization", "tech"],
+    // tags: ["visualization", "tech"],
   },
   {
     title: "table-cartogram.ts",
@@ -81,7 +89,7 @@ export const MISC: Misc[] = [
     link: "https://www.mcnutt.in/table-cartogram/",
     imgLink: "assets/taco-ts.jpg",
     text: "A library for constructing table cartograms in the browser.",
-    tags: ["visualization", "tech"],
+    // tags: ["visualization", "tech"],
   },
   {
     title: "Sortilège",
@@ -90,7 +98,7 @@ export const MISC: Misc[] = [
     link: "https://vis-tarot.github.io/vis-tarot/",
     imgLink: "assets/vis-tarot-back.jpg",
     text: "A tarot based visual analytics system. It guides users analytics process via the divine hands of fate.",
-    tags: ["visualization"],
+    // tags: ["visualization"],
   },
   // {
   //   title: "Data is Plural Search",
@@ -109,7 +117,7 @@ export const MISC: Misc[] = [
     link: "https://www.mcnutt.in/cycles-rain-seasons-in-size/",
     imgLink: "assets/cycles-in-rain.jpg",
     text: "A little infographic about bicycle ridership in Seattle featuring table cartograms. Information is Beautiful Awards '19 Long List.",
-    tags: ["visualization", "art"],
+    // tags: ["visualization", "art"],
   },
   {
     title: "CSSQL",
@@ -118,7 +126,7 @@ export const MISC: Misc[] = [
     link: "https://www.npmjs.com/package/node-cssql",
     imgLink: "assets/cssql-logo.jpg",
     text: "A new answer to this css-in-js question: css in sql. A sql-ddl to css transpiler written in haskell, available on npm.",
-    tags: ["tech"],
+    // tags: ["tech"],
   },
   {
     title: "Forum Explorer",
@@ -127,7 +135,7 @@ export const MISC: Misc[] = [
     link: "https://www.mcnutt.in/forum-explorer/",
     imgLink: "assets/forum-ex-pic.jpg",
     text: "A chrome extension and website that allows users to explore threaded conversations using trees.  Information is Beautiful Awards '19 Long List.",
-    tags: ["visualization", "tech"],
+    // tags: ["visualization", "tech"],
   },
   // {
   //   title: "tap-react-browser",
@@ -146,7 +154,7 @@ export const MISC: Misc[] = [
     imgLink: "assets/home-graphs.jpg",
     text: `Over the 2017 holidays I spent some time meditating on memory, home, and
     graph theory, which led to my making these christmas cards.`,
-    tags: ["visualization", "art"],
+    // tags: ["visualization", "art"],
   },
   {
     title: "On The Shape of American Cities I/II",
@@ -155,7 +163,7 @@ export const MISC: Misc[] = [
     sourceLink: "https://github.com/mcnuttandrew/city-size",
     imgLink: "assets/city-size.jpg",
     text: "A print graphic describing the shape of the 100 most populous American cities.",
-    tags: ["visualization", "art"],
+    // tags: ["visualization", "art"],
   },
   {
     title: "Pantone: Color of the year",
@@ -164,7 +172,7 @@ export const MISC: Misc[] = [
     sourceLink: "https://github.com/mcnuttandrew/color-of-the-year",
     imgLink: "assets/color-of-year.jpg",
     text: `A small exploration of the glory and wonder that is Pantone's color of the year.`,
-    tags: ["visualization"],
+    // tags: ["visualization"],
   },
   {
     title: "react-vis",
@@ -172,8 +180,8 @@ export const MISC: Misc[] = [
     link: "http://uber.github.io/react-vis/#/",
     sourceLink: "https://github.com/uber/react-vis",
     imgLink: "assets/react-vis-image.jpg",
-    text: "A charting library for the react ecosystem.",
-    tags: ["visualization", "tech"],
+    text: "A charting library for the react ecosystem. [Blog post](https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4)",
+    // tags: ["visualization", "tech"],
   },
   {
     title: "Unnamed Tarot Deck",
@@ -182,6 +190,6 @@ export const MISC: Misc[] = [
     sourceLink: "https://github.com/mcnuttandrew/tarot-deck",
     imgLink: "assets/tarot-image.jpg",
     text: "A tarot tech themed around the signage and spirit of the American highway system.",
-    tags: ["art"],
+    // tags: ["art"],
   },
 ];
