@@ -14,13 +14,6 @@ const routes = new Set([
 export function getRoute() {
   const locationSplit = location.href.split("/").filter((d) => d.length);
   const naiveLocation = locationSplit[locationSplit.length - 1].toLowerCase();
-  if (
-    location.href.includes("research") &&
-    naiveLocation !== "research" &&
-    PUBLICATIONS.map((d) => d.urlTitle).includes(naiveLocation)
-  ) {
-    return "show-page";
-  }
 
   return routes.has(naiveLocation) ? naiveLocation : "about";
 }
@@ -61,7 +54,7 @@ export function buildBibTexEntry(publication: Publication): string {
   const titleKey = publication.title.split(" ").at(0);
   const key =
     `${name}${publication.year}${publication.year}${titleKey}`.replace(":", "");
-  if (publication.type === "theses / book chapters") {
+  if (publication.type === "thesis") {
     return "";
   }
   return `
@@ -70,7 +63,7 @@ export function buildBibTexEntry(publication: Publication): string {
 @inproceedings{${key},
     title={${publication.title}},
     author    = {${formatAuthorsForLatex(publication.authors)}},
-    journal   = {${publication.pureJournal}},
+    journal   = {${publication.journal}},
     year      = {${publication.year}}
 }
 

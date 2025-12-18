@@ -142,17 +142,17 @@ export const NEWS = [
   {
     date: "June 2021",
     content:
-      "My paper on [table cartograms and algebraic visualization](https://www.mcnutt.in/#/research/tacos) won the honorable mention🏆 for best paper at EuroVis!",
+      "My paper on [table cartograms and algebraic visualization](https://arxiv.org/abs/2104.04042) won the honorable mention🏆 for best paper at EuroVis!",
   },
   {
     date: "March 2021",
     content:
-      'My paper ["What are Table Cartograms Good for Anyway? An Algebraic Analysis"](https://www.mcnutt.in/#/research/tacos) was accepted to EuroVIS 2021! 🌮🌮🌮🌮',
+      'My paper ["What are Table Cartograms Good for Anyway? An Algebraic Analysis"](https://arxiv.org/abs/2104.04042) was accepted to EuroVIS 2021! 🌮🌮🌮🌮',
   },
   {
     date: "January 2021",
     content:
-      'Our paper 🌱["Integrated Visualization Editing via Parameterized Declarative Templates"](https://www.mcnutt.in/#/research/ivy) was accepted to CHI 2021.',
+      'Our paper 🌱["Integrated Visualization Editing via Parameterized Declarative Templates"](https://arxiv.org/abs/2101.07902) was accepted to CHI 2021.',
   },
   {
     date: "October 2020",
@@ -167,12 +167,12 @@ export const NEWS = [
   {
     date: "March 2020",
     content:
-      'Our paper ["Surfacing Visualization Mirages"](https://www.mcnutt.in/#/research/mirage) won a best paper honorable mention🏆 at CHI2020!!',
+      'Our paper ["Surfacing Visualization Mirages"](https://arxiv.org/abs/2001.02316) won a best paper honorable mention🏆 at CHI2020!!',
   },
   {
     date: "February 2020",
     content:
-      'Our paper on using tarot for visual analytics ["Divining Insights: Visual Analytics Through Cartomancy"](https://www.mcnutt.in/#/research/tarot) was accepted to alt.chi 2020',
+      'Our paper on using tarot for visual analytics ["Divining Insights: Visual Analytics Through Cartomancy"](https://www.tableau.com/sites/default/files/2023-01/altchi-tarot-cameraready.pdf) was accepted to alt.chi 2020',
   },
   {
     date: "January 2020",

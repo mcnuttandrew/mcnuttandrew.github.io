@@ -11,7 +11,6 @@
   import Misc from "./components/Misc.svelte";
   import Publications from "./components/Publications.svelte";
   import Teaching from "./components/Teaching.svelte";
-  import ShowPage from "./components/ShowPage.svelte";
   import News from "./components/News.svelte";
   import Zines from "./components/Zines.svelte";
   import NewsItem from "./components/NewsItem.svelte";
@@ -98,8 +97,6 @@
     <div class="content-wrapper mb-11">
       {#if currentSection === "publications"}
         <Publications />
-      {:else if currentSection === "show-page"}
-        <ShowPage />
       {:else if currentSection === "misc"}
         <Misc />
       {:else if currentSection === "lab"}

@@ -1,8 +1,10 @@
 <script lang="ts">
   import { slide } from "svelte/transition";
   import { addLinks, buildBibTexEntry } from "../utils";
+  import store from "../store";
 
   import markdownit from "markdown-it";
+  export let showTopics = false;
   const md = markdownit({
     html: true,
     linkify: true,
@@ -21,8 +23,6 @@
     e.preventDefault();
     bibTexOpen = !bibTexOpen;
   }
-  const keys = ["subtitle", "journal"] as const;
-  $: preppedKeys = keys.map((x) => publication[x]).filter((x) => x) as string[];
   $: altSpace = publication.imgDescription.at(-1) === "." ? "" : ".";
   $: altText = `${publication.imgDescription}${altSpace} The image is drawn from ${publication.title}.`;
   let copiedState = false;
@@ -60,12 +60,35 @@
           <span>{@html md.render(addLinks(publication.authors))}</span>
         {/if}
         <span>
-          {#each preppedKeys as key}
-            <span>{@html md.render(key)}</span>
-          {/each}
+          <span>
+            {`${publication.journal} ${publication.year} ${publication.note}`}
+          </span>
         </span>
       </div>
-
+      {#if showTopics}
+        <div class="mt-1">
+          Topics:
+          {#each publication.topics as topic}
+            <button
+              class="text-xs px-2 py-1 mr-2 mb-2 bg-gray-200 rounded-full cursor-pointer hover:bg-gray-300 no-underline"
+              class:font-bold={$store.focusTopic.includes(topic)}
+              class:bg-gray-400={$store.focusTopic.includes(topic)}
+              class:text-white={$store.focusTopic.includes(topic)}
+              on:click={() => {
+                if (
+                  JSON.stringify($store.focusTopic) === JSON.stringify([topic])
+                ) {
+                  store.focusSet("");
+                } else {
+                  store.focusSet(topic);
+                }
+              }}
+            >
+              {topic}
+            </button>
+          {/each}
+        </div>
+      {/if}
       <div class="flex flex-wrap">
         {#each publication.links as { name, link }}<a
             class="publink text-cyan-800"
