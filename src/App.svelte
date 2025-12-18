@@ -92,7 +92,7 @@
       </div>
     {/if}
   </div>
-  <div class="px-4 md:w-1/2">
+  <div class="px-4 md:w-2/3 lg:w-1/2">
     <Header {currentSection} />
     <div class="content-wrapper mb-11">
       {#if currentSection === "publications"}
