@@ -46,7 +46,7 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
-    link: "",
+    link: "https://arxiv.org/abs/2512.18405",
     title: "Towards Scalable Visual Data Wrangling via Direct Manipulation",
     paperKey: "cidr-buckaroo",
     imgLink: "assets/buckaroo-cidr.jpg",
@@ -59,6 +59,10 @@ export const PUBLICATIONS: Publication[] = [
     journal: "Conference on Innovative Data Systems Research",
     year: 2026,
     links: [
+      {
+        name: "paper",
+        link: "https://arxiv.org/abs/2512.18405",
+      },
       {
         name: "code",
         link: "https://github.com/shape-vis/BuckarooVisualWrangler",
