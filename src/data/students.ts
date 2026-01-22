@@ -43,4 +43,9 @@ export const GROUP_PHOTOS: { image: string; altText: string }[] = [
     altText:
       'A diagonal oriented selfie of 5 people (from left to right: Shiyi He, Zach Cutler, Hima Mynampaty, Nathania Josephine, Andrew McNutt) standing in front of a a sign that reads "Kura Revolving Sushi"',
   },
+  {
+    image: "assets/havoc-mammoths-s26.jpg",
+    altText:
+      "A group photo of 5 people standing in front of a hockey rink, evidently substantially up from the rink in the bleachers. From left to right: Zach Cutler, Nathania Josephine, Andrew McNutt, Shiyi He, and Hima Mynampaty",
+  },
 ];
