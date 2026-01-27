@@ -1091,7 +1091,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     links: [
       {
         name: "paper",
-        link: "https://diglib.eg.org/xmlui/bitstream/handle/10.2312/eurp20191144/053-055.pdf",
+        link: "assets/forum-explorer-paper.pdf",
       },
       { name: "poster", link: "assets/forum-explorer-poster.pdf" },
       { name: "live", link: "https://www.mcnutt.in/forum-explorer/" },
