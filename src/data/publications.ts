@@ -431,6 +431,10 @@ outputs to be more open, interpretable and explorable in situ.
         name: "blog post",
         link: "https://vdl.sci.utah.edu/blog/",
       },
+      {
+        name: "studies",
+        link: "https://github.com/visdesignlab/Upset-alttxt-study",
+      },
     ],
     type: "paper",
     topics: ["Accessibility", "Visualization Systems"],
