@@ -468,6 +468,7 @@ outputs to be more open, interpretable and explorable in situ.
     title:
       "Slowness, Politics, and Joy: Values That Guide Technology Choices in Creative Coding Classrooms",
     authors: "Andrew McNutt, Sam Cohen, Ravi Chugh",
+    note: " 🏆 Honorable Mention for Best Paper 🏆",
     journal:
       "Proceedings of the ACM Conference on Human Factors in Computing (SIGCHI)",
     year: 2025,
