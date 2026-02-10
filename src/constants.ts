@@ -100,6 +100,10 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   "Alfonso Piscitelli":
     "https://scholar.google.com/citations?user=pfVqPQgAAAAJ&hl=en",
   "Mir Mahathir Mohammad": "https://mirmahathir.com/",
+  "Nathania Josephine": "https://sites.google.com/view/nathaniajosephine",
+  "Hima Mynampaty": "https://hima-mynampaty.vercel.app/",
+  "Dominic Orchard": "https://dorchard.github.io/",
+  "Joseph Bond": "http://jecbond.com/",
 };
 
 const selectedPubs = new Set([
@@ -112,7 +116,7 @@ const selectedPubs = new Set([
   "revisit-2",
 ]);
 export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((x) =>
-  selectedPubs.has(x.paperKey)
+  selectedPubs.has(x.paperKey),
 );
 
 export const TEACHING = [
