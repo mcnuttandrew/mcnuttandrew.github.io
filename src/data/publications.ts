@@ -46,6 +46,66 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
+    link: "https://arxiv.org/pdf/2507.17898",
+    paperKey: "same-data-different-audiences",
+    imgLink: "assets/same-data-different-audiences.jpg",
+    imgDescription:
+      "A cartoon bird wearing a shirt waving, it is standing in front a blurred screenshot of a data table",
+    title:
+      "Same Data, Different Audiences: Using Personas to Scope a Supercomputing Job Queue Visualization",
+    authors:
+      "Connor Scully-Allison, Kevin Menear, Kristin Potter, Andrew McNutt, Katherine E. Isaacs, Dmitry Duplyakin",
+    year: 2026,
+    journal: "IEEE Transactions on Visualization and Computer Graphics",
+    note: "(Journal)",
+    links: [
+      { name: "paper", link: "https://arxiv.org/pdf/2507.17898" },
+      { name: "code", link: "https://github.com/cscully-allison/guidepost" },
+    ],
+    type: "paper",
+    topics: ["Visualization Systems", "Programming Interfaces"],
+    abstract: `Domain-specific visualizations sometimes focus on narrow, albeit important, tasks for one group of users. This focus limits the utility of a visualization to other groups working with the same data. While tasks elicited from other groups can present a design pitfall if not disambiguated, they also present a design opportunity—development of visualizations that support multiple groups. This development choice presents a trade off of broadening the scope but limiting support for the more narrow tasks of any one group, which in some cases can enhance the overall utility of the visualization. We investigate this scenario through a design study where we develop Guidepost, a notebook-embedded visualization of supercomputer queue data that helps scientists assess supercomputer queue wait times, machine learning researchers understand prediction accuracy, and system maintainers analyze usage trends. We adapt the use of personas for visualization design from existing literature in the HCI and software engineering domains and apply them in categorizing tasks based on their uniqueness across the stakeholder personas. Under this model, tasks shared between all groups should be supported by interactive visualizations and tasks unique to each group can be deferred to scripting with notebook-embedded visualization design. We evaluate our visualization with nine expert analysts organized into two groups: a "research analyst" group that uses supercomputer queue data in their research (representing the Machine Learning researchers and Jobs Data Analyst personas) and a "supercomputer user" group that uses this data conditionally (representing the HPC User persona). We find that our visualization serves our three stakeholder groups by enabling users to successfully execute shared tasks with point-and-click interaction while facilitating case-specific programmatic analysis workflows.`,
+  },
+  {
+    link: "https://lintme.netlify.app/",
+    paperKey: "lintme",
+    imgLink: "assets/lintme.jpg",
+    imgDescription:
+      "A screenshot of markdown code with a linter showing that the line includes too many emojis",
+    title: "Linting Style and Substance in READMEs",
+    authors:
+      "Hima Mynampaty, Nathania Josephine, Katherine E. Isaacs, Andrew McNutt",
+    year: 2026,
+    journal:
+      "Proceedings of the ACM Conference on Human Factors in Computing (SIGCHI)",
+    links: [{ name: "live", link: "https://lintme.netlify.app/" }],
+    type: "paper",
+    topics: ["Linters / Correctness"],
+    abstract: `READMEs shape first impressions of software projects, yet what constitutes a good README varies across audiences and contexts. Research software needs reproducibility details, while open-source libraries might prioritize quick-start guides. Through a design probe, LintMe, we explore how linting can be used to improve READMEs given these diverse contexts, aiding style and content issues while preserving authorial agency. Users create context-specific checks using a lightweight DSL that uses a novel combination of programmatic operations (e.g., for broken links) with LLM-based content evaluation (e.g., for detecting jargon), yielding checks that would be challenging for prior linters. Through a user study (N=11), comparison with naive LLM usage, and an extensibility case study, we find that our design is approachable, flexible, and well matched with the needs of this domain. This work opens the door for linting more complex documentation and other culturally mediated text-based documents.`,
+  },
+  {
+    link: "https://f.luid.org/",
+    paperKey: "lit-exec-plateau",
+    imgLink: "assets/fluid.jpg",
+    imgDescription:
+      'The fluid logo, it says the word "fluid" in a purple, blocky font',
+    title: "Literate Execution",
+    authors:
+      "Joseph Bond, Jacob Pake, Cristina David, Andrew McNutt, Trevor Sseguya Muwonge, Dominic Orchard, Roly Perera",
+    journal: "PLATEAU Workshop",
+    year: 2026,
+    abstract: `Literate programming, introduced by Knuth, interleaves code and prose so that a program can be read as both executable and explanatory text. We propose _literate execution_, which inverts this relationship: rather than embedding code within a static narrative, we treat documentation --- and other expository elements such as visualisations --- as first-class artifacts that can be computed alongside a running program and then integrated into a view of its execution. We explore this idea through Fluid, a programming language with a provenance-tracking runtime that records fine-grained dependencies between inputs and outputs. These provenance relationships can be surfaced as interactions that allow readers to explore how intermediate values contribute to a result. By integrating visualisation, provenance, and exposition, literate execution aims to make programs more explorable and self-explanatory, and explorable explanations easier to program.
+  `,
+    links: [
+      {
+        name: "live",
+        link: "https://f.luid.org/",
+      },
+    ],
+    type: "workshop-paper",
+    topics: ["DSLs", "Visualization Systems"],
+  },
+  {
     link: "https://arxiv.org/abs/2512.18405",
     title: "Towards Scalable Visual Data Wrangling via Direct Manipulation",
     paperKey: "cidr-buckaroo",
@@ -312,7 +372,7 @@ outputs to be more open, interpretable and explorable in situ.
     abstract:
       "Creating 2D animations is challenging because it requires iterative refinement of movement and transitions across multiple elements within a scene. We explored the potential of LLMs to support animation design by first identifying current challenges in formative interviews with animation creators, and then developing a design probe and LLM-based animation design tool called Keyframer. From user-provided graphics and natural language prompts, Keyframer generates animation code, enables users to preview rendered animations inline, and supports direct edits for iterative design refinement. We utilized this design probe to uncover user prompting styles for describing animation in natural language and observe user strategies for iterating on animations in an exploratory user study with 13 novices and experts in animation design and programming. Through this study, we contribute a categorization of prompting styles users employed for specifying animation goals, along with design insights on supporting iterative refinement of animations through the combination of direct editing and natural language interfaces.",
     type: "paper",
-    topics: ["Programming Interfaces", "AI"],
+    topics: ["Programming Interfaces", "AI", "Creative Coding"],
   },
   {
     link: "https://arxiv.org/abs/2507.16073",
@@ -361,23 +421,7 @@ outputs to be more open, interpretable and explorable in situ.
     type: "book chapter",
     topics: ["Critical Visualization"],
   },
-  {
-    link: "https://arxiv.org/pdf/2507.17898",
-    paperKey: "same-data-different-audiences",
-    imgLink: "assets/same-data-different-audiences.jpg",
-    imgDescription:
-      "A cartoon bird wearing a shirt waving, it is standing in front a blurred screenshot of a data table",
-    title:
-      "Same Data, Different Audiences: Using Personas to Scope a Supercomputing Job Queue Visualization",
-    authors:
-      "Connor Scully-Allison, Kevin Menear, Kristin Potter, Andrew McNutt, Katherine E. Isaacs, Dmitry Duplyakin",
-    year: 2025,
-    journal: "preprint",
-    links: [{ name: "paper", link: "https://arxiv.org/pdf/2507.17898" }],
-    type: "paper",
-    topics: ["Visualization Systems", "Programming Interfaces"],
-    abstract: `Domain-specific visualizations sometimes focus on narrow, albeit important, tasks for one group of users. This focus limits the utility of a visualization to other groups working with the same data. While tasks elicited from other groups can present a design pitfall if not disambiguated, they also present a design opportunity—development of visualizations that support multiple groups. This development choice presents a trade off of broadening the scope but limiting support for the more narrow tasks of any one group, which in some cases can enhance the overall utility of the visualization. We investigate this scenario through a design study where we develop Guidepost, a notebook-embedded visualization of supercomputer queue data that helps scientists assess supercomputer queue wait times, machine learning researchers understand prediction accuracy, and system maintainers analyze usage trends. We adapt the use of personas for visualization design from existing literature in the HCI and software engineering domains and apply them in categorizing tasks based on their uniqueness across the stakeholder personas. Under this model, tasks shared between all groups should be supported by interactive visualizations and tasks unique to each group can be deferred to scripting with notebook-embedded visualization design. We evaluate our visualization with nine expert analysts organized into two groups: a "research analyst" group that uses supercomputer queue data in their research (representing the Machine Learning researchers and Jobs Data Analyst personas) and a "supercomputer user" group that uses this data conditionally (representing the HPC User persona). We find that our visualization serves our three stakeholder groups by enabling users to successfully execute shared tasks with point-and-click interaction while facilitating case-specific programmatic analysis workflows.`,
-  },
+
   {
     link: "https://github.com/revisit-studies/revisitpy",
     paperKey: "revisit-py",
@@ -455,7 +499,7 @@ outputs to be more open, interpretable and explorable in situ.
     year: 2025,
     links: [{ name: "paper", link: "https://arxiv.org/abs/2502.07649" }],
     type: "paper",
-    topics: ["Visualization Correctness", "Sociotechnical Factors"],
+    topics: ["Linters / Correctness", "Sociotechnical Factors"],
     abstract:
       "Traditionally, linters are code analysis tools that help developers by flagging potential issues from syntax and logic errors to enforcing syntactical and stylistic conventions. Recently, linting has been taken as an interface metaphor, allowing it to be extended to more complex inputs, such as visualizations, which demand a broader perspective and alternative approach to evaluation. We explore a further extended consideration of linting inputs, and modes of evaluation, across the puritanical, neutral, and rebellious dimensions. We specifically investigate the potential for leveraging human computation in linting operations through Community Notes---crowd-sourced contextual text snippets aimed at checking and critiquing potentially accurate or misleading content on social media. We demonstrate that human-powered assessments not only identify misleading or error-prone visualizations but that integrating human computation enhances traditional linting by offering social insights. As is required these days, we consider the implications of building linters powered by Artificial Intelligence.",
   },
@@ -512,7 +556,7 @@ outputs to be more open, interpretable and explorable in situ.
     ],
     abstract: `Visualization linters are end-user facing evaluators that automatically identify potential chart issues. These spell-checker like systems offer a blend of interpretability and customization that is not found in other forms of automated assistance. However, existing linters do not model context and have primarily targeted users who do not need assistance, resulting in obvious—even annoying—advice. We investigate these issues within the domain of color palette design, which serves as a microcosm of visualization design concerns. We contribute a GUI-based color palette linter as a design probe that covers perception, accessibility, context, and other design criteria, and use it to explore visual explanations, integrated fixes, and user defined linting rules. Through a formative interview study and theory-driven analysis, we find that linters can be meaningfully integrated into graphical contexts thereby addressing many of their core issues. We discuss implications for integrating linters into visualization tools, developing improved assertion languages, and supporting end-user tunable advice—all laying the groundwork for more effective visualization linters in any context.`,
     type: "paper",
-    topics: ["Visualization Correctness", "Accessibility", "DSLs"],
+    topics: ["Linters / Correctness", "Accessibility", "DSLs"],
   },
   {
     link: "https://arxiv.org/abs/2407.20103",
@@ -733,7 +777,11 @@ We primarily consider languages focused on data visualization tasks, as there ha
     abstract:
       "Creative coding is a rapidly expanding domain for both artistic expression and computational education. Numerous libraries and IDEs support creative coding, however there has been little consideration of how the environments themselves might be designed to serve these twin goals. To investigate this gap, we implemented and used an experimental editor to teach a sequence of college and high-school creative coding courses. In the first year, we conducted a log analysis of student work (n=39) and surveys regarding prospective features (n=25). These guided our implementation of common enhancements (e.g. color pickers) as well as uncommon ones (e.g. bidirectional shape editing). In the second year, we studied the effects of these features through logging (n=39+) and survey (n=23) studies. Reflecting on the results, we identify opportunities to improve creativity- and novice-focused IDEs and highlight tensions in their design (as in tools that augment artistry or efficiency but may hinder learning).",
     type: "paper",
-    topics: ["Creative Coding", "Programming Interfaces"],
+    topics: [
+      "Creative Coding",
+      "Programming Interfaces",
+      "Linters / Correctness",
+    ],
   },
   {
     link: "https://arxiv.org/abs/2207.07998",
@@ -901,7 +949,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     abstract: `Unfamiliar or esoteric visual forms arise in many areas of visualization. While such forms can be intriguing, it can be unclear how to make effective use of them without long periods of practice or costly user studies. In this work we analyze the table cartogram—a graphic which visualizes tabular data by bringing the areas of a grid of quadrilaterals into correspondence with the input data, like a heat map that has been *area-ed* rather than colored. Despite having existed for several years, little is known about its appropriate usage. We mend this gap by using Algebraic Visualization Design to show that they are best suited to relatively small tables with ordinal axes for some comparison and outlier identification tasks. In doing so we demonstrate a discount theory-based analysis that can be used to cheaply determine best practices for unknown visualizations.
     `,
     type: "paper",
-    topics: ["Visualization Correctness"],
+    topics: ["Linters / Correctness"],
   },
   {
     link: "https://arxiv.org/abs/2101.07902",
@@ -1008,7 +1056,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     abstract:
       "Dirty data and deceptive design practices can undermine, invert, or invalidate the purported messages of charts and graphs. These failures can arise silently: a conclusion derived from a particular visualization may look plausible unless the analyst looks closer and discovers an issue with the backing data, visual specification, or their own assumptions. We term such silent but significant failures visualization mirages. We describe a conceptual model of mirages and show how they can be generated at every stage of the visual analytics process. We adapt a methodology from software testing, metamorphic testing, as a way of automatically surfacing potential mirages at the visual encoding stage of analysis through modifications to the underlying data and chart specification. We show that metamorphic testing can reliably identify mirages across a variety of chart types with relatively little prior knowledge of the data or the domain.",
     type: "paper",
-    topics: ["Visualization Correctness"],
+    topics: ["Linters / Correctness"],
   },
   {
     link: "https://www.tableau.com/sites/default/files/2023-01/altchi-tarot-cameraready.pdf",
@@ -1128,7 +1176,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     abstract:
       " Constructing effective charts and graphs in a scientific setting is a nuanced task that requires a thorough understanding of visualization design; a knowledge that may not be available to all practicing scientists. Previous attempts to address this problem have pushed chart creators to pore over large collections of guidelines and heuristics, or to relegate their entire workflow to end-to-end tools that provide automated recommendations. In this paper we bring together these two strains of ideas by introducing the use of lint as a mechanism for guiding chart creators towards effective visualizations in a manner that can be configured to taste and task without forcing users to abandon their usual workflows. The programmatic evaluation model of visualization linting (or vis lint) offers a compelling framework for the automation of visualization guidelines, as it offers unambiguous feedback during the chart creation process, and can execute analyses derived from machine vision and natural language processing. We demonstrate the feasibility of this system through the production of vislint_mpl, a prototype visualization linting system, that evaluates charts created in matplotlib.",
     type: "workshop-paper",
-    topics: ["Visualization Correctness"],
+    topics: ["Linters / Correctness"],
   },
   {
     link: "https://link.springer.com/protocol/10.1007/978-1-4939-7724-6_14",
