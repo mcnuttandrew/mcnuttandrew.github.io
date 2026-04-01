@@ -10,6 +10,7 @@ const routes = new Set([
   "news",
   "misc",
   "hiring-24",
+  "full-bib",
 ]);
 export function getRoute() {
   const locationSplit = location.href.split("/").filter((d) => d.length);
@@ -52,19 +53,36 @@ export function buildBibTexEntry(publication: Publication): string {
     publication.authors.split(",").at(0)?.split(" ").at(-1)?.toLowerCase() ||
     "";
   const titleKey = publication.title.split(" ").at(0);
-  const key =
-    `${name}${publication.year}${publication.year}${titleKey}`.replace(":", "");
-  if (publication.type === "thesis") {
-    return "";
+  const entryType =
+    publication.type === "thesis" ? "phdthesis" : "inproceedings";
+  let key = `${name}${publication.year}${publication.year}${titleKey}`.replace(
+    ":",
+    "",
+  );
+
+  const fields: Record<string, string | number> = {
+    title: publication.title,
+    author: formatAuthorsForLatex(publication.authors),
+    journal: publication.journal,
+    year: publication.year,
+  };
+  if (publication.doi !== "NA") {
+    fields.doi = publication.doi;
   }
+  // console.log(publication);
+  console.log("what", publication.type);
+  if (publication.type === "thesis") {
+    fields.authors = publication.authors;
+    key = publication.paperKey || key;
+  }
+
   return `
 \`\`\`  
 
-@inproceedings{${key},
-    title={${publication.title}},
-    author    = {${formatAuthorsForLatex(publication.authors)}},
-    journal   = {${publication.journal}},
-    year      = {${publication.year}}
+@${entryType}{${key},
+  ${Object.entries(fields)
+    .map(([k, v]) => `${k} = {${v}}`)
+    .join(",\n  ")}
 }
 
 \`\`\`  `;

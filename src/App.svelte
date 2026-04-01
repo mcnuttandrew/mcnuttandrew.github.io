@@ -22,6 +22,7 @@
   import Post from "./components/Post.svelte";
 
   import { getRoute } from "./utils";
+  import FullBib from "./components/FullBib.svelte";
 
   let currentSection = getRoute();
   window.onhashchange = () => {
@@ -109,6 +110,8 @@
         <Zines />
       {:else if currentSection === "hiring-24"}
         <Post content={HIRING24} />
+      {:else if currentSection === "full-bib"}
+        <FullBib />
       {:else}
         <About />
       {/if}

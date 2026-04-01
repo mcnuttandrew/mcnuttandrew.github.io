@@ -22,26 +22,34 @@ type Link =
   | `http://${string}`
   | `assets/${string}`
   | `talks/${string}`;
+
+type DOI =
+  | `10.${number}/${string}`
+  | `10.${number}.${number}/${string}`
+  | "NA"
+  | "TBD";
+type PaperType =
+  | "paper"
+  | "thesis"
+  | "book chapter"
+  | "demo"
+  | "poster"
+  | "workshop-paper";
 export interface Publication {
-  link: string;
-  paperKey: string;
-  imgLink: string;
-  imgDescription: string;
-  title: string;
-  authors: string;
-  journal: string;
-  links: { name: linkType; link: Link }[];
   abstract: string;
-  year: number;
-  topics: string[];
+  authors: string;
+  doi: DOI;
+  imgDescription: string;
+  imgLink: string;
+  journal: string;
+  link: string;
+  links: { name: linkType; link: Link }[];
   note?: string;
-  type:
-    | "paper"
-    | "thesis"
-    | "book chapter"
-    | "demo"
-    | "poster"
-    | "workshop-paper";
+  paperKey: string;
+  title: string;
+  topics: string[];
+  type: PaperType;
+  year: number;
 }
 
 export const PUBLICATIONS: Publication[] = [
@@ -53,6 +61,7 @@ export const PUBLICATIONS: Publication[] = [
       "A cartoon bird wearing a shirt waving, it is standing in front a blurred screenshot of a data table",
     title:
       "Same Data, Different Audiences: Using Personas to Scope a Supercomputing Job Queue Visualization",
+    doi: "10.1109/tvcg.2026.3666137",
     authors:
       "Connor Scully-Allison, Kevin Menear, Kristin Potter, Andrew McNutt, Katherine E. Isaacs, Dmitry Duplyakin",
     year: 2026,
@@ -73,6 +82,7 @@ export const PUBLICATIONS: Publication[] = [
     imgDescription:
       "A screenshot of markdown code with a linter showing that the line includes too many emojis",
     title: "Linting Style and Substance in READMEs",
+    doi: "10.1145/3706599.3716230",
     authors:
       "Hima Mynampaty, Nathania Josephine, Katherine E. Isaacs, Andrew McNutt",
     year: 2026,
@@ -96,6 +106,7 @@ export const PUBLICATIONS: Publication[] = [
     authors:
       "Joseph Bond, Jacob Pake, Cristina David, Andrew McNutt, Trevor Sseguya Muwonge, Dominic Orchard, Roly Perera",
     journal: "PLATEAU Workshop",
+    doi: "NA",
     year: 2026,
     abstract: `Literate programming, introduced by Knuth, interleaves code and prose so that a program can be read as both executable and explanatory text. We propose _literate execution_, which inverts this relationship: rather than embedding code within a static narrative, we treat documentation --- and other expository elements such as visualisations --- as first-class artifacts that can be computed alongside a running program and then integrated into a view of its execution. We explore this idea through Fluid, a programming language with a provenance-tracking runtime that records fine-grained dependencies between inputs and outputs. These provenance relationships can be surfaced as interactions that allow readers to explore how intermediate values contribute to a result. By integrating visualisation, provenance, and exposition, literate execution aims to make programs more explorable and self-explanatory, and explorable explanations easier to program.
   `,
@@ -117,6 +128,7 @@ export const PUBLICATIONS: Publication[] = [
       "An AI generated cartoon illustration of a child dressed as a cowboy riding a horse, he is a rope, apparently as a lasso",
     authors:
       "El Kindi Rezig, Mir Mahathir Mohammad, Nicolas Baret, Ricardo Mayerhofer, Andrew McNutt, Paul Rosen",
+    doi: "TBD",
     abstract:
       "Data wrangling—the process of cleaning, transforming, and preparing data for analysis—is a well-known bottleneck in data science workflows. Existing tools either rely on manual scripting, which is error-prone and hard to debug, or automate cleaning through opaque black-box pipelines that offer limited control. We present Buckaroo, a scalable visual data wrangling system that restructures data preparation as a direct manipulation task over visualizations. Buckaroo enables users to explore and repair data anomalies—such as missing values, outliers, and type mismatches—by interacting directly with coordinated data visualizations. The system extensibly supports user-defined error detectors and wranglers, tracks provenance for undo/redo, and generates reproducible scripts for downstream tasks. Buckaroo maintains efficient indexing data structures and differential storage to localize anomaly detection and minimize recomputation. To demonstrate the applicability of our model, Buckaroo is integrated with the Hopara pan-and-zoom engine, which enables multi-layered navigation over large datasets without sacrificing interactivity. Through empirical evaluation and an expert review we show that Buckaroo makes visual data wrangling scalable—bridging the gap between visual inspection and programmable repairs.",
     journal: "Conference on Innovative Data Systems Research",
@@ -140,6 +152,7 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: "assets/revisit-py.jpg",
     imgDescription: "The reVISit logo",
     title: "ReVISit 2: A Full Experiment Life Cycle User Study Framework",
+    doi: "10.1109/tvcg.2025.3633896",
     authors:
       "Zach Cutler, Jack Wilburn, Hilson Shrestha, Yiren Ding, Brian C Bollen, Khandaker Abrar Nadib, Tingying He, Andrew McNutt, Lane Harrison, Alexander Lex",
     note: "🏆 Best Paper 🏆",
@@ -187,6 +200,7 @@ export const PUBLICATIONS: Publication[] = [
     imgDescription:
       "A screenshot of the Vega-Lite Annotation tool, it shows a chart with annotations.",
     title: "AnnoGram: An Annotative Grammar of Graphics Extension",
+    doi: "10.1109/vis60296.2025.00053",
     authors:
       "Md Dilshadur Rahman, Md Rahat-uz-Zaman, Andrew McNutt, Paul Rosen",
     journal: "Proceedings of IEEE VIS (Short Papers)",
@@ -217,6 +231,7 @@ export const PUBLICATIONS: Publication[] = [
     imgDescription:
       'A pile of zines, the ones on top read "Feminist & Queer HCI" and "Enough is a Beginning: Designing Futures within Limits"',
     title: "Teaching Critical Visualization: A Field Report",
+    doi: "NA",
     authors:
       "Andrew McNutt, Shiyi He, Sujit Kumar Kamaraj, Purbid Bambroo, Nastaran Jadidi, John Bovard, Chang Han",
     abstract:
@@ -238,6 +253,7 @@ export const PUBLICATIONS: Publication[] = [
     imgDescription:
       "A poorly rendered AI generated version of a New Yorkers cartoon. It shows a cowboy trying to teaching about visualization on a chalk board to a group of lobster people.",
     title: "Charts and Measures",
+    doi: "NA",
     authors: "Andrew McNutt",
     abstract:
       "alt.vis has gone mainstream. What else can be thought of a venue that has reached its fourth edition besides that is has become institutionalized? Enured to the real truths and harsh realities of the world surrounding us, alt.vis no longer has the aesthetic clarity or purity to conduct its much-needed work. To rectify this issue, we propose a new workshop housed within the alt.vis workshop entitled ``Charts and Measures''---housed within the now-conventional alt.vis. To ensure the alternative integrity of this new venue, we limit submissions to only those approved to submit by the organizing committee, both of which are composed of Andrew McNutt. These proceedings include a range of topics, such as the inherent imperialism of some research fields, to quagmires we have found ourselves struggling through. ",
@@ -265,6 +281,7 @@ export const PUBLICATIONS: Publication[] = [
       "A poorly rendered AI generated version of a New Yorkers cartoon. It shows a cowboy trying to teaching about visualization on a chalk board to a group of lobster people.",
     title:
       "The Feng Shui of Visualization: Design the Path to SUCCESS and GOOD FORTUNE",
+    doi: "NA",
     authors: "Chang Han, Andrew McNutt",
     abstract:
       "Superstition and religious belief system have historically shaped human behavior, offering powerful psychological motivations and persuasive frameworks to guide actions. Inspired by Feng Shui---an ancient Chinese superstition---this paper proposes a pseudo-theoretical framework that integrates superstition-like heuristics into visualization design. Rather than seeking empirical truth, this framework leverages culturally resonant (superstitious) narratives and symbolic metaphors as persuasive tools to encourage desirable design practices, such as clarity, accessibility, and audience-centered thinking. We articulate a set of visualization designs into a Feng Shui compass, reframing empirical design principles and guidelines within an engaing mythology. We present how visualization design principles can be intepreted in Feng Shui narratives, discussing the potential of these metaphorical principles in reducing designer anxiety, fostering community norms, and enhancing the memorability and internalization of visualization design guidelines. Finally, we discuss Feng Shui visualization theory as a set of cognitive shortcuts that can exert persuasive power through playful, belief-like activities.",
@@ -293,6 +310,7 @@ export const PUBLICATIONS: Publication[] = [
     title: "Language-Based Dependency-Tracking for Explorables",
     authors:
       "Roly Perera, Joseph Bond, Cristina David, Andrew McNutt, Alfonso Piscitelli",
+    doi: "NA",
     journal: "LIVE Workshop",
     year: 2025,
     abstract: `Explorable explanations are interactive web essays that explain challenging technical ideas. For example, an elegant distill.pub article explains matrix convolution and related ideas like receptive field, important notions in CNNs that also have applications in image processing. Educational efforts like these are valuable but labour-intensive, especially for the kind of interactive graphics we might like to use in order to illustrate how an algorithm like convolution works.
@@ -317,6 +335,7 @@ export const PUBLICATIONS: Publication[] = [
     title: "Authoring Tools for Transparent Climate Reporting",
     authors:
       "Roly Perera, Joseph Bond, Cristina David, Andrew McNutt, Alfonso Piscitelli",
+    doi: "NA",
     journal: "ACM SIGPLAN International Workshop on Programming for the Planet",
     year: 2025,
     abstract: `Energy transition and decarbonisation, adaptation to climate change, risk mitigation strategies and
@@ -355,6 +374,7 @@ outputs to be more open, interpretable and explorable in situ.
     title:
       "Keyframer: A Design Probe for Exploring LLM Assistance in 2D Animation Design",
     authors: "Tiffany Tseng, Ruijia Cheng, Andrew McNutt, Jeffrey Nichols",
+    doi: "10.1109/vl-hcc65237.2025.00014",
     journal:
       "IEEE Symposium on Visual Languages and Human Centered Computing (Short Papers)",
     year: 2025,
@@ -383,6 +403,7 @@ outputs to be more open, interpretable and explorable in situ.
     imgLink: "assets/buckaroo-demo.jpg",
     imgDescription: "A flow chart showing the buckaroo system architecture",
     title: "Buckaroo: A Direct Manipulation Visual Data Wrangler",
+    doi: "10.14778/3750601.3750687",
     authors: "Annabelle Warner, Andrew McNutt, Paul Rosen, El Kindi Rezig",
     journal: "Proceedings of the VLDB Endowment (Demo)",
     year: 2025,
@@ -404,6 +425,7 @@ outputs to be more open, interpretable and explorable in situ.
     imgDescription:
       "The cover of a magazine, it reads 'Computer Graphics & Applications Critical Data Visualization Part i'",
     title: "Critical Data Visualization—Part I/II",
+    doi: "10.1109/mcg.2025.3579638",
     authors:
       "Georgia Panagiotidou, Andrew McNutt, Derya Akbaba, Nicole Hengesbach, Miriah Meyer",
     note: " — Special Issue Introduction",
@@ -431,6 +453,7 @@ outputs to be more open, interpretable and explorable in situ.
     imgLink: "assets/revisit-py.jpg",
     imgDescription: "The reVISit logo",
     title: "ReVISitPy: Python Bindings for the reVISit Study Framework",
+    doi: "10.2312/evp.20251133",
     authors:
       "Hilson Shrestha, Jack Wilburn, Brian Bollen, Andrew McNutt, Alexander Lex, Lane Harrison",
     journal:
@@ -455,6 +478,7 @@ outputs to be more open, interpretable and explorable in situ.
     imgDescription:
       "An annotated upset plot. The upset plot is about tennis data.",
     title: "Accessible Text Descriptions for UpSet Plots",
+    doi: "10.1109/accessviz64636.2024.00005",
     authors:
       "Andrew McNutt, Maggie K McCracken, Ishrat Jahan Eliza, Daniel Hajas, Jake Wagoner, Nate Lanza, Jack Wilburn, Sarah Creem-Regehr, Alexander Lex",
     journal: "Computer Graphics Forum (EuroVis)",
@@ -497,6 +521,7 @@ outputs to be more open, interpretable and explorable in situ.
     title:
       "Linting is People! Exploring the Potential of Human Computation as a Sociotechnical Linter of Data Visualizations",
     authors: "Anamaria Crisan, Andrew McNutt",
+    doi: "10.1145/3706599.3716230",
     journal:
       "Extended Abstracts of the ACM Conference on Human Factors in Computing (alt.chi)",
     year: 2025,
@@ -514,6 +539,7 @@ outputs to be more open, interpretable and explorable in situ.
       'A colorful logo that reads "Slowness, Politics, and Joy" in a geometric bauhaus style',
     title:
       "Slowness, Politics, and Joy: Values That Guide Technology Choices in Creative Coding Classrooms",
+    doi: "10.31219/osf.io/83z94_v1",
     authors: "Andrew McNutt, Sam Cohen, Ravi Chugh",
     note: " 🏆 Honorable Mention for Best Paper 🏆",
     journal:
@@ -535,6 +561,7 @@ outputs to be more open, interpretable and explorable in situ.
     imgDescription:
       "A colorful logo consisting of a series of segmented rings. They vaguely form the shape of an eye.",
     title: "Mixing Linters with GUIs: A Color Palette Design Probe",
+    doi: "10.1109/tvcg.2024.3456317",
     authors: "Andrew McNutt, Maureen C. Stone, Jeffrey Heer",
     journal: "IEEE Transactions on Visualization and Computer Graphics",
     year: 2024,
@@ -567,6 +594,7 @@ outputs to be more open, interpretable and explorable in situ.
     imgLink: "assets/ue-pb.jpg",
     imgDescription:
       "A illustration showing someone standing in front an apartment building upset about the loud traffic going by",
+    doi: "10.1109/tvcg.2024.3456343",
     title:
       "What Can Interactive Visualization do for Participatory Budgeting in Chicago?",
     authors:
@@ -591,6 +619,7 @@ outputs to be more open, interpretable and explorable in situ.
     imgLink: "assets/gallery-study.jpg",
     imgDescription: "A labeled screenshot of several example galleries",
     title: "Considering Visualization Example Galleries",
+    doi: "10.1109/vl/hcc60511.2024.00043",
     authors: "Junran Yang, Andrew McNutt, Leilani Battle",
     journal: "IEEE Symposium on Visual Languages and Human Centered Computing",
     year: 2024,
@@ -609,6 +638,7 @@ outputs to be more open, interpretable and explorable in situ.
     paperKey: "woz-ai",
     imgLink: "assets/woz.jpg",
     imgDescription: "A cartoon wizard",
+    doi: "10.1145/3613904.3641891",
     title:
       "How Do Data Analysts Respond to AI Assistance? A Wizard-of-Oz Study",
     authors:
@@ -636,6 +666,7 @@ outputs to be more open, interpretable and explorable in situ.
     title: "Only YOU Can Make IEEE VIS Environmentally Sustainable",
     authors: "Elsie Lee-Robbins, Andrew McNutt",
     note: "🏆Smokey's Favorite🏆",
+    doi: "NA",
     journal: "alt.vis",
     year: 2023,
     links: [
@@ -653,6 +684,7 @@ outputs to be more open, interpretable and explorable in situ.
     imgDescription:
       "An abstract logo featuring four braided lines of different colors.",
     title: "Metrics-Based Evaluation and Comparison of Visualization Notations",
+    doi: "10.1109/tvcg.2023.3326907",
     authors: "Nicolas Kruchten, Andrew McNutt, Michael J. McGuffin",
     journal: "IEEE Transactions on Visualization and Computer Graphics",
     year: 2023,
@@ -677,6 +709,7 @@ outputs to be more open, interpretable and explorable in situ.
     imgDescription:
       "An abstract logo, at its center are a pair of curly braces. They are surrounded by rotated and scaled curly braces.",
     title: "Projectional Editors for JSON-Based DSLs",
+    doi: "10.1109/vl-hcc57772.2023.00015",
     authors: "Andrew McNutt, Ravi Chugh",
     journal:
       "IEEE Symposium on Visual Languages and Human Centered Computing (Short Papers)",
@@ -695,15 +728,17 @@ We describe a relatively inexpensive way to build rich projectional editors for 
   },
   {
     link: "https://osf.io/fy246",
-    paperKey: "phd-thesis",
+    paperKey: "mcnutt23thesis",
     imgLink: "assets/phd-thesis.jpg",
     imgDescription:
       "Four arrows stacked vertically, each pointing to the right. They are labeled Design, Abstraction, Manipulation, and Validation.",
     title:
       "Understanding and Enhancing JSON-based DSL Interfaces for Visualization",
     authors: "Andrew McNutt (advised by Ravi Chugh)",
+
     note: "- University of Chicago, Department of Computer Science",
     journal: "Ph.D. Thesis",
+    doi: "10.31219/osf.io/fy246",
     year: 2023,
     links: [
       { name: "paper", link: "https://osf.io/fy246" },
@@ -719,7 +754,7 @@ In support of this goal, we conducted four interconnected projects which various
 Through these projects, we demonstrate that giving primacy to these textual interfaces as design elements can be valuable for end users.
 We find that this style of interventions are useful for helping end users learn, use, and re-use programs written in these languages.
 We primarily consider languages focused on data visualization tasks, as there has been substantial work in the visualization research community on this form of interface—although the lessons learned could be applied to any relevant domain.`,
-    type: "paper",
+    type: "thesis",
     topics: ["Visualization Systems", "Programming Interfaces", "DSLs"],
   },
   {
@@ -730,6 +765,8 @@ We primarily consider languages focused on data visualization tasks, as there ha
       "An ai generated image that combines jackson pollack style platter painting with what appears to be some sort of radial visualization.",
     title:
       "Doom or Deliciousness: Challenges and Opportunities for Visualization in the Age of Generative Models",
+    doi: "10.1111/cgf.14841",
+
     authors:
       "Victor Schetinger, Sara Di Bartolomeo, Mennatallah El-Assady, Andrew McNutt, Matthias Miller, João Paulo Apolinário Passos, Jane L. Adams",
     journal: "Computer Graphics Forum (EuroVis)",
@@ -749,6 +786,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     imgDescription:
       "A cartoon of an open hand roughly pointed roughly upwards. It is surrounded by a blue circle.",
     title: "On the Design of AI-powered Code Assistants for Notebooks",
+    doi: "10.1145/3544548.3580940",
     authors: "Andrew McNutt, Chenglong Wang, Rob DeLine, Steven M. Drucker",
     journal:
       "Proceedings of the ACM Conference on Human Factors in Computing (SIGCHI)",
@@ -769,6 +807,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
       "A labeled screenshot of a creative coding editor. The right hand side appears to be making a smiley face.",
     title: "A Study of Editor Features in a Creative Coding Classroom",
     authors: "Andrew McNutt, Anton Outkine, Ravi Chugh",
+    doi: "10.1145/3544548.3580683",
     journal:
       "Proceedings of the ACM Conference on Human Factors in Computing (SIGCHI)",
     year: 2023,
@@ -795,6 +834,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     title:
       "No Grammar to Rule Them All: A Survey of JSON-Style DSLs for Visualization",
     authors: "Andrew McNutt",
+    doi: "10.1109/tvcg.2022.3209460",
     year: 2022,
     journal: "IEEE Transactions on Visualization and Computer Graphics",
     links: [
@@ -819,6 +859,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     link: "https://link.springer.com/article/10.1007/s12064-022-00376-8",
     paperKey: "goethe-candolle",
     imgLink: "assets/goethe-candolle.jpg",
+    doi: "10.1007/s12064-022-00376-8",
     imgDescription:
       "A black and white geometric circle diagram, parts of it are labeled but are in latin.",
     title: "Goethe and Candolle: National forms of scientific writing?",
@@ -844,6 +885,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
       "A screenshot of a user interface including a bunch of text. One word is highlighted and a hand indicates that the user is clicking on it.",
     title:
       "Explaining Why: How Instructions and User Interfaces Impact Annotator Rationales When Labeling Text Data",
+    doi: "10.18653/v1/2022.naacl-main.38",
     authors:
       "Jamar L. Sullivan, Will Brackenbury, Andrew McNutt, Kevin Bryson, Kwam Byll, Yuxin Chen, Michael Littman, Chenhao Tan, Blase Ur",
     journal:
@@ -877,6 +919,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     title: "Visualization for Villainy",
     authors: "Andrew McNutt, Lilian Huang, Kathryn Koenig",
     journal: "alt.vis",
+    doi: "NA",
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2109.06007" },
       { name: "talk", link: "https://youtu.be/jFbsYto_2ys?t=1471" },
@@ -895,6 +938,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
       "A diagram of a file structure, a closed hand is indicating that the user is moving a file into a folder.",
     title:
       "KondoCloud: Improving Information Management in Cloud Storage via Recommendations Based on File Similarity",
+    doi: "10.1145/3472749.3474736",
     authors:
       "Will Brackenbury, Andrew McNutt, Kyle Chard, Aaron Elmore, Blase Ur",
     journal: "ACM Symposium on User Interface Systems and Technologies",
@@ -913,7 +957,8 @@ We primarily consider languages focused on data visualization tasks, as there ha
   },
   {
     link: "https://www.mcnutt.in/zine-potential",
-    paperKey: "",
+    paperKey: "zines-potential",
+    doi: "10.1109/vis49827.2021.9623294",
     imgLink: "assets/zine-potential.jpg",
     imgDescription:
       'The front cover of a zine, it reads "On The Potential of Zines as a Medium for Visualization" and  has a subtitle "a zine about a paper about zines"',
@@ -939,6 +984,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
       "A colorful table cartogram, the data is not clearly ledgible in this view. ",
     title: "What are Table Cartograms Good for Anyway? An Algebraic Analysis",
     authors: "Andrew McNutt",
+    doi: "10.1111/cgf.14289",
     note: " 🏆 Honorable Mention for Best Paper 🏆 (Juried Selection, 1 awarded)",
     journal: "Computer Graphics Forum (EuroVis)",
     year: 2021,
@@ -960,6 +1006,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     imgLink: "assets/ivy.jpg",
     imgDescription:
       "A screenshot of a user interface for Ivy with a chart and a set of parameters.",
+    doi: "10.1145/3411764.3445356",
     title:
       "Integrated Visualization Editing via Parameterized Declarative Templates",
     authors: "Andrew McNutt, Ravi Chugh",
@@ -987,6 +1034,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     imgDescription:
       "A complicated visualization showing a graph like structure. It is very multi colored.",
     year: 2020,
+    doi: "10.1109/vis4dh51463.2020.00005",
     title:
       "Supporting Expert Close Analysis of Historical Scientific Writings: A Case Study for Near-by Reading",
     authors:
@@ -1015,6 +1063,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     title:
       "A Minimally Constrained Optimization Algorithm for Table Cartograms",
     authors: "Andrew McNutt, Gordon Kindlmann",
+    doi: "NA",
     year: 2020,
     note: "🏆 Honorable Mention for Best Poster Research 🏆 (Juried Selection, 2 awarded)",
     journal: "IEEE InfoVis Posters",
@@ -1036,6 +1085,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     imgDescription:
       "A diagram with a bar chart at the bottom and four different scatter plots showing different possible data that could have gone into that bar chart.",
     title: "Surfacing Visualization Mirages",
+    doi: "10.1145/3313831.3376420",
     authors: "Andrew McNutt, Gordon Kindlmann, Michael Correll",
     year: 2020,
     note: "🏆 Honorable Mention for Best Paper 🏆 (Top 5% of papers)",
@@ -1067,6 +1117,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     imgDescription: "A screenshot of a Tarot card reading interface.",
     paperKey: "tarot",
     title: "Divining Insights: Visual Analytics Through Cartomancy",
+    doi: "10.1145/3334480.3381814",
     authors: "Andrew McNutt, Anamaria Crisan, Michael Correll",
     journal:
       "Extended Abstracts of the ACM Conference on Human Factors in Computing (alt.chi)",
@@ -1093,11 +1144,12 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       "A geometric tiling pattern, apparently made using a table cartogram.",
     title:
       "Design and Analysis of Table Cartograms: Simultaneous Multipurpose Tabular Area-encoding Displays",
-    paperKey: "ms-thesis",
+    paperKey: "mcnutt19Thesis",
     authors: "Andrew McNutt (Advised by Gordon Kindlmann)",
+    doi: "NA",
     note: "- University of Chicago, Department of Computer Science",
     journal: "Masters thesis",
-    year: 2018,
+    year: 2019,
     links: [{ name: "zine", link: "https://www.mcnutt.in/ms-zine/" }],
     abstract: "",
     type: "thesis",
@@ -1110,6 +1162,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     paperKey: "goethe-poster",
     title:
       "Textual Analysis & Comparison National Forms of Scientific Texts: Goethe + de Candolle",
+    doi: "NA",
     authors:
       "Agatha Seo-Hyun Kim, Andrew McNutt, Sergio Elahi, Kazutaka Takahashi, Robert J Richards",
     note: "🏆 Best Poster in Visualization 🏆",
@@ -1125,7 +1178,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     ],
     abstract:
       "When the 19th-century European scientists were evaluating each other's ideas, they frequently validated their opinions by referring to the nationality of a given scientist as an explanatory type. Is there such a thing as 'national science'? This project examines widely-held ideas about the German and French styles of science in early 19th-century France. During this politically volatile period scientists found themselves in a difficult position. Between the aggressive political reality and the ideals of the cosmopolitan scientific community; as well as between the popularized image of national differences and the actual comparisons of the scientific ideas across national borders. As a case study, Goethe's and Candolle's botanical ideas, their receptions in France, and their actual texts are compared. We contrast these texts in detail through several types of interactive visualizations.",
-    type: "thesis",
+    type: "poster",
     topics: ["Visualization Systems", "History of Science"],
   },
   {
@@ -1135,6 +1188,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
       "a complicated diagram with a tree structure on the left and a series of descriptions of it in call out balloons on the right",
     title:
       "Improving the Scalability of Interactive Visualization Systems for Exploring Threaded Conversations",
+    doi: "10.2312/EURP.20191144",
     authors: "Andrew McNutt, Gordon Kindlmann",
     paperKey: "forum-explorer-eurovis",
     year: 2019,
@@ -1161,6 +1215,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     imgDescription:
       "A chart with axes 'ease of charting' and 'control of pipeline' a series of tools are located within this space.",
     paperKey: "linting-visguides",
+    doi: "NA",
     title:
       "Linting for Visualization: Towards a Practical Automated Visualization Guidance System",
     authors: "Andrew McNutt, Gordon Kindlmann",
@@ -1187,6 +1242,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     imgDescription:
       "A screenshot of a web interface it shows a modal with a molecule in it in front of a large scatter plot and a series of bar charts.",
     paperKey: "reporter-assays",
+    doi: "10.1007/978-1-4939-7724-6_14",
     title:
       "Data Mining and Computational Modeling of High-Throughput Screening Datasets",
     authors: `Sean Ekins, Alex M. Clark, Krishna Dole, Kellan Gregory, Andrew McNutt,
@@ -1210,6 +1266,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     imgDescription:
       "A line chart showing a dotted line and a solid line. they curve up briefly and then go down to the 0 axis.",
     title: "The Schrodinger-Newton System with Self-field Coupling",
+    doi: "10.1088/0264-9381/32/6/065010",
     authors: "Joel Franklin, Youdan Guo, Andrew McNutt, Allison Morgan",
     paperKey: "qgrav",
     journal: "Journal of Classical and Quantum Gravity",
@@ -1230,6 +1287,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     title:
       "Open source Bayesian models. 1. Application to ADME/Tox and drug discovery datasets",
     paperKey: "bayes-models",
+    doi: "10.1021/acs.jcim.5b00143",
     authors: `Alex M. Clark, Krishna Dole, Anna Coulon-Spektor, Andrew McNutt,
     George Grass, Joel S. Freundlich, Robert C. Reynolds, Sean Ekins`,
     journal: "Journal of Chemical Information and Modeling",
@@ -1251,9 +1309,10 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     imgDescription:
       "A contour plot with arrows, it is showing a visualization of predator-prey dynamics.",
     title: "Nonequivalent Lagrangian Mechanics",
-    paperKey: "nonequiv",
+    paperKey: "mcnutt14Thesis",
     authors: "Andrew McNutt (Advised by Nelia Mann)",
     note: "- Reed College",
+    doi: "NA",
     journal: "Undergraduate thesis",
     year: 2014,
     links: [
