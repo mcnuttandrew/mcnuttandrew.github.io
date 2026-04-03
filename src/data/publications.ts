@@ -82,7 +82,7 @@ export const PUBLICATIONS: Publication[] = [
     imgDescription:
       "A screenshot of markdown code with a linter showing that the line includes too many emojis",
     title: "Linting Style and Substance in READMEs",
-    doi: "10.1145/3706599.3716230",
+    doi: "TBD",
     authors:
       "Hima Mynampaty, Nathania Josephine, Katherine E. Isaacs, Andrew McNutt",
     year: 2026,
