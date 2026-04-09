@@ -1,5 +1,10 @@
 export const NEWS = [
   {
+    data: "April 2026",
+    content:
+      "Our paper on [linting readmes](https://arxiv.org/abs/2603.00331) was accepted to/presented at CHI 2026! ",
+  },
+  {
     date: "January 2026",
     content:
       "Our work on [visual data wrangling](https://arxiv.org/abs/2512.18405) is presented at CIDR 2026! ",
