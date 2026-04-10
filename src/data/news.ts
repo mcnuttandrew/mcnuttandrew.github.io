@@ -1,6 +1,11 @@
-export const NEWS = [
+interface NewsItem {
+  date: string;
+  content: string;
+}
+
+export const NEWS: NewsItem[] = [
   {
-    data: "April 2026",
+    date: "April 2026",
     content:
       "Our paper on [linting readmes](https://arxiv.org/abs/2603.00331) was accepted to/presented at CHI 2026! ",
   },
