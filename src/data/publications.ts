@@ -712,8 +712,7 @@ outputs to be more open, interpretable and explorable in situ.
     title: "Projectional Editors for JSON-Based DSLs",
     doi: "10.1109/vl-hcc57772.2023.00015",
     authors: "Andrew McNutt, Ravi Chugh",
-    journal:
-      "IEEE Symposium on Visual Languages and Human Centered Computing (Short Papers)",
+    journal: "IEEE Symposium on Visual Languages and Human Centered Computing",
     year: 2023,
     links: [
       { name: "live", link: "https://prong-editor.netlify.app/" },
