@@ -41,7 +41,7 @@
 
 <h1 class="text-3xl font-bold mt-4">People</h1>
 <div class="flex flex-wrap justify-center">
-  {#each STUDENTS as student}
+  {#each STUDENTS.filter((x) => x.active) as student}
     <div class="flex flex-col items-center mb-2 ml-4">
       <a href={student.link} class="flex items-center mb-2">
         <img
@@ -69,6 +69,17 @@
   {#each GROUP_PHOTOS as photo}
     <div class="flex flex-col items-center mb-2 ml-4">
       <img src={photo.image} alt={photo.altText} class="w-80 mr-2" />
+    </div>
+  {/each}
+</div>
+
+<h1 class="text-3xl font-bold mt-4">Alumni</h1>
+<div class="flex justify-center">
+  {#each STUDENTS.filter((x) => !x.active) as student}
+    <div class="flex flex-col items-center mb-2 ml-4">
+      <a href={student.link} class="flex items-center mb-2">
+        <h3 class="text-lg font-bold">{student.name} ({student.role})</h3>
+      </a>
     </div>
   {/each}
 </div>

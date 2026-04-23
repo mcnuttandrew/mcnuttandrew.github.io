@@ -4,6 +4,7 @@ export const STUDENTS: {
   researchInterests: string;
   link: string;
   image: string;
+  active: boolean;
 }[] = [
   {
     name: "Shiyi He",
@@ -11,6 +12,7 @@ export const STUDENTS: {
     researchInterests: "HCI, Data Visualization, and Notation Systems",
     link: "https://shiyihe-neko.github.io/",
     image: "assets/students/shiyi-he.jpg",
+    active: true,
   },
   {
     name: "Zach Cutler",
@@ -18,6 +20,7 @@ export const STUDENTS: {
     researchInterests: "Visualization",
     link: "https://zach-cutler.com/",
     image: "assets/students/zcutler.jpg",
+    active: true,
   },
 
   {
@@ -26,6 +29,7 @@ export const STUDENTS: {
     researchInterests: "Data Visualization, HCI, and Cloud Computing",
     link: "https://hima-mynampaty.vercel.app/",
     image: "assets/students/hima-mynampaty.jpg",
+    active: false,
   },
 
   {
@@ -34,6 +38,7 @@ export const STUDENTS: {
     researchInterests: "HCI and Data Visualization",
     link: "https://sites.google.com/view/nathaniajosephine",
     image: "assets/students/tia-j.jpg",
+    active: true,
   },
 ];
 
