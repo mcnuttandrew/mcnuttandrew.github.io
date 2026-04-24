@@ -10,6 +10,14 @@ interface Misc {
 
 export const MISC: Misc[] = [
   {
+    title: "Running a user study with me",
+    dates: "2026-",
+
+    link: "https://docs.google.com/document/d/18mlxb27_7Tqi4Q27QR9tHEbaHZnPO2ZClyiPLmt0vP4/edit?usp=sharing",
+    imgLink: "https://www.mcnutt.in/assets/revisit-py.jpg",
+    text: "A set of preferences I have for running user studies",
+  },
+  {
     title: "Upset Implementation in Svelte",
     dates: "2025",
     sourceLink:
