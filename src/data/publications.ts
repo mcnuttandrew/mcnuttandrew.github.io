@@ -98,7 +98,7 @@ export const PUBLICATIONS: Publication[] = [
     abstract: `READMEs shape first impressions of software projects, yet what constitutes a good README varies across audiences and contexts. Research software needs reproducibility details, while open-source libraries might prioritize quick-start guides. Through a design probe, LintMe, we explore how linting can be used to improve READMEs given these diverse contexts, aiding style and content issues while preserving authorial agency. Users create context-specific checks using a lightweight DSL that uses a novel combination of programmatic operations (e.g., for broken links) with LLM-based content evaluation (e.g., for detecting jargon), yielding checks that would be challenging for prior linters. Through a user study (N=11), comparison with naive LLM usage, and an extensibility case study, we find that our design is approachable, flexible, and well matched with the needs of this domain. This work opens the door for linting more complex documentation and other culturally mediated text-based documents.`,
   },
   {
-    link: "https://f.luid.org/",
+    link: "https://dynamicaspects.org/papers/plateau26.pdf",
     paperKey: "lit-exec-plateau",
     imgLink: "assets/fluid.jpg",
     imgDescription:
@@ -112,6 +112,10 @@ export const PUBLICATIONS: Publication[] = [
     abstract: `Literate programming, introduced by Knuth, interleaves code and prose so that a program can be read as both executable and explanatory text. We propose _literate execution_, which inverts this relationship: rather than embedding code within a static narrative, we treat documentation --- and other expository elements such as visualisations --- as first-class artifacts that can be computed alongside a running program and then integrated into a view of its execution. We explore this idea through Fluid, a programming language with a provenance-tracking runtime that records fine-grained dependencies between inputs and outputs. These provenance relationships can be surfaced as interactions that allow readers to explore how intermediate values contribute to a result. By integrating visualisation, provenance, and exposition, literate execution aims to make programs more explorable and self-explanatory, and explorable explanations easier to program.
   `,
     links: [
+      {
+        name: "paper",
+        link: "https://dynamicaspects.org/papers/plateau26.pdf",
+      },
       {
         name: "live",
         link: "https://f.luid.org/",
