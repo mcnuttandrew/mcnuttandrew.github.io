@@ -818,6 +818,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     links: [
       { name: "paper", link: "https://arxiv.org/abs/2301.13302" },
       { name: "live", link: "http://cs111.org/" },
+      { name: "code", link: "https://github.com/UChicago-PL/p5-editor" },
       { name: "talk", link: "https://www.youtube.com/watch?v=g2GkTdOKU3A" },
     ],
     abstract:
