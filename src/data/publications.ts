@@ -82,7 +82,7 @@ export const PUBLICATIONS: Publication[] = [
     imgDescription:
       "A screenshot of markdown code with a linter showing that the line includes too many emojis",
     title: "Linting Style and Substance in READMEs",
-    doi: "TBD",
+    doi: "10.1145/3772318.3791597",
     authors:
       "Hima Mynampaty, Nathania Josephine, Katherine E. Isaacs, Andrew McNutt",
     year: 2026,
@@ -483,7 +483,7 @@ outputs to be more open, interpretable and explorable in situ.
     imgDescription:
       "An annotated upset plot. The upset plot is about tennis data.",
     title: "Accessible Text Descriptions for UpSet Plots",
-    doi: "10.1109/accessviz64636.2024.00005",
+    doi: "10.1111/cgf.70102",
     authors:
       "Andrew McNutt, Maggie K McCracken, Ishrat Jahan Eliza, Daniel Hajas, Jake Wagoner, Nate Lanza, Jack Wilburn, Sarah Creem-Regehr, Alexander Lex",
     journal: "Computer Graphics Forum (EuroVis)",
@@ -544,7 +544,7 @@ outputs to be more open, interpretable and explorable in situ.
       'A colorful logo that reads "Slowness, Politics, and Joy" in a geometric bauhaus style',
     title:
       "Slowness, Politics, and Joy: Values That Guide Technology Choices in Creative Coding Classrooms",
-    doi: "10.31219/osf.io/83z94_v1",
+    doi: "10.1145/3706598.3713472",
     authors: "Andrew McNutt, Sam Cohen, Ravi Chugh",
     note: " 🏆 Honorable Mention for Best Paper 🏆",
     journal:
