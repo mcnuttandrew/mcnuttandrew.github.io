@@ -69,8 +69,6 @@ export function buildBibTexEntry(publication: Publication): string {
   if (publication.doi !== "NA") {
     fields.doi = publication.doi;
   }
-  // console.log(publication);
-  console.log("what", publication.type);
   if (publication.type === "thesis") {
     fields.authors = publication.authors;
     key = publication.paperKey || key;
