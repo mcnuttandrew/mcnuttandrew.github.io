@@ -54,7 +54,7 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
-    link: "https://arxiv.org/pdf/2507.17898",
+    link: "https://arxiv.org/abs/2507.17898",
     paperKey: "same-data-different-audiences",
     imgLink: "assets/same-data-different-audiences.jpg",
     imgDescription:
@@ -68,7 +68,7 @@ export const PUBLICATIONS: Publication[] = [
     journal: "IEEE Transactions on Visualization and Computer Graphics",
     note: "(Journal)",
     links: [
-      { name: "paper", link: "https://arxiv.org/pdf/2507.17898" },
+      { name: "paper", link: "https://arxiv.org/abs/2507.17898" },
       { name: "code", link: "https://github.com/cscully-allison/guidepost" },
     ],
     type: "paper",
@@ -279,7 +279,7 @@ export const PUBLICATIONS: Publication[] = [
     ],
   },
   {
-    link: "https://arxiv.org/pdf/2510.00344",
+    link: "https://arxiv.org/abs/2510.00344",
     paperKey: "feng-shui-vis",
     imgLink: "assets/feng-shui-vis.jpg",
     imgDescription:
@@ -296,14 +296,8 @@ export const PUBLICATIONS: Publication[] = [
     journal: "alt.vis",
     year: 2025,
     links: [
-      {
-        name: "paper",
-        link: "https://arxiv.org/pdf/2510.00344",
-      },
-      {
-        name: "live",
-        link: "https://hconhisway.github.io/FengShuiPan/",
-      },
+      { name: "paper", link: "https://arxiv.org/abs/2510.00344" },
+      { name: "live", link: "https://hconhisway.github.io/FengShuiPan/" },
     ],
   },
   {
@@ -371,7 +365,7 @@ outputs to be more open, interpretable and explorable in situ.
   },
 
   {
-    link: "https://arxiv.org/pdf/2402.06071",
+    link: "https://arxiv.org/abs/2402.06071",
     paperKey: "keyframer",
     imgLink: "assets/keyframer.jpg",
     imgDescription:
@@ -390,7 +384,7 @@ outputs to be more open, interpretable and explorable in situ.
       },
       {
         name: "paper",
-        link: "https://arxiv.org/pdf/2402.06071",
+        link: "https://arxiv.org/abs/2402.06071",
       },
       {
         name: "code",
@@ -776,7 +770,7 @@ We primarily consider languages focused on data visualization tasks, as there ha
     journal: "Computer Graphics Forum (EuroVis)",
     year: 2023,
     links: [
-      { name: "osf", link: "assets/doom-n-fruit.pdf" },
+      { name: "paper", link: "assets/doom-n-fruit.pdf" },
       { name: "osf", link: "https://osf.io/3jrcm/" },
     ],
     abstract: `Generative text-to-image models (as exemplified by DALL-E, MidJourney, and Stable Diffusion) have recently made enormous technological leaps, demonstrating impressive results in many graphical domains---from logo design to digital painting and photographic composition. However, the quality of these results has led to existential crises in some fields of art, leading to questions about the role of human agency in the production of meaning in a graphical context. Such issues are central to visualization, and while these generative models have yet to be widely applied to visualization, it seems only a matter of time until their integration is manifest. Seeking to circumvent similar ponderous dilemmas, we attempt to understand the roles that generative models might play across visualization. We do so by constructing a framework that characterizes what these technologies offer at various stages of the visualization workflow, augmented and analyzed through semi-structured interviews with 19 experts from related domains. Through this work, we map the space of opportunities and risks that might arise in this intersection, identifying doomsday prophecies and delicious low-hanging fruits that are ripe for research.`,
