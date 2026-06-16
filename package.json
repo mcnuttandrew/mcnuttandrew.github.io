@@ -4,26 +4,27 @@
   "version": "1.0.0",
   "type": "module",
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^3.0.0",
-    "@tsconfig/svelte": "^5.0.2",
+    "@sveltejs/vite-plugin-svelte": "^7.1.2",
+    "@tsconfig/svelte": "^5.0.8",
     "@types/d3": "^7.4.3",
-    "@types/markdown-it": "^14.1.1",
-    "@types/node": "^20.12.12",
-    "autoprefixer": "^10.4.7",
-    "husky": "^9.0.11",
-    "postcss": "^8.4.38",
-    "prettier": "^2.7.1",
-    "svelte": "^4.2.3",
-    "svelte-check": "^3.6.0",
-    "tailwindcss": "^3.3.5",
-    "tslib": "^2.6.2",
-    "typescript": "^4.5.5",
-    "vite": "^5.0.0",
-    "vite-node": "^1.6.0"
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^25.9.3",
+    "autoprefixer": "^10.5.0",
+    "husky": "^9.1.7",
+    "postcss": "^8.5.15",
+    "prettier": "^3.8.4",
+    "svelte": "^5.56.3",
+    "svelte-check": "^4.6.0",
+    "tailwindcss": "^4.3.1",
+    "tslib": "^2.8.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16",
+    "vite-node": "^6.0.0"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.3.1",
     "d3-scale": "^4.0.2",
-    "markdown-it": "^14.1.0"
+    "markdown-it": "^14.2.0"
   },
   "scripts": {
     "build": "vite build",

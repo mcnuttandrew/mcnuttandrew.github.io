@@ -123,7 +123,7 @@
       {@html md.render(buildBibTexEntry(publication))}
       <!-- copy the text -->
       <button
-        class="mt-2 px-2 py-1 bg-gray-200 rounded hover:bg-gray-300 text-sm"
+        class="mt-2 px-2 py-1 bg-gray-200 rounded-sm hover:bg-gray-300 text-sm"
         class:font-bold={copiedState}
         on:click={() => {
           let entry = buildBibTexEntry(publication).slice(4, -5).trim(); // remove the <pre> tags
