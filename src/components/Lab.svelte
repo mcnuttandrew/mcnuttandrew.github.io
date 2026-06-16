@@ -13,7 +13,7 @@
   <label class="inline-flex items-center cursor-pointer">
     <input type="checkbox" class="sr-only peer" bind:checked={darkMode} />
     <div
-      class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full relative"
+      class="w-11 h-6 bg-gray-200 peer-focus:outline-hidden rounded-full relative"
       class:bg-gray-700={darkMode}
     >
       <span
