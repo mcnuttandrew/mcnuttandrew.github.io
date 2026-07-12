@@ -1,4 +1,5 @@
 <script lang="ts">
+  // @ts-ignore
   import "./app.css";
 
   import Header from "./components/Header.svelte";
@@ -6,29 +7,18 @@
   import store from "./store";
 
   import { PUBLICATIONS } from "./constants";
-
-  import About from "./components/About.svelte";
-  import Misc from "./components/Misc.svelte";
-  import Publications from "./components/Publications.svelte";
-  import Teaching from "./components/Teaching.svelte";
-  import News from "./components/News.svelte";
-  import Zines from "./components/Zines.svelte";
   import NewsItem from "./components/NewsItem.svelte";
   import Upset from "./components/Upset.svelte";
-  import Lab from "./components/Lab.svelte";
   import { NEWS } from "./constants";
-  // @ts-ignore
-  import HIRING24 from "./text-chunks/hiring-24.md?raw";
-  import Post from "./components/Post.svelte";
 
-  import { getRoute } from "./utils";
-  import FullBib from "./components/FullBib.svelte";
+  import { getRoute, routing } from "./utils";
 
   let currentSection = getRoute();
   window.onhashchange = () => {
     currentSection = getRoute();
   };
   let news = NEWS.slice(0, 4);
+  $: routerResult = { ...routing[currentSection] };
 </script>
 
 <div
@@ -36,7 +26,7 @@
 >
   <MobileHeader {currentSection} />
   <div
-    class="h-full flex-col items-center hidden md:flex min-w-fit w-[350px] static"
+    class="h-full flex-col items-center hidden md:flex min-w-fit w-87.5 static"
   >
     <a href="/#/about">
       <img
@@ -96,25 +86,10 @@
   <div class="px-4 md:w-2/3 lg:w-1/2">
     <Header {currentSection} />
     <div class="content-wrapper mb-11">
-      {#if currentSection === "publications"}
-        <Publications />
-      {:else if currentSection === "misc"}
-        <Misc />
-      {:else if currentSection === "lab"}
-        <Lab />
-      {:else if currentSection === "teaching"}
-        <Teaching />
-      {:else if currentSection === "news"}
-        <News />
-      {:else if currentSection === "zines"}
-        <Zines />
-      {:else if currentSection === "hiring-24"}
-        <Post content={HIRING24} />
-      {:else if currentSection === "full-bib"}
-        <FullBib />
-      {:else}
-        <About />
-      {/if}
+      <svelte:component
+        this={routerResult.component}
+        {...routerResult.props || {}}
+      />
     </div>
   </div>
 </div>
