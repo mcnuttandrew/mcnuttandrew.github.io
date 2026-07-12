@@ -10,6 +10,7 @@ const routes = new Set([
   "news",
   "misc",
   "hiring-24",
+  "hiring-26",
   "full-bib",
 ]);
 export function getRoute() {
@@ -33,9 +34,12 @@ export function groupBy(data: any[], key: string) {
 }
 
 export function addLinks(authors: string) {
-  return Object.entries(COLLABORATOR_LINKS).reduce((str, [key, link]) => {
-    return str.replace(key, `[${key}](${link})`);
-  }, authors.replace("Andrew McNutt", "__Andrew McNutt__"));
+  return Object.entries(COLLABORATOR_LINKS).reduce(
+    (str, [key, link]) => {
+      return str.replace(key, `[${key}](${link})`);
+    },
+    authors.replace("Andrew McNutt", "__Andrew McNutt__"),
+  );
 }
 
 function formatAuthorsForLatex(authors: string): string {

@@ -1,4 +1,5 @@
 <script lang="ts">
+  // @ts-ignore
   import "./app.css";
 
   import Header from "./components/Header.svelte";
@@ -19,6 +20,8 @@
   import { NEWS } from "./constants";
   // @ts-ignore
   import HIRING24 from "./text-chunks/hiring-24.md?raw";
+  // @ts-ignore
+  import HIRING26 from "./text-chunks/hiring-26.md?raw";
   import Post from "./components/Post.svelte";
 
   import { getRoute } from "./utils";
@@ -110,6 +113,8 @@
         <Zines />
       {:else if currentSection === "hiring-24"}
         <Post content={HIRING24} />
+      {:else if currentSection === "hiring-26"}
+        <Post content={HIRING26} />
       {:else if currentSection === "full-bib"}
         <FullBib />
       {:else}
