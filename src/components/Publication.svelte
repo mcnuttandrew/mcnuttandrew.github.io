@@ -137,7 +137,7 @@
       </button>
     </div>
   {/if}
-  <div class="rounded-xl uppercase font-bold italic" />
+  <div class="rounded-xl uppercase font-bold italic"></div>
 </div>
 
 <style>

@@ -6,5 +6,8 @@
   "compilerOptions": {
     "target": "esnext",
     "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "markdown-it": ["./src/types/markdown-it"]
+    }
   }
 }
