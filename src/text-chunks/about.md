@@ -1,4 +1,4 @@
-> **_NOTE:_** I'm hiring this year! See [this page](/#/hiring-26) for more information.
+<!-- > **_NOTE:_** I'm hiring this year! See [this page](/#/hiring-26) for more information. -->
 
 I'm an assistant professor of Computer Science at the University of Utah in the [Scientific Computing and Imaging](https://www.sci.utah.edu/) Institute (SCI) and [Kahlert School of Computing](https://www.cs.utah.edu/). I lead the [HAVOC (Human and Visualization Oriented Computing) Lab](https://www.mcnutt.in/#/lab), where we develop tools and theories that help us do knowledge-centered work more safely. I am the receipt of [Johanna Beyer EuroVis Early Career Award](https://www.eg.org/wp/eurographics-awards-programme/visualization-award/johanna-beyer-eurovis-early-career-award-2026-andrew-mcnutt/), a [Siebel Scholarship](https://www.siebelscholars.com/scholar-profile/3717/), as well as a number of paper awards at top visualization and HCI venues.
 

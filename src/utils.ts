@@ -1,23 +1,46 @@
 import type { Publication } from "./data/publications";
-import { PUBLICATIONS, COLLABORATOR_LINKS } from "./constants";
+import { COLLABORATOR_LINKS } from "./constants";
 
-const routes = new Set([
-  "publications",
-  "about",
-  "teaching",
-  "zines",
-  "lab",
-  "news",
-  "misc",
-  "hiring-24",
-  "hiring-26",
-  "full-bib",
-]);
+import About from "./components/About.svelte";
+import Misc from "./components/Misc.svelte";
+import Publications from "./components/Publications.svelte";
+import Teaching from "./components/Teaching.svelte";
+import News from "./components/News.svelte";
+import Zines from "./components/Zines.svelte";
+import Lab from "./components/Lab.svelte";
+import FullBib from "./components/FullBib.svelte";
+// @ts-ignore
+import HIRING24 from "./text-chunks/hiring-24.md?raw";
+// @ts-ignore
+import HIRING26 from "./text-chunks/hiring-26.md?raw";
+import Post from "./components/Post.svelte";
+
+const post = (
+  content: string,
+): { component: any; props: Record<string, any> } => ({
+  component: Post,
+  props: { content },
+});
+export const routing: Record<
+  string,
+  { component: any; props?: Record<string, any> }
+> = {
+  publications: { component: Publications },
+  misc: { component: Misc },
+  lab: { component: Lab },
+  teaching: { component: Teaching },
+  news: { component: News },
+  zines: { component: Zines },
+  "hiring-24": post(HIRING24),
+  "hiring-26": post(HIRING26),
+  "full-bib": { component: FullBib },
+  about: { component: About },
+};
 export function getRoute() {
   const locationSplit = location.href.split("/").filter((d) => d.length);
   const naiveLocation = locationSplit[locationSplit.length - 1].toLowerCase();
 
-  return routes.has(naiveLocation) ? naiveLocation : "about";
+  return routing[naiveLocation] ? naiveLocation : "about";
 }
 
 export function getShowPage() {
