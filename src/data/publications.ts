@@ -89,10 +89,6 @@ export const PUBLICATIONS: Publication[] = [
     journal:
       "Proceedings of the ACM Conference on Human Factors in Computing (SIGCHI)",
     links: [
-      {
-        name: "blog post",
-        link: "https://medium.com/@mynampatyhima/8320a066d1c6",
-      },
       { name: "live", link: "https://lintme.netlify.app/" },
       { name: "paper", link: "https://arxiv.org/abs/2603.00331" },
       { name: "video figure", link: "https://youtu.be/jyOKcsqpl_0" },
@@ -171,10 +167,6 @@ export const PUBLICATIONS: Publication[] = [
       {
         name: "paper",
         link: "https://arxiv.org/abs/2508.03876",
-      },
-      {
-        name: "blog post",
-        link: "https://www.visdesignlab.net/blog/2025/11/10/ieee-vis-award/",
       },
       {
         name: "live",

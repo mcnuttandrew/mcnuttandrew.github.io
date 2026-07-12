@@ -1,4 +1,9 @@
-<!-- > **_NOTE:_** I'm hiring this year! See [this page](/#/hiring-26) for more information. -->
+<!-- A slightly more informative partition of my interests focuses on:
+
+**Visualization systems**: Building grammars, domain-specific languages, and linters for vis and vis adjacent topics
+**Interfaces for programming**: Improving how we interact with code
+**Visualization theories**: Forming structures to answer questions like what does it mean for a visualization or tool to be "good"
+**Critical/sociotechnical perspectives**: Consider questions of context and situatedness -->
 
 I'm an assistant professor of Computer Science at the University of Utah in the [Scientific Computing and Imaging](https://www.sci.utah.edu/) Institute (SCI) and [Kahlert School of Computing](https://www.cs.utah.edu/). I lead the [HAVOC (Human and Visualization Oriented Computing) Lab](https://www.mcnutt.in/#/lab), where we develop tools and theories that help us do knowledge-centered work more safely. I am the receipt of [Johanna Beyer EuroVis Early Career Award](https://www.eg.org/wp/eurographics-awards-programme/visualization-award/johanna-beyer-eurovis-early-career-award-2026-andrew-mcnutt/), a [Siebel Scholarship](https://www.siebelscholars.com/scholar-profile/3717/), as well as a number of paper awards at top visualization and HCI venues.
 

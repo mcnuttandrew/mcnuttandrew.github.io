@@ -1,46 +1,22 @@
 import type { Publication } from "./data/publications";
-import { COLLABORATOR_LINKS } from "./constants";
+import { PUBLICATIONS, COLLABORATOR_LINKS } from "./constants";
 
-import About from "./components/About.svelte";
-import Misc from "./components/Misc.svelte";
-import Publications from "./components/Publications.svelte";
-import Teaching from "./components/Teaching.svelte";
-import News from "./components/News.svelte";
-import Zines from "./components/Zines.svelte";
-import Lab from "./components/Lab.svelte";
-import FullBib from "./components/FullBib.svelte";
-// @ts-ignore
-import HIRING24 from "./text-chunks/hiring-24.md?raw";
-// @ts-ignore
-import HIRING26 from "./text-chunks/hiring-26.md?raw";
-import Post from "./components/Post.svelte";
-
-const post = (
-  content: string,
-): { component: any; props: Record<string, any> } => ({
-  component: Post,
-  props: { content },
-});
-export const routing: Record<
-  string,
-  { component: any; props?: Record<string, any> }
-> = {
-  publications: { component: Publications },
-  misc: { component: Misc },
-  lab: { component: Lab },
-  teaching: { component: Teaching },
-  news: { component: News },
-  zines: { component: Zines },
-  "hiring-24": post(HIRING24),
-  "hiring-26": post(HIRING26),
-  "full-bib": { component: FullBib },
-  about: { component: About },
-};
+const routes = new Set([
+  "publications",
+  "about",
+  "teaching",
+  "zines",
+  "lab",
+  "news",
+  "misc",
+  "hiring-24",
+  "full-bib",
+]);
 export function getRoute() {
   const locationSplit = location.href.split("/").filter((d) => d.length);
   const naiveLocation = locationSplit[locationSplit.length - 1].toLowerCase();
 
-  return routing[naiveLocation] ? naiveLocation : "about";
+  return routes.has(naiveLocation) ? naiveLocation : "about";
 }
 
 export function getShowPage() {
@@ -57,12 +33,9 @@ export function groupBy(data: any[], key: string) {
 }
 
 export function addLinks(authors: string) {
-  return Object.entries(COLLABORATOR_LINKS).reduce(
-    (str, [key, link]) => {
-      return str.replace(key, `[${key}](${link})`);
-    },
-    authors.replace("Andrew McNutt", "__Andrew McNutt__"),
-  );
+  return Object.entries(COLLABORATOR_LINKS).reduce((str, [key, link]) => {
+    return str.replace(key, `[${key}](${link})`);
+  }, authors.replace("Andrew McNutt", "__Andrew McNutt__"));
 }
 
 function formatAuthorsForLatex(authors: string): string {
@@ -96,6 +69,8 @@ export function buildBibTexEntry(publication: Publication): string {
   if (publication.doi !== "NA") {
     fields.doi = publication.doi;
   }
+  // console.log(publication);
+  console.log("what", publication.type);
   if (publication.type === "thesis") {
     fields.authors = publication.authors;
     key = publication.paperKey || key;
