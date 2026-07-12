@@ -1,7 +1,11 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
-
-  "include": ["src/**/*"],
-  "exclude": ["node_modules/*", "__sapper__/*", "build/*"]
   
+  "include": ["src/**/*"],
+  "exclude": ["node_modules/*", "__sapper__/*", "build/*"],
+  "compilerOptions": {
+    "lib": ["dom", "es2022"],
+    "target": "ESNext",
+    "forceConsistentCasingInFileNames": true
+  } 
 }
