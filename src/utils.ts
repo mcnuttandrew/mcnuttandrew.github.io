@@ -9,10 +9,13 @@ import Zines from "./components/Zines.svelte";
 import Lab from "./components/Lab.svelte";
 // @ts-ignore
 import HIRING24 from "./text-chunks/hiring-24.md?raw";
+// @ts-ignore
+import HIRING26 from "./text-chunks/hiring-26.md?raw";
 import Post from "./components/Post.svelte";
 
 import FullBib from "./components/FullBib.svelte";
 
+const post = (content: string) => ({ component: Post, props: { content } });
 export const routing: Record<string, { component: any; props?: any }> = {
   publications: { component: Publications },
   misc: { component: Misc },
@@ -20,7 +23,8 @@ export const routing: Record<string, { component: any; props?: any }> = {
   teaching: { component: Teaching },
   news: { component: News },
   zines: { component: Zines },
-  "hiring-24": { component: Post, props: { content: HIRING24 } },
+  "hiring-24": post(HIRING24),
+  "hiring-26": post(HIRING26),
   "full-bib": { component: FullBib },
   about: { component: About },
 };

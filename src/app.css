@@ -40,6 +40,11 @@ div a {
   margin: 0;
 }
 
+.md-container {
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
 .md-container h1 {
   font-size: 2em;
   margin-top: 1em;
