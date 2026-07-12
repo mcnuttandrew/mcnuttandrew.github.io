@@ -1,4 +1,5 @@
 <script lang="ts">
+  // @ts-ignore
   import "./app.css";
 
   import Header from "./components/Header.svelte";
@@ -7,22 +8,11 @@
 
   import { PUBLICATIONS } from "./constants";
 
-  import About from "./components/About.svelte";
-  import Misc from "./components/Misc.svelte";
-  import Publications from "./components/Publications.svelte";
-  import Teaching from "./components/Teaching.svelte";
-  import News from "./components/News.svelte";
-  import Zines from "./components/Zines.svelte";
-  import NewsItem from "./components/NewsItem.svelte";
   import Upset from "./components/Upset.svelte";
-  import Lab from "./components/Lab.svelte";
+  import NewsItem from "./components/NewsItem.svelte";
   import { NEWS } from "./constants";
-  // @ts-ignore
-  import HIRING24 from "./text-chunks/hiring-24.md?raw";
-  import Post from "./components/Post.svelte";
 
-  import { getRoute } from "./utils";
-  import FullBib from "./components/FullBib.svelte";
+  import { getRoute, routing } from "./utils";
 
   let currentSection = getRoute();
   window.onhashchange = () => {
@@ -96,25 +86,10 @@
   <div class="px-4 md:w-2/3 lg:w-1/2">
     <Header {currentSection} />
     <div class="content-wrapper mb-11">
-      {#if currentSection === "publications"}
-        <Publications />
-      {:else if currentSection === "misc"}
-        <Misc />
-      {:else if currentSection === "lab"}
-        <Lab />
-      {:else if currentSection === "teaching"}
-        <Teaching />
-      {:else if currentSection === "news"}
-        <News />
-      {:else if currentSection === "zines"}
-        <Zines />
-      {:else if currentSection === "hiring-24"}
-        <Post content={HIRING24} />
-      {:else if currentSection === "full-bib"}
-        <FullBib />
-      {:else}
-        <About />
-      {/if}
+      <svelte:component
+        this={routing[currentSection].component}
+        {...routing[currentSection].props}
+      />
     </div>
   </div>
 </div>

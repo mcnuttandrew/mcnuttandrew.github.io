@@ -2,5 +2,9 @@
   "extends": "@tsconfig/svelte/tsconfig.json",
 
   "include": ["src/**/*"],
-  "exclude": ["node_modules/*", "__sapper__/*", "build/*"]
+  "exclude": ["node_modules/*", "__sapper__/*", "build/*"],
+  "compilerOptions": {
+    "target": "esnext",
+    "forceConsistentCasingInFileNames": true,
+  }
 }
