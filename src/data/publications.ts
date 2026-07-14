@@ -8,6 +8,7 @@ type linkType =
   | "poster"
   | "video figure"
   | "studies"
+  | "study"
   | "slides"
   | "blog post"
   | "award"
@@ -53,6 +54,56 @@ export interface Publication {
 }
 
 export const PUBLICATIONS: Publication[] = [
+  {
+    link: "",
+    title:
+      "How Wrangling Tools Shape Wrangling: A Technical Dimensions Analysis",
+    doi: "TBD",
+    authors: "Shiyi He, El Kindi Rezig, Paul Rosen, Andrew M. McNutt",
+    year: 2026,
+    journal: "IEEE Symposium on Visual Languages and Human Centered Computing",
+    paperKey: "wrangling-tdops",
+    imgLink: "assets/wrangling-tdops.jpg",
+    imgDescription:
+      "A diagram labeled 'Conceptual Structure: How is meaning constructed'. It does a tradeoff space between abstraction visiblity and declarative structure",
+    type: "paper",
+    topics: ["Visualization Systems", "Programming Interfaces"],
+    links: [
+      { name: "osf", link: "https://osf.io/82wxe/overview" },
+      {
+        name: "study",
+        link: "https://wrangler-tdops-study.netlify.app/a-notebook",
+      },
+      {
+        name: "code",
+        link: "https://github.com/mcnuttandrew/wrangler-tdops-study",
+      },
+    ],
+    abstract: `Wrangling consumes a disproportionate share of the effort associated with any data project. While a variety of tools support it, relatively little is known about how their differing interface forms shape the way people actually wrangle. We conduct a between-subjects (N=40) observational study of data cleaning tasks performed in tools spanning distinct interface paradigms: Jupyter (notebook), Excel (spreadsheet), ChatGPT (conversational AI), and OpenRefine (visual wranglers). We situate our observations within the Technical Dimensions of Programming Systems framework, which we use as a conceptual scaffold for comparing across interface paradigms. Within the context of our study, the results suggest that tool affordances steer user strategies but do not determine outcomes. There is no consistent advantage of any single tool, nor convergence of results within tools observed across our outcome measures. Instead, we identify trade-offs and connect them with observed practice. For example, a key tension is between data- and abstraction-centered interfaces, where data-centered interfaces encourage opportunistic cleaning rather than systematic, planned transformations found in abstraction-focused tools (but come with a cognitive burden). Tool design, beyond mere functionality, plays a structuring role in how data work unfolds.`,
+  },
+  {
+    link: "",
+    title:
+      "Reading Between the Curly Braces: On Textual Data Serialization Format Usability",
+    doi: "TBD",
+    authors: "Shiyi He, Zach Cutler, Andrew M. McNutt",
+    year: 2026,
+    journal: "IEEE Symposium on Visual Languages and Human Centered Computing",
+    paperKey: "between-the-braces",
+    imgLink: "assets/braces.jpg",
+    imgDescription:
+      "A screenshot of the study interface, on the right it shows a json text input and on the right it shows a task prompt. ",
+    type: "paper",
+    topics: ["Programming Interfaces", "DSLs"],
+    links: [
+      { name: "osf", link: "https://osf.io/jryna" },
+      {
+        name: "studies",
+        link: "https://dsf-study.netlify.app/a-usability-study/",
+      },
+    ],
+    abstract: `Textual data serialization formats, such as JSON or XML, are ubiquitous, supporting tasks like software configuration and data tabularization. Despite their prominence, little is known about their usability. What makes one good or bad? Is there a best one for cognitive efficiency? We explore these questions via a (N = 215) crowd work study and a (N = 9) semi- structured interview study. We find that format distinctions (like indentation versus curly braces) do not consistently translate into substantial usability differences. While HJSON and YAML performed better than other formats in certain modification tasks, these advantages disappeared in more realistic settings where task complexity was either trivial or highly demanding. Instead, usability appears driven by sociotechnical ecosystems: the tooling, documentation, and community practices surrounding a format matter more than syntax.`,
+  },
   {
     link: "https://arxiv.org/abs/2507.17898",
     paperKey: "same-data-different-audiences",
@@ -1257,7 +1308,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     abstract:
       "We are now seeing the benefit of investments made over the last decade in high-throughput screening (HTS) that is resulting in large structure activity datasets entering public and open databases such as ChEMBL and PubChem. The growth of academic HTS screening centers and the increasing move to academia for early stage drug discovery suggests a great need for the informatics tools and methods to mine such data and learn from it. Collaborative Drug Discovery, Inc. (CDD) has developed a number of tools for storing, mining, securely and selectively sharing, as well as learning from such HTS data. We present a new web based data mining and visualization module directly within the CDD Vault platform for high-throughput drug discovery data that makes use of a novel technology stack following modern reactive design principles. We also describe CDD Models within the CDD Vault platform that enables researchers to share models, share predictions from models, and create models from distributed, heterogeneous data. Our system is built on top of the Collaborative Drug Discovery Vault Activity and Registration data repository ecosystem which allows users to manipulate and visualize thousands of molecules in real time. This can be performed in any browser on any platform. In this chapter we present examples of its use with public datasets in CDD Vault. Such approaches can complement other cheminformatics tools, whether open source or commercial, in providing approaches for data mining and modeling of HTS data.",
     type: "book chapter",
-    topics: ["Drug Discovery"],
+    topics: ["Visualization Systems"],
   },
   {
     link: "https://arxiv.org/abs/1501.07537",
@@ -1300,7 +1351,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
     abstract:
       "On the order of hundreds of absorption, distribution, metabolism, excretion, and toxicity (ADME/Tox) models have been described in the literature in the past decade which are more often than not inaccessible to anyone but their authors. Public accessibility is also an issue with computational models for bioactivity, and the ability to share such models still remains a major challenge limiting drug discovery. We describe the creation of a reference implementation of a Bayesian model-building software module, which we have released as an open source component that is now included in the Chemistry Development Kit (CDK) project, as well as implemented in the CDD Vault and in several mobile apps. We use this implementation to build an array of Bayesian models for ADME/Tox, in vitro and in vivo bioactivity, and other physicochemical properties. We show that these models possess cross-validation receiver operator curve values comparable to those generated previously in prior publications using alternative tools. We have now described how the implementation of Bayesian models with FCFP6 descriptors generated in the CDD Vault enables the rapid production of robust machine learning models from public data or the user's own datasets. The current study sets the stage for generating models in proprietary software (such as CDD) and exporting these models in a format that could be run in open source software using CDK components. This work also demonstrates that we can enable biocomputation across distributed private or public datasets to enhance drug discovery.",
     type: "paper",
-    topics: ["Drug Discovery"],
+    topics: ["Visualization Systems"],
   },
   {
     link: "assets/thesis.pdf",
