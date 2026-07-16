@@ -5,6 +5,11 @@ interface NewsItem {
 
 export const NEWS: NewsItem[] = [
   {
+    date: "Fall 2026",
+    content:
+      "A big fall! Two full papers at VL/HCC (on JSON usability and data wranglers) and two full papers at IEEE VIS (on chart types and alternative modalities for visualization literacy). ",
+  },
+  {
     date: "June 2026",
     content:
       "Honored/shocked to receive the [Johanna Beyer EuroVis Early Career Award](https://www.eg.org/wp/eurographics-awards-programme/visualization-award/johanna-beyer-eurovis-early-career-award-2026-andrew-mcnutt/) for 2026!! Thanks to my network of collaborators, mentors, friends, and students who have supported me in getting here.",

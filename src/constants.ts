@@ -104,6 +104,8 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   "Hima Mynampaty": "https://hima-mynampaty.vercel.app/",
   "Dominic Orchard": "https://dorchard.github.io/",
   "Joseph Bond": "http://jecbond.com/",
+  "Matthew Kay": "https://www.mjskay.com/",
+  "Lily W. Ge": "https://lilyge.com/",
 };
 
 const selectedPubs = new Set([
