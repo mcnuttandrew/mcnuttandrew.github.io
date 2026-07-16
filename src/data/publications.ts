@@ -56,6 +56,41 @@ export interface Publication {
 export const PUBLICATIONS: Publication[] = [
   {
     link: "",
+    title: "On Defining Chart Type Boundaries",
+    doi: "TBD",
+    authors: "Chang Han, Andrew M. McNutt, Katherine Isaacs",
+    year: 2026,
+    journal:
+      "IEEE Transactions on Visualization and Computer Graphics (Proceedings of IEEE VIS)",
+    paperKey: "eds",
+    imgLink: "assets/eds.jpg",
+    imgDescription:
+      "A diagram labeled 'Conceptual Structure: How is meaning constructed'. It does a tradeoff space between abstraction visiblity and declarative structure",
+    type: "paper",
+    topics: ["Visualization Theory"],
+    links: [],
+    abstract: `What makes a Gantt chart? This question proved unexpectedly difficult to answer when we set out to build a design space for Gantt charts. Existing definitions, each shaped by their respective research goals, made different scope choices that we could not directly reconcile. We reasoned about what should and should not count as a Gantt chart, developing concepts and tools along the way. We distinguish features that are essential to a chart type's identity from those that can vary, and use these distinctions to map how chart types relate through what they share and lack. Applying these ideas to Gantt charts, radar charts, and table cartograms, we produce key insights on what boundary work reveals: definitions diverge for functional reasons, drawing boundaries exposes hidden structure in descriptive vocabulary such as feature entanglements, and scope choices shape how far findings can generalize. We came to understand that there is not a definitive answer, but that working through the question produced a functional definition that guided the design space we originally set out to build. Additionally, we present vocabulary and tools for reasoning about chart type boundaries and surfacing these boundary decisions, alongside a documented Gantt chart design space. Our broader reflection is that scope choices in chart-type-centered research—which determine what design spaces include, what grammars generate, and what perceptual studies measure—are research decisions worth making visible.`,
+  },
+  {
+    link: "",
+    title:
+      "Read, Critique, or Sketch? Investigating Alternative Visualization Literacy Assessment Modalities",
+    doi: "TBD",
+    authors:
+      "Zach Cutler, Lily W. Ge, Matthew Kay, Lane Harrison, Andrew McNutt, and Alexander Lex",
+    year: 2026,
+    journal:
+      "IEEE Transactions on Visualization and Computer Graphics (Proceedings of IEEE VIS)",
+    paperKey: "eds",
+    imgLink: "assets/literacy-multi-modal.jpg",
+    imgDescription: "A screenshot showing a 2.5D treemap in a revisit study",
+    type: "paper",
+    topics: ["Visualization Systems"],
+    links: [],
+    abstract: `Visualization literacy is a multifaceted construct encompassing skills and competencies, such as decoding data, constructing charts, and identifying design flaws. Yet, assessments of these competencies has been primarily constrained to multiple choice assessments that target lower-order skills, such as chart comprehension. As a result, they often exhibit ceiling effects (i.e., even modestly skilled individuals commonly score near the top of the scale), and do not provide enough information about an individual’s higher-order skills (e.g., applying external knowledge, formulating critiques, and designing visualizations). To close these gaps, we develop and investigate two web-based qualitative assessments for testing the critique and design aspects of visualization literacy through online think-aloud critique and sketching of visualization designs based on data and a prompt. We compare performance on our assessments to two established visualization literacy assessments, CALVI and Mini-VLAT, by administering them to three groups that represent three experience levels: crowdworkers, students who have taken a relevant course, and researchers. We find that our critique and sketching assessments capture skills distinct from existing measures and that they differentiate between experienced individuals better than multiple choice-based alternatives. Although administering and grading qualitative assessments can be challenging, our findings suggest qualitative, multimodal assessments are a promising complement to existing visualization literacy assessments, in particular when high visualization skills need to be distinguished.`,
+  },
+  {
+    link: "",
     title:
       "How Wrangling Tools Shape Wrangling: A Technical Dimensions Analysis",
     doi: "TBD",
