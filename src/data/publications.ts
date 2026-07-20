@@ -58,7 +58,7 @@ export const PUBLICATIONS: Publication[] = [
     link: "",
     title: "On Defining Chart Type Boundaries",
     doi: "TBD",
-    authors: "Chang Han, Andrew M. McNutt, Katherine Isaacs",
+    authors: "Chang Han, Andrew McNutt, Katherine E. Isaacs",
     year: 2026,
     journal:
       "IEEE Transactions on Visualization and Computer Graphics (Proceedings of IEEE VIS)",
@@ -94,7 +94,7 @@ export const PUBLICATIONS: Publication[] = [
     title:
       "How Wrangling Tools Shape Wrangling: A Technical Dimensions Analysis",
     doi: "TBD",
-    authors: "Shiyi He, El Kindi Rezig, Paul Rosen, Andrew M. McNutt",
+    authors: "Shiyi He, El Kindi Rezig, Paul Rosen, Andrew McNutt",
     year: 2026,
     journal: "IEEE Symposium on Visual Languages and Human Centered Computing",
     paperKey: "wrangling-tdops",
@@ -102,7 +102,7 @@ export const PUBLICATIONS: Publication[] = [
     imgDescription:
       "A diagram labeled 'Conceptual Structure: How is meaning constructed'. It does a tradeoff space between abstraction visiblity and declarative structure",
     type: "paper",
-    topics: ["Visualization Systems", "Programming Interfaces"],
+    topics: ["Data Wrangling", "Programming Interfaces"],
     links: [
       { name: "osf", link: "https://osf.io/82wxe/overview" },
       {
@@ -121,7 +121,7 @@ export const PUBLICATIONS: Publication[] = [
     title:
       "Reading Between the Curly Braces: On Textual Data Serialization Format Usability",
     doi: "TBD",
-    authors: "Shiyi He, Zach Cutler, Andrew M. McNutt",
+    authors: "Shiyi He, Zach Cutler, Andrew McNutt",
     year: 2026,
     journal: "IEEE Symposium on Visual Languages and Human Centered Computing",
     paperKey: "between-the-braces",
@@ -235,7 +235,7 @@ export const PUBLICATIONS: Publication[] = [
       },
     ],
     type: "paper",
-    topics: ["Visualization Systems"],
+    topics: ["Visualization Systems", "Data Wrangling"],
   },
   {
     link: "https://arxiv.org/abs/2508.03876",
@@ -501,7 +501,7 @@ outputs to be more open, interpretable and explorable in situ.
     abstract:
       "Preparing datasets—a critical phase known as data wrangling—constitutes the dominant phase of data science development, consuming upwards of 80% of the total project time. This phase encompasses a myriad of tasks: parsing data, restructuring it for analysis, repairing inaccuracies, merging sources, eliminating duplicates,and ensuring overall data integrity. Traditional approaches, typically through manual coding in languages such as Python or using spreadsheets, are not only laborious but also error-prone. These issues range from missing entries and formatting inconsistencies to data type inaccuracies, all of which can affect the quality of downstream tasks if not properly corrected. To address these challenges, we present Buckaroo, a visualization system to highlight discrepancies in data and enable on-the-spot corrections through direct manipulations of visual objects. Buckaroo (1) automatically finds “interesting” data groups that exhibit anomalies compared to the rest of the groups and recommends them for inspection;(2) suggests wrangling actions that the user can choose to repair the anomalies; and (3) allows users to visually manipulate their data by displaying the effects of their wrangling actions and offering the ability to undo or redo these actions, which supports the iterative nature of data wrangling",
     type: "demo",
-    topics: ["Visualization Systems", "Programming Interfaces"],
+    topics: ["Data Wrangling", "Visualization Systems"],
   },
   {
     link: "https://www.computer.org/csdl/magazine/cg/2025/03/11086543/28xfB5z12rC",
