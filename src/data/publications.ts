@@ -96,7 +96,8 @@ export const PUBLICATIONS: Publication[] = [
     doi: "TBD",
     authors: "Shiyi He, El Kindi Rezig, Paul Rosen, Andrew McNutt",
     year: 2026,
-    journal: "IEEE Symposium on Visual Languages and Human Centered Computing",
+    journal:
+      "IEEE Symposium on Visual Languages and Human Centered Computing (VL/HCC)",
     paperKey: "wrangling-tdops",
     imgLink: "assets/wrangling-tdops.jpg",
     imgDescription:
@@ -123,7 +124,8 @@ export const PUBLICATIONS: Publication[] = [
     doi: "TBD",
     authors: "Shiyi He, Zach Cutler, Andrew McNutt",
     year: 2026,
-    journal: "IEEE Symposium on Visual Languages and Human Centered Computing",
+    journal:
+      "IEEE Symposium on Visual Languages and Human Centered Computing (VL/HCC)",
     paperKey: "between-the-braces",
     imgLink: "assets/braces.jpg",
     imgDescription:
@@ -175,6 +177,8 @@ export const PUBLICATIONS: Publication[] = [
     journal:
       "Proceedings of the ACM Conference on Human Factors in Computing (SIGCHI)",
     links: [
+      { name: "code", link: "https://github.com/HimaMynampaty/lintme" },
+
       { name: "live", link: "https://lintme.netlify.app/" },
       { name: "paper", link: "https://arxiv.org/abs/2603.00331" },
       { name: "video figure", link: "https://youtu.be/jyOKcsqpl_0" },
@@ -461,7 +465,7 @@ outputs to be more open, interpretable and explorable in situ.
     authors: "Tiffany Tseng, Ruijia Cheng, Andrew McNutt, Jeffrey Nichols",
     doi: "10.1109/vl-hcc65237.2025.00014",
     journal:
-      "IEEE Symposium on Visual Languages and Human Centered Computing (Short Papers)",
+      "IEEE Symposium on Visual Languages and Human Centered Computing (VL/HCC) — Short Papers",
     year: 2025,
     links: [
       {
@@ -706,7 +710,8 @@ outputs to be more open, interpretable and explorable in situ.
     title: "Considering Visualization Example Galleries",
     doi: "10.1109/vl/hcc60511.2024.00043",
     authors: "Junran Yang, Andrew McNutt, Leilani Battle",
-    journal: "IEEE Symposium on Visual Languages and Human Centered Computing",
+    journal:
+      "IEEE Symposium on Visual Languages and Human Centered Computing (VL/HCC)",
     year: 2024,
     links: [
       {
@@ -796,7 +801,8 @@ outputs to be more open, interpretable and explorable in situ.
     title: "Projectional Editors for JSON-Based DSLs",
     doi: "10.1109/vl-hcc57772.2023.00015",
     authors: "Andrew McNutt, Ravi Chugh",
-    journal: "IEEE Symposium on Visual Languages and Human Centered Computing",
+    journal:
+      "IEEE Symposium on Visual Languages and Human Centered Computing (VL/HCC)",
     year: 2023,
     links: [
       { name: "live", link: "https://prong-editor.netlify.app/" },
