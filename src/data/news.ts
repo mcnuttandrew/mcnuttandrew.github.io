@@ -7,7 +7,7 @@ export const NEWS: NewsItem[] = [
   {
     date: "Fall 2026",
     content:
-      "A big fall! Two full papers at VL/HCC (on JSON usability and data wranglers) and two full papers at IEEE VIS (on chart types and alternative modalities for visualization literacy). ",
+      "A big fall! Two full papers at VL/HCC (on [JSON usability](https://arxiv.org/abs/2607.26211) and [data wranglers](https://arxiv.org/abs/2607.26198)) and two full papers at IEEE VIS (on chart types and alternative modalities for visualization literacy). ",
   },
   {
     date: "June 2026",

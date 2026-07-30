@@ -8,6 +8,7 @@
     <a
       href="/#/{section}"
       class:font-bold={currentSection === section}
+      class:underline={currentSection === section}
       class="pr-3 text-xl text-white"
     >
       {section.toUpperCase()}
