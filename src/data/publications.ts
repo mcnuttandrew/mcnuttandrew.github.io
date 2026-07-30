@@ -90,7 +90,7 @@ export const PUBLICATIONS: Publication[] = [
     abstract: `Visualization literacy is a multifaceted construct encompassing skills and competencies, such as decoding data, constructing charts, and identifying design flaws. Yet, assessments of these competencies has been primarily constrained to multiple choice assessments that target lower-order skills, such as chart comprehension. As a result, they often exhibit ceiling effects (i.e., even modestly skilled individuals commonly score near the top of the scale), and do not provide enough information about an individual’s higher-order skills (e.g., applying external knowledge, formulating critiques, and designing visualizations). To close these gaps, we develop and investigate two web-based qualitative assessments for testing the critique and design aspects of visualization literacy through online think-aloud critique and sketching of visualization designs based on data and a prompt. We compare performance on our assessments to two established visualization literacy assessments, CALVI and Mini-VLAT, by administering them to three groups that represent three experience levels: crowdworkers, students who have taken a relevant course, and researchers. We find that our critique and sketching assessments capture skills distinct from existing measures and that they differentiate between experienced individuals better than multiple choice-based alternatives. Although administering and grading qualitative assessments can be challenging, our findings suggest qualitative, multimodal assessments are a promising complement to existing visualization literacy assessments, in particular when high visualization skills need to be distinguished.`,
   },
   {
-    link: "",
+    link: "https://arxiv.org/abs/2607.26198",
     title:
       "How Wrangling Tools Shape Wrangling: A Technical Dimensions Analysis",
     doi: "TBD",
@@ -105,6 +105,7 @@ export const PUBLICATIONS: Publication[] = [
     type: "paper",
     topics: ["Data Wrangling", "Programming Interfaces"],
     links: [
+      { name: "paper", link: "https://arxiv.org/abs/2607.26198" },
       { name: "osf", link: "https://osf.io/82wxe/overview" },
       {
         name: "study",
@@ -118,7 +119,7 @@ export const PUBLICATIONS: Publication[] = [
     abstract: `Wrangling consumes a disproportionate share of the effort associated with any data project. While a variety of tools support it, relatively little is known about how their differing interface forms shape the way people actually wrangle. We conduct a between-subjects (N=40) observational study of data cleaning tasks performed in tools spanning distinct interface paradigms: Jupyter (notebook), Excel (spreadsheet), ChatGPT (conversational AI), and OpenRefine (visual wranglers). We situate our observations within the Technical Dimensions of Programming Systems framework, which we use as a conceptual scaffold for comparing across interface paradigms. Within the context of our study, the results suggest that tool affordances steer user strategies but do not determine outcomes. There is no consistent advantage of any single tool, nor convergence of results within tools observed across our outcome measures. Instead, we identify trade-offs and connect them with observed practice. For example, a key tension is between data- and abstraction-centered interfaces, where data-centered interfaces encourage opportunistic cleaning rather than systematic, planned transformations found in abstraction-focused tools (but come with a cognitive burden). Tool design, beyond mere functionality, plays a structuring role in how data work unfolds.`,
   },
   {
-    link: "",
+    link: "https://arxiv.org/abs/2607.26211",
     title:
       "Reading Between the Curly Braces: On Textual Data Serialization Format Usability",
     doi: "TBD",
@@ -133,6 +134,7 @@ export const PUBLICATIONS: Publication[] = [
     type: "paper",
     topics: ["Programming Interfaces", "DSLs"],
     links: [
+      { name: "paper", link: "https://arxiv.org/abs/2607.26211" },
       { name: "osf", link: "https://osf.io/jryna" },
       {
         name: "studies",
