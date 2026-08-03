@@ -60,7 +60,7 @@ We propose parameterized declarative templates, a simple abstraction mechanism o
 **Visualization theories**: Forming structures to answer questions like what does it mean for a visualization or tool to be "good"
 **Critical/sociotechnical perspectives**: Consider questions of context and situatedness -->
 
-I'm an assistant professor of Computer Science at the University of Utah in the [Scientific Computing and Imaging](https://www.sci.utah.edu/) Institute (SCI) and [Kahlert School of Computing](https://www.cs.utah.edu/). I lead the [HAVOC (Human and Visualization Oriented Computing) Lab](https://www.mcnutt.in/#/lab), where we develop tools and theories that help us do knowledge-centered work more safely. I am the receipt of [Johanna Beyer EuroVis Early Career Award](https://www.eg.org/wp/eurographics-awards-programme/visualization-award/johanna-beyer-eurovis-early-career-award-2026-andrew-mcnutt/), a [Siebel Scholarship](https://www.siebelscholars.com/scholar-profile/3717/), as well as a number of paper awards at top visualization and HCI venues.
+I'm an incoming assistant professor of Computer Science at the University of British Columbia (starting beginning 2027). At the moment I'm at the University of Utah in the [Scientific Computing and Imaging](https://www.sci.utah.edu/) Institute (SCI) and [Kahlert School of Computing](https://www.cs.utah.edu/). I lead the [HAVOC (Human and Visualization Oriented Computing) Lab](https://www.mcnutt.in/#/lab), where we develop tools and theories that help us do knowledge-centered work more safely. I am the receipt of [Johanna Beyer EuroVis Early Career Award](https://www.eg.org/wp/eurographics-awards-programme/visualization-award/johanna-beyer-eurovis-early-career-award-2026-andrew-mcnutt/), a [Siebel Scholarship](https://www.siebelscholars.com/scholar-profile/3717/), as well as a number of paper awards at top visualization and HCI venues.
 
 I'm interested in Human Computer Interaction, Visualization, and Programming Interfaces. This tangle of interests leads me to work on a range of different domains. Lately, I've been excited about **Visualization systems**, **Interfaces for programming**, **Visualization theories**, and **Critical/sociotechnical perspectives**.
 Connecting these domains is an interest in "polite" systems, that is tools that support complex assistance while still allowing you to maintain agency.
@@ -113,7 +113,7 @@ _Are you hiring interns (or another non-phd position)?_ I am only hiring Ph.D. s
 _Do I need to email you before applying?_ nope! you dont need anyone's permission to apply. Just mention me in your statement and thatll set the wheels in motion.
 
 
-`,Rf=`I'm interested in hiring 1 Ph.D. student this cycle, ideally to start in Fall 2027. I am generally interested in hiring someone who is interested in one of, or some combination, of the following two topics:
+`,Rf=`I'm interested in hiring 1 Ph.D. student this cycle, ideally to start in Fall 2027 at University of British Columbia. I am generally interested in hiring someone who is interested in one of, or some combination, of the following two topics:
 
 **Critical Visualization** or generally the rich consideration and investigation of foundations, assumptions, and alignments present in data visualization practice and research. Things that appeared in our [special issue on critical visualization](https://www.computer.org/csdl/magazine/cg/2025/03/11086543/28xfB5z12rC) are good examples of this style of work.
 
@@ -126,7 +126,7 @@ There's lots of ways to show that you're interested and engaged, and I'm interes
 For instance, people who have been through the US community college system is a very strong signal of interest (and drive) to me, as is taking non-traditional paths to grad school (such as through industry).
 
 Everyone's path is different, and I'm delighted to work with lots of different people.
-If you're interested in working with me, please apply and mention me in your application. (The deadline is in mid December). There are wonderful things to build and think about, and I'm excited to work with you on them.
+If you're interested in working with me, please apply to [UBC's Ph.D. program in Computer Science](https://www.cs.ubc.ca/students/grad/admissions) and mention me in your application. (The deadline is in mid December). There are wonderful things to build and think about, and I'm excited to work with you on them.
 
 **FAQ**
 
