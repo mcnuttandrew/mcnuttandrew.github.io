@@ -21,7 +21,7 @@
       <div class="project-block">
         <a href={project.link}>
           <div class="img-container">
-            <img src={project.imgLink} alt="image for {project.title}" />
+            <img src={project.imgLink} alt={project.alt} />
           </div>
         </a>
         <h3 class="text-xl">{project.title}</h3>

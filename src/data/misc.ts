@@ -6,6 +6,7 @@ interface Misc {
   imgLink: string;
   text: string;
   venue?: string;
+  alt: string;
 }
 
 export const MISC: Misc[] = [
@@ -16,6 +17,7 @@ export const MISC: Misc[] = [
     link: "https://docs.google.com/document/d/18mlxb27_7Tqi4Q27QR9tHEbaHZnPO2ZClyiPLmt0vP4/edit?usp=sharing",
     imgLink: "https://www.mcnutt.in/assets/revisit-py.jpg",
     text: "A set of preferences I have for running user studies",
+    alt: "The revisit logo",
   },
   {
     title: "Upset Implementation in Svelte",
@@ -25,6 +27,7 @@ export const MISC: Misc[] = [
     link: "https://svelte.dev/playground/0a00cf7ecd85493ab8eed603d5169d9d?version=5.34.6",
     imgLink: "assets/upset-svelte.jpg",
     text: "A simple implementation of an upset plot in Svelte",
+    alt: "The upset plot in Svelte",
     // tags: ["visualization", "tech"],
   },
   {
@@ -35,6 +38,7 @@ export const MISC: Misc[] = [
     link: "https://docs.google.com/spreadsheets/d/1_1D6WTnhZ60hw-u8CwP7SM_heWX8YR9KsWVq1mYGZOc/edit?usp=sharing",
     imgLink: "assets/cdn-tdps-template.jpg",
     text: "A template for conducting [Cognitive Dimensions](https://en.wikipedia.org/wiki/Cognitive_dimensions_of_notations) or [Technical Dimensions](https://tomasp.net/techdims/) analyses",
+    alt: "A screenshot of a google sheet with the CDN/TDPS template",
     // tags: ["tech"],
   },
   {
@@ -43,6 +47,7 @@ export const MISC: Misc[] = [
     link: "https://medium.com/@mcnutt/getting-your-chi-diff-ready-1714eb3c75f6",
     imgLink: "assets/chi-diff.jpg",
     text: "A guide for preparing your CHI diff for submission",
+    alt: "A screenshot of a text diff",
     // tags: ["tech"],
   },
   {
@@ -52,6 +57,7 @@ export const MISC: Misc[] = [
     link: "https://color-buddy.netlify.app/",
     imgLink: "assets/color-buddy.jpg",
     text: "A modern color palette design system",
+    alt: "The color buddy logo, a series of nested color wheel that vaguely looks like an eye",
     // tags: ["visualization"],
   },
   {
@@ -60,6 +66,7 @@ export const MISC: Misc[] = [
     sourceLink: "https://github.com/mcnuttandrew/vis-phd-positions",
     link: "https://vis-phd-positions.netlify.app/",
     imgLink: "assets/open-vis-pos.jpg",
+    alt: "A screenshot of a list of open visualization PhD positions",
     text: "A collection of advertisements for open visualization PhD positions",
     // tags: ["visualization"],
   },
@@ -70,6 +77,7 @@ export const MISC: Misc[] = [
     link: "http://prong-editor.netlify.app/",
     imgLink: "assets/prong-logo.jpg",
     text: "A projectional editor for JSON-based DSLs",
+    alt: "The prong logo, a series of interlocked curly braces",
     // tags: ["visualization", "tech"],
   },
   {
@@ -78,6 +86,7 @@ export const MISC: Misc[] = [
     link: "https://www.mcnutt.in/#/zines",
     imgLink: "assets/bison-eylsium-cover.jpg",
     text: "Zines are cool and I make them for various reasons",
+    alt: "A cover of a zine called Bison Elysium, it has a fucked up AI-y bison on the cover",
     // tags: ["art", "tech", "visualization"],
   },
 
@@ -88,6 +97,7 @@ export const MISC: Misc[] = [
     link: "http://ivy-vis.netlify.app/",
     imgLink: "assets/ivy.jpg",
     text: "A meta-level approach to visual analytics. Information is Beautiful Awards '22 [Long List](https://www.informationisbeautifulawards.com/showcase/5139-ivy-integrated-visualization-editing-via-parameterized-declarative-templates).",
+    alt: "A screenshot of the ivy interface, it has a bunch of charts and a code editor",
     // tags: ["visualization", "tech"],
   },
   {
@@ -97,6 +107,7 @@ export const MISC: Misc[] = [
     link: "https://www.mcnutt.in/table-cartogram/",
     imgLink: "assets/taco-ts.jpg",
     text: "A library for constructing table cartograms in the browser.",
+    alt: "A screenshot of a table cartogram, it has a bunch of squares that are sized based on data with some controls on the left side",
     // tags: ["visualization", "tech"],
   },
   {
@@ -106,6 +117,7 @@ export const MISC: Misc[] = [
     link: "https://vis-tarot.github.io/vis-tarot/",
     imgLink: "assets/vis-tarot-back.jpg",
     text: "A tarot based visual analytics system. It guides users analytics process via the divine hands of fate.",
+    alt: "A logo for the vis-tarot project, it is the back of a tarot card with a bunch of charts on it",
     // tags: ["visualization"],
   },
   // {
@@ -125,6 +137,7 @@ export const MISC: Misc[] = [
     link: "https://www.mcnutt.in/cycles-rain-seasons-in-size/",
     imgLink: "assets/cycles-in-rain.jpg",
     text: "A little infographic about bicycle ridership in Seattle featuring table cartograms. Information is Beautiful Awards '19 Long List.",
+    alt: "A screenshot of the poster, it includes a table cartogram of Seattle with a bunch of charts and text",
     // tags: ["visualization", "art"],
   },
   {
@@ -134,6 +147,7 @@ export const MISC: Misc[] = [
     link: "https://www.npmjs.com/package/node-cssql",
     imgLink: "assets/cssql-logo.jpg",
     text: "A new answer to this css-in-js question: css in sql. A sql-ddl to css transpiler written in haskell, available on npm.",
+    alt: "The cssql logo, a venn diagram with css, sql, and haskell in the three circles",
     // tags: ["tech"],
   },
   {
@@ -143,6 +157,7 @@ export const MISC: Misc[] = [
     link: "https://www.mcnutt.in/forum-explorer/",
     imgLink: "assets/forum-ex-pic.jpg",
     text: "A chrome extension and website that allows users to explore threaded conversations using trees.  Information is Beautiful Awards '19 Long List.",
+    alt: "A screenshot of the forum explorer interface, it has a tree view of a forum thread with some controls on the left side",
     // tags: ["visualization", "tech"],
   },
   // {
@@ -160,8 +175,8 @@ export const MISC: Misc[] = [
     link: "http://www.mcnutt.in/home-graphs/",
     sourceLink: "https://github.com/mcnuttandrew/home-graphs",
     imgLink: "assets/home-graphs.jpg",
-    text: `Over the 2017 holidays I spent some time meditating on memory, home, and
-    graph theory, which led to my making these christmas cards.`,
+    alt: "A collage of several christmas cards, each with a different graph on it",
+    text: `Over the 2017 holidays I spent some time meditating on memory, home, and graph theory, which led to my making these christmas cards.`,
     // tags: ["visualization", "art"],
   },
   {
@@ -170,6 +185,7 @@ export const MISC: Misc[] = [
     link: "http://www.mcnutt.in/city-size/",
     sourceLink: "https://github.com/mcnuttandrew/city-size",
     imgLink: "assets/city-size.jpg",
+    alt: "A screenshot of a map of the United States with the 100 most populous cities marked",
     text: "A print graphic describing the shape of the 100 most populous American cities.",
     // tags: ["visualization", "art"],
   },
@@ -179,6 +195,7 @@ export const MISC: Misc[] = [
     link: "http://www.mcnutt.in/color-of-the-year/",
     sourceLink: "https://github.com/mcnuttandrew/color-of-the-year",
     imgLink: "assets/color-of-year.jpg",
+    alt: "A screenshot of a webpage with a pair of colorful sunburst charts",
     text: `A small exploration of the glory and wonder that is Pantone's color of the year.`,
     // tags: ["visualization"],
   },
@@ -188,6 +205,7 @@ export const MISC: Misc[] = [
     link: "http://uber.github.io/react-vis/#/",
     sourceLink: "https://github.com/uber/react-vis",
     imgLink: "assets/react-vis-image.jpg",
+    alt: "A screenshot of a color streamgraph",
     text: "A charting library for the react ecosystem. [Blog post](https://towardsdatascience.com/advanced-visualization-with-react-vis-efc5c6667b4)",
     // tags: ["visualization", "tech"],
   },
@@ -197,6 +215,7 @@ export const MISC: Misc[] = [
     link: "https://medium.com/@mcnutt/a-brief-saga-concerning-the-making-of-a-tarot-deck-about-the-american-highway-system-2eaebf3320c8",
     sourceLink: "https://github.com/mcnuttandrew/tarot-deck",
     imgLink: "assets/tarot-image.jpg",
+    alt: "A screenshot of a tarot card with figures that look like road signs",
     text: "A tarot tech themed around the signage and spirit of the American highway system.",
     // tags: ["art"],
   },
