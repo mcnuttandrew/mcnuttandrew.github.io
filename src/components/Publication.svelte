@@ -38,7 +38,6 @@
         <a href={publication.link}>
           <img
             alt={altText}
-            title={altText}
             src={publication.imgLink}
             class="cursor-pointer min-w-24"
           />
@@ -147,5 +146,9 @@
   }
   .publink:last-child::after {
     content: "";
+  }
+  img {
+    user-select: none;
+    -webkit-user-select: none;
   }
 </style>
