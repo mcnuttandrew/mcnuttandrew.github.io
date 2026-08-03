@@ -1,4 +1,4 @@
-I'm interested in hiring 1 Ph.D. student this cycle, ideally to start in Fall 2027. I am generally interested in hiring someone who is interested in one of, or some combination, of the following two topics:
+I'm interested in hiring 1 Ph.D. student this cycle, ideally to start in Fall 2027 at University of British Columbia. I am generally interested in hiring someone who is interested in one of, or some combination, of the following two topics:
 
 **Critical Visualization** or generally the rich consideration and investigation of foundations, assumptions, and alignments present in data visualization practice and research. Things that appeared in our [special issue on critical visualization](https://www.computer.org/csdl/magazine/cg/2025/03/11086543/28xfB5z12rC) are good examples of this style of work.
 
@@ -11,7 +11,7 @@ There's lots of ways to show that you're interested and engaged, and I'm interes
 For instance, people who have been through the US community college system is a very strong signal of interest (and drive) to me, as is taking non-traditional paths to grad school (such as through industry).
 
 Everyone's path is different, and I'm delighted to work with lots of different people.
-If you're interested in working with me, please apply and mention me in your application. (The deadline is in mid December). There are wonderful things to build and think about, and I'm excited to work with you on them.
+If you're interested in working with me, please apply to [UBC's Ph.D. program in Computer Science](https://www.cs.ubc.ca/students/grad/admissions) and mention me in your application. (The deadline is in mid December). There are wonderful things to build and think about, and I'm excited to work with you on them.
 
 **FAQ**
 
