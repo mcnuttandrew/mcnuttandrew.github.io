@@ -21,8 +21,8 @@
   let news = NEWS.slice(0, 4);
 </script>
 
-<head>
-  <title>My Page Title</title>
+<svelte:head>
+  <title>Andrew McNutt: {currentSection}</title>
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Andrew McNutt" />
@@ -33,7 +33,7 @@
   />
   <meta property="og:url" content="https://www.mcnutt.in/${currentSection}" />
   <meta property="og:site_name" content="Andrew McNutt Website" />
-</head>
+</svelte:head>
 <div
   class="h-full w-full md:justify-center flex flex-col md:flex-row leading-tight"
 >
