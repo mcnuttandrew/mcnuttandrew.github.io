@@ -21,6 +21,19 @@
   let news = NEWS.slice(0, 4);
 </script>
 
+<head>
+  <title>My Page Title</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Andrew McNutt" />
+  <meta property="og:description" content="HAVOC Lab" />
+  <meta
+    property="og:image"
+    content="https://www.mcnutt.in/icons/logo-black.png"
+  />
+  <meta property="og:url" content="https://www.mcnutt.in/${currentSection}" />
+  <meta property="og:site_name" content="Andrew McNutt Website" />
+</head>
 <div
   class="h-full w-full md:justify-center flex flex-col md:flex-row leading-tight"
 >
