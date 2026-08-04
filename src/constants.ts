@@ -106,6 +106,9 @@ export const COLLABORATOR_LINKS: Record<string, `http${string}`> = {
   "Joseph Bond": "http://jecbond.com/",
   "Matthew Kay": "https://www.mjskay.com/",
   "Lily W. Ge": "https://lilyge.com/",
+  "Mara Solen": "https://marasolen.github.io/",
+  "Wesley Willett": "https://wjwillett.net/",
+  "Shadmaan Hye": "https://shadmaanhye.netlify.app/",
 };
 
 const selectedPubs = new Set([
