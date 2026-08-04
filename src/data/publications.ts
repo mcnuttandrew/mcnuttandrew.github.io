@@ -55,7 +55,7 @@ export interface Publication {
 
 export const PUBLICATIONS: Publication[] = [
   {
-    link: "",
+    link: "https://arxiv.org/pdf/2608.02512",
     title: "On Defining Chart Type Boundaries",
     doi: "TBD",
     authors: "Chang Han, Andrew McNutt, Katherine E. Isaacs",
@@ -68,11 +68,24 @@ export const PUBLICATIONS: Publication[] = [
       "A diagram labeled 'Conceptual Structure: How is meaning constructed'. It does a tradeoff space between abstraction visiblity and declarative structure",
     type: "paper",
     topics: ["Visualization Theory"],
-    links: [],
+    links: [
+      {
+        name: "paper",
+        link: "https://arxiv.org/pdf/2608.02512",
+      },
+      {
+        name: "osf",
+        link: "https://osf.io/j2c7k",
+      },
+      {
+        name: "live",
+        link: "https://hconhisway.github.io/GanttDesignSpace/",
+      },
+    ],
     abstract: `What makes a Gantt chart? This question proved unexpectedly difficult to answer when we set out to build a design space for Gantt charts. Existing definitions, each shaped by their respective research goals, made different scope choices that we could not directly reconcile. We reasoned about what should and should not count as a Gantt chart, developing concepts and tools along the way. We distinguish features that are essential to a chart type's identity from those that can vary, and use these distinctions to map how chart types relate through what they share and lack. Applying these ideas to Gantt charts, radar charts, and table cartograms, we produce key insights on what boundary work reveals: definitions diverge for functional reasons, drawing boundaries exposes hidden structure in descriptive vocabulary such as feature entanglements, and scope choices shape how far findings can generalize. We came to understand that there is not a definitive answer, but that working through the question produced a functional definition that guided the design space we originally set out to build. Additionally, we present vocabulary and tools for reasoning about chart type boundaries and surfacing these boundary decisions, alongside a documented Gantt chart design space. Our broader reflection is that scope choices in chart-type-centered research—which determine what design spaces include, what grammars generate, and what perceptual studies measure—are research decisions worth making visible.`,
   },
   {
-    link: "",
+    link: "https://arxiv.org/pdf/2608.00330",
     title:
       "Read, Critique, or Sketch? Investigating Alternative Visualization Literacy Assessment Modalities",
     doi: "TBD",
@@ -86,8 +99,21 @@ export const PUBLICATIONS: Publication[] = [
     imgDescription: "A screenshot showing a 2.5D treemap in a revisit study",
     type: "paper",
     topics: ["Visualization Systems"],
-    links: [],
-    abstract: `Visualization literacy is a multifaceted construct encompassing skills and competencies, such as decoding data, constructing charts, and identifying design flaws. Yet, assessments of these competencies has been primarily constrained to multiple choice assessments that target lower-order skills, such as chart comprehension. As a result, they often exhibit ceiling effects (i.e., even modestly skilled individuals commonly score near the top of the scale), and do not provide enough information about an individual’s higher-order skills (e.g., applying external knowledge, formulating critiques, and designing visualizations). To close these gaps, we develop and investigate two web-based qualitative assessments for testing the critique and design aspects of visualization literacy through online think-aloud critique and sketching of visualization designs based on data and a prompt. We compare performance on our assessments to two established visualization literacy assessments, CALVI and Mini-VLAT, by administering them to three groups that represent three experience levels: crowdworkers, students who have taken a relevant course, and researchers. We find that our critique and sketching assessments capture skills distinct from existing measures and that they differentiate between experienced individuals better than multiple choice-based alternatives. Although administering and grading qualitative assessments can be challenging, our findings suggest qualitative, multimodal assessments are a promising complement to existing visualization literacy assessments, in particular when high visualization skills need to be distinguished.`,
+    links: [
+      {
+        name: "paper",
+        link: "https://arxiv.org/pdf/2608.00330",
+      },
+      {
+        name: "study",
+        link: "https://vdl.sci.utah.edu/visLiteracyStudy/literacy-prolific/",
+      },
+      {
+        name: "code",
+        link: "https://github.com/visdesignlab/visLiteracyStudy",
+      },
+    ],
+    abstract: `Visualization literacy is a multifaceted construct encompassing skills and competencies, such as decoding data, constructing charts, and identifying design flaws. Yet, assessments of these competencies has been primarily constrained to multiple choice assessments that target lower-order skills, such as chart comprehension. As a result, they often exhibit ceiling effects (i.e., even modestly skilled individuals commonly score near the top of the scale), and do not provide enough information about an individual's higher-order skills (e.g., applying external knowledge, formulating critiques, and designing visualizations). To close these gaps, we develop and investigate two web-based qualitative assessments for testing the critique and design aspects of visualization literacy through online think-aloud critique and sketching of visualization designs based on data and a prompt. We compare performance on our assessments to two established visualization literacy assessments, CALVI and Mini-VLAT, by administering them to three groups that represent three experience levels: crowdworkers, students who have taken a relevant course, and researchers. We find that our critique and sketching assessments capture skills distinct from existing measures and that they differentiate between experienced individuals better than multiple choice-based alternatives. Although administering and grading qualitative assessments can be challenging, our findings suggest qualitative, multimodal assessments are a promising complement to existing visualization literacy assessments, in particular when high visualization skills need to be distinguished.`,
   },
 
   // {
@@ -121,7 +147,7 @@ export const PUBLICATIONS: Publication[] = [
   //   type: "paper",
   //   topics: ["Color"],
   //   links: [],
-  //   abstract: `Color discrimination is a fundamental aspect of visualization as it influences how people interpret visual encodings. Many visualization guidelines are informed by perceptual studies, yet relatively few have been replicated. Acknowledging that the interaction between human perception, visual tasks, and display technology can change over time, we replicate two crowdsourced color discrimination studies conducted 10 years earlier. Specifically, we replicated a visualization-focused color discrimination task (N = 144) and a more general perceptual discrimination task (N = 394). In both studies, our results reproduced the original perceptual effects. We further use the replication to investigate whether color-related practice influences color discrimination. Specifically, we extended our replication studies by adding questions about participants’ engagement with color practices. We then examined whether diverse color-related practices (e.g., artistic hobbies, knowledge of color theory, and cosmetic makeup use) influenced color discrimination. We found no significant difference between participants who reported engaging in color-related practices and those who did not, suggesting that design guidance regarding color discrimination may generalize across viewers regardless of their regular color practice.`,
+  //   abstract: `Color discrimination is a fundamental aspect of visualization as it influences how people interpret visual encodings. Many visualization guidelines are informed by perceptual studies, yet relatively few have been replicated. Acknowledging that the interaction between human perception, visual tasks, and display technology can change over time, we replicate two crowdsourced color discrimination studies conducted 10 years earlier. Specifically, we replicated a visualization-focused color discrimination task (N = 144) and a more general perceptual discrimination task (N = 394). In both studies, our results reproduced the original perceptual effects. We further use the replication to investigate whether color-related practice influences color discrimination. Specifically, we extended our replication studies by adding questions about participants' engagement with color practices. We then examined whether diverse color-related practices (e.g., artistic hobbies, knowledge of color theory, and cosmetic makeup use) influenced color discrimination. We found no significant difference between participants who reported engaging in color-related practices and those who did not, suggesting that design guidance regarding color discrimination may generalize across viewers regardless of their regular color practice.`,
   // },
 
   // {
@@ -137,7 +163,7 @@ export const PUBLICATIONS: Publication[] = [
   //   type: "paper",
   //   topics: ["Color"],
   //   links: [],
-  //   abstract: `Designing a color palette for data requires designers to balance multiple constraints, including accessibility and aesthetics. Color palette tools support this process through features icluding direct manipulation, automated palette generation and evaluation, previews, and so on. Despite their prominence, relatively little is known about how these different mechanisms shape design across contexts. We conducted an exploratory think-aloud crowd work study with 40 self-identified designers. Each participant used one of four palette tools selected to span different interaction modalities to complete a series of accessibility- and aesthetics-oriented design tasks. We observed two preliminary patterns. First, tool differences were more pronounced in accessibility-constrained tasks. Second, even when accessibility was not explicitly required, some tools produced more accessibility-friendly palettes and prompted more accessibility-oriented thinking. In this tool genre, then, system design shapes outcomes both via built-in functionality, as well as by directing designers’ attention toward particular constraints and design considerations.`,
+  //   abstract: `Designing a color palette for data requires designers to balance multiple constraints, including accessibility and aesthetics. Color palette tools support this process through features icluding direct manipulation, automated palette generation and evaluation, previews, and so on. Despite their prominence, relatively little is known about how these different mechanisms shape design across contexts. We conducted an exploratory think-aloud crowd work study with 40 self-identified designers. Each participant used one of four palette tools selected to span different interaction modalities to complete a series of accessibility- and aesthetics-oriented design tasks. We observed two preliminary patterns. First, tool differences were more pronounced in accessibility-constrained tasks. Second, even when accessibility was not explicitly required, some tools produced more accessibility-friendly palettes and prompted more accessibility-oriented thinking. In this tool genre, then, system design shapes outcomes both via built-in functionality, as well as by directing designers' attention toward particular constraints and design considerations.`,
   // },
 
   {
