@@ -1,12 +1,13 @@
 import type { Publication } from "./data/publications";
 import { COLLABORATOR_LINKS } from "./constants";
 import About from "./components/About.svelte";
+import Lab from "./components/Lab.svelte";
 import Misc from "./components/Misc.svelte";
+import News from "./components/News.svelte";
 import Publications from "./components/Publications.svelte";
 import Teaching from "./components/Teaching.svelte";
-import News from "./components/News.svelte";
+import VanityCharts from "./components/VanityCharts.svelte";
 import Zines from "./components/Zines.svelte";
-import Lab from "./components/Lab.svelte";
 // @ts-ignore
 import HIRING24 from "./text-chunks/hiring-24.md?raw";
 // @ts-ignore
@@ -27,6 +28,7 @@ export const routing: Record<string, { component: any; props?: any }> = {
   "hiring-26": post(HIRING26),
   "full-bib": { component: FullBib },
   about: { component: About },
+  "vanity-charts": { component: VanityCharts },
 };
 
 export function getRoute() {
