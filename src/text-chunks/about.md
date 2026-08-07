@@ -1,4 +1,4 @@
-> **_I'm hiring this cycle!_** Check out [this page](#/hiring-26) for details!
+> **_I'm hiring this cycle!_** Check out [this page](#/hiring-26) for details!!
 
 <!-- A slightly more informative partition of my interests focuses on:
 

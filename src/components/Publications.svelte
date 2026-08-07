@@ -2,8 +2,6 @@
   import { PUBLICATIONS } from "../constants";
   import store from "../store";
   import PublicationComponent from "./Publication.svelte";
-  import { publicationsByYear } from "../data/vega-charts";
-  import { VegaLite } from "svelte-vega";
 
   const themeExplainers: Record<
     string,
@@ -38,7 +36,7 @@
 
   export function sortPublications() {
     const yearOrder = Array.from(
-      PUBLICATIONS.reduce((acc, x) => acc.add(x.year), new Set()),
+      PUBLICATIONS.reduce((acc, x) => acc.add(x.year), new Set())
     ) as string[];
     return Object.entries(
       PUBLICATIONS.map((x) => ({ ...x, year: x.year })).reduce(
@@ -48,20 +46,14 @@
         },
         yearOrder.reduce(
           (acc, key: string) => ({ ...acc, [key]: [] }),
-          {} as Record<string, any>,
-        ),
-      ),
+          {} as Record<string, any>
+        )
+      )
     ).sort((a, b) => Number(b[0]) - Number(a[0]));
   }
 
   $: sortedPublications = sortPublications();
 </script>
-
-<div class="flex flex-col w-full">
-  <span class="italic text-sm"> Publications by Year </span>
-
-  <VegaLite spec={publicationsByYear()} options={{ actions: false }} />
-</div>
 
 <div class="mb-16 max-w-fit">
   {#each sortedPublications as pubs}
