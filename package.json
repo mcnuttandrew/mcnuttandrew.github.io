@@ -11,7 +11,7 @@
     "@types/node": "^20.19.43",
     "autoprefixer": "^10.5.2",
     "husky": "^9.1.7",
-    "postcss": "^8.5.18",
+    "postcss": "^8.5.23",
     "prettier": "^2.8.8",
     "svelte": "^5.56.4",
     "svelte-check": "^4.7.2",
