@@ -117,7 +117,7 @@ export const PUBLICATIONS: Publication[] = [
   },
 
   {
-    link: "",
+    link: "https://arxiv.org/abs/2608.12792",
     title: "Considering Contributor Roles in Visualization and HCI Research",
     doi: "TBD",
     authors: "Mara Solen, Wesley Willett, Andrew McNutt",
@@ -129,7 +129,12 @@ export const PUBLICATIONS: Publication[] = [
       "A matrix showing the different roles of contributors in a research project",
     type: "paper",
     topics: ["Critical Visualization"],
-    links: [],
+    links: [
+      {
+        name: "paper",
+        link: "https://arxiv.org/abs/2608.12792",
+      },
+    ],
     abstract: `Contribution statements are an increasingly common way to make research labor visible, reduce academic malfeasance, and provide broader transparency. Despite this potential value, they remain uncommon in visualization and HCI. To explore this gap we conducted an online study with (N=21) visualization and HCI researchers. We find a range of differing opinions about the utility of contribution statements, which are set against a background of tensions relating to power dynamics between authors, bias in authorship perceptions, and the tedium of providing yet another form of documentation. From these factors we offer a modest recommendation: consider contribution statements. There are contexts when they may usefully explicate work, and others where they can cause author-team conflict or become a burdensome chore. Regardless of whether they are used by readers or not, we suggest that scaffolded mechanisms for reflecting on contribution roles is valuable both for public accountability and internal alignment. By surfacing these perspectives, we seek to open a dialogue about what constitutes authorship, how our community might move toward more equitable and transparent attribution practices, and where the visualization and HCI communities might be uniquely equipped to help.`,
   },
 
