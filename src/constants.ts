@@ -126,6 +126,13 @@ export const SELECTED_PUBLICATIONS = PUBLICATIONS.filter((x) =>
 
 export const TEACHING = [
   {
+    title: "CPSC_V 554M - Topics in HCI: Open Science in Vis/HCI",
+    date: "Winter Term II 2027",
+    role: "Instructor",
+    location: "University of British Columbia",
+    link: "https://www.mcnutt.in/open-sci-hci-vis/",
+  },
+  {
     title: "CS6967: Critical VIS+HCI",
     date: "Spring 2026",
     role: "Instructor",

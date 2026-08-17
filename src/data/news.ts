@@ -5,6 +5,11 @@ interface NewsItem {
 
 export const NEWS: NewsItem[] = [
   {
+    date: "Winter 2027",
+    content:
+      "Excited to be teaching a new course at UBC this winter: CPSC_V 554M - Topics in HCI: Open Science in Vis/HCI! [Check out the course website](https://www.mcnutt.in/open-sci-hci-vis/). If you are at UBC and interested in the course, you should take it!",
+  },
+  {
     date: "Fall 2026",
     content:
       "I'm moving to the University of British Columbia as an assistant professor in the Department of Computer Science! Excited to return the pacific northwest 🌲🌲🌲",
