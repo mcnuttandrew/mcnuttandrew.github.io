@@ -410,6 +410,10 @@ export const PUBLICATIONS: Publication[] = [
         link: "https://arxiv.org/abs/2507.04236",
       },
       {
+        name: "blog post",
+        link: "https://dilshadurrahman58.github.io/annotation-grammar/",
+      },
+      {
         name: "live",
         link: "https://vl-annotation.netlify.app/",
       },
