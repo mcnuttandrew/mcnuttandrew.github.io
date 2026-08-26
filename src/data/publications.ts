@@ -139,9 +139,9 @@ export const PUBLICATIONS: Publication[] = [
   },
 
   {
-    link: "",
+    link: "https://arxiv.org/abs/2608.24789",
     title: "Ten Years Later: Replicating Two Color Discrimination Studies",
-    doi: "TBD",
+    doi: "NA",
     authors: "Shadmaan Hye, Katherine E. Isaacs, Andrew McNutt",
     year: 2026,
     journal: "VisXVision Workshop",
@@ -151,7 +151,20 @@ export const PUBLICATIONS: Publication[] = [
       "A matrix showing the different roles of contributors in a research project",
     type: "paper",
     topics: ["Color"],
-    links: [],
+    links: [
+      {
+        name: "paper",
+        link: "https://arxiv.org/abs/2608.24789",
+      },
+      {
+        name: "studies",
+        link: "https://color-perception-replication.netlify.app/",
+      },
+      {
+        name: "code",
+        link: "https://github.com/mcnuttandrew/color-perception-replication",
+      },
+    ],
     abstract: `Color discrimination is a fundamental aspect of visualization as it influences how people interpret visual encodings. Many visualization guidelines are informed by perceptual studies, yet relatively few have been replicated. Acknowledging that the interaction between human perception, visual tasks, and display technology can change over time, we replicate two crowdsourced color discrimination studies conducted 10 years earlier. Specifically, we replicated a visualization-focused color discrimination task (N = 144) and a more general perceptual discrimination task (N = 394). In both studies, our results reproduced the original perceptual effects. We further use the replication to investigate whether color-related practice influences color discrimination. Specifically, we extended our replication studies by adding questions about participants' engagement with color practices. We then examined whether diverse color-related practices (e.g., artistic hobbies, knowledge of color theory, and cosmetic makeup use) influenced color discrimination. We found no significant difference between participants who reported engaging in color-related practices and those who did not, suggesting that design guidance regarding color discrimination may generalize across viewers regardless of their regular color practice.`,
   },
 
