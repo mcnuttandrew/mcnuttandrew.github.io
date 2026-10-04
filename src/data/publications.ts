@@ -90,7 +90,7 @@ export const PUBLICATIONS: Publication[] = [
       "Read, Critique, or Sketch? Investigating Alternative Visualization Literacy Assessment Modalities",
     doi: "TBD",
     authors:
-      "Zach Cutler, Lily W. Ge, Matthew Kay, Lane Harrison, Andrew McNutt, and Alexander Lex",
+      "Zach Cutler, Lily W. Ge, Matthew Kay, Lane Harrison, Andrew McNutt, Alexander Lex",
     year: 2026,
     journal:
       "IEEE Transactions on Visualization and Computer Graphics (Proceedings of IEEE VIS)",
@@ -171,7 +171,7 @@ export const PUBLICATIONS: Publication[] = [
     link: "https://arxiv.org/abs/2608.24789",
     title: "Ten Years Later: Replicating Two Color Discrimination Studies",
     doi: "NA",
-    authors: "Shadmaan Hye, Katherine E. Isaacs, Andrew McNutt",
+    authors: "Shadmaan Hye, Andrew McNutt, Katherine E. Isaacs",
     year: 2026,
     journal: "VisXVision Workshop",
     paperKey: "colors-n-makeup",
