@@ -115,6 +115,35 @@ export const PUBLICATIONS: Publication[] = [
     ],
     abstract: `Visualization literacy is a multifaceted construct encompassing skills and competencies, such as decoding data, constructing charts, and identifying design flaws. Yet, assessments of these competencies has been primarily constrained to multiple choice assessments that target lower-order skills, such as chart comprehension. As a result, they often exhibit ceiling effects (i.e., even modestly skilled individuals commonly score near the top of the scale), and do not provide enough information about an individual's higher-order skills (e.g., applying external knowledge, formulating critiques, and designing visualizations). To close these gaps, we develop and investigate two web-based qualitative assessments for testing the critique and design aspects of visualization literacy through online think-aloud critique and sketching of visualization designs based on data and a prompt. We compare performance on our assessments to two established visualization literacy assessments, CALVI and Mini-VLAT, by administering them to three groups that represent three experience levels: crowdworkers, students who have taken a relevant course, and researchers. We find that our critique and sketching assessments capture skills distinct from existing measures and that they differentiate between experienced individuals better than multiple choice-based alternatives. Although administering and grading qualitative assessments can be challenging, our findings suggest qualitative, multimodal assessments are a promising complement to existing visualization literacy assessments, in particular when high visualization skills need to be distinguished.`,
   },
+  {
+    link: "https://arxiv.org/abs/2610.01873",
+    title: "Where LLMs Fail with Visualization DSLs",
+    doi: "TBD",
+    year: 2026,
+    authors: "Chang Han, Andrew McNutt, Katherine E. Isaacs",
+    journal: "VisXGenAI Workshop",
+    paperKey: "llm-dsl-failures",
+    imgLink: "assets/llm-dsl-fail.jpg",
+    imgDescription: "A screenshot of the architecture of the experiment run",
+    topics: ["Visualization Systems", "DSLs", "AI"],
+    abstract:
+      "As LLMs take up the role of authoring charts using visualization domain-specific languages (DSLs), the human constraints that shaped those languages may no longer apply, as what is easy for a person is not necessarily easy for a model. To understand how LLMs might work better with DSLs, we explore where and how they fail with current DSL designs. We evaluate 10 JSON-style visualization DSLs with 41 tasks across 3 LLMs, then assess the generated specifications with JSON and rendering checks, and qualitative coding of failed cases. Analyzing how this specification generation process fails, we identify four recurring failure patterns, link each to specific DSL features, and discuss design considerations for future DSL designs.",
+    links: [
+      {
+        name: "paper",
+        link: "https://arxiv.org/abs/2610.01873",
+      },
+      {
+        name: "materials",
+        link: "https://llmgrammar.netlify.app/",
+      },
+      {
+        name: "code",
+        link: "https://github.com/hconhisway/Where-LLM-Fails-Supp",
+      },
+    ],
+    type: "workshop-paper",
+  },
 
   {
     link: "https://arxiv.org/abs/2608.12792",
@@ -127,7 +156,7 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: "assets/contributions.jpg",
     imgDescription:
       "A matrix showing the different roles of contributors in a research project",
-    type: "paper",
+    type: "workshop-paper",
     topics: ["Critical Visualization"],
     links: [
       {
@@ -149,7 +178,7 @@ export const PUBLICATIONS: Publication[] = [
     imgLink: "assets/colors-n-makeup.jpg",
     imgDescription:
       "A matrix showing the different roles of contributors in a research project",
-    type: "paper",
+    type: "workshop-paper",
     topics: ["Color"],
     links: [
       {
@@ -178,7 +207,7 @@ export const PUBLICATIONS: Publication[] = [
     paperKey: "color-palette-tradeoffs",
     imgLink: "assets/color-palette-tradeoffs.jpg",
     imgDescription: "A set of stepped gradients",
-    type: "paper",
+    type: "poster",
     topics: ["Color"],
     links: [
       {
