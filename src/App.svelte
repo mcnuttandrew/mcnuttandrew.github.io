@@ -63,7 +63,7 @@
         CV
       </a>
     </div>
-    <h3 class="">andrew.mcnutt @ utah.edu</h3>
+    <h3 class="">mcnutt @ cs.ubc.ca</h3>
     {#if currentSection === "publications"}
       <Upset
         data={PUBLICATIONS.map((row) => ({

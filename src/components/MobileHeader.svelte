@@ -22,7 +22,7 @@
     { link: "https://github.com/mcnuttandrew", name: "github" },
     { link: "https://hci.social/@mcnuttandrew", name: "mastodon" },
     { link: "https://www.mcnutt.in/assets/cv.pdf", name: "cv", noImage: true },
-    { link: "", name: "andrew.mcnutt @ utah.edu", noImage: true },
+    { link: "", name: "mcnutt @ cs.ubc.ca", noImage: true },
   ];
 </script>
 
