@@ -41,8 +41,9 @@
     <h1 class="text-xl font-bold">Andrew McNutt</h1>
     <h3 class="text-xl">Assistant Professor</h3>
     <h3 class="text-xl">Visualization / HCI</h3>
-    <h3>University of Utah</h3>
-    <h3 class="mb-2">WEB 4628</h3>
+    <h3><s>University of Utah</s> (Outgoing)</h3>
+    <h3>University of British Columbia (Incoming)</h3>
+    <!-- <h3 class="mb-2">WEB 4628</h3> -->
 
     <div class="flex align space-between">
       <a class="mr-2" href="https://github.com/mcnuttandrew">
@@ -51,12 +52,16 @@
       <a href="https://scholar.google.com/citations?user=AHwQg4kAAAAJ&hl=en">
         <img src="icons/scholar.svg" alt="link to scholar page" />
       </a>
-      <a href="https://hci.social/@mcnuttandrew" rel="me" class="ml-2">
+      <a
+        href="https://bsky.app/profile/mcnuttandrew.bsky.social"
+        rel="me"
+        class="ml-2"
+      >
         <img
-          src="icons/mastodon.png"
-          alt="link to mastodon page"
+          src="icons/bsky.png"
+          alt="link to bsky page"
           class="w-8"
-          id="mastodon"
+          id="bsky-icon"
         />
       </a>
       <a class="ml-2 text-xl text-cyan-800 font-bold" href="./assets/cv.pdf">
