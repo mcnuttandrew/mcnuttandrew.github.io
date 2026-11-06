@@ -1,12 +1,19 @@
 <script lang="ts">
-  import {ZINES} from '../constants';
+  import { ZINES } from "../constants";
+  import markdownit from "markdown-it";
+  const md = markdownit({
+    html: true,
+    linkify: true,
+    typographer: true,
+  });
 </script>
 
 <h1 class="mt-8 text-2xl font-bold">Zines</h1>
 
 <div>
-  I think zines are super cool! They are interesting and engaging way to to tell stories, create accessible
-  lessons about obscure or complex or technical topics, or just make art. Here a bunch of zines I've made:
+  I think zines are super cool! They are interesting and engaging way to to tell
+  stories, create accessible lessons about obscure or complex or technical
+  topics, or just make art. Here a bunch of zines I've made:
 
   <div class="flex flex-row flex-wrap mt-8">
     {#each ZINES as zine}
@@ -30,7 +37,7 @@
           {/if} ({zine.year})
         </h3>
 
-        <p class="text-sm">{zine.text}</p>
+        <p class="text-sm">{@html md.render(zine.text)}</p>
       </div>
     {/each}
   </div>
