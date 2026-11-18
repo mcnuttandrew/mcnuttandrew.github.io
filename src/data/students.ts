@@ -54,7 +54,7 @@ export const GROUP_PHOTOS: { image: string; altText: string }[] = [
       "A group photo of 5 people standing in front of a hockey rink, evidently substantially up from the rink in the bleachers. From left to right: Zach Cutler, Nathania Josephine, Andrew McNutt, Shiyi He, and Hima Mynampaty",
   },
   {
-    image: "assets/lab-at-vis.jpeg",
+    image: "assets/lab-at-vis26.jpg",
     altText:
       "A group photo of 4 people standing in front of a wall made of crocheted coral reef. From left to right: Shiyi He,  Nathania Josephine, Andrew McNutt, and Zach Cutler,",
   },
